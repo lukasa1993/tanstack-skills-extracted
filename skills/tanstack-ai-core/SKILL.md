@@ -72,8 +72,8 @@ Entry point: `node_modules/@tanstack/ai-persistence/skills/ai-persistence/SKILL.
 
 | Need to...                                      | Read                                    |
 | ----------------------------------------------- | --------------------------------------- |
-| Wire server-side chat history, runs, interrupts | ai-persistence/server/SKILL.md          |
-| Implement the store interfaces for your DB      | ai-persistence/stores/SKILL.md          |
+| Wire server-side chat history, runs, interrupts | ../tanstack-ai-persistence-server/SKILL.md          |
+| Implement the store interfaces for your DB      | ../tanstack-ai-persistence-stores/SKILL.md          |
 | Write the adapter for the DB your app runs      | ai-persistence/build-*-adapter/SKILL.md |
 
 Browser-side persistence is **not** in this package — it ships with the

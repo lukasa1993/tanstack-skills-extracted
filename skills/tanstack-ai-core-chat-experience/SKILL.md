@@ -756,4 +756,4 @@ If not handled, the UI appears to hang with no feedback.
 - See also: **../tanstack-ai-core-tool-calling/SKILL.md** -- Most chats include tools
 - See also: **../tanstack-ai-core-adapter-configuration/SKILL.md** -- Adapter choice affects available features
 - See also: **../tanstack-ai-core-middleware/SKILL.md** -- Use middleware for analytics and lifecycle events
-- See also: **`@tanstack/ai-persistence` skills** (`skills/ai-persistence/SKILL.md` in that package) -- Server + client state persistence, store contracts, adapter recipes (deeper than Pattern 8)
+- See also: **`@tanstack/ai-persistence` skills** (`../tanstack-ai-persistence/SKILL.md` in that package) -- Server + client state persistence, store contracts, adapter recipes (deeper than Pattern 8)

@@ -350,6 +350,6 @@ export const todoCollection = createCollection(queryCollectionOptions({ ... }))
 
 Collections are singletons. Creating multiple instances for the same data causes duplicate syncs, wasted bandwidth, and inconsistent state between components.
 
-See also: ../tanstack-react-db/SKILL.md, ../tanstack-vue-db/SKILL.md, ../tanstack-svelte-db/SKILL.md, ../tanstack-solid-db/SKILL.md, angular-db/SKILL.md — for framework-specific hook usage.
+See also: ../tanstack-react-db/SKILL.md, ../tanstack-vue-db/SKILL.md, ../tanstack-svelte-db/SKILL.md, ../tanstack-solid-db/SKILL.md, ../tanstack-angular-db/SKILL.md — for framework-specific hook usage.
 
 See also: ../tanstack-db-core-collection-setup/SKILL.md — for collection creation and adapter selection.

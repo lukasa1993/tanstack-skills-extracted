@@ -20,56 +20,93 @@ const groups = [
     description: 'Core database skills, framework bindings, and offline transactions.',
     matches: (name) =>
       /^tanstack-db(?:-|$)/.test(name) ||
-      /^tanstack-(?:react|solid|svelte|vue)-db$/.test(name) ||
+      /^tanstack-(?:angular|react|solid|svelte|vue)-db$/.test(name) ||
       /^tanstack-offline-transactions(?:-|$)/.test(name),
+  },
+  {
+    slug: 'tanstack-cli',
+    title: 'TanStack CLI',
+    description: 'App creation, add-ons, integrations, and documentation queries.',
+    matches: (name) => /^tanstack-cli(?:-|$)/.test(name),
+  },
+  {
+    slug: 'tanstack-devtools',
+    title: 'TanStack Devtools',
+    description: 'Devtools setup, plugins, events, framework adapters, and production builds.',
+    matches: (name) => /^tanstack-devtools(?:-|$)/.test(name),
+  },
+  {
+    slug: 'router-and-start',
+    title: 'TanStack Router and Start',
+    description: 'Router, Start, server functions, deployment, and framework integration skills.',
+    matches: (name) =>
+      /^tanstack-(?:react-start|router-core|router-plugin|solid-router|solid-start|start-client-core|start-server-core|virtual-file-routes|vue-router|vue-start)(?:-|$)/.test(name),
   },
   {
     slug: 'table-core',
     title: 'Table Core',
-    description: 'Framework-neutral TanStack Table skills.',
+    description: 'Framework-neutral TanStack Table skills required by framework adapters.',
     matches: (name) => /^tanstack-table-core(?:-|$)/.test(name),
   },
   {
     slug: 'react-table',
     title: 'React Table',
-    description: 'TanStack Table skills for React.',
+    description: 'React adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-react-table(?:-|$)/.test(name),
   },
   {
     slug: 'angular-table',
     title: 'Angular Table',
-    description: 'TanStack Table skills for Angular.',
+    description: 'Angular adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-angular-table(?:-|$)/.test(name),
   },
   {
     slug: 'solid-table',
     title: 'Solid Table',
-    description: 'TanStack Table skills for Solid.',
+    description: 'Solid adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-solid-table(?:-|$)/.test(name),
   },
   {
     slug: 'svelte-table',
     title: 'Svelte Table',
-    description: 'TanStack Table skills for Svelte.',
+    description: 'Svelte adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-svelte-table(?:-|$)/.test(name),
   },
   {
     slug: 'vue-table',
     title: 'Vue Table',
-    description: 'TanStack Table skills for Vue.',
+    description: 'Vue adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-vue-table(?:-|$)/.test(name),
+  },
+  {
+    slug: 'preact-table',
+    title: 'Preact Table',
+    description: 'Preact adapter skills. Select Table Core too.',
+    matches: (name) => /^tanstack-preact-table(?:-|$)/.test(name),
   },
   {
     slug: 'lit-table',
     title: 'Lit Table',
-    description: 'TanStack Table skills for Lit.',
+    description: 'Lit adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-lit-table(?:-|$)/.test(name),
   },
   {
     slug: 'ember-table',
     title: 'Ember Table',
-    description: 'TanStack Table skills for Ember.',
+    description: 'Ember adapter skills. Select Table Core too.',
     matches: (name) => /^tanstack-ember-table(?:-|$)/.test(name),
+  },
+  {
+    slug: 'alpine-table',
+    title: 'Alpine Table',
+    description: 'Alpine adapter skills. Select Table Core too.',
+    matches: (name) => /^tanstack-alpine-table(?:-|$)/.test(name),
+  },
+  {
+    slug: 'octane-table',
+    title: 'Octane Table',
+    description: 'Octane adapter skills. Select Table Core too.',
+    matches: (name) => /^tanstack-octane-table(?:-|$)/.test(name),
   },
   {
     slug: 'markdown',

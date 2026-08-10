@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-EXPORTER_VERSION="5.0.0"
+EXPORTER_VERSION="5.1.0"
 REGISTRY="${REGISTRY:-https://registry.npmjs.org}"
 TAG="${TAG:-latest}"
 MARKER=".tanstack-skills-export.tsv"
@@ -169,7 +169,9 @@ function baseOutputName(pkgName, skillRel) {
   const relSlug = cleanSlug(skillRel.split(path.sep).join('-'))
 
   let base
-  if (relSlug === pkgShort) {
+  if (relSlug === `tanstack-${pkgShort}` || relSlug.startsWith(`tanstack-${pkgShort}-`)) {
+    base = relSlug
+  } else if (relSlug === pkgShort) {
     base = `tanstack-${pkgShort}`
   } else if (relSlug.startsWith(`${pkgShort}-`)) {
     base = `tanstack-${relSlug}`
@@ -445,6 +447,15 @@ function resolveIdentifier(value, owner) {
   const qualified = value.match(/^(@tanstack\/[^#]+)#(.+)$/)
   if (qualified) return unique(byPackage.get(qualified[1]), qualified[2])
 
+  const slashQualified = value.match(/^tanstack-([a-z0-9._-]+)\/(.+)$/)
+  if (slashQualified) {
+    const packageName = `@tanstack/${slashQualified[1]}`
+    const packageAliases = byPackage.get(packageName)
+    const resolved = unique(packageAliases, slashQualified[2])
+      || unique(packageAliases, `${slashQualified[1]}-${slashQualified[2]}`)
+    if (resolved) return resolved
+  }
+
   const current = unique(byPackage.get(owner.package), value)
   if (current) return current
   return unique(globalAliases, value)
@@ -537,7 +548,11 @@ function fieldScalar(field) {
 }
 
 function fieldSequence(field, file) {
-  if (field.first.trim()) return flowList(field.first, file)
+  if (field.first.trim()) {
+    return field.first.trim().startsWith('[')
+      ? flowList(field.first, file)
+      : [yamlScalar(field.first)]
+  }
 
   const meaningful = field.continuation.filter((line) => line.trim() && !/^\s*#/.test(line))
   if (meaningful.length === 1 && meaningful[0].trim().startsWith('[')) {
@@ -1045,7 +1060,7 @@ name: ai-core/adapter-configuration
 description: Configure AI adapters.
 license: Apache-2.0
 metadata:
-  requires: [ai-core]
+  requires: ai-core
 ---
 # Adapter Configuration
 Return to [AI core](../SKILL.md).
@@ -1065,6 +1080,7 @@ name: table-state
 description: Angular table state.
 requires:
   - '@tanstack/ai#ai-core'
+  - tanstack-ai/core
 ---
 # Angular Table State
 Read `ai-core/adapter-configuration/SKILL.md`.
@@ -1173,38 +1189,72 @@ echo "Source: npm dist-tag '$TAG' via $REGISTRY"
 echo "Output format: flat Agent Skills bundle"
 echo
 
-SEARCH_JSON="$TMP/search.json"
 PACKAGES_TXT="$TMP/packages.txt"
 MANIFEST="$TMP/$MARKER"
 MAPPINGS_JSONL="$TMP/export-mappings.jsonl"
 : > "$MAPPINGS_JSONL"
 
-echo "Discovering published @tanstack/* packages with the tanstack-intent keyword ..."
+echo "Discovering all published @tanstack/* packages ..."
 
-npm search tanstack-intent \
-  --json \
-  --searchlimit=1000 \
-  --registry="$REGISTRY" > "$SEARCH_JSON"
+node - "$REGISTRY" "$TAG" > "$PACKAGES_TXT" <<'NODE'
+const registry = process.argv[2].replace(/\/$/, '')
+const tag = process.argv[3]
+const orgUrl = `${registry}/-/org/tanstack/package?format=cli`
 
-node - "$SEARCH_JSON" > "$PACKAGES_TXT" <<'NODE'
-const fs = require('fs')
-const rows = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))
-const names = rows
-  .filter((row) => typeof row?.name === 'string' && row.name.startsWith('@tanstack/'))
-  .filter((row) => {
-    const keywords = Array.isArray(row.keywords)
-      ? row.keywords
-      : typeof row.keywords === 'string'
-        ? row.keywords.split(/[\s,]+/)
-        : []
-    return keywords.includes('tanstack-intent')
-  })
-  .map((row) => row.name)
-for (const name of [...new Set(names)].sort()) console.log(name)
+async function request(url, attempts = 3) {
+  let lastError
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: { accept: 'application/json' },
+        signal: AbortSignal.timeout(30_000),
+      })
+      if (response.ok || response.status === 404) return response
+      if (response.status < 500 && response.status !== 429) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+      lastError = new Error(`HTTP ${response.status}`)
+    } catch (error) {
+      lastError = error
+    }
+    if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, attempt * 500))
+  }
+  throw lastError
+}
+
+const orgResponse = await request(orgUrl)
+if (!orgResponse.ok) throw new Error(`Could not list the TanStack npm scope: HTTP ${orgResponse.status}`)
+const listing = await orgResponse.json()
+if (!listing || typeof listing !== 'object' || Array.isArray(listing)) {
+  throw new Error('The TanStack npm scope response is not an object')
+}
+
+const names = Object.keys(listing)
+  .filter((name) => /^@tanstack\/[a-z0-9][a-z0-9._-]*$/.test(name))
+  .sort()
+const available = []
+let cursor = 0
+
+async function inspectLatestTags() {
+  while (cursor < names.length) {
+    const name = names[cursor++]
+    const latestUrl = `${registry}/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`
+    const response = await request(latestUrl)
+    if (response.status === 404) continue
+    const metadata = await response.json()
+    if (metadata?.name !== name || typeof metadata?.version !== 'string') {
+      throw new Error(`Invalid npm metadata for ${name}`)
+    }
+    available.push(name)
+  }
+}
+
+await Promise.all(Array.from({ length: 16 }, inspectLatestTags))
+for (const name of available.sort()) console.log(name)
 NODE
 
 if [[ ! -s "$PACKAGES_TXT" ]]; then
-  echo "ERROR: npm search returned no @tanstack/* packages with tanstack-intent." >&2
+  echo "ERROR: npm returned no published @tanstack/* packages for dist-tag '$TAG'." >&2
   exit 1
 fi
 
@@ -1244,7 +1294,9 @@ NODE
   fi
 
   if ! grep -Eq '^package/skills/.*/SKILL\.md$' "$tar_list"; then
-    echo "[$package_index/$package_total] $pkg@$version: no skills, skipped"
+    if (( package_index % 25 == 0 || package_index == package_total )); then
+      echo "[$package_index/$package_total] scanned published packages ..."
+    fi
     rm -f "$tgz"
     continue
   fi

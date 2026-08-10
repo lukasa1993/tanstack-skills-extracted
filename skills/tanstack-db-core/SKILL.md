@@ -43,7 +43,7 @@ For framework-specific hooks:
 | Vue       | ../tanstack-vue-db/SKILL.md     |
 | Svelte    | ../tanstack-svelte-db/SKILL.md  |
 | Solid     | ../tanstack-solid-db/SKILL.md   |
-| Angular   | angular-db/SKILL.md |
+| Angular   | ../tanstack-angular-db/SKILL.md |
 
 ## Quick Decision Tree
 

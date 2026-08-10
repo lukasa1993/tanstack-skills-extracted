@@ -136,4 +136,4 @@ Continuing work after losing the lease races other owners.
 ## Cross-references
 
 - See also: **../tanstack-ai-core-middleware/SKILL.md** -- the middleware chain and capability plumbing
-- See also: **`@tanstack/ai-persistence` skills** (`skills/ai-persistence/SKILL.md` in that package) -- `ai-persistence/server` (state middleware) and `ai-persistence/build-cloudflare-adapter` (Durable Object lock recipe)
+- See also: **`@tanstack/ai-persistence` skills** (`../tanstack-ai-persistence/SKILL.md` in that package) -- `ai-persistence/server` (state middleware) and `ai-persistence/build-cloudflare-adapter` (Durable Object lock recipe)

@@ -778,4 +778,4 @@ Source: docs/advanced/middleware.md, `packages/ai/src/activities/chat/middleware
 - See also: **../tanstack-ai-core-chat-experience/SKILL.md** -- Middleware hooks into the chat lifecycle
 - See also: **../tanstack-ai-core-structured-outputs/SKILL.md** -- Middleware now wraps the final structured-output call; use `onStructuredOutputConfig` for JSON-Schema transforms
 - See also: **../tanstack-ai-core-ag-ui-protocol/SKILL.md** -- Reading the `sandbox.file` / `sandbox.file.diff` `CUSTOM` chunks the sandbox runtime emits alongside these `sandbox` hooks, via `ChatStream`'s typed `KnownCustomEvent` narrowing
-- See also: **`@tanstack/ai-persistence` skills** (`skills/ai-persistence/SKILL.md` in that package) -- Full persistence suite (`withPersistence`, client storage, store contracts, adapter recipes, locks). This file only sketches server `withPersistence`.
+- See also: **`@tanstack/ai-persistence` skills** (`../tanstack-ai-persistence/SKILL.md` in that package) -- Full persistence suite (`withPersistence`, client storage, store contracts, adapter recipes, locks). This file only sketches server `withPersistence`.

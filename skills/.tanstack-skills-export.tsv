@@ -1,27 +1,54 @@
-# exporter_version=5.0.0
+# exporter_version=5.1.0
 # source_registry=https://registry.npmjs.org
 # source_tag=latest
 package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/ai	0.43.1	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
 @tanstack/ai-code-mode	0.3.10	MIT	1	1	tanstack-ai-code-mode
 @tanstack/ai-mcp	0.2.7	MIT	1	1	tanstack-ai-mcp
+@tanstack/ai-memory	0.1.0	MIT	6	6	tanstack-ai-memory,tanstack-ai-memory-hindsight,tanstack-ai-memory-honcho,tanstack-ai-memory-in-memory,tanstack-ai-memory-mem0,tanstack-ai-memory-redis
+@tanstack/ai-persistence	0.1.1	MIT	8	8	tanstack-ai-persistence,tanstack-ai-persistence-build-cloudflare-adapter,tanstack-ai-persistence-build-cloudflare-artifact-store,tanstack-ai-persistence-build-custom-adapter,tanstack-ai-persistence-build-drizzle-adapter,tanstack-ai-persistence-build-prisma-adapter,tanstack-ai-persistence-server,tanstack-ai-persistence-stores
 @tanstack/ai-sandbox	0.3.0	MIT	1	1	tanstack-ai-sandbox
+@tanstack/alpine-table	9.1.2	MIT	3	3	tanstack-alpine-table-create-table-hook,tanstack-alpine-table-getting-started,tanstack-alpine-table-table-state
+@tanstack/angular-db	0.1.77	MIT	1	1	tanstack-angular-db
 @tanstack/angular-table	9.1.2	MIT	6	6	tanstack-angular-table-create-table-hook,tanstack-angular-table-getting-started,tanstack-angular-table-migrate-v8-to-v9,tanstack-angular-table-table-state,tanstack-angular-table-with-tanstack-query,tanstack-angular-table-with-tanstack-virtual
+@tanstack/angular-table-devtools	9.1.2	MIT	1	1	tanstack-angular-table-devtools
+@tanstack/cli	0.70.2	MIT	5	5	tanstack-cli-add-addons-existing-app,tanstack-cli-choose-ecosystem-integrations,tanstack-cli-create-app-scaffold,tanstack-cli-maintain-custom-addons-dev-watch,tanstack-cli-query-docs-library-metadata
 @tanstack/db	0.6.17	MIT	7	7	tanstack-db-core,tanstack-db-core-collection-setup,tanstack-db-core-custom-adapter,tanstack-db-core-live-queries,tanstack-db-core-mutations-optimistic,tanstack-db-core-persistence,tanstack-db-meta-framework
+@tanstack/db-playbook	0.0.1	MIT	6	6	tanstack-db-playbook-tanstack-db,tanstack-db-playbook-tanstack-db-collections,tanstack-db-playbook-tanstack-db-electric,tanstack-db-playbook-tanstack-db-live-queries,tanstack-db-playbook-tanstack-db-mutations,tanstack-db-playbook-tanstack-db-schemas
+@tanstack/db-skills	0.0.1	MIT	6	6	tanstack-db-skills-tanstack-db,tanstack-db-skills-tanstack-db-collections,tanstack-db-skills-tanstack-db-electric,tanstack-db-skills-tanstack-db-live-queries,tanstack-db-skills-tanstack-db-mutations,tanstack-db-skills-tanstack-db-schemas
+@tanstack/devtools	0.13.0	MIT	4	4	tanstack-devtools-app-setup,tanstack-devtools-marketplace,tanstack-devtools-plugin-panel,tanstack-devtools-production
+@tanstack/devtools-event-client	0.5.0	MIT	3	3	tanstack-devtools-event-client-devtools-bidirectional,tanstack-devtools-event-client,tanstack-devtools-event-client-devtools-instrumentation
+@tanstack/devtools-utils	0.6.0	MIT	1	1	tanstack-devtools-utils-devtools-framework-adapters
+@tanstack/devtools-vite	0.8.3	MIT	1	1	tanstack-devtools-vite-plugin
 @tanstack/ember-table	9.1.2	MIT	3	3	tanstack-ember-table-create-table-hook,tanstack-ember-table-getting-started,tanstack-ember-table-table-state
 @tanstack/highlight	0.0.10	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
 @tanstack/lit-table	9.1.2	MIT	5	5	tanstack-lit-table-create-table-hook,tanstack-lit-table-getting-started,tanstack-lit-table-migrate-v8-to-v9,tanstack-lit-table-table-state,tanstack-lit-table-with-tanstack-virtual
 @tanstack/markdown	0.0.13	MIT	6	6	tanstack-markdown-custom-extensions,tanstack-markdown-docs-features,tanstack-markdown-octane-rendering,tanstack-markdown-production-pipelines,tanstack-markdown-react-rendering,tanstack-markdown-render-markdown
 @tanstack/match-sorter-utils	9.1.2	MIT	1	1	tanstack-match-sorter-utils-fuzzy-ranking
+@tanstack/octane-table	9.1.2	MIT	3	3	tanstack-octane-table-create-table-hook,tanstack-octane-table-getting-started,tanstack-octane-table-table-state
 @tanstack/offline-transactions	1.0.42	MIT	1	1	tanstack-offline-transactions-offline
+@tanstack/preact-table	9.1.2	MIT	6	6	tanstack-preact-table-create-table-hook,tanstack-preact-table-getting-started,tanstack-preact-table-migrate-v8-to-v9,tanstack-preact-table-table-state,tanstack-preact-table-with-tanstack-query,tanstack-preact-table-with-tanstack-virtual
+@tanstack/preact-table-devtools	9.1.2	MIT	1	1	tanstack-preact-table-devtools
 @tanstack/react-db	0.1.95	MIT	1	1	tanstack-react-db
+@tanstack/react-start	1.168.42	MIT	3	3	tanstack-react-start-lifecycle-migrate-from-nextjs,tanstack-react-start,tanstack-react-start-server-components
 @tanstack/react-table	9.1.2	MIT	6	6	tanstack-react-table-create-table-hook,tanstack-react-table-getting-started,tanstack-react-table-migrate-v8-to-v9,tanstack-react-table-table-state,tanstack-react-table-with-tanstack-query,tanstack-react-table-with-tanstack-virtual
 @tanstack/react-table-devtools	9.1.2	MIT	1	1	tanstack-react-table-devtools
+@tanstack/router-core	1.171.21	MIT	10	10	tanstack-router-core,tanstack-router-core-auth-and-guards,tanstack-router-core-code-splitting,tanstack-router-core-data-loading,tanstack-router-core-navigation,tanstack-router-core-not-found-and-errors,tanstack-router-core-path-params,tanstack-router-core-search-params,tanstack-router-core-ssr,tanstack-router-core-type-safety
+@tanstack/router-plugin	1.168.29	MIT	1	1	tanstack-router-plugin
 @tanstack/solid-db	0.2.31	MIT	1	1	tanstack-solid-db
+@tanstack/solid-router	1.170.24	MIT	1	1	tanstack-solid-router
+@tanstack/solid-start	1.168.41	MIT	1	1	tanstack-solid-start
 @tanstack/solid-table	9.1.2	MIT	6	6	tanstack-solid-table-create-table-hook,tanstack-solid-table-getting-started,tanstack-solid-table-migrate-v8-to-v9,tanstack-solid-table-table-state,tanstack-solid-table-with-tanstack-query,tanstack-solid-table-with-tanstack-virtual
+@tanstack/solid-table-devtools	9.1.2	MIT	1	1	tanstack-solid-table-devtools
+@tanstack/start-client-core	1.170.21	MIT	7	7	tanstack-start-client-core-start-core,tanstack-start-client-core-start-core-auth-server-primitives,tanstack-start-client-core-start-core-deployment,tanstack-start-client-core-start-core-execution-model,tanstack-start-client-core-start-core-middleware,tanstack-start-client-core-start-core-server-functions,tanstack-start-client-core-start-core-server-routes
+@tanstack/start-server-core	1.169.25	MIT	1	1	tanstack-start-server-core
 @tanstack/svelte-db	0.1.94	MIT	1	1	tanstack-svelte-db
 @tanstack/svelte-table	9.1.2	MIT	6	6	tanstack-svelte-table-create-table-hook,tanstack-svelte-table-getting-started,tanstack-svelte-table-migrate-v8-to-v9,tanstack-svelte-table-table-state,tanstack-svelte-table-with-tanstack-query,tanstack-svelte-table-with-tanstack-virtual
 @tanstack/table-core	9.1.2	MIT	24	24	tanstack-table-core-aggregation,tanstack-table-core-api-not-found,tanstack-table-core-cell-selection,tanstack-table-core-cell-spanning,tanstack-table-core-client-vs-server,tanstack-table-core-column-faceting,tanstack-table-core-column-filtering,tanstack-table-core-column-ordering,tanstack-table-core-column-pinning,tanstack-table-core-column-resizing,tanstack-table-core-column-sizing,tanstack-table-core-column-visibility,tanstack-table-core,tanstack-table-core-custom-features,tanstack-table-core-expanding,tanstack-table-core-global-filtering,tanstack-table-core-grouping,tanstack-table-core-migrate-v8-to-v9,tanstack-table-core-pagination,tanstack-table-core-row-pinning,tanstack-table-core-row-selection,tanstack-table-core-sorting,tanstack-table-core-table-features,tanstack-table-core-typescript
 @tanstack/table-devtools	9.1.2	MIT	1	1	tanstack-table-devtools
+@tanstack/virtual-file-routes	1.162.0	MIT	1	1	tanstack-virtual-file-routes
 @tanstack/vue-db	0.0.128	MIT	1	1	tanstack-vue-db
+@tanstack/vue-router	1.170.23	MIT	1	1	tanstack-vue-router
+@tanstack/vue-start	1.168.40	MIT	1	1	tanstack-vue-start
 @tanstack/vue-table	9.1.2	MIT	6	6	tanstack-vue-table-create-table-hook,tanstack-vue-table-getting-started,tanstack-vue-table-migrate-v8-to-v9,tanstack-vue-table-table-state,tanstack-vue-table-with-tanstack-query,tanstack-vue-table-with-tanstack-virtual
+@tanstack/vue-table-devtools	9.1.2	MIT	1	1	tanstack-vue-table-devtools

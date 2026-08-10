@@ -4,7 +4,7 @@
 
 This is an unofficial mirror of the agent skills that TanStack publishes in its npm packages. It is not affiliated with or endorsed by TanStack.
 
-The exporter finds published `@tanstack/*` packages with the `tanstack-intent` keyword. It converts their nested skills to the flat Agent Skills format. It also updates skill IDs and file references, validates the result, and preserves the upstream license.
+The exporter inspects every published `@tanstack/*` package and extracts tarballs that contain skills. It converts their nested skills to the flat Agent Skills format. It also updates skill IDs and file references, validates the result, and preserves the upstream license.
 
 ## Install
 
@@ -15,6 +15,8 @@ npx skills add lukasa1993/tanstack-skills-extracted
 ```
 
 Select a group header, such as `React Table`, to select all skills in that group. You can also select individual skills.
+
+Table framework groups are adapter skills. Select `Table Core` with the framework group. The `skills` CLI does not resolve skill dependencies automatically.
 
 Install one skill without the interactive picker:
 

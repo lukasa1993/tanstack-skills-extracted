@@ -20,6 +20,20 @@
         "tanstack-ai-core-structured-outputs",
         "tanstack-ai-core-tool-calling",
         "tanstack-ai-mcp",
+        "tanstack-ai-memory",
+        "tanstack-ai-memory-hindsight",
+        "tanstack-ai-memory-honcho",
+        "tanstack-ai-memory-in-memory",
+        "tanstack-ai-memory-mem0",
+        "tanstack-ai-memory-redis",
+        "tanstack-ai-persistence",
+        "tanstack-ai-persistence-build-cloudflare-adapter",
+        "tanstack-ai-persistence-build-cloudflare-artifact-store",
+        "tanstack-ai-persistence-build-custom-adapter",
+        "tanstack-ai-persistence-build-drizzle-adapter",
+        "tanstack-ai-persistence-build-prisma-adapter",
+        "tanstack-ai-persistence-server",
+        "tanstack-ai-persistence-stores",
         "tanstack-ai-sandbox"
       ]
     },
@@ -27,6 +41,7 @@
       "title": "TanStack DB",
       "description": "Core database skills, framework bindings, and offline transactions.",
       "skills": [
+        "tanstack-angular-db",
         "tanstack-db-core",
         "tanstack-db-core-collection-setup",
         "tanstack-db-core-custom-adapter",
@@ -34,6 +49,18 @@
         "tanstack-db-core-mutations-optimistic",
         "tanstack-db-core-persistence",
         "tanstack-db-meta-framework",
+        "tanstack-db-playbook-tanstack-db",
+        "tanstack-db-playbook-tanstack-db-collections",
+        "tanstack-db-playbook-tanstack-db-electric",
+        "tanstack-db-playbook-tanstack-db-live-queries",
+        "tanstack-db-playbook-tanstack-db-mutations",
+        "tanstack-db-playbook-tanstack-db-schemas",
+        "tanstack-db-skills-tanstack-db",
+        "tanstack-db-skills-tanstack-db-collections",
+        "tanstack-db-skills-tanstack-db-electric",
+        "tanstack-db-skills-tanstack-db-live-queries",
+        "tanstack-db-skills-tanstack-db-mutations",
+        "tanstack-db-skills-tanstack-db-schemas",
         "tanstack-offline-transactions-offline",
         "tanstack-react-db",
         "tanstack-solid-db",
@@ -42,8 +69,67 @@
       ]
     },
     {
+      "title": "TanStack CLI",
+      "description": "App creation, add-ons, integrations, and documentation queries.",
+      "skills": [
+        "tanstack-cli-add-addons-existing-app",
+        "tanstack-cli-choose-ecosystem-integrations",
+        "tanstack-cli-create-app-scaffold",
+        "tanstack-cli-maintain-custom-addons-dev-watch",
+        "tanstack-cli-query-docs-library-metadata"
+      ]
+    },
+    {
+      "title": "TanStack Devtools",
+      "description": "Devtools setup, plugins, events, framework adapters, and production builds.",
+      "skills": [
+        "tanstack-devtools-app-setup",
+        "tanstack-devtools-event-client",
+        "tanstack-devtools-event-client-devtools-bidirectional",
+        "tanstack-devtools-event-client-devtools-instrumentation",
+        "tanstack-devtools-marketplace",
+        "tanstack-devtools-plugin-panel",
+        "tanstack-devtools-production",
+        "tanstack-devtools-utils-devtools-framework-adapters",
+        "tanstack-devtools-vite-plugin"
+      ]
+    },
+    {
+      "title": "TanStack Router and Start",
+      "description": "Router, Start, server functions, deployment, and framework integration skills.",
+      "skills": [
+        "tanstack-react-start",
+        "tanstack-react-start-lifecycle-migrate-from-nextjs",
+        "tanstack-react-start-server-components",
+        "tanstack-router-core",
+        "tanstack-router-core-auth-and-guards",
+        "tanstack-router-core-code-splitting",
+        "tanstack-router-core-data-loading",
+        "tanstack-router-core-navigation",
+        "tanstack-router-core-not-found-and-errors",
+        "tanstack-router-core-path-params",
+        "tanstack-router-core-search-params",
+        "tanstack-router-core-ssr",
+        "tanstack-router-core-type-safety",
+        "tanstack-router-plugin",
+        "tanstack-solid-router",
+        "tanstack-solid-start",
+        "tanstack-start-client-core-start-core",
+        "tanstack-start-client-core-start-core-auth-server-primitives",
+        "tanstack-start-client-core-start-core-deployment",
+        "tanstack-start-client-core-start-core-execution-model",
+        "tanstack-start-client-core-start-core-middleware",
+        "tanstack-start-client-core-start-core-server-functions",
+        "tanstack-start-client-core-start-core-server-routes",
+        "tanstack-start-server-core",
+        "tanstack-virtual-file-routes",
+        "tanstack-vue-router",
+        "tanstack-vue-start"
+      ]
+    },
+    {
       "title": "Table Core",
-      "description": "Framework-neutral TanStack Table skills.",
+      "description": "Framework-neutral TanStack Table skills required by framework adapters.",
       "skills": [
         "tanstack-table-core",
         "tanstack-table-core-aggregation",
@@ -73,7 +159,7 @@
     },
     {
       "title": "React Table",
-      "description": "TanStack Table skills for React.",
+      "description": "React adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-react-table-create-table-hook",
         "tanstack-react-table-devtools",
@@ -86,9 +172,10 @@
     },
     {
       "title": "Angular Table",
-      "description": "TanStack Table skills for Angular.",
+      "description": "Angular adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-angular-table-create-table-hook",
+        "tanstack-angular-table-devtools",
         "tanstack-angular-table-getting-started",
         "tanstack-angular-table-migrate-v8-to-v9",
         "tanstack-angular-table-table-state",
@@ -98,9 +185,10 @@
     },
     {
       "title": "Solid Table",
-      "description": "TanStack Table skills for Solid.",
+      "description": "Solid adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-solid-table-create-table-hook",
+        "tanstack-solid-table-devtools",
         "tanstack-solid-table-getting-started",
         "tanstack-solid-table-migrate-v8-to-v9",
         "tanstack-solid-table-table-state",
@@ -110,7 +198,7 @@
     },
     {
       "title": "Svelte Table",
-      "description": "TanStack Table skills for Svelte.",
+      "description": "Svelte adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-svelte-table-create-table-hook",
         "tanstack-svelte-table-getting-started",
@@ -122,9 +210,10 @@
     },
     {
       "title": "Vue Table",
-      "description": "TanStack Table skills for Vue.",
+      "description": "Vue adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-vue-table-create-table-hook",
+        "tanstack-vue-table-devtools",
         "tanstack-vue-table-getting-started",
         "tanstack-vue-table-migrate-v8-to-v9",
         "tanstack-vue-table-table-state",
@@ -133,8 +222,21 @@
       ]
     },
     {
+      "title": "Preact Table",
+      "description": "Preact adapter skills. Select Table Core too.",
+      "skills": [
+        "tanstack-preact-table-create-table-hook",
+        "tanstack-preact-table-devtools",
+        "tanstack-preact-table-getting-started",
+        "tanstack-preact-table-migrate-v8-to-v9",
+        "tanstack-preact-table-table-state",
+        "tanstack-preact-table-with-tanstack-query",
+        "tanstack-preact-table-with-tanstack-virtual"
+      ]
+    },
+    {
       "title": "Lit Table",
-      "description": "TanStack Table skills for Lit.",
+      "description": "Lit adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-lit-table-create-table-hook",
         "tanstack-lit-table-getting-started",
@@ -145,11 +247,29 @@
     },
     {
       "title": "Ember Table",
-      "description": "TanStack Table skills for Ember.",
+      "description": "Ember adapter skills. Select Table Core too.",
       "skills": [
         "tanstack-ember-table-create-table-hook",
         "tanstack-ember-table-getting-started",
         "tanstack-ember-table-table-state"
+      ]
+    },
+    {
+      "title": "Alpine Table",
+      "description": "Alpine adapter skills. Select Table Core too.",
+      "skills": [
+        "tanstack-alpine-table-create-table-hook",
+        "tanstack-alpine-table-getting-started",
+        "tanstack-alpine-table-table-state"
+      ]
+    },
+    {
+      "title": "Octane Table",
+      "description": "Octane adapter skills. Select Table Core too.",
+      "skills": [
+        "tanstack-octane-table-create-table-hook",
+        "tanstack-octane-table-getting-started",
+        "tanstack-octane-table-table-state"
       ]
     },
     {
