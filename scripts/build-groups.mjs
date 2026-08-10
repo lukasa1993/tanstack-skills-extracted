@@ -9,10 +9,27 @@ const skillsDir = join(root, 'skills')
 
 const groups = [
   {
-    slug: 'tanstack-ai',
-    title: 'TanStack AI',
-    description: 'Skills for TanStack AI, MCP, Code Mode, and sandboxes.',
-    matches: (name) => /^tanstack-ai(?:-|$)/.test(name),
+    slug: 'tanstack-query',
+    title: 'TanStack Query',
+    description: 'Query core, framework adapters, lifecycle, caching, mutations, SSR, and integrations.',
+    matches: (name) =>
+      /^tanstack-(?:query(?:-core|-intent)?|angular-query|preact-query|react-query|solid-query|svelte-query|vue-query)(?:-|$)/.test(name),
+  },
+  {
+    slug: 'tanstack-table',
+    title: 'TanStack Table',
+    description: 'Table Core, every framework adapter, devtools, virtualization integrations, and fuzzy ranking.',
+    matches: (name) =>
+      /^tanstack-(?:alpine|angular|ember|lit|octane|preact|react|solid|svelte|vue)-table(?:-|$)/.test(name) ||
+      /^tanstack-table-(?:core|devtools)(?:-|$)/.test(name) ||
+      name === 'tanstack-match-sorter-utils-fuzzy-ranking',
+  },
+  {
+    slug: 'tanstack-router-and-start',
+    title: 'TanStack Router and Start',
+    description: 'Router, Start, server functions, deployment, and framework integration skills.',
+    matches: (name) =>
+      /^tanstack-(?:react-start|router-core|router-plugin|solid-router|solid-start|start-client-core|start-server-core|virtual-file-routes|vue-router|vue-start)(?:-|$)/.test(name),
   },
   {
     slug: 'tanstack-db',
@@ -24,10 +41,10 @@ const groups = [
       /^tanstack-offline-transactions(?:-|$)/.test(name),
   },
   {
-    slug: 'tanstack-cli',
-    title: 'TanStack CLI',
-    description: 'App creation, add-ons, integrations, and documentation queries.',
-    matches: (name) => /^tanstack-cli(?:-|$)/.test(name),
+    slug: 'tanstack-ai',
+    title: 'TanStack AI',
+    description: 'Skills for TanStack AI, MCP, Code Mode, memory, persistence, and sandboxes.',
+    matches: (name) => /^tanstack-ai(?:-|$)/.test(name),
   },
   {
     slug: 'tanstack-devtools',
@@ -36,96 +53,22 @@ const groups = [
     matches: (name) => /^tanstack-devtools(?:-|$)/.test(name),
   },
   {
-    slug: 'router-and-start',
-    title: 'TanStack Router and Start',
-    description: 'Router, Start, server functions, deployment, and framework integration skills.',
-    matches: (name) =>
-      /^tanstack-(?:react-start|router-core|router-plugin|solid-router|solid-start|start-client-core|start-server-core|virtual-file-routes|vue-router|vue-start)(?:-|$)/.test(name),
-  },
-  {
-    slug: 'table-core',
-    title: 'Table Core',
-    description: 'Framework-neutral TanStack Table skills required by framework adapters.',
-    matches: (name) => /^tanstack-table-core(?:-|$)/.test(name),
-  },
-  {
-    slug: 'react-table',
-    title: 'React Table',
-    description: 'React adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-react-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'angular-table',
-    title: 'Angular Table',
-    description: 'Angular adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-angular-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'solid-table',
-    title: 'Solid Table',
-    description: 'Solid adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-solid-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'svelte-table',
-    title: 'Svelte Table',
-    description: 'Svelte adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-svelte-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'vue-table',
-    title: 'Vue Table',
-    description: 'Vue adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-vue-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'preact-table',
-    title: 'Preact Table',
-    description: 'Preact adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-preact-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'lit-table',
-    title: 'Lit Table',
-    description: 'Lit adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-lit-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'ember-table',
-    title: 'Ember Table',
-    description: 'Ember adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-ember-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'alpine-table',
-    title: 'Alpine Table',
-    description: 'Alpine adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-alpine-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'octane-table',
-    title: 'Octane Table',
-    description: 'Octane adapter skills. Select Table Core too.',
-    matches: (name) => /^tanstack-octane-table(?:-|$)/.test(name),
-  },
-  {
-    slug: 'markdown',
-    title: 'Markdown',
+    slug: 'tanstack-markdown',
+    title: 'TanStack Markdown',
     description: 'TanStack Markdown parsing and rendering skills.',
     matches: (name) => /^tanstack-markdown(?:-|$)/.test(name),
   },
   {
-    slug: 'highlight',
-    title: 'Highlight',
+    slug: 'tanstack-highlight',
+    title: 'TanStack Highlight',
     description: 'TanStack Highlight integration and extension skills.',
     matches: (name) => /^tanstack-highlight(?:-|$)/.test(name),
   },
   {
-    slug: 'table-tools',
-    title: 'Table Tools',
-    description: 'Table developer tools and fuzzy ranking.',
-    matches: (name) =>
-      name === 'tanstack-table-devtools' || name === 'tanstack-match-sorter-utils-fuzzy-ranking',
+    slug: 'tanstack-cli',
+    title: 'TanStack CLI',
+    description: 'App creation, add-ons, integrations, and documentation queries.',
+    matches: (name) => /^tanstack-cli(?:-|$)/.test(name),
   },
 ]
 

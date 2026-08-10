@@ -41,7 +41,7 @@ jobs:
       - name: Test exporter
         run: ./extractor.sh --self-test
 
-      - name: Extract current npm skills
+      - name: Extract current official skills
         run: ./extractor.sh skills
 
       - name: Build group metadata

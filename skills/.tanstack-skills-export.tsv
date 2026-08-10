@@ -1,6 +1,10 @@
-# exporter_version=5.1.0
+# exporter_version=5.2.0
 # source_registry=https://registry.npmjs.org
 # source_tag=latest
+# supplemental_query_source=github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent
+# supplemental_query_pr=TanStack/query#10879
+# supplemental_query_pr_state=open
+# supplemental_query_branch=taren/query-intent-skills
 package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/ai	0.43.1	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
 @tanstack/ai-code-mode	0.3.10	MIT	1	1	tanstack-ai-code-mode
@@ -52,3 +56,4 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/vue-start	1.168.40	MIT	1	1	tanstack-vue-start
 @tanstack/vue-table	9.1.2	MIT	6	6	tanstack-vue-table-create-table-hook,tanstack-vue-table-getting-started,tanstack-vue-table-migrate-v8-to-v9,tanstack-vue-table-table-state,tanstack-vue-table-with-tanstack-query,tanstack-vue-table-with-tanstack-virtual
 @tanstack/vue-table-devtools	9.1.2	MIT	1	1	tanstack-vue-table-devtools
+@tanstack/query-intent	5.101.0	MIT	29	29	tanstack-query-intent-compositions-automatic-invalidati-a8e9b778,tanstack-query-intent-compositions-broadcast-realtime-a-6360b276,tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe,tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb,tanstack-query-intent-compositions-persist-offline-and-ca66cce0,tanstack-query-intent-compositions-query-data-and-forms,tanstack-query-intent-core-build-query-abstractions,tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b,tanstack-query-intent-core-concurrent-optimistic-updates,tanstack-query-intent-core-coordinate-query-execution,tanstack-query-intent-core-design-query-keys-and-options,tanstack-query-intent-core-fetch-and-observe-queries,tanstack-query-intent-core-implement-optimistic-updates-20e8c58a,tanstack-query-intent-core-paginate-and-build-infinite-queries,tanstack-query-intent-core-seed-placeholder-select-and-5c98438e,tanstack-query-intent-core-selectors-and-derived-state,tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9,tanstack-query-intent-core-understand-query-internals-a-8ab976f4,tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8,tanstack-query-intent-framework-debug-with-devtools,tanstack-query-intent-framework-handle-status-and-errors,tanstack-query-intent-framework-shape-data-and-render-e-feb144a6,tanstack-query-intent-framework-use-framework-adapter-reactivity,tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec,tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce,tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1,tanstack-query-intent-lifecycle-setup-query-client-and-providers,tanstack-query-intent-lifecycle-ssr-hydration-and-streaming,tanstack-query-intent-lifecycle-test-query-code

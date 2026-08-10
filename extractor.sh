@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-EXPORTER_VERSION="5.1.0"
+EXPORTER_VERSION="5.2.0"
 REGISTRY="${REGISTRY:-https://registry.npmjs.org}"
 TAG="${TAG:-latest}"
 MARKER=".tanstack-skills-export.tsv"
+QUERY_INTENT_PACKAGE="@tanstack/query-intent"
+QUERY_DRAFT_REPO="TanStack/query"
+QUERY_DRAFT_REF="taren/query-intent-skills"
+QUERY_DRAFT_PR="10879"
 
 SELF_TEST=0
 if [[ "${1:-}" == "--self-test" ]]; then
@@ -118,6 +122,7 @@ const pkg = process.argv[4]
 const version = process.argv[5]
 const packageLicense = process.argv[6]
 const packageLicenseFile = process.argv[7] ? path.resolve(process.argv[7]) : null
+const sourceRef = process.argv[8] || null
 
 if (!packageLicense || /[\u0000-\u001f\u007f]/.test(packageLicense)) {
   throw new Error(`Invalid package license metadata for ${pkg}@${version}`)
@@ -293,7 +298,7 @@ for (const entry of entries) {
 const mappingLines = [
   '# TanStack Intent skill ID map',
   '',
-  `Published package: ${pkg}@${version}`,
+  sourceRef ? `Source: ${sourceRef}` : `Published package: ${pkg}@${version}`,
   '',
   '| Original Intent ID | Exported Agent Skill |',
   '| --- | --- |',
@@ -372,6 +377,7 @@ while (queue.length) {
 process.stdout.write(JSON.stringify({
   package: pkg,
   version,
+  sourceRef,
   license: packageLicense,
   licenseFile: packageLicenseFile ? path.basename(packageLicenseFile) : null,
   skillFiles: entries.length,
@@ -412,6 +418,7 @@ const entries = packages.flatMap((record) => record.entries.map((entry) => ({
   ...entry,
   package: record.package,
   packageVersion: record.version,
+  sourceRef: record.sourceRef || null,
   licenseFile: record.licenseFile,
 })))
 const byOutput = new Map()
@@ -669,6 +676,7 @@ function normalizeFrontmatter(file, owner) {
   if (sources.length) metadata.set('tanstack-sources', JSON.stringify([...new Set(sources)]))
   metadata.set('tanstack-package', owner.package)
   metadata.set('tanstack-package-version', owner.packageVersion)
+  if (owner.sourceRef) metadata.set('tanstack-source-ref', owner.sourceRef)
   metadata.set('tanstack-source-skill', owner.sourceName)
 
   const description = sanitizeDescription(fieldScalar(descriptionField))
@@ -872,6 +880,7 @@ const mappingEntries = mappingRecords.flatMap((record) => record.entries.map((en
   ...entry,
   package: record.package,
   packageVersion: record.version,
+  sourceRef: record.sourceRef || null,
   licenseFile: record.licenseFile,
 })))
 const mappingByOutput = new Map(mappingEntries.map((entry) => [entry.outputName, entry]))
@@ -949,6 +958,8 @@ for (const [name, parsed] of parsedSkills) {
   const owner = mappingByOutput.get(name)
   if (parsed.metadata.get('tanstack-package') !== owner.package) fail(`package metadata mismatch in ${name}`)
   if (parsed.metadata.get('tanstack-package-version') !== owner.packageVersion) fail(`package version metadata mismatch in ${name}`)
+  if (owner.sourceRef && parsed.metadata.get('tanstack-source-ref') !== owner.sourceRef) fail(`source reference metadata mismatch in ${name}`)
+  if (!owner.sourceRef && parsed.metadata.has('tanstack-source-ref')) fail(`unexpected source reference metadata in ${name}`)
   if (parsed.metadata.get('tanstack-source-skill') !== owner.sourceName) fail(`source skill metadata mismatch in ${name}`)
 
   const rawRequirements = parsed.metadata.get('tanstack-requires')
@@ -1030,6 +1041,7 @@ run_self_test() {
   mkdir -p "$fixtures/ai/skills/ai-core/tools"
   mkdir -p "$fixtures/angular/skills/table-state"
   mkdir -p "$fixtures/ember/skills/table-state"
+  mkdir -p "$fixtures/query-intent/skills/core/fetch-queries"
 
   printf '%s\n' 'MIT License' 'Fixture license text.' > "$upstream_license"
 
@@ -1099,11 +1111,21 @@ metadata:
 # Ember Table State
 EOF
 
-  local r1 r2 r3
+  cat > "$fixtures/query-intent/skills/core/fetch-queries/SKILL.md" <<'EOF'
+---
+name: core/fetch-queries
+description: Fetch and observe Query data.
+---
+# Fetch Queries
+EOF
+
+  local query_source_ref='github:TanStack/query@0123456789abcdef0123456789abcdef01234567#packages/query-intent'
+  local r1 r2 r3 r4
   r1="$(node "$TRANSFORM_JS" "$fixtures/ai/skills" "$STAGE" '@tanstack/ai' '0.test' 'MIT' "$upstream_license")"
   r2="$(node "$TRANSFORM_JS" "$fixtures/angular/skills" "$STAGE" '@tanstack/angular-table' '9.test' 'MIT' "$upstream_license")"
   r3="$(node "$TRANSFORM_JS" "$fixtures/ember/skills" "$STAGE" '@tanstack/ember-table' '9.test' 'MIT' "$upstream_license")"
-  printf '%s\n' "$r1" "$r2" "$r3" > "$test_mappings"
+  r4="$(node "$TRANSFORM_JS" "$fixtures/query-intent/skills" "$STAGE" '@tanstack/query-intent' '5.101.0' 'MIT' "$upstream_license" "$query_source_ref")"
+  printf '%s\n' "$r1" "$r2" "$r3" "$r4" > "$test_mappings"
 
   node "$FINALIZE_JS" "$STAGE" "$test_mappings" >/dev/null
   node "$VALIDATE_JS" "$STAGE" "$MARKER" "$test_mappings" >/dev/null
@@ -1112,6 +1134,7 @@ EOF
   test -f "$STAGE/tanstack-ai-core-adapter-configuration/SKILL.md"
   test -f "$STAGE/tanstack-angular-table-table-state/SKILL.md"
   test -f "$STAGE/tanstack-ember-table-table-state/SKILL.md"
+  test -f "$STAGE/tanstack-query-intent-core-fetch-queries/SKILL.md"
   test -f "$STAGE/tanstack-ai-core/tools/notes.md"
   test -f "$STAGE/tanstack-ai-core-adapter-configuration/references/detail.md"
   test -f "$STAGE/tanstack-ai-core/UPSTREAM-LICENSE"
@@ -1127,6 +1150,8 @@ EOF
   grep -q '^license: "Apache-2.0"$' "$STAGE/tanstack-ai-core-adapter-configuration/SKILL.md"
   grep -q '^  tanstack-framework: "ember"$' "$STAGE/tanstack-ember-table-table-state/SKILL.md"
   grep -q '^  tanstack-type: "core"$' "$STAGE/tanstack-ai-core/SKILL.md"
+  grep -Fq "  tanstack-source-ref: \"$query_source_ref\"" "$STAGE/tanstack-query-intent-core-fetch-queries/SKILL.md"
+  grep -Fq "Source: $query_source_ref" "$STAGE/tanstack-query-intent-core-fetch-queries/references/INTENT-SKILL-MAP.md"
   grep -q 'Read `../tanstack-ai-core-adapter-configuration/SKILL.md`' "$STAGE/tanstack-angular-table-table-state/SKILL.md"
   grep -Fq 'Read **../tanstack-ai-core/SKILL.md** in bold' "$STAGE/tanstack-ai-core-adapter-configuration/SKILL.md"
   grep -Fq 'Read __../tanstack-ai-core/SKILL.md__ with underscore emphasis' "$STAGE/tanstack-ai-core-adapter-configuration/SKILL.md"
@@ -1175,6 +1200,7 @@ NODE
   echo "PASS: same-package and cross-package dependencies were resolved"
   echo "PASS: plain and Markdown SKILL.md paths were rewritten and validated"
   echo "PASS: upstream license identifiers and files were preserved"
+  echo "PASS: supplemental source provenance was preserved"
   echo "PASS: frontmatter satisfies the standard field and description limits"
   echo "Self-test passed."
 }
@@ -1264,6 +1290,8 @@ package_total="$(wc -l < "$PACKAGES_TXT" | tr -d ' ')"
 package_index=0
 skill_total=0
 included_packages=0
+supplemental_query_source=""
+query_intent_from_npm=0
 
 while IFS= read -r pkg; do
   [[ -n "$pkg" ]] || continue
@@ -1401,9 +1429,229 @@ NODE
 
   skill_total=$((skill_total + output_count))
   included_packages=$((included_packages + 1))
+  if [[ "$pkg" == "$QUERY_INTENT_PACKAGE" ]]; then
+    query_intent_from_npm=1
+  fi
   echo "[$package_index/$package_total] $pkg@$version: $skill_count published skills -> $output_count flat skills"
   rm -f "$tgz"
 done < "$PACKAGES_TXT"
+
+# TanStack Query's official Intent package is currently staged on an official
+# TanStack/query branch. Use that immutable branch head only until npm carries
+# the package; the normal npm scan then becomes the sole source automatically.
+if [[ "$query_intent_from_npm" == "1" ]]; then
+  echo "$QUERY_INTENT_PACKAGE is published on npm; supplemental GitHub import is not needed."
+elif grep -Fxq "$QUERY_INTENT_PACKAGE" "$PACKAGES_TXT"; then
+  echo "ERROR: $QUERY_INTENT_PACKAGE is published on npm but its tarball contains no skills; refusing to remove the Query skills." >&2
+  exit 1
+else
+  echo "Importing unpublished $QUERY_INTENT_PACKAGE from $QUERY_DRAFT_REPO pull request #$QUERY_DRAFT_PR ..."
+
+  query_archive="$PACKS/query-intent-draft.tgz"
+  if ! query_pr_source="$(node - "$QUERY_DRAFT_REPO" "$QUERY_DRAFT_REF" "$QUERY_DRAFT_PR" "$query_archive" <<'NODE'
+const fs = require('fs')
+
+const repo = process.argv[2]
+const branch = process.argv[3]
+const prNumber = Number(process.argv[4])
+const archiveFile = process.argv[5]
+const apiUrl = `https://api.github.com/repos/${repo}/pulls/${prNumber}`
+const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
+const headers = {
+  accept: 'application/vnd.github+json',
+  'user-agent': 'tanstack-skills-extracted',
+  'x-github-api-version': '2022-11-28',
+}
+if (token) headers.authorization = `Bearer ${token}`
+
+async function request(url, attempts = 3) {
+  let lastError
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers,
+        redirect: 'follow',
+        signal: AbortSignal.timeout(30_000),
+      })
+      if (response.ok || response.status === 404) return response
+      if (response.status < 500 && response.status !== 429) {
+        throw new Error(`HTTP ${response.status} from ${url}`)
+      }
+      lastError = new Error(`HTTP ${response.status} from ${url}`)
+    } catch (error) {
+      lastError = error
+    }
+    if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, attempt * 500))
+  }
+  throw lastError
+}
+
+async function main() {
+  if (!Number.isSafeInteger(prNumber) || prNumber < 1) {
+    throw new Error(`invalid Query draft pull request number: ${process.argv[4]}`)
+  }
+
+  const prResponse = await request(apiUrl)
+  if (prResponse.status === 404) {
+    throw new Error(`required official Query draft pull request ${repo}#${prNumber} disappeared before @tanstack/query-intent was published on npm`)
+  }
+  const pr = await prResponse.json()
+  if (
+    pr?.number !== prNumber ||
+    pr?.base?.repo?.full_name !== repo ||
+    pr?.head?.repo?.full_name !== repo ||
+    pr?.head?.ref !== branch
+  ) {
+    throw new Error(`official Query draft pull request identity changed: expected ${repo}#${prNumber} from ${repo}:${branch}`)
+  }
+
+  let sha
+  let prState
+  if (pr.state === 'open') {
+    sha = pr.head.sha
+    prState = 'open'
+  } else if (pr.merged === true) {
+    sha = pr.merge_commit_sha
+    prState = 'merged'
+  } else {
+    throw new Error(`official Query draft pull request ${repo}#${prNumber} closed without merge before @tanstack/query-intent was published on npm`)
+  }
+  if (!/^[0-9a-f]{40}$/.test(sha || '')) {
+    throw new Error(`official Query draft pull request ${repo}#${prNumber} returned an invalid ${prState} commit`)
+  }
+
+  const archiveUrl = `https://codeload.github.com/${repo}/tar.gz/${sha}`
+  const archiveResponse = await request(archiveUrl)
+  if (!archiveResponse.ok) throw new Error(`could not download official Query draft commit ${sha}: HTTP ${archiveResponse.status}`)
+  const bytes = Buffer.from(await archiveResponse.arrayBuffer())
+  if (bytes.length < 1024) throw new Error(`official Query draft archive is unexpectedly small: ${bytes.length} bytes`)
+  fs.writeFileSync(archiveFile, bytes)
+  process.stdout.write(`${sha}\t${prState}`)
+}
+
+main().catch((error) => {
+  process.stderr.write(`ERROR: ${error.message}\n`)
+  process.exit(2)
+})
+NODE
+  )"; then
+    exit 1
+  fi
+  IFS=$'\t' read -r query_sha query_pr_state <<< "$query_pr_source"
+
+  query_tar_list="$TMP/query-intent-draft.list"
+  if ! tar -tzf "$query_archive" > "$query_tar_list"; then
+    echo "ERROR: could not list official Query draft archive for commit $query_sha" >&2
+    exit 1
+  fi
+  if grep -Eq '(^|/)\.\.(/|$)|^/' "$query_tar_list"; then
+    echo "ERROR: unsafe absolute or parent-traversal path in official Query draft archive $query_sha" >&2
+    exit 1
+  fi
+
+  query_archive_root="query-$query_sha"
+  query_package_root="$query_archive_root/packages/query-intent"
+  for required_entry in \
+    "$query_package_root/package.json" \
+    "$query_package_root/skills/core" \
+    "$query_archive_root/LICENSE"; do
+    if ! grep -Fxq "$required_entry" "$query_tar_list" && ! grep -Fxq "$required_entry/" "$query_tar_list"; then
+      echo "ERROR: official Query draft commit $query_sha is missing $required_entry" >&2
+      exit 1
+    fi
+  done
+  if ! grep -Eq "^$query_package_root/skills/.*/SKILL\\.md$" "$query_tar_list"; then
+    echo "ERROR: official Query draft commit $query_sha contains no query-intent SKILL.md files" >&2
+    exit 1
+  fi
+
+  query_stage="$TMP/query-intent-draft"
+  mkdir -p "$query_stage"
+  if ! tar -xzf "$query_archive" \
+    -C "$query_stage" \
+    --no-same-owner \
+    --no-same-permissions \
+    "$query_package_root/package.json" \
+    "$query_package_root/skills" \
+    "$query_archive_root/LICENSE"; then
+    echo "ERROR: could not extract official Query draft commit $query_sha" >&2
+    exit 1
+  fi
+
+  extracted_query_package="$query_stage/$query_package_root"
+  extracted_query_license="$query_stage/$query_archive_root/LICENSE"
+  if [[ -L "$extracted_query_package/package.json" || ! -f "$extracted_query_package/package.json" ]]; then
+    echo "ERROR: package metadata is missing or is a symlink in official Query draft commit $query_sha" >&2
+    exit 1
+  fi
+  if [[ -L "$extracted_query_license" || ! -f "$extracted_query_license" ]]; then
+    echo "ERROR: repository license is missing or is a symlink in official Query draft commit $query_sha" >&2
+    exit 1
+  fi
+  if find "$extracted_query_package/skills" -type l -print -quit | grep -q .; then
+    echo "ERROR: symlink found in official Query draft skills tree at commit $query_sha" >&2
+    exit 1
+  fi
+
+  query_metadata="$(node - "$extracted_query_package/package.json" "$QUERY_INTENT_PACKAGE" <<'NODE'
+const fs = require('fs')
+const file = process.argv[2]
+const expectedName = process.argv[3]
+let metadata
+try {
+  metadata = JSON.parse(fs.readFileSync(file, 'utf8'))
+} catch (error) {
+  process.stderr.write(`ERROR: invalid package metadata for ${expectedName}: ${error.message}\n`)
+  process.exit(2)
+}
+if (metadata.name !== expectedName || typeof metadata.version !== 'string' || !metadata.version.trim()) {
+  process.stderr.write(`ERROR: package identity mismatch in official Query draft: expected ${expectedName} with a version\n`)
+  process.exit(2)
+}
+const raw = typeof metadata.license === 'string'
+  ? metadata.license
+  : metadata.license && typeof metadata.license.type === 'string'
+    ? metadata.license.type
+    : ''
+const license = raw.trim()
+if (!license || /[\u0000-\u001f\u007f]/.test(license)) {
+  process.stderr.write(`ERROR: ${expectedName}@${metadata.version} has no valid string license identifier\n`)
+  process.exit(2)
+}
+process.stdout.write(`${metadata.version}\t${license}`)
+NODE
+  )"
+  IFS=$'\t' read -r query_version query_license <<< "$query_metadata"
+
+  supplemental_query_source="github:$QUERY_DRAFT_REPO@$query_sha#packages/query-intent"
+  query_result_json="$TMP/result-query-intent-draft.json"
+  node "$TRANSFORM_JS" \
+    "$extracted_query_package/skills" "$STAGE" "$QUERY_INTENT_PACKAGE" \
+    "$query_version" "$query_license" "$extracted_query_license" \
+    "$supplemental_query_source" > "$query_result_json"
+
+  node - "$query_result_json" >> "$MAPPINGS_JSONL" <<'NODE'
+const fs = require('fs')
+const value = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))
+process.stdout.write(`${JSON.stringify(value)}\n`)
+NODE
+
+  query_result_line="$(node - "$query_result_json" <<'NODE'
+const fs = require('fs')
+const x = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))
+process.stdout.write(`${x.skillFiles}\t${x.outputSkills}\t${x.outputRoots.join(',')}`)
+NODE
+  )"
+  IFS=$'\t' read -r query_skill_count query_output_count query_output_roots <<< "$query_result_line"
+
+  printf '%s\t%s\t%s\t%s\t%s\t%s\n' \
+    "$QUERY_INTENT_PACKAGE" "$query_version" "$query_license" \
+    "$query_skill_count" "$query_output_count" "$query_output_roots" >> "$MANIFEST"
+
+  skill_total=$((skill_total + query_output_count))
+  included_packages=$((included_packages + 1))
+  echo "$QUERY_INTENT_PACKAGE@$query_version from PR #$QUERY_DRAFT_PR $query_pr_state commit $query_sha: $query_skill_count draft skills -> $query_output_count flat skills"
+fi
 
 finalization="$(node "$FINALIZE_JS" "$STAGE" "$MAPPINGS_JSONL")"
 validation="$(node "$VALIDATE_JS" "$STAGE" "$MARKER" "$MAPPINGS_JSONL")"
@@ -1418,6 +1666,12 @@ fi
   printf '# exporter_version=%s\n' "$EXPORTER_VERSION"
   printf '# source_registry=%s\n' "$REGISTRY"
   printf '# source_tag=%s\n' "$TAG"
+  if [[ -n "$supplemental_query_source" ]]; then
+    printf '# supplemental_query_source=%s\n' "$supplemental_query_source"
+    printf '# supplemental_query_pr=%s#%s\n' "$QUERY_DRAFT_REPO" "$QUERY_DRAFT_PR"
+    printf '# supplemental_query_pr_state=%s\n' "$query_pr_state"
+    printf '# supplemental_query_branch=%s\n' "$QUERY_DRAFT_REF"
+  fi
   cat "$MANIFEST"
 } > "$STAGE/$MARKER"
 
