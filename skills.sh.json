@@ -4,7 +4,7 @@
   "groupings": [
     {
       "title": "TanStack AI",
-      "description": "Skills for TanStack AI, MCP, Code Mode, and sandboxes. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/tanstack-ai --skill '*'",
+      "description": "Skills for TanStack AI, MCP, Code Mode, and sandboxes.",
       "skills": [
         "tanstack-ai-code-mode",
         "tanstack-ai-core",
@@ -25,7 +25,7 @@
     },
     {
       "title": "TanStack DB",
-      "description": "Core database skills, framework bindings, and offline transactions. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/tanstack-db --skill '*'",
+      "description": "Core database skills, framework bindings, and offline transactions.",
       "skills": [
         "tanstack-db-core",
         "tanstack-db-core-collection-setup",
@@ -43,7 +43,7 @@
     },
     {
       "title": "Table Core",
-      "description": "Framework-neutral TanStack Table skills. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/table-core --skill '*'",
+      "description": "Framework-neutral TanStack Table skills.",
       "skills": [
         "tanstack-table-core",
         "tanstack-table-core-aggregation",
@@ -73,7 +73,7 @@
     },
     {
       "title": "React Table",
-      "description": "TanStack Table skills for React. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/react-table --skill '*'",
+      "description": "TanStack Table skills for React.",
       "skills": [
         "tanstack-react-table-create-table-hook",
         "tanstack-react-table-devtools",
@@ -86,7 +86,7 @@
     },
     {
       "title": "Angular Table",
-      "description": "TanStack Table skills for Angular. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/angular-table --skill '*'",
+      "description": "TanStack Table skills for Angular.",
       "skills": [
         "tanstack-angular-table-create-table-hook",
         "tanstack-angular-table-getting-started",
@@ -98,7 +98,7 @@
     },
     {
       "title": "Solid Table",
-      "description": "TanStack Table skills for Solid. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/solid-table --skill '*'",
+      "description": "TanStack Table skills for Solid.",
       "skills": [
         "tanstack-solid-table-create-table-hook",
         "tanstack-solid-table-getting-started",
@@ -110,7 +110,7 @@
     },
     {
       "title": "Svelte Table",
-      "description": "TanStack Table skills for Svelte. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/svelte-table --skill '*'",
+      "description": "TanStack Table skills for Svelte.",
       "skills": [
         "tanstack-svelte-table-create-table-hook",
         "tanstack-svelte-table-getting-started",
@@ -122,7 +122,7 @@
     },
     {
       "title": "Vue Table",
-      "description": "TanStack Table skills for Vue. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/vue-table --skill '*'",
+      "description": "TanStack Table skills for Vue.",
       "skills": [
         "tanstack-vue-table-create-table-hook",
         "tanstack-vue-table-getting-started",
@@ -134,7 +134,7 @@
     },
     {
       "title": "Lit Table",
-      "description": "TanStack Table skills for Lit. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/lit-table --skill '*'",
+      "description": "TanStack Table skills for Lit.",
       "skills": [
         "tanstack-lit-table-create-table-hook",
         "tanstack-lit-table-getting-started",
@@ -145,7 +145,7 @@
     },
     {
       "title": "Ember Table",
-      "description": "TanStack Table skills for Ember. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/ember-table --skill '*'",
+      "description": "TanStack Table skills for Ember.",
       "skills": [
         "tanstack-ember-table-create-table-hook",
         "tanstack-ember-table-getting-started",
@@ -154,7 +154,7 @@
     },
     {
       "title": "Markdown",
-      "description": "TanStack Markdown parsing and rendering skills. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/markdown --skill '*'",
+      "description": "TanStack Markdown parsing and rendering skills.",
       "skills": [
         "tanstack-markdown-custom-extensions",
         "tanstack-markdown-docs-features",
@@ -166,7 +166,7 @@
     },
     {
       "title": "Highlight",
-      "description": "TanStack Highlight integration and extension skills. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/highlight --skill '*'",
+      "description": "TanStack Highlight integration and extension skills.",
       "skills": [
         "tanstack-highlight-configure-selective-highlighting",
         "tanstack-highlight-extend-language-support",
@@ -177,7 +177,7 @@
     },
     {
       "title": "Table Tools",
-      "description": "Table developer tools and fuzzy ranking. Install all: npx skills add lukasa1993/tanstack-skills-extracted/groups/table-tools --skill '*'",
+      "description": "Table developer tools and fuzzy ranking.",
       "skills": [
         "tanstack-match-sorter-utils-fuzzy-ranking",
         "tanstack-table-devtools"

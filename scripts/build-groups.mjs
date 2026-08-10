@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-import { cp, mkdir, mkdtemp, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const skillsDir = join(root, 'skills')
-const groupsDir = join(root, 'groups')
-const generatedMarker = '.tanstack-skill-groups.json'
 
 const groups = [
   {
@@ -140,82 +138,38 @@ function json(value) {
   return `${JSON.stringify(value, null, 2)}\n`
 }
 
-function installCommand(group) {
-  return `npx skills add lukasa1993/tanstack-skills-extracted/groups/${group.slug} --skill '*'`
-}
-
-async function replaceGeneratedGroups(stagedGroups) {
-  if (await exists(groupsDir)) {
-    const markerPath = join(groupsDir, generatedMarker)
-    let marker
-    try {
-      marker = JSON.parse(await readFile(markerPath, 'utf8'))
-    } catch {
-      throw new Error(`Refusing to replace ${groupsDir}: generated marker is missing or invalid`)
-    }
-    if (marker.generator !== 'scripts/build-groups.mjs') {
-      throw new Error(`Refusing to replace ${groupsDir}: generated marker is not recognized`)
-    }
-    await rm(groupsDir, { recursive: true })
-  }
-
-  await rename(stagedGroups, groupsDir)
-}
-
 async function main() {
   const skillNames = await listSkills()
   const { assignments, ungrouped } = assignSkills(skillNames)
   const populatedGroups = groups.filter((group) => assignments.get(group.slug).length > 0)
 
-  const stage = await mkdtemp(join(root, '.tanstack-groups.'))
-  const stagedGroups = join(stage, 'groups')
-  await mkdir(stagedGroups)
-
-  try {
-    await writeFile(
-      join(stagedGroups, generatedMarker),
-      json({ generator: 'scripts/build-groups.mjs', format: 1 }),
-    )
-
-    for (const group of populatedGroups) {
-      const groupDir = join(stagedGroups, group.slug)
-      await mkdir(groupDir)
-      for (const name of assignments.get(group.slug)) {
-        await cp(join(skillsDir, name), join(groupDir, name), { recursive: true })
-      }
-    }
-
-    const skillsShConfig = {
-      $schema: 'https://skills.sh/schemas/skills.sh.schema.json',
-      notGrouped: 'bottom',
-      groupings: populatedGroups.map((group) => ({
-        title: group.title,
-        description: `${group.description} Install all: ${installCommand(group)}`,
-        skills: assignments.get(group.slug),
-      })),
-    }
-
-    const marketplace = {
-      name: 'tanstack-skills-extracted',
-      description: 'Install extracted TanStack skills by product or framework.',
-      owner: { name: 'lukasa1993' },
-      plugins: populatedGroups.map((group) => ({
-        name: group.slug,
-        source: './',
-        description: group.description,
-        license: 'MIT',
-        strict: false,
-        skills: assignments.get(group.slug).map((name) => `./skills/${name}`),
-      })),
-    }
-
-    await replaceGeneratedGroups(stagedGroups)
-    await writeFile(join(root, 'skills.sh.json'), json(skillsShConfig))
-    await mkdir(join(root, '.claude-plugin'), { recursive: true })
-    await writeFile(join(root, '.claude-plugin', 'marketplace.json'), json(marketplace))
-  } finally {
-    await rm(stage, { recursive: true, force: true })
+  const skillsShConfig = {
+    $schema: 'https://skills.sh/schemas/skills.sh.schema.json',
+    notGrouped: 'bottom',
+    groupings: populatedGroups.map((group) => ({
+      title: group.title,
+      description: group.description,
+      skills: assignments.get(group.slug),
+    })),
   }
+
+  const marketplace = {
+    name: 'tanstack-skills-extracted',
+    description: 'Install extracted TanStack skills by product or framework.',
+    owner: { name: 'lukasa1993' },
+    plugins: populatedGroups.map((group) => ({
+      name: group.slug,
+      source: './',
+      description: group.description,
+      license: 'MIT',
+      strict: false,
+      skills: assignments.get(group.slug).map((name) => `./skills/${name}`),
+    })),
+  }
+
+  await writeFile(join(root, 'skills.sh.json'), json(skillsShConfig))
+  await mkdir(join(root, '.claude-plugin'), { recursive: true })
+  await writeFile(join(root, '.claude-plugin', 'marketplace.json'), json(marketplace))
 
   const groupedCount = [...assignments.values()].reduce((sum, names) => sum + names.length, 0)
   console.log(`Built ${populatedGroups.length} groups for ${groupedCount} skills.`)

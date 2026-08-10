@@ -44,7 +44,7 @@ jobs:
       - name: Extract current npm skills
         run: ./extractor.sh skills
 
-      - name: Build installable groups
+      - name: Build group metadata
         run: node ./scripts/build-groups.mjs
 
       - name: Validate group discovery
@@ -53,7 +53,6 @@ jobs:
         run: |
           set -euo pipefail
           npx --yes skills@1.5.21 add . --list
-          npx --yes skills@1.5.21 add ./groups/react-table --list
 
       - name: Validate Agent Skills
         run: gh skill publish --dry-run
@@ -62,7 +61,7 @@ jobs:
         id: changes
         run: |
           set -euo pipefail
-          generated=(skills groups skills.sh.json .claude-plugin/marketplace.json)
+          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
           git add -A -- "${generated[@]}"
           if git diff --cached --quiet -- "${generated[@]}"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -87,7 +86,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          generated=(skills groups skills.sh.json .claude-plugin/marketplace.json)
+          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
           publish_sha="$(git log -1 --format=%H -- "${generated[@]}")"
           skill_commit_count="$(git rev-list --count "$publish_sha" -- "${generated[@]}")"
           version="v0.1.${skill_commit_count}"
@@ -119,9 +118,9 @@ jobs:
         run: |
           set -euo pipefail
           git fetch --no-tags origin main
-          generated=(skills groups skills.sh.json .claude-plugin/marketplace.json)
+          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
           if ! git diff --quiet "$EXPECTED_SHA" origin/main -- "${generated[@]}"; then
-            echo "The published skills or groups on main changed after the refresh job." >&2
+            echo "The published skills or metadata on main changed after the refresh job." >&2
             exit 1
           fi
 

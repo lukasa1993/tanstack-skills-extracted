@@ -8,25 +8,19 @@ The exporter finds published `@tanstack/*` packages with the `tanstack-intent` k
 
 ## Install
 
-List the available skills:
+Run the interactive installer:
 
 ```sh
-npx skills add lukasa1993/tanstack-skills-extracted --list
+npx skills add lukasa1993/tanstack-skills-extracted
 ```
 
-Install one skill:
+Select a group header, such as `React Table`, to select all skills in that group. You can also select individual skills.
+
+Install one skill without the interactive picker:
 
 ```sh
 npx skills add lukasa1993/tanstack-skills-extracted --skill tanstack-react-table-getting-started
 ```
-
-Install one group, such as all React Table skills:
-
-```sh
-npx skills add lukasa1993/tanstack-skills-extracted/groups/react-table --skill '*'
-```
-
-The interactive installer also has selectable group headers. Available group paths are `tanstack-ai`, `tanstack-db`, `table-core`, `react-table`, `angular-table`, `solid-table`, `svelte-table`, `vue-table`, `lit-table`, `ember-table`, `markdown`, `highlight`, and `table-tools`.
 
 Existing installations get changed skills with:
 
@@ -43,7 +37,7 @@ node ./scripts/build-groups.mjs
 gh skill publish --dry-run
 ```
 
-The GitHub Actions workflow checks npm once each day. It rebuilds the page groups, installer groups, and group paths. It commits and publishes only when the generated output changes.
+The GitHub Actions workflow checks npm once each day. It rebuilds the page and installer groups. It commits and publishes only when the generated output changes.
 
 ## License
 
