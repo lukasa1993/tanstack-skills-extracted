@@ -1,0 +1,149 @@
+name: Refresh extracted skills
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-extracted-tanstack-skills
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'lukasa1993/tanstack-skills-extracted' && github.ref == 'refs/heads/main'
+    runs-on: tanstack-skills
+    timeout-minutes: 30
+    outputs:
+      publish_needed: ${{ steps.release.outputs.needed }}
+      release_version: ${{ steps.release.outputs.version }}
+      publish_sha: ${{ steps.release.outputs.sha }}
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: false
+
+      - name: Check runner tools
+        run: |
+          set -euo pipefail
+          node --version
+          npm --version
+          gh --version
+
+      - name: Test exporter
+        run: ./extractor.sh --self-test
+
+      - name: Extract current npm skills
+        run: ./extractor.sh skills
+
+      - name: Validate Agent Skills
+        run: gh skill publish --dry-run
+
+      - name: Detect changes
+        id: changes
+        run: |
+          set -euo pipefail
+          git add -A -- skills
+          if git diff --cached --quiet -- skills; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changed skills
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh extracted TanStack skills"
+          git -c credential.helper='!gh auth git-credential' push origin HEAD:main
+
+      - name: Select release version
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          publish_sha="$(git log -1 --format=%H -- skills)"
+          skill_commit_count="$(git rev-list --count "$publish_sha" -- skills)"
+          version="v0.1.${skill_commit_count}"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "sha=$publish_sha" >> "$GITHUB_OUTPUT"
+          skill_subject="$(git show -s --format=%s "$publish_sha")"
+          if [[ "$skill_subject" == "chore: refresh extracted TanStack skills" ]] && ! gh release view "$version" >/dev/null 2>&1; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    needs: refresh
+    if: needs.refresh.outputs.publish_needed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out published main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.refresh.outputs.publish_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify published skills are current
+        env:
+          EXPECTED_SHA: ${{ needs.refresh.outputs.publish_sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          if ! git diff --quiet "$EXPECTED_SHA" origin/main -- skills; then
+            echo "The skills on main changed after the refresh job." >&2
+            exit 1
+          fi
+
+      - name: Refresh skills.sh index
+        env:
+          NPM_CONFIG_IGNORE_SCRIPTS: "true"
+        run: |
+          set -euo pipefail
+          install_dir="$(mktemp -d "${RUNNER_TEMP}/skills-sh-install.XXXXXX")"
+          cd "$install_dir"
+
+          batch=()
+          batch_count=0
+          for skill_file in "$GITHUB_WORKSPACE"/skills/*/SKILL.md; do
+            skill_name="$(basename "$(dirname "$skill_file")")"
+            batch+=(--skill "$skill_name")
+            batch_count=$((batch_count + 1))
+            if (( batch_count == 8 )); then
+              npx --yes skills@1.5.21 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
+              batch=()
+              batch_count=0
+            fi
+          done
+          if (( batch_count > 0 )); then
+            npx --yes skills@1.5.21 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
+          fi
+
+      - name: Publish GitHub skill release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ needs.refresh.outputs.release_version }}
+          PUBLISH_SHA: ${{ needs.refresh.outputs.publish_sha }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/releases" \
+            -f tag_name="$RELEASE_VERSION" \
+            -f target_commitish="$PUBLISH_SHA" \
+            -F generate_release_notes=true \
+            --jq .html_url

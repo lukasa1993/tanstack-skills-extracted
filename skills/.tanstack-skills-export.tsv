@@ -1,0 +1,27 @@
+# exporter_version=5.0.0
+# source_registry=https://registry.npmjs.org
+# source_tag=latest
+package	version	license	published_skill_files	exported_skills	output_skills
+@tanstack/ai	0.43.1	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
+@tanstack/ai-code-mode	0.3.10	MIT	1	1	tanstack-ai-code-mode
+@tanstack/ai-mcp	0.2.7	MIT	1	1	tanstack-ai-mcp
+@tanstack/ai-sandbox	0.3.0	MIT	1	1	tanstack-ai-sandbox
+@tanstack/angular-table	9.1.2	MIT	6	6	tanstack-angular-table-create-table-hook,tanstack-angular-table-getting-started,tanstack-angular-table-migrate-v8-to-v9,tanstack-angular-table-table-state,tanstack-angular-table-with-tanstack-query,tanstack-angular-table-with-tanstack-virtual
+@tanstack/db	0.6.17	MIT	7	7	tanstack-db-core,tanstack-db-core-collection-setup,tanstack-db-core-custom-adapter,tanstack-db-core-live-queries,tanstack-db-core-mutations-optimistic,tanstack-db-core-persistence,tanstack-db-meta-framework
+@tanstack/ember-table	9.1.2	MIT	3	3	tanstack-ember-table-create-table-hook,tanstack-ember-table-getting-started,tanstack-ember-table-table-state
+@tanstack/highlight	0.0.10	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
+@tanstack/lit-table	9.1.2	MIT	5	5	tanstack-lit-table-create-table-hook,tanstack-lit-table-getting-started,tanstack-lit-table-migrate-v8-to-v9,tanstack-lit-table-table-state,tanstack-lit-table-with-tanstack-virtual
+@tanstack/markdown	0.0.13	MIT	6	6	tanstack-markdown-custom-extensions,tanstack-markdown-docs-features,tanstack-markdown-octane-rendering,tanstack-markdown-production-pipelines,tanstack-markdown-react-rendering,tanstack-markdown-render-markdown
+@tanstack/match-sorter-utils	9.1.2	MIT	1	1	tanstack-match-sorter-utils-fuzzy-ranking
+@tanstack/offline-transactions	1.0.42	MIT	1	1	tanstack-offline-transactions-offline
+@tanstack/react-db	0.1.95	MIT	1	1	tanstack-react-db
+@tanstack/react-table	9.1.2	MIT	6	6	tanstack-react-table-create-table-hook,tanstack-react-table-getting-started,tanstack-react-table-migrate-v8-to-v9,tanstack-react-table-table-state,tanstack-react-table-with-tanstack-query,tanstack-react-table-with-tanstack-virtual
+@tanstack/react-table-devtools	9.1.2	MIT	1	1	tanstack-react-table-devtools
+@tanstack/solid-db	0.2.31	MIT	1	1	tanstack-solid-db
+@tanstack/solid-table	9.1.2	MIT	6	6	tanstack-solid-table-create-table-hook,tanstack-solid-table-getting-started,tanstack-solid-table-migrate-v8-to-v9,tanstack-solid-table-table-state,tanstack-solid-table-with-tanstack-query,tanstack-solid-table-with-tanstack-virtual
+@tanstack/svelte-db	0.1.94	MIT	1	1	tanstack-svelte-db
+@tanstack/svelte-table	9.1.2	MIT	6	6	tanstack-svelte-table-create-table-hook,tanstack-svelte-table-getting-started,tanstack-svelte-table-migrate-v8-to-v9,tanstack-svelte-table-table-state,tanstack-svelte-table-with-tanstack-query,tanstack-svelte-table-with-tanstack-virtual
+@tanstack/table-core	9.1.2	MIT	24	24	tanstack-table-core-aggregation,tanstack-table-core-api-not-found,tanstack-table-core-cell-selection,tanstack-table-core-cell-spanning,tanstack-table-core-client-vs-server,tanstack-table-core-column-faceting,tanstack-table-core-column-filtering,tanstack-table-core-column-ordering,tanstack-table-core-column-pinning,tanstack-table-core-column-resizing,tanstack-table-core-column-sizing,tanstack-table-core-column-visibility,tanstack-table-core,tanstack-table-core-custom-features,tanstack-table-core-expanding,tanstack-table-core-global-filtering,tanstack-table-core-grouping,tanstack-table-core-migrate-v8-to-v9,tanstack-table-core-pagination,tanstack-table-core-row-pinning,tanstack-table-core-row-selection,tanstack-table-core-sorting,tanstack-table-core-table-features,tanstack-table-core-typescript
+@tanstack/table-devtools	9.1.2	MIT	1	1	tanstack-table-devtools
+@tanstack/vue-db	0.0.128	MIT	1	1	tanstack-vue-db
+@tanstack/vue-table	9.1.2	MIT	6	6	tanstack-vue-table-create-table-hook,tanstack-vue-table-getting-started,tanstack-vue-table-migrate-v8-to-v9,tanstack-vue-table-table-state,tanstack-vue-table-with-tanstack-query,tanstack-vue-table-with-tanstack-virtual
