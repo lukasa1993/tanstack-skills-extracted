@@ -44,6 +44,17 @@ jobs:
       - name: Extract current npm skills
         run: ./extractor.sh skills
 
+      - name: Build installable groups
+        run: node ./scripts/build-groups.mjs
+
+      - name: Validate group discovery
+        env:
+          NPM_CONFIG_IGNORE_SCRIPTS: "true"
+        run: |
+          set -euo pipefail
+          npx --yes skills@1.5.21 add . --list
+          npx --yes skills@1.5.21 add ./groups/react-table --list
+
       - name: Validate Agent Skills
         run: gh skill publish --dry-run
 
@@ -51,8 +62,9 @@ jobs:
         id: changes
         run: |
           set -euo pipefail
-          git add -A -- skills
-          if git diff --cached --quiet -- skills; then
+          generated=(skills groups skills.sh.json .claude-plugin/marketplace.json)
+          git add -A -- "${generated[@]}"
+          if git diff --cached --quiet -- "${generated[@]}"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -75,13 +87,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          publish_sha="$(git log -1 --format=%H -- skills)"
-          skill_commit_count="$(git rev-list --count "$publish_sha" -- skills)"
+          generated=(skills groups skills.sh.json .claude-plugin/marketplace.json)
+          publish_sha="$(git log -1 --format=%H -- "${generated[@]}")"
+          skill_commit_count="$(git rev-list --count "$publish_sha" -- "${generated[@]}")"
           version="v0.1.${skill_commit_count}"
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "sha=$publish_sha" >> "$GITHUB_OUTPUT"
-          skill_subject="$(git show -s --format=%s "$publish_sha")"
-          if [[ "$skill_subject" == "chore: refresh extracted TanStack skills" ]] && ! gh release view "$version" >/dev/null 2>&1; then
+          if ! gh release view "$version" >/dev/null 2>&1; then
             echo "needed=true" >> "$GITHUB_OUTPUT"
           else
             echo "needed=false" >> "$GITHUB_OUTPUT"
@@ -107,8 +119,9 @@ jobs:
         run: |
           set -euo pipefail
           git fetch --no-tags origin main
-          if ! git diff --quiet "$EXPECTED_SHA" origin/main -- skills; then
-            echo "The skills on main changed after the refresh job." >&2
+          generated=(skills groups skills.sh.json .claude-plugin/marketplace.json)
+          if ! git diff --quiet "$EXPECTED_SHA" origin/main -- "${generated[@]}"; then
+            echo "The published skills or groups on main changed after the refresh job." >&2
             exit 1
           fi
 

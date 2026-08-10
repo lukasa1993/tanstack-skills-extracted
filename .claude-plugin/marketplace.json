@@ -1,0 +1,229 @@
+{
+  "name": "tanstack-skills-extracted",
+  "description": "Install extracted TanStack skills by product or framework.",
+  "owner": {
+    "name": "lukasa1993"
+  },
+  "plugins": [
+    {
+      "name": "tanstack-ai",
+      "source": "./",
+      "description": "Skills for TanStack AI, MCP, Code Mode, and sandboxes.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-ai-code-mode",
+        "./skills/tanstack-ai-core",
+        "./skills/tanstack-ai-core-adapter-configuration",
+        "./skills/tanstack-ai-core-ag-ui-protocol",
+        "./skills/tanstack-ai-core-chat-experience",
+        "./skills/tanstack-ai-core-client-persistence",
+        "./skills/tanstack-ai-core-custom-backend-integration",
+        "./skills/tanstack-ai-core-debug-logging",
+        "./skills/tanstack-ai-core-locks",
+        "./skills/tanstack-ai-core-media-generation",
+        "./skills/tanstack-ai-core-middleware",
+        "./skills/tanstack-ai-core-structured-outputs",
+        "./skills/tanstack-ai-core-tool-calling",
+        "./skills/tanstack-ai-mcp",
+        "./skills/tanstack-ai-sandbox"
+      ]
+    },
+    {
+      "name": "tanstack-db",
+      "source": "./",
+      "description": "Core database skills, framework bindings, and offline transactions.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-db-core",
+        "./skills/tanstack-db-core-collection-setup",
+        "./skills/tanstack-db-core-custom-adapter",
+        "./skills/tanstack-db-core-live-queries",
+        "./skills/tanstack-db-core-mutations-optimistic",
+        "./skills/tanstack-db-core-persistence",
+        "./skills/tanstack-db-meta-framework",
+        "./skills/tanstack-offline-transactions-offline",
+        "./skills/tanstack-react-db",
+        "./skills/tanstack-solid-db",
+        "./skills/tanstack-svelte-db",
+        "./skills/tanstack-vue-db"
+      ]
+    },
+    {
+      "name": "table-core",
+      "source": "./",
+      "description": "Framework-neutral TanStack Table skills.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-table-core",
+        "./skills/tanstack-table-core-aggregation",
+        "./skills/tanstack-table-core-api-not-found",
+        "./skills/tanstack-table-core-cell-selection",
+        "./skills/tanstack-table-core-cell-spanning",
+        "./skills/tanstack-table-core-client-vs-server",
+        "./skills/tanstack-table-core-column-faceting",
+        "./skills/tanstack-table-core-column-filtering",
+        "./skills/tanstack-table-core-column-ordering",
+        "./skills/tanstack-table-core-column-pinning",
+        "./skills/tanstack-table-core-column-resizing",
+        "./skills/tanstack-table-core-column-sizing",
+        "./skills/tanstack-table-core-column-visibility",
+        "./skills/tanstack-table-core-custom-features",
+        "./skills/tanstack-table-core-expanding",
+        "./skills/tanstack-table-core-global-filtering",
+        "./skills/tanstack-table-core-grouping",
+        "./skills/tanstack-table-core-migrate-v8-to-v9",
+        "./skills/tanstack-table-core-pagination",
+        "./skills/tanstack-table-core-row-pinning",
+        "./skills/tanstack-table-core-row-selection",
+        "./skills/tanstack-table-core-sorting",
+        "./skills/tanstack-table-core-table-features",
+        "./skills/tanstack-table-core-typescript"
+      ]
+    },
+    {
+      "name": "react-table",
+      "source": "./",
+      "description": "TanStack Table skills for React.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-react-table-create-table-hook",
+        "./skills/tanstack-react-table-devtools",
+        "./skills/tanstack-react-table-getting-started",
+        "./skills/tanstack-react-table-migrate-v8-to-v9",
+        "./skills/tanstack-react-table-table-state",
+        "./skills/tanstack-react-table-with-tanstack-query",
+        "./skills/tanstack-react-table-with-tanstack-virtual"
+      ]
+    },
+    {
+      "name": "angular-table",
+      "source": "./",
+      "description": "TanStack Table skills for Angular.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-angular-table-create-table-hook",
+        "./skills/tanstack-angular-table-getting-started",
+        "./skills/tanstack-angular-table-migrate-v8-to-v9",
+        "./skills/tanstack-angular-table-table-state",
+        "./skills/tanstack-angular-table-with-tanstack-query",
+        "./skills/tanstack-angular-table-with-tanstack-virtual"
+      ]
+    },
+    {
+      "name": "solid-table",
+      "source": "./",
+      "description": "TanStack Table skills for Solid.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-solid-table-create-table-hook",
+        "./skills/tanstack-solid-table-getting-started",
+        "./skills/tanstack-solid-table-migrate-v8-to-v9",
+        "./skills/tanstack-solid-table-table-state",
+        "./skills/tanstack-solid-table-with-tanstack-query",
+        "./skills/tanstack-solid-table-with-tanstack-virtual"
+      ]
+    },
+    {
+      "name": "svelte-table",
+      "source": "./",
+      "description": "TanStack Table skills for Svelte.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-svelte-table-create-table-hook",
+        "./skills/tanstack-svelte-table-getting-started",
+        "./skills/tanstack-svelte-table-migrate-v8-to-v9",
+        "./skills/tanstack-svelte-table-table-state",
+        "./skills/tanstack-svelte-table-with-tanstack-query",
+        "./skills/tanstack-svelte-table-with-tanstack-virtual"
+      ]
+    },
+    {
+      "name": "vue-table",
+      "source": "./",
+      "description": "TanStack Table skills for Vue.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-vue-table-create-table-hook",
+        "./skills/tanstack-vue-table-getting-started",
+        "./skills/tanstack-vue-table-migrate-v8-to-v9",
+        "./skills/tanstack-vue-table-table-state",
+        "./skills/tanstack-vue-table-with-tanstack-query",
+        "./skills/tanstack-vue-table-with-tanstack-virtual"
+      ]
+    },
+    {
+      "name": "lit-table",
+      "source": "./",
+      "description": "TanStack Table skills for Lit.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-lit-table-create-table-hook",
+        "./skills/tanstack-lit-table-getting-started",
+        "./skills/tanstack-lit-table-migrate-v8-to-v9",
+        "./skills/tanstack-lit-table-table-state",
+        "./skills/tanstack-lit-table-with-tanstack-virtual"
+      ]
+    },
+    {
+      "name": "ember-table",
+      "source": "./",
+      "description": "TanStack Table skills for Ember.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-ember-table-create-table-hook",
+        "./skills/tanstack-ember-table-getting-started",
+        "./skills/tanstack-ember-table-table-state"
+      ]
+    },
+    {
+      "name": "markdown",
+      "source": "./",
+      "description": "TanStack Markdown parsing and rendering skills.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-markdown-custom-extensions",
+        "./skills/tanstack-markdown-docs-features",
+        "./skills/tanstack-markdown-octane-rendering",
+        "./skills/tanstack-markdown-production-pipelines",
+        "./skills/tanstack-markdown-react-rendering",
+        "./skills/tanstack-markdown-render-markdown"
+      ]
+    },
+    {
+      "name": "highlight",
+      "source": "./",
+      "description": "TanStack Highlight integration and extension skills.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-highlight-configure-selective-highlighting",
+        "./skills/tanstack-highlight-extend-language-support",
+        "./skills/tanstack-highlight-integrate-framework-code-blocks",
+        "./skills/tanstack-highlight-integrate-markdown-pipelines",
+        "./skills/tanstack-highlight-theme-and-annotate-code"
+      ]
+    },
+    {
+      "name": "table-tools",
+      "source": "./",
+      "description": "Table developer tools and fuzzy ranking.",
+      "license": "MIT",
+      "strict": false,
+      "skills": [
+        "./skills/tanstack-match-sorter-utils-fuzzy-ranking",
+        "./skills/tanstack-table-devtools"
+      ]
+    }
+  ]
+}

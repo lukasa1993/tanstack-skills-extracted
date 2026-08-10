@@ -20,15 +20,30 @@ Install one skill:
 npx skills add lukasa1993/tanstack-skills-extracted --skill tanstack-react-table-getting-started
 ```
 
+Install one group, such as all React Table skills:
+
+```sh
+npx skills add lukasa1993/tanstack-skills-extracted/groups/react-table --skill '*'
+```
+
+The interactive installer also has selectable group headers. Available group paths are `tanstack-ai`, `tanstack-db`, `table-core`, `react-table`, `angular-table`, `solid-table`, `svelte-table`, `vue-table`, `lit-table`, `ember-table`, `markdown`, `highlight`, and `table-tools`.
+
+Existing installations get changed skills with:
+
+```sh
+npx skills update
+```
+
 ## Refresh
 
 ```sh
 ./extractor.sh --self-test
 ./extractor.sh skills
+node ./scripts/build-groups.mjs
 gh skill publish --dry-run
 ```
 
-The GitHub Actions workflow checks npm once each day. It commits and publishes only when the extracted output changes.
+The GitHub Actions workflow checks npm once each day. It rebuilds the page groups, installer groups, and group paths. It commits and publishes only when the generated output changes.
 
 ## License
 
