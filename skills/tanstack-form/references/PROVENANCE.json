@@ -1,0 +1,1352 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/build-groups.mjs",
+  "product": "form",
+  "sources": [
+    {
+      "id": "form:docs/community-resources.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/community-resources.md",
+      "sha256": "bae1fd752a7ac202f458fddc202a70878116339c8d4e3c62f8dee8ad81673134",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ],
+      "duplicateOf": "all-sections-deduplicated"
+    },
+    {
+      "id": "form:docs/comparison.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/comparison.md",
+      "sha256": "fe6062415a694e8c14134f40a6267c0cb2174763616a23a07af689720c671ec9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/installation.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/installation.md",
+      "sha256": "4a0ff7ea5407e9ec19e6299c2c5bdb16ef002713a80ebf8ea686558087c641eb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/overview.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/overview.md",
+      "sha256": "11cbb32abd83eaf2eb7fc311ae3256a093d3525ce5ea90f0931e8c53da83139b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/philosophy.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/philosophy.md",
+      "sha256": "a57fc091cfac3ef2b71aae5f88eb0a3fe775d99afcc27ff7868999df10ebeea8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/typescript.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/typescript.md",
+      "sha256": "dc66b826836ea4652e8c46f9047bbd360c11bf6c67722306c09b716f218773f9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/arrays.md",
+      "sha256": "59402a00963223a25b2115cc422840a234bb0031cfa80a8bd891d122aad73524",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/async-initial-values.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/async-initial-values.md",
+      "sha256": "8e76eed856bbe61a9649b30407a810b41f90f977606f2d01fd77d271e0b0415d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/basic-concepts.md",
+      "sha256": "c15299b6a458e58c4586061a70525bee4d06bb3a1b0b47cf6cbd9ac41a9469c0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/linked-fields.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/linked-fields.md",
+      "sha256": "2b869478f6f8bcc793daf2c1f52a6e3ae4655406fe4042aa247ed18009eed82f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/listeners.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/listeners.md",
+      "sha256": "cb2f3eea40bae25c9f8a2bf0d0f24af9f84d4a39a1e09df92ecc0d2c616e4a1e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/reactivity.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/reactivity.md",
+      "sha256": "1fe7df987e4b8cb78dd59a2e6fdf174afad072e2607385ebecb949ba10a55a17",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/submission-handling.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/submission-handling.md",
+      "sha256": "945b2a41acb7706894fb938b2f9bad207efd617085dda193c357fb107edb3467",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/validation.md",
+      "sha256": "ac0ea081b7bbee3d54c0c7f79ec421edec0a342a5410948bd8992953a3b07f4b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/quick-start.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "sha256": "66b1527fa0754534fe35f2ac2bed28ef9dc2bb945e90822bebd474d76492542b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/custom-errors.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/custom-errors.md",
+      "sha256": "26abb5ce5edf8c5f213931d4ea5860dc36c31d7bd7fde251a45039edd95fce78",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/debugging.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/debugging.md",
+      "sha256": "0f7f76d70c75f5f4848c0b9a2c7e8eac5a2bf28ee36c3bb666f018c1ca5f5fd6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/devtools.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/devtools.md",
+      "sha256": "e6a6a2b33275c4cc7b9fc20d186f185dc583691ee32a405cd621e3d79a90b634",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/dynamic-validation.md",
+      "sha256": "709e1af68a2210770b24050fddf017880cbe598d8c755e2c6d2a0dcce71468f6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/focus-management.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/focus-management.md",
+      "sha256": "418d34f97387a68357a3b28ea88b88ef3a80b71ddc0d4de3d97fc7ff34b2e059",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/form-composition.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/form-composition.md",
+      "sha256": "e6ec4af06bc542e5eb94026f5657ca82fcb2f05f215172e7010e8968d67dd908",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/form-groups.md",
+      "sha256": "9bb31c38d034400de59d556519b30a9bb90fac72707db4cf061bca87b0e577a2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/react-native.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/react-native.md",
+      "sha256": "3a198d67177890bdcbbb453ed42d50c4b9caade94c4f3a0e5a23cac5f24f818a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/ssr.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/ssr.md",
+      "sha256": "7793c14390c8ca428c12c0be10fe4e8eac992646b35060d253752dd415a57ece",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/guides/ui-libraries.md",
+      "kind": "document",
+      "theme": "framework-react-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/react/guides/ui-libraries.md",
+      "sha256": "804ef5c2c91272090776d21ca298ae961357aa5a7ca637c6f1d8a3fbaedb4681",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/arrays.md",
+      "sha256": "a23fa6c56afce42329656023e4051292e3bee9b24ed9af7e6fedb697fbc95590",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/async-initial-values.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/async-initial-values.md",
+      "sha256": "34b7020291a23d2166fc5ac44a57aac5e455d91ba4b9445043aeca1d86296a6e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/basic-concepts.md",
+      "sha256": "cf8ebc65cfb9a2c8756b17cb1ed081fa5cfebd3df2abbd3487b2c82f6e9effdd",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/linked-fields.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/linked-fields.md",
+      "sha256": "2eb95d828446d4d7a60a390216ce8c0f29bfe2f7c6ac3a400cc68f09d4be2d02",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/listeners.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/listeners.md",
+      "sha256": "cc647c1e5659a6d9928258d148e3bd7de3ec28cc1be76eb98ecd84431a449b4a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/reactivity.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/reactivity.md",
+      "sha256": "2c2a2c182c5c4995178fad158c0dd8f789c556ee166b5d30691a4e024522e85c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/submission-handling.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/submission-handling.md",
+      "sha256": "3805cbc017b47fb62c0f21011ead74bdaac811ec637feeda18ad662e1377cce3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/validation.md",
+      "sha256": "8d6288340267c4def7082145570cd681936011d397c2774f05f0a4cfaa024ac7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/quick-start.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "sha256": "e928b82a878f8bb5666b233049b58768cbbe22503c0ec6b14c95edcc497507b4",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/custom-errors.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/custom-errors.md",
+      "sha256": "26abb5ce5edf8c5f213931d4ea5860dc36c31d7bd7fde251a45039edd95fce78",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/debugging.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/debugging.md",
+      "sha256": "f9a4b15b6da2eb167e42082b44db202852642f6e4ca5eb652beb856e53e9e9c2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/dynamic-validation.md",
+      "sha256": "048e5b10b4f8b6a23dc39f2eac82a6c4504732a59f471f8a17582c7e53df2fbc",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/focus-management.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/focus-management.md",
+      "sha256": "63106e02447f0ad6f7131edc77a97616a8c8a87a986c8c18070841da077bb875",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/form-composition.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/form-composition.md",
+      "sha256": "6f7bcf610fec6770c371b4581282b502018102f47e40cad061eb453f67aa682e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/form-groups.md",
+      "sha256": "9bb31c38d034400de59d556519b30a9bb90fac72707db4cf061bca87b0e577a2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/preact/guides/ui-libraries.md",
+      "kind": "document",
+      "theme": "framework-preact-advanced",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/preact/guides/ui-libraries.md",
+      "sha256": "4cf00c6c8c64d0cf1b844030491b7754a22e271540a640c1f54ea1ec0bec03c8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/arrays.md",
+      "sha256": "52fddbbdf1d4aa9b3da5588c7755990eee7e33fcee431a1a7b9889c0554416ab",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/async-initial-values.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/async-initial-values.md",
+      "sha256": "78efc7ca5c8d35b6791679f346c5c0b5ea1e50716d90fd4e32e003827809206a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/basic-concepts.md",
+      "sha256": "d8c4ce51a579aafee0f8a46bdf327e2b6b4a16309f782fae579a007a40460bf9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/dynamic-validation.md",
+      "sha256": "377977a29d6c8cc71ff7bc5331da64743f3fd8216cdd34f364667802a8395bf2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/form-groups.md",
+      "sha256": "25d9856eebf4edd474ab9525a75a11a094144b553c530cb68a941bfc1e7db294",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/linked-fields.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/linked-fields.md",
+      "sha256": "12d47a0527033f449ec8d06156209cc246c2dda204fbdfd546e7a49614fcf424",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/listeners.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/listeners.md",
+      "sha256": "b251a87d3aaceb24c71c046f85c8d528901335471f32896d02439077a8f6f3ec",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/submission-handling.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/submission-handling.md",
+      "sha256": "f1ae8bb5f2e7ede160bbd339ba8c0995540c560f0713480d69b318c0b35e5255",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/guides/validation.md",
+      "sha256": "bc548681e5c4af37b6f44915d46180826d8c053673f466c539c65c281d541643",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/vue/quick-start.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "sha256": "b52bdbd90dabf8bd141acd7142730ef439878611761fb7b6b32c866801d44428",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/arrays.md",
+      "sha256": "623525cdcc91b810ca6a15c14550dad832a3dd1e43635f71ff3313852b2a5599",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/basic-concepts.md",
+      "sha256": "a06696782458c3e87310e24cd0d6f1b30495f10499ff7a5092c40cd338f09a43",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/dynamic-validation.md",
+      "sha256": "1ce8070e7956400a8a7cbef2cf000a0ba0eb4161c0aff026cc2d3dfd4b2d0009",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/form-composition.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/form-composition.md",
+      "sha256": "07c33e3fbd13886c8d5689acd5bc905361f8adb57183e0687280c1aa02e78418",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/form-groups.md",
+      "sha256": "6899e979f79df0667d92cd717e423b6b110835c6de90f599c1771d5fa1134b03",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/listeners.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/listeners.md",
+      "sha256": "8733d567c43006e87e3bda7bb58b62aad1e36a02d827d93f0f85932be578b8a2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/submission-handling.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/submission-handling.md",
+      "sha256": "79129fdb50addcd833ada1b8de0be90195a06df3d3d97ac27d799b2095549662",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/guides/validation.md",
+      "sha256": "3e0a790ccf51a7fdaa2fc7e0f3f71b0a6de86e870c924c23eb54d8169371e3d7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/angular/quick-start.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "sha256": "c13ea360e9becbaaed224fc5d473e3efd01652b030f6011c81965ec0c29d0a81",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/arrays.md",
+      "sha256": "8bb6a8c31b6474a8bcc748f61158018a878d3399fef81c1643fb50d735a91650",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/async-initial-values.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/async-initial-values.md",
+      "sha256": "29344de5086b9918989641e929d9cca4dfa2056831fd57390210adbbe592eb56",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/basic-concepts.md",
+      "sha256": "76e4f46c0f653525fae4120fcfd6abe04cb84be16c18ee77c09248993c3aec77",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/devtools.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/devtools.md",
+      "sha256": "a57e1d7d35db7cbc49eab2a49e74844d43b031accadd81d1b2d1b7c57b464df9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/dynamic-validation.md",
+      "sha256": "4795d24c5bdb6850d5326c1d608931ec7979fb02518ee11eac3e43e2868c20b9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/form-composition.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/form-composition.md",
+      "sha256": "c0b16b2f95635a24c082be439856e999ec7503ffe4903bae21474acf07742e41",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/form-groups.md",
+      "sha256": "88061413674b228e52c463eb8d573220bc961e6dbedde2bc7836dc0cb4d9c5a0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/linked-fields.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/linked-fields.md",
+      "sha256": "9a639bedbf439ba1cf4f00c37891fd0bae428a830c0d05b814b47be56bc901af",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/submission-handling.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/submission-handling.md",
+      "sha256": "a23b28ba949e77d0bd015be9dfdebe4f82e35fa9ef34d38f66c5291d52ba0b3f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/guides/validation.md",
+      "sha256": "df1fc20258b52948b56398f203a96d4976db806733d5479e7543ddfbe60215db",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/solid/quick-start.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "sha256": "4c75c48fd50977f9f660c242e274405d9d762db4ec50c1d10f5fa76e39d34491",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/guides/arrays.md",
+      "sha256": "16f25879c148f63d8f5e407ef6acd9b5e7291aa9033da8c0afe766cad05972e3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/guides/basic-concepts.md",
+      "sha256": "caf6236a66131628eec94a41aec921a7e37f13fb7406c180142dbd0cbc6b72f8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/guides/dynamic-validation.md",
+      "sha256": "4fed53b9851ec58f439d633095c5721b9c9aefa0da269a32ecca603b619109f9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/guides/form-composition.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/guides/form-composition.md",
+      "sha256": "5e1131c40fc267ae80730b8628c4b909f90974ff87598bd1c38e38004135505a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/guides/form-groups.md",
+      "sha256": "0feacd34b9ea6d11c27101567ec4c33a4ce11f985c8d3136a09856b371de608d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/guides/validation.md",
+      "sha256": "bad48b99cd7e5a161fc1596974f06f47bb7a89fd311055f6769de690a491c41e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/lit/quick-start.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "sha256": "9a1eea2e092e121aff1c1b800ab69c5d7c45ea4171cd287c0dea6490a3b12bc1",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/arrays.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/arrays.md",
+      "sha256": "0091050c2df771a874143a96e39ebdf7fdcae18f57bbf11e1d69ab71ac06949a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/async-initial-values.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/async-initial-values.md",
+      "sha256": "70386a083b019a837a87b0d6981927231577ee4a154a6c7cec45a00bcf8d1a8b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/basic-concepts.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/basic-concepts.md",
+      "sha256": "8f849b014b96afea60c030d69e87555b4552aa041d1b8a4f74a2e8fbf43ecc43",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/dynamic-validation.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/dynamic-validation.md",
+      "sha256": "f4bbf379db85039a250623a82b0f3f7d5d8f7f3db9b1855c9f4006cd8ba06f34",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/form-composition.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/form-composition.md",
+      "sha256": "1d1e35bc731c664b43701dad1969515827e59b9791680366c6da389320140c95",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/form-groups.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/form-groups.md",
+      "sha256": "f2d8cb8b276c4a386d2c09ca7724c2165f37f7fd49dc51ec6fb300ab49af3d8d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/linked-fields.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/linked-fields.md",
+      "sha256": "b46b835310813567473db960f7f1d840b71b957a7d1808b49fff9bc6b4256db6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/validation.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/guides/validation.md",
+      "sha256": "8eeb5df79ca2a7950cc70db75055f1ae5a714d5b71fd9e016951b77c35d9d8ed",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    },
+    {
+      "id": "form:docs/framework/svelte/quick-start.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/form-core",
+      "version": "1.33.4",
+      "repository": "TanStack/form",
+      "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "sha256": "09986df6d9c0c9f304d4ba3c0d60267979029a418492003dbc0f5960f042c64a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "462926e3b77e9c0ad6a777a879ef5067b0a5dc70"
+      ]
+    }
+  ],
+  "duplicateDocuments": [],
+  "duplicateSections": [],
+  "licenses": [
+    {
+      "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7",
+      "path": "licenses/a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7.txt",
+      "sources": [
+        "form:LICENSE"
+      ]
+    }
+  ],
+  "documentationVerification": {
+    "catalogSha256": "87ae7fda3c16bc989a596fe6f42e6ed4873f56ed36bf97c1564ffc065e6e7e30",
+    "verification": {
+      "npmTarballs": "sha512 integrity verified against npm registry metadata",
+      "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
+      "provenanceSignatures": "not cryptographically verified because this repository has no local Sigstore verifier"
+    },
+    "repositoryArchives": [
+      {
+        "url": "https://codeload.github.com/TanStack/form/tar.gz/462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+        "commit": "462926e3b77e9c0ad6a777a879ef5067b0a5dc70",
+        "sha256": "755180c0e80dc3d49e690229c7806acac8be96576da2a69a00a3f48c14a99dca"
+      }
+    ],
+    "linkValidation": {
+      "localDocuments": 40,
+      "localAssets": 24,
+      "pinnedRepository": 1,
+      "pinnedExternalRepository": 0,
+      "externalRepositoryPins": [],
+      "unavailableAssets": [
+        {
+          "document": "docs/framework/svelte/guides/form-composition.md",
+          "sourcePath": "docs/assets/svelte_form_composability.svg"
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,7 @@ name: tanstack-angular-table-with-tanstack-virtual
 description: "Virtualize Angular Table final row or column models inside the correct injection and reactive lifecycle with signal counts, scroll elements, keys, measurement, transforms, sticky regions, grid/flex sizing, and infinite data."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
   tanstack-library-version: "9.1.2"

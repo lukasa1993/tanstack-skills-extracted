@@ -3,6 +3,7 @@ name: tanstack-vue-db
 description: "Vue 3 bindings for TanStack DB. useLiveQuery composable with MaybeRefOrGetter query functions, ComputedRef return values for all fields (data, state, collection, status, isLoading, isReady, isError). Dependency arrays with Vue refs. Conditional queries via returning undefined/null. Pre-created collection support via ref or getter. Import from @tanstack/vue-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"

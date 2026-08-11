@@ -3,6 +3,7 @@ name: tanstack-angular-table-devtools
 description: "Register Angular Table v9 instances with injectTanStackTableDevtools inside injection context. Load for reactive table registration, required options.key, enabled or undefined tables, cleanup, Angular isDevMode gating, or explicit production exports."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table-devtools"
   tanstack-library-version: "9.1.2"

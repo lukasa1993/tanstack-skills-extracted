@@ -3,6 +3,7 @@ name: tanstack-vue-table-with-tanstack-virtual
 description: "Virtualize Vue Table final row or column models with reactive counts and scroll targets, stable keys, measurement, spacer geometry, sticky CSS, grid/flex widths, and infinite server data."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
   tanstack-library-version: "9.1.2"

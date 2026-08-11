@@ -3,6 +3,7 @@ name: tanstack-markdown-octane-rendering
 description: "Render Markdown source or a MarkdownDocument with @tanstack/markdown/octane using Markdown, renderMarkdownOctane, ComponentBody replacements, TSRX, and octane/server static SSR. Load for Octane descriptors, custom emitted tags, pre-parsed documents, SSR return values, or renderer parity."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/markdown"
   tanstack-library-version: "0.0.13"

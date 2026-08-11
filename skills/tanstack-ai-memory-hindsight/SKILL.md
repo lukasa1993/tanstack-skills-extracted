@@ -3,6 +3,7 @@ name: tanstack-ai-memory-hindsight
 description: "Use when wiring hindsight() from @tanstack/ai-memory/hindsight — a hosted memory adapter that buckets memory per conversation and exposes retain/recall/reflect tools to the model. Requires the optional @vectorize-io/hindsight-client peer."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-memory"
   tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory-hindsight"

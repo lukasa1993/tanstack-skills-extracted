@@ -3,6 +3,7 @@ name: tanstack-ai-memory-redis
 description: "Use when wiring redis() from @tanstack/ai-memory/redis in production — covers client setup (ioredis or node-redis via fromNodeRedis), the storage model, client-side ranking limits, and troubleshooting."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-memory"
   tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory-redis"

@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-build-cloudflare-artifact-store
 description: "Use when a Cloudflare Worker needs durable byte storage for TanStack AI generated media (images, audio, video, transcripts) — writes a BlobStore backed by R2 and an ArtifactStore backed by D1 (or KV), composes them onto the generation persistence so withGenerationPersistence persists artifact bytes, and serves them back from a Worker GET route. Includes one-line sketches for S3, GCS, Vercel Blob, Supabase, and a dev filesystem BlobStore."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-persistence"
   tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-persistence/build-cloudflare-artifact-store"

@@ -3,6 +3,7 @@ name: tanstack-svelte-table-getting-started
 description: "Create a Svelte 5 TanStack Table v9 table with createTable, explicit tableFeatures, rune-backed data getters, stable static inputs, FlexRender, and headless markup. Load when replacing createSvelteTable or pre-rune patterns."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
   tanstack-library-version: "9.1.2"

@@ -3,6 +3,7 @@ name: tanstack-devtools-vite-plugin
 description: "Configure @tanstack/devtools-vite for source inspection (data-tsd-source, inspectHotkey, ignore patterns), console piping (client-to-server, server-to-client, levels), enhanced logging, server event bus (port, host, HTTPS), production stripping (removeDevtoolsOnBuild), editor integration (launch-editor, custom editor.open). Must be FIRST plugin in Vite config. Vite ^6 || ^7 only."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-vite"

@@ -3,6 +3,7 @@ name: tanstack-octane-table-getting-started
 description: "Create an @tanstack/octane-table v9 table with useTable, tableFeatures, stable inputs, TSRX component bodies, keyed @for rendering, and FlexRender. Load when starting an Octane table or translating a React/Preact example without changing its behavior."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/octane-table"
   tanstack-library-version: "9.1.2"

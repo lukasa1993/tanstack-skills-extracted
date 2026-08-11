@@ -3,6 +3,7 @@ name: tanstack-table-core-sorting
 description: "Sort with rowSortingFeature, sortedRowModel, sortFns, multi-sort and removal options, sortUndefined, and manualSorting. Load for comparator direction, incoming server order, or product-specific sorting cycles."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/table-core"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/table-core"

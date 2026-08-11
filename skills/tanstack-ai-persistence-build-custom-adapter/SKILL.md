@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-build-custom-adapter
 description: "Use when an app needs TanStack AI chat persistence on a database with no dedicated recipe — raw Postgres (pg/postgres.js), Kysely, node:sqlite, MongoDB, Supabase, Redis. Writes a chat-persistence.ts against the app's existing client, covering the four stores, the idempotency invariants, and the conformance gate. Route to the Drizzle, Prisma, or Cloudflare skills instead when one of those matches."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-persistence"
   tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-persistence/build-custom-adapter"

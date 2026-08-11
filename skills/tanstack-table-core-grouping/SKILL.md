@@ -3,6 +3,7 @@ name: tanstack-table-core-grouping
 description: "Group rows with columnGroupingFeature, groupedRowModel, groupedColumnMode, and manualGrouping. Load for grouped or placeholder cells and grouping interactions with expansion or pagination."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/table-core"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/table-core"

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/build-groups.mjs",
+  "product": "markdown",
+  "sources": [
+    {
+      "id": "tanstack-markdown-custom-extensions",
+      "kind": "atomic",
+      "theme": "parsing-extensions",
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "sourcePath": "custom-extensions",
+      "sha256": "dc7cc1e841d9b8de74f5bdd751943466ded43cdfb05291a7801462e61c53a358"
+    },
+    {
+      "id": "tanstack-markdown-docs-features",
+      "kind": "atomic",
+      "theme": "parsing-extensions",
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "sourcePath": "docs-features",
+      "sha256": "e138100c3d928f53238f75439863b34ea789c1276840cc6545d078103e168f85"
+    },
+    {
+      "id": "tanstack-markdown-render-markdown",
+      "kind": "atomic",
+      "theme": "parsing-extensions",
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "sourcePath": "render-markdown",
+      "sha256": "2d12732cea7a21f6335dad39bcf82bdd2a86e1606932ecf6ac561c3c36e572d7"
+    },
+    {
+      "id": "tanstack-markdown-production-pipelines",
+      "kind": "atomic",
+      "theme": "production",
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "sourcePath": "production-pipelines",
+      "sha256": "ac485a0796fb7b88ccc8be51796e1a50550ec9be1933cfe73c881f8879547395"
+    },
+    {
+      "id": "tanstack-markdown-react-rendering",
+      "kind": "atomic",
+      "theme": "framework-react",
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "sourcePath": "react-rendering",
+      "sha256": "dafdff03da1c8fae73228eced106cd1b2d15d9d2068a6b42e1fd38be82cca5d9"
+    },
+    {
+      "id": "tanstack-markdown-octane-rendering",
+      "kind": "atomic",
+      "theme": "framework-octane",
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "sourcePath": "octane-rendering",
+      "sha256": "feb5f241e632e9a56b1d1194514c8e69da386e427598621b33b6e29d05e5a794"
+    }
+  ],
+  "duplicateDocuments": [],
+  "duplicateSections": [],
+  "licenses": []
+}

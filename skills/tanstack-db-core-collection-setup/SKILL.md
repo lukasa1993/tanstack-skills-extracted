@@ -3,6 +3,7 @@ name: tanstack-db-core-collection-setup
 description: "Creating typed collections with createCollection. Adapter selection: queryCollectionOptions (REST/TanStack Query), electricCollectionOptions (ElectricSQL real-time sync), powerSyncCollectionOptions (PowerSync SQLite), rxdbCollectionOptions (RxDB), trailbaseCollectionOptions (TrailBase), localOnlyCollectionOptions, localStorageCollectionOptions. CollectionConfig options: getKey, schema, sync, gcTime, autoIndex (default off), defaultIndexType, syncMode (eager/on-demand, plus progressive for Electric). StandardSchema validation with Zod/Valibot/ArkType. Collection lifecycle (idle/loading/ready/error). Adapter-specific sync patterns including Electric txid tracking, Query direct writes, and PowerSync query-driven sync with onLoad/onLoadSubset hooks."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

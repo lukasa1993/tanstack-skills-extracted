@@ -3,6 +3,7 @@ name: tanstack-ai-sandbox
 description: "Run harness adapters (Claude Code, Codex, OpenCode) INSIDE isolated sandboxes via defineSandbox + withSandbox + a provider (localProcessSandbox / dockerSandbox). Covers declarative provisioning: createSecrets + secret/bearer, skills (agentSkill/gitSkill/mcpSkill/ fileSkill), plugins, instructions returns canonical AGENTS.md + symlinks projected per harness; shallow-clone default with depth opt-out; serial/parallel setup callback over a persistent shell; snapshot-after-setup default with snapshotMaxAge TTL; defineWorkspace (git/setup/scripts/skills/secrets/ instructions/plugins), defineSandboxPolicy (allow/ask/deny), lifecycle/resume, the SandboxHandle (fs/git/process/ports), capability tokens, defineSandbox hooks (onFile/onFileCreate/onFileChange/onFileDelete/onReady/onError/ onDestroy) + fileEvents flag, chat middleware sandbox group (defineChatMiddleware sandbox hooks), the sandbox debug category, watchWorkspace as a ... Use whenever a harness adapter needs a sandbox or when building sandbox providers."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.4"
   tanstack-package: "@tanstack/ai-sandbox"

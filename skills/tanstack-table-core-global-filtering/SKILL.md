@@ -3,6 +3,7 @@ name: tanstack-table-core-global-filtering
 description: "Apply globalFilter across eligible columns with globalFilteringFeature, columnFilteringFeature, filteredRowModel, globalFilterFn, and manual server filtering. Load when columns unexpectedly participate or a global filter changes state without changing rows."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/table-core"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/table-core"

@@ -3,6 +3,7 @@ name: tanstack-react-start-lifecycle-migrate-from-nextjs
 description: "Step-by-step migration from Next.js App Router to TanStack Start: route definition conversion, API mapping, server function conversion from Server Actions, middleware conversion, data fetching pattern changes."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.168.32"
   tanstack-package: "@tanstack/react-start"

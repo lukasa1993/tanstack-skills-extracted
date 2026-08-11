@@ -3,6 +3,7 @@ name: tanstack-preact-table-getting-started
 description: "Create a native @tanstack/preact-table v9 table with useTable, tableFeatures, stable inputs, row/header models, and Preact FlexRender helpers. Load when starting a Preact table or replacing @tanstack/react-table through preact/compat."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
   tanstack-library-version: "9.1.2"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack AI"
+  short_description: "Provider-agnostic AI guidance for chat, tools, structured output, persistence, memory, MCP, code mode, and sandbox execu"
+  default_prompt: "Use $tanstack-ai to implement this TanStack AI task with the installed framework and package versions."

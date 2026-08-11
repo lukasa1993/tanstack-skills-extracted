@@ -3,6 +3,7 @@ name: tanstack-start-client-core-start-core-middleware
 description: "createMiddleware, request middleware (.server only), server function middleware (.client + .server), context passing via next({ context }), sendContext for client-server transfer, global middleware via createStart in src/start.ts, middleware factories, method order enforcement, fetch override precedence."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"

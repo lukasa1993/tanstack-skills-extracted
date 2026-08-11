@@ -3,6 +3,7 @@ name: tanstack-db-core-mutations-optimistic
 description: "collection.insert, collection.update (Immer-style draft proxy), collection.delete. createOptimisticAction (onMutate + mutationFn). createPacedMutations with debounceStrategy, throttleStrategy, queueStrategy. createTransaction, getActiveTransaction, ambient transaction context. Transaction lifecycle (pending/persisting/completed/failed). Mutation merging. onInsert/onUpdate/onDelete handlers. PendingMutation type. Transaction.isPersisted."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

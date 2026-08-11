@@ -3,6 +3,7 @@ name: tanstack-ai-core-tool-calling
 description: "Isomorphic tool system: toolDefinition() with Zod schemas, .server() and .client() implementations, passing tools to both chat() on server and useChat/clientTools on client, tool approval flows with needsApproval and bound interrupts (resolveInterrupt), lazy tool discovery with lazy:true, rendering ToolCallPart and ToolResultPart in UI."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"

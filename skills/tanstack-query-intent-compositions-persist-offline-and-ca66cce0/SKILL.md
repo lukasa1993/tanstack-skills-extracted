@@ -3,6 +3,7 @@ name: tanstack-query-intent-compositions-persist-offline-and-ca66cce0
 description: "Use this when using persistQueryClient, PersistQueryClientProvider, createSyncStoragePersister, createAsyncStoragePersister, experimental fine-grained persisters, offline mutations, resumePausedMutations, maxAge, gcTime, and restore races."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

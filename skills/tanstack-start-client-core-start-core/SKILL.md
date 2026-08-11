@@ -3,6 +3,7 @@ name: tanstack-start-client-core-start-core
 description: "Core overview for TanStack Start: tanstackStart() Vite plugin, getRouter() factory, root route document shell (HeadContent, Scripts, Outlet), client/server entry points, routeTree.gen.ts, tsconfig configuration. Entry point for all Start skills."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"

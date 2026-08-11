@@ -3,6 +3,7 @@ name: tanstack-router-core-type-safety
 description: "Full type inference philosophy (never cast, never annotate inferred values), Register module declaration, from narrowing on hooks and Link, strict:false for shared components, getRouteApi for code-split typed access, addChildren with object syntax for TS perf, LinkProps and ValidateLinkOptions type utilities, as const satisfies pattern."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"

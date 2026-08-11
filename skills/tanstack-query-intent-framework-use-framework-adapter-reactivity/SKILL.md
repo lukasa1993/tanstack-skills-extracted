@@ -3,6 +3,7 @@ name: tanstack-query-intent-framework-use-framework-adapter-reactivity
 description: "Use this when translating Query patterns across React, Preact, Vue, Solid, Svelte, Angular, and Lit adapters: Vue refs/getters, Solid signals, Svelte stores/runes, Angular signals and HttpClient promises, Lit QueryController, adapter option helpers, and provider APIs."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "cross-adapter"
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"

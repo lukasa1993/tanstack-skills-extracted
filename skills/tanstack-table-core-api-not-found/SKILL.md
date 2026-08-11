@@ -3,6 +3,7 @@ name: tanstack-table-core-api-not-found
 description: "Diagnose missing TanStack Table v9 exports, options, state slices, and instance methods. Load before inventing an API when code sees a type error, undefined feature method, absent object key, adapter mismatch, or v8-shaped example."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/table-core"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/table-core"

@@ -3,6 +3,7 @@ name: tanstack-ember-table-create-table-hook
 description: "Share TanStack Ember Table v9 features, row-model slots, defaults, and inferred column helpers with createTableHook, createAppTable, createAppColumnHelper, and appFeatures. Load for recurring Ember table conventions, per-table overrides, or confusion with component/context registries from other adapters."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "ember"
   tanstack-library: "@tanstack/ember-table"
   tanstack-library-version: "9.1.2"

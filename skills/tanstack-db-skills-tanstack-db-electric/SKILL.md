@@ -3,6 +3,7 @@ name: tanstack-db-skills-tanstack-db-electric
 description: "ElectricSQL integration with TanStack DB. Use for real-time Postgres sync, shapes, txid matching, proxy setup, and debugging."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/db-skills"
   tanstack-package-version: "0.0.1"
   tanstack-source-skill: "tanstack-db-electric"

@@ -3,6 +3,7 @@ name: tanstack-react-table-with-tanstack-virtual
 description: "Virtualize final React Table row or column models with TanStack Virtual. Load for useVirtualizer counts, scroll elements, stable keys, data-index measurement, dynamic heights, sticky headers/columns, grid/flex geometry, or infinite fetching; Virtual is renderer composition, not a Table feature."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
   tanstack-library-version: "9.1.2"

@@ -3,6 +3,7 @@ name: tanstack-ai-persistence
 description: "Durability and state persistence for TanStack AI chats with @tanstack/ai-persistence. Routes to server chat persistence (withPersistence), client persistence (localStorage/IndexedDB), the store contracts, and adapter recipes. Distinguishes delivery durability (resumable streams) from conversation state. Use when conversations must survive reloads, multi-device, approvals, or server restarts — NOT for stream reconnect alone."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
@@ -136,7 +137,7 @@ When both halves run, ownership per turn is decided by request `messages`:
 
 Never post a delta as `messages` — that wipes history down to the delta.
 
-**Client-authoritative:** always send full transcript; browser is truth, server mirrors.  
+**Client-authoritative:** always send full transcript; browser is truth, server mirrors.
 **Server-authoritative:** send empty `messages` (or hydrate via server load); server is truth, multi-device works.
 
 ## Recommended production stack

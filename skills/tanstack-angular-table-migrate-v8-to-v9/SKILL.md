@@ -3,6 +3,7 @@ name: tanstack-angular-table-migrate-v8-to-v9
 description: "Complete Angular v8-to-v9 migration reference: injectTable and injection context, explicit features and row-model slots, signal/atom state, FlexRender directives, type generics, prototype methods, sorting, sizing, selection, and logical pinning."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
   tanstack-library-version: "9.1.2"

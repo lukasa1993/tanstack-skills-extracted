@@ -3,6 +3,7 @@ name: tanstack-db-playbook-tanstack-db-live-queries
 description: "Live query patterns in TanStack DB. Use for filtering, joins, aggregations, sorting, and reactive data binding."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/db-playbook"
   tanstack-package-version: "0.0.1"
   tanstack-source-skill: "tanstack-db-live-queries"

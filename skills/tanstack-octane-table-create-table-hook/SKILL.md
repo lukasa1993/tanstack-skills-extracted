@@ -3,6 +3,7 @@ name: tanstack-octane-table-create-table-hook
 description: "Create reusable Octane table infrastructure with createTableHook, useAppTable, createAppColumnHelper, registered components, stable App wrappers, and typed context hooks. Load for recurring conventions, scoped contexts, or prop drilling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/octane-table"
   tanstack-library-version: "9.1.2"

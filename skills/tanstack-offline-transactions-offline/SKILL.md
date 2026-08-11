@@ -3,6 +3,7 @@ name: tanstack-offline-transactions-offline
 description: "Offline transaction support for TanStack DB. OfflineExecutor orchestrates persistent outbox (IndexedDB/localStorage), leader election (WebLocks/ BroadcastChannel), retry with backoff, and connectivity detection. createOfflineTransaction/createOfflineAction wrap TanStack DB primitives with offline persistence. Idempotency keys for at-least-once delivery. Graceful degradation to online-only mode when storage unavailable. React Native support via separate entry point."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/offline-transactions"

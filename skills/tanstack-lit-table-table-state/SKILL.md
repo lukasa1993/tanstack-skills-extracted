@@ -3,6 +3,7 @@ name: tanstack-lit-table-table-state
 description: "Use TableController-selected table.state, table.atoms/store, stable table.subscribe selectors, controlled reactive properties plus on*Change, and external TanStack Store atoms. Load when Lit state appears stale, host updates are too broad, or table state must be shared outside the element."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
   tanstack-library-version: "9.1.2"

@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-concurrent-optimistic-updates
 description: "Use this when multiple optimistic mutations can overlap: mutation variables, submittedAt keys, scoped mutationKey filters, isMutating guards, cancellation, rollback context, filtered list updates, and avoiding windows of inconsistent UI during concurrent writes."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

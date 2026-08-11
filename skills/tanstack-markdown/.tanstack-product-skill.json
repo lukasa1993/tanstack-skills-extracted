@@ -1,0 +1,13 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-markdown",
+  "product": "markdown",
+  "sourceCount": 6,
+  "themes": [
+    "parsing-extensions",
+    "production",
+    "framework-react",
+    "framework-octane"
+  ],
+  "inputSha256": "baac5463afd05afd16256658a23e143ff2fad29d6597a96e6e188a33f685cde1"
+}

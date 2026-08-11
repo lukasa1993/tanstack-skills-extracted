@@ -3,6 +3,7 @@ name: tanstack-vue-table-with-tanstack-query
 description: "Compose reactive Vue Query keys and results with Vue Table manual row processing, refs/computed state, server counts, and already-processed pages without duplicating query data into a drifting local ref."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
   tanstack-library-version: "9.1.2"

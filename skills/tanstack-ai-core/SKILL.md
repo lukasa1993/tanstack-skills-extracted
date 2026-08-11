@@ -3,6 +3,7 @@ name: tanstack-ai-core
 description: "Entry point for TanStack AI skills. Routes to chat-experience, tool-calling, media-generation, structured-outputs, adapter-configuration, ag-ui-protocol, middleware, locks, custom-backend-integration, and debug-logging, plus the skills shipped by companion packages (@tanstack/ai-persistence, @tanstack/ai-code-mode). Use chat() not streamText(), openaiText() not createOpenAI(), toServerSentEventsResponse() not manual SSE, middleware hooks not onEnd callbacks."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"

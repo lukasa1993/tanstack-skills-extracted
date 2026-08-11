@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Store"
+  short_description: "Reactive store guidance for state, atoms, selectors, batching, async state, and framework adapters."
+  default_prompt: "Use $tanstack-store to implement this TanStack Store task with the installed framework and package versions."

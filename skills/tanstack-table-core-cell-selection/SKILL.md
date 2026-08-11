@@ -3,6 +3,7 @@ name: tanstack-table-core-cell-selection
 description: "Select, add, and subtract rectangular cell ranges with cellSelectionFeature: ordered include/exclude operations keyed by row and column id, modifier dragging, final positive bounds, selection edges, render-order resolution under pinning, and autoResetCellSelection. Load for spreadsheet-style selection, “select all except” behavior, unexpected range changes after sorting or reordering, drag performance, or copy-to-clipboard."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/table-core"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/table-core"

@@ -3,6 +3,7 @@ name: tanstack-svelte-table-migrate-v8-to-v9
 description: "Complete Svelte v8-to-v9 migration reference: Svelte 5, createTable, selector-API removal, explicit features and row-model slots, atom/rune state, rendering helpers, prototype methods, type generics, sorting, sizing, selection, and logical pinning."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
   tanstack-library-version: "9.1.2"

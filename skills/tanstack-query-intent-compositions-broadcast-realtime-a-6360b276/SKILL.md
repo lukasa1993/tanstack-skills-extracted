@@ -3,6 +3,7 @@ name: tanstack-query-intent-compositions-broadcast-realtime-a-6360b276
 description: "Use this when synchronizing TanStack Query caches with broadcastQueryClient, BroadcastChannel, multi-tab cache sync, realtime invalidation, WebSocket events, server/browser boundaries, and experimental broadcast behavior."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

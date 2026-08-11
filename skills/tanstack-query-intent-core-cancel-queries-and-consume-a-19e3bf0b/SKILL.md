@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b
 description: "Use this when handling query cancellation, AbortSignal, cancelQueries, CancelledError, rollback after consumed signals, fetch cancellation, axios cancellation, and optimistic update overwrite prevention."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

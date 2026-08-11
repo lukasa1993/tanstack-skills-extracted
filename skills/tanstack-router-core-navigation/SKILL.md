@@ -3,6 +3,7 @@ name: tanstack-router-core-navigation
 description: "Link component, useNavigate, Navigate component, router.navigate, ToOptions/NavigateOptions/LinkOptions, from/to relative navigation, activeOptions/activeProps, preloading (intent/viewport/render), preloadDelay, navigation blocking (useBlocker, Block), createLink, linkOptions helper, scroll restoration, MatchRoute."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"

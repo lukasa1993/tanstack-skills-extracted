@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/build-groups.mjs",
+  "product": "store",
+  "sources": [
+    {
+      "id": "store:docs/installation.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/installation.md",
+      "sha256": "b612ffc2f148415d556ea83e11b6a1685f58c2e173f53368325a430c1b59b059",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/overview.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/overview.md",
+      "sha256": "b66ad44c7f5ebabff6febb54931c4d6a57b67ac0da17cf2c25616e8b1128c165",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/quick-start.md",
+      "kind": "document",
+      "theme": "foundations",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/quick-start.md",
+      "sha256": "95eab094140153128bb5f3e5d520eb4562ef09da3f53e551c3e68dcdb20b651f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/react/quick-start.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "sha256": "4a773d9a702feaeb9355805ba2aad620cd7e7522d3446f182d9b9ac6cc3c78b8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/preact/quick-start.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "sha256": "bb97d30f526f261c256bf0c01fbb71b51553345882856978316019a3c6b8ca16",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/solid/quick-start.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "sha256": "d73d24785c73dd22292c7db65b1933627848e1da987e776a56d812dc34d6b2f4",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/svelte/quick-start.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "sha256": "4acbc406a03d5bfb212e35982dfa317b665ff4d4ef59b05fb4c93f9ac8f99f5d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/vue/quick-start.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "sha256": "36d726268d8f7f48dcac598cdc91d1fa1c6e66f5d66243a1280dd61ea05dcd60",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/angular/quick-start.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "sha256": "6d85d2d4210986b12a68e8d94c2c41899bcb4b3341ecfe8e1e2a9c370bae11a6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/lit/quick-start.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "sha256": "33a19678bdc4168e45e4dadca2abbe4ad7a911bea69e91bdec4cbb8318973bc1",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    },
+    {
+      "id": "store:docs/framework/octane/quick-start.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "repository": "TanStack/store",
+      "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+      "sourcePath": "docs/framework/octane/quick-start.md",
+      "sha256": "63daaed539c35253ffad8caf9fd9933f102173192242b3f1301e4fba58ef52a8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "550ba4f05d21f32901a3f00dba920f76f1a0d3f6"
+      ]
+    }
+  ],
+  "duplicateDocuments": [],
+  "duplicateSections": [],
+  "licenses": [
+    {
+      "sha256": "cb4a7917af22bd56340e877f10a5c5aa4fded7af2459162630ff7fcb48bb45c7",
+      "path": "licenses/cb4a7917af22bd56340e877f10a5c5aa4fded7af2459162630ff7fcb48bb45c7.txt",
+      "sources": [
+        "store:LICENSE"
+      ]
+    }
+  ],
+  "documentationVerification": {
+    "catalogSha256": "87ae7fda3c16bc989a596fe6f42e6ed4873f56ed36bf97c1564ffc065e6e7e30",
+    "verification": {
+      "npmTarballs": "sha512 integrity verified against npm registry metadata",
+      "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
+      "provenanceSignatures": "not cryptographically verified because this repository has no local Sigstore verifier"
+    },
+    "repositoryArchives": [
+      {
+        "url": "https://codeload.github.com/TanStack/store/tar.gz/550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+        "commit": "550ba4f05d21f32901a3f00dba920f76f1a0d3f6",
+        "sha256": "f33f4374383d46120e71b4eb163a03c80e4865fc349b0501d40cb36d0911ef13"
+      }
+    ],
+    "linkValidation": {
+      "localDocuments": 0,
+      "localAssets": 0,
+      "pinnedRepository": 0,
+      "pinnedExternalRepository": 0,
+      "externalRepositoryPins": [],
+      "unavailableAssets": []
+    }
+  }
+}

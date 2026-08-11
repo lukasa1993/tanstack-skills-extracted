@@ -3,6 +3,7 @@ name: tanstack-preact-table-table-state
 description: "Read and own Preact Table v9 state with useTable selectors, selected table.state, table.Subscribe, table.atoms/store, controlled slices, and external Preact Store atoms. Load for snapshot-versus-subscription bugs or state render tuning."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
   tanstack-library-version: "9.1.2"

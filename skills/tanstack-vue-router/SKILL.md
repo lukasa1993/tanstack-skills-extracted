@@ -3,6 +3,7 @@ name: tanstack-vue-router
 description: "Vue bindings for TanStack Router: RouterProvider, useRouter, useRouterState, useMatch, useMatches, useLocation, useSearch, useParams, useNavigate, useLoaderData, useLoaderDeps, useRouteContext, useBlocker, useCanGoBack, Link, Navigate, Outlet, CatchBoundary, ErrorComponent, Html, Body. Vue-specific patterns with Refless thanTgreater than returns, defineComponent, h() render functions, provide/inject, and computed refs."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.166.2"

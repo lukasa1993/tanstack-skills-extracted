@@ -1,0 +1,12 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-highlight",
+  "product": "highlight",
+  "sourceCount": 5,
+  "themes": [
+    "languages-configuration",
+    "integrations",
+    "themes-annotations"
+  ],
+  "inputSha256": "31eb3fe54018798dbca032316c627fc4894ee0f3a14d2642058f39677537bb61"
+}

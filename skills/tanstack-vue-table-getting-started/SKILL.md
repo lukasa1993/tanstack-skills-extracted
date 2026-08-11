@@ -3,6 +3,7 @@ name: tanstack-vue-table-getting-started
 description: "Create a Vue TanStack Table v9 table with useTable, explicit tableFeatures, stable columns/features, reactive ref or computed data, and Vue FlexRender without destructuring reactive snapshots."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
   tanstack-library-version: "9.1.2"

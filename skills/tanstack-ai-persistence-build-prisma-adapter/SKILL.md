@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-build-prisma-adapter
 description: "Use when an app already runs Prisma and needs TanStack AI chat persistence — writes a chat-persistence.ts into the app against its existing PrismaClient and schema.prisma. Covers the four models, BigInt timestamps, JSON-as-string columns, upsert-with-empty-update idempotency, and model renaming."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-persistence"
   tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-persistence/build-prisma-adapter"

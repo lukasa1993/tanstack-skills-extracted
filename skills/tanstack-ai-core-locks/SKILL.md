@@ -3,6 +3,7 @@ name: tanstack-ai-core-locks
 description: "LockStore, InMemoryLockStore, LocksCapability and withLocks for multi-instance coordination in TanStack AI. Ships in @tanstack/ai — NOT in @tanstack/ai-persistence. Separate from AIPersistence state stores — not a stores key, not composable. InMemoryLockStore vs a distributed (e.g. Cloudflare Durable Object) lock, lease recovery, AbortSignal in critical sections. Use when sandbox or other middleware needs cross-worker mutual exclusion — NOT for storing messages/runs (use withPersistence)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
@@ -22,7 +23,7 @@ metadata:
 
 ## Why separate?
 
-State stores answer "what is durable chat data?"  
+State stores answer "what is durable chat data?"
 Locks answer "who may run this critical section right now?"
 
 `withPersistence` does **not** automatically lock a whole turn. Take a

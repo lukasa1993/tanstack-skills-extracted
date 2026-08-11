@@ -1,0 +1,17 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-hotkeys",
+  "product": "hotkeys",
+  "sourceCount": 50,
+  "themes": [
+    "foundations",
+    "framework-react",
+    "framework-preact",
+    "framework-solid",
+    "framework-svelte",
+    "framework-vue",
+    "framework-angular",
+    "framework-lit"
+  ],
+  "inputSha256": "2a9dc713fec3f929e87c58103ad04dbb7ed26474e87a1459373b44d2862b4e74"
+}

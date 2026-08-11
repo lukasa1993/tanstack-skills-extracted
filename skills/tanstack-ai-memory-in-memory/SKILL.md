@@ -3,6 +3,7 @@ name: tanstack-ai-memory-in-memory
 description: "Use when wiring inMemory() from @tanstack/ai-memory/in-memory — explains setup, options (embedder, extract, topK/minScore), when to pick it (dev/tests/single-process demos), and what NOT to use it for (multi-process or persistent)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-memory"
   tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory-in-memory"

@@ -3,6 +3,7 @@ name: tanstack-router-core-search-params
 description: "validateSearch, search param validation with Zod/Valibot/ArkType adapters, fallback(), search middlewares (retainSearchParams, stripSearchParams), custom serialization (parseSearch, stringifySearch), search param inheritance, loaderDeps for cache keys, reading and writing search params."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Intent"
+  short_description: "Guidance for discovering, installing, generating, validating, and maintaining package-owned Agent Skills."
+  default_prompt: "Use $tanstack-intent to implement this TanStack Intent task with the installed framework and package versions."

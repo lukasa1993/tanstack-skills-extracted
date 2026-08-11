@@ -3,6 +3,7 @@ name: tanstack-alpine-table-getting-started
 description: "Create an Alpine TanStack Table v9 table with createTable, explicit tableFeatures, Alpine.reactive data getters, x-for rendering, and FlexRender through x-html. Load for first-table setup, reactive options, or when nested Alpine directives rendered by x-html do not initialize."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "alpine"
   tanstack-library: "@tanstack/alpine-table"
   tanstack-library-version: "9.1.2"

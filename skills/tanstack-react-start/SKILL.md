@@ -3,6 +3,7 @@ name: tanstack-react-start
 description: "React bindings for TanStack Start: createStart, StartClient, StartServer, React-specific imports, re-exports from @tanstack/react-router, full project setup with React, useServerFn hook."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.168.32"

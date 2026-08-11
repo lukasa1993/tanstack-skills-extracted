@@ -3,6 +3,7 @@ name: tanstack-solid-table-with-tanstack-query
 description: "Compose Solid Query reactive options with Solid Table manual server processing. Load for tracked query-key signals, query result getters, server row counts, keepPreviousData, and avoiding React Query patterns or duplicated data state."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
   tanstack-library-version: "9.1.2"

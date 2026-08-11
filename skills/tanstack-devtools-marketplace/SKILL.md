@@ -3,6 +3,7 @@ name: tanstack-devtools-marketplace
 description: "Publish plugin to npm and submit to TanStack Devtools Marketplace. PluginMetadata registry format, plugin-registry.ts, pluginImport (importName, type), requires (packageName, minVersion), framework tagging, multi-framework submissions, featured plugins."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"

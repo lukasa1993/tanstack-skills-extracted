@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-seed-placeholder-select-and-5c98438e
 description: "Use this when choosing initialData, initialDataUpdatedAt, placeholderData, keepPreviousData, select, data transformation, cache seeding, detail-from-list seeding, or derived query data."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

@@ -3,6 +3,7 @@ name: tanstack-alpine-table-table-state
 description: "Read automatically reactive Alpine table APIs in bindings and own slices with Alpine.reactive getters plus on*Change or external TanStack Store atoms. Load for controlled state, updater callbacks, selector gating, atom precedence, or code incorrectly adding table.Subscribe."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "alpine"
   tanstack-library: "@tanstack/alpine-table"
   tanstack-library-version: "9.1.2"

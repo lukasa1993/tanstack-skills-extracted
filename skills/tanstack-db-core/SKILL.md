@@ -3,6 +3,7 @@ name: tanstack-db-core
 description: "TanStack DB core concepts: createCollection with queryCollectionOptions, electricCollectionOptions, powerSyncCollectionOptions, rxdbCollectionOptions, trailbaseCollectionOptions, localOnlyCollectionOptions. Live queries via query builder (from, where, join, select, groupBy, orderBy, limit). Optimistic mutations with draft proxy (collection.insert, collection.update, collection.delete). createOptimisticAction, createTransaction, createPacedMutations. Entry point for all TanStack DB skills."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

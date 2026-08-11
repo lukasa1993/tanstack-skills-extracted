@@ -3,6 +3,7 @@ name: tanstack-router-core-data-loading
 description: "Route loader option, loaderDeps for cache keys, staleTime/gcTime/ defaultPreloadStaleTime SWR caching, pendingComponent/pendingMs/ pendingMinMs, errorComponent/onError/onCatch, beforeLoad, router context and createRootRouteWithContext DI pattern, router.invalidate, Await component, deferred data loading with unawaited promises."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"

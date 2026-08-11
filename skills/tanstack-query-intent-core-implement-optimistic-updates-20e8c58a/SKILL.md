@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-implement-optimistic-updates-20e8c58a
 description: "Use this when implementing optimistic updates, onMutate rollback context, cancelQueries before writes, setQueryData, setQueriesData, immutable cache writes, mutation rollback, and offline-aware optimistic state."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

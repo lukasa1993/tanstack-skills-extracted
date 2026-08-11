@@ -3,6 +3,7 @@ name: tanstack-devtools-utils-devtools-framework-adapters
 description: "Use devtools-utils factory functions to create per-framework plugin adapters. createReactPlugin/createSolidPlugin/createVuePlugin/createPreactPlugin, createReactPanel/createSolidPanel/createVuePanel/createPreactPanel. [Plugin, NoOpPlugin] tuple for tree-shaking. DevtoolsPanelProps (theme). Vue uses (name, component) not options object. Solid render must be function."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-utils"

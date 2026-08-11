@@ -3,6 +3,7 @@ name: tanstack-query-intent-lifecycle-test-query-code
 description: "Use this when testing TanStack Query code with isolated QueryClient instances, test providers, retry false, cache cleanup, async assertions, hook testing, React/Vue/Solid/Angular harnesses, and deterministic query state."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

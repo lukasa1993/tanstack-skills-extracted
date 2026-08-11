@@ -3,6 +3,7 @@ name: tanstack-ai-core-client-persistence
 description: "Browser chat persistence on useChat / ChatClient: localStoragePersistence, sessionStoragePersistence, indexedDBPersistence. Client-authoritative (adapter, full transcript) vs server-authoritative (persistence: true, no client cache). Reload restore, pending interrupts, mid-stream rejoin with delivery durability. Use for SPA reload durability — NOT server history alone. Also covers generation hooks (useGenerateImage etc.), which take only the server-driven mode: persistence: true hydrates the last generation for the (REQUIRED) threadId from the server on mount and repaints status/result/error, nothing is cached in the browser. No extra package: the adapters ship in the framework packages."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"

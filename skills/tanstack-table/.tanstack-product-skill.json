@@ -1,0 +1,24 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-table",
+  "product": "table",
+  "sourceCount": 81,
+  "themes": [
+    "foundations",
+    "data-processing",
+    "layout-interaction",
+    "integrations",
+    "advanced",
+    "framework-react",
+    "framework-preact",
+    "framework-vue",
+    "framework-solid",
+    "framework-svelte",
+    "framework-angular",
+    "framework-lit",
+    "framework-alpine",
+    "framework-ember",
+    "framework-octane"
+  ],
+  "inputSha256": "1db518fc75033e9d9a4cd2b5644ba1e1021cb2684856a51ce33c6994465a42a1"
+}

@@ -3,6 +3,7 @@ name: tanstack-db-core-custom-adapter
 description: "Building custom collection adapters for new backends. SyncConfig interface: sync function receiving begin, write, commit, markReady, truncate, metadata primitives. ChangeMessage format (insert, update, delete). loadSubset for on-demand sync. LoadSubsetOptions (where, orderBy, limit, cursor). Expression parsing: parseWhereExpression, parseOrderByExpression, extractSimpleComparisons, parseLoadSubsetOptions. Collection options creator pattern. rowUpdateMode (partial vs full). Subscription lifecycle and cleanup functions. Persisted sync metadata API (metadata.row and metadata.collection) for storing per-row and per-collection adapter state."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

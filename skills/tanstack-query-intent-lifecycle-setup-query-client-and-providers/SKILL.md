@@ -3,6 +3,7 @@ name: tanstack-query-intent-lifecycle-setup-query-client-and-providers
 description: "Use this when creating a TanStack Query QueryClient, QueryClientProvider, VueQueryPlugin, provideTanStackQuery, Svelte QueryClientProvider, Angular providers, Lit controllers, or SSR request-local clients. Covers stable client lifetime and provider wiring."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

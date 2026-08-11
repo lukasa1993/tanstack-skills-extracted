@@ -3,6 +3,7 @@ name: tanstack-ember-table-table-state
 description: "Read, track, initialize, control, and reset TanStack Ember Table v9 state through Glimmer-reactive table APIs, baseAtoms, atoms, store, Ember createAtom, or @tracked state plus on*Change. Load for ownership precedence, updater callbacks, stale template state, options-thunk reactivity, or incorrect table.Subscribe/store.subscribe usage."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "ember"
   tanstack-library: "@tanstack/ember-table"
   tanstack-library-version: "9.1.2"

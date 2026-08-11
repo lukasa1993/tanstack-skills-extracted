@@ -3,6 +3,7 @@ name: tanstack-lit-table-with-tanstack-virtual
 description: "Virtualize Lit Table final row or column models with @tanstack/lit-virtual VirtualizerController, host lifecycle-aware counts, scroll refs, stable keys, dynamic measurement, sticky CSS, grid/flex sizing, and infinite data. Load for large rendered tables; Virtual is renderer composition, not tableFeatures."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
   tanstack-library-version: "9.1.2"

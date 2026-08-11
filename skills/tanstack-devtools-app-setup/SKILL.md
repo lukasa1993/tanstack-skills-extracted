@@ -3,6 +3,7 @@ name: tanstack-devtools-app-setup
 description: "Install TanStack Devtools, pick framework adapter (React/Vue/Solid/Preact), register plugins via plugins prop, configure shell (position, hotkeys, theme, hideUntilHover, requireUrlFlag, eventBusConfig). TanStackDevtools component, defaultOpen, localStorage persistence."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"

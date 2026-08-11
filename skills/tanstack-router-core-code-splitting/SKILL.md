@@ -3,6 +3,7 @@ name: tanstack-router-core-code-splitting
 description: "Automatic code splitting (autoCodeSplitting), .lazy.tsx convention, createLazyFileRoute, createLazyRoute, lazyRouteComponent, getRouteApi for typed hooks in split files, codeSplitGroupings per-route override, splitBehavior programmatic config, critical vs non-critical properties."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"

@@ -1,0 +1,14 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-intent",
+  "product": "intent",
+  "sourceCount": 20,
+  "themes": [
+    "consumer-workflow",
+    "maintainer-workflow",
+    "trust-configuration",
+    "meta-discovery-generation",
+    "meta-tree-maintenance"
+  ],
+  "inputSha256": "7267ad492fae861b8929765cbeac464f4064de8747f5d9540ac26fd1cfd49aba"
+}

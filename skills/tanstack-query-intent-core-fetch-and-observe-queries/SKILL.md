@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-fetch-and-observe-queries
 description: "Use this when reading server state with useQuery, useQueries, createQuery, injectQuery, QueryObserver, QueryClient.fetchQuery, ensureQueryData, status, fetchStatus, pending, paused, success, and error states."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

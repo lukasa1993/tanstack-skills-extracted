@@ -1,0 +1,18 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-store",
+  "product": "store",
+  "sourceCount": 11,
+  "themes": [
+    "foundations",
+    "framework-react",
+    "framework-preact",
+    "framework-solid",
+    "framework-svelte",
+    "framework-vue",
+    "framework-angular",
+    "framework-lit",
+    "framework-octane"
+  ],
+  "inputSha256": "febfa89a8d7a1585b80f8554af30a565880446cc0071eaeb8e680a23fdf7f91e"
+}

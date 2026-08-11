@@ -3,6 +3,7 @@ name: tanstack-octane-table-table-state
 description: "Read and own Octane Table v9 state with useTable selectors, table.state, table.Subscribe, controlled slices, and @tanstack/octane-store atoms. Load for state ownership, render timing, snapshot-versus-subscription bugs, or fine-grained rendering."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/octane-table"
   tanstack-library-version: "9.1.2"

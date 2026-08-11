@@ -3,6 +3,7 @@ name: tanstack-query-intent-compositions-query-data-and-forms
 description: "Use this when integrating TanStack Query data and mutations with forms: initial server state, editable client state, dirty fields, background updates, submit prevention, invalidation, reset-after-save, validation errors, and avoiding blind copies from Query cache into local form state."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

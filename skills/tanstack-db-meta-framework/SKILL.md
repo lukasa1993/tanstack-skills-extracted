@@ -3,6 +3,7 @@ name: tanstack-db-meta-framework
 description: "Integrating TanStack DB with meta-frameworks (TanStack Start, Next.js, Remix, Nuxt, SvelteKit). Client-side only: SSR is NOT supported — routes must disable SSR. Preloading collections in route loaders with collection.preload(). Pattern: ssr: false + await collection.preload() in loader. Multiple collection preloading with Promise.all. Framework-specific loader APIs."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

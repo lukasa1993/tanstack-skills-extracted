@@ -1,0 +1,17 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-ai",
+  "product": "ai",
+  "sourceCount": 29,
+  "themes": [
+    "chat-providers",
+    "tools-outputs-middleware",
+    "media",
+    "persistence-coordination",
+    "persistence-adapters",
+    "persistence-cloudflare",
+    "memory",
+    "agent-runtimes"
+  ],
+  "inputSha256": "764804f484a3b2349cb2eb2fc2ad876d8e72d8a7785f6e2a8d308e4690b1a2dd"
+}

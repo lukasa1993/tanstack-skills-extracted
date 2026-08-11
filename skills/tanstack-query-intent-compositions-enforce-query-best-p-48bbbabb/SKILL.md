@@ -3,6 +3,7 @@ name: tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb
 description: "Use this when configuring @tanstack/eslint-plugin-query, flat/recommended, flat/recommended-strict, exhaustive-deps, no-rest-destructuring, no-unstable-deps, no-void-query-fn, stable-query-client, prefer-query-options, infinite-query-property-order, and mutation-property-order."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

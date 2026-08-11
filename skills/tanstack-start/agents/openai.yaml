@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Start"
+  short_description: "Full-stack application guidance for TanStack Start, including server functions, middleware, deployment, and framework ad"
+  default_prompt: "Use $tanstack-start to implement this TanStack Start task with the installed framework and package versions."

@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9
 description: "Use this when configuring staleTime, gcTime, cache lifetime, retry, retryDelay, refetchOnWindowFocus, refetchOnReconnect, refetchInterval, networkMode, focusManager, onlineManager, timeoutManager, or QueryClient defaultOptions."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

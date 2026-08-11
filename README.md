@@ -2,9 +2,9 @@
 
 [![skills.sh](https://skills.sh/b/lukasa1993/tanstack-skills-extracted)](https://skills.sh/lukasa1993/tanstack-skills-extracted)
 
-This is an unofficial mirror of the agent skills that TanStack publishes. It is not affiliated with or endorsed by TanStack. Until `@tanstack/query-intent` reaches npm, the mirror also tracks TanStack's official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879).
+This is an unofficial mirror of TanStack agent guidance. It is not affiliated with or endorsed by TanStack. It extracts the skills that TanStack publishes and synthesizes product skills from version-matched official documentation when a product has no upstream skill.
 
-The exporter inspects every published `@tanstack/*` package and the official Query draft source. It converts nested skills to the flat Agent Skills format. It also updates skill IDs and file references, validates the result, records source provenance, and preserves the upstream license.
+The exporter inspects published `@tanstack/*` packages and official documentation. It converts nested skills to the flat Agent Skills format, groups them by product and task, removes exact duplicate guidance, validates links, records source provenance, and preserves upstream licenses.
 
 ## Install
 
@@ -14,9 +14,24 @@ Run the interactive installer:
 npx skills add lukasa1993/tanstack-skills-extracted
 ```
 
-Select `TanStack Query`, `TanStack Table`, or another library group to select every skill for that library. You can also select individual skills.
+The normal picker shows exactly 18 product skills in five practical groups:
 
-Install one skill without the interactive picker:
+- Framework: Start and Router.
+- Data and state: Query, DB, Store, and AI.
+- UI and UX: Table, Charts, Form, Hotkeys, Markdown, and Highlight.
+- Performance: Virtual and Pacer.
+- Tooling: Devtools, Config, CLI, and Intent.
+
+Select a product once. Its skill routes to the relevant thematic guidance and framework adapter without requiring separate subskill selection.
+
+Install a product without the interactive picker:
+
+```sh
+npx skills add lukasa1993/tanstack-skills-extracted --skill tanstack-query
+npx skills add lukasa1993/tanstack-skills-extracted --skill tanstack-table
+```
+
+All extracted skills remain available by exact name, but stay hidden from the normal picker. Install one directly with:
 
 ```sh
 npx skills add lukasa1993/tanstack-skills-extracted --skill tanstack-react-table-getting-started
@@ -28,16 +43,25 @@ Existing installations get changed skills with:
 npx skills update
 ```
 
+## Source notes
+
+TanStack Form, Charts, Intent, Virtual, Pacer, Hotkeys, Store, and Config do not currently publish complete product skills. Their product skills are synthesized from version-matched official documentation and package metadata.
+
+TanStack Query is different: its source is the official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879), not a published npm package. The draft is still open and can change before release.
+
+TanStack Charts is currently pre-alpha. Its skill preserves that warning and uses release-matched documentation instead of unreleased `main` APIs.
+
 ## Refresh
 
 ```sh
 ./extractor.sh --self-test
 ./extractor.sh skills
+node ./scripts/fetch-doc-sources.mjs
 node ./scripts/build-groups.mjs
 gh skill publish --dry-run
 ```
 
-The GitHub Actions workflow checks npm and the official Query draft once each day. It rebuilds the page and installer groups. It commits and publishes only when the generated output changes.
+The GitHub Actions workflow checks npm, official documentation, and the Query draft once each day. It rebuilds the extracted atomic sources and the 18 product skills. Atomic skills remain hidden from the default picker but exact-installable. The workflow commits only changed generated output and reports only marker-backed product skills to skills.sh.
 
 ## License
 

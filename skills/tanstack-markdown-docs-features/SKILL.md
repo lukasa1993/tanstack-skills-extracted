@@ -3,6 +3,7 @@ name: tanstack-markdown-docs-features
 description: "Build documentation metadata with docsMarkdownExtensions, GitHub-style callouts, heading collection, comment components, heading/file/package- manager/bundler tabs, framework panels, and code-fence metadata. Load when authoring or consuming TanStack-style docs syntax and custom-element data contracts."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/markdown"
   tanstack-library-version: "0.0.13"
   tanstack-package: "@tanstack/markdown"

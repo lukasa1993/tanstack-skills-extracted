@@ -3,6 +3,7 @@ name: tanstack-react-db
 description: "React bindings for TanStack DB. useLiveQuery hook with dependency arrays (8 overloads: query function, config object, pre-created collection, disabled state via returning undefined/null). useLiveSuspenseQuery for React Suspense with Error Boundaries (data always defined). useLiveInfiniteQuery for cursor-based pagination (pageSize, fetchNextPage, hasNextPage, isFetchingNextPage). usePacedMutations for debounced React state updates. Return shape: data, state, collection, status, isLoading, isReady, isError. Import from @tanstack/react-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"

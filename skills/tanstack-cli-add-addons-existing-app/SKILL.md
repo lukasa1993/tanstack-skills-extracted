@@ -3,6 +3,7 @@ name: tanstack-cli-add-addons-existing-app
 description: "Apply integrations to existing projects with tanstack add, including add-on id resolution, dependency chains, option prompts, and .cta.json project metadata preconditions."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.62.1"
   tanstack-package: "@tanstack/cli"

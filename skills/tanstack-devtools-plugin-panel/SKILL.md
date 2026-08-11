@@ -3,6 +3,7 @@ name: tanstack-devtools-plugin-panel
 description: "Build devtools panel components that display emitted event data. Listen via EventClient.on(), handle theme (light/dark), use @tanstack/devtools-ui components. Plugin registration (name, render, id, defaultOpen), lifecycle (mount, activate, destroy), max 3 active plugins. Two paths: Solid.js core with devtools-ui for multi-framework support, or framework-specific panels."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"

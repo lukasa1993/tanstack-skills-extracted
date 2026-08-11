@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-understand-query-internals-a-8ab976f4
 description: "Use this when explaining or debugging TanStack Query internals: QueryClient, QueryCache, MutationCache, Query, QueryObserver, active versus inactive queries, observer-level options, subscriptions, stale timers, and why loaders or imperative cache reads are not the same as observed queries."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

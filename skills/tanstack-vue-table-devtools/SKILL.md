@@ -3,6 +3,7 @@ name: tanstack-vue-table-devtools
 description: "Connect Vue Table v9 refs or instances to Devtools with tableDevtoolsPlugin and useTanStackTableDevtools. Load for missing targets, reactive table replacement, required options.key, enabled state, cleanup, or development gating."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table-devtools"
   tanstack-library-version: "9.1.2"

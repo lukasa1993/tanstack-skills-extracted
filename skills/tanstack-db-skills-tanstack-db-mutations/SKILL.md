@@ -3,6 +3,7 @@ name: tanstack-db-skills-tanstack-db-mutations
 description: "Mutation patterns in TanStack DB. Use for insert/update/delete, optimistic updates, transactions, paced mutations, and error handling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/db-skills"
   tanstack-package-version: "0.0.1"
   tanstack-source-skill: "tanstack-db-mutations"

@@ -3,6 +3,7 @@ name: tanstack-svelte-table-table-state
 description: "Use Svelte 5 rune-aware table atoms and stores, $derived projections, reactive option getters, controlled $state or createTableState slices, external atoms, and auto-reset behavior without broad invalidation or snapshot mismatches."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
   tanstack-library-version: "9.1.2"

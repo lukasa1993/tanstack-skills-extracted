@@ -35,8 +35,11 @@ jobs:
         run: |
           set -euo pipefail
           node --version
+          node -e 'const [major, minor] = process.versions.node.split(".").map(Number); if (major < 22 || (major === 22 && minor < 20)) throw new Error("Node.js 22.20.0 or newer is required")'
           npm --version
+          tar --version
           gh --version
+          gh skill publish --help >/dev/null
 
       - name: Test exporter
         run: ./extractor.sh --self-test
@@ -44,17 +47,85 @@ jobs:
       - name: Extract current official skills
         run: ./extractor.sh skills
 
-      - name: Build group metadata
+      - name: Fetch current official documentation
+        run: node ./scripts/fetch-doc-sources.mjs
+
+      - name: Build product skills and metadata
         run: node ./scripts/build-groups.mjs
 
-      - name: Validate group discovery
+      - name: Validate product catalog and discovery
         env:
+          EXPECTED_PRODUCT_SKILLS: tanstack-start,tanstack-router,tanstack-query,tanstack-db,tanstack-store,tanstack-ai,tanstack-table,tanstack-charts,tanstack-form,tanstack-hotkeys,tanstack-markdown,tanstack-highlight,tanstack-virtual,tanstack-pacer,tanstack-devtools,tanstack-config,tanstack-cli,tanstack-intent
           NPM_CONFIG_IGNORE_SCRIPTS: "true"
         run: |
           set -euo pipefail
-          npx --yes skills@1.5.21 add . --list
+          node <<'NODE'
+          const fs = require('node:fs')
+          const path = require('node:path')
+
+          const expected = process.env.EXPECTED_PRODUCT_SKILLS.split(',')
+          const markerName = '.tanstack-product-skill.json'
+          const markerSkills = fs
+            .readdirSync('skills', { withFileTypes: true })
+            .filter((entry) => entry.isDirectory())
+            .map((entry) => entry.name)
+            .filter((name) => fs.existsSync(path.join('skills', name, markerName)))
+            .sort()
+          const expectedSorted = [...expected].sort()
+
+          if (JSON.stringify(markerSkills) !== JSON.stringify(expectedSorted)) {
+            throw new Error(
+              `Product marker mismatch. Expected ${expectedSorted.join(', ')}, got ${markerSkills.join(', ')}`,
+            )
+          }
+
+          for (const name of markerSkills) {
+            JSON.parse(fs.readFileSync(path.join('skills', name, markerName), 'utf8'))
+            if (!fs.existsSync(path.join('skills', name, 'SKILL.md'))) {
+              throw new Error(`Missing skills/${name}/SKILL.md`)
+            }
+          }
+
+          const exportManifest = fs.readFileSync('skills/.tanstack-skills-export.tsv', 'utf8')
+          const atomicSkills = exportManifest
+            .split('\n')
+            .filter((line) => line && !line.startsWith('#') && !line.startsWith('package\t'))
+            .flatMap((line) => (line.split('\t')[5] ?? '').split(',').filter(Boolean))
+          if (!atomicSkills.length || new Set(atomicSkills).size !== atomicSkills.length) {
+            throw new Error('Exporter manifest has no atomic skills or contains duplicate names.')
+          }
+          for (const name of atomicSkills) {
+            const skillPath = path.join('skills', name, 'SKILL.md')
+            const source = fs.readFileSync(skillPath, 'utf8')
+            const frontmatter = /^---\n([\s\S]*?)\n---/.exec(source)?.[1] ?? ''
+            if (!/^  internal:\s*true\s*$/m.test(frontmatter)) {
+              throw new Error(`Atomic skill is visible in the default picker: ${name}`)
+            }
+          }
+
+          const discovered = fs
+            .readdirSync('skills', { withFileTypes: true })
+            .filter((entry) => entry.isDirectory() && fs.existsSync(path.join('skills', entry.name, 'SKILL.md')))
+            .map((entry) => entry.name)
+          const allowed = new Set([...expected, ...atomicSkills])
+          const unexpected = discovered.filter((name) => !allowed.has(name))
+          if (unexpected.length) throw new Error(`Unexpected skill directories: ${unexpected.join(', ')}`)
+
+          const catalog = JSON.parse(fs.readFileSync('skills.sh.json', 'utf8'))
+          const listed = (catalog.groupings ?? []).flatMap((group) => group.skills ?? [])
+          if (JSON.stringify(listed) !== JSON.stringify(expected)) {
+            throw new Error(
+              `Public catalog mismatch. Expected ${expected.join(', ')}, got ${listed.join(', ')}`,
+            )
+          }
+
+          console.log(`Validated ${expected.length} product skills.`)
+          NODE
+          npx --yes skills@1.5.22 add . --list
 
       - name: Validate Agent Skills
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: gh skill publish --dry-run
 
       - name: Detect changes
@@ -126,27 +197,45 @@ jobs:
 
       - name: Refresh skills.sh index
         env:
+          EXPECTED_PRODUCT_SKILLS: tanstack-start,tanstack-router,tanstack-query,tanstack-db,tanstack-store,tanstack-ai,tanstack-table,tanstack-charts,tanstack-form,tanstack-hotkeys,tanstack-markdown,tanstack-highlight,tanstack-virtual,tanstack-pacer,tanstack-devtools,tanstack-config,tanstack-cli,tanstack-intent
           NPM_CONFIG_IGNORE_SCRIPTS: "true"
         run: |
           set -euo pipefail
           install_dir="$(mktemp -d "${RUNNER_TEMP}/skills-sh-install.XXXXXX")"
           cd "$install_dir"
 
+          IFS=',' read -r -a expected_skills <<< "$EXPECTED_PRODUCT_SKILLS"
+          mapfile -t marker_files < <(
+            find "$GITHUB_WORKSPACE/skills" -mindepth 2 -maxdepth 2 \
+              -name '.tanstack-product-skill.json' -type f | LC_ALL=C sort
+          )
+          if (( ${#marker_files[@]} != ${#expected_skills[@]} )); then
+            echo "Expected ${#expected_skills[@]} product markers, found ${#marker_files[@]}." >&2
+            exit 1
+          fi
+
           batch=()
           batch_count=0
-          for skill_file in "$GITHUB_WORKSPACE"/skills/*/SKILL.md; do
-            skill_name="$(basename "$(dirname "$skill_file")")"
+          published_count=0
+          for skill_name in "${expected_skills[@]}"; do
+            marker_file="$GITHUB_WORKSPACE/skills/$skill_name/.tanstack-product-skill.json"
+            if [[ ! -f "$marker_file" ]]; then
+              echo "Missing product marker for $skill_name." >&2
+              exit 1
+            fi
             batch+=(--skill "$skill_name")
             batch_count=$((batch_count + 1))
+            published_count=$((published_count + 1))
             if (( batch_count == 8 )); then
-              npx --yes skills@1.5.21 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
+              npx --yes skills@1.5.22 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
               batch=()
               batch_count=0
             fi
           done
           if (( batch_count > 0 )); then
-            npx --yes skills@1.5.21 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
+            npx --yes skills@1.5.22 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
           fi
+          echo "Reported $published_count product skills to skills.sh."
 
       - name: Publish GitHub skill release
         env:

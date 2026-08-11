@@ -3,6 +3,7 @@ name: tanstack-angular-table-with-tanstack-query
 description: "Compose Angular Query with signal-owned Table filtering, sorting, and pagination state using reactive query options, manual row-model boundaries, direct query data, server counts, and valid injection context."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
   tanstack-library-version: "9.1.2"

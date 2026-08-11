@@ -3,6 +3,7 @@ name: tanstack-ai-memory-honcho
 description: "Use when wiring honcho() from @tanstack/ai-memory/honcho — a hosted memory adapter where recall is a dialectic answer over the user's representation (no discrete fragments). Requires the optional @honcho-ai/sdk peer."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-memory"
   tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory-honcho"

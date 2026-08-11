@@ -3,6 +3,7 @@ name: tanstack-solid-table-migrate-v8-to-v9
 description: "Perform a complete @tanstack/solid-table v8-to-v9 migration: createTable, explicit features and row-model slots, getter-based Solid reactivity, atom state, rendering, composable tables, type helpers, and every shared API rename and semantic change. Use for migration plans, implementation, or audits."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
   tanstack-library-version: "9.1.2"

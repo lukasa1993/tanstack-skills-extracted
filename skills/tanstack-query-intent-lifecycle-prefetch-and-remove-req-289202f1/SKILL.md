@@ -3,6 +3,7 @@ name: tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1
 description: "Use this when flattening request waterfalls with prefetchQuery, prefetchInfiniteQuery, ensureQueryData, fetchQuery, usePrefetchQuery, usePrefetchInfiniteQuery, route loaders, TanStack Router loaders, Start routes, Suspense prefetching, and query-function prefetching."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

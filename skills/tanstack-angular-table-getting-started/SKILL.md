@@ -3,6 +3,7 @@ name: tanstack-angular-table-getting-started
 description: "Create an Angular TanStack Table v9 table with injectTable inside injection context, explicit stable tableFeatures and columns, signal-backed data, and FlexRender structural directives or helpers."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
   tanstack-library-version: "9.1.2"

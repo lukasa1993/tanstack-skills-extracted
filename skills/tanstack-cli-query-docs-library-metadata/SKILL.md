@@ -3,6 +3,7 @@ name: tanstack-cli-query-docs-library-metadata
 description: "Retrieve machine-readable context with tanstack libraries, tanstack doc, tanstack search-docs, tanstack create --list-add-ons --json, and --addon-details for agent-safe discovery and preflight validation."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.62.1"
   tanstack-package: "@tanstack/cli"

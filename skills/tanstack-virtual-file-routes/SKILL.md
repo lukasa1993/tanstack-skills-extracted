@@ -3,6 +3,7 @@ name: tanstack-virtual-file-routes
 description: "Programmatic route tree building as an alternative to filesystem conventions: rootRoute, index, route, layout, physical, defineVirtualSubtreeConfig. Use with TanStack Router plugin's virtualRouteConfig option."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.161.4"
   tanstack-package: "@tanstack/virtual-file-routes"

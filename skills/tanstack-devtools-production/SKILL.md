@@ -3,6 +3,7 @@ name: tanstack-devtools-production
 description: "Handle devtools in production vs development. removeDevtoolsOnBuild, devDependency vs regular dependency, conditional imports, NoOp plugin variants for tree-shaking, non-Vite production exclusion patterns."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"

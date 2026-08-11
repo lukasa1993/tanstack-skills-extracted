@@ -3,6 +3,7 @@ name: tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce
 description: "Use this when migrating TanStack Query across React Query v3, React Query v4, TanStack Query v5, Vue Query v5, Svelte Query v6, removed overloads, object syntax, cacheTime to gcTime, removed query callbacks, keepPreviousData migration, and query-codemods."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

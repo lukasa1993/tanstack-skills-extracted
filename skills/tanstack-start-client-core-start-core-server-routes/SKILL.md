@@ -3,6 +3,7 @@ name: tanstack-start-client-core-start-core-server-routes
 description: "Server-side API endpoints using the server property on createFileRoute, HTTP method handlers (GET, POST, PUT, DELETE), createHandlers for per-handler middleware, handler context (request, params, context), request body parsing, response helpers, file naming for API routes."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"

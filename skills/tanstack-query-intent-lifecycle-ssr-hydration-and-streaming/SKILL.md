@@ -3,6 +3,7 @@ name: tanstack-query-intent-lifecycle-ssr-hydration-and-streaming
 description: "Use this when implementing SSR, hydration, dehydrate, hydrate, HydrationBoundary, TanStack Start, TanStack Router SSR Query, Next.js app router, Next.js pages router, React Server Components, SvelteKit, Nuxt, SolidStart, Lit SSR, ReactQueryStreamedHydration, or streamedQuery."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

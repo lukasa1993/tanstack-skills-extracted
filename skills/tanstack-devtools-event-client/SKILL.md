@@ -3,6 +3,7 @@ name: tanstack-devtools-event-client
 description: "Create typed EventClient for a library. Define event maps with typed payloads, pluginId auto-prepend namespacing, emit()/on()/onAll()/onAllPluginEvents() API. Connection lifecycle (5 retries, 300ms), event queuing, enabled/disabled state, SSR fallbacks, singleton pattern. Unique pluginId requirement to avoid event collisions."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/devtools-event-client"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-event-client"

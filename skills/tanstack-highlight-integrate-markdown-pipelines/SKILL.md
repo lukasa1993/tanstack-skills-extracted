@@ -3,6 +3,7 @@ name: tanstack-highlight-integrate-markdown-pipelines
 description: "Integrate @tanstack/highlight with renderCodeFence, codeFenceToHast, remarkHighlightCodeBlocks, rehypeHighlightCodeBlocks, and Markdown fence metadata. Load for unified, Remark, Rehype, MDX, custom HAST traversal, structured output, titles, line numbers, or code annotations."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/highlight"
   tanstack-library-version: "0.0.10"
   tanstack-package: "@tanstack/highlight"

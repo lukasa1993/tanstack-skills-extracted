@@ -3,6 +3,7 @@ name: tanstack-db-skills-tanstack-db-collections
 description: "Collection types and configuration in TanStack DB. Use for QueryCollection, ElectricCollection, local collections, and sync modes."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/db-skills"
   tanstack-package-version: "0.0.1"
   tanstack-source-skill: "tanstack-db-collections"

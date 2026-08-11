@@ -3,6 +3,7 @@ name: tanstack-solid-table-table-state
 description: "Read Solid-backed table atoms inside JSX, createMemo, createEffect, or table.Subscribe; own slices with Solid signals or external TanStack Store atoms; and apply value-or-updater callbacks correctly. Load for Solid tracking and controlled-state bugs."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
   tanstack-library-version: "9.1.2"

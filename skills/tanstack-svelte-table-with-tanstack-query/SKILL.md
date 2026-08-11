@@ -3,6 +3,7 @@ name: tanstack-svelte-table-with-tanstack-query
 description: "Compose Svelte Query with Svelte Table manual filtering, sorting, and pagination using reactive query inputs, query-result data getters, server counts, and a single source of server-data truth."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
   tanstack-library-version: "9.1.2"

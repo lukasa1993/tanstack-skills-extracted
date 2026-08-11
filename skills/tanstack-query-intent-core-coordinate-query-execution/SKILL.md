@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-coordinate-query-execution
 description: "Use this when coordinating enabled, skipToken, dependent queries, useQueries, parallel queries, disabled queries, background fetching indicators, isFetching, fetchStatus, and declarative refetch behavior."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

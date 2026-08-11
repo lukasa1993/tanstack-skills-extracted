@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-design-query-keys-and-options
 description: "Use this when designing queryKey arrays, queryFn inputs, queryOptions, infiniteQueryOptions, mutationOptions, skipToken, key factories, or TypeScript inference for TanStack Query reads and writes."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

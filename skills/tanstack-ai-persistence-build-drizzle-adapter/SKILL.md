@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-build-drizzle-adapter
 description: "Use when an app already runs Drizzle ORM and needs TanStack AI chat persistence — writes a chat-persistence.ts into the app against its existing db handle, schema file, and drizzle-kit journal. Covers the four tables (SQLite/Postgres/MySQL), the onConflict idempotency rules, JSON columns, and per-request bindings like D1."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-persistence"
   tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-persistence/build-drizzle-adapter"

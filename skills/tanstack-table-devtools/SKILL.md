@@ -3,6 +3,7 @@ name: tanstack-table-devtools
 description: "Register TanStack Table targets and inspect options, state, features, columns, rows, and row models with @tanstack/table-devtools. Load for missing connections, required unique table options.key, target replacement/cleanup, or an explicit request for production Devtools entrypoints."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/table-devtools"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/table-devtools"

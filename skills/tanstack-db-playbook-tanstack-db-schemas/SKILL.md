@@ -3,6 +3,7 @@ name: tanstack-db-playbook-tanstack-db-schemas
 description: "Schema validation and type transformations in TanStack DB. Use for validation, TInput/TOutput types, transformations, defaults, and error handling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/db-playbook"
   tanstack-package-version: "0.0.1"
   tanstack-source-skill: "tanstack-db-schemas"

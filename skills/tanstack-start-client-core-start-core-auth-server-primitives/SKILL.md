@@ -3,6 +3,7 @@ name: tanstack-start-client-core-start-core-auth-server-primitives
 description: "Server-side authentication primitives for TanStack Start: session cookies (HttpOnly, Secure, SameSite, __Host- prefix), session read/issue/destroy via createServerFn and middleware, OAuth authorization-code flow with state and PKCE, password-reset enumeration defense, CSRF for non-GET RPCs, rate limiting auth endpoints, session rotation on privilege change. Pairs with router-core/auth-and-guards for the routing side."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"

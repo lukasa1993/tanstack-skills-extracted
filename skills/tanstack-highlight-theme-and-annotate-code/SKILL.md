@@ -3,6 +3,7 @@ name: tanstack-highlight-theme-and-annotate-code
 description: "Style @tanstack/highlight with createThemeCss, createThemeRule, createThemeBaseCss, isolated theme imports, lineNumbers, line decorations, UTF-16 range decorations, and fence annotations. Load for light/dark themes, custom semantic colors, focused lines, diffs, diagnostics, or data hooks."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/highlight"
   tanstack-library-version: "0.0.10"
   tanstack-package: "@tanstack/highlight"

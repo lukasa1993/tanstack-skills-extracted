@@ -3,6 +3,7 @@ name: tanstack-query-intent-framework-handle-status-and-errors
 description: "Use this when designing TanStack Query loading, empty, stale, background error, retry, toast, throwOnError, and Error Boundary flows. Covers status versus fetchStatus, stale data after failed refetches, global QueryCache or MutationCache error callbacks, and local versus boundary-level error handling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

@@ -3,6 +3,7 @@ name: tanstack-svelte-table-with-tanstack-virtual
 description: "Virtualize Svelte Table final row or column models with reactive counts and scroll targets, stable keys, dynamic measurement, absolute transforms, sticky regions, grid/flex sizing, and infinite data."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
   tanstack-library-version: "9.1.2"

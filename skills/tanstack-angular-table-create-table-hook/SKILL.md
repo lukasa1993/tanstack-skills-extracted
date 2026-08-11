@@ -3,6 +3,7 @@ name: tanstack-angular-table-create-table-hook
 description: "Create an Angular injectAppTable/createAppColumnHelper abstraction with shared features/defaults, registered components, injectTableContext/injectTableCellContext/injectTableHeaderContext, and correct FlexRender component-versus-function handling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
   tanstack-library-version: "9.1.2"

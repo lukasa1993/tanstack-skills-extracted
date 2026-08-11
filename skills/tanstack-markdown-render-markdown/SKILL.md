@@ -3,6 +3,7 @@ name: tanstack-markdown-render-markdown
 description: "Parse Markdown with parseMarkdown or parseInline, render HTML with renderHtml, renderDocument, renderBlock, or renderInline, configure frontmatter and heading IDs, and reuse the serializable MarkdownDocument AST. Load for @tanstack/markdown core syntax, parser options, HTML output, references, footnotes, lists, tables, or AST work."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/markdown"
   tanstack-library-version: "0.0.13"
   tanstack-package: "@tanstack/markdown"

@@ -3,6 +3,7 @@ name: tanstack-db-skills-tanstack-db
 description: "TanStack DB patterns for reactive client-side data with live queries and optimistic mutations. Use for collections, queries, mutations, schemas, and sync engine integration."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/db-skills"
   tanstack-package-version: "0.0.1"
   tanstack-source-skill: "tanstack-db"

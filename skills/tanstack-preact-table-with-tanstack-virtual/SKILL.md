@@ -3,6 +3,7 @@ name: tanstack-preact-table-with-tanstack-virtual
 description: "Apply TanStack Virtual rendering to the final Preact Table row or column model through React compatibility or virtual-core. Load for adapter selection, reactive counts, scroll targets, stable keys, measurements, spacer geometry, sticky layout, sizing CSS, or overscan."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
   tanstack-library-version: "9.1.2"

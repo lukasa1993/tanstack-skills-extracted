@@ -3,6 +3,7 @@ name: tanstack-db-core-live-queries
 description: "Query builder fluent API: from, where, join, leftJoin, rightJoin, innerJoin, fullJoin, select, fn.select, groupBy, having, orderBy, limit, offset, distinct, findOne. Operators: eq, gt, gte, lt, lte, like, ilike, inArray, isNull, isUndefined, and, or, not. Aggregates: count, sum, avg, min, max. String functions: upper, lower, length, concat. Utility: coalesce, caseWhen. Math: add. $selected namespace. createLiveQueryCollection. Derived collections. Predicate push-down. Incremental view maintenance via differential dataflow (d2ts). Virtual properties ($synced, $origin, $key, $collectionId). Includes subqueries for hierarchical data. toArray and concat(toArray(...)) scalar includes. queryOnce for one-shot queries. createEffect for reactive side effects (onEnter, onUpdate, onExit, onBatch)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

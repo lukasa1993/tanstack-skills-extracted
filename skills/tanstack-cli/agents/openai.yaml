@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack CLI"
+  short_description: "Project scaffolding and maintenance guidance for app creation, add-ons, ecosystem integration, custom development, and d"
+  default_prompt: "Use $tanstack-cli to implement this TanStack CLI task with the installed framework and package versions."

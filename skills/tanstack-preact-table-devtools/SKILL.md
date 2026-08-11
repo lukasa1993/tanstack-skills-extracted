@@ -3,6 +3,7 @@ name: tanstack-preact-table-devtools
 description: "Connect native Preact Table v9 instances to Devtools with tableDevtoolsPlugin and useTanStackTableDevtools. Load for React-package mixups, missing targets, required options.key, enabled state, cleanup, or development gating."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table-devtools"
   tanstack-library-version: "9.1.2"

@@ -3,6 +3,7 @@ name: tanstack-markdown-production-pipelines
 description: "Audit and ship a production Markdown pipeline with explicit trust boundaries, external syntax highlighting, parse-ahead caching, compatibility checks, deterministic output, and bundle budgets. Load before deploying blogs, docs, or untrusted-content rendering."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/markdown"
   tanstack-library-version: "0.0.13"
   tanstack-package: "@tanstack/markdown"

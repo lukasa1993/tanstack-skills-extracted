@@ -3,6 +3,7 @@ name: tanstack-cli-choose-ecosystem-integrations
 description: "Map tanstack ecosystem partner metadata to installable add-on ids using tanstack ecosystem --json, tanstack create --list-add-ons --json, and tanstack create --addon-details --json. Covers exclusive categories, provider options, and router-only compatibility constraints."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.62.1"
   tanstack-package: "@tanstack/cli"

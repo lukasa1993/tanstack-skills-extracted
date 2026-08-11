@@ -1,0 +1,19 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-form",
+  "product": "form",
+  "sourceCount": 87,
+  "themes": [
+    "foundations",
+    "framework-react",
+    "framework-react-advanced",
+    "framework-preact",
+    "framework-preact-advanced",
+    "framework-vue",
+    "framework-angular",
+    "framework-solid",
+    "framework-lit",
+    "framework-svelte"
+  ],
+  "inputSha256": "ac062eb808055f121ce36ea79e3ddf11ebcff299404b371a1951edd75daa8293"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Highlight"
+  short_description: "Syntax-highlighting guidance for language support, selective loading, Markdown pipelines, themes, and annotations."
+  default_prompt: "Use $tanstack-highlight to implement this TanStack Highlight task with the installed framework and package versions."

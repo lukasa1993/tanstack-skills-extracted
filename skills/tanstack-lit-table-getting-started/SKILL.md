@@ -3,6 +3,7 @@ name: tanstack-lit-table-getting-started
 description: "Create a TanStack Lit Table v9 table with a stable TableController host field, explicit tableFeatures, controller.table(options, selector) during render, and headless Lit templates. Load for first-table setup, TableController lifecycle, FlexRender, or adapting a React example to Lit."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
   tanstack-library-version: "9.1.2"

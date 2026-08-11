@@ -3,6 +3,7 @@ name: tanstack-highlight-integrate-framework-code-blocks
 description: "Integrate @tanstack/highlight with React code-block props, Octane dangerouslySetInnerHTML data, createOctaneMdxHighlight, hydrated SSR, and post-navigation client content. Load when implementing application-owned code components or sharing highlighted output across server and client."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/highlight"
   tanstack-library-version: "0.0.10"
   tanstack-package: "@tanstack/highlight"

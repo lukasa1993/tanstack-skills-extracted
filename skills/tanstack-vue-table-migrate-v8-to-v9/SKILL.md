@@ -3,6 +3,7 @@ name: tanstack-vue-table-migrate-v8-to-v9
 description: "Complete Vue v8-to-v9 migration reference: useTable, explicit features and row-model slots, ref/atom state, FlexRender shorthand, prototype methods, type generics, sorting, sizing, selection, and logical pinning."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
   tanstack-library-version: "9.1.2"

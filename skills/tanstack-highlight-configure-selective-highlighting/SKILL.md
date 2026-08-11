@@ -3,6 +3,7 @@ name: tanstack-highlight-configure-selective-highlighting
 description: "Configure minimal @tanstack/highlight registries with createHighlighter, direct language subpaths, aliases, fallbackLanguage, and shared SSR/client modules. Load for initial setup, browser bundle reduction, language registration, embedded-language dependencies, or hydration consistency."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/highlight"
   tanstack-library-version: "0.0.10"
   tanstack-package: "@tanstack/highlight"

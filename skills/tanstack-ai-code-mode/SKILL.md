@@ -3,6 +3,7 @@ name: tanstack-ai-code-mode
 description: "LLM-generated TypeScript execution in sandboxed environments: createCodeModeTool() with isolate drivers (createNodeIsolateDriver, createQuickJSIsolateDriver, createQuickJSBunIsolateDriver, createCloudflareIsolateDriver), codeModeWithSkills() for persistent skill libraries, trust strategies, skill storage (FileSystem, LocalStorage, InMemory, Mongo), client-side execution progress via code_mode:* custom events in useChat."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.3.8"
   tanstack-package: "@tanstack/ai-code-mode"

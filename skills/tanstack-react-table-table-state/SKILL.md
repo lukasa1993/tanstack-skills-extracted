@@ -3,6 +3,7 @@ name: tanstack-react-table-table-state
 description: "Read, select, subscribe to, and control React Table v9 state with useTable selectors, table.state, table.Subscribe, table.atoms, table.store, and external TanStack Store atoms. Load for controlled state, render performance, or React Compiler builder-method subscription problems."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
   tanstack-library-version: "9.1.2"

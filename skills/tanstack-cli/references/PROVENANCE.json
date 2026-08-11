@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/build-groups.mjs",
+  "product": "cli",
+  "sources": [
+    {
+      "id": "tanstack-cli-add-addons-existing-app",
+      "kind": "atomic",
+      "theme": "projects-addons",
+      "package": "@tanstack/cli",
+      "version": "0.70.2",
+      "sourcePath": "add-addons-existing-app",
+      "sha256": "cdc5ae292b9acf6c576a1106ac627fe20fd39440e043aa4a97af97e53b724f3b"
+    },
+    {
+      "id": "tanstack-cli-create-app-scaffold",
+      "kind": "atomic",
+      "theme": "projects-addons",
+      "package": "@tanstack/cli",
+      "version": "0.70.2",
+      "sourcePath": "create-app-scaffold",
+      "sha256": "cd4f91b4b77249a733f574273a842c4a7ea5a1d297df0a8a13d9de70d77154db"
+    },
+    {
+      "id": "tanstack-cli-choose-ecosystem-integrations",
+      "kind": "atomic",
+      "theme": "ecosystem-discovery",
+      "package": "@tanstack/cli",
+      "version": "0.70.2",
+      "sourcePath": "choose-ecosystem-integrations",
+      "sha256": "84c78512cef26606db3d8e50a9360dd6d54aa659e50c2d5bcac29e08b653f4ac"
+    },
+    {
+      "id": "tanstack-cli-query-docs-library-metadata",
+      "kind": "atomic",
+      "theme": "ecosystem-discovery",
+      "package": "@tanstack/cli",
+      "version": "0.70.2",
+      "sourcePath": "query-docs-library-metadata",
+      "sha256": "aa43e52e31a995f0e7fd3a99d3ab533fd73d13b8c2ad85cb54d2ed9ff6d7d8ae"
+    },
+    {
+      "id": "tanstack-cli-maintain-custom-addons-dev-watch",
+      "kind": "atomic",
+      "theme": "addon-authoring",
+      "package": "@tanstack/cli",
+      "version": "0.70.2",
+      "sourcePath": "maintain-custom-addons-dev-watch",
+      "sha256": "adafcd750f5468cbec79f5a26c20024f588aa766c8b3409a17c4cbf06eab77de"
+    }
+  ],
+  "duplicateDocuments": [],
+  "duplicateSections": [],
+  "licenses": [
+    {
+      "sha256": "277d2a8e459713d6c596bab89ef857cb8b2433223fa9edb49ccc403a6ceb08ee",
+      "path": "licenses/277d2a8e459713d6c596bab89ef857cb8b2433223fa9edb49ccc403a6ceb08ee.txt",
+      "sources": [
+        "tanstack-cli-add-addons-existing-app",
+        "tanstack-cli-choose-ecosystem-integrations",
+        "tanstack-cli-create-app-scaffold",
+        "tanstack-cli-maintain-custom-addons-dev-watch",
+        "tanstack-cli-query-docs-library-metadata"
+      ]
+    }
+  ]
+}

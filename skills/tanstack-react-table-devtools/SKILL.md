@@ -3,6 +3,7 @@ name: tanstack-react-table-devtools
 description: "Connect React Table v9 instances to Devtools with tableDevtoolsPlugin and useTanStackTableDevtools. Load for missing Table panels, registration lifecycle, required options.key, enabled state, or development versus explicit production exports."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table-devtools"
   tanstack-library-version: "9.1.2"

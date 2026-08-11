@@ -3,6 +3,7 @@ name: tanstack-solid-start
 description: "Solid bindings for TanStack Start: useServerFn hook, tanstackStart Vite plugin, StartClient, StartServer, Solid-specific setup, re-exports from @tanstack/start-client-core. Full project setup with Solid."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"

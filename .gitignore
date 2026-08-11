@@ -1,2 +1,7 @@
 .DS_Store
 node_modules/
+.tanstack-doc-sources/
+.tanstack-doc-sources.tmp-*/
+.tanstack-doc-sources.backup-*/
+.tanstack-product-build.tmp-*/
+.tanstack-product-backup.tmp-*/

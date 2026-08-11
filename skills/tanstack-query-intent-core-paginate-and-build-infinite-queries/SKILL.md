@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-paginate-and-build-infinite-queries
 description: "Use this when implementing pagination, lagged queries, placeholderData, keepPreviousData migration, useInfiniteQuery, initialPageParam, getNextPageParam, getPreviousPageParam, maxPages, pages, or pageParams."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

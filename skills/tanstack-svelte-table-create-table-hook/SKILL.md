@@ -3,6 +3,7 @@ name: tanstack-svelte-table-create-table-hook
 description: "Define a Svelte createAppTable/createAppColumnHelper using the adapter's rune-capable createTableHook implementation, shared features/defaults, reactive per-table getters, optional App component registries, and typed table/cell/header context hooks."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
   tanstack-library-version: "9.1.2"

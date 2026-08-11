@@ -1,0 +1,18 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-virtual",
+  "product": "virtual",
+  "sourceCount": 13,
+  "themes": [
+    "foundations",
+    "measurement-feeds",
+    "framework-react",
+    "framework-solid",
+    "framework-vue",
+    "framework-svelte",
+    "framework-lit",
+    "framework-angular",
+    "framework-marko"
+  ],
+  "inputSha256": "e9e47c1334c52489e98ae7526818dfd8bfb6d18417bf9cd0ca6d553c7acfef5d"
+}

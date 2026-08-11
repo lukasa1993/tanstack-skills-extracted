@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Pacer"
+  short_description: "Execution-control guidance for debounce, throttle, rate limit, queue, batch, async retry, and framework adapters."
+  default_prompt: "Use $tanstack-pacer to implement this TanStack Pacer task with the installed framework and package versions."

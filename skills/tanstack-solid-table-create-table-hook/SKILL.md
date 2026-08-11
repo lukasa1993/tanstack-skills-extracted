@@ -3,6 +3,7 @@ name: tanstack-solid-table-create-table-hook
 description: "Create reusable Solid table infrastructure with createTableHook, createAppTable, createAppColumnHelper, shared features/defaults, component registries, App wrappers, and typed context hooks. Load for recurring app conventions, reactive per-table getters, or prop drilling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
   tanstack-library-version: "9.1.2"

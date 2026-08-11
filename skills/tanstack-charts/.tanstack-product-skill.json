@@ -1,0 +1,33 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-charts",
+  "product": "charts",
+  "sourceCount": 102,
+  "themes": [
+    "getting-started",
+    "chart-grammar",
+    "examples-core",
+    "examples-advanced",
+    "marks-cartesian-statistical",
+    "marks-spatial",
+    "marks-composite",
+    "specifications-types",
+    "interaction-motion-reference",
+    "runtime-scales-reference",
+    "rendering-composition-reference",
+    "composition",
+    "interaction-accessibility",
+    "production",
+    "framework-react",
+    "framework-preact",
+    "framework-vue",
+    "framework-solid",
+    "framework-svelte",
+    "framework-angular",
+    "framework-lit",
+    "framework-alpine",
+    "framework-octane",
+    "framework-react-native"
+  ],
+  "inputSha256": "1a809aadcb43e96a7f33bc0368f439e60e2a205a4110b8204fe1926293a98d81"
+}

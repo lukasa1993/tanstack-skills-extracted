@@ -3,6 +3,7 @@ name: tanstack-query-intent-framework-debug-with-devtools
 description: "Use this when adding, lazy-loading, or debugging TanStack Query devtools: ReactQueryDevtools, VueQueryDevtools, SolidQueryDevtools, SvelteQueryDevtools, Angular devtools panel, embedded panels, production imports, cache inspection, and offline misconceptions."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "cross-adapter"
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"

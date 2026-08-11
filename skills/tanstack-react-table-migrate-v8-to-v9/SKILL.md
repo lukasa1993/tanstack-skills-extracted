@@ -3,6 +3,7 @@ name: tanstack-react-table-migrate-v8-to-v9
 description: "Perform a complete @tanstack/react-table v8-to-v9 migration: hook and feature architecture, row-model slots, React state and subscriptions, rendering, composable tables, type helpers, and every shared API rename and semantic change. Use for migration plans, implementation, or audits. Treat useLegacyTable only as a deprecated temporary bridge."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
   tanstack-library-version: "9.1.2"

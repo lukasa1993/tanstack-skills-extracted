@@ -3,6 +3,7 @@ name: tanstack-ember-table-getting-started
 description: "Create a TanStack Ember Table v9 table with useTable, a tracked options thunk, stable tableFeatures and columns, .gts templates, FlexRenderCell/Header/Footer, and correctly bound template helpers. Load for first-table setup, Glimmer reactivity, component cell renderers, or adapting another framework's example to Ember."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "ember"
   tanstack-library: "@tanstack/ember-table"
   tanstack-library-version: "9.1.2"

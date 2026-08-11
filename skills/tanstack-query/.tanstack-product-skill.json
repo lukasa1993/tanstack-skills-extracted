@@ -1,0 +1,16 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-query",
+  "product": "query",
+  "sourceCount": 29,
+  "themes": [
+    "foundations",
+    "mutations",
+    "data-shaping",
+    "frameworks-ui",
+    "routing-ssr",
+    "offline-integrations",
+    "quality"
+  ],
+  "inputSha256": "b412b475b4e2a507e5e73532ac6f49a913270d542f7fb86223b243dc93e0a2da"
+}

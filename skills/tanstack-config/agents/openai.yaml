@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Config"
+  short_description: "Library-maintenance guidance for package structure, dependencies, ESLint, Vite, publishing, and CI/CD."
+  default_prompt: "Use $tanstack-config to implement this TanStack Config task with the installed framework and package versions."

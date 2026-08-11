@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-build-cloudflare-adapter
 description: "Use when a Cloudflare Worker needs TanStack AI chat persistence — writes a chat-persistence.ts into the app against its D1 binding (raw or via Drizzle), plus a Durable Object LockStore. Covers per-request bindings, wrangler config, D1 migrations, and lease-based locks."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-persistence"
   tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-persistence/build-cloudflare-adapter"

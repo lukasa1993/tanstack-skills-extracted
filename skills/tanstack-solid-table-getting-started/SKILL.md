@@ -3,6 +3,7 @@ name: tanstack-solid-table-getting-started
 description: "Create a Solid Table v9 table with createTable, explicit tableFeatures, reactive data getters, stable static inputs, and Solid JSX/FlexRender. Load when starting a Solid table, replacing createSolidTable, or adapting React examples."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
   tanstack-library-version: "9.1.2"

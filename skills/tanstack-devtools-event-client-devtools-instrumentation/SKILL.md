@@ -3,6 +3,7 @@ name: tanstack-devtools-event-client-devtools-instrumentation
 description: "Analyze library codebase for critical architecture and debugging points, add strategic event emissions. Identify middleware boundaries, state transitions, lifecycle hooks. Consolidate events (1 not 15), debounce high-frequency updates, DRY shared payload fields, guard emit() for production. Transparent server/client event bridging."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/devtools-event-client"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-event-client"

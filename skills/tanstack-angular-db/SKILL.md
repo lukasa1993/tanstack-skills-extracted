@@ -3,6 +3,7 @@ name: tanstack-angular-db
 description: "Angular bindings for TanStack DB. injectLiveQuery inject function with Angular signals (Signalless thanTgreater than) for all return values. Reactive params pattern ({ params: () returns T, query: ({ params, q }) returns QueryBuilder }) for dynamic queries. Must be called in injection context. Angular 17+ control flow (@if, @for) and signal inputs supported. Import from @tanstack/angular-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"

@@ -3,6 +3,7 @@ name: tanstack-ai-core-structured-outputs
 description: "Type-safe JSON schema responses from LLMs using outputSchema on chat() and useChat(). Supports Zod, ArkType, and Valibot schemas. The adapter handles provider-specific strategies transparently — never configure structured output at the provider level. Pass stream:true alongside outputSchema for incremental JSON deltas + a terminal validated object via the `structured-output.complete` event. Every assistant turn in useChat carries its own typed `StructuredOutputPart` on `messages[i].parts`, so multi-turn structured chats preserve history automatically — partial/final derive from the latest assistant turn's part. convertSchemaToJsonSchema() for manual schema conversion."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"

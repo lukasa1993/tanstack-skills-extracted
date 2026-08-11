@@ -3,6 +3,7 @@ name: tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec
 description: "Use this when using useSuspenseQuery, useSuspenseQueries, useSuspenseInfiniteQuery, QueryErrorResetBoundary, throwOnError, useQueryErrorResetBoundary, React.use query.promise, streamed hydration, and Suspense constraints in Query adapters."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "cross-adapter"
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"

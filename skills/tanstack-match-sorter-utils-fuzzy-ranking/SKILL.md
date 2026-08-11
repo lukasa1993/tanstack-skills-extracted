@@ -3,6 +3,7 @@ name: tanstack-match-sorter-utils-fuzzy-ranking
 description: "Rank fuzzy matches with rankItem, filter with RankingInfo.passed, compare saved ranking metadata with compareItems, and configure rankings, thresholds, accessors, min/max bounds, or diacritics. Load for @tanstack/match-sorter-utils itself or fuzzy Table filterMeta wiring."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/match-sorter-utils"
   tanstack-library-version: "9.1.2"
   tanstack-package: "@tanstack/match-sorter-utils"

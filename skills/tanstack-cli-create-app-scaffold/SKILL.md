@@ -3,6 +3,7 @@ name: tanstack-cli-create-app-scaffold
 description: "Scaffold a TanStack app with tanstack create using --framework, --template, --toolchain, --deployment, --add-ons, --blank, and --router-only. Covers flag compatibility, non-interactive defaults, and intent-preserving command construction."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.70.0"
   tanstack-package: "@tanstack/cli"

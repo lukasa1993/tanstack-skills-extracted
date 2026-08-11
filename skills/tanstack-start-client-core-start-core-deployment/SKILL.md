@@ -3,6 +3,7 @@ name: tanstack-start-client-core-start-core-deployment
 description: "Deploy to Cloudflare Workers, Netlify, Vercel, Node.js/Docker, Bun, Railway. Selective SSR (ssr option per route), SPA mode, static prerendering, ISR with Cache-Control headers, SEO and head management."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"

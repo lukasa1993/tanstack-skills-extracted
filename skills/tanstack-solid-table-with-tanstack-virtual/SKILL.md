@@ -3,6 +3,7 @@ name: tanstack-solid-table-with-tanstack-virtual
 description: "Virtualize Solid Table row/column models and infinite Query data with createVirtualizer, reactive counts, scroll targets, stable keys, dynamic measurement, transforms, sticky regions, and grid/flex sizing. Load for Solid tracking or layout bugs."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
   tanstack-library-version: "9.1.2"

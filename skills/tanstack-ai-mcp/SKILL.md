@@ -3,6 +3,7 @@ name: tanstack-ai-mcp
 description: "Host-side Model Context Protocol (MCP) client for TanStack AI: connect to external MCP servers, discover and run their tools inside any adapter's chat() loop, read resources and prompts, generate TypeScript types (typed tool names/pool keys) with the bundled CLI, and manage lifecycle with close()/await using."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.5"
   tanstack-package: "@tanstack/ai-mcp"

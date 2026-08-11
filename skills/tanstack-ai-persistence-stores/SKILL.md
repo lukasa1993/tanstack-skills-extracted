@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-stores
 description: "Implement the MessageStore, RunStore, InterruptStore, MetadataStore contracts for @tanstack/ai-persistence against any database. defineAIPersistence, composePersistence overrides, critical invariants (full-replace saveThread, insert-if-absent createOrResume and interrupt create), authorize thread access, runPersistenceConformance testkit. Use whenever you need server persistence — the package ships contracts, not a backend for your database."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"

@@ -3,6 +3,7 @@ name: tanstack-start-server-core
 description: "Server-side runtime for TanStack Start: createStartHandler, request/response utilities (getRequest, setResponseHeader, setCookie, getCookie, useSession), three-phase request handling, AsyncLocalStorage context."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.169.17"
   tanstack-package: "@tanstack/start-server-core"

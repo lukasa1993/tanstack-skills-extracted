@@ -3,6 +3,7 @@ name: tanstack-solid-db
 description: "SolidJS bindings for TanStack DB. useLiveQuery returns an Accessor that doubles as data access (call as function) with state/status properties. Fine-grained reactivity: signal reads MUST happen inside the query function for tracking. Config passed as Accessor (() returns config). Built-in Suspense support via createResource. ReactiveMap for state. Import from @tanstack/solid-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"

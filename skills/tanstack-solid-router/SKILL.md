@@ -3,6 +3,7 @@ name: tanstack-solid-router
 description: "Solid bindings for TanStack Router: RouterProvider, useRouter, useRouterState, useMatch, useMatches, useLocation, useSearch, useParams, useNavigate, useLoaderData, useLoaderDeps, useRouteContext, useBlocker, useCanGoBack, Link, Navigate, Outlet, CatchBoundary, ErrorComponent. Solid-specific patterns with Accessorless thanTgreater than returns, createSignal/createMemo/createEffect, Show/Switch/Match/Dynamic, and @solidjs/meta for head management."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.166.2"

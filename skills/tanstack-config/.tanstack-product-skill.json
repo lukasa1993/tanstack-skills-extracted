@@ -1,0 +1,12 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-config",
+  "product": "config",
+  "sourceCount": 7,
+  "themes": [
+    "package-structure",
+    "toolchain",
+    "publishing-ci"
+  ],
+  "inputSha256": "19f7557b43c0991e985b47b610794a1566a5dc5d9b0505a3a05b3945d751b6d3"
+}

@@ -1,0 +1,18 @@
+{
+  "generator": "scripts/build-groups.mjs",
+  "name": "tanstack-start",
+  "product": "start",
+  "sourceCount": 27,
+  "themes": [
+    "foundations",
+    "server-runtime",
+    "middleware-auth",
+    "deployment-rendering",
+    "framework-react",
+    "framework-solid",
+    "framework-vue",
+    "router-essentials",
+    "router-ssr-tooling-adapters"
+  ],
+  "inputSha256": "c0eb3b3730613578fcf7b408d565ca47d721aa5817da40a9852903b1a207574f"
+}

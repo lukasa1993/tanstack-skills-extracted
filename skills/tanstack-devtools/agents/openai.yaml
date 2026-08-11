@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Devtools"
+  short_description: "Devtools guidance for setup, framework adapters, plugins, event instrumentation, marketplace use, and production builds."
+  default_prompt: "Use $tanstack-devtools to implement this TanStack Devtools task with the installed framework and package versions."

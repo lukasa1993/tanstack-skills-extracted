@@ -3,6 +3,7 @@ name: tanstack-lit-table-create-table-hook
 description: "Create a reusable Lit useAppTable/createAppColumnHelper layer with host-backed controllers, shared features/defaults, typed cell/header renderers, App wrappers, and useTableContext for custom-element controls. Load when multiple Lit tables share infrastructure or prop drilling obscures table context."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
   tanstack-library-version: "9.1.2"

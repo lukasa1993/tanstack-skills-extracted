@@ -3,6 +3,7 @@ name: tanstack-svelte-db
 description: "Svelte 5 bindings for TanStack DB. useLiveQuery with Svelte 5 runes ($state, $derived, $effect). Dependency arrays use getter functions (() returns value) for reactive props. Direct destructuring breaks reactivity — use dot notation or wrap with $derived. Conditional queries via returning undefined/null. Import from @tanstack/svelte-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "svelte"
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"

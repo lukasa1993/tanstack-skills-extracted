@@ -3,6 +3,7 @@ name: tanstack-markdown-custom-extensions
 description: "Implement MarkdownExtension block parsers, inline and document transforms, HTML hooks, and portable ComponentNode output. Load when adding deterministic custom syntax or rendering behavior across HTML, React, and Octane."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/markdown"
   tanstack-library-version: "0.0.13"
   tanstack-package: "@tanstack/markdown"

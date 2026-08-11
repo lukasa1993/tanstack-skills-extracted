@@ -3,6 +3,7 @@ name: tanstack-angular-table-table-state
 description: "Use Angular-signal-backed table.atoms, direct template reads, computed selectors, controlled signals, value-or-updater callbacks, and external Angular Store atoms while accounting for injectTable initializer reruns."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
   tanstack-library-version: "9.1.2"

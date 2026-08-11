@@ -3,6 +3,7 @@ name: tanstack-ai-memory-mem0
 description: "Use when wiring mem0() from @tanstack/ai-memory/mem0 — a hosted memory adapter that talks to a mem0 server over plain HTTP (no SDK peer). Requires a running mem0 server."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-memory"
   tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory-mem0"

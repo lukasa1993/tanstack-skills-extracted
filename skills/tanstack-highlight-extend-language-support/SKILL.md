@@ -3,6 +3,7 @@ name: tanstack-highlight-extend-language-support
 description: "Extend @tanstack/highlight with defineLanguage, LanguageDefinition, TokenRange, HighlightTokenClass, and TokenizerContext. Load when adding a custom or shipped tokenizer, resolving overlapping ranges, delegating embedded code, preserving selective imports, or adding fixture, size, and throughput coverage."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "@tanstack/highlight"
   tanstack-library-version: "0.0.10"
   tanstack-package: "@tanstack/highlight"

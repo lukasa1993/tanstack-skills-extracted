@@ -3,6 +3,7 @@ name: tanstack-markdown-react-rendering
 description: "Render Markdown source or a MarkdownDocument with @tanstack/markdown/react using Markdown, renderMarkdownReact, component replacements, and React static SSR. Load for React article components, emitted-tag mappings, pre-parsed documents, custom elements, or renderer parity."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/markdown"
   tanstack-library-version: "0.0.13"

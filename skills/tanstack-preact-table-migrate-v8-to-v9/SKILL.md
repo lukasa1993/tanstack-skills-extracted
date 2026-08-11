@@ -3,6 +3,7 @@ name: tanstack-preact-table-migrate-v8-to-v9
 description: "Perform a complete Preact TanStack Table v8-to-v9 migration: remove React-through-preact/compat usage, adopt the native adapter, explicit features and row-model slots, Preact state and atoms, rendering, composition, types, and every shared API rename and semantic change. Use for migration plans, implementation, or audits."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
   tanstack-library-version: "9.1.2"

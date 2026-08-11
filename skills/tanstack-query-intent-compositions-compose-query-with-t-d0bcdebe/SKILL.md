@@ -3,6 +3,7 @@ name: tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe
 description: "Use this when combining TanStack Query with TanStack Router or TanStack Start: router context QueryClient, createFileRoute loaders, ensureQueryData, @tanstack/react-router-ssr-query, setupRouterSsrQueryIntegration, SSR hydration, streaming, redirects, and Start server functions."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

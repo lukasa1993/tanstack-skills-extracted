@@ -3,6 +3,7 @@ name: tanstack-query-intent-framework-shape-data-and-render-e-feb144a6
 description: "Use this when optimizing TanStack Query rendering with structuralSharing, tracked properties, select, notifyOnChangeProps, stable hook deps, immutable data, Vue reactivity, and no-rest-destructuring or no-unstable-deps lint rules."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "cross-adapter"
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"

@@ -3,6 +3,7 @@ name: tanstack-db-core-persistence
 description: "SQLite-backed persistence for TanStack DB collections. persistedCollectionOptions wraps any adapter (Electric, Query, PowerSync, or local-only) with durable local storage. Platform adapters: browser (WA-SQLite OPFS), React Native (op-sqlite), Expo (expo-sqlite), Electron (IPC), Node (better-sqlite3), Capacitor, Tauri, Cloudflare Durable Objects. Multi-tab/multi-process coordination via BrowserCollectionCoordinator / ElectronCollectionCoordinator / SingleProcessCoordinator. schemaVersion for migration resets. Local-only mode for offline-first without a server."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.0"
   tanstack-package: "@tanstack/db"

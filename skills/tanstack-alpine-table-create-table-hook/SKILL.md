@@ -3,6 +3,7 @@ name: tanstack-alpine-table-create-table-hook
 description: "Share Alpine tableFeatures, defaults, createAppTable, and createAppColumnHelper with createTableHook. Load when multiple Alpine tables repeat infrastructure; unlike JSX adapters, Alpine has no registered table/cell/header component or context registry."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "alpine"
   tanstack-library: "@tanstack/alpine-table"
   tanstack-library-version: "9.1.2"

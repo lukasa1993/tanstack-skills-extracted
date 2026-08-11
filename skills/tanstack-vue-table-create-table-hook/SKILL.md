@@ -3,6 +3,7 @@ name: tanstack-vue-table-create-table-hook
 description: "Create a reusable Vue useAppTable/createAppColumnHelper with shared features/defaults, reactive per-table options, optional component registries, dynamic App wrappers, typed context hooks, and explicit types that break circular inference."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
   tanstack-library-version: "9.1.2"

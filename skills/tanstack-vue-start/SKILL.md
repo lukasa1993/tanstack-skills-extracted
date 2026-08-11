@@ -3,6 +3,7 @@ name: tanstack-vue-start
 description: "Vue bindings for TanStack Start: useServerFn hook, tanstackStart Vite plugin, StartClient, StartServer, Vue-specific setup, re-exports from @tanstack/start-client-core. Full project setup with Vue."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"

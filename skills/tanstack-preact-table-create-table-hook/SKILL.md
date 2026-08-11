@@ -3,6 +3,7 @@ name: tanstack-preact-table-create-table-hook
 description: "Create reusable Preact table infrastructure with createTableHook, useAppTable, createAppColumnHelper, shared options/features, optional component registries, App wrappers, and typed context hooks. Load for recurring conventions, scoped contexts, or prop drilling."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
   tanstack-library-version: "9.1.2"

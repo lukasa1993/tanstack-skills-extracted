@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-build-query-abstractions
 description: "Use this when creating TanStack Query abstractions: queryOptions factories, feature-local key modules, custom hooks built on top of options factories, TypeScript inference, avoiding wide UseQueryOptions wrappers, and sharing query configuration across hooks, loaders, prefetches, and QueryClient calls."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

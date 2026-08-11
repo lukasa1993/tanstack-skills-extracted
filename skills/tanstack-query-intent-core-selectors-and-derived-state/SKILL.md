@@ -3,6 +3,7 @@ name: tanstack-query-intent-core-selectors-and-derived-state
 description: "Use this when selecting, transforming, or deriving data from TanStack Query: select functions, selector memoization, fine-grained subscriptions, structural sharing, queryOptions composition with select, and deriving client state from server state instead of syncing it through effects."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

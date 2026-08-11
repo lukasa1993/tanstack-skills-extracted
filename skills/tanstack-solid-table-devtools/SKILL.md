@@ -3,6 +3,7 @@ name: tanstack-solid-table-devtools
 description: "Connect Solid Table v9 instances to Devtools with tableDevtoolsPlugin and useTanStackTableDevtools in the proper reactive owner. Load for missing targets, required options.key, enabled state, cleanup, or development versus explicit production exports."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table-devtools"
   tanstack-library-version: "9.1.2"

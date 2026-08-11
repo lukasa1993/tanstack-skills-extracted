@@ -3,6 +3,7 @@ name: tanstack-cli-maintain-custom-addons-dev-watch
 description: "Build and iterate custom add-ons/templates with tanstack add-on init, add-on compile, add-on dev, and tanstack create --dev-watch, including sync loop preconditions, watch-path validation, and project metadata constraints."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.62.1"
   tanstack-package: "@tanstack/cli"

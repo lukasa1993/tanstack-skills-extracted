@@ -3,6 +3,7 @@ name: tanstack-ai-persistence-server
 description: "Server chat state with withPersistence from @tanstack/ai-persistence. Authoritative transcript, run lifecycle, durable interrupts/approvals, chatParamsFromRequest, reconstructChat, snapshotStreaming. Use when the server owns history, multi-device, or durable tool approvals. NOT client localStorage (see ai-core/client-persistence in @tanstack/ai) and NOT stream reconnect alone."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"

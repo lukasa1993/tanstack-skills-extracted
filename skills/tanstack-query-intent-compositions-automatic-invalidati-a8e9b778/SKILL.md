@@ -3,6 +3,7 @@ name: tanstack-query-intent-compositions-automatic-invalidati-a8e9b778
 description: "Use this when designing automatic invalidation policies for TanStack Query mutations with MutationCache callbacks, mutationKey-to-queryKey matching, mutation meta invalidation tags, awaited invalidation, and exclusions for static or unrelated queries."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "TanStack Query"
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"

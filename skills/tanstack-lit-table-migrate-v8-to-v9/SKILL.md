@@ -3,6 +3,7 @@ name: tanstack-lit-table-migrate-v8-to-v9
 description: "Complete Lit v8-to-v9 migration reference: TableController construction, explicit features and row-model slots, selected/atom state, FlexRender, createTableHook, type generics, prototype methods, sorting, sizing, selection, and logical pinning."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
   tanstack-library-version: "9.1.2"

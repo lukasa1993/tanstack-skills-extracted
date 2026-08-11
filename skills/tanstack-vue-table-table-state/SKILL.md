@@ -3,6 +3,7 @@ name: tanstack-vue-table-table-state
 description: "Read Vue-backed table.atoms/store in templates, computed, watch, or table.Subscribe; own slices with refs/computed or external Vue Store atoms; and apply updater callbacks while preserving reactive option shapes."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
   tanstack-library-version: "9.1.2"

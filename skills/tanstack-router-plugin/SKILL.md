@@ -3,6 +3,7 @@ name: tanstack-router-plugin
 description: "TanStack Router bundler plugin for route generation and automatic code splitting. Supports Vite, Webpack, Rspack, and esbuild. Configures autoCodeSplitting, routesDirectory, target framework, and code split groupings."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.168.23"
   tanstack-package: "@tanstack/router-plugin"

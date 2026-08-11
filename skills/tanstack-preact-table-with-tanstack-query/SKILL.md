@@ -3,6 +3,7 @@ name: tanstack-preact-table-with-tanstack-query
 description: "Compose native Preact Table v9 with @tanstack/preact-query using table state in query keys, manual server filtering/sorting/pagination, server counts, and stable query-result data. Load when React Query examples or manual* expectations are wrong for Preact."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
   tanstack-library-version: "9.1.2"

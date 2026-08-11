@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/build-groups.mjs",
+  "product": "config",
+  "sources": [
+    {
+      "id": "config:docs/dependencies.md",
+      "kind": "document",
+      "theme": "package-structure",
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "repository": "TanStack/config",
+      "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+      "sourcePath": "docs/dependencies.md",
+      "sha256": "5d66cdbbbe94658bf69aeb093e1fcffacdd33fec3e05aaecc1f9c4f755705c3e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    },
+    {
+      "id": "config:docs/overview.md",
+      "kind": "document",
+      "theme": "package-structure",
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "repository": "TanStack/config",
+      "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+      "sourcePath": "docs/overview.md",
+      "sha256": "ba112548218399d4c7f939eaa52461644ffffd61a544716492af2065fa84c808",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    },
+    {
+      "id": "config:docs/package-structure.md",
+      "kind": "document",
+      "theme": "package-structure",
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "repository": "TanStack/config",
+      "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+      "sourcePath": "docs/package-structure.md",
+      "sha256": "45a86357d2ec457c1a78d5287b429e6a3b12015ffacad9fad96ab64014110256",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    },
+    {
+      "id": "config:docs/eslint.md",
+      "kind": "document",
+      "theme": "toolchain",
+      "package": "@tanstack/eslint-config",
+      "version": "0.4.0",
+      "repository": "TanStack/config",
+      "commit": "d517be12810c82d6372f3887d74088832d329b3e",
+      "sourcePath": "docs/eslint.md",
+      "sha256": "cf65dc12248ccc3d0ee2500843eabd58996f847e3aa38e521b268840971ccc5d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    },
+    {
+      "id": "config:docs/vite.md",
+      "kind": "document",
+      "theme": "toolchain",
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "repository": "TanStack/config",
+      "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+      "sourcePath": "docs/vite.md",
+      "sha256": "a245fa02208f822f9a43a19f69c38cd2ec25f270f330a013d89ffe9cf09a5ab7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    },
+    {
+      "id": "config:docs/ci-cd.md",
+      "kind": "document",
+      "theme": "publishing-ci",
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "repository": "TanStack/config",
+      "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+      "sourcePath": "docs/ci-cd.md",
+      "sha256": "1834fa8c614503d4c2943439449b3427a262d3fcb968212837c1aa4bcba8fabf",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    },
+    {
+      "id": "config:docs/publish.md",
+      "kind": "document",
+      "theme": "publishing-ci",
+      "package": "@tanstack/publish-config",
+      "version": "0.2.7",
+      "repository": "TanStack/config",
+      "commit": "64b9024002980574af45c82b663891ce0c0bdc30",
+      "sourcePath": "docs/publish.md",
+      "sha256": "1c5287e530cab6afcdc8206e39b1a5456e64a50a2efb540e8d83bd38c74471e7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "64b9024002980574af45c82b663891ce0c0bdc30",
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "d517be12810c82d6372f3887d74088832d329b3e"
+      ]
+    }
+  ],
+  "duplicateDocuments": [],
+  "duplicateSections": [],
+  "licenses": [
+    {
+      "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7",
+      "path": "licenses/a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7.txt",
+      "sources": [
+        "config:LICENSE"
+      ]
+    }
+  ],
+  "documentationVerification": {
+    "catalogSha256": "87ae7fda3c16bc989a596fe6f42e6ed4873f56ed36bf97c1564ffc065e6e7e30",
+    "verification": {
+      "npmTarballs": "sha512 integrity verified against npm registry metadata",
+      "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
+      "provenanceSignatures": "not cryptographically verified because this repository has no local Sigstore verifier"
+    },
+    "repositoryArchives": [
+      {
+        "url": "https://codeload.github.com/TanStack/config/tar.gz/64b9024002980574af45c82b663891ce0c0bdc30",
+        "commit": "64b9024002980574af45c82b663891ce0c0bdc30",
+        "sha256": "844de3c451bfb3f83c9cff028e2630967fd1d82394da8d9c004bdaf089622d43"
+      },
+      {
+        "url": "https://codeload.github.com/TanStack/config/tar.gz/bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
+        "sha256": "a3eb3dec2160e6e6523191d88e35ceae736c1a8408a1a54248ac302325d5c562"
+      },
+      {
+        "url": "https://codeload.github.com/TanStack/config/tar.gz/d517be12810c82d6372f3887d74088832d329b3e",
+        "commit": "d517be12810c82d6372f3887d74088832d329b3e",
+        "sha256": "cc3fcfc6c6c8f3cfcd8c3ef96216177332b222d3e34562f7e9bb1f06129d5ae3"
+      }
+    ],
+    "linkValidation": {
+      "localDocuments": 6,
+      "localAssets": 1,
+      "pinnedRepository": 1,
+      "pinnedExternalRepository": 1,
+      "externalRepositoryPins": [
+        {
+          "sourcePath": "docs/publish.md",
+          "originalUrl": "https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md",
+          "repository": "sxzz/userscripts",
+          "defaultBranch": "main",
+          "commit": "f54258a122c0fe5c09b6b8826800c00ac9b46e6e",
+          "targetPath": "src/npm-trusted-publisher.md",
+          "pinnedUrl": "https://github.com/sxzz/userscripts/blob/f54258a122c0fe5c09b6b8826800c00ac9b46e6e/src/npm-trusted-publisher.md",
+          "repositoryApiUrl": "https://api.github.com/repos/sxzz/userscripts",
+          "commitApiUrl": "https://api.github.com/repos/sxzz/userscripts/commits?sha=main&path=src%2Fnpm-trusted-publisher.md&per_page=1",
+          "contentUrl": "https://raw.githubusercontent.com/sxzz/userscripts/f54258a122c0fe5c09b6b8826800c00ac9b46e6e/src/npm-trusted-publisher.md",
+          "contentSha256": "2aa20d7ec513d969b10bb188fe209d474e305362af297182e45a3c04b4490d5f",
+          "occurrences": 1
+        }
+      ],
+      "unavailableAssets": []
+    }
+  }
+}

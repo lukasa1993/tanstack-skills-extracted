@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/build-groups.mjs",
+  "product": "query",
+  "sources": [
+    {
+      "id": "tanstack-query-intent-core-build-query-abstractions",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/build-query-abstractions",
+      "sha256": "d7457ee76ccea3e6a77b37443824da756dd16b4a58885232ed15028a6c4c0722"
+    },
+    {
+      "id": "tanstack-query-intent-core-coordinate-query-execution",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/coordinate-query-execution",
+      "sha256": "667ffca5b45fbb8e8093a387941b0c3cf6b9eef384233b9762eb06b9f2768f61"
+    },
+    {
+      "id": "tanstack-query-intent-core-design-query-keys-and-options",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/design-query-keys-and-options",
+      "sha256": "03e63d5cc0114f9fbc7b9d3aadbbfc3c0cafce649fa3ea8f5103a8f0c7655804"
+    },
+    {
+      "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/fetch-and-observe-queries",
+      "sha256": "1df55f4addb5b47cb8d19464c8bde8dfcbfb07311c6681dcfafbf960eb3b3481"
+    },
+    {
+      "id": "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/tune-defaults-freshness-retries-and-refetching",
+      "sha256": "30d9381b6b1d166b8bbb004baa84608fb480d952e5d890a4f2a9ac00950d492f"
+    },
+    {
+      "id": "tanstack-query-intent-core-understand-query-internals-a-8ab976f4",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/understand-query-internals-and-observers",
+      "sha256": "cdf41481f3d94212c9c3adb3122280b5620d24c456328e22a07135cbacfb4030"
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+      "kind": "atomic",
+      "theme": "foundations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "lifecycle/setup-query-client-and-providers",
+      "sha256": "64688fbb95d59bc633a213ba1c99f744e10f10c1ce23da31a2ebd277a14cff03"
+    },
+    {
+      "id": "tanstack-query-intent-compositions-automatic-invalidati-a8e9b778",
+      "kind": "atomic",
+      "theme": "mutations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "compositions/automatic-invalidation-after-mutations",
+      "sha256": "66cd38b932a91e248baf8d01eeb4431de03bffe9a9a33d30281e44cb4f2ae678"
+    },
+    {
+      "id": "tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b",
+      "kind": "atomic",
+      "theme": "mutations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/cancel-queries-and-consume-abort-signals",
+      "sha256": "0ef2749872be7b9a4ce1f459260a471b9499fd560b18044ccf4539931e72a7df"
+    },
+    {
+      "id": "tanstack-query-intent-core-concurrent-optimistic-updates",
+      "kind": "atomic",
+      "theme": "mutations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/concurrent-optimistic-updates",
+      "sha256": "9a061f23f8582b0a08ff04557128d654733013b8a32f1ee22dea1e97f667a7b9"
+    },
+    {
+      "id": "tanstack-query-intent-core-implement-optimistic-updates-20e8c58a",
+      "kind": "atomic",
+      "theme": "mutations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/implement-optimistic-updates-and-cache-writes",
+      "sha256": "fb4cd7a78b136d7bed27318bf5bff5eb35239663c13be2f81e83a16564a0e5c1"
+    },
+    {
+      "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+      "kind": "atomic",
+      "theme": "mutations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/write-mutations-and-invalidate-related-queries",
+      "sha256": "946b95d57a906aabcf437c08e8572e42f068404fe397789271a50299b89ad7d0"
+    },
+    {
+      "id": "tanstack-query-intent-core-paginate-and-build-infinite-queries",
+      "kind": "atomic",
+      "theme": "data-shaping",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/paginate-and-build-infinite-queries",
+      "sha256": "952e4bbfd7d3c1199501a7e39ccda384ef65a030d1dce9f85981588f65f002b9"
+    },
+    {
+      "id": "tanstack-query-intent-core-seed-placeholder-select-and-5c98438e",
+      "kind": "atomic",
+      "theme": "data-shaping",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/seed-placeholder-select-and-transform-data",
+      "sha256": "dc7760bcccf6f95788cf6578200f33fd1527b2cccea920ce1a76f9cd96471e44"
+    },
+    {
+      "id": "tanstack-query-intent-core-selectors-and-derived-state",
+      "kind": "atomic",
+      "theme": "data-shaping",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "core/selectors-and-derived-state",
+      "sha256": "69d31db2f770370431bc822d2b0f94724784278eb4e93d59bfb9cab4a3f01697"
+    },
+    {
+      "id": "tanstack-query-intent-framework-shape-data-and-render-e-feb144a6",
+      "kind": "atomic",
+      "theme": "data-shaping",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "framework/shape-data-and-render-efficiently",
+      "sha256": "f2f6adeeba44b82f49ac6f0252f60659fc1cc2c8f082be672d3908ebd30a57ca"
+    },
+    {
+      "id": "tanstack-query-intent-framework-debug-with-devtools",
+      "kind": "atomic",
+      "theme": "frameworks-ui",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "framework/debug-with-devtools",
+      "sha256": "9fe22507ba72ec88caa502563058303eaf283ef39e1f701df6e9fc60517380bf"
+    },
+    {
+      "id": "tanstack-query-intent-framework-handle-status-and-errors",
+      "kind": "atomic",
+      "theme": "frameworks-ui",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "framework/handle-status-and-errors",
+      "sha256": "2ab70ef6b84306d82eea044c8a99b23bfa7e126f8d8c0855f4181a89b969bd7e"
+    },
+    {
+      "id": "tanstack-query-intent-framework-use-framework-adapter-reactivity",
+      "kind": "atomic",
+      "theme": "frameworks-ui",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "framework/use-framework-adapter-reactivity",
+      "sha256": "f1569249611425fc81da11f1548a48200127144745197c1cd15894fad54c3a53"
+    },
+    {
+      "id": "tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec",
+      "kind": "atomic",
+      "theme": "frameworks-ui",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "framework/use-suspense-and-error-boundaries",
+      "sha256": "bb157a0731a32e8daa0d02f63763fe9ca06c6bf7f1ecd1f13a6432bf0e80bd53"
+    },
+    {
+      "id": "tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe",
+      "kind": "atomic",
+      "theme": "routing-ssr",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "compositions/compose-query-with-tanstack-router-and-start",
+      "sha256": "aea5f917c6d528b674e7b15a6471f51b2fbc39e1f1de3e4662ec2399a61135b5"
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1",
+      "kind": "atomic",
+      "theme": "routing-ssr",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "lifecycle/prefetch-and-remove-request-waterfalls",
+      "sha256": "40c8e08fcfcdfbe5bcb8e2f1a7e83a988c2da2c4368c4695af82231612912080"
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-ssr-hydration-and-streaming",
+      "kind": "atomic",
+      "theme": "routing-ssr",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "lifecycle/ssr-hydration-and-streaming",
+      "sha256": "73f3ccc91cb1b72a916da7da22828bacc4bdfa47a68f34d1f8339836ca6896dc"
+    },
+    {
+      "id": "tanstack-query-intent-compositions-broadcast-realtime-a-6360b276",
+      "kind": "atomic",
+      "theme": "offline-integrations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "compositions/broadcast-realtime-and-multi-tab-synchronization",
+      "sha256": "d8dcc49567b320ed09b002b474a21fd5d642e16efff6e218ff7f7e3e5539da2c"
+    },
+    {
+      "id": "tanstack-query-intent-compositions-persist-offline-and-ca66cce0",
+      "kind": "atomic",
+      "theme": "offline-integrations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "compositions/persist-offline-and-restore-caches",
+      "sha256": "46b6bfa6828ca4b4e526faa2989818ece450503ebd6a28d94415248417a38377"
+    },
+    {
+      "id": "tanstack-query-intent-compositions-query-data-and-forms",
+      "kind": "atomic",
+      "theme": "offline-integrations",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "compositions/query-data-and-forms",
+      "sha256": "2707278577062df4432c3c0ebebbb7d40ee3c383a0f67b548b778629a7c7653a"
+    },
+    {
+      "id": "tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb",
+      "kind": "atomic",
+      "theme": "quality",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "compositions/enforce-query-best-practices-with-eslint",
+      "sha256": "c2bb75ec915e3a53b2e9007da4ab242e52e7db02d68577069401d4ad8528d1f1"
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce",
+      "kind": "atomic",
+      "theme": "quality",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "lifecycle/migrate-major-versions-and-codemods",
+      "sha256": "337386cc6df9a98192259f240a74ec3bde30ec3d11ab8b4b9c4d1eba4496c57e"
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-test-query-code",
+      "kind": "atomic",
+      "theme": "quality",
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "sourcePath": "lifecycle/test-query-code",
+      "sha256": "c789b2d4937227b42d2637a4b534fe2496a628b378063f8080ff1971771f2bdb"
+    }
+  ],
+  "duplicateDocuments": [],
+  "duplicateSections": [],
+  "licenses": [
+    {
+      "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7",
+      "path": "licenses/a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7.txt",
+      "sources": [
+        "tanstack-query-intent-compositions-automatic-invalidati-a8e9b778",
+        "tanstack-query-intent-compositions-broadcast-realtime-a-6360b276",
+        "tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe",
+        "tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb",
+        "tanstack-query-intent-compositions-persist-offline-and-ca66cce0",
+        "tanstack-query-intent-compositions-query-data-and-forms",
+        "tanstack-query-intent-core-build-query-abstractions",
+        "tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b",
+        "tanstack-query-intent-core-concurrent-optimistic-updates",
+        "tanstack-query-intent-core-coordinate-query-execution",
+        "tanstack-query-intent-core-design-query-keys-and-options",
+        "tanstack-query-intent-core-fetch-and-observe-queries",
+        "tanstack-query-intent-core-implement-optimistic-updates-20e8c58a",
+        "tanstack-query-intent-core-paginate-and-build-infinite-queries",
+        "tanstack-query-intent-core-seed-placeholder-select-and-5c98438e",
+        "tanstack-query-intent-core-selectors-and-derived-state",
+        "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+        "tanstack-query-intent-core-understand-query-internals-a-8ab976f4",
+        "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+        "tanstack-query-intent-framework-debug-with-devtools",
+        "tanstack-query-intent-framework-handle-status-and-errors",
+        "tanstack-query-intent-framework-shape-data-and-render-e-feb144a6",
+        "tanstack-query-intent-framework-use-framework-adapter-reactivity",
+        "tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec",
+        "tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce",
+        "tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1",
+        "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+        "tanstack-query-intent-lifecycle-ssr-hydration-and-streaming",
+        "tanstack-query-intent-lifecycle-test-query-code"
+      ]
+    }
+  ]
+}

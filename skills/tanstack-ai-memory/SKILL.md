@@ -3,6 +3,7 @@ name: tanstack-ai-memory
 description: "Use when wiring memoryMiddleware from @tanstack/ai-memory into a chat() call — covers the recall/save adapter contract, scope shape and server-side scope security, the recall-inject / deferred-save lifecycle, choosing an adapter (inMemory, redis, hindsight, mem0, honcho), and devtools events."
 license: "MIT"
 metadata:
+  internal: true
   tanstack-package: "@tanstack/ai-memory"
   tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory"
