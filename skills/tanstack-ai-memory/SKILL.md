@@ -4,7 +4,7 @@ description: "Use when wiring memoryMiddleware from @tanstack/ai-memory into a c
 license: "MIT"
 metadata:
   tanstack-package: "@tanstack/ai-memory"
-  tanstack-package-version: "0.1.0"
+  tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory"
 ---
 

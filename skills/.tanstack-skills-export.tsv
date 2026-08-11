@@ -6,12 +6,12 @@
 # supplemental_query_pr_state=open
 # supplemental_query_branch=taren/query-intent-skills
 package	version	license	published_skill_files	exported_skills	output_skills
-@tanstack/ai	0.43.1	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
-@tanstack/ai-code-mode	0.3.10	MIT	1	1	tanstack-ai-code-mode
-@tanstack/ai-mcp	0.2.7	MIT	1	1	tanstack-ai-mcp
-@tanstack/ai-memory	0.1.0	MIT	6	6	tanstack-ai-memory,tanstack-ai-memory-hindsight,tanstack-ai-memory-honcho,tanstack-ai-memory-in-memory,tanstack-ai-memory-mem0,tanstack-ai-memory-redis
-@tanstack/ai-persistence	0.1.1	MIT	8	8	tanstack-ai-persistence,tanstack-ai-persistence-build-cloudflare-adapter,tanstack-ai-persistence-build-cloudflare-artifact-store,tanstack-ai-persistence-build-custom-adapter,tanstack-ai-persistence-build-drizzle-adapter,tanstack-ai-persistence-build-prisma-adapter,tanstack-ai-persistence-server,tanstack-ai-persistence-stores
-@tanstack/ai-sandbox	0.3.0	MIT	1	1	tanstack-ai-sandbox
+@tanstack/ai	0.44.0	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
+@tanstack/ai-code-mode	0.3.11	MIT	1	1	tanstack-ai-code-mode
+@tanstack/ai-mcp	0.3.0	MIT	1	1	tanstack-ai-mcp
+@tanstack/ai-memory	0.1.1	MIT	6	6	tanstack-ai-memory,tanstack-ai-memory-hindsight,tanstack-ai-memory-honcho,tanstack-ai-memory-in-memory,tanstack-ai-memory-mem0,tanstack-ai-memory-redis
+@tanstack/ai-persistence	0.1.2	MIT	8	8	tanstack-ai-persistence,tanstack-ai-persistence-build-cloudflare-adapter,tanstack-ai-persistence-build-cloudflare-artifact-store,tanstack-ai-persistence-build-custom-adapter,tanstack-ai-persistence-build-drizzle-adapter,tanstack-ai-persistence-build-prisma-adapter,tanstack-ai-persistence-server,tanstack-ai-persistence-stores
+@tanstack/ai-sandbox	0.3.1	MIT	1	1	tanstack-ai-sandbox
 @tanstack/alpine-table	9.1.2	MIT	3	3	tanstack-alpine-table-create-table-hook,tanstack-alpine-table-getting-started,tanstack-alpine-table-table-state
 @tanstack/angular-db	0.1.77	MIT	1	1	tanstack-angular-db
 @tanstack/angular-table	9.1.2	MIT	6	6	tanstack-angular-table-create-table-hook,tanstack-angular-table-getting-started,tanstack-angular-table-migrate-v8-to-v9,tanstack-angular-table-table-state,tanstack-angular-table-with-tanstack-query,tanstack-angular-table-with-tanstack-virtual

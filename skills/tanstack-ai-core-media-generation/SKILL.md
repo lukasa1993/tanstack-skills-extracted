@@ -6,7 +6,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.43.1"
+  tanstack-package-version: "0.44.0"
   tanstack-source-skill: "ai-core/media-generation"
   tanstack-sources: "[\"TanStack/ai:docs/media/generations.md\",\"TanStack/ai:docs/media/generation-hooks.md\",\"TanStack/ai:docs/media/image-generation.md\",\"TanStack/ai:docs/media/audio-generation.md\",\"TanStack/ai:docs/media/video-generation.md\",\"TanStack/ai:docs/media/text-to-speech.md\",\"TanStack/ai:docs/media/transcription.md\",\"TanStack/ai:docs/advanced/debug-logging.md\"]"
   tanstack-type: "sub-skill"

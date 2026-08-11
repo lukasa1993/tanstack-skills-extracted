@@ -6,7 +6,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.43.1"
+  tanstack-package-version: "0.44.0"
   tanstack-source-skill: "ai-core/chat-experience"
   tanstack-sources: "[\"TanStack/ai:docs/getting-started/quick-start.md\",\"TanStack/ai:docs/chat/streaming.md\",\"TanStack/ai:docs/chat/connection-adapters.md\",\"TanStack/ai:docs/chat/thinking-content.md\",\"TanStack/ai:docs/advanced/multimodal-content.md\",\"TanStack/ai:docs/resumable-streams/overview.md\",\"TanStack/ai:docs/persistence/client-persistence.md\"]"
   tanstack-type: "sub-skill"

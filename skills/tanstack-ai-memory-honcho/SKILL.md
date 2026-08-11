@@ -4,7 +4,7 @@ description: "Use when wiring honcho() from @tanstack/ai-memory/honcho — a hos
 license: "MIT"
 metadata:
   tanstack-package: "@tanstack/ai-memory"
-  tanstack-package-version: "0.1.0"
+  tanstack-package-version: "0.1.1"
   tanstack-source-skill: "tanstack-ai-memory-honcho"
 ---
 

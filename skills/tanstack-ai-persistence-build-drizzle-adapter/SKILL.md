@@ -4,7 +4,7 @@ description: "Use when an app already runs Drizzle ORM and needs TanStack AI cha
 license: "MIT"
 metadata:
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.1.1"
+  tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-persistence/build-drizzle-adapter"
 ---
 
