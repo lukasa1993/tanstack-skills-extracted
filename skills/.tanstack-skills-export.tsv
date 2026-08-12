@@ -20,7 +20,7 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/db	0.6.17	MIT	7	7	tanstack-db-core,tanstack-db-core-collection-setup,tanstack-db-core-custom-adapter,tanstack-db-core-live-queries,tanstack-db-core-mutations-optimistic,tanstack-db-core-persistence,tanstack-db-meta-framework
 @tanstack/db-playbook	0.0.1	MIT	6	6	tanstack-db-playbook-tanstack-db,tanstack-db-playbook-tanstack-db-collections,tanstack-db-playbook-tanstack-db-electric,tanstack-db-playbook-tanstack-db-live-queries,tanstack-db-playbook-tanstack-db-mutations,tanstack-db-playbook-tanstack-db-schemas
 @tanstack/db-skills	0.0.1	MIT	6	6	tanstack-db-skills-tanstack-db,tanstack-db-skills-tanstack-db-collections,tanstack-db-skills-tanstack-db-electric,tanstack-db-skills-tanstack-db-live-queries,tanstack-db-skills-tanstack-db-mutations,tanstack-db-skills-tanstack-db-schemas
-@tanstack/devtools	0.13.0	MIT	4	4	tanstack-devtools-app-setup,tanstack-devtools-marketplace,tanstack-devtools-plugin-panel,tanstack-devtools-production
+@tanstack/devtools	0.14.0	MIT	4	4	tanstack-devtools-app-setup,tanstack-devtools-marketplace,tanstack-devtools-plugin-panel,tanstack-devtools-production
 @tanstack/devtools-event-client	0.5.0	MIT	3	3	tanstack-devtools-event-client-devtools-bidirectional,tanstack-devtools-event-client,tanstack-devtools-event-client-devtools-instrumentation
 @tanstack/devtools-utils	0.6.0	MIT	1	1	tanstack-devtools-utils-devtools-framework-adapters
 @tanstack/devtools-vite	0.8.3	MIT	1	1	tanstack-devtools-vite-plugin

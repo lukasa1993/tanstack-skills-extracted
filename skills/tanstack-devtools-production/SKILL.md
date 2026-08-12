@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.13.0"
+  tanstack-package-version: "0.14.0"
   tanstack-requires: "[\"tanstack-devtools-app-setup\"]"
   tanstack-source-skill: "devtools-production"
   tanstack-sources: "[\"docs/production.md\",\"docs/vite-plugin.md\",\"packages/devtools-vite/src/plugin.ts\",\"packages/devtools-vite/src/remove-devtools.ts\",\"packages/devtools/package.json\",\"packages/devtools/tsup.config.ts\",\"packages/devtools-utils/src/react/plugin.tsx\",\"packages/devtools-utils/src/react/panel.tsx\"]"

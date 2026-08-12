@@ -165,7 +165,7 @@ By providing a complete solution for these challenges, TanStack Form empowers de
 
 In the example below, you can see TanStack Form in action with the React framework adapter:
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/examples/react/simple)
+[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/b865ef335a69aa08a2f160895258f13e03773467/examples/react/simple)
 
 <!-- ::start:tabs variant="files" -->
 
@@ -315,7 +315,7 @@ export function FieldInfo({ field }: { field: AnyFieldApi }) {
 
 In the example below, you can see TanStack Form in action with the Vue framework adapter:
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/examples/vue/simple)
+[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/b865ef335a69aa08a2f160895258f13e03773467/examples/vue/simple)
 
 <!-- ::start:tabs variant="files" -->
 
@@ -431,7 +431,7 @@ const props = defineProps<{
 
 In the example below, you can see TanStack Form in action with the Angular framework adapter:
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/examples/angular/simple)
+[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/b865ef335a69aa08a2f160895258f13e03773467/examples/angular/simple)
 
 <!-- ::start:tabs variant="files" -->
 
@@ -542,7 +542,7 @@ export class AppComponent {
 
 In the example below, you can see TanStack Form in action with the Solid framework adapter:
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/examples/solid/simple)
+[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/b865ef335a69aa08a2f160895258f13e03773467/examples/solid/simple)
 
 <!-- ::start:tabs variant="files" -->
 
@@ -677,7 +677,7 @@ export function FieldInfo(props: FieldInfoProps) {
 
 In the example below, you can see TanStack Form in action with the Svelte framework adapter:
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/examples/svelte/simple)
+[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/b865ef335a69aa08a2f160895258f13e03773467/examples/svelte/simple)
 
 <!-- ::start:tabs variant="files" -->
 
@@ -853,7 +853,7 @@ In the example below, you can see TanStack Form in action with the Svelte framew
 
 In the example below, you can see TanStack Form in action with the Lit framework adapter:
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/examples/lit/simple)
+[Open in CodeSandbox](https://codesandbox.io/s/github/tanstack/form/tree/b865ef335a69aa08a2f160895258f13e03773467/examples/lit/simple)
 
 ```ts title="index.ts"
 import { LitElement, html, nothing } from 'lit'
@@ -977,7 +977,7 @@ export class TanStackFormDemo extends LitElement {
 
 ### You talked me into it, so what now?
 
-- Learn TanStack Form at your own pace with our thorough [Walkthrough Guide](./foundations.md#source-form-docs-installation-md) and [API Reference](https://github.com/TanStack/form/blob/462926e3b77e9c0ad6a777a879ef5067b0a5dc70/docs/reference/classes/FormApi.md).
+- Learn TanStack Form at your own pace with our thorough [Walkthrough Guide](./foundations.md#source-form-docs-installation-md) and [API Reference](https://github.com/TanStack/form/blob/b865ef335a69aa08a2f160895258f13e03773467/docs/reference/classes/FormApi.md).
 
 <a id="source-form-docs-philosophy-md"></a>
 

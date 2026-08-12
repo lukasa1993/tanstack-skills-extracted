@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.13.0"
+  tanstack-package-version: "0.14.0"
   tanstack-source-skill: "devtools-app-setup"
   tanstack-sources: "[\"docs/quick-start.md\",\"docs/installation.md\",\"docs/configuration.md\",\"docs/overview.md\",\"packages/devtools/src/context/devtools-store.ts\",\"packages/vue-devtools/src/types.ts\",\"packages/react-devtools/src/devtools.tsx\"]"
   tanstack-type: "core"
