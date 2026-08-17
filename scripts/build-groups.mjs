@@ -488,7 +488,7 @@ function readExportedNames(text) {
   return names.sort(ascii)
 }
 
-async function readAtomicSkills() {
+async function readAtomicSkills(docPackageOwners) {
   const names = readExportedNames(await readFile(exportManifestPath, 'utf8'))
   const skills = []
   for (const name of names) {
@@ -497,7 +497,10 @@ async function readAtomicSkills() {
     const text = await readFile(skillPath, 'utf8')
     const parsed = parseFrontmatter(text, skillPath)
     if (parsed.name !== name) throw new Error(`atomic skill name does not match directory: ${skillPath}`)
-    const productMatches = productSpecs.filter((spec) => spec.atomicMatch(name))
+    const packageName = parsed.metadata.get('tanstack-package')
+    const productMatches = productSpecs.filter((spec) =>
+      spec.atomicMatch(name) ||
+      (spec.docOnly && docPackageOwners.get(packageName) === spec.id))
     if (productMatches.length !== 1) {
       throw new Error(`${name} must match exactly one product, matched: ${productMatches.map((spec) => spec.id).join(', ') || 'none'}`)
     }
@@ -545,6 +548,20 @@ async function readDocSources() {
   const manifestPath = join(docSourceDir, 'manifest.json')
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'))
   validateDocManifest(manifest)
+  const docPackageOwners = new Map()
+  for (const productManifest of manifest.products) {
+    const packageNames = new Set([
+      productManifest.sourcePackage,
+      ...productManifest.releasePackages.map((entry) => entry.name),
+    ])
+    for (const packageName of packageNames) {
+      const previousOwner = docPackageOwners.get(packageName)
+      if (previousOwner && previousOwner !== productManifest.id) {
+        throw new Error(`documentation package ${packageName} belongs to both ${previousOwner} and ${productManifest.id}`)
+      }
+      docPackageOwners.set(packageName, productManifest.id)
+    }
+  }
   const byProduct = new Map()
   for (const productManifest of manifest.products) {
     const productRoot = join(docSourceDir, 'products', productManifest.id)
@@ -581,7 +598,7 @@ async function readDocSources() {
     }
     byProduct.set(productManifest.id, { manifest: productManifest, sources, productRoot })
   }
-  return { manifest, byProduct }
+  return { manifest, byProduct, docPackageOwners }
 }
 
 function stripDocumentFrontmatter(text) {
@@ -1208,6 +1225,43 @@ function escapeTable(value) {
   return String(value).replaceAll('|', '\\|').replaceAll('`', '\\`')
 }
 
+function markdownHeadingFragments(text) {
+  const fragments = new Set()
+  const counts = new Map()
+  let fence = null
+  for (const line of text.split('\n')) {
+    const fenceMatch = line.match(/^\s*(```+|~~~+)/)
+    if (fenceMatch) {
+      const marker = fenceMatch[1]
+      if (!fence) fence = { character: marker[0], length: marker.length }
+      else if (fence.character === marker[0] && marker.length >= fence.length) fence = null
+      continue
+    }
+    if (fence) continue
+    const heading = line.match(/^\s{0,3}#{1,6}\s+(.+?)\s*#*\s*$/)
+    if (!heading) continue
+    const base = heading[1]
+      .replace(/<[^>]*>/g, '')
+      .normalize('NFKD')
+      .replace(/\p{Diacritic}/gu, '')
+      .toLowerCase()
+      .replace(/[^\p{Letter}\p{Number}\s-]/gu, '')
+      .trim()
+      .replace(/\s+/gu, '-')
+    if (!base) continue
+    const occurrence = counts.get(base) || 0
+    counts.set(base, occurrence + 1)
+    fragments.add(occurrence ? `${base}-${occurrence}` : base)
+  }
+  return fragments
+}
+
+function hasMarkdownFragment(text, fragment) {
+  const escaped = fragment.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  if (new RegExp(`<a\\s+id=["']${escaped}["']`, 'i').test(text)) return true
+  return markdownHeadingFragments(text).has(fragment)
+}
+
 async function validateProduct(directory, spec, themes) {
   const rootSkill = join(directory, 'SKILL.md')
   const text = await readFile(rootSkill, 'utf8')
@@ -1261,7 +1315,7 @@ async function validateProduct(directory, spec, themes) {
         if (fragment && /\.(?:md|mdx)$/i.test(resolved)) {
           const decodedFragment = decodeURIComponent(fragment)
           const targetBody = await readFile(resolved, 'utf8')
-          if (!targetBody.includes(`<a id="${decodedFragment}"></a>`)) {
+          if (!hasMarkdownFragment(targetBody, decodedFragment)) {
             throw new Error(`broken generated fragment: ${file} -> ${match[1]}`)
           }
         }
@@ -1394,8 +1448,8 @@ async function main() {
   if (JSON.stringify(productSpecs.map((spec) => spec.id)) !== JSON.stringify(expectedCatalogIds)) {
     throw new Error('product specification order does not match the public catalog')
   }
-  const atomicSkills = await readAtomicSkills()
   const docSources = await readDocSources()
+  const atomicSkills = await readAtomicSkills(docSources.docPackageOwners)
   const nonMitAtomics = atomicSkills.filter((source) => source.license.replace(/^['"]|['"]$/g, '') !== 'MIT')
   const nonMitDocuments = docSources.manifest.products.flatMap((entry) =>
     entry.releasePackages.filter((release) => release.license !== 'MIT').map((release) => `${release.name}@${release.version}:${release.license}`))
