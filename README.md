@@ -47,7 +47,7 @@ npx skills update
 
 TanStack Form, Charts, Intent, Virtual, Pacer, Hotkeys, Store, and Config do not currently publish complete product skills. Their product skills are synthesized from version-matched official documentation and package metadata.
 
-TanStack Query is different: its source is the official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879), not a published npm package. The draft is still open and can change before release.
+TanStack Query is different: its source is the official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879), not a published npm package. The exporter uses the PR head until the package is published, including when the draft is closed but its official branch remains available.
 
 TanStack Charts is currently pre-alpha. Its skill preserves that warning and uses release-matched documentation instead of unreleased `main` APIs.
 

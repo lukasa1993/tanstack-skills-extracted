@@ -1437,8 +1437,8 @@ NODE
 done < "$PACKAGES_TXT"
 
 # TanStack Query's official Intent package is currently staged on an official
-# TanStack/query branch. Use that immutable branch head only until npm carries
-# the package; the normal npm scan then becomes the sole source automatically.
+# TanStack/query branch. Use the PR's immutable head until npm carries the
+# package; the normal npm scan then becomes the sole source automatically.
 if [[ "$query_intent_from_npm" == "1" ]]; then
   echo "$QUERY_INTENT_PACKAGE is published on npm; supplemental GitHub import is not needed."
 elif grep -Fxq "$QUERY_INTENT_PACKAGE" "$PACKAGES_TXT"; then
@@ -1513,8 +1513,14 @@ async function main() {
   } else if (pr.merged === true) {
     sha = pr.merge_commit_sha
     prState = 'merged'
+  } else if (pr.state === 'closed') {
+    // A closed draft can still be the latest official source while the package
+    // is unpublished. The archive and skill validators below remain the trust
+    // boundary; use the immutable PR head instead of failing on PR state.
+    sha = pr.head.sha
+    prState = 'closed'
   } else {
-    throw new Error(`official Query draft pull request ${repo}#${prNumber} closed without merge before @tanstack/query-intent was published on npm`)
+    throw new Error(`official Query draft pull request ${repo}#${prNumber} has an unsupported state: ${pr.state}`)
   }
   if (!/^[0-9a-f]{40}$/.test(sha || '')) {
     throw new Error(`official Query draft pull request ${repo}#${prNumber} returned an invalid ${prState} commit`)
