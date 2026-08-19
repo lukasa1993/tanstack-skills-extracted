@@ -1,14 +1,14 @@
 ---
 name: tanstack-solid-db
-description: "SolidJS bindings for TanStack DB. useLiveQuery returns an Accessor that doubles as data access (call as function) with state/status properties. Fine-grained reactivity: signal reads MUST happen inside the query function for tracking. Config passed as Accessor (() returns config). Built-in Suspense support via createResource. ReactiveMap for state. Import from @tanstack/solid-db (re-exports all of @tanstack/db)."
+description: "SolidJS bindings for TanStack DB. useLiveQuery returns an Accessor that doubles as data access (call as function) with state/status properties. Fine-grained reactivity: signal reads MUST happen inside the query function for tracking. Config passed as Accessor (() returns config). Built-in Suspense support via createResource and errors through Solid ErrorBoundary. ReactiveMap for state. Import from @tanstack/solid-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "db"
-  tanstack-library-version: "0.6.0"
+  tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/solid-db"
-  tanstack-package-version: "0.2.31"
+  tanstack-package-version: "0.2.35"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "solid-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/solid/overview.md\",\"TanStack/db:packages/solid-db/src/useLiveQuery.ts\"]"
@@ -23,7 +23,7 @@ This skill builds on db-core. Read it first for collection setup, query builder,
 
 ```tsx
 import { useLiveQuery, eq, not } from '@tanstack/solid-db'
-import { For, Show, Suspense } from 'solid-js'
+import { ErrorBoundary, For, Show, Suspense } from 'solid-js'
 
 function TodoList() {
   const todosQuery = useLiveQuery((q) =>
@@ -128,12 +128,16 @@ return <Show when={userQuery()}>{(user) => <div>{user().name}</div>}</Show>
 ### Suspense integration
 
 ```tsx
-<Suspense fallback={<div>Loading...</div>}>
-  <For each={todosQuery()}>{(todo) => <li>{todo.text}</li>}</For>
-</Suspense>
+<ErrorBoundary fallback={(error) => <div>{error.message}</div>}>
+  <Suspense fallback={<div>Loading...</div>}>
+    <For each={todosQuery()}>{(todo) => <li>{todo.text}</li>}</For>
+  </Suspense>
+</ErrorBoundary>
 ```
 
-`useLiveQuery` integrates with Solid's `createResource` — wrap in `<Suspense>` for loading states.
+`useLiveQuery` integrates with Solid's `createResource`. Use `<Suspense>` for
+loading and `<ErrorBoundary>` for errors. Reading an errored query throws
+through the resource, so do not rely on reading `isError` after failure.
 
 ## Includes (Hierarchical Data)
 

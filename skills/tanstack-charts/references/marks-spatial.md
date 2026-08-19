@@ -302,6 +302,7 @@ Polar marks are available only from the capability subpath:
 ```ts
 import {
   angleGrid,
+  focusGroupAngle,
   pie,
   polar,
   radialArc,
@@ -376,6 +377,28 @@ resize.
 The outer chart omits `x` and `y`. Cartesian axes do not participate in the
 internal polar scales.
 
+### `focusGroupAngle`
+
+```ts
+import { defineChart, type ChartDefinition } from '@tanstack/charts'
+import { focusGroupAngle } from '@tanstack/charts/polar'
+import { tooltip } from '@tanstack/charts/tooltip'
+
+declare const definition: ChartDefinition
+
+const interactiveDefinition = defineChart(definition, {
+  focus: focusGroupAngle,
+  tooltip,
+})
+```
+
+`focusGroupAngle` is the polar equivalent of `group-x`. Pointer resolution
+uses the nearest radial ray instead of the nearest point anchor, then returns
+one point per series with the same semantic angle value. The closest radius is
+primary. Keyboard navigation visits one representative per angle in angular
+order. `maxFocusDistance` is the scene-pixel distance from the pointer to the
+ray; set it to `Number.POSITIVE_INFINITY` for continuous angular snapping.
+
 ### `pie`
 
 ```ts
@@ -447,6 +470,11 @@ function radialArc<TDatum>(
 | `strokeWidth`     | Boundary width                                                 |
 | `strokeDasharray` | Boundary dash array                                            |
 | `opacity`         | Whole-arc opacity                                              |
+
+Each arc attaches its sampled painted boundary to its interaction point.
+Default nearest focus therefore follows the visible slice, including holes,
+rounded corners, reversed sweeps, and custom D3 generators, instead of using
+only the centroid anchor.
 
 Use the native `pie` transform for flat typed rows with source lineage. D3
 `pie` output remains valid interoperability input because its `startAngle`,
@@ -604,7 +632,8 @@ function angleGrid(options?: AngleGridOptions): PolarGuide
 `radialGrid` draws radius values as circles or polygons. Supply explicit
 `values`, or let `ticks` request values from the configured radius scale.
 Labels are off by default. Label angle, offset, rotation, format, fill, and
-font size are configurable.
+font size are configurable. Ring `fill` and `fillOpacity` can layer filled
+circle or polygon grids behind the chart marks.
 
 `angleGrid` draws spokes for explicit `values` or the configured angle domain.
 It can show labels around the circumference with `format` and `labelOffset`.

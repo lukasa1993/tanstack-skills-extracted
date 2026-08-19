@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.44.0"
+  tanstack-package-version: "0.45.1"
   tanstack-source-skill: "ai-core/tool-calling"
   tanstack-sources: "[\"TanStack/ai:docs/tools/tools.md\",\"TanStack/ai:docs/tools/server-tools.md\",\"TanStack/ai:docs/tools/client-tools.md\",\"TanStack/ai:docs/tools/tool-approval.md\",\"TanStack/ai:docs/tools/lazy-tool-discovery.md\"]"
   tanstack-type: "sub-skill"
@@ -618,7 +618,7 @@ export const Route = createFileRoute('/api/chat')({
 
 ## Provider Skills
 
-> **Not to be confused with `@tanstack/ai-code-mode-skills`**, which are locally-generated TypeScript functions executed client-side. Provider Skills are hosted, provider-managed bundles that the model loads on demand and runs inside the provider's server-side sandbox.
+> **Not to be confused with `@tanstack/ai-code-mode-snippets`**, whose snippets are TypeScript functions your application generates and runs in its own Code Mode sandbox (a local JS isolate). Provider Skills are hosted, provider-managed bundles that the model loads on demand and runs inside the provider's server-side sandbox.
 
 Provider Skills are inert without an execution tool. The execution tool is what activates the sandbox; skills are additional capability bundles that run inside it:
 

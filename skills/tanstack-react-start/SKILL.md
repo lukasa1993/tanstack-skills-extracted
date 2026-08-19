@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.168.32"
   tanstack-package: "@tanstack/react-start"
-  tanstack-package-version: "1.168.42"
+  tanstack-package-version: "1.168.47"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "react-start"
   tanstack-sources: "[\"TanStack/router:packages/react-start/src\",\"TanStack/router:docs/start/framework/react/build-from-scratch.md\"]"

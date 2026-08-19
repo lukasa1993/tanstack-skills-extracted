@@ -10,7 +10,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-lifecycle-setup-query-client-and-providers\",\"tanstack-query-intent-core-design-query-keys-and-options\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "framework/use-framework-adapter-reactivity"
   tanstack-sources: "[\"TanStack/query:docs/framework/vue/reactivity.md\",\"TanStack/query:docs/framework/vue/guides/query-options.md\",\"TanStack/query:docs/framework/solid/guides/query-options.md\",\"TanStack/query:docs/framework/svelte/overview.md\",\"TanStack/query:docs/framework/svelte/migrate-from-v5-to-v6.md\",\"TanStack/query:docs/framework/angular/overview.md\",\"TanStack/query:docs/framework/angular/zoneless.md\",\"TanStack/query:docs/framework/lit/guides/reactive-controllers-vs-hooks.md\"]"
   tanstack-type: "framework"

@@ -91,6 +91,10 @@ const query = injectLiveQuery({
 })
 ```
 
+A bare `{ query }` config defaults to `startSync: true` and `gcTime: 0`, like
+the query-function overload. Explicit values in the config override those
+defaults.
+
 ### Angular-Specific Patterns
 
 #### Reactive params with signals

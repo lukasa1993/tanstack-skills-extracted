@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-design-query-keys-and-options\",\"tanstack-query-intent-core-fetch-and-observe-queries\",\"tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "lifecycle/prefetch-and-remove-request-waterfalls"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/prefetching.md\",\"TanStack/query:docs/framework/react/guides/request-waterfalls.md\",\"TanStack/query:docs/framework/react/reference/usePrefetchQuery.md\",\"TanStack/query:docs/framework/react/reference/usePrefetchInfiniteQuery.md\",\"TanStack/query:docs/reference/QueryClient.md\",\"TanStack/query:examples/react/react-router/src/routes/root.tsx\",\"TanStack/query:examples/react/react-router/src/routes/contact.tsx\"]"
   tanstack-type: "lifecycle"

@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8\",\"tanstack-query-intent-core-selectors-and-derived-state\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "compositions/query-data-and-forms"
   tanstack-sources: "[\"https://tkdodo.eu/blog/react-query-and-forms\",\"https://tkdodo.eu/blog/deriving-client-state-from-server-state\",\"TanStack/query:docs/framework/react/guides/mutations.md\",\"TanStack/query:docs/framework/react/guides/invalidations-from-mutations.md\"]"
   tanstack-type: "composition"

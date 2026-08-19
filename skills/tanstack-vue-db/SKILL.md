@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "db"
-  tanstack-library-version: "0.6.0"
+  tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/vue-db"
-  tanstack-package-version: "0.0.128"
+  tanstack-package-version: "0.1.2"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "vue-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/vue/overview.md\",\"TanStack/db:packages/vue-db/src/useLiveQuery.ts\"]"

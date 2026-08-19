@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.21"
+  tanstack-package-version: "1.170.25"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\",\"tanstack-start-client-core-start-core-server-functions\",\"tanstack-start-client-core-start-core-middleware\"]"
   tanstack-source-skill: "auth-server-primitives"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/authentication-overview.md\",\"TanStack/router:docs/start/framework/react/guide/authentication-server-primitives.md\"]"

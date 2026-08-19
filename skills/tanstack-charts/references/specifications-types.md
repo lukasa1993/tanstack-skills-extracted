@@ -518,10 +518,11 @@ aggregate `/scales` export.
 | `@tanstack/charts/mark/composite`       | `compositeMark` and `CompositeMarkOptions`                                                                                                                                                                                      |
 | `@tanstack/charts/mark/decorative`      | `decorative`                                                                                                                                                                                                                    |
 | `@tanstack/charts/mark/scale-values`    | `createMarkWithScaleValues`                                                                                                                                                                                                     |
-| `@tanstack/charts/motion`               | `motion`, `ChartMotionOptions`, and renderer-neutral motion types                                                                                                                                                               |
+| `@tanstack/charts/motion`               | `motion`, `stagger`, `ChartMotionOptions`, and renderer-neutral motion types                                                                                                                                                    |
+| `@tanstack/charts/motion/definition`    | Isolated `stagger` and `ChartMotionStaggerOptions` without the renderer or spring solver                                                                                                                                        |
 | `@tanstack/charts/network/force`        | `forceLayout`, built-in descriptors, named D3-compatible force factories, private working-clone context, settled node/link result, and lineage types                                                                            |
 | `@tanstack/charts/network/sankey`       | `sankeyDiagram`, shorthand and callable alignment types, responsive layout options, immutable node/link values, comparator contexts, and lineage types                                                                          |
-| `@tanstack/charts/polar`                | `pie`, `polar`, `radialArc`, `radialBarRadius`, `radialBarAngle`, other radial marks, and radial/angle guides                                                                                                                   |
+| `@tanstack/charts/polar`                | `pie`, `polar`, `focusGroupAngle`, `radialArc`, `radialBarRadius`, `radialBarAngle`, other radial marks, and radial/angle guides                                                                                                |
 | `@tanstack/charts/universal`            | Common root authoring, runtime, scene, and static SVG values without browser hosts or adapters                                                                                                                                  |
 | `@tanstack/charts/reconcile`            | `reconcileChartSvg`, `reconcileChartSvgFragment`                                                                                                                                                                                |
 | `@tanstack/charts/rect`                 | `rect`, `cell`                                                                                                                                                                                                                  |
@@ -926,15 +927,19 @@ See [Focus and interaction](./interaction-motion-reference.md#source-charts-docs
 
 ### Rendering types
 
-| Type                        | Purpose                                                                        |
-| --------------------------- | ------------------------------------------------------------------------------ |
-| `RenderChartOptions`        | Renderer-neutral accessible name, description, class, tab index, and ID prefix |
-| `RenderChartSvgOptions`     | SVG specialization of `RenderChartOptions`                                     |
-| `ChartSurfaceRenderOptions` | Render options plus optional animation                                         |
-| `ChartSurface`              | Mounted element, painting, coordinates, focus, and cleanup                     |
-| `ChartRenderer`             | Server shell and browser-surface renderer contract                             |
-| `ChartSvgRenderer`          | Scene-to-SVG string function                                                   |
-| `ChartAnimationOptions`     | Duration, easing, and reduced-motion policy                                    |
+| Type                                   | Purpose                                                                        |
+| -------------------------------------- | ------------------------------------------------------------------------------ |
+| `RenderChartOptions`                   | Renderer-neutral accessible name, description, class, tab index, and ID prefix |
+| `RenderChartSvgOptions`                | SVG specialization of `RenderChartOptions`                                     |
+| `ChartSurfaceRenderOptions`            | Render options plus optional animation                                         |
+| `ChartSurface`                         | Mounted element, painting, coordinates, focus, and cleanup                     |
+| `ChartRenderer`                        | Server shell and browser-surface renderer contract                             |
+| `ChartRendererCapabilities`            | Optional structural services supplied by a renderer                            |
+| `ChartRendererTooltipMotionCapability` | Versioned factory for an injected tooltip motion controller                    |
+| `ChartTooltipMotionController`         | Tooltip paint, hide, and cleanup motion lifecycle                              |
+| `ChartTooltipMotionSnapshot`           | Tooltip position, velocity, and presence state before repaint                  |
+| `ChartSvgRenderer`                     | Scene-to-SVG string function                                                   |
+| `ChartAnimationOptions`                | Duration, easing, and reduced-motion policy                                    |
 
 See [Rendering and export](./rendering-composition-reference.md#source-charts-docs-reference-rendering-and-export-md).
 

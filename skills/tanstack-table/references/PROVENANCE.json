@@ -206,9 +206,9 @@
       "kind": "atomic",
       "theme": "integrations",
       "package": "@tanstack/table-devtools",
-      "version": "9.1.2",
+      "version": "9.2.0",
       "sourcePath": "devtools",
-      "sha256": "f735e46e330a48ad68704b0067ad4854a99b39f9c1b224c32366b31ffe131a7e"
+      "sha256": "ed18408e00020c2c1c97436879e93ee0f4136202ab0d3f25afd2487db82adf33"
     },
     {
       "id": "tanstack-table-core-api-not-found",
@@ -251,9 +251,9 @@
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table-devtools",
-      "version": "9.1.2",
+      "version": "9.2.0",
       "sourcePath": "devtools",
-      "sha256": "2aa85897170cf01459965587f31708732261d855eddcd05bc1b5a94477f7aae6"
+      "sha256": "a525488d767e6ba6c91e767df1993a7d036d36e3d7a8d9fa9b2bc0e0bda3ca86"
     },
     {
       "id": "tanstack-react-table-getting-started",
@@ -314,9 +314,9 @@
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table-devtools",
-      "version": "9.1.2",
+      "version": "9.2.0",
       "sourcePath": "devtools",
-      "sha256": "5eafab6e2959de18d7ed91a4f725639972ba706ee7aa2d39adad9a16d0d9a216"
+      "sha256": "a4956b56df8504d205dfe63c91fdcfcf82391bd2202e92a2ef8ddbfb8fd02aa5"
     },
     {
       "id": "tanstack-preact-table-getting-started",
@@ -377,9 +377,9 @@
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table-devtools",
-      "version": "9.1.2",
+      "version": "9.2.0",
       "sourcePath": "devtools",
-      "sha256": "947c9543650de576524c19031dfb5682c57f411eca55f9e75faaccc344084b32"
+      "sha256": "8a2187f300da051373e05ff8f32e5a88ef82efabcd398c61cbf9f3b89c079f82"
     },
     {
       "id": "tanstack-vue-table-getting-started",
@@ -440,9 +440,9 @@
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table-devtools",
-      "version": "9.1.2",
+      "version": "9.2.0",
       "sourcePath": "devtools",
-      "sha256": "5a95b3d99d69a5d7cba5352cba4c0bc87f138f27d3b872d9611f05a2e0984452"
+      "sha256": "ba90dd56cc6dc71e46abc7ebf0e749d3825d667921eed49ae700130f926a51d8"
     },
     {
       "id": "tanstack-solid-table-getting-started",
@@ -548,63 +548,63 @@
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.1.2",
+      "version": "9.2.1",
       "sourcePath": "create-table-hook",
-      "sha256": "7a16fcbbeec71ffe7538e4ee0d2c9d1d443aa4be00a32e174d884e9a28db5122"
+      "sha256": "58bdb4214b288ff235045ebb5505ec1ce5ba15002d86d978bc38654f831cbde2"
     },
     {
       "id": "tanstack-angular-table-devtools",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table-devtools",
-      "version": "9.1.2",
+      "version": "9.2.0",
       "sourcePath": "devtools",
-      "sha256": "5722510c38354c48f40c4b94834244ebce1ba78502e374ef72aef1b36ad9940d"
+      "sha256": "ad3c5f28e78272bc1874ffa5f4a0422b1097b2de32f0fba1bc3b3b2860cf55f8"
     },
     {
       "id": "tanstack-angular-table-getting-started",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.1.2",
+      "version": "9.2.1",
       "sourcePath": "getting-started",
-      "sha256": "4195d8bb17edd4d2ee3129b5d9cfef758b0205c755681db60ae71b9793155d34"
+      "sha256": "66985273604dde834287e5bdc859fc6da16ccb9ca3b66406a5806c7842855054"
     },
     {
       "id": "tanstack-angular-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.1.2",
+      "version": "9.2.1",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "2a8067754b0824e25b39f4f808a6138bf8509d2da0afd0ab4ea30b4e9840c8dc"
+      "sha256": "8e7db45e42b1b2ac5d0953cd1aa7c61e9367fb69a9a9d592062901b9425e4ad3"
     },
     {
       "id": "tanstack-angular-table-table-state",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.1.2",
+      "version": "9.2.1",
       "sourcePath": "table-state",
-      "sha256": "ee786c83dbd76495a067068ab4afc863d016768d32f0bb5839758fc34caa5e55"
+      "sha256": "d6b964c3384bd30da09e94453481e59eefa1ee2c817acbe293fd4933a7e64ae8"
     },
     {
       "id": "tanstack-angular-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.1.2",
+      "version": "9.2.1",
       "sourcePath": "with-tanstack-query",
-      "sha256": "2c317ce4769dc30017b3d85a43673f5cadcc2af4b5a2f9480a045d93a6f19635"
+      "sha256": "2295cac300abff5edd71e57c35812fcd02a72459d2a214ba4007373031815e64"
     },
     {
       "id": "tanstack-angular-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.1.2",
+      "version": "9.2.1",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "b92740dcc2d809adf6bbbeffcb8b29306515f21ec650755ddeac4c207308d1fe"
+      "sha256": "a24dcab6af9087c9ad0a3a30e85756eddfd341fdede01a95e17e7a6a4223551e"
     },
     {
       "id": "tanstack-lit-table-create-table-hook",

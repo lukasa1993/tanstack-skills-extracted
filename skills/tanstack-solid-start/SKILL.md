@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/solid-start"
-  tanstack-package-version: "1.168.41"
+  tanstack-package-version: "1.168.45"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "solid-start"
   tanstack-sources: "[\"TanStack/router:packages/solid-start/src\",\"TanStack/router:docs/start/framework/solid/build-from-scratch.md\"]"

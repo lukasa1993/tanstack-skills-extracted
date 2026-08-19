@@ -138,23 +138,23 @@ const driver = createCloudflareIsolateDriver({
 | QuickJS Bun | Bun servers                 | None            | No              | Fast (native QuickJS) |
 | Cloudflare  | Edge deployments            | None            | N/A             | Fast (V8 on edge)     |
 
-#### 2. Adding Persistent Skills with codeModeWithSkills()
+#### 2. Adding Persistent Snippets with codeModeWithSnippets()
 
-Skills let the LLM save reusable code snippets. On future requests, relevant skills are loaded and exposed as callable tools.
+Snippets let the LLM save reusable code snippets. On future requests, relevant snippets are loaded and exposed as callable tools.
 
 ```typescript
 import { chat, maxIterations } from '@tanstack/ai'
 import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
-import { codeModeWithSkills } from '@tanstack/ai-code-mode-skills'
-import { createFileSkillStorage } from '@tanstack/ai-code-mode-skills/storage'
+import { codeModeWithSnippets } from '@tanstack/ai-code-mode-snippets'
+import { createFileSnippetStorage } from '@tanstack/ai-code-mode-snippets/storage'
 import {
   createDefaultTrustStrategy,
   createAlwaysTrustedStrategy,
   createCustomTrustStrategy,
-} from '@tanstack/ai-code-mode-skills'
+} from '@tanstack/ai-code-mode-snippets'
 import { openaiText } from '@tanstack/ai-openai'
 
-// Trust strategies control how skills earn trust through executions
+// Trust strategies control how snippets earn trust through executions
 // Default: untrusted -> provisional (10+ runs, >=90%) -> trusted (100+ runs, >=95%)
 // Relaxed: untrusted -> provisional (3+ runs, >=80%) -> trusted (10+ runs, >=90%)
 // Always trusted: immediately trusted (dev/testing)
@@ -162,26 +162,26 @@ import { openaiText } from '@tanstack/ai-openai'
 const trustStrategy = createDefaultTrustStrategy()
 
 // Storage options: file system (production) or memory (testing)
-const storage = createFileSkillStorage({
-  directory: './.skills',
+const storage = createFileSnippetStorage({
+  directory: './.snippets',
   trustStrategy,
 })
 
 const driver = createNodeIsolateDriver()
 
-// High-level API: automatic LLM-based skill selection
-const { toolsRegistry, systemPrompt, selectedSkills } =
-  await codeModeWithSkills({
+// High-level API: automatic LLM-based snippet selection
+const { toolsRegistry, systemPrompt, selectedSnippets } =
+  await codeModeWithSnippets({
     config: {
       driver,
       tools: [myTool1, myTool2],
       timeout: 60_000,
       memoryLimit: 128,
     },
-    adapter: openaiText('gpt-4o-mini'), // cheap model for skill selection
-    skills: {
+    adapter: openaiText('gpt-4o-mini'), // cheap model for snippet selection
+    snippets: {
       storage,
-      maxSkillsInContext: 5,
+      maxSnippetsInContext: 5,
     },
     messages,
   })
@@ -195,7 +195,7 @@ const stream = chat({
 })
 ```
 
-The registry includes: `execute_typescript`, `search_skills`, `get_skill`, `register_skill`, and one tool per selected skill.
+The registry includes: `execute_typescript`, `search_snippets`, `get_snippet`, `register_snippet`, and one tool per selected snippet.
 
 Custom trust strategy example:
 
@@ -210,13 +210,13 @@ const strategy = createCustomTrustStrategy({
 Storage implementations:
 
 ```typescript
-// File storage (production) -- persists skills as files on disk
-import { createFileSkillStorage } from '@tanstack/ai-code-mode-skills/storage'
-const fileStorage = createFileSkillStorage({ directory: './.skills' })
+// File storage (production) -- persists snippets as files on disk
+import { createFileSnippetStorage } from '@tanstack/ai-code-mode-snippets/storage'
+const fileStorage = createFileSnippetStorage({ directory: './.snippets' })
 
 // Memory storage (testing) -- in-memory, lost on restart
-import { createMemorySkillStorage } from '@tanstack/ai-code-mode-skills/storage'
-const memStorage = createMemorySkillStorage()
+import { createMemorySnippetStorage } from '@tanstack/ai-code-mode-snippets/storage'
+const memStorage = createMemorySnippetStorage()
 ```
 
 #### 3. Client-Side Execution Progress Display
@@ -323,14 +323,14 @@ The `onCustomEvent` callback signature is identical across all framework integra
 (eventType: string, data: unknown, context: { toolCallId?: string }) => void
 ```
 
-Skill-specific events (when using `codeModeWithSkills`):
+Snippet-specific events (when using `codeModeWithSnippets`):
 
-| Event                    | When               | Key fields                    |
-| ------------------------ | ------------------ | ----------------------------- |
-| `code_mode:skill_call`   | Skill tool invoked | `skill`, `input`, `timestamp` |
-| `code_mode:skill_result` | Skill completed    | `skill`, `result`, `duration` |
-| `code_mode:skill_error`  | Skill failed       | `skill`, `error`, `duration`  |
-| `skill:registered`       | New skill saved    | `id`, `name`, `description`   |
+| Event                      | When                 | Key fields                      |
+| -------------------------- | -------------------- | ------------------------------- |
+| `code_mode:snippet_call`   | Snippet tool invoked | `snippet`, `input`, `timestamp` |
+| `code_mode:snippet_result` | Snippet completed    | `snippet`, `result`, `duration` |
+| `code_mode:snippet_error`  | Snippet failed       | `snippet`, `error`, `duration`  |
+| `snippet:registered`       | New snippet saved    | `id`, `name`, `description`     |
 
 #### 4. Lazy Tools
 
@@ -1519,8 +1519,13 @@ Providers without snapshot support skip the step silently.
 
 - `localProcessSandbox()` — runs on the host (no isolation; dev loop only).
 - `dockerSandbox({ image })` — isolated container; snapshots, fork, resume-by-id.
+- `daytonaSandbox({ apiKey, snapshot, autoStopInterval, ephemeral })` —
+  Daytona cloud sandbox; snapshots after setup; resume starts stopped or
+  archived sandboxes. `/workspace` maps to `/home/daytona/workspace`. Setup
+  that installs packages must use `sudo -n` (do not deny `sudo *`). See
+  `docs/sandbox/providers.md` for network and secret injection details.
 
-Both implement the same `SandboxHandle`: `fs` (read/write/list/mkdir/remove/
+All implement the same `SandboxHandle`: `fs` (read/write/list/mkdir/remove/
 rename/exists), `git` (clone/status/add/commit/push/pull/branch), `process`
 (`exec` + duplex `spawn`), `ports.connect(port)`, `env.set`, optional
 `snapshot()`/`fork()`, `destroy()`. Providers advertise support via
@@ -1532,17 +1537,17 @@ rename/exists), `git` (clone/status/add/commit/push/pull/branch), `process`
 ```typescript
 import { defineSandboxPolicy } from '@tanstack/ai-sandbox'
 
+// Headless Grok Build / Codex: stay on auto-approve. Isolation is the
+// outer sandbox (Docker, Daytona, …), not commands.deny on this policy.
 const policy = defineSandboxPolicy({
-  commands: {
-    allow: ['pnpm test'],
-    ask: ['curl *'],
-    deny: ['sudo *', 'rm -rf *'],
-  },
-  capabilities: { fileWrite: 'allow', network: 'ask' },
-  default: 'ask', // deny > ask > allow
+  default: 'allow',
 })
 // pass to defineSandbox({ policy }); harness adapters map it to native permissions
 ```
+
+Claude Code can use `default: 'ask'` plus allow/ask/deny lists. Use Claude Code
+when you need command-level deny. Provider privilege rules (non-root users,
+network block at create) live in `docs/sandbox/providers.md`.
 
 ### Lifecycle &amp; resume
 

@@ -10,7 +10,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-fetch-and-observe-queries\",\"tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "framework/use-suspense-and-error-boundaries"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/suspense.md\",\"TanStack/query:docs/framework/react/reference/QueryErrorResetBoundary.md\",\"TanStack/query:docs/framework/react/reference/useSuspenseQuery.md\",\"TanStack/query:docs/framework/react/reference/useSuspenseQueries.md\",\"TanStack/query:docs/framework/react/reference/useSuspenseInfiniteQuery.md\",\"TanStack/query:docs/framework/solid/guides/suspense.md\",\"TanStack/query:docs/framework/vue/guides/suspense.md\"]"
   tanstack-type: "framework"

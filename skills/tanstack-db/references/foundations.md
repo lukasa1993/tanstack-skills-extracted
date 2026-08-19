@@ -55,7 +55,7 @@ For framework-specific hooks:
 
 ### Version
 
-Targets @tanstack/db v0.6.0.
+Targets @tanstack/db v0.6.17.
 
 <a id="source-tanstack-db-meta-framework"></a>
 
@@ -72,7 +72,7 @@ This skill builds on db-core. Read it first for collection setup and query build
 TanStack DB collections are **client-side only**. SSR is not implemented. Routes using TanStack DB **must disable SSR**. The setup pattern is:
 
 1. Set `ssr: false` on the route
-2. Call `collection.preload()` in the route loader
+2. Preload the eager collection, or preload the live query for an on-demand source
 3. Use `useLiveQuery` in the component
 
 ### TanStack Start
@@ -106,7 +106,9 @@ export const Route = createFileRoute('/todos')({
 })
 
 function TodoPage() {
-  const { data: todos } = useLiveQuery((q) => q.from({ todo: todoCollection }))
+  const { data: todos } = useLiveQuery({
+    query: (q) => q.from({ todo: todoCollection }),
+  })
   return (
     <ul>
       {todos.map((t) => (
@@ -115,6 +117,35 @@ function TodoPage() {
     </ul>
   )
 }
+```
+
+#### On-demand Query Collection preload
+
+Calling `preload()` on an on-demand source collection is a no-op. Define the
+live query once, preload it in the loader, and pass that same collection to the
+framework hook:
+
+```tsx
+import { createLiveQueryCollection, eq } from '@tanstack/db'
+import { useLiveQuery } from '@tanstack/react-db'
+
+const activeTodos = createLiveQueryCollection((q) =>
+  q
+    .from({ todo: todoCollection })
+    .where(({ todo }) => eq(todo.completed, false)),
+)
+
+export const Route = createFileRoute('/todos')({
+  ssr: false,
+  loader: async () => {
+    await activeTodos.preload()
+    return null
+  },
+  component: () => {
+    const { data } = useLiveQuery(activeTodos)
+    // ...
+  },
+})
 ```
 
 #### Multiple collection preloading
@@ -142,9 +173,9 @@ import { useEffect, useState } from 'react'
 import { useLiveQuery } from '@tanstack/react-db'
 
 export default function TodoPage() {
-  const { data: todos, isLoading } = useLiveQuery((q) =>
-    q.from({ todo: todoCollection }),
-  )
+  const { data: todos, isLoading } = useLiveQuery({
+    query: (q) => q.from({ todo: todoCollection }),
+  })
 
   if (isLoading) return <div>Loading...</div>
   return (
@@ -172,7 +203,9 @@ import { useLiveQuery } from '@tanstack/react-db'
 const preloadPromise = todoCollection.preload()
 
 export default function TodoPage() {
-  const { data: todos } = useLiveQuery((q) => q.from({ todo: todoCollection }))
+  const { data: todos } = useLiveQuery({
+    query: (q) => q.from({ todo: todoCollection }),
+  })
   return (
     <ul>
       {todos.map((t) => (
@@ -201,7 +234,9 @@ export const clientLoader = async ({ request }: ClientLoaderFunctionArgs) => {
 export const loader = () => null
 
 export default function TodoPage() {
-  const { data: todos } = useLiveQuery((q) => q.from({ todo: todoCollection }))
+  const { data: todos } = useLiveQuery({
+    query: (q) => q.from({ todo: todoCollection }),
+  })
   return (
     <ul>
       {todos.map((t) => (
@@ -271,7 +306,9 @@ export const ssr = false
 
 #### What preload() does
 
-`collection.preload()` starts the sync process and returns a promise that resolves when the collection reaches "ready" status. This means:
+For eager collections, `collection.preload()` starts the sync process and
+returns a promise that resolves when the collection reaches "ready" status.
+This means:
 
 1. The sync function connects to the backend
 2. Initial data is fetched and written to the collection
@@ -280,9 +317,14 @@ export const ssr = false
 
 Subsequent calls to `preload()` on an already-ready collection return immediately.
 
-#### Collection module pattern
+For on-demand collections, source `collection.preload()` warns and does
+nothing because no subset has been requested. Create the required live query
+and await `liveQuery.preload()`.
 
-Define collections in a shared module, import in both loaders and components:
+#### Stable collection ownership
+
+For one global `QueryClient` and one global server resource, define the
+collection in a shared module and import it in loaders and components:
 
 ```ts
 // lib/collections.ts
@@ -304,11 +346,22 @@ export const Route = createFileRoute('/todos')({
     return null
   },
   component: () => {
-    const { data } = useLiveQuery((q) => q.from({ todo: todoCollection }))
+    const { data } = useLiveQuery({
+      query: (q) => q.from({ todo: todoCollection }),
+    })
     // ...
   },
 })
 ```
+
+When the `QueryClient`, tenant, project, account, or route parameter defines
+the resource, create one stable collection per `QueryClient` and business
+scope. Memoize it and put it in router/request context rather than using a
+process-global collection. Remove unused entries and call
+`collection.cleanup()` in long-lived scope maps.
+
+See the
+[Query adapter runtime and business-scope pattern](./assets/tanstack-db-core-collection-setup/references/query-adapter.md#runtime-queryclient-and-business-scopes).
 
 ### Server-Side Integration
 
@@ -374,7 +427,7 @@ export const Route = createFileRoute('/todos')({
 
 Without preloading, the collection starts syncing only when the component mounts, causing a loading flash. Preloading in the route loader starts sync during navigation, making data available immediately when the component renders.
 
-#### MEDIUM Creating separate collection instances
+#### MEDIUM Creating separate collection instances in one scope
 
 Wrong:
 
@@ -386,7 +439,9 @@ export const Route = createFileRoute('/todos')({
   ssr: false,
   loader: async () => { await todoCollection.preload() },
   component: () => {
-    const { data } = useLiveQuery((q) => q.from({ todo: todoCollection }))
+    const { data } = useLiveQuery({
+      query: (q) => q.from({ todo: todoCollection }),
+    })
   },
 })
 ```
@@ -394,11 +449,14 @@ export const Route = createFileRoute('/todos')({
 Correct:
 
 ```ts
-// lib/collections.ts — single shared instance
+// lib/collections.ts — shared for a global QueryClient and global resource
 export const todoCollection = createCollection(queryCollectionOptions({ ... }))
 ```
 
-Collections are singletons. Creating multiple instances for the same data causes duplicate syncs, wasted bandwidth, and inconsistent state between components.
+Collections are stable within a `QueryClient` and business scope; they are not
+universal singletons. Creating several instances in one scope causes duplicate
+syncs and split state. A request-, router-, tenant-, or route-scoped client
+needs a scoped factory instead of the global module pattern.
 
 See also: ./framework-react.md#source-tanstack-react-db, ./framework-vue.md#source-tanstack-vue-db, ./framework-svelte.md#source-tanstack-svelte-db, ./framework-solid.md#source-tanstack-solid-db, ./framework-angular.md#source-tanstack-angular-db — for framework-specific hook usage.
 

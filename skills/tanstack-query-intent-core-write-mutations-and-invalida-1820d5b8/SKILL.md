@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-design-query-keys-and-options\",\"tanstack-query-intent-core-fetch-and-observe-queries\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "core/write-mutations-and-invalidate-related-queries"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/mutations.md\",\"TanStack/query:docs/framework/react/guides/query-invalidation.md\",\"TanStack/query:docs/framework/react/guides/invalidations-from-mutations.md\",\"TanStack/query:docs/framework/react/guides/updates-from-mutation-responses.md\",\"TanStack/query:docs/framework/react/reference/useMutation.md\",\"TanStack/query:docs/framework/react/reference/useMutationState.md\",\"TanStack/query:docs/reference/MutationCache.md\"]"
   tanstack-type: "core"

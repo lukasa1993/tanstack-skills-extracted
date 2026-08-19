@@ -8,7 +8,7 @@ metadata:
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "core/design-query-keys-and-options"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/query-keys.md\",\"TanStack/query:docs/framework/react/guides/query-options.md\",\"TanStack/query:docs/framework/react/typescript.md\",\"TanStack/query:docs/eslint/exhaustive-deps.md\",\"TanStack/query:docs/eslint/prefer-query-options.md\"]"
   tanstack-type: "core"

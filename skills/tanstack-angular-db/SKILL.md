@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "angular"
   tanstack-library: "db"
-  tanstack-library-version: "0.6.0"
+  tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/angular-db"
-  tanstack-package-version: "0.1.77"
+  tanstack-package-version: "0.1.81"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "angular-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/angular/overview.md\",\"TanStack/db:packages/angular-db/src/index.ts\"]"
@@ -97,6 +97,10 @@ const query = injectLiveQuery({
   },
 })
 ```
+
+A bare `{ query }` config defaults to `startSync: true` and `gcTime: 0`, like
+the query-function overload. Explicit values in the config override those
+defaults.
 
 ## Angular-Specific Patterns
 

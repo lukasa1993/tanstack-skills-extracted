@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-lifecycle-setup-query-client-and-providers\",\"tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "lifecycle/test-query-code"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/testing.md\",\"TanStack/query:docs/framework/solid/guides/testing.md\",\"TanStack/query:docs/framework/vue/guides/testing.md\",\"TanStack/query:docs/framework/angular/guides/testing.md\",\"TanStack/query:packages/query-core/src/__tests__/queryClient.test.tsx\",\"TanStack/query:packages/react-query/src/__tests__/useQuery.test.tsx\"]"
   tanstack-type: "lifecycle"

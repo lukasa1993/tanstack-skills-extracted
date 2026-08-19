@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table-devtools"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.0"
   tanstack-package: "@tanstack/angular-table-devtools"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.0"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-devtools\"]"
   tanstack-source-skill: "devtools"
   tanstack-sources: "[\"TanStack/table:docs/devtools.md\",\"TanStack/table:packages/angular-table-devtools/src/index.ts\",\"TanStack/table:packages/angular-table-devtools/src/injectTanStackTableDevtools.ts\"]"

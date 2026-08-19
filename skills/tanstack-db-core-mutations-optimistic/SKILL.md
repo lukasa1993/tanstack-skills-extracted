@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
-  tanstack-library-version: "0.6.0"
+  tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.6.17"
+  tanstack-package-version: "0.8.0"
   tanstack-source-skill: "db-core/mutations-optimistic"
   tanstack-sources: "[\"TanStack/db:docs/guides/mutations.md\",\"TanStack/db:packages/db/src/transactions.ts\",\"TanStack/db:packages/db/src/optimistic-action.ts\",\"TanStack/db:packages/db/src/paced-mutations.ts\"]"
   tanstack-type: "sub-skill"
@@ -20,7 +20,7 @@ metadata:
 > handlers) before you can mutate.
 
 TanStack DB mutations follow a unidirectional loop:
-**optimistic mutation -> handler persists to backend -> sync back -> confirmed state**.
+**optimistic mutation -> handler persists -> handler waits for sync/ack -> confirmed state**.
 Optimistic state is applied in the current tick and dropped when the handler resolves.
 
 ---
@@ -30,17 +30,19 @@ Optimistic state is applied in the current tick and dropped when the handler res
 ### insert
 
 ```ts
+import { safeRandomUUID } from '@tanstack/db'
+
 // Single item
 todoCollection.insert({
-  id: crypto.randomUUID(),
+  id: safeRandomUUID(),
   text: 'Buy groceries',
   completed: false,
 })
 
 // Multiple items
 todoCollection.insert([
-  { id: crypto.randomUUID(), text: 'Buy groceries', completed: false },
-  { id: crypto.randomUUID(), text: 'Walk dog', completed: false },
+  { id: safeRandomUUID(), text: 'Buy groceries', completed: false },
+  { id: safeRandomUUID(), text: 'Walk dog', completed: false },
 ])
 
 // With metadata / non-optimistic
@@ -83,7 +85,9 @@ todoCollection.delete(todo.id, { metadata: { reason: 'completed' } })
 ```
 
 All three return a `Transaction` object. Use `tx.isPersisted.promise` to await
-persistence or catch rollback errors.
+settlement or catch rollback errors. For a non-empty transaction, this normally
+means its `mutationFn` returned; it proves upload, confirmation, or read-back
+only when that function waits for the backend observation before returning.
 
 ---
 
@@ -123,7 +127,7 @@ Multi-collection example:
 const createProject = createOptimisticAction<{ name: string; ownerId: string }>(
   {
     onMutate: ({ name, ownerId }) => {
-      projectCollection.insert({ id: crypto.randomUUID(), name, ownerId })
+      projectCollection.insert({ id: safeRandomUUID(), name, ownerId })
       userCollection.update(ownerId, (d) => {
         d.projectCount += 1
       })
@@ -203,7 +207,9 @@ await tx.commit()
 
 Inside `tx.mutate(() => { ... })`, the transaction is pushed onto an ambient
 stack. Any `collection.insert/update/delete` call joins the ambient transaction
-automatically via `getActiveTransaction()`.
+automatically via `getActiveTransaction()`. That scope is synchronous:
+collection operations after an `await` do not join it. Put async work in
+`mutationFn`, or call `mutate()` again before committing.
 
 For mutations captured by a manual transaction, collection-level
 `onInsert`/`onUpdate`/`onDelete` handlers are not invoked automatically. The
@@ -213,7 +219,7 @@ a good fit for draft-style flows where local state updates immediately but the
 server call waits for Save/Blur; call `tx.rollback()` to discard the optimistic
 changes.
 
-### 4. Mutation handler with refetch (QueryCollection pattern)
+### 4. Mutation handlers with automatic refetch (QueryCollection pattern)
 
 ```ts
 const todoCollection = createCollection(
@@ -225,8 +231,7 @@ const todoCollection = createCollection(
       await Promise.all(
         transaction.mutations.map((m) => api.todos.create(m.modified)),
       )
-      // IMPORTANT: handler must not resolve until server state is synced back
-      // QueryCollection auto-refetches after handler completes
+      // Query Collection refetches after the handler completes and awaits it.
     },
     onUpdate: async ({ transaction }) => {
       await Promise.all(
@@ -304,7 +309,7 @@ createOptimisticAction({
 // CORRECT
 createOptimisticAction({
   onMutate: (text) => {
-    collection.insert({ id: crypto.randomUUID(), text })
+    collection.insert({ id: safeRandomUUID(), text })
   },
   ...
 })
@@ -334,28 +339,30 @@ re-insert.
 ### HIGH: Inserting item with duplicate key
 
 If an item with the same key already exists (synced or optimistic), throws
-`DuplicateKeyError`. Always generate a unique key (e.g. `crypto.randomUUID()`)
+`DuplicateKeyError`. Always generate a unique key (e.g. `safeRandomUUID()`)
 or check before inserting.
 
-### HIGH: Not awaiting refetch after mutation in query collection handler
+### HIGH: Manually refetching inside a Query Collection handler
 
-The optimistic state is held only until the handler resolves. If the handler
-returns before server state has synced back, optimistic state is dropped and
-users see a flash of missing data.
+Query Collection automatically refetches after `onInsert`, `onUpdate`, and
+`onDelete` complete, and waits for that refetch before the mutation finishes.
+Calling `utils.refetch()` inside the handler sends a redundant request.
 
 ```ts
-// WRONG -- optimistic state dropped before new server state arrives
-onInsert: async ({ transaction }) => {
-  await api.createTodo(transaction.mutations[0].modified)
-  // missing: await collection.utils.refetch()
-}
-
-// CORRECT
+// WRONG -- causes one manual and one automatic refetch
 onInsert: async ({ transaction }) => {
   await api.createTodo(transaction.mutations[0].modified)
   await collection.utils.refetch()
 }
+
+// CORRECT -- automatic refetch is awaited after this returns
+onInsert: async ({ transaction }) => {
+  await api.createTodo(transaction.mutations[0].modified)
+}
 ```
+
+When the handler writes the confirmed server result with direct-write utilities,
+return `{ refetch: false }` to skip the automatic refetch.
 
 ---
 

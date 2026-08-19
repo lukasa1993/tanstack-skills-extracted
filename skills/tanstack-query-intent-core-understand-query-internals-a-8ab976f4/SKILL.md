@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-fetch-and-observe-queries\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "core/understand-query-internals-and-observers"
   tanstack-sources: "[\"https://tkdodo.eu/blog/inside-react-query\",\"https://tkdodo.eu/blog/react-query-selectors-supercharged\",\"TanStack/query:docs/reference/QueryClient.md\",\"TanStack/query:docs/reference/QueryCache.md\",\"TanStack/query:docs/reference/QueryObserver.md\",\"TanStack/query:docs/reference/MutationCache.md\"]"
   tanstack-type: "core"

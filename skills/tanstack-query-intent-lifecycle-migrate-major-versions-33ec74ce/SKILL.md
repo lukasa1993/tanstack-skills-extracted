@@ -8,7 +8,7 @@ metadata:
   tanstack-library-version: "5.101.0"
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "lifecycle/migrate-major-versions-and-codemods"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/migrating-to-react-query-3.md\",\"TanStack/query:docs/framework/react/guides/migrating-to-react-query-4.md\",\"TanStack/query:docs/framework/react/guides/migrating-to-v5.md\",\"TanStack/query:docs/framework/vue/guides/migrating-to-v5.md\",\"TanStack/query:docs/framework/svelte/migrate-from-v5-to-v6.md\",\"TanStack/query:packages/query-codemods/package.json\"]"
   tanstack-type: "lifecycle"

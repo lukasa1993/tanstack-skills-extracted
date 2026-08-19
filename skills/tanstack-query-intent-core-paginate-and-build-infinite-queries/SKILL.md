@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-design-query-keys-and-options\",\"tanstack-query-intent-core-fetch-and-observe-queries\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "core/paginate-and-build-infinite-queries"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/paginated-queries.md\",\"TanStack/query:docs/framework/react/guides/infinite-queries.md\",\"TanStack/query:docs/framework/react/reference/useInfiniteQuery.md\",\"TanStack/query:docs/reference/InfiniteQueryObserver.md\",\"TanStack/query:docs/eslint/infinite-query-property-order.md\"]"
   tanstack-type: "core"

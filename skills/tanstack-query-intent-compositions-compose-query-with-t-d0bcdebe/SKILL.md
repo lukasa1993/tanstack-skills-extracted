@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-lifecycle-setup-query-client-and-providers\",\"tanstack-query-intent-core-design-query-keys-and-options\",\"tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "compositions/compose-query-with-tanstack-router-and-start"
   tanstack-sources: "[\"https://tkdodo.eu/blog/tan-stack-router-and-query\",\"TanStack/router:https://tanstack.com/router/latest/docs/integrations/query\",\"TanStack/router:https://tanstack.com/router/latest/docs/how-to/setup-ssr\",\"TanStack/start:https://tanstack.com/start/latest/docs/framework/react/overview\",\"TanStack/query:docs/framework/react/guides/prefetching.md\",\"TanStack/query:docs/framework/react/guides/ssr.md\"]"
   tanstack-type: "composition"

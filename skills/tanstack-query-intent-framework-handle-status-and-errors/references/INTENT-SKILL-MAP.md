@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Source: github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent
+Source: github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

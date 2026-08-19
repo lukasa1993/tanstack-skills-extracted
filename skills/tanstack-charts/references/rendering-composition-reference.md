@@ -1299,6 +1299,7 @@ interface ChartRenderer<
   TYValue extends ChartValue = ChartValue,
 > {
   readonly id: string
+  readonly capabilities?: ChartRendererCapabilities
   prerender: (
     scene: ChartScene<TDatum, TXValue, TYValue>,
     options: RenderChartOptions,
@@ -1324,6 +1325,7 @@ interface ChartRendererRenderContext<
 | Member                          | Responsibility                                                                                                                 |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `ChartRenderer.id`              | Stable renderer identifier                                                                                                     |
+| `ChartRenderer.capabilities`    | Expose optional versioned services that the shared host injects into extensions                                                |
 | `prerender()`                   | Return deterministic accessible markup for the supplied scene and render options                                               |
 | `mount()`                       | Adopt or create a surface in the container and connect renderer-owned environment observers                                    |
 | `ChartSurface.renderer`         | Refer to the renderer that created the surface; a different renderer object on update replaces the surface                     |
@@ -1340,6 +1342,12 @@ animation frame; ordinary requests proceed only when responsive width changed.
 `requestRender(true)` forces the work when renderer state changed without a
 width or chart-option change, such as device-pixel ratio or resolved theme
 colors. Requests made before the same frame are coalesced.
+
+Renderer capabilities are structural so independently bundled package
+entrypoints do not need shared object or symbol identity. A renderer can expose
+`capabilities.tooltipMotion` with protocol `1`; the host creates its controller
+and injects it as `ChartTooltipExtensionContext.motion`. Renderers that omit the
+capability do not load or run tooltip motion code.
 
 Animated renderers can expose their current point geometry through
 `getPresentationPoints()` and notify the host through
@@ -1379,6 +1387,8 @@ stable interaction controller instead of assuming an SVG element.
 Use `mountChartRenderer` from `@tanstack/charts/renderer`, or the React and
 Octane `/core` entries, to mount a custom renderer. `RenderChartOptions`,
 `ChartSurfaceRenderOptions`, `ChartSurface`, `ChartRenderer`,
+`ChartRendererCapabilities`, `ChartRendererTooltipMotionCapability`,
+`ChartTooltipMotionController`, `ChartTooltipMotionSnapshot`,
 `ChartRendererRenderContext`, `ChartRendererHostCommonOptions`,
 `ChartRendererHostOptions`, and `ChartRendererHost` describe the complete
 boundary.

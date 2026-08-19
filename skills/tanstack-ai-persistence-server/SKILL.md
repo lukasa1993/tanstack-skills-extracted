@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.1.2"
+  tanstack-package-version: "0.1.5"
   tanstack-source-skill: "ai-persistence/server"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/chat-persistence.md\",\"TanStack/ai:docs/persistence/overview.md\",\"TanStack/ai:docs/persistence/controls.md\"]"
   tanstack-type: "sub-skill"

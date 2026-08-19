@@ -16,7 +16,7 @@ This skill builds on db-core. Read it first for collection setup, query builder,
 
 ```tsx
 import { useLiveQuery, eq, not } from '@tanstack/solid-db'
-import { For, Show, Suspense } from 'solid-js'
+import { ErrorBoundary, For, Show, Suspense } from 'solid-js'
 
 function TodoList() {
   const todosQuery = useLiveQuery((q) =>
@@ -121,12 +121,16 @@ return <Show when={userQuery()}>{(user) => <div>{user().name}</div>}</Show>
 #### Suspense integration
 
 ```tsx
-<Suspense fallback={<div>Loading...</div>}>
-  <For each={todosQuery()}>{(todo) => <li>{todo.text}</li>}</For>
-</Suspense>
+<ErrorBoundary fallback={(error) => <div>{error.message}</div>}>
+  <Suspense fallback={<div>Loading...</div>}>
+    <For each={todosQuery()}>{(todo) => <li>{todo.text}</li>}</For>
+  </Suspense>
+</ErrorBoundary>
 ```
 
-`useLiveQuery` integrates with Solid's `createResource` — wrap in `<Suspense>` for loading states.
+`useLiveQuery` integrates with Solid's `createResource`. Use `<Suspense>` for
+loading and `<ErrorBoundary>` for errors. Reading an errored query throws
+through the resource, so do not rely on reading `isError` after failure.
 
 ### Includes (Hierarchical Data)
 

@@ -10,7 +10,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-lifecycle-setup-query-client-and-providers\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "framework/debug-with-devtools"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/devtools.md\",\"TanStack/query:docs/framework/preact/devtools.md\",\"TanStack/query:docs/framework/vue/devtools.md\",\"TanStack/query:docs/framework/solid/devtools.md\",\"TanStack/query:docs/framework/svelte/devtools.md\",\"TanStack/query:docs/framework/angular/devtools.md\"]"
   tanstack-type: "framework"

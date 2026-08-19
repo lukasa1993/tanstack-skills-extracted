@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-lifecycle-setup-query-client-and-providers\",\"tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8\",\"tanstack-query-intent-compositions-persist-offline-and-ca66cce0\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "compositions/broadcast-realtime-and-multi-tab-synchronization"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/plugins/broadcastQueryClient.md\",\"TanStack/query:docs/framework/react/guides/query-invalidation.md\",\"TanStack/query:examples/react/chat/package.json\"]"
   tanstack-type: "composition"

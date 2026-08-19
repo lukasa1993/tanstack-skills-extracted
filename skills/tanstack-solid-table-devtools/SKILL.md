@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table-devtools"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.0"
   tanstack-package: "@tanstack/solid-table-devtools"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.0"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-devtools\"]"
   tanstack-source-skill: "devtools"
   tanstack-sources: "[\"TanStack/table:docs/devtools.md\",\"TanStack/table:packages/solid-table-devtools/src/index.ts\",\"TanStack/table:packages/solid-table-devtools/src/useTanStackTableDevtools.ts\"]"

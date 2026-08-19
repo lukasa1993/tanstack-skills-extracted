@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8\",\"tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "core/implement-optimistic-updates-and-cache-writes"
   tanstack-sources: "[\"TanStack/query:docs/framework/react/guides/optimistic-updates.md\",\"TanStack/query:docs/framework/react/guides/updates-from-mutation-responses.md\",\"TanStack/query:docs/framework/react/guides/query-cancellation.md\",\"TanStack/query:docs/framework/react/plugins/persistQueryClient.md\"]"
   tanstack-type: "core"

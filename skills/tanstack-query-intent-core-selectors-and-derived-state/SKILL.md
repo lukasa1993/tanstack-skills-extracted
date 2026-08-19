@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-seed-placeholder-select-and-5c98438e\",\"tanstack-query-intent-framework-shape-data-and-render-e-feb144a6\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "core/selectors-and-derived-state"
   tanstack-sources: "[\"https://tkdodo.eu/blog/react-query-selectors-supercharged\",\"https://tkdodo.eu/blog/deriving-client-state-from-server-state\",\"TanStack/query:docs/framework/react/guides/render-optimizations.md\",\"TanStack/query:docs/framework/react/reference/queryOptions.md\"]"
   tanstack-type: "core"

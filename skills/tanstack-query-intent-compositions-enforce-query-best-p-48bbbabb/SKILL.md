@@ -9,7 +9,7 @@ metadata:
   tanstack-package: "@tanstack/query-intent"
   tanstack-package-version: "5.101.0"
   tanstack-requires: "[\"tanstack-query-intent-core-design-query-keys-and-options\",\"tanstack-query-intent-core-fetch-and-observe-queries\",\"tanstack-query-intent-framework-shape-data-and-render-e-feb144a6\"]"
-  tanstack-source-ref: "github:TanStack/query@bdfb2605d0c598a8446b612e715200829b035d49#packages/query-intent"
+  tanstack-source-ref: "github:TanStack/query@b2a99c82d38601f89c963cbde1c811c1a615950c#packages/query-intent"
   tanstack-source-skill: "compositions/enforce-query-best-practices-with-eslint"
   tanstack-sources: "[\"TanStack/query:docs/eslint/eslint-plugin-query.md\",\"TanStack/query:docs/eslint/exhaustive-deps.md\",\"TanStack/query:docs/eslint/no-rest-destructuring.md\",\"TanStack/query:docs/eslint/no-unstable-deps.md\",\"TanStack/query:docs/eslint/no-void-query-fn.md\",\"TanStack/query:docs/eslint/prefer-query-options.md\",\"TanStack/query:docs/eslint/stable-query-client.md\",\"TanStack/query:docs/eslint/infinite-query-property-order.md\",\"TanStack/query:docs/eslint/mutation-property-order.md\"]"
   tanstack-type: "composition"

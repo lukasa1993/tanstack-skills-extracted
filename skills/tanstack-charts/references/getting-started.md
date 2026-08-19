@@ -8,7 +8,7 @@ Overview, comparison, installation, and quick start.
 
 Source: `charts:docs/comparison.md`.
 
-The latest published TanStack Charts release is `0.11.1`, while this page
+The latest published TanStack Charts release is `0.14.0`, while this page
 measures unreleased workspace source against pinned competitor packages. This
 comparison records architectural differences and reproducible evidence without
 turning untested behavior into a checkmark.
@@ -17,14 +17,14 @@ turning untested behavior into a checkmark.
 
 | Library                                                                                | Package              | Measured source     |
 | -------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| [TanStack Charts](./getting-started.md#source-charts-docs-overview-md)                                                       | `@tanstack/charts`   | workspace `02e2486` |
+| [TanStack Charts](./getting-started.md#source-charts-docs-overview-md)                                                       | `@tanstack/charts`   | workspace `91e2eef` |
 | [Chart.js](https://www.chartjs.org/docs/latest/)                                       | `chart.js`           | npm `4.5.1`         |
 | [Apache ECharts](https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/) | `echarts`            | npm `6.1.0`         |
 | [Recharts](https://recharts.github.io/en-US/)                                          | `recharts`           | npm `3.10.1`        |
 | [Observable Plot](https://observablehq.com/plot/features/plots)                        | `@observablehq/plot` | npm `0.6.17`        |
 
 The competitor versions are exact package pins, not latest versions inferred
-at page render time. The measured TanStack workspace revision is `02e2486`.
+at page render time. The measured TanStack workspace revision is `91e2eef`.
 
 ### Capability matrix
 
@@ -95,7 +95,7 @@ output model.
 
 ### Bundle snapshot
 
-Baseline date: `2026-08-11`.
+Baseline date: `2026-08-15`.
 
 Controlled ranges cover 12 independently built, minified browser consumers:
 line, bar, area, and scatter at basic, interactive, and advanced tiers. Only
@@ -111,7 +111,7 @@ Vega-Lite, AG Charts, and uPlot main exports were read from Bundlephobia on July
 
 | Library            | Bundle size                            | React externalized | Evidence                                                   |
 | ------------------ | -------------------------------------- | -----------------: | ---------------------------------------------------------- |
-| TanStack Charts    | 37.46–43.41 KiB                        |                  — | Controlled suite                                           |
+| TanStack Charts    | 37.60–43.56 KiB                        |                  — | Controlled suite                                           |
 | D3                 | 90 KB gzip                             |                  — | External main export                                       |
 | Chart.js           | 44.70–58.21 KiB                        |                  — | Controlled suite                                           |
 | Apache ECharts     | 153.10–173.18 KiB                      |                  — | Controlled suite                                           |
@@ -175,11 +175,11 @@ Canvas composition while keeping D3 and state ownership explicit.
 
 ### Evidence and reproduction
 
-- [Standard comparison protocol](https://github.com/TanStack/charts/blob/e6f071bc4b8c075788f834abfeefe5f9bac646ce/benchmarks/comparison/README.md)
-- [Current tracked bundle baseline](https://github.com/TanStack/charts/blob/e6f071bc4b8c075788f834abfeefe5f9bac646ce/benchmarks/comparison/bundle-baseline.json)
-- [Pinned release-source bundle baseline](https://github.com/TanStack/charts/blob/e6f071bc4b8c075788f834abfeefe5f9bac646ce/benchmarks/comparison/bundle-baseline.json)
-- [Stress protocol](https://github.com/TanStack/charts/blob/e6f071bc4b8c075788f834abfeefe5f9bac646ce/benchmarks/comparison/stress/README.md)
-- [Catalog conformance protocol](https://github.com/TanStack/charts/blob/e6f071bc4b8c075788f834abfeefe5f9bac646ce/benchmarks/conformance/README.md)
+- [Standard comparison protocol](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/README.md)
+- [Current tracked bundle baseline](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/bundle-baseline.json)
+- [Pinned release-source bundle baseline](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/bundle-baseline.json)
+- [Stress protocol](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/stress/README.md)
+- [Catalog conformance protocol](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/conformance/README.md)
 
 ```sh
 pnpm benchmark:size
@@ -200,8 +200,8 @@ establish application-specific parity before replacing an existing library.
 Source: `charts:docs/installation.md`.
 
 These docs follow unreleased `main`. The latest published pre-alpha is TanStack
-Charts `0.11.1`; use its
-[release-source docs](https://github.com/TanStack/charts/tree/e6f071bc4b8c075788f834abfeefe5f9bac646ce/docs)
+Charts `0.14.0`; use its
+[release-source docs](https://github.com/TanStack/charts/tree/74c316e7f59e42f8fa177ad50fcb92a66466d864/docs)
 for the exact surface. Install TanStack Charts in each application that authors
 chart definitions:
 
@@ -543,7 +543,7 @@ for the framework that owns the chart component.
 Source: `charts:docs/overview.md`.
 
 These docs follow unreleased `main`. The latest published TanStack Charts
-release is `0.11.1`; it is pre-alpha and its API may change between releases.
+release is `0.14.0`; it is pre-alpha and its API may change between releases.
 
 TanStack Charts is a small, framework-agnostic chart grammar for TypeScript and
 JavaScript. Give each mark its natural data, map fields or accessors to visual

@@ -1098,6 +1098,29 @@ category. A sparse snapped cursor can opt into
 `maxFocusDistance: Number.POSITIVE_INFINITY`; keep the finite default when
 empty space should mean no focus.
 
+### Angular focus
+
+Use `focusGroupAngle` for the radial equivalent of `group-x`:
+
+```ts
+import { defineChart, type ChartDefinition } from '@tanstack/charts'
+import { focusGroupAngle } from '@tanstack/charts/polar'
+import { tooltip } from '@tanstack/charts/tooltip'
+
+declare const radialDefinition: ChartDefinition
+
+const interactiveDefinition = defineChart(radialDefinition, {
+  focus: focusGroupAngle,
+  tooltip,
+})
+```
+
+The nearest radial ray selects the semantic angle, the closest radius becomes
+primary, and the tooltip receives one point per series at that angle. The
+strategy uses the same finite `maxFocusDistance` policy as axis grouping.
+Ordinary pie and donut charts can keep default nearest focus: `radialArc`
+attaches the exact painted slice geometry, including the donut hole.
+
 Default `primary` and `group` presentation follows the canonical focused scene
 points. Equal x/y/series values in another facet do not implicitly paint a
 second focus marker. To synchronize a visual cursor across facets without
@@ -1281,6 +1304,51 @@ Set `visibility: 'pinned'` when focus should style the chart without opening a
 transient tooltip. Click, Enter, or Space can still pin the focused point; only
 the pinned surface and adapter body are mounted. The default is
 `visibility: 'focus'`.
+
+### Tooltip motion
+
+The built-in tooltip uses the active motion renderer's transition for entry,
+movement between points, retargeting, and exit:
+
+```ts
+import { motion } from '@tanstack/charts/motion'
+
+const renderer = motion({
+  transition: {
+    type: 'spring',
+    stiffness: 170,
+    damping: 18,
+    mass: 1,
+  },
+})
+
+const definition = defineChart({ marks, tooltip })
+
+mountChartRenderer(container, {
+  definition,
+  renderer,
+  width: 640,
+  height: 360,
+  ariaLabel: 'Monthly visitors',
+})
+```
+
+A static chart-level transition can refine the renderer fallback:
+
+```ts
+const definition = defineChart({
+  marks,
+  motion: {
+    transition: { type: 'spring', stiffness: 170, damping: 18, mass: 1 },
+  },
+  tooltip,
+})
+```
+
+Set `tooltip.motion` to another transition to override both, or set it to
+`false` to keep the tooltip immediate. These options customize the active
+motion renderer; a static renderer stays immediate and does not import spring
+physics. The renderer's reduced-motion policy also applies to the tooltip.
 
 ### Application-owned pointer timing
 

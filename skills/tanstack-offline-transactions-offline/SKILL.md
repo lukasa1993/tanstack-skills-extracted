@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
-  tanstack-library-version: "0.6.0"
+  tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/offline-transactions"
-  tanstack-package-version: "1.0.42"
+  tanstack-package-version: "1.0.46"
   tanstack-requires: "[\"tanstack-db-core\",\"tanstack-db-core-mutations-optimistic\"]"
   tanstack-source-skill: "offline"
   tanstack-sources: "[\"TanStack/db:packages/offline-transactions/src/OfflineExecutor.ts\",\"TanStack/db:packages/offline-transactions/src/types.ts\",\"TanStack/db:packages/offline-transactions/src/index.ts\"]"
@@ -25,6 +25,7 @@ import {
   startOfflineExecutor,
   IndexedDBAdapter,
 } from '@tanstack/offline-transactions'
+import { safeRandomUUID } from '@tanstack/db'
 import { todoCollection } from './collections'
 
 const executor = startOfflineExecutor({
@@ -62,7 +63,7 @@ const tx = executor.createOfflineTransaction({
 
 // Mutations run inside tx.mutate() — uses ambient transaction context
 tx.mutate(() => {
-  todoCollection.insert({ id: crypto.randomUUID(), text: 'New todo' })
+  todoCollection.insert({ id: safeRandomUUID(), text: 'New todo' })
 })
 tx.commit()
 ```
@@ -76,7 +77,7 @@ const addTodo = executor.createOfflineAction({
   mutationFnName: 'createTodo',
   onMutate: (variables) => {
     todoCollection.insert({
-      id: crypto.randomUUID(),
+      id: safeRandomUUID(),
       text: variables.text,
     })
   },

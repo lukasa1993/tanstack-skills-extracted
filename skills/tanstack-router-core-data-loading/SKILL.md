@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.21"
+  tanstack-package-version: "1.171.25"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "data-loading"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/data-loading.md\",\"TanStack/router:docs/router/guide/deferred-data-loading.md\",\"TanStack/router:docs/router/guide/router-context.md\",\"TanStack/router:docs/router/guide/data-mutations.md\"]"

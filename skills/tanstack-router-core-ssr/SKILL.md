@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.21"
+  tanstack-package-version: "1.171.25"
   tanstack-requires: "[\"tanstack-router-core\",\"tanstack-router-core-data-loading\"]"
   tanstack-source-skill: "ssr"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/ssr.md\",\"TanStack/router:docs/router/guide/document-head-management.md\",\"TanStack/router:docs/router/how-to/setup-ssr.md\"]"
