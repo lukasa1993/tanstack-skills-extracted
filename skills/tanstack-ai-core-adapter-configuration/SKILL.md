@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.45.1"
+  tanstack-package-version: "0.46.0"
   tanstack-source-skill: "ai-core/adapter-configuration"
   tanstack-sources: "[\"TanStack/ai:docs/adapters/openai.md\",\"TanStack/ai:docs/adapters/anthropic.md\",\"TanStack/ai:docs/adapters/gemini.md\",\"TanStack/ai:docs/adapters/ollama.md\",\"TanStack/ai:docs/advanced/per-model-type-safety.md\",\"TanStack/ai:docs/advanced/runtime-adapter-switching.md\",\"TanStack/ai:docs/advanced/extend-adapter.md\"]"
   tanstack-type: "sub-skill"

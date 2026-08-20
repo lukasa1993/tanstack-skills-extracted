@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.25"
+  tanstack-package-version: "1.170.26"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "execution-model"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/execution-model.md\",\"TanStack/router:docs/start/framework/react/guide/environment-variables.md\",\"TanStack/router:docs/start/framework/react/guide/import-protection.md\"]"

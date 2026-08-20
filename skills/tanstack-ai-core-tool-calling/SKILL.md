@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.45.1"
+  tanstack-package-version: "0.46.0"
   tanstack-source-skill: "ai-core/tool-calling"
   tanstack-sources: "[\"TanStack/ai:docs/tools/tools.md\",\"TanStack/ai:docs/tools/server-tools.md\",\"TanStack/ai:docs/tools/client-tools.md\",\"TanStack/ai:docs/tools/tool-approval.md\",\"TanStack/ai:docs/tools/lazy-tool-discovery.md\"]"
   tanstack-type: "sub-skill"

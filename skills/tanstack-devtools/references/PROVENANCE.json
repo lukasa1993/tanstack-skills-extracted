@@ -8,45 +8,45 @@
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools",
-      "version": "0.14.0",
+      "version": "0.14.1",
       "sourcePath": "devtools-app-setup",
-      "sha256": "91e652c9ee7a17beed21f44567dd2e38a0ff40dfd9e2653c0d6eb99d3dcab596"
+      "sha256": "fee2fd1f222794bdaf3534ce46db8e9df82c32e4ab7161984b6c83f8bf4d1b56"
     },
     {
       "id": "tanstack-devtools-production",
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools",
-      "version": "0.14.0",
+      "version": "0.14.1",
       "sourcePath": "devtools-production",
-      "sha256": "193e400ad1e3355a9274e24c1ec1059abb38d1f3c49812001c38156a69343b29"
+      "sha256": "914d068645402ccc2c665a0e086923ff562f17adde5da14bf9d9ea41558ec863"
     },
     {
       "id": "tanstack-devtools-vite-plugin",
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools-vite",
-      "version": "0.8.3",
+      "version": "0.8.4",
       "sourcePath": "devtools-vite-plugin",
-      "sha256": "44b1a1b71083b0ecc91d67868e088b6f780408e6c816810ec4f7ee8e3ef1a1b4"
+      "sha256": "a0709f8b0966864c18f04723adeea616b2aeffdf519866c82e9f4e22e540794d"
     },
     {
       "id": "tanstack-devtools-marketplace",
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools",
-      "version": "0.14.0",
+      "version": "0.14.1",
       "sourcePath": "devtools-marketplace",
-      "sha256": "a5d506492d54935b1340ff24718ed9cb92f12fdd64917c91796afd27886ef515"
+      "sha256": "64639878487346b48dab601c20a9e06bcc06453bacdb785fd5fbfb4a9c729a8b"
     },
     {
       "id": "tanstack-devtools-plugin-panel",
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools",
-      "version": "0.14.0",
+      "version": "0.14.1",
       "sourcePath": "devtools-plugin-panel",
-      "sha256": "c0a09152a1b5bc54f0355ac31d4a63eb521ebff2edfcf90c9932cc0ef253a40c"
+      "sha256": "ae6b5132b7ea31665ed39e0bd866a38b05413a71087cf275b76fdeb9562cf4af"
     },
     {
       "id": "tanstack-devtools-utils-devtools-framework-adapters",

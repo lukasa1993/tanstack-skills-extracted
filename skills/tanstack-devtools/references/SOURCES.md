@@ -2,11 +2,11 @@
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
-| `tanstack-devtools-app-setup` | atomic | `setup-production` | `@tanstack/devtools` | `0.14.0` |  |
-| `tanstack-devtools-production` | atomic | `setup-production` | `@tanstack/devtools` | `0.14.0` |  |
-| `tanstack-devtools-vite-plugin` | atomic | `setup-production` | `@tanstack/devtools-vite` | `0.8.3` |  |
-| `tanstack-devtools-marketplace` | atomic | `plugins-marketplace` | `@tanstack/devtools` | `0.14.0` |  |
-| `tanstack-devtools-plugin-panel` | atomic | `plugins-marketplace` | `@tanstack/devtools` | `0.14.0` |  |
+| `tanstack-devtools-app-setup` | atomic | `setup-production` | `@tanstack/devtools` | `0.14.1` |  |
+| `tanstack-devtools-production` | atomic | `setup-production` | `@tanstack/devtools` | `0.14.1` |  |
+| `tanstack-devtools-vite-plugin` | atomic | `setup-production` | `@tanstack/devtools-vite` | `0.8.4` |  |
+| `tanstack-devtools-marketplace` | atomic | `plugins-marketplace` | `@tanstack/devtools` | `0.14.1` |  |
+| `tanstack-devtools-plugin-panel` | atomic | `plugins-marketplace` | `@tanstack/devtools` | `0.14.1` |  |
 | `tanstack-devtools-utils-devtools-framework-adapters` | atomic | `plugins-marketplace` | `@tanstack/devtools-utils` | `0.6.0` |  |
 | `tanstack-devtools-event-client` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |
 | `tanstack-devtools-event-client-devtools-bidirectional` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |

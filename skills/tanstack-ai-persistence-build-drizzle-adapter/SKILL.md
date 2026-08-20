@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.1.5"
+  tanstack-package-version: "0.2.0"
   tanstack-source-skill: "ai-persistence/build-drizzle-adapter"
 ---
 

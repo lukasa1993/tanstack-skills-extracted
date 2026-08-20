@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.14.1"
   tanstack-source-skill: "devtools-app-setup"
   tanstack-sources: "[\"docs/quick-start.md\",\"docs/installation.md\",\"docs/configuration.md\",\"docs/overview.md\",\"packages/devtools/src/context/devtools-store.ts\",\"packages/vue-devtools/src/types.ts\",\"packages/react-devtools/src/devtools.tsx\"]"
   tanstack-type: "core"
@@ -154,7 +154,7 @@ Pass a `config` prop to `TanStackDevtools` to set initial shell behavior. These 
 Storage keys used internally:
 
 - `tanstack_devtools_settings` -- persisted settings
-- `tanstack_devtools_state` -- persisted UI state (active tab, panel height, active plugins, persistOpen)
+- `tanstack_devtools_state` -- persisted UI state (active tab, panel height, layout, persistOpen, subheaderCollapsed)
 
 All config properties are optional. Defaults shown below:
 
@@ -163,7 +163,8 @@ All config properties are optional. Defaults shown below:
   config={{
     defaultOpen: false, // open panel on mount
     hideUntilHover: false, // hide trigger until mouse hover
-    position: 'bottom-right', // trigger position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'middle-left' | 'middle-right'
+    position: 'bottom-right', // used when triggerMode is 'fixed': 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'middle-left' | 'middle-right'
+    triggerMode: 'floating', // 'floating' (default, draggable) | 'fixed'
     panelLocation: 'bottom', // panel position: 'top' | 'bottom'
     openHotkey: ['Control', '~'],
     inspectHotkey: ['Shift', 'Alt', 'CtrlOrMeta'],

@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/solid-router"
-  tanstack-package-version: "1.170.28"
+  tanstack-package-version: "1.170.29"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "solid-router"
   tanstack-sources: "[\"TanStack/router:packages/solid-router/src\"]"
