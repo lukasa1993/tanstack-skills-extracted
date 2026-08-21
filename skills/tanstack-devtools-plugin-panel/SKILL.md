@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.14.1"
+  tanstack-package-version: "0.14.2"
   tanstack-requires: "[\"tanstack-devtools-event-client\"]"
   tanstack-source-skill: "devtools-plugin-panel"
   tanstack-sources: "[\"TanStack/devtools:docs/building-custom-plugins.md\",\"TanStack/devtools:docs/plugin-lifecycle.md\",\"TanStack/devtools:docs/plugin-configuration.md\",\"TanStack/devtools:packages/devtools/src/context/devtools-context.tsx\"]"

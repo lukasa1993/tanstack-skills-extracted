@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.14.1"
+  tanstack-package-version: "0.14.2"
   tanstack-requires: "[\"tanstack-devtools-plugin-panel\"]"
   tanstack-source-skill: "devtools-marketplace"
   tanstack-sources: "[\"docs/third-party-plugins.md\",\"packages/devtools/src/tabs/plugin-registry.ts\",\"packages/devtools/src/tabs/marketplace/types.ts\",\"packages/devtools/src/tabs/marketplace/plugin-utils.ts\",\"packages/devtools-vite/src/inject-plugin.ts\",\"packages/devtools-client/src/index.ts\"]"

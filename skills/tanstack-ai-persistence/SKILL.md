@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.2.0"
+  tanstack-package-version: "0.4.1"
   tanstack-source-skill: "ai-persistence"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/overview.md\",\"TanStack/ai:docs/persistence/chat-persistence.md\",\"TanStack/ai:docs/persistence/client-persistence.md\",\"TanStack/ai:docs/persistence/controls.md\",\"TanStack/ai:docs/persistence/build-your-own-adapter.md\"]"
   tanstack-type: "core"
@@ -85,6 +85,13 @@ Two related route-level rules: a `GET` that serves artifact bytes by id MUST
 authorize the caller against `ArtifactRecord.threadId` before serving (404, not
 403, so valid ids aren't confirmed), and `reconstructGeneration` MUST be given
 `authorize` on any multi-user route. Both take ids straight from the caller.
+
+Portable sandbox snapshots use the same `messages`, `artifacts`, and `blobs`
+stores. Their artifact reader checks the checkpoint thread, but it does not
+authenticate a caller. Authorize the thread before any route reads a snapshot
+artifact. The snapshot checkpoint store also needs atomic append and fork
+operations. A SQLite adapter must write a checkpoint, its head, and blob
+reference counts in one transaction.
 
 ## Sub-skills
 

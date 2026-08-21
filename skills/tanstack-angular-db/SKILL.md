@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/angular-db"
-  tanstack-package-version: "0.1.81"
+  tanstack-package-version: "0.1.82"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "angular-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/angular/overview.md\",\"TanStack/db:packages/angular-db/src/index.ts\"]"

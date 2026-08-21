@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-utils"
-  tanstack-package-version: "0.6.0"
+  tanstack-package-version: "0.7.0"
   tanstack-requires: "[\"tanstack-devtools-plugin-panel\"]"
   tanstack-source-skill: "devtools-framework-adapters"
   tanstack-sources: "[\"TanStack/devtools:docs/devtools-utils.md\",\"TanStack/devtools:packages/devtools-utils/src/react/plugin.tsx\",\"TanStack/devtools:packages/devtools-utils/src/vue/plugin.ts\",\"TanStack/devtools:packages/devtools-utils/src/solid/plugin.tsx\",\"TanStack/devtools:packages/devtools-utils/src/preact/plugin.tsx\"]"

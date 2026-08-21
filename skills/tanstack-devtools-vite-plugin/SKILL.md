@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-vite"
-  tanstack-package-version: "0.8.4"
+  tanstack-package-version: "0.8.5"
   tanstack-source-skill: "devtools-vite-plugin"
   tanstack-sources: "[\"TanStack/devtools:docs/vite-plugin.md\",\"TanStack/devtools:docs/source-inspector.md\",\"TanStack/devtools:packages/devtools-vite/src/plugin.ts\"]"
   tanstack-type: "core"
