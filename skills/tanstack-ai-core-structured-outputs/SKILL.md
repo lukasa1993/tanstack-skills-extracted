@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.47.2"
+  tanstack-package-version: "0.47.3"
   tanstack-source-skill: "ai-core/structured-outputs"
   tanstack-sources: "[\"TanStack/ai:docs/structured-outputs/overview.md\",\"TanStack/ai:docs/structured-outputs/one-shot.md\",\"TanStack/ai:docs/structured-outputs/streaming.md\",\"TanStack/ai:docs/structured-outputs/multi-turn.md\",\"TanStack/ai:docs/structured-outputs/with-tools.md\",\"TanStack/ai:docs/structured-outputs/harnesses.md\"]"
   tanstack-type: "sub-skill"

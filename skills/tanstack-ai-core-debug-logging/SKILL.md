@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.47.2"
+  tanstack-package-version: "0.47.3"
   tanstack-source-skill: "ai-core/debug-logging"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/debug-logging.md\"]"
   tanstack-type: "sub-skill"

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.1"
+  tanstack-package-version: "0.8.2"
   tanstack-source-skill: "db-core/live-queries"
   tanstack-sources: "[\"TanStack/db:docs/guides/live-queries.md\",\"TanStack/db:packages/db/src/query/builder/index.ts\",\"TanStack/db:packages/db/src/query/compiler/index.ts\"]"
   tanstack-type: "sub-skill"

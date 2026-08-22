@@ -2,18 +2,18 @@
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
-| `tanstack-ai-core` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-adapter-configuration` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-ag-ui-protocol` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-chat-experience` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-custom-backend-integration` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-debug-logging` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-middleware` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-structured-outputs` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-tool-calling` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-media-generation` | atomic | `media` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-client-persistence` | atomic | `persistence-coordination` | `@tanstack/ai` | `0.47.2` |  |
-| `tanstack-ai-core-locks` | atomic | `persistence-coordination` | `@tanstack/ai` | `0.47.2` |  |
+| `tanstack-ai-core` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-adapter-configuration` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-ag-ui-protocol` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-chat-experience` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-custom-backend-integration` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-debug-logging` | atomic | `chat-providers` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-middleware` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-structured-outputs` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-tool-calling` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-media-generation` | atomic | `media` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-client-persistence` | atomic | `persistence-coordination` | `@tanstack/ai` | `0.47.3` |  |
+| `tanstack-ai-core-locks` | atomic | `persistence-coordination` | `@tanstack/ai` | `0.47.3` |  |
 | `tanstack-ai-persistence` | atomic | `persistence-coordination` | `@tanstack/ai-persistence` | `0.4.1` |  |
 | `tanstack-ai-persistence-server` | atomic | `persistence-coordination` | `@tanstack/ai-persistence` | `0.4.1` |  |
 | `tanstack-ai-persistence-stores` | atomic | `persistence-coordination` | `@tanstack/ai-persistence` | `0.4.1` |  |
