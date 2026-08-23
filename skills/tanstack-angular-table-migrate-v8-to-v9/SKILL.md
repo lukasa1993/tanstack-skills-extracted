@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
-  tanstack-library-version: "9.2.1"
+  tanstack-library-version: "9.2.2"
   tanstack-package: "@tanstack/angular-table"
-  tanstack-package-version: "9.2.1"
+  tanstack-package-version: "9.2.2"
   tanstack-requires: "[\"tanstack-table-core-migrate-v8-to-v9\",\"tanstack-angular-table-getting-started\",\"tanstack-angular-table-table-state\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/angular/guide/migrating.md\",\"TanStack/table:packages/angular-table/src/index.ts\",\"TanStack/table:examples/angular/basic-inject-table\"]"

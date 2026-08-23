@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.26"
+  tanstack-package-version: "1.171.27"
   tanstack-source-skill: "router-core"
   tanstack-type: "core"
 ---

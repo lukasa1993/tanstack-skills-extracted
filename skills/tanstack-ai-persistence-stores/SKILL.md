@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.4.1"
+  tanstack-package-version: "0.5.0"
   tanstack-source-skill: "ai-persistence/stores"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/store-reference.md\",\"TanStack/ai:docs/persistence/controls.md\",\"TanStack/ai:packages/ai-persistence/src/types.ts\"]"
   tanstack-type: "sub-skill"

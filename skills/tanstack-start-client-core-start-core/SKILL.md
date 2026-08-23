@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.26"
+  tanstack-package-version: "1.170.27"
   tanstack-source-skill: "start-core"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/build-from-scratch.md\",\"TanStack/router:docs/start/framework/react/quick-start.md\",\"TanStack/router:docs/start/framework/react/guide/routing.md\"]"
   tanstack-type: "core"

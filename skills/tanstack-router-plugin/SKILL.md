@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.168.23"
   tanstack-package: "@tanstack/router-plugin"
-  tanstack-package-version: "1.168.34"
+  tanstack-package-version: "1.168.35"
   tanstack-source-skill: "router-plugin"
   tanstack-sources: "[\"TanStack/router:packages/router-plugin/src\",\"TanStack/router:docs/router/routing/file-based-routing.md\",\"TanStack/router:docs/router/guide/code-splitting.md\"]"
   tanstack-type: "core"

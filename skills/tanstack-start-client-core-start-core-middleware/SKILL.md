@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.26"
+  tanstack-package-version: "1.170.27"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\",\"tanstack-start-client-core-start-core-server-functions\"]"
   tanstack-source-skill: "middleware"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/middleware.md\"]"

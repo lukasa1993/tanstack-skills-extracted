@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/start-client-core@1.170.26
+Published package: @tanstack/start-client-core@1.170.27
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |
