@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.2"
+  tanstack-package-version: "0.8.3"
   tanstack-source-skill: "db-core/collection-setup"
   tanstack-sources: "[\"TanStack/db:docs/overview.md\",\"TanStack/db:docs/guides/schemas.md\",\"TanStack/db:docs/collections/query-collection.md\",\"TanStack/db:docs/collections/electric-collection.md\",\"TanStack/db:docs/collections/powersync-collection.md\",\"TanStack/db:docs/collections/rxdb-collection.md\",\"TanStack/db:docs/collections/trailbase-collection.md\",\"TanStack/db:packages/db/src/collection/index.ts\"]"
   tanstack-type: "sub-skill"

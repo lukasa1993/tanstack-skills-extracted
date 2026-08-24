@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/react-db"
-  tanstack-package-version: "0.3.2"
+  tanstack-package-version: "0.3.3"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "react-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/react/overview.md\",\"TanStack/db:docs/guides/live-queries.md\",\"TanStack/db:packages/react-db/src/useLiveQuery.ts\",\"TanStack/db:packages/react-db/src/useLiveInfiniteQuery.ts\"]"
@@ -80,11 +80,13 @@ const { data } = useLiveQuery({
 const { data } = useLiveQuery(preloadedCollection)
 
 // Conditional query — derived identity handles enabled/disabled transitions
-const { data, status } = useLiveQuery((q) => {
-  if (!userId) return undefined
-  return q
-    .from({ todo: todoCollection })
-    .where(({ todo }) => eq(todo.userId, userId))
+const { data, status } = useLiveQuery({
+  query: (q) => {
+    if (!userId) return undefined
+    return q
+      .from({ todo: todoCollection })
+      .where(({ todo }) => eq(todo.userId, userId))
+  },
 })
 // When disabled: status='disabled', data=undefined
 ```

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.2"
+  tanstack-package-version: "0.8.3"
   tanstack-source-skill: "db-core/custom-adapter"
   tanstack-sources: "[\"TanStack/db:docs/guides/collection-options-creator.md\",\"TanStack/db:packages/db/src/collection/sync.ts\"]"
   tanstack-type: "sub-skill"
