@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.48.0"
+  tanstack-package-version: "0.49.1"
   tanstack-source-skill: "ai-core/ag-ui-protocol"
   tanstack-sources: "[\"TanStack/ai:docs/protocol/chunk-definitions.md\",\"TanStack/ai:docs/protocol/sse-protocol.md\",\"TanStack/ai:docs/protocol/http-stream-protocol.md\",\"TanStack/ai:docs/protocol/custom-events.md\"]"
   tanstack-type: "sub-skill"

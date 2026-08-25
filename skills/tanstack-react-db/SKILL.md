@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/react-db"
-  tanstack-package-version: "0.3.3"
+  tanstack-package-version: "0.3.4"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "react-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/react/overview.md\",\"TanStack/db:docs/guides/live-queries.md\",\"TanStack/db:packages/react-db/src/useLiveQuery.ts\",\"TanStack/db:packages/react-db/src/useLiveInfiniteQuery.ts\"]"

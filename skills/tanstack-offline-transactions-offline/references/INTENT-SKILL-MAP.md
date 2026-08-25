@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/offline-transactions@1.0.49
+Published package: @tanstack/offline-transactions@1.0.50
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

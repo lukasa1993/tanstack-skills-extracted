@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.48.0"
+  tanstack-package-version: "0.49.1"
   tanstack-source-skill: "ai-core/middleware"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/middleware.md\",\"TanStack/ai:docs/sandbox/observability.md\",\"TanStack/ai:docs/persistence/overview.md\"]"
   tanstack-type: "sub-skill"

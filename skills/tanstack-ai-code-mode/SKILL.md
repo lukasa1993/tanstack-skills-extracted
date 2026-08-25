@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.3.8"
   tanstack-package: "@tanstack/ai-code-mode"
-  tanstack-package-version: "0.4.3"
+  tanstack-package-version: "0.4.4"
   tanstack-source-skill: "ai-code-mode"
   tanstack-sources: "[\"TanStack/ai:docs/code-mode/code-mode.md\",\"TanStack/ai:docs/code-mode/code-mode-isolates.md\",\"TanStack/ai:docs/code-mode/code-mode-with-snippets.md\",\"TanStack/ai:docs/code-mode/client-integration.md\",\"TanStack/ai:docs/code-mode/lazy-tools.md\"]"
   tanstack-type: "core"
