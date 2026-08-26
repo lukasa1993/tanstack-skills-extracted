@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.4"
+  tanstack-package-version: "0.8.5"
   tanstack-source-skill: "db-core/mutations-optimistic"
   tanstack-sources: "[\"TanStack/db:docs/guides/mutations.md\",\"TanStack/db:packages/db/src/transactions.ts\",\"TanStack/db:packages/db/src/optimistic-action.ts\",\"TanStack/db:packages/db/src/paced-mutations.ts\"]"
   tanstack-type: "sub-skill"
@@ -88,6 +88,11 @@ All three return a `Transaction` object. Use `tx.isPersisted.promise` to await
 settlement or catch rollback errors. For a non-empty transaction, this normally
 means its `mutationFn` returned; it proves upload, confirmation, or read-back
 only when that function waits for the backend observation before returning.
+
+Do not start or await collection preloads, live-query preloads, or direct
+`loadSubset()` calls inside `mutationFn`. Sync commits queue behind mutation
+persistence, so the preload can wait on the mutation that is waiting on it.
+Use the collection adapter's documented mutation acknowledgement pattern.
 
 ---
 

@@ -8,7 +8,7 @@ Set up, scaffold, validate, and maintain skills.
 
 Source: `intent:docs/cli/intent-hooks.md`.
 
-`intent hooks install` installs lifecycle hooks that surface available Intent skills and enforce loading matching guidance before edits in supported agents.
+`intent hooks install` installs lifecycle hooks that surface available Intent skills and gate supported edit tools until they observe an Intent guidance check.
 
 ```bash
 npx @tanstack/intent@latest hooks install [--scope project|user] [--agents copilot,claude,codex|all]
@@ -21,14 +21,30 @@ npx @tanstack/intent@latest hooks install [--scope project|user] [--agents copil
 
 ### Behavior
 
+#### Session behavior
+
 - Installs hook behavior without writing an `intent-skills` guidance block.
-- Adds a session-start skill catalog for supported agents so the agent sees available `skill-id: description` entries before it starts work.
-- Keeps edit enforcement in place: supported edit tools are blocked until the agent runs `intent load <skill-id>` for matching guidance.
+- Returns a session-start skill catalog as agent context with available `skill-id: description` entries.
+- Blocks supported edit tools until the hook observes a recognized `intent list` or `intent load <skill-id>` command. If no listed skill matches the task, the agent can continue without loading one.
+- Uses `package.json#intent.skills` and `package.json#intent.exclude` to control which skills appear in the session catalog.
+
+#### Installation behavior
+
 - `--scope project` writes project-local hook config for agents that support it.
 - `--scope user` writes user-level agent config and stores runner scripts under `~/.tanstack/intent/hooks`.
 - `--agents all` is the default. In project scope, Copilot is skipped because the supported Copilot CLI hook location is user-scoped.
 - Run `intent install` separately when you also want to write project guidance.
-- Use `package.json#intent.skills` and `package.json#intent.exclude` to control which skills are surfaced in the session catalog.
+
+The hook records a recognized list or load command before that command completes.
+
+Hooks do not verify that:
+
+- The command succeeded.
+- The selected skill matched the task.
+- The agent received the returned content.
+- The model applied the guidance.
+
+Hook output is an edit gate and observation signal, not proof of activation or correct agent behavior. See [Lifecycle boundaries](./trust-configuration.md#source-intent-docs-concepts-trust-model-md).
 
 ### Hook support
 
@@ -151,16 +167,19 @@ npx @tanstack/intent@latest setup
 
 ### What each command changes
 
-- `edit-package-json`
-  - Requires a valid `package.json` in current directory
-  - Ensures `keywords` includes `tanstack-intent`
-  - Ensures `files` includes required publish entries
-  - Preserves existing indentation
-- `setup`
-  - Copies the `check-skills.yml` workflow template from `@tanstack/intent/meta/templates/workflows` to `.github/workflows`
-  - Applies variable substitution (`PACKAGE_NAME`, `PACKAGE_LABEL`, `PAYLOAD_PACKAGE`, `REPO`, `DOCS_PATH`, `SRC_PATH`, `WATCH_PATHS`)
-  - Detects the workspace root in monorepos and writes repo-level workflows there
-  - Skips files that already exist at destination
+#### `edit-package-json`
+
+- Requires a valid `package.json` in the current directory
+- Ensures `keywords` includes `tanstack-intent`
+- Ensures `files` includes required publish entries
+- Preserves existing indentation
+
+#### `setup`
+
+- Copies the `check-skills.yml` workflow template from `@tanstack/intent/meta/templates/workflows` to `.github/workflows`
+- Applies variable substitution (`PACKAGE_NAME`, `PACKAGE_LABEL`, `PAYLOAD_PACKAGE`, `REPO`, `DOCS_PATH`, `SRC_PATH`, `WATCH_PATHS`)
+- Detects the workspace root in monorepos and writes repo-level workflows there
+- Skips files that already exist at the destination
 
 ### Required `files` entries
 
@@ -205,14 +224,22 @@ npx @tanstack/intent@latest stale [--json]
 
 ### Behavior
 
+#### Scope
+
 - Checks the current package by default
 - From a monorepo root, checks workspace packages that ship skills and also reports public workspace packages with no skill or artifact coverage
 - Applies the `package.json#intent.skills` allowlist when falling back to installed dependencies; workspace packages are first-party and checked regardless. See [Configuration](./trust-configuration.md#source-intent-docs-concepts-configuration-md).
 - When `dir` is provided, scopes the check to the targeted package or skills directory
 - Computes one staleness report per package
+
+#### Coverage
+
 - Reads repo-root `_artifacts/*domain_map.yaml` and `_artifacts/*skill_tree.yaml` when present
 - Flags public workspace packages that are not represented by generated skills or artifact coverage
 - Skips workspace packages with `"private": true`
+
+#### Output and workflow state
+
 - Prints text output by default or JSON with `--json`
 - Prints a non-failing workflow update reminder when `.github/workflows/check-skills.yml` is missing the current `intent-workflow-version` stamp
 - If no packages are found, prints `No intent-enabled packages found.`
@@ -264,12 +291,14 @@ Ignored packages are excluded from missing coverage signals. Private workspace p
 
 Report fields:
 
-- `library`: package name
-- `currentVersion`: latest version from npm registry (or `null` if unavailable)
-- `skillVersion`: `library_version` from skills (or `null`)
-- `versionDrift`: `major | minor | patch | null`
-- `skills`: array of per-skill checks
-- `signals`: array of artifact and workspace coverage checks
+| Field | Meaning |
+| --- | --- |
+| `library` | Package name |
+| `currentVersion` | Latest version from npm registry, or `null` if unavailable |
+| `skillVersion` | `library_version` from skills, or `null` |
+| `versionDrift` | `major`, `minor`, `patch`, or `null` |
+| `skills` | Per-skill checks |
+| `signals` | Artifact and workspace coverage checks |
 
 Skill fields:
 
@@ -354,21 +383,25 @@ npx @tanstack/intent@latest validate --fix
 
 ### Validation checks
 
-For each discovered `SKILL.md`:
+#### File structure
 
 - Frontmatter delimiter and structure are valid
 - YAML frontmatter parses successfully
 - Required fields exist: `name`, `description`
 - `name` is a single leaf segment matching the skill's parent directory (no slashes); the namespace is carried by the directory path
-- `name` uses only lowercase letters, numbers, and hyphens
-- `name` is at most 64 characters
+- `name` uses only lowercase letters, numbers, and hyphens and is at most 64 characters
+
+#### Field rules
+
 - Only spec top-level keys are allowed (`name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`); Intent-specific scalars (`type`, `library`, `library_version`, `framework`) must live under `metadata`
 - `metadata`, when present, is a mapping of string values
 - `description` length is at most 1024 characters
 - `type: framework` requires `requires` to be an array
 - Total file length is at most 500 lines
 
-If `<dir>/_artifacts` exists, it also validates artifacts:
+#### Artifacts
+
+When `<dir>/_artifacts` exists, Intent also checks:
 
 - Required files: `domain_map.yaml`, `skill_spec.md`, `skill_tree.yaml`
 - Required files must be non-empty
@@ -452,7 +485,7 @@ This prints a comprehensive prompt that walks you and your agent through three p
 - Validates against the Intent specification
 
 > [!NOTE]
-> This is a context-heavy process that involves domain discovery, GitHub issues analysis, and interactive maintainer interviews. The agent will scan your documentation, recent issues and discussions, and ask targeted questions to surface implicit knowledge and common failure modes. The more information you provide about your library's patterns, pitfalls, and real-world usage problems, the better the generated skills will be. Expect multiple rounds of refinement and regular context compaction before completion.
+> Plan for multiple review rounds and regular context compaction. The agent scans documentation, recent issues, and discussions, then asks targeted questions about implicit knowledge and common failure modes. Provide concrete patterns, pitfalls, and real-world usage problems to improve the generated skills.
 
 #### 2. Validate skills
 
@@ -462,17 +495,19 @@ After scaffolding, validate that all SKILL.md files are well-formed:
 npx @tanstack/intent@latest validate
 ```
 
-This checks:
+This checks skill structure:
+
 - Valid YAML frontmatter in every SKILL.md
 - Required fields (`name`, `description`) are present
 - Skill `name` is a leaf segment matching its parent directory
-- Intent-specific scalars (`type`, `library`, `library_version`, `framework`) live under `metadata`, not at the top level
 - Description length <= 1024 characters
 - Line count limits (500 lines max per skill)
-- Framework skills have a `requires` array
-- Artifact files exist and are non-empty
 
-If any artifacts are present (domain_map.yaml, skill_spec.md, skill_tree.yaml), they must parse as valid YAML.
+It also checks Intent metadata and artifacts:
+
+- Intent-specific scalars (`type`, `library`, `library_version`, `framework`) live under `metadata`, not at the top level
+- Framework skills have a `requires` array
+- Required artifact files exist and are non-empty; YAML artifacts parse successfully
 
 #### 3. Commit skills and artifacts
 
@@ -531,8 +566,8 @@ Consumers who install your library automatically get the skills. They discover l
 
 **Version alignment:**
 - Skills version with your library releases
-- Agents always load the skill matching the installed library version
-- No drift between code and guidance
+- `intent load` returns skill content from the installed package version
+- Packaging code and skills together keeps their versions aligned
 
 ---
 
@@ -543,9 +578,15 @@ Consumers who install your library automatically get the skills. They discover l
 After running `setup`, you'll have `check-skills.yml` in `.github/workflows/`:
 
 **check-skills.yml** (runs on PRs touching skills/artifacts, release, or manual trigger)
+
+Validation:
+
 - Validates SKILL.md frontmatter and structure
 - Ensures files stay under 500 lines
 - Automatically detects stale skills and coverage gaps after you publish a new release
+
+Review handoff:
+
 - Opens one grouped review PR with an agent-friendly prompt
 - Includes the reason each skill or package was flagged
 - Requires you to copy the prompt into Claude Code, Cursor, or your agent to update skills
@@ -580,11 +621,15 @@ coverage:
 
 Private workspace packages are skipped automatically.
 
-**To update stale skills:**
+**Prepare the update:**
+
 1. Review the PR opened by `check-skills.yml`
 2. Copy the agent prompt from the PR description
 3. Paste it into Claude Code, Cursor, or your coding agent
 4. The agent reads the stale skills and updates them based on library changes
+
+**Finish the update:**
+
 5. Run `npx @tanstack/intent@latest validate` locally to verify
 6. Commit and merge the PR
 

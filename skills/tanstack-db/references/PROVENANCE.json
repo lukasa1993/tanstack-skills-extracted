@@ -8,18 +8,18 @@
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "db-core",
-      "sha256": "31ef8f4512b23d3d75521fcb17da51df9e3e554052903ec0af98b140010176a4"
+      "sha256": "c9dac9c34fffa800f9f12c326634dbb6c8df258540da9a97c497dcdeb980cacc"
     },
     {
       "id": "tanstack-db-meta-framework",
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "meta-framework",
-      "sha256": "0ee3315743fc18b0fe6b5662ca4c80423f3c88b932ae86111d8559b443b5782e"
+      "sha256": "3825751adaf2a1dba5702541293e04474ed687153147269ecd4e039e97fa1f75"
     },
     {
       "id": "tanstack-db-playbook-tanstack-db",
@@ -45,9 +45,9 @@
       "kind": "atomic",
       "theme": "collections-schema",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "db-core/collection-setup",
-      "sha256": "a7c288164a6447ad12443e6aaa33a9364e48ecd6addca8cab91ed5fb7f104079"
+      "sha256": "da0ce873aea0bdefddefbb3b0ae46b8c8438710f11ff02afb8b5d78be917da44"
     },
     {
       "id": "tanstack-db-playbook-tanstack-db-collections",
@@ -92,9 +92,9 @@
       "kind": "atomic",
       "theme": "live-queries",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "db-core/live-queries",
-      "sha256": "d4936ef8095adf422352a186e50a9c5ddd5c1c55d83812c67e7058cbd59f483f"
+      "sha256": "512a8936c1bd6540f92db183eee0230d94fa632d8e127308581503089773ed1e"
     },
     {
       "id": "tanstack-db-playbook-tanstack-db-live-queries",
@@ -120,9 +120,9 @@
       "kind": "atomic",
       "theme": "mutations",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "db-core/mutations-optimistic",
-      "sha256": "1a57bd706d3860743aaef1934972fa865c1b69bb3937311780e4236dab9b6d50"
+      "sha256": "f6ceeadece7e92b303c7d90863d1fc64383312318bb1327677a82aa12f3f78d7"
     },
     {
       "id": "tanstack-db-playbook-tanstack-db-mutations",
@@ -148,27 +148,27 @@
       "kind": "atomic",
       "theme": "sync-persistence",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "db-core/custom-adapter",
-      "sha256": "779c67967206facf6c9af6f7e622200617cdece13aaa02fed2fa9e2be18c21e7"
+      "sha256": "0eab0cdbd5414b7b1de225bb9f1437caaecdf85d4fd3df63d2fa91bc4ed64742"
     },
     {
       "id": "tanstack-db-core-persistence",
       "kind": "atomic",
       "theme": "sync-persistence",
       "package": "@tanstack/db",
-      "version": "0.8.4",
+      "version": "0.8.5",
       "sourcePath": "db-core/persistence",
-      "sha256": "5b0e1faf399ccb80816aa8fa9224cb0c8b4ed878f08f8bb3aa3f1b04dbb6204d"
+      "sha256": "55423b5f67ca7bf0ebed28f570cc8ab01fecfff2d5c3fced48141b720c02ac3b"
     },
     {
       "id": "tanstack-offline-transactions-offline",
       "kind": "atomic",
       "theme": "sync-persistence",
       "package": "@tanstack/offline-transactions",
-      "version": "1.0.50",
+      "version": "1.0.51",
       "sourcePath": "offline",
-      "sha256": "a9a93a1a2c3da362f294844341a382fd0ff6646ce34bb3c48b1f27ddb670a1c9"
+      "sha256": "95a6553ebf2447c22d2ee26a46442fa3e335eace6c088890c8103f002b85254f"
     },
     {
       "id": "tanstack-db-playbook-tanstack-db-electric",
@@ -194,45 +194,45 @@
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-db",
-      "version": "0.3.4",
+      "version": "0.3.5",
       "sourcePath": "react-db",
-      "sha256": "3f923950a7f7f9fc8cfccbc4700877eb456d6b81371a34c3533fdac33d6de0eb"
+      "sha256": "c0dc40a4e753f4b6a0d7add4abb559baee8edd4041cfcae918e2182cca94759d"
     },
     {
       "id": "tanstack-vue-db",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-db",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "sourcePath": "vue-db",
-      "sha256": "ecf93e36fe73eb41d32d3df69c5ffdd031bf9139765709132c422fa69e72eec7"
+      "sha256": "375608c31b306246f6a83fdf5144845da3988115f29a2ffe23a9ecb46f758396"
     },
     {
       "id": "tanstack-solid-db",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-db",
-      "version": "0.2.39",
+      "version": "0.2.40",
       "sourcePath": "solid-db",
-      "sha256": "4e814a23398ed5f198ba3bff43580a2e73d04534d57738433a206f5e1b31ae02"
+      "sha256": "ed069d54ba2bf427954225fbfec7c0fa34f26da1ea267195a56445c5f01eb1cb"
     },
     {
       "id": "tanstack-svelte-db",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-db",
-      "version": "0.3.4",
+      "version": "0.3.5",
       "sourcePath": "svelte-db",
-      "sha256": "faefb9e118068effbbcfedff656f7bfe345691ce95d822a2c1cff8c58a054144"
+      "sha256": "8fdd258a39ad6072942c421b2fcc6996b1b532fa37cdaa56fc99539eeec672d7"
     },
     {
       "id": "tanstack-angular-db",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-db",
-      "version": "0.1.85",
+      "version": "0.1.86",
       "sourcePath": "angular-db",
-      "sha256": "ec4b0c790215b813a4033f604dc56eeee1c88c151ba14d81da1fe6d7959b3b28"
+      "sha256": "6689f3e460b2e3a870f0e20da00d1dd21438ca490e50f14320be1b15b1687a69"
     }
   ],
   "duplicateDocuments": [

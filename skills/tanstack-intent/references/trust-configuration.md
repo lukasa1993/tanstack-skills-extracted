@@ -8,7 +8,7 @@ Trust boundaries, configuration, registry, and overview.
 
 Source: `intent:docs/concepts/configuration.md`.
 
-Intent reads consumer configuration from the `intent` object in `package.json`. Two keys control which skills reach your agent: `skills` (the allowlist) and `exclude` (the blocklist).
+Intent reads consumer configuration from the `intent` object in `package.json`. Two keys control which discovered skills Intent surfaces: `skills` (the allowlist) and `exclude` (the blocklist).
 
 ```json
 {
@@ -19,11 +19,22 @@ Intent reads consumer configuration from the `intent` object in `package.json`. 
 }
 ```
 
-Intent merges these keys from every `package.json` between the current working directory and the workspace or project root. A monorepo package inherits the root configuration and adds its own.
+### Configuration inheritance
+
+- **`intent.skills`:** Intent uses the nearest non-null declaration between the current working directory and the workspace or project root. A nearer declaration replaces its parent. An omitted or null value inherits the nearest parent declaration.
+- **`intent.exclude`:** Intent combines arrays from the root through the current working directory, then adds excludes passed by the caller.
 
 ### `intent.skills`
 
-`intent.skills` is the allowlist. Only packages it permits contribute skills to `list`, `load`, `install`, and `stale`. See [Trust model](./trust-configuration.md#source-intent-docs-concepts-trust-model-md) for the reasoning.
+`intent.skills` is a package-source allowlist. A permitted package can:
+
+- Appear in `list` and `stale`.
+- Resolve through `load`.
+- Contribute mappings to `install --map`.
+
+The default `install` command writes generic loading guidance without scanning packages. See [Trust model](./trust-configuration.md#source-intent-docs-concepts-trust-model-md) for the reasoning and lifecycle boundaries.
+
+The allowlist permits packages, not individual skills. An entry containing `#` is invalid; use `intent.exclude` for skill-specific filtering.
 
 #### Source entries
 
@@ -31,26 +42,29 @@ Each array entry names one source:
 
 | Entry | Kind | Meaning |
 | ----- | ---- | ------- |
-| `@scope/pkg` or `pkg` | npm | A package reachable through the dependency tree, direct or transitive. |
+| `@scope/pkg` or `pkg` | npm | An npm package reachable through the dependency tree, direct or transitive. |
 | `workspace:@scope/pkg` | workspace | A package in the current workspace. |
-| `@scope/*` or `workspace:@scope/*` | npm or workspace | Every discovered package of that kind whose name matches the pattern. |
+| `@scope/*` | npm | Every discovered npm package whose name matches the pattern. |
+| `workspace:@scope/*` | workspace | Every discovered workspace package whose name matches the pattern. |
 | `git:<host>/<repo>#<ref>` | git | Reserved. Not yet supported, and rejected until a future version adds it. |
 
-A malformed entry fails the whole command, and every bad entry is reported at once. Package patterns support `*` wildcards, including scoped patterns such as `@tanstack/*`. Intent matches allowlist entries against discovered package names. This matching will tighten in a future version.
+A malformed entry fails the whole command, and every bad entry is reported at once. Package patterns support `*` wildcards, including scoped patterns such as `@tanstack/*`. Intent matches both the package name and source kind: a bare entry permits only an npm source, and a `workspace:` entry permits only a workspace source.
 
 #### Special forms
 
-The list as a whole has three special forms:
+| Form | Result | Notice |
+| --- | --- | --- |
+| **Absent:** no `intent.skills` key | Surfaces every discovered package as an upgrade path for existing projects. A future version will require an explicit allowlist. | Deprecation notice on stderr on each run until you set `intent.skills`. |
+| **Empty:** `"skills": []` | Surfaces no packages. | Info notice on stderr. |
+| **Wildcard:** `"skills": ["*"]` | Surfaces every discovered package across package scopes and source kinds. This is broader than a pattern such as `@tanstack/*`. | Acknowledged-risk notice on stderr because unvetted skills may reach your agent. |
 
-- **Absent.** No `intent.skills` key. Every discovered package is surfaced, and Intent prints a deprecation notice to stderr on each run until you set `intent.skills`. This is the upgrade path for existing projects. A future version will require an explicit allowlist.
-- **Empty.** `"skills": []`. No package is surfaced. Intent prints an info notice to stderr.
-- **Wildcard.** `"skills": ["*"]`. Every discovered package is surfaced. Unlike a package pattern such as `@tanstack/*`, this exact entry crosses package scopes and source kinds. Intent prints an acknowledged-risk notice to stderr, since unvetted skills may reach your agent.
-
-A package that ships skills but is not listed is dropped. When packages are dropped this way, Intent prints one summary line naming them so you can opt in. A listed package that was not discovered is reported as well.
+A package that ships skills but is not listed is dropped. In human output, Intent adds one policy notice naming packages dropped this way so you can opt in. Agent sessions receive only the hidden package and skill counts. A listed package that was not discovered is reported as a notice as well.
 
 #### Existing projects
 
-A project that has not set `intent.skills` keeps working. Intent surfaces every discovered package and prints the deprecation notice described under the absent form. Nothing breaks. Add an allowlist when you are ready, before a future version requires one. Run `intent list` to confirm which packages are surfaced.
+Run `intent list` to see which packages the current policy surfaces.
+
+A project without `intent.skills` uses the absent form: Intent surfaces every discovered package and prints its deprecation notice. Add an allowlist to permit specific sources before a future version requires one.
 
 #### Suppressing notices temporarily
 
@@ -62,6 +76,8 @@ npx @tanstack/intent@latest install --map --no-notices
 ```
 
 For CI or wrapper scripts, set `INTENT_NO_NOTICES=1` to suppress notices without changing command arguments.
+
+Discovery and resolution warnings are separate from policy notices and are not suppressed by these options. The acknowledged-risk notice for `"skills": ["*"]` also remains visible when other notices are suppressed.
 
 ### `intent.exclude`
 
@@ -91,7 +107,7 @@ Pattern grammar:
 - A pattern may cross package boundaries at skill granularity: `*#experimental-*`.
 - The `#*` shortcut excludes the whole package: `@scope/pkg#*`.
 
-Only exact names and `*` wildcards are supported on each segment. Bare package-name patterns keep working unchanged. An excluded package does not trigger the unlisted-source warning, because an exclude is an explicit decision.
+Only exact names and `*` wildcards are supported on each segment. Excludes are source-kind agnostic, so a package pattern excludes matching npm and workspace sources. An excluded package does not trigger the unlisted-source notice, because an exclude is an explicit decision.
 
 <a id="source-intent-docs-concepts-trust-model-md"></a>
 
@@ -99,17 +115,17 @@ Only exact names and `*` wildcards are supported on each segment. Bare package-n
 
 Source: `intent:docs/concepts/trust-model.md`.
 
-Intent surfaces skills from your dependencies into your coding agent's guidance. A skill is instructions an agent follows, so the set of packages allowed to contribute skills is a trust decision. Intent makes that decision explicit through the `intent.skills` allowlist.
+Intent discovers skills from your dependencies and can surface permitted skills through its CLI and agent integrations. A skill is instructions an agent follows, so the set of packages allowed to contribute skills is a trust decision. Intent makes that decision explicit through the `intent.skills` allowlist.
 
 ### Explicit sources
 
 A package ships skills in a `skills/` directory. Discovery finds every installed package that has one, including transitive dependencies. Discovery does not grant trust.
 
-`package.json#intent.skills` is the gate. A discovered package contributes skills only when an exact entry or `*` pattern in the allowlist matches it. An unlisted package is dropped, and Intent reports it so you can opt in or ignore it.
+`package.json#intent.skills` is the gate. A discovered package contributes skills only when an exact entry or `*` pattern in the allowlist matches its package name and source kind. An unlisted package is dropped, and Intent reports it so you can opt in or ignore it.
 
 The gate is opt-in today. A project with no `intent.skills` key still surfaces every discovered package, and Intent prints a deprecation notice to stderr on each run until you set `intent.skills`. A future version will require an explicit allowlist. See the [special forms](./trust-configuration.md#source-intent-docs-concepts-configuration-md) in Configuration.
 
-Trust does not propagate. A listed package may depend on another package that ships skills, but that dependency stays unlisted unless another entry matches it. Exact entries allow one source; patterns such as `@tanstack/*` explicitly allow every matching source.
+Trust does not propagate. A listed package may depend on another package that ships skills, but that dependency stays unlisted unless another entry matches it. A bare entry such as `foo` permits an npm source, while `workspace:foo` permits a workspace source. Their wildcard forms remain kind-specific. The exact `*` entry permits every discovered npm and workspace source.
 
 ### Static discovery
 
@@ -117,9 +133,22 @@ Intent reads package data as files. It never imports, requires, or executes the 
 
 One exception is sanctioned: in Yarn Plug'n'Play projects, Intent loads Yarn's PnP runtime (`.pnp.cjs`) to map package identities to readable locations. It loads no package entry points, bins, lifecycle scripts, or other package-provided JavaScript. An ESLint rule enforces this invariant in the discovery code.
 
-### What the allowlist does not cover yet
+### Lifecycle boundaries
 
-Matching is currently by package name. A `workspace:foo` entry and a bare `foo` entry both authorize a discovered package named `foo`, because the scanner does not yet distinguish a workspace member from a published package of the same name. This errs toward permitting a same-named package, never toward denying one you listed. A future version tightens matching once the scanner carries that signal.
+Intent uses six lifecycle stages in order. It can observe the first three and its side of delivery. Activation and application depend on agent behavior.
+
+| State | Meaning | Observable by Intent |
+| --- | --- | --- |
+| **1. Available** | Intent discovered the skill from an installed or workspace package. | Yes. |
+| **2. Permitted** | Project policy allows the package and skill to surface. `intent.exclude` can remove a package or skill after `intent.skills` permits its source. | Yes. |
+| **3. Loaded** | A supported load path resolved the skill and returned its content. | Yes. |
+| **4. Delivered** | Intent placed guidance where an agent integration can access it, such as a managed guidance block or session hook context. | Intent can confirm its output, not agent receipt. |
+| **5. Activated** | The agent selected or received the skill for a particular task. | No. |
+| **6. Applied** | The model followed the skill correctly. | No. |
+
+A hook observing an `intent load` command does not prove that the command succeeded, that the skill was relevant, or that the model used its guidance.
+
+### Unsupported sources
 
 The `git:` source kind is reserved. Intent parses and validates the shape, then rejects it until a future version can pin the resolved ref and content hash. A git entry never loads silently.
 
@@ -131,7 +160,7 @@ Source: `intent:docs/overview.md`.
 
 `@tanstack/intent` is a CLI for shipping and consuming Agent Skills as package artifacts.
 
-Skills are markdown documents that teach AI coding agents how to use your library correctly. Intent versions them with your releases and ships them inside npm packages. It discovers skills from your project and workspace dependencies, then helps agents load them when working on matching tasks.
+Skills are markdown documents that teach AI coding agents how to use your library correctly. Intent versions them with your releases and ships them inside npm packages. It discovers skills from project and workspace dependencies, then provides commands and guidance for loading them.
 
 ### What Intent does
 
@@ -142,21 +171,21 @@ Intent provides tooling for two workflows:
 - Discover skills from your project and workspace dependencies
 - Control which packages' skills are surfaced with an allowlist
 - Add lightweight skill loading guidance to your agent config
-- Add hook enforcement for agents that support blocking lifecycle hooks
-- Keep skills synchronized with library versions
+- Add session catalogs and edit gates for supported agents
+- Use skills packaged with installed library versions
 
 **For maintainers (library teams):**
 
 - Scaffold skills through AI-assisted domain discovery
 - Validate SKILL.md format and packaging
 - Ship skills in the same release pipeline as code
-- Track staleness when source docs change
+- Review version, source, artifact, and package coverage signals
 
 ### How it works
 
 #### Discovery and installation
 
-Examples use `npx` for npm projects. In pnpm, Yarn, or Bun projects, use the matching runner:
+Use the runner for your package manager:
 
 | Tool | Pattern                                      |
 | ---- | -------------------------------------------- |
@@ -183,7 +212,7 @@ Creates or updates lightweight `intent-skills` guidance in your config files (`A
 npx @tanstack/intent@latest hooks install
 ```
 
-Installs hook enforcement for supported agents. Project-scoped hooks are available for Claude Code and Codex. GitHub Copilot CLI project guidance can live in `.github/copilot-instructions.md`, while blocking hooks are user-scoped. Cursor and generic `AGENTS.md` agents use guidance only.
+Installs session catalogs and edit gates for supported agents. Project-scoped hooks are available for Claude Code and Codex. GitHub Copilot CLI project guidance can live in `.github/copilot-instructions.md`, while blocking hooks are user-scoped. Cursor and generic `AGENTS.md` agents use guidance only. See [intent hooks](./maintainer-workflow.md#source-intent-docs-cli-intent-hooks-md) for what hooks can observe.
 
 ```bash
 npx @tanstack/intent@latest load @tanstack/query#fetching
@@ -211,7 +240,7 @@ Enforces SKILL.md format rules and packaging requirements before publish.
 npx @tanstack/intent@latest stale
 ```
 
-Detects when skills reference outdated source documentation or library versions.
+Reports version drift and source, artifact, or package coverage signals that may require skill review.
 
 <a id="source-intent-docs-registry-md"></a>
 

@@ -75,15 +75,20 @@ npx @tanstack/intent@latest install [--map] [--dry-run] [--print-prompt] [--glob
 
 ### Behavior
 
+#### Default guidance
+
 - Writes lightweight skill loading guidance by default.
 - Creates `AGENTS.md` when no managed block exists.
 - Updates an existing managed block in a supported config file.
 - Preserves all content outside the managed block.
+- Verifies the managed block before reporting success.
+
+#### Mapping mode
+
 - Scans packages and writes compact `id`, `run`, and `for` mappings only when `--map` is passed.
 - Surfaces packages permitted by `package.json#intent.skills` in `--map` mode. See [Configuration](./trust-configuration.md#source-intent-docs-concepts-configuration-md).
 - Skips reference, meta, maintainer, and maintainer-only skills in `--map` mode.
 - Writes compact skill identities and runnable guidance commands instead of local file paths in `--map` mode.
-- Verifies the managed block before reporting success.
 - Prints `No intent-enabled skills found.` and does not create a config file when `--map` finds no actionable skills.
 
 Supported config files: `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `.github/copilot-instructions.md`.
@@ -126,13 +131,15 @@ tanstackIntent:
 
 ### Status messages
 
-- Created: `Created AGENTS.md with 1 mapping.`
-- Updated: `Updated AGENTS.md with 2 mappings.`
-- Unchanged: `No changes to AGENTS.md; 2 mappings already current.`
-- Guidance created: `Created AGENTS.md with skill loading guidance.`
-- Guidance unchanged: `No changes to AGENTS.md; skill loading guidance already current.`
-- Placement tip: `Tip: Keep the intent-skills block near the top of AGENTS.md so agents read it before task-specific instructions.`
-- No actionable skills in `--map` mode: `No intent-enabled skills found.`
+| Result | Message |
+| --- | --- |
+| Mapping created | `Created AGENTS.md with 1 mapping.` |
+| Mappings updated | `Updated AGENTS.md with 2 mappings.` |
+| Mappings unchanged | `No changes to AGENTS.md; 2 mappings already current.` |
+| Guidance created | `Created AGENTS.md with skill loading guidance.` |
+| Guidance unchanged | `No changes to AGENTS.md; skill loading guidance already current.` |
+| Placement tip | `Tip: Keep the intent-skills block near the top of AGENTS.md so agents read it before task-specific instructions.` |
+| No actionable skills in `--map` mode | `No intent-enabled skills found.` |
 
 To suppress trust and migration notices in automation, pass `--no-notices`.
 
@@ -157,30 +164,38 @@ npx @tanstack/intent@latest list [--json] [--debug] [--global] [--global-only] [
 
 ### Options
 
+#### Output
+
 - `--json`: print JSON instead of text output
 - `--debug`: print discovery debug details to stderr
+- `--no-notices`: suppress non-critical notices on stderr; the acknowledged-risk notice for `intent.skills: ["*"]` remains visible
+
+#### Scan scope
+
 - `--global`: include global packages after project packages
 - `--global-only`: list global packages only
 - `--show-hidden`: show unlisted hidden skill sources when run outside an agent session
-- `--no-notices`: suppress non-critical notices on stderr
 
 ### What you get
+
+#### Selection
 
 - Scans project and workspace dependencies for intent-enabled packages and skills
 - Surfaces packages permitted by `package.json#intent.skills` (see [Allowlist](#allowlist))
 - Includes global packages only when `--global` or `--global-only` is passed
-- Includes warnings from discovery
 - Excludes packages and skills matched by package.json `intent.exclude`
-- Prints debug details to stderr when `--debug` is passed
-- If no packages are discovered, prints `No intent-enabled packages found.`
+
+When both local and global packages are scanned, local packages take precedence. `SOURCE` shows whether the selected package came from local discovery or explicit global scanning.
+
+#### Text output
+
 - Summary line with package count and skill count
 - Package table columns: `PACKAGE`, `SOURCE`, `VERSION`, `SKILLS`
 - Skill tree grouped by package
-- Optional warnings section (`⚠ ...` per warning)
-- Optional notices section on stderr (`ℹ ...` per notice), suppressed by `--no-notices`
+- Discovery warnings (`⚠ ...`) on stdout
+- `No intent-enabled packages found.` when no packages are discovered
 
-`SOURCE` is a lightweight indicator showing whether the selected package came from local discovery or explicit global scanning.
-When both local and global packages are scanned, local packages take precedence.
+Policy notices (`ℹ ...`) are written to stderr.
 
 ### JSON output
 
@@ -264,7 +279,7 @@ The list as a whole has three special forms:
 - **Empty** (`"skills": []`): no package is surfaced, with an info notice printed to stderr.
 - **Wildcard** (`"skills": ["*"]`): every discovered package is surfaced, with an acknowledged-risk notice printed to stderr. This exact trust-all entry is distinct from a scoped package pattern such as `@tanstack/*`.
 
-A package that ships skills but is not listed or matched by a pattern is dropped. When packages are dropped this way, Intent prints one summary line naming them so you can opt in. In agent sessions, hidden sources are reported by count only; run `intent list --show-hidden` outside the agent session to review candidates. An exact entry or pattern that matches no discovered package is reported as well. Package patterns support `*` wildcards. Matching is currently by package name. See [Configuration](./trust-configuration.md#source-intent-docs-concepts-configuration-md) and [Trust model](./trust-configuration.md#source-intent-docs-concepts-trust-model-md).
+A package that ships skills but is not listed or matched by a pattern is dropped. When packages are dropped this way, Intent prints one policy notice naming them so you can opt in. In agent sessions, hidden sources are reported by count only; run `intent list --show-hidden` outside the agent session to review candidates. An exact entry or pattern that matches no discovered package is reported as well. Package patterns support `*` wildcards. Matching uses both package name and source kind. See [Configuration](./trust-configuration.md#source-intent-docs-concepts-configuration-md) and [Trust model](./trust-configuration.md#source-intent-docs-concepts-trust-model-md).
 
 ### Excludes
 
@@ -282,13 +297,12 @@ Manage persistent excludes with `intent exclude add|remove|list`.
 
 A pattern without `#` excludes a whole package. A pattern with `#` excludes a single skill (`@scope/pkg#search-params`), and the skill segment may itself be a glob (`@scope/pkg#experimental-*`). A pattern may cross package boundaries at skill granularity (`*#experimental-*`). The `#*` shortcut (`@scope/pkg#*`) excludes the whole package. Only exact names and `*` wildcards are supported on each segment. Bare package-name patterns keep working unchanged.
 
-An excluded package never triggers the unlisted-source warning, because an exclude is an explicit decision rather than an oversight.
+An excluded package never triggers the unlisted-source notice, because an exclude is an explicit decision rather than an oversight.
 
 ### Common errors
 
 - Scanner failures are printed as errors
-- Unsupported environments:
-  - Deno projects without `node_modules`
+- Deno projects without `node_modules` are unsupported
 
 <a id="source-intent-docs-cli-intent-load-md"></a>
 
@@ -312,16 +326,26 @@ npx @tanstack/intent@latest load <package>#<skill> [--path] [--json] [--debug] [
 
 ### What you get
 
+#### Resolution
+
 - Validates `<package>#<skill>` before scanning
 - Scans project-local packages by default
 - Includes global packages only when `--global` or `--global-only` is passed
-- Refuses before scanning when the target package is not permitted by `package.json#intent.skills`
+- Checks the target package name against `package.json#intent.skills` before resolution, then enforces its source kind after resolution
 - Refuses before scanning when the target package or skill matches `intent.exclude`
+
+#### Selection
+
 - Prefers local packages when `--global` is used and the same package exists locally and globally
 - Accepts an unambiguous short skill name when a package-prefixed skill exists
+
+#### Output
+
 - Prints raw `SKILL.md` content by default
 - Prints the scanner-reported path when `--path` is passed
 - Prints debug details to stderr when `--debug` is passed
+
+A successful load proves that Intent resolved the selected skill under current policy and returned its content. It does not prove that the skill was relevant to the task, reached an agent's active context, or was followed correctly. See [Lifecycle boundaries](./trust-configuration.md#source-intent-docs-concepts-trust-model-md).
 
 The package can be scoped or unscoped. The skill can include slash-separated sub-skill names.
 
@@ -353,12 +377,20 @@ npx @tanstack/intent@latest load some-lib#core --path
 
 ### Common errors
 
+#### Invalid skill identity
+
 - Missing separator: `Invalid skill use "@tanstack/query": expected <package>#<skill>.`
 - Empty package: `Invalid skill use "#core": package is required.`
 - Empty skill: `Invalid skill use "@tanstack/query#": skill is required.`
+
+#### Resolution failures
+
 - Missing package: `Cannot resolve skill use "...": package "..." was not found.`
 - Missing skill: `Cannot resolve skill use "...": skill "..." was not found in package "...".`
 - Skill suggestion: `Did you mean @tanstack/router-core#router-core/auth-and-guards?`
+
+#### Policy refusals
+
 - Unlisted package: `Cannot load skill use "...": package "..." is not listed in intent.skills.`
 - Excluded package: `Cannot load skill use "...": package "..." is excluded by Intent configuration.`
 - Excluded skill: `Cannot load skill use "...": skill "..." is excluded by Intent configuration.`
@@ -376,19 +408,17 @@ npx @tanstack/intent@latest load some-lib#core --path
 
 Source: `intent:docs/getting-started/quick-start-consumers.md`.
 
-Get started using Intent to help your agent discover and load package skills.
-
 ### 1. Run install
-
-The install command guides your agent through the setup process:
 
 ```bash
 npx @tanstack/intent@latest install
 ```
 
+This command creates or updates skill-loading guidance for your agent.
+
 Examples use `npx` for npm projects. In pnpm, Yarn, or Bun projects, use the matching runner: `pnpm dlx`, `yarn dlx`, or `bunx`.
 
-This creates or updates an `intent-skills` guidance block. It:
+The command:
 
 1. Checks for existing `intent-skills` guidance in your config files (`AGENTS.md`, `CLAUDE.md`, `.cursorrules`, etc.)
 2. Writes lightweight instructions for skill discovery and loading
@@ -429,7 +459,15 @@ npx @tanstack/intent@latest hooks install --scope user --agents copilot
 
 Cursor and generic `AGENTS.md` agents use the guidance block only.
 
-Hooks add the available Intent skill catalog to supported agent sessions and keep the edit gate active until the agent loads matching full guidance. To tailor what appears in the session catalog, configure `intent.skills` and `intent.exclude` in `package.json`.
+Hooks return the available Intent skill catalog as context for supported agent sessions and keep the edit gate active until they observe a supported `intent load` command.
+
+Hooks do not verify that:
+
+- The command succeeded.
+- The skill matched the task.
+- The agent applied the guidance.
+
+To control what appears in the session catalog, configure `intent.skills` and `intent.exclude` in `package.json`.
 
 ### 2. Choose which packages' skills to use
 
@@ -447,15 +485,15 @@ List the packages or `*` package patterns you trust. Intent then surfaces skills
 
 ### 3. Use skills in your workflow
 
-When your agent works on a task that matches an available skill, it loads the matching `SKILL.md` into context.
-
-Load a skill manually:
+Load a skill when it matches the task:
 
 ```bash
 npx @tanstack/intent@latest load @tanstack/react-query#core
 ```
 
 This prints the skill content for the installed package version.
+
+Intent cannot guarantee that an agent selected the correct skill or followed its guidance. See [Lifecycle boundaries](./trust-configuration.md#source-intent-docs-concepts-trust-model-md).
 
 If you want explicit task-to-skill mappings in your agent config, opt in:
 
@@ -465,15 +503,13 @@ npx @tanstack/intent@latest install --map
 
 ### 4. Keep skills up-to-date
 
-Skills version with library releases. When you update a library:
-
 ```bash
 npm update @tanstack/react-query
 ```
 
-The new version brings updated skills automatically. The skills are shipped with the library, so you get the version that matches your installed code. If a package is installed both locally and globally and global scanning is enabled, Intent prefers the local version.
+Skills version with library releases. Updating a library also updates its packaged skills, so the skill version matches the installed code. If a package is installed both locally and globally and global scanning is enabled, Intent prefers the local version.
 
-If you need to see what skills have changed, run:
+List the installed skills:
 
 ```bash
 npx @tanstack/intent@latest list
