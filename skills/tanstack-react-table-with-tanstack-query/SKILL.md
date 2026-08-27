@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/react-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core-client-vs-server\",\"tanstack-react-table-getting-started\",\"tanstack-react-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-query"
   tanstack-sources: "[\"TanStack/table:examples/react/with-tanstack-query\",\"TanStack/table:examples/react/virtualized-infinite-scrolling\",\"TanStack/table:docs/framework/react/guide/pagination.md\"]"

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.9.0"
+  tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.16.0"
   tanstack-source-skill: "design-a-chart"
   tanstack-sources: "[\"TanStack/charts:docs/guides/choosing-a-chart.md\",\"TanStack/charts:docs/examples/*.md\",\"TanStack/charts:docs/reference/transforms.md\"]"
   tanstack-type: "core"
@@ -79,8 +79,10 @@ export const chart = defineChart({
     lineY(rows, { x: 'month', y: 'forecast', strokeDasharray: '5 4' }),
     ruleY([100], { strokeDasharray: '2 3' }),
   ],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear, axis: { label: 'Indexed revenue' } },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear, axis: { label: 'Indexed revenue' } },
+  },
 })
 ```
 

@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "ember"
   tanstack-library: "@tanstack/ember-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/ember-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-ember-table-getting-started\",\"tanstack-ember-table-table-state\"]"
   tanstack-source-skill: "create-table-hook"
   tanstack-sources: "[\"TanStack/table:docs/framework/ember/guide/composable-tables.md\",\"TanStack/table:examples/ember/basic-app-table\",\"TanStack/table:packages/ember-table/src/create-table-hook.ts\"]"

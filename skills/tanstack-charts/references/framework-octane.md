@@ -35,7 +35,9 @@ import { Chart as RendererChart } from '@tanstack/charts/octane/core'
 ```
 
 The default `Chart` remains SVG-based. `CanvasChart` selects the optional
-built-in renderer; `RendererChart` requires a `renderer` prop.
+built-in renderer; `RendererChart` requires a `renderer` prop. A definition
+can still import `canvasChartRenderer` and assign it to selected marks, which
+makes the default component render an ordered mixed surface.
 
 The package export map supplies a browser build for browser bundlers and a
 separate Node build for the `node` condition.
@@ -69,6 +71,11 @@ layers. It paints no server pixels. The browser adopts the elements, paints
 after mount, and attaches the same focus, keyboard, tooltip, and selection
 host.
 
+A default chart with selected Canvas marks emits one mixed root containing
+ordered SVG markup and Canvas shells. SVG marks are visible in the server
+response, Canvas pixels appear after mount, and the browser adopts every child
+surface.
+
 Keep data, definitions, scale domains, custom renderers, and dimensions
 deterministic between server and browser. The adapter generates a sanitized
 resource prefix from Octane's `useId()` when `idPrefix` is absent.
@@ -87,7 +94,7 @@ The rendered structure is:
 ```text
 .ts-chart-host
   .ts-chart-surface
-    svg.ts-chart | div.ts-chart-canvas
+    svg.ts-chart | div.ts-chart-canvas | div.ts-chart-layers
 ```
 
 The outer host uses `position: relative`.
@@ -198,18 +205,21 @@ const letterFrequencyChart = defineChart({
       y: 'frequency',
     }),
   ],
-  x: {
-    scale: () => scaleBand().padding(0.18),
-  },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: {
-      label: 'Frequency',
-      ticks: { format: (value) => percent.format(value) },
+  scales: {
+    x: {
+      scale: () => scaleBand().padding(0.18),
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: {
+        label: 'Frequency',
+        ticks: { format: (value) => percent.format(value) },
+      },
     },
   },
+
   tooltip,
 })
 
@@ -289,13 +299,16 @@ export function LiveLetterFrequency({ rows, accent }: LetterFrequencyInput) {
           fill: accent,
         }),
       ],
-      x: {
-        scale: () => scaleBand().padding(0.18),
+      scales: {
+        x: {
+          scale: () => scaleBand().padding(0.18),
+        },
+        y: {
+          scale: scaleLinear,
+          nice: true,
+        },
       },
-      y: {
-        scale: scaleLinear,
-        nice: true,
-      },
+
       svgAnimation: true,
       tooltip,
     })
@@ -417,13 +430,13 @@ See [Sizing and layout](./framework-octane.md#source-charts-docs-framework-octan
 
 ### Focus, tooltip, and callbacks
 
-| Prop                 | Type                                                     | Default | Meaning                                                  |
-| -------------------- | -------------------------------------------------------- | ------- | -------------------------------------------------------- |
-| `onFocusChange`      | `(point: ChartPoint \| null) => void`                    | None    | Primary focus callback                                   |
-| `onFocusGroupChange` | `(points: readonly ChartPoint[]) => void`                | None    | Grouped focus callback                                   |
-| `onSelect`           | `(point: ChartPoint \| null) => void`                    | None    | Click and keyboard activation callback                   |
-| `onRender`           | `(context: ChartRenderContext) => void`                  | None    | Inner surface, live SVG, and scene after reconciliation  |
-| `renderTooltipBody`  | `(context: ChartTooltipBodyRenderContext) => OctaneNode` | None    | Composes Octane content inside the built-in tooltip body |
+| Prop                 | Type                                                     | Default | Meaning                                                              |
+| -------------------- | -------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| `onFocusChange`      | `(point: ChartPoint \| null) => void`                    | None    | Primary focus callback                                               |
+| `onFocusGroupChange` | `(points: readonly ChartPoint[]) => void`                | None    | Grouped focus callback                                               |
+| `onSelect`           | `(point: ChartPoint \| null) => void`                    | None    | Click and keyboard activation callback                               |
+| `onRender`           | `(context: ChartRenderContext) => void`                  | None    | Inner host, default SVG, complete surface, and scene after rendering |
+| `renderTooltipBody`  | `(context: ChartTooltipBodyRenderContext) => OctaneNode` | None    | Composes Octane content inside the built-in tooltip body             |
 
 ```tsx
 <Chart

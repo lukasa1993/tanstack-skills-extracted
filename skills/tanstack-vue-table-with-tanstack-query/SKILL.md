@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/vue-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core-client-vs-server\",\"tanstack-vue-table-getting-started\",\"tanstack-vue-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-query"
   tanstack-sources: "[\"TanStack/table:examples/vue/with-tanstack-query\",\"TanStack/table:docs/framework/vue/guide/pagination.md\"]"

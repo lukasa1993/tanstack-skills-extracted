@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/svelte-table@9.1.2
+Published package: @tanstack/svelte-table@9.2.3
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

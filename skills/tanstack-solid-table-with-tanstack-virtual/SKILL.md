@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/solid-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-solid-table-getting-started\",\"tanstack-solid-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-virtual"
   tanstack-sources: "[\"TanStack/table:docs/framework/solid/guide/virtualization.md\",\"TanStack/table:examples/solid/virtualized-rows\",\"TanStack/table:examples/solid/virtualized-columns\",\"TanStack/table:examples/solid/virtualized-infinite-scrolling\"]"

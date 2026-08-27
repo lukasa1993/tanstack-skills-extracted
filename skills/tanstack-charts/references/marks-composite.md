@@ -303,6 +303,10 @@ const chart = defineChart({
         ] as const,
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   guides: false,
 })
 ```
@@ -478,8 +482,16 @@ const chart = defineChart({
           stroke: '#fff',
         }),
       ],
+      scales: {
+        angle: null,
+        radius: null,
+      },
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
 })
 ```
 
@@ -588,8 +600,16 @@ const definition = (rootId: string) =>
             visibleDepth: 2,
           }),
         ],
+        scales: {
+          angle: null,
+          radius: null,
+        },
       }),
     ],
+    scales: {
+      x: null,
+      y: null,
+    },
     motion: {
       transition: { type: 'tween', duration: 720, easing: 'ease-in-out' },
     },
@@ -742,8 +762,10 @@ facet(rows, {
   chart(groupRows) {
     return {
       marks: [lineY(groupRows, { x: 'date', y: 'value' })],
-      x: { scale: makeXScale(groupRows) },
-      y: { scale: makeYScale(groupRows), grid: true },
+      scales: {
+        x: { scale: makeXScale(groupRows) },
+        y: { scale: makeYScale(groupRows), grid: true },
+      },
     }
   },
 })

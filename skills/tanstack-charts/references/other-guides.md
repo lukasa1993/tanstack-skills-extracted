@@ -34,8 +34,10 @@ export const chart = defineChart({
     lineY(rows, { x: 'week', y: 'value', points: true }),
     crosshair({ x: { label: true }, y: false }),
   ],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear },
+  },
   focus: 'nearest-x',
   maxFocusDistance: Number.POSITIVE_INFINITY,
   tooltip,
@@ -102,8 +104,10 @@ export const chart = defineChart({
       selection,
     ),
   ],
-  x: { scale: scaleLinear },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleLinear },
+    y: { scale: scaleLinear },
+  },
   selection,
 })
 ```
@@ -258,8 +262,10 @@ export const chart = defineChart({
       },
     ),
   ],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear },
+  },
 })
 ```
 
@@ -418,12 +424,14 @@ const color = scaleOrdinal<string, string>()
 
 export const chart = defineChart({
   marks: [lineY(rows, { x: 'week', y: 'downloads', z: 'package' })],
-  x: { scale: () => scalePoint<string>().padding(0.2) },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Downloads' },
+  scales: {
+    x: { scale: () => scalePoint<string>().padding(0.2) },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Downloads' },
+    },
   },
   color: { scale: color, legend: colorLegend({ label: 'Package' }) },
 })
@@ -637,8 +645,10 @@ const chartDefinition = defineChart({
       key: ({ datum }) => `${datum.region}:${datum.day.toISOString()}`,
     }),
   ],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear },
+  },
 })
 ```
 
@@ -802,8 +812,10 @@ const rows = [
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'month', y: 'value', points: true })],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear },
+  },
 })
 
 export const scene = createChartScene(definition, { width: 640, height: 360 })
@@ -992,8 +1004,10 @@ export const chart = defineChart({
     lineY(rows, { x: 'month', y: 'forecast', strokeDasharray: '5 4' }),
     ruleY([100], { strokeDasharray: '2 3' }),
   ],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear, axis: { label: 'Indexed revenue' } },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear, axis: { label: 'Indexed revenue' } },
+  },
 })
 ```
 
@@ -1091,12 +1105,14 @@ const rows = [
 
 const definition = defineChart(({ width }) => ({
   marks: [barX(rows, { x: 'requests', y: 'feature' })],
-  x: {
-    scale: scaleLinear,
-    nice: true,
-    axis: { ticks: { count: width < 420 ? 3 : 6 } },
+  scales: {
+    x: {
+      scale: scaleLinear,
+      nice: true,
+      axis: { ticks: { count: width < 420 ? 3 : 6 } },
+    },
+    y: { scale: () => scaleBand<string>().padding(0.1) },
   },
-  y: { scale: () => scaleBand<string>().padding(0.1) },
 }))
 
 const element = document.querySelector<HTMLElement>('#feature-chart')
@@ -1159,9 +1175,12 @@ Correct:
 ```ts
 defineChart(({ width }) => ({
   marks,
-  x: {
-    scale: scaleLinear,
-    axis: { ticks: { count: width < 420 ? 4 : 8 } },
+  scales: {
+    x: {
+      scale: scaleLinear,
+      axis: { ticks: { count: width < 420 ? 4 : 8 } },
+    },
+    y: { scale: scaleLinear },
   },
 }))
 ```
@@ -1309,7 +1328,10 @@ const threshold = createMark<ThresholdDatum, never, number>(({ markIndex }) => {
 
 export const chart = defineChart({
   marks: [threshold],
-  y: { scale: scaleLinear },
+  scales: {
+    x: null,
+    y: { scale: scaleLinear },
+  },
 })
 ```
 
@@ -1828,8 +1850,10 @@ const rows: readonly TrafficRow[] = [
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'visits' })],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear },
+  },
 })
 
 const runtime = createChartRuntime<TrafficRow, Date, number>()
@@ -1999,8 +2023,10 @@ function createRanking(rows: readonly Row[]) {
   return defineChart({
     svgAnimation: { duration: 280, easing: 'ease-out' },
     marks: [barX(ranked, { id: 'ranking', x: 'value', y: 'label', key: 'id' })],
-    x: { scale: scaleLinear, nice: true },
-    y: { scale: () => scaleBand<string>().padding(0.1) },
+    scales: {
+      x: { scale: scaleLinear, nice: true },
+      y: { scale: () => scaleBand<string>().padding(0.1) },
+    },
   })
 }
 
@@ -2121,3 +2147,54 @@ Visual continuity cannot make stale state acceptable. Verify rapid retargeting, 
 See also: `./other-guides.md#source-tanstack-charts-design-responsive-charts` and `./other-guides.md#source-tanstack-charts-debug-and-verify-charts`
 
 See also: `./other-guides.md#source-tanstack-charts-build-chart-interactions` and `./other-guides.md#source-tanstack-charts-coordinate-charts-with-tanstack` — stable mark and datum identity preserves controlled interaction across local, synchronized, and optimistic updates.
+
+<a id="source-charts-docs-stability-md"></a>
+
+## Stability
+
+Source: `charts:docs/stability.md`.
+
+TanStack Charts is in Alpha. Packages use regular `0.x` versions on the normal
+`latest` npm tag, without an `-alpha` suffix or separate release channel.
+
+Alpha is ready for evaluation and early application integration. It is not a
+stable API promise. Pin an exact version in production applications and test an
+upgrade before changing that pin.
+
+### Version contract
+
+All public TanStack Charts packages move together as one fixed release group.
+
+- Patch releases fix defects and do not intentionally remove or rename public
+  APIs. A fix may correct rendering or interaction that was observably wrong.
+- Minor releases may add features and may contain breaking API changes while
+  the package major remains `0`.
+- The project will publish a stable-release compatibility policy before `1.0`.
+
+### Public surface
+
+The public surface is the package export map and the APIs documented on this
+site. Source files, internal modules, unexported types, generated scene details,
+and undocumented behavior may change without a migration path.
+
+Framework adapters share the same chart definition and release version. Their
+runtime support and peer ranges are listed in
+[Installation](./getting-started.md#source-charts-docs-installation-md).
+
+### Breaking changes
+
+A breaking Alpha release must include a changeset, changelog entry, and concrete
+migration instructions. We will use a development warning ahead of removal when
+that warning is practical and useful, but Alpha does not promise a minimum
+deprecation window.
+
+Production bundles do not retain development migration warnings. Removed APIs
+fail through TypeScript or an actionable runtime error instead of silently
+falling back to an older interpretation.
+
+### Report a regression
+
+[Open a GitHub issue](https://github.com/TanStack/charts/issues/new/choose) with
+the exact package version, framework, browser or native runtime, a minimal
+reproduction, and the expected and actual result. A regression in a patch
+release is treated as a defect against this policy.

@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/vue-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-vue-table-getting-started\",\"tanstack-vue-table-table-state\"]"
   tanstack-source-skill: "create-table-hook"
   tanstack-sources: "[\"TanStack/table:docs/framework/vue/guide/composable-tables.md\",\"TanStack/table:examples/vue/composable-tables\",\"TanStack/table:packages/vue-table/src/createTableHook.ts\"]"

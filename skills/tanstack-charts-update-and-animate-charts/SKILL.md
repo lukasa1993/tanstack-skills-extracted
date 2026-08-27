@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.9.0"
+  tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.16.0"
   tanstack-source-skill: "update-and-animate-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/dynamic-data-and-animation.md\",\"TanStack/charts:docs/reference/motion.md\",\"TanStack/charts:docs/reference/chart-definitions.md\"]"
   tanstack-type: "core"
@@ -38,8 +38,10 @@ function createRanking(rows: readonly Row[]) {
   return defineChart({
     svgAnimation: { duration: 280, easing: 'ease-out' },
     marks: [barX(ranked, { id: 'ranking', x: 'value', y: 'label', key: 'id' })],
-    x: { scale: scaleLinear, nice: true },
-    y: { scale: () => scaleBand<string>().padding(0.1) },
+    scales: {
+      x: { scale: scaleLinear, nice: true },
+      y: { scale: () => scaleBand<string>().padding(0.1) },
+    },
   })
 }
 

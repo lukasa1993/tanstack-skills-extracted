@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.9.0"
+  tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.16.0"
   tanstack-source-skill: "build-chart-interactions"
   tanstack-sources: "[\"TanStack/charts:docs/guides/tooltips-and-focus.md\",\"TanStack/charts:docs/guides/interactions-and-selections.md\",\"TanStack/charts:docs/reference/focus-and-interaction.md\",\"TanStack/charts:docs/reference/marks/focus-guide.md\"]"
   tanstack-type: "core"
@@ -39,8 +39,10 @@ export const chart = defineChart({
     lineY(rows, { x: 'week', y: 'value', points: true }),
     crosshair({ x: { label: true }, y: false }),
   ],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear },
+  },
   focus: 'nearest-x',
   maxFocusDistance: Number.POSITIVE_INFINITY,
   tooltip,
@@ -107,8 +109,10 @@ export const chart = defineChart({
       selection,
     ),
   ],
-  x: { scale: scaleLinear },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleLinear },
+    y: { scale: scaleLinear },
+  },
   selection,
 })
 ```

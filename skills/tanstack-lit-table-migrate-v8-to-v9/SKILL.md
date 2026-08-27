@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/lit-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core-migrate-v8-to-v9\",\"tanstack-lit-table-getting-started\",\"tanstack-lit-table-table-state\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/lit/guide/migrating.md\",\"TanStack/table:packages/lit-table/src/index.ts\",\"TanStack/table:examples/lit/basic-table-controller\"]"

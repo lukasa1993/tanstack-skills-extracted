@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\",\"tanstack-table-core-column-sizing\"]"
   tanstack-source-skill: "column-pinning"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/column-pinning.md\",\"TanStack/table:packages/table-core/src/features/column-pinning\",\"TanStack/table:examples/react/column-pinning-sticky\"]"

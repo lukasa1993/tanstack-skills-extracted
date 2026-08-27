@@ -178,17 +178,19 @@ const ranked = [...rows].sort((a, b) => b.value - a.value)
 
 const chart = defineChart({
   marks: [barY(ranked, { x: 'category', y: 'value', inset: 2 })],
-  x: {
-    scale: () =>
-      scaleBand<string>()
-        .domain(ranked.map((row) => row.category))
-        .padding(0.16),
-  },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Weekly signups' },
+  scales: {
+    x: {
+      scale: () =>
+        scaleBand<string>()
+          .domain(ranked.map((row) => row.category))
+          .padding(0.16),
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Weekly signups' },
+    },
   },
 })
 
@@ -330,8 +332,10 @@ const chart = defineChart({
       fill: '#2563eb',
     }),
   ],
-  x: { scale: scaleLinear, axis: { label: 'Response time (ms)' } },
-  y: { scale: scaleLinear, grid: true, axis: { label: 'Requests' } },
+  scales: {
+    x: { scale: scaleLinear, axis: { label: 'Response time (ms)' } },
+    y: { scale: scaleLinear, grid: true, axis: { label: 'Requests' } },
+  },
 })
 
 export default chart
@@ -540,14 +544,17 @@ export default defineChart({
       fontWeight: 650,
     }),
   ],
-  x: {
-    scale: () => scaleBand<string>().domain(quarters).padding(0.04),
-    axis: { label: 'Quarter' },
+  scales: {
+    x: {
+      scale: () => scaleBand<string>().domain(quarters).padding(0.04),
+      axis: { label: 'Quarter' },
+    },
+    y: {
+      scale: () => scaleBand<string>().domain(teams).padding(0.04),
+      axis: { label: 'Team' },
+    },
   },
-  y: {
-    scale: () => scaleBand<string>().domain(teams).padding(0.04),
-    axis: { label: 'Team' },
-  },
+
   color: {
     scale: () =>
       scaleLinear<string>().domain([60, 100]).range(['#eff6ff', '#60a5fa']),
@@ -821,11 +828,13 @@ export default defineChart({
       r: 4,
     }),
   ],
-  x: { scale: () => scaleBand<string>().padding(0.3) },
-  y: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Mean response (95% confidence interval)' },
+  scales: {
+    x: { scale: () => scaleBand<string>().padding(0.3) },
+    y: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Mean response (95% confidence interval)' },
+    },
   },
 })
 ```
@@ -943,12 +952,14 @@ const chart = defineChart({
       stroke: '#2563eb',
     }),
   ],
-  x: { scale: () => scalePoint<string>().padding(0.2) },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Downloads (thousands)' },
+  scales: {
+    x: { scale: () => scalePoint<string>().padding(0.2) },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Downloads (thousands)' },
+    },
   },
 })
 
@@ -1123,15 +1134,17 @@ const chart = defineChart({
       fill: '#2563eb',
     }),
   ],
-  x: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Temperature (°C)' },
-  },
-  y: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Daily sales' },
+  scales: {
+    x: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Temperature (°C)' },
+    },
+    y: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Daily sales' },
+    },
   },
 })
 
@@ -1265,12 +1278,15 @@ export default defineChart({
     }),
     ruleY([0]),
   ],
-  x: { scale: () => scalePoint<string>().padding(0.15) },
-  y: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Revenue (USD thousands)' },
+  scales: {
+    x: { scale: () => scalePoint<string>().padding(0.15) },
+    y: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Revenue (USD thousands)' },
+    },
   },
+
   color: {
     domain: ['Core', 'Services'],
     range: ['#2563eb', '#14b8a6'],

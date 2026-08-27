@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\",\"tanstack-table-core-typescript\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/migrating.md\",\"TanStack/table:docs/framework/preact/guide/migrating.md\",\"TanStack/table:docs/framework/solid/guide/migrating.md\",\"TanStack/table:docs/framework/svelte/guide/migrating.md\",\"TanStack/table:docs/framework/vue/guide/migrating.md\",\"TanStack/table:docs/framework/angular/guide/migrating.md\",\"TanStack/table:docs/framework/lit/guide/migrating.md\",\"TanStack/table:packages/table-core/src/index.ts\",\"TanStack/table:packages/table-core/src/types/TableFeatures.ts\",\"TanStack/table:packages/table-core/src/features/column-pinning/columnPinningFeature.types.ts\",\"TanStack/table:packages/table-core/src/features/column-resizing/columnResizingFeature.types.ts\",\"TanStack/table:packages/react-table/src/legacy.ts\"]"

@@ -8,189 +8,189 @@
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "core",
-      "sha256": "a2d1a16a0afe3d663250f4e261ceee219b14df3c7f68090a20680553e56cfd42"
+      "sha256": "649584de7952a52a9bfff647e365aaba698431b5247ffa5dfc09f5876854f870"
     },
     {
       "id": "tanstack-table-core-table-features",
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-features",
-      "sha256": "04323cd8243c92e36e3d03f415115553c7bab25043e2ec57504511e5a00fa7c9"
+      "sha256": "6555bd8f5bea416935bdcbeabcde9e592b4447d6371b66132c75bb09030c99f3"
     },
     {
       "id": "tanstack-table-core-typescript",
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "typescript",
-      "sha256": "9d1cd4721add0c97071bacb9c87ec4b131c26d1bc2a671ddf20b0ef748f5bf1a"
+      "sha256": "c04aaeaaf82bcb4fc1ad1051966a1653ded1c30338829d8df6f458dda3ea5106"
     },
     {
       "id": "tanstack-table-core-aggregation",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "aggregation",
-      "sha256": "676c1b390718bf3ca123bc73bdfbe26c6b65b9dac924dd1abee3d3ae063bc433"
+      "sha256": "ebae6f652d896d992e605cbe2ff4d0e239f591da0d7559b9bbc9ff3452724887"
     },
     {
       "id": "tanstack-table-core-client-vs-server",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "client-vs-server",
-      "sha256": "deb4b75f9d6ecfb1c015c64547bd183182545acc140a106045182e10db13200f"
+      "sha256": "f2382338680ee6c1333f176676e9809aca1d1a4f4d8671f3316f24d1474444c7"
     },
     {
       "id": "tanstack-table-core-column-faceting",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-faceting",
-      "sha256": "5857ed8ebc1b53ed892abe3bb9f8702fbad5e657e6c5af0c6d531d89ac3605e8"
+      "sha256": "89564960d320308a217695630a5a07c7f1f332ab9be5e9b49c0dcdc6c05604b7"
     },
     {
       "id": "tanstack-table-core-column-filtering",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-filtering",
-      "sha256": "5f21891bfcd98d24c417aad86d0a4245d797a9700b83eecf3fcb884683f2f43c"
+      "sha256": "5fcb13ba477ebf0745a42bc1e8ec4f89162dc88dd1a8bb782fce9a4962e06c54"
     },
     {
       "id": "tanstack-table-core-global-filtering",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "global-filtering",
-      "sha256": "7a27254602e3e5402ec616d23fa0ceed54dc20d9b1ba43e388690edc61063d8c"
+      "sha256": "3d7adbac01e80990ce69ac15a23c784e74d55b515bda388c71deeb2d388b866e"
     },
     {
       "id": "tanstack-table-core-grouping",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "grouping",
-      "sha256": "cfcbb1f690361a18e9b689a3a0a536b5ecc774b8b40706eb5980268b928c5203"
+      "sha256": "77f6962b010f776dbd4b2605b0054f8bf4348e7663d9dd22bc96256c8ba16a32"
     },
     {
       "id": "tanstack-table-core-pagination",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "pagination",
-      "sha256": "c2fa782de0a0b48054f176409225b01a9c77107f7aa7f37ac782a704c8626c68"
+      "sha256": "f28d8be09ef12f59ad7914cc05903e9bf5711acc9bdc1ce950018733356b77e6"
     },
     {
       "id": "tanstack-table-core-sorting",
       "kind": "atomic",
       "theme": "data-processing",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "sorting",
-      "sha256": "fd6ef8925ba0a987b7276fc9cd7e9feb2331938582e4b4e0360bd1ef3be19597"
+      "sha256": "ad75f3cc9dc5c34fed8ac1ad749332f680b263147a5b3994e866d4e64cd8f64a"
     },
     {
       "id": "tanstack-table-core-cell-selection",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "cell-selection",
-      "sha256": "3ef9bc4435574bd294c7d7ab3472a813dd184e331a2828a1e672c21afe338ca0"
+      "sha256": "1c395d33528bc2d3d599afc3e0276e5b760bbee2e0f9c200357dca07fb51d0f4"
     },
     {
       "id": "tanstack-table-core-cell-spanning",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "cell-spanning",
-      "sha256": "93bc50467f3b9e0e9e5b5359c546c24cb17d0e12e7a362d32b1eb0b1747eca63"
+      "sha256": "aa9f6d0615c0210790d84f22070e932b442a0a8a334cc1c235bad322caba734f"
     },
     {
       "id": "tanstack-table-core-column-ordering",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-ordering",
-      "sha256": "cfe012d3fe9880a9504574873d03f63bdaf1e753abfefe6445ee77e22b0159c2"
+      "sha256": "0bf4542f75f7b91e89aa3cc5f98d2b6e2e42cfe883e29dcac50ae609feca4c0a"
     },
     {
       "id": "tanstack-table-core-column-pinning",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-pinning",
-      "sha256": "fd54eafaca2747fcaa3ab0c4404eda29f754a1bddafb93f49532605347e8151b"
+      "sha256": "ccc153e3bc9480e9f4368df40a0fd49bf670cf1487690d434c017f0daa0c5ce2"
     },
     {
       "id": "tanstack-table-core-column-resizing",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-resizing",
-      "sha256": "7ffe50cb3e0590e4bdb11c7fd0b672ed907df134ba6f5742fdf1dadb2082c523"
+      "sha256": "cce98815c21341a59f8ff4ca48ff982d8c2b173cc168e0b9211a1b7060fbf3ee"
     },
     {
       "id": "tanstack-table-core-column-sizing",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-sizing",
-      "sha256": "4d89e1acdebfcdae8c3772deada02c5ce1f73346b0893393728da8176b1c8c57"
+      "sha256": "dc3eeb8be7b8b005b1501b286a070977a6aa6914c8720b79f6010dcd0ce9069f"
     },
     {
       "id": "tanstack-table-core-column-visibility",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "column-visibility",
-      "sha256": "c6736311a3ec04fce800d5df60d9ed41e8b3aca39c7ae0f1c25a55b312f60f30"
+      "sha256": "eb46a11d5ab7088be0fab3f24fc49ad1d38ceb20d7047a3b7eda7e8a0d194420"
     },
     {
       "id": "tanstack-table-core-expanding",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "expanding",
-      "sha256": "c6f7d13ad7b3f4dd15431bdce1e32258612b5dfe75bf33b9eaf1327cea81b3fd"
+      "sha256": "8ec5efda7a0523ebbddab599507ed477b29bdf62c7762b3676397df0fe389295"
     },
     {
       "id": "tanstack-table-core-row-pinning",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "row-pinning",
-      "sha256": "5a393ce1e1cc1981fc7bfeb6ae9aa5ed2518622552e6df4d8f56c04dace19b21"
+      "sha256": "fd9e81cefd29663c28f39e2d0c1fda84c05bdd0b623c180dd95791479893c0c2"
     },
     {
       "id": "tanstack-table-core-row-selection",
       "kind": "atomic",
       "theme": "layout-interaction",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "row-selection",
-      "sha256": "65003fc4cd36ef26e7f1f7303bf1cbf3781132ad487cb4af4504db970cf7a9d9"
+      "sha256": "222f8449336b5a28b967639ce910949d09a9b490369b4b33971c5766146a9026"
     },
     {
       "id": "tanstack-match-sorter-utils-fuzzy-ranking",
@@ -215,36 +215,36 @@
       "kind": "atomic",
       "theme": "advanced",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "api-not-found",
-      "sha256": "9a527d01146863d9f26ac59b7e820bbea392ba9f3e07da3e3afde51ef646ec0a"
+      "sha256": "d50f0b3862a9ead4c8fc8d05b8ded19d29dc78b0f27c2d06158cbc2654d9d09a"
     },
     {
       "id": "tanstack-table-core-custom-features",
       "kind": "atomic",
       "theme": "advanced",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "custom-features",
-      "sha256": "960b52b24b4f5a359a3a26b4764020b337444a745955fd130b9c4f46bba9e0d6"
+      "sha256": "d03fdd39fcb3044d28247ba6fb91f02752cc9b2169bf411050b1045129d65c83"
     },
     {
       "id": "tanstack-table-core-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "advanced",
       "package": "@tanstack/table-core",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "810e7a8de5703cf81967b6c7f81ea5bd1a404b82b600be92214019efef63f66d"
+      "sha256": "52814a97bf905c7aaf7487d986a9e4b8eeae641bf8ba9b9ea826f36ada921da3"
     },
     {
       "id": "tanstack-react-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "70f24d028e5a78a2ebc8907702476baabf994d3b8038cf7c9aec3c2451636934"
+      "sha256": "4510116d6d699452160e9984190ea631a9d378bc26a905df7f43b400242d0292"
     },
     {
       "id": "tanstack-react-table-devtools",
@@ -260,54 +260,54 @@
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "2a0eab3a3ffb83d8a7c6badd8e475f35991a26e833beaca5b05c416be1a1b225"
+      "sha256": "34106d09f538e4eb016c70708152dcdead2cacf5731b226f8882faf1a1a53e92"
     },
     {
       "id": "tanstack-react-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "ed403511b4dd5cbb2736e70c76d0ee84224f3f1eb14bdecc8ba24fc330d06a2a"
+      "sha256": "4f5ba3f46f09657fd20905538be5e528d473c009d4ab6bd2902d2b4a291ce96c"
     },
     {
       "id": "tanstack-react-table-table-state",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "d9cd55ab49660f999e1ebe489e83b33463e72b77a9d8fdf6ca128251a86a7d04"
+      "sha256": "59627edae1f21d8a38b5ce610e3d1829c7cda404585aa4b548cfb3d651dfa011"
     },
     {
       "id": "tanstack-react-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-query",
-      "sha256": "8e20f7a777782413a912425dba05d9d5637f24501ca2a8346e16931086daa05c"
+      "sha256": "76a00652152db3187427b5f3fd262ffdd2876105b6150af8aa95a7500af3d5fa"
     },
     {
       "id": "tanstack-react-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "8c1c0d659443f1f06e65dea57f54167ca0cc648f264ee3ab183b4f1e78d6ab35"
+      "sha256": "235f2e13049094abf89b5020a390ec9888cf5f9aa083c3664436bb259b511c4d"
     },
     {
       "id": "tanstack-preact-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "c4fe0eb431d2938c0fffff114d0edf530d86ebfb84b87fed3d24e9bee33a38a9"
+      "sha256": "89ec13f4a73d1c8e5dbed974fb589852c90f04c928f8262f2f563eee38728e80"
     },
     {
       "id": "tanstack-preact-table-devtools",
@@ -323,54 +323,54 @@
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "6b21dacd0dbc9889d18d3a89957581e33901ddade56188f5afd43813d17b7654"
+      "sha256": "4c002d2626e5ec905dda4d23644eee97d19a2f5510393b790112a46bf8cd9ba5"
     },
     {
       "id": "tanstack-preact-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "d5cbd74bc9c27debff17e3a0a8a07a7154b276e0e3fa299481acd22ffe87635d"
+      "sha256": "8779718b01b0e51b2bedec4b9f169d272e2b326f654791e90a73e74bea76aff1"
     },
     {
       "id": "tanstack-preact-table-table-state",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "5cbbf4a125787d13c0c7196243bb5b3c0b5827121a70222b0eb5ad608a57395a"
+      "sha256": "0ffd7b0a8e8fee438975a99b4c7ae9ba420995b731e45e6c5c263601e6549faf"
     },
     {
       "id": "tanstack-preact-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-query",
-      "sha256": "6b680c59d8c529b3f0bf084f560fd3362018634420715307664142f20af215a3"
+      "sha256": "42ae5f04a3fae60af84d89fbdfe4128dcf1f4527feb339534722f5215cbab878"
     },
     {
       "id": "tanstack-preact-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "2ca1af6b1f9d50037261b4214a99311367a991283a68a5e4e3d3300c85f1dcdf"
+      "sha256": "31060644c7a6cd1f399d103e7ac5072135d8a1f097904e728c6f8b7c2af66e89"
     },
     {
       "id": "tanstack-vue-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "5ed96224ce76dbf1f7e696b29aede3efb74be53c39cf259ea439c46b835c0ba2"
+      "sha256": "dadbd43f70c889c81cea4c7e3656982c9d735044c2425d1e61e2d1fa0c29f69e"
     },
     {
       "id": "tanstack-vue-table-devtools",
@@ -386,54 +386,54 @@
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "977e1a1666943f83de5a044c335beea99ff724707135e59546c9ad281add40b8"
+      "sha256": "f3c749b20ec4cabda03295e21771a43164e8814b7d0af5c0273f9d838f08d5ba"
     },
     {
       "id": "tanstack-vue-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "207c3b14fbca9467fbe41e3642c01178fee6244077ca94994db23929b1c305c5"
+      "sha256": "4765b0cd7d8551a961c2472ac7be6b094ba5864882fa5b8d6801b054cde012e1"
     },
     {
       "id": "tanstack-vue-table-table-state",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "1c26ec0949aaad7ef7264abb3483ba428c915b0df59628ca4e6bc2ef4465f3a2"
+      "sha256": "38dea9fce0f86d201d801ab7b06ecd429a9b383c2f8af56d36ad4a60ef9c8d4e"
     },
     {
       "id": "tanstack-vue-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-query",
-      "sha256": "02d58b47882954943650e6b88c45e7132b5d64a7eda03a25c00755427df1b068"
+      "sha256": "c3770dfbf581b1cb7cdd3ee381f0dd9ffb03d7e8df06377cdac74ada028453b2"
     },
     {
       "id": "tanstack-vue-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "82c703e775f1bdaa876888d28961bfae953f23c8fea6905f85a15ae34cbaebc6"
+      "sha256": "cc62192fc32870d4325cdc55a494dff40e92ba1253ed221fb489551fed132ef4"
     },
     {
       "id": "tanstack-solid-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "41363a725bdab01ad13b45f5c833d7e1afefa34e5ff6188992f8503d7b22aec4"
+      "sha256": "8a36902eee7b0f7d1c31e82d1e42d2b0b96d9c3ab01ef7b93e35e247deca3d90"
     },
     {
       "id": "tanstack-solid-table-devtools",
@@ -449,288 +449,288 @@
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "9ed890daaf7dff03568cfa4a90ecc23bff2fb602f78617315d7798c2a5b037f3"
+      "sha256": "62aa0645d7337b78eeb18abf021996c5fdb65c53d6075ec3abdb0c27a875ef46"
     },
     {
       "id": "tanstack-solid-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "38f8cab421d4bc74ff05470b8c2160c975b65c397dddab31a7b585bf344d2f48"
+      "sha256": "262a4f9ea0a1b39f959f907418ca48cf27c21b8a65d697640ab4ad9e084b1396"
     },
     {
       "id": "tanstack-solid-table-table-state",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "1e4928cf69c1ea28d9638de750be40e98255074a4317d5aeefc13f1db6e02545"
+      "sha256": "ecb35d701044e67ce506bac23901ea3ab5ddd0f70cb4f24a9058e2380a10e883"
     },
     {
       "id": "tanstack-solid-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-query",
-      "sha256": "d88fe75834e3fd64c32fc1684bdbb1fa604138d0febb0a8f5594853ad8f3a695"
+      "sha256": "c683bef45482d2835af1f72275852c3ac30d079ecb59990bf234a32b02518f8b"
     },
     {
       "id": "tanstack-solid-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "3623e22b092073e2264f409abff2a2cf4d9ee5308951454ebeafce6d34bd90fd"
+      "sha256": "75e1a6be23d4240ebff00df2177147fddd17fd1cc045732bcfdd46a21b7892dd"
     },
     {
       "id": "tanstack-svelte-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "822a3481c51c88f745a8aaeabefe44304127661d25117386ae33dd1cb9f3a469"
+      "sha256": "fd4155192cc04e0c1dcfcaef0ead7a32a53b068fd6a74091cb59c0559a7f9fd9"
     },
     {
       "id": "tanstack-svelte-table-getting-started",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "2e790a564bc531360ef1a10cf119e87f46c00b1691731e67b47620050fb634df"
+      "sha256": "4347a626ed5592ed7cdc35bccafe7d2ffcd321e0e8b6c0622b1bc9ca2fd05798"
     },
     {
       "id": "tanstack-svelte-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "ee5c4ac9bd20c65abbd52bc309773faa3528600da9bdc715dc0eb587d4e1905e"
+      "sha256": "186a883f03064c7ee15c4c2b64e07244436174f8711d00a5369b792116fd107f"
     },
     {
       "id": "tanstack-svelte-table-table-state",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "d2b48c9f221b385c423a014d19cea11dcfb08a833cca06110a7f0143617bccbc"
+      "sha256": "18257b1e8818608b2b9a68ff5da823c8852a44e4a12c1a3fbe052342000d0e43"
     },
     {
       "id": "tanstack-svelte-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-query",
-      "sha256": "1a111fefa0545ee7a002e30295744454d9551aa55b63c52c8b6afb2aa565e22f"
+      "sha256": "77d7ea2f6cfd32bf7279e12a026d6f05b1ae2c0323cd513c7846fc64422d4d7e"
     },
     {
       "id": "tanstack-svelte-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "42e6c985661eca809b35294e0e07542bb9b1e8cd276d2cefc24970e110bfd0bd"
+      "sha256": "1254c05b3c304686a33fb5ce85f6c239cc299db327b756eb7dbbe1f4a4b8f03e"
     },
     {
       "id": "tanstack-angular-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.2.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "bab04c2dee520f2c4fa4a1167998425360a1a077dac7a84feb46a3732e41ce8c"
+      "sha256": "ec6aafa2341d9903c7a02ba7b18d3a121f7e18af1d13a8feb6a6d770f6c02f59"
     },
     {
       "id": "tanstack-angular-table-devtools",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table-devtools",
-      "version": "9.2.0",
+      "version": "9.2.3",
       "sourcePath": "devtools",
-      "sha256": "ad3c5f28e78272bc1874ffa5f4a0422b1097b2de32f0fba1bc3b3b2860cf55f8"
+      "sha256": "e1aacd1b39de1f89edc4c67bfe6c4993f50d7940de635d4494a9c02f324f6e74"
     },
     {
       "id": "tanstack-angular-table-getting-started",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.2.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "36e74bef29658956ff7938f2190c22bca44ac167e319b58314663dfac05374d3"
+      "sha256": "fe2727e3eb439489df94778ffb166380e40860abc31acd90a885604c9bb9bc72"
     },
     {
       "id": "tanstack-angular-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.2.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "39171b8692ff9f294d0e164780e218843ba70a305e8bb8a9cf22092648c279e3"
+      "sha256": "e98746d5e98d35a908967d9ed14ec2750b9d7da4aeff9e2eca01a28e64ad8df0"
     },
     {
       "id": "tanstack-angular-table-table-state",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.2.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "f4b6d0d97a92c18c0e39b91aa701c96ff6edf01b99aab1a695f769842bc7352f"
+      "sha256": "fbd1a4291bcc50a021fd033885c8c86f64d63ed6a501b41258d859e78f46118f"
     },
     {
       "id": "tanstack-angular-table-with-tanstack-query",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.2.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-query",
-      "sha256": "d08e4b3b0c6de6b5be0790b93e6760c7be0e8542f50c58e3a4897c151a701c26"
+      "sha256": "682179efa8f203c88cc602cae18ed9ae079c488176e16fa83506cb4b8e6665bc"
     },
     {
       "id": "tanstack-angular-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-angular",
       "package": "@tanstack/angular-table",
-      "version": "9.2.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "8bacf0364ae8ed91ac688f2df94086dc3c704423030eba111307af6aff86b08d"
+      "sha256": "52a373aacae760843d4bb828ab4e03a8f0421476faa7519b13654a14014954e2"
     },
     {
       "id": "tanstack-lit-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-lit",
       "package": "@tanstack/lit-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "57e5d75a5b35dac11b0f1f698d4c4814af6a23faa116c24e910a8c5930322438"
+      "sha256": "cea5f389d956dc015c63fd00b497eac64a79a21fabff93a53a3554f82cbf5204"
     },
     {
       "id": "tanstack-lit-table-getting-started",
       "kind": "atomic",
       "theme": "framework-lit",
       "package": "@tanstack/lit-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "1ee63085ccdc023cbdf39be3f2341320fb294eb63729b9984b2be8154f41c964"
+      "sha256": "653f461255085674ac2820598ef7b3142c1212393a6efc0102eedbf77d6d7548"
     },
     {
       "id": "tanstack-lit-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-lit",
       "package": "@tanstack/lit-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "8bc034895a83e9bde4cfd368ff1743abcc012f091fd4c69b11e06506582c0167"
+      "sha256": "1e9472db03c6dd84c896b8c5a59af8ecd152aa266d0f863d994fc803366df9ba"
     },
     {
       "id": "tanstack-lit-table-table-state",
       "kind": "atomic",
       "theme": "framework-lit",
       "package": "@tanstack/lit-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "8e6423677c94c04636f6226f21054958c9f436b8a874f6736627536089759231"
+      "sha256": "20800756e470236bdf06892d71adc067f36c5b2a19ee7c2497a5c72e2fbd6a55"
     },
     {
       "id": "tanstack-lit-table-with-tanstack-virtual",
       "kind": "atomic",
       "theme": "framework-lit",
       "package": "@tanstack/lit-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "with-tanstack-virtual",
-      "sha256": "e7ac7cf5a0064c8358f30e4a3a15c3497047fc7dd1fa2bf2355aca80d1207caf"
+      "sha256": "df9e813ed22ac9351c005c6cfbc2a389de5c6a9a7da803d0f75dd11814cccb69"
     },
     {
       "id": "tanstack-alpine-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-alpine",
       "package": "@tanstack/alpine-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "a95e4b7ed625285ba15eb1ced5af886b299306be4a9917f71238a1b96e7f2a92"
+      "sha256": "3ee73fcca5b92e0d2acbfa6902829da5b81c5ec8f3621345631850c501d0182b"
     },
     {
       "id": "tanstack-alpine-table-getting-started",
       "kind": "atomic",
       "theme": "framework-alpine",
       "package": "@tanstack/alpine-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "0e51f4907016806dce249fa8f96aca126504f48d29e21dfadddaef10527567ff"
+      "sha256": "46d1b2a089251e1d811d60adcf48513109be0103499763d84bbe871f96a4df27"
     },
     {
       "id": "tanstack-alpine-table-table-state",
       "kind": "atomic",
       "theme": "framework-alpine",
       "package": "@tanstack/alpine-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "4a667e950bc7ec8a3395a37d6800deeb1450e8cbc0e0e4115abd25a215fba2ad"
+      "sha256": "f3d8b7edc1e8e57540e5a810f0183237d1e02b55fd8bdcdc8c5def2a6a530a08"
     },
     {
       "id": "tanstack-ember-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-ember",
       "package": "@tanstack/ember-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "17aa1576bfb44939bf147f2770b1b6973762afbd2030162ffb041f7b40e1e8a0"
+      "sha256": "a5a852adaed0e236290a34f811e1581c928c2d9be899333770178972301cc3ec"
     },
     {
       "id": "tanstack-ember-table-getting-started",
       "kind": "atomic",
       "theme": "framework-ember",
       "package": "@tanstack/ember-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "1804752b4bed7d5a27921768eadb68050ae90932083b59bef439f539e174882a"
+      "sha256": "abf182b3faabaec98c82374f729db58e7d5f4b7f9bb2330be40fdaf73287f1f6"
     },
     {
       "id": "tanstack-ember-table-table-state",
       "kind": "atomic",
       "theme": "framework-ember",
       "package": "@tanstack/ember-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "4d630355672d26d351a2b0cabd44a2cd540e8b8bf58518e45d818a31dee7af19"
+      "sha256": "95f75e57553e89ad0813b08ca866f89c9fac19d884b9ea253bf669ea0d8c99a6"
     },
     {
       "id": "tanstack-octane-table-create-table-hook",
       "kind": "atomic",
       "theme": "framework-octane",
       "package": "@tanstack/octane-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "create-table-hook",
-      "sha256": "eb200c6ae80df5f9001e7665005032415504da01e8a4ff3bc98aecf4e3e36bec"
+      "sha256": "d504bf747e45f06111c3fcde3ec5f64fdbf8c60de4fb5ad24c053f1bb68ee770"
     },
     {
       "id": "tanstack-octane-table-getting-started",
       "kind": "atomic",
       "theme": "framework-octane",
       "package": "@tanstack/octane-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "getting-started",
-      "sha256": "da9114f013179c3546d54b36170c09f95a1897f6ab3a7b0c906db2cf580ca997"
+      "sha256": "c90b61b747f68cd84a962c3194486408b6e5a2a0526a6f67c3d2959805fa9f9b"
     },
     {
       "id": "tanstack-octane-table-table-state",
       "kind": "atomic",
       "theme": "framework-octane",
       "package": "@tanstack/octane-table",
-      "version": "9.1.2",
+      "version": "9.2.3",
       "sourcePath": "table-state",
-      "sha256": "b26138d061500bbd7dfc39ca1b05a0643b4b84053f58d4516fd817696ffd7ac0"
+      "sha256": "b79793e03ffcf13b8f188b3ad6da342b38973ef06a7fa7e8a31b4fec6de579a0"
     }
   ],
   "duplicateDocuments": [],

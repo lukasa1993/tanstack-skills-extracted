@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/octane-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/octane-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-octane-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/octane/guide/table-state.md\",\"TanStack/table:examples/octane/basic-subscribe\",\"TanStack/table:examples/octane/basic-external-atoms\",\"TanStack/table:packages/octane-table/src/useTable.tsrx\",\"TanStack/table:packages/octane-table/src/Subscribe.tsrx\"]"

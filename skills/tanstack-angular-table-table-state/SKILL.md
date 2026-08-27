@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "angular"
   tanstack-library: "@tanstack/angular-table"
-  tanstack-library-version: "9.2.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/angular-table"
-  tanstack-package-version: "9.2.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-angular-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/angular/guide/table-state.md\",\"TanStack/table:examples/angular/basic-external-state\",\"TanStack/table:packages/angular-table/src/injectTable.ts\"]"

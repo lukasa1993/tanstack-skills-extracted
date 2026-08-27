@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\",\"tanstack-table-core-column-filtering\"]"
   tanstack-source-skill: "column-faceting"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/column-faceting.md\",\"TanStack/table:packages/table-core/src/features/column-faceting\",\"TanStack/table:examples/react/filters-faceted\"]"

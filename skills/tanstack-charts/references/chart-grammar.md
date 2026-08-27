@@ -38,14 +38,16 @@ const alphabet: readonly AlphabetRow[] = [
 
 const letterFrequencies = defineChart({
   marks: [barY(alphabet, { x: 'letter', y: 'frequency' })],
-  x: {
-    scale: () => scaleBand<string>().padding(0.12),
-  },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Frequency' },
+  scales: {
+    x: {
+      scale: () => scaleBand<string>().padding(0.12),
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Frequency' },
+    },
   },
 })
 ```
@@ -62,13 +64,15 @@ const productRanking = defineChart({
   tooltip,
   chart: ({ width }) => ({
     marks: [barX(ranked, { x: 'value', y: 'product' })],
-    x: {
-      scale: scaleLinear,
-      nice: true,
-      axis: { ticks: { count: width < 480 ? 4 : 7 } },
-    },
-    y: {
-      scale: () => scaleBand<string>().padding(0.1),
+    scales: {
+      x: {
+        scale: scaleLinear,
+        nice: true,
+        axis: { ticks: { count: width < 480 ? 4 : 7 } },
+      },
+      y: {
+        scale: () => scaleBand<string>().padding(0.1),
+      },
     },
   }),
 })
@@ -113,13 +117,15 @@ function ProductRanking({ rows, metric }: Props) {
       tooltip,
       chart: ({ width }) => ({
         marks: [barX(ranked, { x: 'value', y: 'product' })],
-        x: {
-          scale: scaleLinear,
-          nice: true,
-          axis: { ticks: { count: width < 480 ? 4 : 7 } },
-        },
-        y: {
-          scale: () => scaleBand<string>().padding(0.1),
+        scales: {
+          x: {
+            scale: scaleLinear,
+            nice: true,
+            axis: { ticks: { count: width < 480 ? 4 : 7 } },
+          },
+          y: {
+            scale: () => scaleBand<string>().padding(0.1),
+          },
         },
       }),
     })
@@ -218,7 +224,7 @@ initializes; keep expensive cross-row transforms in application code.
 
 ### Positional channels
 
-The x and y channels feed the chart’s positional scale factories or instances:
+The x and y channels feed the reserved scales with the same names:
 
 ```ts
 barX(rows, {
@@ -226,6 +232,10 @@ barX(rows, {
   y: 'region',
 })
 ```
+
+Use `xScale` or `yScale` when a mark should feed another named entry in the
+chart's `scales` registry. Channel names continue to describe geometry; scale
+IDs select the mapping.
 
 Positional values are also retained in each interaction `ChartPoint`:
 
@@ -292,8 +302,11 @@ const chart = defineChart({
       z: 'segment',
     }),
   ],
-  x: { scale: revenueScale },
-  y: { scale: retentionScale },
+  scales: {
+    x: { scale: revenueScale },
+    y: { scale: retentionScale },
+  },
+
   color: {
     scale: segmentColor,
     legend: colorLegend({ label: 'Segment' }),
@@ -484,16 +497,19 @@ export default defineChart({
       strokeWidth: 0.75,
     }),
   ],
-  x: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Bill length (mm)' },
+  scales: {
+    x: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Bill length (mm)' },
+    },
+    y: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Bill depth (mm)' },
+    },
   },
-  y: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Bill depth (mm)' },
-  },
+
   color: {
     scale: scaleOrdinal(species, ['#2563eb', '#f97316', '#10b981']),
     legend: colorLegend({ label: 'Species' }),
@@ -610,8 +626,10 @@ const alphabet: readonly LetterFrequency[] = [
 
 const chart = defineChart({
   marks: [barY(alphabet, { x: 'letter', y: 'frequency' })],
-  x: { scale: scaleBand },
-  y: { scale: scaleLinear, nice: true },
+  scales: {
+    x: { scale: scaleBand },
+    y: { scale: scaleLinear, nice: true },
+  },
 })
 ```
 
@@ -735,7 +753,7 @@ const y = {
     label: 'Monthly revenue',
     ticks: {
       count: 5,
-      format: (value: number) => `$${Math.round(value / 1_000)}k`,
+      format: (value: number) => `${Math.round(value / 1_000)}k`,
     },
   },
 }
@@ -784,14 +802,16 @@ export default defineChart({
       fill: '#2563eb',
     }),
   ],
-  x: {
-    scale: () => scaleBand<string>().padding(0.12),
-  },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Value' },
+  scales: {
+    x: {
+      scale: () => scaleBand<string>().padding(0.12),
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Value' },
+    },
   },
 })
 ```
@@ -890,16 +910,18 @@ Responsive definitions receive the current `width` and `height`, so presentation
 ```ts
 const chart = defineChart(({ width }) => ({
   marks: [lineY(rows, { x: 'date', y: 'value' })],
-  x: {
-    scale: xScale,
-    axis: {
-      ticks: { count: width < 420 ? 4 : 8 },
-      tickLabels: { rotate: width < 520 ? -30 : undefined },
+  scales: {
+    x: {
+      scale: xScale,
+      axis: {
+        ticks: { count: width < 420 ? 4 : 8 },
+        tickLabels: { rotate: width < 520 ? -30 : undefined },
+      },
     },
-  },
-  y: {
-    scale: yScale,
-    axis: { label: width < 480 ? undefined : 'Weekly downloads' },
+    y: {
+      scale: yScale,
+      axis: { label: width < 480 ? undefined : 'Weekly downloads' },
+    },
   },
 }))
 ```
@@ -925,8 +947,11 @@ Explicit margins lock only the sides you provide:
 ```ts
 const chart = defineChart({
   marks,
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
+
   margin: { left: 80 },
 })
 ```
@@ -939,8 +964,11 @@ Here the left margin is exactly `80`; top, right, and bottom remain automatic.
 const sparkline = defineChart({
   marks: [lineY(values)],
   guides: false,
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
+
   margin: 0,
 })
 ```
@@ -1030,14 +1058,48 @@ Hide every axis and grid while keeping scales for marks:
 const chart = defineChart({
   marks,
   guides: false,
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
 })
 ```
 
-Marks encode whether they materialize each positional dimension. Omit an unused
-axis; for example, a `ruleY`-only chart needs `y` but no `x`. Explicit `null`
-is accepted only for an unused dimension.
+Set a reserved scale to `null` only when no mark uses that dimension. For
+example, a `ruleY`-only chart uses `scales: { x: null, y: { scale: yScale } }`.
+
+### Multiple axes
+
+Add a named scale when one coordinate system needs an independent mapping.
+Declare whether it maps x or y, choose its axis side, then bind the relevant
+mark to its ID:
+
+```ts
+const chart = defineChart({
+  marks: [
+    lineY(revenue, { x: 'date', y: 'value' }),
+    lineY(margin, {
+      x: 'date',
+      y: 'percent',
+      yScale: 'margin',
+    }),
+  ],
+  scales: {
+    x: { scale: dateScale },
+    y: { scale: revenueScale, axis: { label: 'Revenue' } },
+    margin: {
+      channel: 'y',
+      scale: marginScale,
+      side: 'right',
+      axis: { label: 'Margin' },
+    },
+  },
+})
+```
+
+`xScale` and `yScale` bind marks to scale IDs, not axis IDs. Axes visualize the
+scale registry entries. Multiple axes on one side stack outward and take part
+in automatic margin measurement.
 
 ### Scale ranges and coordinate direction
 
@@ -1129,16 +1191,16 @@ import { polar, radialArc } from '@tanstack/charts/polar'
 import { geoShape } from '@tanstack/charts/geo'
 ```
 
-`polar` copies configured angle and radius scales, assigns responsive angular
-and radial ranges, and renders guide backgrounds, child marks, then guide
-foregrounds around one resolved center. `geoShape` calls an
+`polar` copies entries from its own `scales` registry, assigns responsive
+angular and radial ranges, and renders guide backgrounds, child marks, then
+guide foregrounds around one resolved center. `geoShape` calls an
 application-supplied D3 projection callback or fits a projection descriptor to
 data, a sphere, or explicit geometry.
 
 Both paths emit the same keyed scene nodes and interaction points as ordinary
 marks. SVG rendering, DOM reconciliation, focus, export, and adapters do not
-need a coordinate-system branch. Their outer chart omits `x` and `y`; no
-Cartesian guides are created.
+need a coordinate-system branch. Their outer chart uses
+`scales: { x: null, y: null }`; no Cartesian guides are created.
 
 These capabilities stay behind separate package subpaths so their D3 geometry
 does not enter a Cartesian consumer. See
@@ -1201,8 +1263,11 @@ gesture can use the resolved scale's optional `invert` operation.
 ```ts
 const chart = defineChart({
   marks,
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
+
   clip: true,
 })
 ```
@@ -1237,17 +1302,19 @@ export default defineChart({
       radius: 3,
     }),
   ],
-  x: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: {
-      label: '2015 population',
-      ticks: { format: (value) => compact.format(value) },
+  scales: {
+    x: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: {
+        label: '2015 population',
+        ticks: { format: (value) => compact.format(value) },
+      },
     },
-  },
-  y: {
-    scale: () => scaleBand<string>().paddingInner(0.12).paddingOuter(0.06),
+    y: {
+      scale: () => scaleBand<string>().paddingInner(0.12).paddingOuter(0.06),
+    },
   },
 })
 ```
@@ -1331,6 +1398,43 @@ A useful default order is:
 5. Labels and annotations
 
 There is no separate overlay subsystem. An annotation is another mark with its own data, channels, and stable identity.
+
+### Opt individual marks into Canvas
+
+Import the Canvas renderer and attach it only to paint-heavy marks:
+
+```ts
+import { canvasChartRenderer } from '@tanstack/charts/canvas'
+
+const marks = [
+  areaY(denseRange, {
+    x: 'date',
+    y1: 'low',
+    y2: 'high',
+    renderer: canvasChartRenderer,
+  }),
+  lineY(summary, { x: 'date', y: 'value' }),
+  dot(highlights, { x: 'date', y: 'value' }),
+  text(labels, { x: 'date', y: 'value', text: 'label' }),
+]
+```
+
+The host keeps axes, guides, and marks without `renderer` in SVG. It creates
+ordered SVG and Canvas layers from the mark declaration order, so a Canvas
+mark can sit behind, between, or in front of SVG marks. Focus, tooltips,
+keyboard navigation, responsive updates, SSR shell adoption, and export still
+use the shared chart host.
+
+Cartesian and radial mark option objects accept `renderer`. A
+`compositeMark` can select a renderer for its complete output, or its children
+can select their own renderers when the parent does not. The same nested
+selection works inside facets and `polar`.
+
+Importing `@tanstack/charts/canvas` is the opt-in boundary that adds the Canvas
+painter to the bundle. Reuse a stable renderer instance across updates. The
+exported `canvasChartRenderer` singleton already has stable identity. Creating
+a new renderer or changing the renderer sequence replaces the affected layer
+composition.
 
 ### Decorative layers
 
@@ -1484,8 +1588,11 @@ Set `clip: true` on the chart definition when marks must not paint outside the r
 ```ts
 const chart = defineChart({
   marks,
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
+
   clip: true,
 })
 ```
@@ -1525,15 +1632,17 @@ export default defineChart({
       strokeWidth: 1.5,
     }),
   ],
-  x: {
-    scale: scaleUtc,
-    axis: { label: 'Day' },
-  },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Temperature (°F)' },
+  scales: {
+    x: {
+      scale: scaleUtc,
+      axis: { label: 'Day' },
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Temperature (°F)' },
+    },
   },
 })
 ```
@@ -1659,8 +1768,10 @@ import { scaleUtc } from 'd3-scale'
 
 const chart = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value' })],
-  x: { scale: scaleUtc, nice: true },
-  y: { scale: scaleLinear, nice: true },
+  scales: {
+    x: { scale: scaleUtc, nice: true },
+    y: { scale: scaleLinear, nice: true },
+  },
 })
 ```
 
@@ -1738,24 +1849,31 @@ import { scaleLinear } from '@tanstack/charts/scales/linear'
 
 const spec = {
   marks,
-  x: { scale: scaleBand },
-  y: { scale: scaleLinear, nice: true },
+  scales: {
+    x: { scale: scaleBand },
+    y: { scale: scaleLinear, nice: true },
+  },
 }
 ```
 
-Positionless marks omit both axes:
+Positionless marks use explicit null entries:
 
 ```ts
 import { defineChart, frame } from '@tanstack/charts'
 
 const borderOnlyChart = defineChart({
   marks: [frame()],
+  scales: {
+    x: null,
+    y: null,
+  },
 })
 ```
 
-A mark with x values requires an x scale. A mark with y values requires a y
-scale. One-dimensional marks omit only the unused axis. The scale factory
-chooses the mapping; materialized mark channels supply its domain.
+A mark with x values requires a non-null x scale. A mark with y values requires
+a non-null y scale. One-dimensional charts use `null` only for the unused
+entry. The scale factory chooses the mapping; materialized mark channels
+supply its domain.
 
 ### Factory domains come from marks
 
@@ -1767,8 +1885,10 @@ import { scaleLinear } from '@tanstack/charts/scales/linear'
 
 const chart = defineChart({
   marks: [lineY(rows, { x: 'month', y: 'value' })],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear, nice: true },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear, nice: true },
+  },
 })
 ```
 
@@ -1870,8 +1990,10 @@ Omitting `color.scale` uses the chart theme’s ordinal palette for categorical 
 ```ts
 const chart = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value', z: 'region' })],
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
 })
 ```
 
@@ -1887,8 +2009,11 @@ const regionColor = scaleOrdinal(
 
 const chart = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value', z: 'region' })],
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
+
   color: {
     scale: regionColor,
     legend: colorLegend({ label: 'Region' }),
@@ -2052,15 +2177,17 @@ export default defineChart({
       fill: '#2563eb',
     }),
   ],
-  x: {
-    scale: scaleLog().domain([200, 30_000]),
-    grid: true,
-    axis: { label: 'Class size' },
-  },
-  y: {
-    scale: scaleLinear,
-    grid: true,
-    axis: { label: 'Hierarchy depth' },
+  scales: {
+    x: {
+      scale: scaleLog().domain([200, 30_000]),
+      grid: true,
+      axis: { label: 'Class size' },
+    },
+    y: {
+      scale: scaleLinear,
+      grid: true,
+      axis: { label: 'Hierarchy depth' },
+    },
   },
 })
 ```
@@ -2238,8 +2365,10 @@ const definition = defineChart({
       y: 'temperature',
     }),
   ],
-  x: { scale: scaleTime },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleTime },
+    y: { scale: scaleLinear },
+  },
 })
 ```
 
@@ -2258,8 +2387,10 @@ function createTrafficDefinition(rows: readonly Reading[]) {
         y: 'temperature',
       }),
     ],
-    x: { scale: scaleTime },
-    y: { scale: scaleLinear },
+    scales: {
+      x: { scale: scaleTime },
+      y: { scale: scaleLinear },
+    },
   })
 }
 ```
@@ -2285,8 +2416,11 @@ function createTrafficDefinition(rows: readonly Reading[]) {
         y: 'temperature',
       }),
     ],
-    x: { scale: scaleTime },
-    y: { scale: scaleLinear },
+    scales: {
+      x: { scale: scaleTime },
+      y: { scale: scaleLinear },
+    },
+
     margin: width < 480 ? 24 : 40,
   }))
 }
@@ -2305,10 +2439,10 @@ Avoid annotating an intermediate object as broad `ChartSpec` before passing it
 to `defineChart`. That discards the literal mark tuple used for axis and
 callback inference.
 
-The mark tuple also determines which positional scales are required. Cartesian
-marks require every dimension they materialize. Positionless geo, polar, and
-facet marks omit both axes; one-dimensional marks such as `ruleY` require only
-`y`.
+The mark tuple determines the value type accepted by each reserved positional
+scale. `scales.x` and `scales.y` are always present in canonical definitions.
+Use `null` for a dimension that no mark materializes. Named scale selectors on
+marks keep those values out of the reserved entry's inferred type.
 
 ### Callback types
 
@@ -2355,10 +2489,13 @@ union manually. The exact utility contracts are listed in
 
 ### Custom marks
 
-`createMark<TDatum, TXValue, TYValue>` keeps interaction points and scale
-values aligned for the common case. Use the advanced scale-value factory when
-the materialized axis domain differs from the point anchor or when a custom
-mark is positionless and declares both scale value types as `never`.
+`createMark<TDatum, TXValue, TYValue, TXScaleId, TYScaleId>` keeps interaction
+points and scale values aligned for the common case. The scale ID parameters
+default to `x` and `y`. Provide them when a custom mark selects named scales so
+its values do not widen the reserved scale types. Use the advanced scale-value
+factory when the materialized axis domain differs from the point anchor or
+when a custom mark is positionless and declares both scale value types as
+`never`.
 
 See [Custom Marks and Renderers](./composition.md#source-charts-docs-guides-custom-marks-and-renderers-md). A custom
 extension that requires `as unknown as`, a private import, or suppressed type

@@ -8,7 +8,7 @@ Overview, comparison, installation, and quick start.
 
 Source: `charts:docs/comparison.md`.
 
-The latest published TanStack Charts release is `0.14.0`, while this page
+The latest published TanStack Charts release is `0.16.0`, while this page
 measures unreleased workspace source against pinned competitor packages. This
 comparison records architectural differences and reproducible evidence without
 turning untested behavior into a checkmark.
@@ -17,14 +17,14 @@ turning untested behavior into a checkmark.
 
 | Library                                                                                | Package              | Measured source     |
 | -------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| [TanStack Charts](./getting-started.md#source-charts-docs-overview-md)                                                       | `@tanstack/charts`   | workspace `91e2eef` |
+| [TanStack Charts](./getting-started.md#source-charts-docs-overview-md)                                                       | `@tanstack/charts`   | workspace `3df87d7` |
 | [Chart.js](https://www.chartjs.org/docs/latest/)                                       | `chart.js`           | npm `4.5.1`         |
 | [Apache ECharts](https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/) | `echarts`            | npm `6.1.0`         |
 | [Recharts](https://recharts.github.io/en-US/)                                          | `recharts`           | npm `3.10.1`        |
 | [Observable Plot](https://observablehq.com/plot/features/plots)                        | `@observablehq/plot` | npm `0.6.17`        |
 
 The competitor versions are exact package pins, not latest versions inferred
-at page render time. The measured TanStack workspace revision is `91e2eef`.
+at page render time. The measured TanStack workspace revision is `3df87d7`.
 
 ### Capability matrix
 
@@ -95,7 +95,7 @@ output model.
 
 ### Bundle snapshot
 
-Baseline date: `2026-08-15`.
+Baseline date: `2026-08-26`.
 
 Controlled ranges cover 12 independently built, minified browser consumers:
 line, bar, area, and scatter at basic, interactive, and advanced tiers. Only
@@ -111,7 +111,7 @@ Vega-Lite, AG Charts, and uPlot main exports were read from Bundlephobia on July
 
 | Library            | Bundle size                            | React externalized | Evidence                                                   |
 | ------------------ | -------------------------------------- | -----------------: | ---------------------------------------------------------- |
-| TanStack Charts    | 37.60–43.56 KiB                        |                  — | Controlled suite                                           |
+| TanStack Charts    | 38.96–44.98 KiB                        |     Not applicable | Controlled suite                                           |
 | D3                 | 90 KB gzip                             |                  — | External main export                                       |
 | Chart.js           | 44.70–58.21 KiB                        |                  — | Controlled suite                                           |
 | Apache ECharts     | 153.10–173.18 KiB                      |                  — | Controlled suite                                           |
@@ -175,11 +175,11 @@ Canvas composition while keeping D3 and state ownership explicit.
 
 ### Evidence and reproduction
 
-- [Standard comparison protocol](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/README.md)
-- [Current tracked bundle baseline](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/bundle-baseline.json)
-- [Pinned release-source bundle baseline](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/bundle-baseline.json)
-- [Stress protocol](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/comparison/stress/README.md)
-- [Catalog conformance protocol](https://github.com/TanStack/charts/blob/74c316e7f59e42f8fa177ad50fcb92a66466d864/benchmarks/conformance/README.md)
+- [Standard comparison protocol](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/README.md)
+- [Current tracked bundle baseline](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/bundle-baseline.json)
+- [Pinned release-source bundle baseline](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/bundle-baseline.json)
+- [Stress protocol](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/stress/README.md)
+- [Catalog conformance protocol](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/conformance/README.md)
 
 ```sh
 pnpm benchmark:size
@@ -199,11 +199,12 @@ establish application-specific parity before replacing an existing library.
 
 Source: `charts:docs/installation.md`.
 
-These docs follow unreleased `main`. The latest published pre-alpha is TanStack
-Charts `0.14.0`; use its
-[release-source docs](https://github.com/TanStack/charts/tree/74c316e7f59e42f8fa177ad50fcb92a66466d864/docs)
-for the exact surface. Install TanStack Charts in each application that authors
-chart definitions:
+These docs follow unreleased `main`, the official Alpha line. The latest
+published release is TanStack Charts `0.16.0`; use its
+[release-source docs](https://github.com/TanStack/charts/tree/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/docs)
+for the exact surface. Alpha releases use regular `0.x` versions and may break
+APIs between minor releases. Install TanStack Charts in each application that
+authors chart definitions:
 
 ```sh
 pnpm add @tanstack/charts
@@ -492,8 +493,10 @@ const values = [4, 9, 7]
 
 const chart = defineChart({
   marks: [lineY(values)],
-  x: { scale: scaleLinear },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleLinear },
+    y: { scale: scaleLinear },
+  },
 })
 ```
 
@@ -522,8 +525,10 @@ import { createChartScene, defineChart, lineY } from '@tanstack/charts'
 
 const chart = defineChart({
   marks: [lineY([2, 5, 3])],
-  x: { scale: scaleLinear },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleLinear },
+    y: { scale: scaleLinear },
+  },
 })
 
 const scene = createChartScene(chart, { width: 640, height: 320 })
@@ -542,8 +547,10 @@ for the framework that owns the chart component.
 
 Source: `charts:docs/overview.md`.
 
-These docs follow unreleased `main`. The latest published TanStack Charts
-release is `0.14.0`; it is pre-alpha and its API may change between releases.
+These docs follow unreleased `main`, the official Alpha line. The latest
+published TanStack Charts release is `0.16.0`. Alpha uses regular `0.x`
+versions, and APIs may change between minor releases. See
+[Alpha stability](./other-guides.md#source-charts-docs-stability-md) for the release contract.
 
 TanStack Charts is a small, framework-agnostic chart grammar for TypeScript and
 JavaScript. Give each mark its natural data, map fields or accessors to visual
@@ -601,14 +608,16 @@ export default defineChart({
       r: 4,
     }),
   ],
-  x: {
-    scale: () => scaleBand<string>().padding(0.2),
-  },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Signups' },
+  scales: {
+    x: {
+      scale: () => scaleBand<string>().padding(0.2),
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Signups' },
+    },
   },
 })
 ```
@@ -743,16 +752,19 @@ const monthlyRevenueChart = defineChart({
       stroke: '#2563eb',
     }),
   ],
-  x: {
-    scale: () => scalePoint<string>().padding(0.2),
-    axis: { label: 'Month' },
+  scales: {
+    x: {
+      scale: () => scalePoint<string>().padding(0.2),
+      axis: { label: 'Month' },
+    },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Revenue (USD)' },
+    },
   },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Revenue (USD)' },
-  },
+
   tooltip,
 })
 ```

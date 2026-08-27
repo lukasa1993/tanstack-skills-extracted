@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/preact-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core-client-vs-server\",\"tanstack-preact-table-getting-started\",\"tanstack-preact-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-query"
   tanstack-sources: "[\"TanStack/table:examples/preact/with-tanstack-query\",\"TanStack/table:docs/framework/preact/guide/pagination.md\"]"

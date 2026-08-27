@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/lit-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-lit-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/lit/guide/table-state.md\",\"TanStack/table:examples/lit/basic-external-state\",\"TanStack/table:packages/lit-table/src/TableController.ts\"]"

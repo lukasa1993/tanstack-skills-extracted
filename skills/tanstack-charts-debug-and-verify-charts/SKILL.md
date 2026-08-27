@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.9.0"
+  tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.16.0"
   tanstack-source-skill: "debug-and-verify-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/testing-and-debugging.md\",\"TanStack/charts:docs/guides/typescript.md\",\"TanStack/charts:docs/guides/bundle-size-and-performance.md\",\"TanStack/charts:API-FRICTION.md\"]"
   tanstack-type: "lifecycle"
@@ -41,8 +41,10 @@ const rows = [
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'month', y: 'value', points: true })],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear },
+  },
 })
 
 export const scene = createChartScene(definition, { width: 640, height: 360 })

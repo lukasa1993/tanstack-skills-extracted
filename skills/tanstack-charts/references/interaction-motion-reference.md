@@ -27,6 +27,7 @@ With no custom focus strategy:
 - `Home` and `End` move to the first and last point
 - `Enter` and Space toggle an enabled sticky tooltip and call `onSelect` for
   the focused point
+- pressing the pointer outside both the chart and the tooltip dismisses a pinned tooltip
 - a configured selection controller receives the same focused point before
   `onSelect`
 - a click focuses and selects the nearest point, or selects `null` on the
@@ -167,8 +168,11 @@ const definition = defineChart({
       strokeDasharray: '4 4',
     }),
   ],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear },
+  },
+
   focus: 'group-x',
   maxFocusDistance: Number.POSITIVE_INFINITY,
 })
@@ -327,8 +331,11 @@ const definition = defineChart({
     lineY(rows, { x: 'date', y: 'value' }),
     crosshair({ x: { label: true }, y: false }),
   ],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear },
+  },
+
   focus: 'group-x',
   cursor: {
     use: cursorHost,
@@ -897,8 +904,9 @@ resize, and content resize, and collide against the viewport instead of the
 chart box.
 
 Clicking, Enter, or Space pins the tooltip. The next activation unpins it.
-`Escape` unpins and clears focus. Set `sticky: false` to disable pinning. A
-display-only tooltip has `role="status"` and `aria-live="polite"`.
+Pressing the pointer outside the chart and tooltip, or pressing `Escape`,
+unpins and clears focus. Set `sticky: false` to disable pinning. A display-only
+tooltip has `role="status"` and `aria-live="polite"`.
 
 Set `visibility: 'pinned'` for click-or-keyboard detail that should not paint a
 transient shell. Focus and inline mark states still update before activation;
@@ -964,10 +972,10 @@ resolution.
 
 Dragging, scrolling, custom crosshair overlays, and freeform range or lasso
 selections can listen on a wrapper or use `onRender` to attach application
-behavior to the live SVG. Use `handleX` for one ordered scale value, `brushX`
-for a normal horizontal semantic range, and `zoomX` for a normal controlled x
-window. For custom gestures, keep semantic state outside the scene and update a
-responsive definition by replacing its identity.
+behavior to the default SVG or complete surface. Use `handleX` for one ordered
+scale value, `brushX` for a normal horizontal semantic range, and `zoomX` for a
+normal controlled x window. For custom gestures, keep semantic state outside
+the scene and update a responsive definition by replacing its identity.
 
 Use a definition cursor binding for snapped or free crosshairs. Keep other
 semantic state outside the scene.
@@ -1078,13 +1086,19 @@ const host = mountChartRenderer(container, {
 ```
 
 React and Octane applications use their `/core` component entry and pass the
-same renderer. Other adapters currently expose their default SVG surface.
+same renderer. Other adapters start with their default SVG renderer, and a
+definition may still select Canvas for individual marks.
 
 ### Definition-local motion
 
 `motion` on a definition, mark, axis, tick collection, tick-label collection,
 or axis label is inert policy. The optional renderer consumes it. Definitions
 remain valid for static SVG and Canvas, which paint the final state.
+
+This stays true in a mixed chart. A mark that selects `canvasChartRenderer`
+keeps its authored motion option, but the Canvas layer paints the final scene
+instead of running the tween or spring policy. The optional `motion()` renderer
+still animates the default-renderer layers it owns.
 
 ```ts
 import { scaleBand } from '@tanstack/charts/scales/band'
@@ -1113,14 +1127,16 @@ const definition = defineChart({
       },
     }),
   ],
-  x: {
-    scale: scaleBand,
-    axis: {
-      ticks: { motion: { transition: { type: 'tween', duration: 180 } } },
-      tickLabels: { motion: { delay: 40 } },
+  scales: {
+    x: {
+      scale: scaleBand,
+      axis: {
+        ticks: { motion: { transition: { type: 'tween', duration: 180 } } },
+        tickLabels: { motion: { delay: 40 } },
+      },
     },
+    y: { scale: scaleLinear },
   },
-  y: { scale: scaleLinear },
 })
 ```
 
@@ -1166,6 +1182,10 @@ const definition = defineChart({
     ...stagger({ each: 35, by: 'series', roles: ['arc', 'bar'] }),
   },
   marks,
+  scales: {
+    x: null,
+    y: null,
+  },
 })
 ```
 
@@ -1268,8 +1288,11 @@ const definition = defineChart({
     transition: { type: 'tween', duration: 800, easing: 'linear' },
   },
   marks: [lineY(rows, { x: 'time', y: 'value', key: 'id' })],
-  x: { scale: scaleUtc().domain([visibleStart, visibleEnd]) },
-  y: { scale: scaleLinear().domain([0, 100]) },
+  scales: {
+    x: { scale: scaleUtc().domain([visibleStart, visibleEnd]) },
+    y: { scale: scaleLinear().domain([0, 100]) },
+  },
+
   clip: true,
 })
 ```

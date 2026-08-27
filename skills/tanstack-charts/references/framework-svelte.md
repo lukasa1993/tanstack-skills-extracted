@@ -51,10 +51,10 @@ dimensions deterministic.
 ### Presentation and rendering
 
 `class` and the string `style` prop apply to the outer host. `className`
-applies to the rendered SVG surface. Interaction hooks such as
+applies to the rendered chart surface. Interaction hooks such as
 `onFocusChange` are callback props, not dispatched Svelte events. The package
-exposes the SVG component only; use `renderSvg` to replace SVG serialization
-without replacing the shared host.
+starts with SVG and can compose marks that use `canvasChartRenderer`. Use
+`renderSvg` to replace SVG serialization without replacing the shared host.
 
 Exports: `Chart`, `ChartCommonProps`, `ChartPresentationProps`, `ChartProps`,
 `ChartTooltipBodySnippetContext`, `ChartDefinition`, and `ChartPoint`.
@@ -88,27 +88,27 @@ It also owns `focus`, `focusRing`, `cursor`, `tooltip`, `svgAnimation`, `keyboar
 
 ### Props
 
-| Prop                 | Type                                         | Default               | Meaning                                                  |
-| -------------------- | -------------------------------------------- | --------------------- | -------------------------------------------------------- |
-| `definition`         | `ChartDefinition`                            | Required              | Framework-neutral chart definition                       |
-| `ariaLabel`          | `string`                                     | Required              | Accessible chart name                                    |
-| `ariaDescription`    | `string`                                     | None                  | Optional accessible description                          |
-| `height`             | `number`                                     | `320` without a ratio | Fixed CSS and scene height                               |
-| `aspectRatio`        | `number`                                     | None                  | Positive width-to-height ratio when height is absent     |
-| `width`              | `number`                                     | Responsive            | Fixed CSS and scene width                                |
-| `initialWidth`       | `number`                                     | `640`                 | Initial and server width before responsive measurement   |
-| `tabIndex`           | `number`                                     | `0`                   | Surface tab index; `keyboard: false` forces `-1`         |
-| `idPrefix`           | `string`                                     | Generated             | Prefix for renderer-owned document IDs                   |
-| `renderSvg`          | `ChartSvgRenderer<TDatum, TXValue, TYValue>` | `renderChartSvg`      | Scene-to-SVG renderer                                    |
-| `measureText`        | `ChartTextMeasurer`                          | Host measurer         | Guide text measurement                                   |
-| `onFocusChange`      | `(point: ChartPoint \| null) => void`        | None                  | Primary focus callback                                   |
-| `onFocusGroupChange` | `(points: readonly ChartPoint[]) => void`    | None                  | Grouped focus callback                                   |
-| `onSelect`           | `(point: ChartPoint \| null) => void`        | None                  | Pointer or keyboard activation callback                  |
-| `onRender`           | `(context: ChartRenderContext) => void`      | None                  | Live SVG, container, and scene after rendering           |
-| `tooltipBody`        | `Snippet<[ChartTooltipBodySnippetContext]>`  | None                  | Composes Svelte content inside the built-in tooltip body |
-| `class`              | `string`                                     | None                  | Extra class on the outer `.ts-chart-host`                |
-| `style`              | `string`                                     | None                  | Outer host declarations applied after adapter sizing     |
-| `className`          | `string`                                     | None                  | Extra class on the rendered SVG surface                  |
+| Prop                 | Type                                         | Default               | Meaning                                                             |
+| -------------------- | -------------------------------------------- | --------------------- | ------------------------------------------------------------------- |
+| `definition`         | `ChartDefinition`                            | Required              | Framework-neutral chart definition                                  |
+| `ariaLabel`          | `string`                                     | Required              | Accessible chart name                                               |
+| `ariaDescription`    | `string`                                     | None                  | Optional accessible description                                     |
+| `height`             | `number`                                     | `320` without a ratio | Fixed CSS and scene height                                          |
+| `aspectRatio`        | `number`                                     | None                  | Positive width-to-height ratio when height is absent                |
+| `width`              | `number`                                     | Responsive            | Fixed CSS and scene width                                           |
+| `initialWidth`       | `number`                                     | `640`                 | Initial and server width before responsive measurement              |
+| `tabIndex`           | `number`                                     | `0`                   | Surface tab index; `keyboard: false` forces `-1`                    |
+| `idPrefix`           | `string`                                     | Generated             | Prefix for renderer-owned document IDs                              |
+| `renderSvg`          | `ChartSvgRenderer<TDatum, TXValue, TYValue>` | `renderChartSvg`      | Scene-to-SVG renderer                                               |
+| `measureText`        | `ChartTextMeasurer`                          | Host measurer         | Guide text measurement                                              |
+| `onFocusChange`      | `(point: ChartPoint \| null) => void`        | None                  | Primary focus callback                                              |
+| `onFocusGroupChange` | `(points: readonly ChartPoint[]) => void`    | None                  | Grouped focus callback                                              |
+| `onSelect`           | `(point: ChartPoint \| null) => void`        | None                  | Pointer or keyboard activation callback                             |
+| `onRender`           | `(context: ChartRenderContext) => void`      | None                  | Default SVG, complete surface, container, and scene after rendering |
+| `tooltipBody`        | `Snippet<[ChartTooltipBodySnippetContext]>`  | None                  | Composes Svelte content inside the built-in tooltip body            |
+| `class`              | `string`                                     | None                  | Extra class on the outer `.ts-chart-host`                           |
+| `style`              | `string`                                     | None                  | Outer host declarations applied after adapter sizing                |
+| `className`          | `string`                                     | None                  | Extra class on the rendered chart surface                           |
 
 Interaction hooks are Svelte 5 callback props. They are not component events.
 

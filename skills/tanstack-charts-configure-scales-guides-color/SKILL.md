@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.9.0"
+  tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.16.0"
   tanstack-source-skill: "configure-scales-guides-color"
   tanstack-sources: "[\"TanStack/charts:docs/concepts/scales-and-d3.md\",\"TanStack/charts:docs/reference/scales-guides-and-color.md\",\"TanStack/charts:docs/guides/legends-and-color.md\",\"TanStack/charts:docs/guides/responsive-charts.md\"]"
   tanstack-type: "core"
@@ -40,12 +40,14 @@ const color = scaleOrdinal<string, string>()
 
 export const chart = defineChart({
   marks: [lineY(rows, { x: 'week', y: 'downloads', z: 'package' })],
-  x: { scale: () => scalePoint<string>().padding(0.2) },
-  y: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { label: 'Downloads' },
+  scales: {
+    x: { scale: () => scalePoint<string>().padding(0.2) },
+    y: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { label: 'Downloads' },
+    },
   },
   color: { scale: color, legend: colorLegend({ label: 'Package' }) },
 })

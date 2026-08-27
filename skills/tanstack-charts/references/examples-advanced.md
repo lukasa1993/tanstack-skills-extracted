@@ -569,6 +569,10 @@ export default defineChart({
       strokeWidth: 1.5,
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   margin: 12,
 })
 ```
@@ -828,6 +832,10 @@ export default defineChart({
         ] as const,
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   guides: false,
   margin: 0,
 })
@@ -920,8 +928,11 @@ export default defineChart({
       dx: (node) => (node.internal ? -7 : 7),
     }),
   ],
-  x: { scale: scaleLinear },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleLinear },
+    y: { scale: scaleLinear },
+  },
+
   guides: false,
   margin: { top: 24, right: 110, bottom: 24, left: 64 },
 })
@@ -989,6 +1000,10 @@ const chart = defineChart({
       stroke: '#fff',
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   guides: false,
   margin: 0,
 })
@@ -1088,8 +1103,10 @@ const chart = defineChart({
     dot(graph.nodes, { x: 'x', y: 'y', color: 'group', key: 'id' }),
     text(graph.nodes, { x: 'x', y: 'y', text: 'id', key: 'id' }),
   ],
-  x: { scale: scaleLinear().domain(graph.xDomain) },
-  y: { scale: scaleLinear().domain(graph.yDomain) },
+  scales: {
+    x: { scale: scaleLinear().domain(graph.xDomain) },
+    y: { scale: scaleLinear().domain(graph.yDomain) },
+  },
 })
 ```
 
@@ -1189,8 +1206,16 @@ export default defineChart({
           key: 'letter',
         }),
       ],
+      scales: {
+        angle: null,
+        radius: null,
+      },
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   color: {
     domain: letters,
     range: ['#0ea5e9', '#6366f1', '#a855f7', '#ec4899', '#f97316', '#94a3b8'],
@@ -1257,8 +1282,11 @@ export default defineChart({
   marks: [
     polar({
       radiusRatio: 0.84,
-      angle: { scale: scaleLinear().domain([0, 1]) },
-      radius: { scale: scaleLinear().domain([0, 1]) },
+      scales: {
+        angle: { scale: scaleLinear().domain([0, 1]) },
+        radius: { scale: scaleLinear().domain([0, 1]) },
+      },
+
       marks: [
         radialArc(slices, {
           innerRadius: ({ radius }) => radius * 0.72,
@@ -1278,6 +1306,10 @@ export default defineChart({
       ],
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   color: {
     domain: ['complete', 'remaining'],
     range: ['#ef4444', '#e2e8f0'],
@@ -1317,8 +1349,11 @@ export default defineChart({
   marks: [
     polar({
       radiusRatio: 0.72,
-      angle: { scale: scalePoint<string>().domain(events), wrap: true },
-      radius: { scale: scaleLinear().domain([0, 1]) },
+      scales: {
+        angle: { scale: scalePoint<string>().domain(events), wrap: true },
+        radius: { scale: scaleLinear().domain([0, 1]) },
+      },
+
       guides: [
         radialGrid({
           values: [0.25, 0.5, 0.75, 1],
@@ -1344,6 +1379,10 @@ export default defineChart({
       ],
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
 })
 ```
 
@@ -1447,8 +1486,11 @@ import { dayOfYearAngle, seattle2012 } from './weather'
 export default defineChart({
   marks: [
     polar({
-      angle: { scale: scaleLinear().domain([0, 360]) },
-      radius: { scale: scaleLinear().domain([-10, 40]) },
+      scales: {
+        angle: { scale: scaleLinear().domain([0, 360]) },
+        radius: { scale: scaleLinear().domain([-10, 40]) },
+      },
+
       guides: [
         radialGrid({ values: [0, 10, 20, 30, 40] }),
         angleGrid({ values: [0, 90, 180, 270], labels: false }),
@@ -1462,6 +1504,10 @@ export default defineChart({
       ],
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
 })
 ```
 
@@ -1510,8 +1556,11 @@ import { latitudeBand, windDirection, windSpeed } from './wind'
 export default defineChart({
   marks: [
     polar({
-      angle: { scale: scaleLinear().domain([0, 360]) },
-      radius: { scale: scaleLinear().domain([0, 13]) },
+      scales: {
+        angle: { scale: scaleLinear().domain([0, 360]) },
+        radius: { scale: scaleLinear().domain([0, 13]) },
+      },
+
       guides: [
         radialGrid({ values: [3, 6, 9, 12] }),
         angleGrid({ values: [0, 90, 180, 270], labels: false }),
@@ -1526,6 +1575,10 @@ export default defineChart({
       ],
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
 })
 ```
 
@@ -1578,11 +1631,14 @@ export default defineChart({
   marks: [
     polar({
       radiusRatio: 0.8,
-      angle: { scale: () => scaleBand<string>().padding(0.12) },
-      radius: {
-        scale: scaleLinear().domain([0, maximum]),
-        range: [({ radius }) => radius * 0.3, ({ radius }) => radius],
+      scales: {
+        angle: { scale: () => scaleBand<string>().padding(0.12) },
+        radius: {
+          scale: scaleLinear().domain([0, maximum]),
+          range: [({ radius }) => radius * 0.3, ({ radius }) => radius],
+        },
       },
+
       marks: [
         radialBarRadius(frequencies, {
           angle: 'letter',
@@ -1593,6 +1649,10 @@ export default defineChart({
       ],
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   color: {
     domain: letters,
     range: ['#2563eb', '#7c3aed', '#db2777', '#ea580c', '#16a34a'],
@@ -1651,8 +1711,16 @@ export default defineChart({
           stroke: '#fff',
         }),
       ],
+      scales: {
+        angle: null,
+        radius: null,
+      },
     }),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   color: { range: ['#7c3aed', '#0ea5e9', '#14b8a6'] },
 })
 ```

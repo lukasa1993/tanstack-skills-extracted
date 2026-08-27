@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\"]"
   tanstack-source-skill: "aggregation"
   tanstack-sources: "[\"TanStack/table:docs/guide/aggregation.md\",\"TanStack/table:docs/framework/react/guide/aggregation.md\",\"TanStack/table:packages/table-core/src/features/row-aggregation\",\"TanStack/table:examples/react/aggregation\",\"TanStack/table:examples/react/grouped-aggregation\"]"

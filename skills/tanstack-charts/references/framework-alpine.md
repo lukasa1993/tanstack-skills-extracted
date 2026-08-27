@@ -44,8 +44,9 @@ registering `Alpine.plugin(charts)`.
 
 The directive element itself becomes `.ts-chart-host`; normal HTML class and
 style attributes own its presentation. The `className` chart option applies
-to the rendered SVG surface. The package exposes the SVG directive only; use
-`renderSvg` to replace SVG serialization without replacing the shared host.
+to the rendered chart surface. The directive starts with SVG and can compose
+marks that use `canvasChartRenderer`. Use `renderSvg` to replace SVG
+serialization without replacing the shared host.
 
 Exports: `charts`, `ChartOptions`, `ChartTooltipBodyRenderContext`,
 `AlpineChartTooltipBody`, `ChartDefinition`, and `ChartPoint`.
@@ -95,25 +96,25 @@ The definition also owns `focus`, `focusRing`, `cursor`, `tooltip`, `svgAnimatio
 
 ### Directive options
 
-| Option               | Type                                                                 | Default                                  | Meaning                                              |
-| -------------------- | -------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------- |
-| `definition`         | `ChartDefinition`                                                    | Required                                 | Framework-neutral chart definition                   |
-| `ariaLabel`          | `string`                                                             | Required                                 | Accessible chart name                                |
-| `ariaDescription`    | `string`                                                             | None                                     | Optional accessible description                      |
-| `height`             | `number`                                                             | Existing height or `320` without a ratio | Fixed CSS and scene height                           |
-| `aspectRatio`        | `number`                                                             | None                                     | Positive width-to-height ratio when height is absent |
-| `width`              | `number`                                                             | Existing width or `100%`                 | Fixed CSS and scene width                            |
-| `initialWidth`       | `number`                                                             | `640`                                    | Initial width before responsive measurement          |
-| `tabIndex`           | `number`                                                             | `0`                                      | Surface tab index; `keyboard: false` forces `-1`     |
-| `idPrefix`           | `string`                                                             | Generated                                | Prefix for renderer-owned document IDs               |
-| `className`          | `string`                                                             | None                                     | Extra class on the rendered SVG surface              |
-| `renderSvg`          | `ChartSvgRenderer<TDatum, TXValue, TYValue>`                         | `renderChartSvg`                         | Scene-to-SVG renderer                                |
-| `measureText`        | `ChartTextMeasurer`                                                  | Host measurer                            | Guide text measurement                               |
-| `onFocusChange`      | `(point: ChartPoint \| null) => void`                                | None                                     | Primary focus callback                               |
-| `onFocusGroupChange` | `(points: readonly ChartPoint[]) => void`                            | None                                     | Grouped focus callback                               |
-| `onSelect`           | `(point: ChartPoint \| null) => void`                                | None                                     | Pointer or keyboard activation callback              |
-| `onRender`           | `(context: ChartRenderContext) => void`                              | None                                     | Live SVG, container, and scene after rendering       |
-| `renderTooltipBody`  | `(context: ChartTooltipBodyRenderContext) => AlpineChartTooltipBody` | None                                     | Returns DOM content for the built-in tooltip body    |
+| Option               | Type                                                                 | Default                                  | Meaning                                                             |
+| -------------------- | -------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------- |
+| `definition`         | `ChartDefinition`                                                    | Required                                 | Framework-neutral chart definition                                  |
+| `ariaLabel`          | `string`                                                             | Required                                 | Accessible chart name                                               |
+| `ariaDescription`    | `string`                                                             | None                                     | Optional accessible description                                     |
+| `height`             | `number`                                                             | Existing height or `320` without a ratio | Fixed CSS and scene height                                          |
+| `aspectRatio`        | `number`                                                             | None                                     | Positive width-to-height ratio when height is absent                |
+| `width`              | `number`                                                             | Existing width or `100%`                 | Fixed CSS and scene width                                           |
+| `initialWidth`       | `number`                                                             | `640`                                    | Initial width before responsive measurement                         |
+| `tabIndex`           | `number`                                                             | `0`                                      | Surface tab index; `keyboard: false` forces `-1`                    |
+| `idPrefix`           | `string`                                                             | Generated                                | Prefix for renderer-owned document IDs                              |
+| `className`          | `string`                                                             | None                                     | Extra class on the rendered chart surface                           |
+| `renderSvg`          | `ChartSvgRenderer<TDatum, TXValue, TYValue>`                         | `renderChartSvg`                         | Scene-to-SVG renderer                                               |
+| `measureText`        | `ChartTextMeasurer`                                                  | Host measurer                            | Guide text measurement                                              |
+| `onFocusChange`      | `(point: ChartPoint \| null) => void`                                | None                                     | Primary focus callback                                              |
+| `onFocusGroupChange` | `(points: readonly ChartPoint[]) => void`                            | None                                     | Grouped focus callback                                              |
+| `onSelect`           | `(point: ChartPoint \| null) => void`                                | None                                     | Pointer or keyboard activation callback                             |
+| `onRender`           | `(context: ChartRenderContext) => void`                              | None                                     | Default SVG, complete surface, container, and scene after rendering |
+| `renderTooltipBody`  | `(context: ChartTooltipBodyRenderContext) => AlpineChartTooltipBody` | None                                     | Returns DOM content for the built-in tooltip body                   |
 
 The directive element becomes `.ts-chart-host`; use its normal HTML class and
 style attributes for outer presentation. Directive cleanup removes the chart

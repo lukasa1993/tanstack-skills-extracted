@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.49.1"
+  tanstack-package-version: "0.50.0"
   tanstack-source-skill: "ai-core/client-persistence"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/client-persistence.md\",\"TanStack/ai:docs/persistence/overview.md\"]"
   tanstack-type: "sub-skill"

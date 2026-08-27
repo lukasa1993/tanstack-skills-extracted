@@ -27,6 +27,17 @@ path is explicit and repeatable.
 Start at [Choosing a Chart](./chart-grammar.md#source-charts-docs-guides-choosing-a-chart-md), then use the relevant
 [example family](./examples-core.md#source-charts-docs-examples-index-md).
 
+Put Cartesian scale and axis options under `scales.x` and `scales.y`. The
+pre-Alpha root `x` and `y` form is not part of the Alpha API. Inside `polar()`,
+put position scales under `scales.angle` and `scales.radius`. Use named registry
+entries and mark-level `xScale`, `yScale`, `angleScale`, or `radiusScale`
+selectors when a chart needs more than one mapping on the same channel.
+
+Keep the default SVG renderer unless a measured paint-heavy mark benefits from
+Canvas. To mix surfaces, import `canvasChartRenderer` from the exact
+`@tanstack/charts/canvas` subpath and set that mark's `renderer` option. Do not
+move the complete chart to Canvas when only one dense mark needs raster paint.
+
 ### Canonical sources
 
 Use one documentation owner for each decision:
@@ -222,6 +233,24 @@ SVG-based. Canvas enters the module graph only through
 `@tanstack/charts/canvas`, `@tanstack/charts/react/canvas`, or
 `@tanstack/charts/octane/canvas`. The React and Octane `/core` entries accept
 an application-supplied renderer without importing Canvas.
+
+The Canvas renderer can also be attached to only the dense marks in an
+otherwise SVG chart:
+
+```ts
+import { canvasChartRenderer } from '@tanstack/charts/canvas'
+
+lineY(rows, {
+  x: 'time',
+  y: 'value',
+  renderer: canvasChartRenderer,
+})
+```
+
+The shared host includes only the small renderer-selection and layer metadata
+contract. It does not include the Canvas painter. A consumer that never
+imports the Canvas subpath cannot retain that painter. Measure mixed and
+SVG-only entries separately when reviewing a bundle change.
 
 Non-cartesian geometry is subpath-only:
 
@@ -479,6 +508,10 @@ const svg = renderChartSvg(scene, {
 })
 ```
 
+This direct serializer paints the complete renderer-neutral scene as SVG. It
+does not run mark-level surface composition, so it can provide a vector
+snapshot of a definition that selects Canvas when mounted.
+
 For a responsive definition, create a runtime with its datum, x-value, and
 y-value generics, then call `render(...)` with the definition and explicit
 size. See [Runtime and Scene](./runtime-scales-reference.md#source-charts-docs-reference-runtime-and-scene-md)
@@ -555,6 +588,18 @@ scene but no transient focus. `backgroundCanvas`, `focusUnderCanvas`,
 SVG serialization, Canvas export does not retain vector geometry, accessible
 markup, or independently styleable nodes.
 
+### Export a mixed SVG and Canvas chart
+
+Pass the mixed chart root or its host to `renderChartImage` or
+`downloadChartImage`. The exporter composites every SVG and Canvas child
+surface in visual order. Set `includeFocus: true` to include the live focus
+layers in the same positions used by the mounted chart.
+
+`serializeChartSvg` and `downloadChartSvg` reject a mixed root. A mixed chart
+contains raster pixels, so a pure vector SVG would either omit those marks or
+embed a raster image. Use the raster export path when any mounted mark selects
+Canvas.
+
 ### Theme and resource policy
 
 Export the theme intended for the artifact. A chart following application dark
@@ -584,7 +629,7 @@ needs embedded or inlined assets.
 - Fonts and external resources are portable.
 - Focus decoration is included only when meaningful.
 - Raster scale is chosen for the target medium.
-- A Canvas export intentionally includes or excludes focus layers.
+- A Canvas or mixed export intentionally includes or excludes focus layers.
 
 See [Rendering and Export](./rendering-composition-reference.md#source-charts-docs-reference-rendering-and-export-md) for every
 function and option.
@@ -786,6 +831,35 @@ Source: `charts:docs/guides/migrating.md`.
 Migration is a semantic exercise, not a component-name translation. First
 describe what the existing chart means and how users operate it. Then express
 that behavior with data preparation, scales, marks, and host options.
+
+### Move pre-Alpha root scales into the registry
+
+Alpha definitions require Cartesian scale and axis options under `scales`:
+
+```ts
+const definition = defineChart({
+  marks,
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale, grid: true },
+  },
+})
+```
+
+When updating from a pre-Alpha release, move root `x` to `scales.x` and root
+`y` to `scales.y`. Every definition must provide both reserved entries. Use
+`null` when the chart does not use one of the Cartesian dimensions.
+
+Polar definitions follow the same migration. Move pre-Alpha root `angle` and
+`radius` options into `polar({ scales: { angle, radius } })`. Every polar
+definition must provide both reserved entries. If neither positional scale is
+used, write `scales: { angle: null, radius: null }`.
+
+Custom mark type code should replace `ChartMarkX` and `ChartMarkY` with
+`ChartMarkPointX` and `ChartMarkPointY` from
+`@tanstack/charts/mark/scale-values`. A polar length callback should replace
+`layout.angle` with `layout.scales.angle` and `layout.radiusScale` with
+`layout.scales.radius`.
 
 ### Inventory the current contract
 
@@ -1036,14 +1110,16 @@ export default defineChart({
       inset: 1,
     }),
   ],
-  x: {
-    scale: scaleLinear,
-    nice: true,
-    grid: true,
-    axis: { ticks: { count: 5 }, label: 'Weekly requests' },
-  },
-  y: {
-    scale: () => scaleBand<string>().padding(0.1),
+  scales: {
+    x: {
+      scale: scaleLinear,
+      nice: true,
+      grid: true,
+      axis: { ticks: { count: 5 }, label: 'Weekly requests' },
+    },
+    y: {
+      scale: () => scaleBand<string>().padding(0.1),
+    },
   },
 })
 ```
@@ -1186,12 +1262,12 @@ runtime and renderer on the server and in the browser.
 
 | Adapter                                    | Server output                       | Browser contract                                    |
 | ------------------------------------------ | ----------------------------------- | --------------------------------------------------- |
-| [React](./framework-react.md#source-charts-docs-framework-react-adapter-md)     | Complete SVG; Canvas shell          | Hydrates and adopts the existing surface            |
-| [Preact](./framework-preact.md#source-charts-docs-framework-preact-adapter-md)   | Complete SVG                        | Hydrates before the shared host mounts              |
-| [Vue](./framework-vue.md#source-charts-docs-framework-vue-adapter-md)         | Complete SVG                        | Hydrates before the shared host mounts              |
-| [Solid](./framework-solid.md#source-charts-docs-framework-solid-adapter-md)     | Complete SVG                        | Hydrates before the shared host mounts              |
-| [Svelte](./framework-svelte.md#source-charts-docs-framework-svelte-adapter-md)   | Complete SVG                        | Hydrates before the shared host mounts              |
-| [Octane](./framework-octane.md#source-charts-docs-framework-octane-adapter-md)   | Complete SVG; Canvas shell          | Hydrates and adopts the existing surface            |
+| [React](./framework-react.md#source-charts-docs-framework-react-adapter-md)     | SVG, Canvas, or mixed shell         | Hydrates and adopts the existing surface            |
+| [Preact](./framework-preact.md#source-charts-docs-framework-preact-adapter-md)   | SVG or mixed shell                  | Hydrates before the shared host mounts              |
+| [Vue](./framework-vue.md#source-charts-docs-framework-vue-adapter-md)         | SVG or mixed shell                  | Hydrates before the shared host mounts              |
+| [Solid](./framework-solid.md#source-charts-docs-framework-solid-adapter-md)     | SVG or mixed shell                  | Hydrates before the shared host mounts              |
+| [Svelte](./framework-svelte.md#source-charts-docs-framework-svelte-adapter-md)   | SVG or mixed shell                  | Hydrates before the shared host mounts              |
+| [Octane](./framework-octane.md#source-charts-docs-framework-octane-adapter-md)   | SVG, Canvas, or mixed shell         | Hydrates and adopts the existing surface            |
 | [Angular](./framework-angular.md#source-charts-docs-framework-angular-adapter-md) | Not yet a verified adapter contract | Browser mount, immutable update, and teardown       |
 | [Lit](./framework-lit.md#source-charts-docs-framework-lit-adapter-md)         | Not yet a verified adapter contract | Browser registration, update, disconnect, reconnect |
 | [Alpine](./framework-alpine.md#source-charts-docs-framework-alpine-adapter-md)   | None                                | Browser-only directive                              |
@@ -1268,6 +1344,11 @@ The client renders the same shell, adopts its existing root and canvases, sizes
 their backing stores for the device-pixel ratio, paints the scene, and attaches
 the shared interaction host. The first image appears after client mount; use
 the default SVG adapter when visible server-rendered geometry is required.
+
+When selected marks use `canvasChartRenderer`, verified server adapters emit
+one accessible mixed root with ordered SVG markup and Canvas shells. The
+browser adopts each child surface. SVG marks remain visible in the server
+response, while Canvas marks receive pixels after mount.
 
 ### Fonts and text measurement
 

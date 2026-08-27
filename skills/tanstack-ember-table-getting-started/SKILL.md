@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "ember"
   tanstack-library: "@tanstack/ember-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/ember-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\"]"
   tanstack-source-skill: "getting-started"
   tanstack-sources: "[\"TanStack/table:docs/framework/ember/quick-start.md\",\"TanStack/table:examples/ember/basic-table\",\"TanStack/table:packages/ember-table/src/index.ts\",\"TanStack/table:packages/ember-table/src/use-table.ts\",\"TanStack/table:packages/ember-table/src/FlexRender.gts\"]"

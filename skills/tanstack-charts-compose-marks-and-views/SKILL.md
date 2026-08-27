@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.9.0"
+  tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.14.0"
+  tanstack-package-version: "0.16.0"
   tanstack-source-skill: "compose-marks-and-views"
   tanstack-sources: "[\"TanStack/charts:docs/concepts/grammar-of-graphics.md\",\"TanStack/charts:docs/concepts/marks-and-layering.md\",\"TanStack/charts:docs/guides/faceting-and-composition.md\",\"TanStack/charts:docs/guides/custom-marks-and-renderers.md\"]"
   tanstack-type: "core"
@@ -52,8 +52,10 @@ export const chart = defineChart({
       },
     ),
   ],
-  x: { scale: scalePoint },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scalePoint },
+    y: { scale: scaleLinear },
+  },
 })
 ```
 

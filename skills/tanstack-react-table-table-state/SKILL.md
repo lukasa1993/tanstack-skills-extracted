@@ -1,17 +1,17 @@
 ---
 name: tanstack-react-table-table-state
-description: "Read, select, subscribe to, and control React Table v9 state with useTable selectors, table.state, table.Subscribe, table.atoms, table.store, and external TanStack Store atoms. Load for controlled state, render performance, or React Compiler builder-method subscription problems."
+description: "Read, select, subscribe to, and control React Table V9 state with useTable selectors, table.state, table.Subscribe, table.atoms, table.store, and external TanStack Store atoms. Load for controlled state, render performance, or React Compiler builder-method subscription problems."
 license: "MIT"
 metadata:
   internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/react-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-react-table-getting-started\"]"
   tanstack-source-skill: "table-state"
-  tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/table-state.md\",\"TanStack/table:examples/react/basic-subscribe\",\"TanStack/table:packages/react-table/src/Subscribe.ts\",\"TanStack/table:packages/react-table/src/useTable.ts\"]"
+  tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/table-state.md\",\"TanStack/table:docs/framework/react/guide/react-compiler.md\",\"TanStack/table:examples/react/basic-subscribe\",\"TanStack/table:packages/react-table/src/Subscribe.ts\",\"TanStack/table:packages/react-table/src/useTable.ts\"]"
   tanstack-type: "framework"
 ---
 
@@ -75,7 +75,7 @@ function SelectedRows({
 }
 ```
 
-At a top-level component holding the adapter's table instance, `table.Subscribe` selects from `table.store`. Use this after measuring or when React Compiler cannot see state reads hidden behind table builder methods.
+At a top-level component holding the adapter's table instance, `table.Subscribe` selects from `table.store`. Use this after measuring or when the React Compiler cannot see state reads hidden behind table builder methods.
 
 ### Control a slice with an external atom
 
@@ -113,9 +113,9 @@ Choose exactly one owner for each slice:
 1. Use internal state by default and call feature APIs such as `table.setSorting`, `table.nextPage`, `column.toggleVisibility`, or `row.toggleSelected`.
 2. Use `initialState.<slice>` only to set the starting and reset value. Changing `initialState` later does not reset the table.
 3. Prefer a stable external atom in `atoms.<slice>` when Table, Query, routing, or another component must share the slice. Table APIs write that atom directly; do not also add `on[State]Change`.
-4. Use `state.<slice>` plus its matching `on[State]Change` for simple React-controlled state or v8-style integrations. Always resolve both raw values and updater functions.
+4. Use `state.<slice>` plus its matching `on[State]Change` for simple React-controlled state or Table V8-style integrations. Always resolve both raw values and updater functions.
 
-External atoms take precedence over external `state`; external `state` synchronizes into the internal base atom. Do not declare the same slice in multiple ownership options and rely on precedence as application logic. The global v8 `onStateChange` callback is gone in v9; control slices individually or subscribe to `table.store` to observe all state.
+External atoms take precedence over external `state`; external `state` synchronizes into the internal base atom. Do not declare the same slice in multiple ownership options and rely on precedence as application logic. The global Table V8 `onStateChange` callback is gone in Table V9; control slices individually or subscribe to `table.store` to observe all state.
 
 ## Initialize, Update, and Reset
 
@@ -189,18 +189,20 @@ Once a callback takes ownership, the corresponding controlled value must be writ
 
 Source: `docs/framework/react/guide/table-state.md`
 
-### HIGH Hiding builder reads from React Compiler
+### HIGH Hiding builder reads from the React Compiler
 
 Wrong:
 
 ```tsx
-const SelectionCell = memo(({ row }) => (
-  <input
-    type="checkbox"
-    checked={row.getIsSelected()}
-    onChange={row.getToggleSelectedHandler()}
-  />
-))
+function SelectionCell({ row }) {
+  return (
+    <input
+      type="checkbox"
+      checked={row.getIsSelected()}
+      onChange={row.getToggleSelectedHandler()}
+    />
+  )
+}
 ```
 
 Correct:
@@ -208,25 +210,29 @@ Correct:
 ```tsx
 import { Subscribe } from '@tanstack/react-table'
 
-const SelectionCell = memo(({ row }) => (
-  <Subscribe
-    source={row.table.atoms.rowSelection}
-    selector={(selection) => selection[row.id]}
-  >
-    {(selected) => (
-      <input
-        type="checkbox"
-        checked={!!selected}
-        onChange={row.getToggleSelectedHandler()}
-      />
-    )}
-  </Subscribe>
-))
+function SelectionCell({ row }) {
+  return (
+    <Subscribe
+      source={row.table.atoms.rowSelection}
+      selector={(selection) => selection[row.id]}
+    >
+      {(selected) => (
+        <input
+          type="checkbox"
+          checked={!!selected}
+          onChange={row.getToggleSelectedHandler()}
+        />
+      )}
+    </Subscribe>
+  )
+}
 ```
 
-`useTable` already returns a fresh table reference on state changes. The remaining hazard is a nested component receiving a stable row, cell, column, or header and hiding a state read behind its methods. Inside cell and header render contexts, `table` is typed as core `Table`, so import standalone `Subscribe`; use `source={table.store}` with a selector for multiple slices, or a specific atom for the narrowest boundary.
+With the default selector, `useTable` returns a fresh React-facing table reference on state changes. The remaining hazard is a nested component receiving only a stable core table, row, cell, column, or header object and hiding a state read behind one of its methods. Keep `Subscribe` inside that component, or pass its selected value to the child as a changing prop. An outer `Subscribe` that ignores the selected value is not enough.
 
-Source: `docs/framework/react/guide/table-state.md`
+Inside cell and header render contexts, `table` is typed as core `Table`, so import standalone `Subscribe`. Use `source={table.store}` with a selector for multiple slices, or a specific atom for the narrowest boundary.
+
+Source: `docs/framework/react/guide/react-compiler.md`
 
 ### MEDIUM Optimizing every cell preemptively
 

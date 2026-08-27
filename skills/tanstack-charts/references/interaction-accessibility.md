@@ -281,8 +281,11 @@ export function createDefinition(
         selection,
       ),
     ],
-    x: { scale: scaleLinear, axis: { label: 'Setup time (minutes)' } },
-    y: { scale: scaleLinear, grid: true, axis: { label: 'Satisfaction' } },
+    scales: {
+      x: { scale: scaleLinear, axis: { label: 'Setup time (minutes)' } },
+      y: { scale: scaleLinear, grid: true, axis: { label: 'Satisfaction' } },
+    },
+
     selection,
   })
 }
@@ -386,8 +389,11 @@ const definition = defineChart({
     lineY(rows, { x: 'date', y: 'value' }),
     crosshair({ x: { label: true }, y: false }),
   ],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear },
+  },
+
   focus: 'group-x',
   maxFocusDistance: Number.POSITIVE_INFINITY,
 })
@@ -452,8 +458,11 @@ const definition = defineChart({
       marker: true,
     }),
   ],
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
+
   cursor: {
     use: cursorHost,
     controller: freeCursor,
@@ -559,6 +568,10 @@ const definition = defineChart({
       selection,
     ),
   ],
+  scales: {
+    x: null,
+    y: null,
+  },
   selection,
 })
 ```
@@ -598,8 +611,11 @@ type Position = ContinuousCursorPosition<number, number>
 
 const definition = defineChart({
   marks: [dot(rows, { x: 'horsepower', y: 'economy' })],
-  x: { scale: horsepowerScale },
-  y: { scale: economyScale },
+  scales: {
+    x: { scale: horsepowerScale },
+    y: { scale: economyScale },
+  },
+
   controls: [
     continuousCursor({
       position: controlledSignal<
@@ -661,8 +677,11 @@ let interaction: ChartInteractionController<Row, Date, number> | undefined
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value', key: 'id' })],
-  x: { scale: scaleUtc() },
-  y: { scale: scaleLinear() },
+  scales: {
+    x: { scale: scaleUtc() },
+    y: { scale: scaleLinear() },
+  },
+
   focus: 'nearest-x',
   pointer: false,
   tooltip,
@@ -807,8 +826,11 @@ export default function App() {
             strokeWidth: 2.5,
           }),
         ],
-        x: { scale: scaleLinear().domain([1, 8]) },
-        y: { scale: scaleLinear, grid: true, axis: { label: 'Signups' } },
+        scales: {
+          x: { scale: scaleLinear().domain([1, 8]) },
+          y: { scale: scaleLinear, grid: true, axis: { label: 'Signups' } },
+        },
+
         controls: [
           brushX({
             range: controlledSignal<BrushRange<number>, BrushXChange<number>>(
@@ -901,7 +923,10 @@ import { controlledSignal } from '@tanstack/charts/interaction/signal'
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value' })],
-  x: { scale: utcScale },
+  scales: {
+    x: { scale: utcScale },
+    y: null,
+  },
   controls: [
     handleX({
       value: controlledSignal<Date, HandleXChange<Date>>(currentDate, (next) =>
@@ -951,7 +976,10 @@ import { controlledSignal } from '@tanstack/charts/interaction/signal'
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value' })],
-  x: { scale: utcScale.copy().domain([window.start, window.end]) },
+  scales: {
+    x: { scale: utcScale.copy().domain([window.start, window.end]) },
+    y: null,
+  },
   controls: [
     zoomX({
       window: controlledSignal<ZoomXWindow<Date>, ZoomXChange<Date>>(
@@ -1162,8 +1190,11 @@ export default defineChart({
     }),
     crosshair({ x: { label: true }, y: false }),
   ],
-  x: { scale: () => scalePoint<string>().padding(0.2) },
-  y: { scale: scaleLinear, grid: true, axis: { label: 'Active users' } },
+  scales: {
+    x: { scale: () => scalePoint<string>().padding(0.2) },
+    y: { scale: scaleLinear, grid: true, axis: { label: 'Active users' } },
+  },
+
   focus: 'nearest-x',
   maxFocusDistance: Number.POSITIVE_INFINITY,
   tooltip,
@@ -1213,8 +1244,11 @@ point:
 ```ts
 const definition = defineChart({
   marks,
-  x,
-  y,
+  scales: {
+    x: x,
+    y: y,
+  },
+
   tooltip: {
     use: tooltip,
     items: [
@@ -1322,7 +1356,14 @@ const renderer = motion({
   },
 })
 
-const definition = defineChart({ marks, tooltip })
+const definition = defineChart({
+  marks,
+  scales: {
+    x: null,
+    y: null,
+  },
+  tooltip,
+})
 
 mountChartRenderer(container, {
   definition,
@@ -1338,6 +1379,10 @@ A static chart-level transition can refine the renderer fallback:
 ```ts
 const definition = defineChart({
   marks,
+  scales: {
+    x: null,
+    y: null,
+  },
   motion: {
     transition: { type: 'spring', stiffness: 170, damping: 18, mass: 1 },
   },
@@ -1401,8 +1446,11 @@ group's bounding-box center:
 ```ts
 const definition = defineChart({
   marks,
-  x,
-  y,
+  scales: {
+    x: x,
+    y: y,
+  },
+
   focus: 'group-x',
   tooltip: {
     use: tooltip,
@@ -1457,8 +1505,11 @@ import { portal } from '@tanstack/charts/tooltip/portal'
 
 const definition = defineChart({
   marks,
-  x,
-  y,
+  scales: {
+    x: x,
+    y: y,
+  },
+
   focus: 'group-x',
   tooltip: {
     use: tooltip,
@@ -1592,11 +1643,18 @@ function SeriesPie({ points }: { points: readonly RevenuePoint[] }) {
               fill: (slice) => slice.data.color ?? 'CanvasText',
             }),
           ],
+          scales: {
+            angle: null,
+            radius: null,
+          },
         }),
       ],
       guides: false,
-      x: null,
-      y: null,
+      scales: {
+        x: null,
+        y: null,
+      },
+
       keyboard: false,
     })
   }, [points])

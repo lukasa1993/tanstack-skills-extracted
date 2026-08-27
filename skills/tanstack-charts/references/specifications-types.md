@@ -48,8 +48,11 @@ import { scaleLinear } from '@tanstack/charts/scales/linear'
 
 const definition = defineChart({
   marks: [lineY(rows, { x: 'date', y: 'value' })],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear, nice: true, grid: true },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear, nice: true, grid: true },
+  },
+
   focus: 'group-x',
   tooltip: {
     use: tooltip,
@@ -73,12 +76,14 @@ const definition = defineChart({
   svgAnimation: true,
   chart: ({ width }) => ({
     marks: [barY(rows, { x: 'category', y: 'value' })],
-    x: { scale: scaleBand },
-    y: {
-      scale: scaleLinear,
-      nice: true,
-      axis: { ticks: { count: width < 480 ? 4 : 7 } },
-      grid: true,
+    scales: {
+      x: { scale: scaleBand },
+      y: {
+        scale: scaleLinear,
+        nice: true,
+        axis: { ticks: { count: width < 480 ? 4 : 7 } },
+        grid: true,
+      },
     },
   }),
 })
@@ -146,13 +151,15 @@ const definition = useMemo(() => {
 
   return defineChart(({ width }) => ({
     marks: [barX(ranked, { x: 'value', y: 'label' })],
-    x: {
-      scale: scaleLinear,
-      nice: true,
-      axis: { ticks: { count: width < 480 ? 4 : 7 } },
-    },
-    y: {
-      scale: () => scaleBand().padding(0.1),
+    scales: {
+      x: {
+        scale: scaleLinear,
+        nice: true,
+        axis: { ticks: { count: width < 480 ? 4 : 7 } },
+      },
+      y: {
+        scale: () => scaleBand().padding(0.1),
+      },
     },
   }))
 }, [rows, metric])
@@ -190,33 +197,35 @@ presentation.
 ```ts
 type ChartSpec<TMarks extends readonly ChartMark[]> = {
   marks: TMarks
+  scales: ChartScales<TMarks>
   guides?: boolean
   color?: ChartColorOptions
   gradients?: readonly ChartLinearGradient[]
   clip?: boolean
   margin?: number | Partial<ChartMargin>
   theme?: Partial<ChartTheme>
-} & ([ChartMarkScaleX<TMarks[number]>] extends [never]
-  ? { x?: null }
-  : { x: ChartAxisOptions }) &
-  ([ChartMarkScaleY<TMarks[number]>] extends [never]
-    ? { y?: null }
-    : { y: ChartAxisOptions })
+}
+
+type ChartScales<TMarks extends readonly ChartMark[]> = Readonly<
+  Record<string, ChartPositionScaleOptions | null>
+> & {
+  x: ChartPositionScaleOptions | null
+  y: ChartPositionScaleOptions | null
+}
 ```
 
 ### Properties
 
-| Property    | Required    | Meaning                                                                                                            |
-| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------ |
-| `marks`     | Yes         | Ordered mark layers. Later scene nodes paint after earlier ones.                                                   |
-| `x`         | Conditional | Required when a mark materializes x; omitted otherwise.                                                            |
-| `y`         | Conditional | Required when a mark materializes y; omitted otherwise.                                                            |
-| `guides`    | No          | Set to `false` to suppress both axes, grid lines, titles, and their implicit margins.                              |
-| `color`     | No          | Shared categorical or quantitative color scale and optional legend.                                                |
-| `gradients` | No          | Linear-gradient resources consumed by the default SVG and Canvas renderers.                                        |
-| `clip`      | No          | Clips the marks group to the resolved inner chart bounds in the default SVG and Canvas renderers.                  |
-| `margin`    | No          | Locks all margins with a number or selected sides with a partial object. Omitted sides are measured automatically. |
-| `theme`     | No          | Overrides default foreground, muted, grid, background, or palette tokens.                                          |
+| Property    | Required | Meaning                                                                                                            |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| `marks`     | Yes      | Ordered mark layers. Later scene nodes paint after earlier ones.                                                   |
+| `scales`    | Yes      | Cartesian scale registry. Reserved `x` and `y` entries are required; additional named scales are optional.         |
+| `guides`    | No       | Set to `false` to suppress both axes, grid lines, titles, and their implicit margins.                              |
+| `color`     | No       | Shared categorical or quantitative color scale and optional legend.                                                |
+| `gradients` | No       | Linear-gradient resources consumed by the default SVG and Canvas renderers.                                        |
+| `clip`      | No       | Clips the marks group to the resolved inner chart bounds in the default SVG and Canvas renderers.                  |
+| `margin`    | No       | Locks all margins with a number or selected sides with a partial object. Omitted sides are measured automatically. |
+| `theme`     | No       | Overrides default foreground, muted, grid, background, or palette tokens.                                          |
 
 The detailed option contracts live in
 [Scales, guides, and color](./runtime-scales-reference.md#source-charts-docs-reference-scales-guides-and-color-md). Mark-specific
@@ -241,8 +250,10 @@ const definition = defineChart({
     }),
     lineY(rows, { x: 'date', y: 'value', points: true }),
   ],
-  x: { scale: scaleUtc },
-  y: { scale: scaleLinear, grid: true },
+  scales: {
+    x: { scale: scaleUtc },
+    y: { scale: scaleLinear, grid: true },
+  },
 })
 ```
 
@@ -260,35 +271,49 @@ Built-in marks infer stable keys from a unique primitive top-level `id`, nested
 unique. Mark IDs default from layer order; set `id` explicitly when a mark
 must retain identity while its order changes.
 
-### Conditional positional axes
+Built-in Cartesian, radial, and composite marks accept an optional
+`renderer`. Passing `canvasChartRenderer` opts that mark into Canvas while
+marks without the option, including ordinary axes and guides, keep the host
+renderer. The host groups adjacent runs without changing declaration order.
+See [Mark-level renderers](./rendering-composition-reference.md#source-charts-docs-reference-rendering-and-export-md).
 
-Each axis used by the marks is required. Supply a compatible factory for an inferred
-domain or a configured instance for a fixed domain:
+### Required positional scales
+
+`scales.x` and `scales.y` are required. Supply a compatible factory for an
+inferred domain or a configured instance for a fixed domain:
 
 ```ts
-const axes = {
+const scales = {
   x: { scale: scaleUtc },
   y: { scale: scaleLinear },
 }
 ```
 
-Omit an unused dimension:
+Use `null` for an unused dimension:
 
 ```ts
 const horizontalThresholds = defineChart({
   marks: [ruleY([25, 50, 75])],
-  y: { scale: scaleLinear().domain([0, 100]) },
+  scales: {
+    x: null,
+    y: { scale: scaleLinear().domain([0, 100]) },
+  },
 })
 ```
 
-`axis: false` hides an axis but does not remove its scale. Scene compilation
-still guards untyped consumers that omit or null an axis used by a mark.
+`axis: false` hides an axis but does not remove its scale. A `null` entry says
+that the scale does not exist. Scene compilation rejects a mark bound to a
+missing scale.
+
+Additional entries name independent mappings. Each named entry declares its
+`channel`, and marks opt into it with `xScale` or `yScale`. See
+[Named scales and multiple axes](./runtime-scales-reference.md#source-charts-docs-reference-scales-guides-and-color-md).
 
 ### Guides and margins
 
 Guide visibility and geometry are separate:
 
-- `x.axis: false` or `y.axis: false` hides one axis.
+- `scales.x.axis: false` or `scales.y.axis: false` hides one axis.
 - `guides: false` hides all guides and removes their implicit margin.
 - Omitted `margin` sides are measured from ticks, rotation, titles, edge
   overhang, color legends, and Cartesian `text` marks.
@@ -308,8 +333,7 @@ renderers:
 ```ts
 const definition = defineChart({
   marks,
-  x,
-  y,
+  scales: { x, y },
   clip: true,
   gradients: [
     {
@@ -390,6 +414,11 @@ and application-owned interaction.
 
 ### Mark reference
 
+Built-in Cartesian, radial, and composite marks accept
+`renderer?: ChartMarkRenderer`. Pass `canvasChartRenderer` from
+`@tanstack/charts/canvas` to opt that mark into Canvas while the rest of the
+chart keeps its host renderer.
+
 | Marks                                                             | Reference                                                                                   |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `lineY`, `lineX`, `areaY`, and `areaX`                            | [Line and area](./marks-cartesian-statistical.md#source-charts-docs-reference-marks-line-and-area-md)                                                   |
@@ -432,9 +461,9 @@ and application-owned interaction.
 | Alpine    | —                                                 | [Adapter](./framework-alpine.md#source-charts-docs-framework-alpine-adapter-md)  | [`charts`](./framework-alpine.md#source-charts-docs-framework-alpine-reference-chart-md)                   |
 | Octane    | [Quick start](./framework-octane.md#source-charts-docs-framework-octane-quick-start-md) | [Adapter](./framework-octane.md#source-charts-docs-framework-octane-adapter-md)  | [`Chart`](./framework-octane.md#source-charts-docs-framework-octane-reference-chart-md)                    |
 
-React and Octane keep the default `Chart` SVG-based. Their `/canvas` entries
-select the optional Canvas renderer; their `/core` entries require an explicit
-`ChartRenderer`. The other adapters currently expose the default SVG surface.
+Every default `Chart` starts with SVG and can opt selected marks into Canvas.
+React and Octane also provide `/canvas` entries for a completely Canvas chart
+and `/core` entries that require an explicit `ChartRenderer`.
 
 ### Surface tiers
 
@@ -526,7 +555,7 @@ aggregate `/scales` export.
 | `@tanstack/charts/universal`            | Common root authoring, runtime, scene, and static SVG values without browser hosts or adapters                                                                                                                                  |
 | `@tanstack/charts/reconcile`            | `reconcileChartSvg`, `reconcileChartSvgFragment`                                                                                                                                                                                |
 | `@tanstack/charts/rect`                 | `rect`, `cell`                                                                                                                                                                                                                  |
-| `@tanstack/charts/renderer`             | `mountChartRenderer`                                                                                                                                                                                                            |
+| `@tanstack/charts/renderer`             | `mountChartRenderer` and `resolveChartRenderer`                                                                                                                                                                                 |
 | `@tanstack/charts/ridgeline`            | `ridgelineY`, `ridgelineX`, `RidgelineYOptions`, `RidgelineXOptions`, `RidgelinePosition`, `RidgelineCurve`, and `RidgelineStateStyle`                                                                                          |
 | `@tanstack/charts/rule`                 | `ruleX`, `ruleY`                                                                                                                                                                                                                |
 | `@tanstack/charts/runtime`              | `createChartRuntime`, `isResponsiveChartDefinition`                                                                                                                                                                             |
@@ -640,8 +669,8 @@ not produce an unusably narrow scale or callback type.
 source datum
   → mark channel outputs
   → ChartMark point and scale value types
-  → ChartSpec axis requirements and definition datum/x/y unions
-  → axis scale and formatter types
+  → ChartSpec scale registry and definition datum/x/y unions
+  → scale and formatter types
   → host and adapter callback types
 ```
 
@@ -649,10 +678,10 @@ Marks in one chart may have different datum types. The definition exposes their
 union. TypeScript narrowing is therefore required when a callback handles
 heterogeneous layers.
 
-`ChartMarkScaleX` and `ChartMarkScaleY` also control the chart shape. A
-materialized scale value makes that axis required. `never` makes it optional
-and null-only, so positionless and one-dimensional charts do not carry phantom
-scale configuration.
+`ChartMarkScaleX` and `ChartMarkScaleY` control the value types accepted by the
+reserved scale entries. Canonical definitions always include `scales.x` and
+`scales.y`; use `null` when a dimension is unused. A mark bound to another
+scale ID does not widen the reserved entry's value type.
 
 Rect and custom interval marks can distinguish materialized scale values from
 interaction point values. The exported extractors are:
@@ -673,9 +702,6 @@ are available from the root entry point. The four `ChartMarkPoint*` and
 | `ChartSpecXValue<TSpec>` | Interaction x union across marks                                                               |
 | `ChartSpecYValue<TSpec>` | Interaction y union across marks                                                               |
 
-`ChartMarkX` and `ChartMarkY` remain exported as deprecated aliases of the
-point extractors. New code should use the explicit names.
-
 Stateful mark presentation uses `ChartMarkStateContext` as one object bag for
 the datum, index, data, point, focus, pointer, and matching helper. A
 `ChartMarkStateSelector` handles the common declarative cases, while callbacks
@@ -688,7 +714,7 @@ style vocabulary; `ChartDotStateStyle`, `ChartBarStateStyle`,
 
 | Type                                  | Purpose                                                                       |
 | ------------------------------------- | ----------------------------------------------------------------------------- |
-| `ChartSpec`                           | Marks plus conditionally required axes, guides, color, resources, and layout  |
+| `ChartSpec`                           | Marks plus a positional scale registry, guides, color, resources, and layout  |
 | `StaticChartDefinition`               | A directly compilable spec with inferred datum and semantic x/y phantom types |
 | `ResponsiveChartDefinition`           | Responsive chart builder                                                      |
 | `ChartDefinition`                     | Static or responsive union                                                    |
@@ -704,34 +730,38 @@ The complete overloads and runtime rules are in
 
 ### Marks and scenes
 
-| Type                               | Purpose                                                                       |
-| ---------------------------------- | ----------------------------------------------------------------------------- |
-| `ChartMark`                        | Public initialized-mark factory plus inferred point and scale types           |
-| `MarkInitializeContext`            | Mark layer index                                                              |
-| `InitializedMark`                  | Stable ID, channels, viewport ownership, render, and optional resolved layout |
-| `MarkInitialization`               | Direct-render or resolved-layout initializer result                           |
-| `ResolvedLayoutMarkInitialization` | Layout initializer before `createMark` normalization                          |
-| `MaterializedChannel`              | Values contributed to an optional named scale                                 |
-| `MarkRenderContext`                | Final chart bounds, scales, theme, color resolver, and layout                 |
-| `MarkResolvedLayoutContext`        | Final positional scales and bounds for pure mark-local layout                 |
-| `ResolvedMarkLayout`               | Final channels, labels, states, and render closure from resolved layout       |
-| `MarkScene`                        | Mark-owned nodes plus optional interaction points, focus anchors, and guides  |
-| `MarkFocusGuide`                   | Mark-emitted focus guide with optional placement                              |
-| `ChartScene`                       | Complete renderer-neutral output                                              |
-| `ChartPoint`                       | Typed interaction target                                                      |
-| `ChartFocusAnchor`                 | Focus-filter identity that does not participate in hit testing                |
-| `SceneFocusGuide`                  | Data-less guide descriptor resolved against focus or cursor state             |
-| `SceneFocusGuideAxis`              | One crosshair axis rule or categorical band, plus an optional label           |
-| `SceneFocusGuideBand`              | Resolved categorical bandwidth, inset, radius, and paint                      |
-| `SceneFocusGuideLabel`             | Focus-guide label formatter, spacing, font, and paint                         |
-| `SceneFocusGuideMarker`            | Focus-guide intersection marker geometry and paint                            |
-| `SceneFocusGuideResolveContext`    | Scene, guide, local focus, pointer, and cursor passed to a guide resolver     |
-| `SceneFocusGuideResolver`          | Optional-guide policy that returns one transient scene node                   |
-| `ChartFocusPresentation`           | Transient renderer-neutral underlay and overlay nodes                         |
-| `SceneInteraction`                 | Semantic point or points attached to a rendered scene primitive               |
-| `ChartTick`                        | Semantic value, formatted label, and pixel position                           |
-| `ResolvedScale`                    | Final positional scale                                                        |
-| `ResolvedColorScale`               | Final color scale                                                             |
+| Type                               | Purpose                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------ |
+| `ChartMark`                        | Public initialized-mark factory plus inferred point, scale value, and scale ID types |
+| `ChartMarkOptions`                 | Shared optional mark renderer contract                                               |
+| `ChartMarkRenderer`                | Universal renderer-selection token stored on mark-owned scene nodes                  |
+| `CartesianChartMark`               | Cartesian mark alias that derives selected x and y scale IDs from its options        |
+| `OptionScaleId`                    | Resolves an optional named-scale selector to its fallback scale ID                   |
+| `MarkInitializeContext`            | Mark layer index                                                                     |
+| `InitializedMark`                  | Stable ID, channels, viewport ownership, render, and optional resolved layout        |
+| `MarkInitialization`               | Direct-render or resolved-layout initializer result                                  |
+| `ResolvedLayoutMarkInitialization` | Layout initializer before `createMark` normalization                                 |
+| `MaterializedChannel`              | Values contributed to an optional named scale                                        |
+| `MarkRenderContext`                | Final chart bounds, scales, theme, color resolver, and layout                        |
+| `MarkResolvedLayoutContext`        | Final positional scales and bounds for pure mark-local layout                        |
+| `ResolvedMarkLayout`               | Final channels, labels, states, and render closure from resolved layout              |
+| `MarkScene`                        | Mark-owned nodes plus optional interaction points, focus anchors, and guides         |
+| `MarkFocusGuide`                   | Mark-emitted focus guide with optional placement                                     |
+| `ChartScene`                       | Complete renderer-neutral output                                                     |
+| `ChartPoint`                       | Typed interaction target                                                             |
+| `ChartFocusAnchor`                 | Focus-filter identity that does not participate in hit testing                       |
+| `SceneFocusGuide`                  | Data-less guide descriptor resolved against focus or cursor state                    |
+| `SceneFocusGuideAxis`              | One crosshair axis rule or categorical band, plus an optional label                  |
+| `SceneFocusGuideBand`              | Resolved categorical bandwidth, inset, radius, and paint                             |
+| `SceneFocusGuideLabel`             | Focus-guide label formatter, spacing, font, and paint                                |
+| `SceneFocusGuideMarker`            | Focus-guide intersection marker geometry and paint                                   |
+| `SceneFocusGuideResolveContext`    | Scene, guide, local focus, pointer, and cursor passed to a guide resolver            |
+| `SceneFocusGuideResolver`          | Optional-guide policy that returns one transient scene node                          |
+| `ChartFocusPresentation`           | Transient renderer-neutral underlay and overlay nodes                                |
+| `SceneInteraction`                 | Semantic point or points attached to a rendered scene primitive                      |
+| `ChartTick`                        | Semantic value, formatted label, and pixel position                                  |
+| `ResolvedScale`                    | Final positional scale                                                               |
+| `ResolvedColorScale`               | Final color scale                                                                    |
 
 Scene geometry and interaction point fields are documented in
 [Runtime and scene](./runtime-scales-reference.md#source-charts-docs-reference-runtime-and-scene-md).
@@ -762,7 +792,12 @@ See [Scene nodes](./runtime-scales-reference.md#source-charts-docs-reference-run
 
 | Type                            | Purpose                                                               |
 | ------------------------------- | --------------------------------------------------------------------- |
-| `ChartAxisOptions`              | Required positional scale and optional guide behavior                 |
+| `ChartScales`                   | Reserved x/y entries plus optional named positional scales            |
+| `ChartPositionScaleOptions`     | One registry entry, its Cartesian channel, side, and axis behavior    |
+| `ChartAxisOptions`              | Positional scale and optional axis behavior                           |
+| `ChartPositionChannel`          | Cartesian registry channel, `x` or `y`                                |
+| `ChartAxisSide`                 | Cartesian axis side                                                   |
+| `CartesianScaleBindings`        | Optional mark bindings to named `xScale` and `yScale` entries         |
 | `ChartAxisViewportOptions`      | Continuous semantic window and transient pixel translation            |
 | `ChartAxisGuideOptions`         | Guide behavior without the scale field                                |
 | `ChartAxisPresentationOptions`  | Axis line, ticks, tick labels, and title presentation                 |
@@ -814,18 +849,18 @@ scale bandwidth; zero-bandwidth axes emit no band.
 
 ### Host and runtime types
 
-| Type                             | Purpose                                                             |
-| -------------------------------- | ------------------------------------------------------------------- |
-| `ChartHostCommonOptions`         | Accessibility, sizing, callbacks, and SVG renderer options          |
-| `ChartHostOptions`               | Common options plus a chart definition                              |
-| `ChartHost`                      | SVG host `interaction`, `update`, `getScene`, and `destroy`         |
-| `ChartRendererHostCommonOptions` | Renderer-neutral common options plus required renderer              |
-| `ChartRendererHostOptions`       | Renderer-neutral options plus a chart definition                    |
-| `ChartRendererHost`              | Renderer-neutral `interaction`, `update`, `getScene`, and `destroy` |
-| `ChartRuntime`                   | Repeated static or responsive scene rendering                       |
-| `ChartRuntimeOptions`            | Platform theme shared by responsive building and scene compilation  |
-| `ChartRenderContext`             | Container, live SVG, scene, and interaction controller              |
-| `ChartRendererRenderContext`     | Container, live surface, scene, and interaction controller          |
+| Type                             | Purpose                                                                          |
+| -------------------------------- | -------------------------------------------------------------------------------- |
+| `ChartHostCommonOptions`         | Accessibility, sizing, callbacks, and SVG renderer options                       |
+| `ChartHostOptions`               | Common options plus a chart definition                                           |
+| `ChartHost`                      | SVG host `interaction`, `update`, `getScene`, and `destroy`                      |
+| `ChartRendererHostCommonOptions` | Renderer-neutral common options plus required renderer                           |
+| `ChartRendererHostOptions`       | Renderer-neutral options plus a chart definition                                 |
+| `ChartRendererHost`              | Renderer-neutral `interaction`, `update`, `getScene`, and `destroy`              |
+| `ChartRuntime`                   | Repeated static or responsive scene rendering                                    |
+| `ChartRuntimeOptions`            | Platform theme shared by responsive building and scene compilation               |
+| `ChartRenderContext`             | Container, live default SVG, complete surface, scene, and interaction controller |
+| `ChartRendererRenderContext`     | Container, live surface, scene, and interaction controller                       |
 
 See [DOM host](./rendering-composition-reference.md#source-charts-docs-reference-dom-host-md) and
 [Runtime and scene](./runtime-scales-reference.md#source-charts-docs-reference-runtime-and-scene-md).
@@ -932,8 +967,10 @@ See [Focus and interaction](./interaction-motion-reference.md#source-charts-docs
 | `RenderChartOptions`                   | Renderer-neutral accessible name, description, class, tab index, and ID prefix |
 | `RenderChartSvgOptions`                | SVG specialization of `RenderChartOptions`                                     |
 | `ChartSurfaceRenderOptions`            | Render options plus optional animation                                         |
-| `ChartSurface`                         | Mounted element, painting, coordinates, focus, and cleanup                     |
+| `ChartSurface`                         | Mounted root, optional child layers, painting, coordinates, focus, and cleanup |
 | `ChartRenderer`                        | Server shell and browser-surface renderer contract                             |
+| `ChartLayerRenderer`                   | DOM renderer that can compose itself with the host renderer                    |
+| `UniversalChartLayerRenderer`          | Definition-agnostic form of `ChartLayerRenderer`                               |
 | `ChartRendererCapabilities`            | Optional structural services supplied by a renderer                            |
 | `ChartRendererTooltipMotionCapability` | Versioned factory for an injected tooltip motion controller                    |
 | `ChartTooltipMotionController`         | Tooltip paint, hide, and cleanup motion lifecycle                              |
@@ -1010,8 +1047,9 @@ their behavior:
 - `@tanstack/charts/interaction/zoom`: `ZoomXValue`, `ZoomXWindow`,
   `ZoomXSource`, `ZoomXAction`, `ZoomXChange`, and `ZoomXOptions`. See
   [Horizontal zoom](./interaction-motion-reference.md#source-charts-docs-reference-focus-and-interaction-md).
-- `@tanstack/charts/polar`: `PolarOptions`, `PolarMark`, `PolarGuide`,
-  `PolarGuideScene`, `PolarAngleOptions`, `PolarRadiusOptions`,
+- `@tanstack/charts/polar`: `PolarOptions`, `PolarScales`, `PolarMark`,
+  `PolarGuide`, `PolarGuideScene`, `PolarAngleOptions`,
+  `PolarRadiusOptions`, `PolarPositionChannel`, `PolarPositionScaleOptions`,
   `PolarResolvedScale`, `PolarLayoutContext`, `PolarLength`,
   `PolarGuideLabelContext`, `PolarGuideLabelOption`, `RadialArcOptions`,
   `RadialBarRadiusOptions`, `RadialBarAngleOptions`, `RadialLineOptions`,
@@ -1022,7 +1060,8 @@ their behavior:
 ### Mark option types
 
 Every built-in mark exports its options type from the root and its granular
-subpath:
+subpath. Cartesian, radial, and composite option types include the shared
+`ChartMarkOptions.renderer` selection:
 
 - `LineYOptions`, `AreaYOptions`, `AreaXOptions`, `AreaXCurve`
 - `BarYOptions`, `BarXOptions`

@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "alpine"
   tanstack-library: "@tanstack/alpine-table"
-  tanstack-library-version: "9.1.2"
+  tanstack-library-version: "9.2.3"
   tanstack-package: "@tanstack/alpine-table"
-  tanstack-package-version: "9.1.2"
+  tanstack-package-version: "9.2.3"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\"]"
   tanstack-source-skill: "getting-started"
   tanstack-sources: "[\"TanStack/table:docs/framework/alpine/guide/table-state.md\",\"TanStack/table:examples/alpine/basic-create-table\",\"TanStack/table:packages/alpine-table/src/index.ts\"]"

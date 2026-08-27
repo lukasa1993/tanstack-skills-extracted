@@ -937,7 +937,10 @@ defineChart({
       layout: dodgeY({ anchor: 'middle' }),
     }),
   ],
-  x: { scale: scaleLinear().domain([5, 50]) },
+  scales: {
+    x: { scale: scaleLinear().domain([5, 50]) },
+    y: null,
+  },
 })
 ```
 
@@ -1463,8 +1466,10 @@ const definition = defineChart({
       z: 'series',
     }),
   ],
-  x: { scale: xScale },
-  y: { scale: yScale },
+  scales: {
+    x: { scale: xScale },
+    y: { scale: yScale },
+  },
 })
 ```
 
@@ -1667,10 +1672,12 @@ defineChart({
       color: 'season',
     }),
   ],
-  x: { scale: scaleLinear().domain([4, 10]) },
-  y: {
-    scale: scalePoint<number>().domain(seasons).padding(0.78),
-    reverse: true,
+  scales: {
+    x: { scale: scaleLinear().domain([4, 10]) },
+    y: {
+      scale: scalePoint<number>().domain(seasons).padding(0.78),
+      reverse: true,
+    },
   },
 })
 ```
@@ -1814,10 +1821,12 @@ defineChart({
     }),
     dot(summaries, { x: 'species', y: 'median' }),
   ],
-  x: {
-    scale: scalePoint<string>().domain(species).padding(0.5),
+  scales: {
+    x: {
+      scale: scalePoint<string>().domain(species).padding(0.5),
+    },
+    y: { scale: scaleLinear },
   },
-  y: { scale: scaleLinear },
 })
 ```
 
