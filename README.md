@@ -55,13 +55,15 @@ TanStack Charts is currently pre-alpha. Its skill preserves that warning and use
 
 ```sh
 ./extractor.sh --self-test
+node --test ./scripts/*.test.mjs
 ./extractor.sh skills
 node ./scripts/fetch-doc-sources.mjs
 node ./scripts/build-groups.mjs
+node ./scripts/validate-catalog.mjs
 gh skill publish --dry-run
 ```
 
-The GitHub Actions workflow checks npm, official documentation, and the Query draft once each day. It rebuilds the extracted atomic sources and the 18 product skills. Atomic skills remain hidden from the default picker but exact-installable. The workflow commits only changed generated output and reports only marker-backed product skills to skills.sh.
+The GitHub Actions workflow checks npm, official documentation, and the Query draft once each day. It rebuilds the extracted atomic sources and the 18 product skills. Product ownership is resolved from authoritative skill, package, documentation, and library metadata. Newly published topics without a curated route are preserved under **Additional official guidance** and reported as warnings; contradictory ownership or invalid source data still fails validation. Atomic skills remain hidden from the default picker but exact-installable. The workflow commits only changed generated output and reports only marker-backed product skills to skills.sh.
 
 ## License
 
