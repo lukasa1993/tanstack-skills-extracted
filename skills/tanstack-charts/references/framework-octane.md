@@ -149,7 +149,7 @@ held in refs, so changing only a callback does not rebuild the option object
 and the live wrapper still calls the latest function.
 
 Definition identity is core behavior; see
-[Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+[Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 ### Tooltip body composition
 
@@ -163,7 +163,7 @@ Octane owns the returned component lifecycle.
 
 The adapter does not redefine chart grammar or data algorithms. Read
 [Scales](./chart-grammar.md#source-charts-docs-concepts-scales-and-d3-md) for injected primitives and
-the [core API reference](./specifications-types.md#source-charts-docs-reference-index-md) for marks, interaction,
+the [core API reference](./specifications.md#source-charts-docs-reference-index-md) for marks, interaction,
 renderers, and extension contracts.
 
 <a id="source-charts-docs-framework-octane-quick-start-md"></a>
@@ -326,7 +326,7 @@ export function LiveLetterFrequency({ rows, accent }: LetterFrequencyInput) {
 
 Octane tracks the values read by `useMemo`. Definition identity tells the chart
 host when captured values changed. See
-[Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+[Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 ### Interaction callbacks
 
@@ -352,7 +352,7 @@ interaction are documented in
 
 Continue with the [Octane adapter](./framework-octane.md#source-charts-docs-framework-octane-adapter-md) for lifecycle and SSR, the
 [`Chart` reference](./framework-octane.md#source-charts-docs-framework-octane-reference-chart-md) for every prop, or the
-[core API reference](./specifications-types.md#source-charts-docs-reference-index-md).
+[core API reference](./specifications.md#source-charts-docs-reference-index-md).
 
 <a id="source-charts-docs-framework-octane-reference-chart-md"></a>
 
@@ -410,7 +410,7 @@ The Canvas `Chart` accepts the common interaction and sizing props except
 | ------------ | -------- | ----------------------------------------------------------------------------- |
 | `definition` | Required | Framework-independent definition; identity is the application update boundary |
 
-See [Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+See [Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 ### Accessibility and sizing
 
@@ -494,4 +494,4 @@ type ChartProps<
 
 The package also re-exports `ChartDefinition` and `ChartPoint`. Prefer
 inference at the component call site. Memoize definitions that capture
-component values; see [Types](./specifications-types.md#source-charts-docs-reference-types-md).
+component values; see [Types](./types.md#source-charts-docs-reference-types-md).

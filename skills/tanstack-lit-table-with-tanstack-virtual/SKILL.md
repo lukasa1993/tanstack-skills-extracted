@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "lit"
   tanstack-library: "@tanstack/lit-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/lit-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-lit-table-getting-started\",\"tanstack-lit-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-virtual"
   tanstack-sources: "[\"TanStack/table:docs/framework/lit/guide/virtualization.md\",\"TanStack/table:examples/lit/virtualized-rows\",\"TanStack/table:examples/lit/virtualized-columns\",\"TanStack/table:examples/lit/virtualized-infinite-scrolling\"]"

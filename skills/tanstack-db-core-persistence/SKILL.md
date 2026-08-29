@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.5"
+  tanstack-package-version: "0.8.6"
   tanstack-source-skill: "db-core/persistence"
   tanstack-sources: "[\"TanStack/db:packages/db-sqlite-persistence-core/src/persisted.ts\",\"TanStack/db:packages/browser-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/react-native-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/expo-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/electron-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/node-db-sqlite-persistence/src/index.ts\",\"TanStack/db:examples/react/offline-transactions/src/db/persisted-todos.ts\",\"TanStack/db:examples/react-native/shopping-list/src/db/collections.ts\"]"
   tanstack-type: "sub-skill"

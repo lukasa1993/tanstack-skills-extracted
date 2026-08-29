@@ -756,7 +756,7 @@
     {
       "id": "charts:docs/reference/chart-definitions.md",
       "kind": "document",
-      "theme": "specifications-types",
+      "theme": "specifications",
       "package": "@tanstack/charts",
       "version": "0.16.0",
       "repository": "TanStack/charts",
@@ -771,7 +771,7 @@
     {
       "id": "charts:docs/reference/chart-spec.md",
       "kind": "document",
-      "theme": "specifications-types",
+      "theme": "specifications",
       "package": "@tanstack/charts",
       "version": "0.16.0",
       "repository": "TanStack/charts",
@@ -786,7 +786,7 @@
     {
       "id": "charts:docs/reference/index.md",
       "kind": "document",
-      "theme": "specifications-types",
+      "theme": "specifications",
       "package": "@tanstack/charts",
       "version": "0.16.0",
       "repository": "TanStack/charts",
@@ -801,7 +801,7 @@
     {
       "id": "charts:docs/reference/types.md",
       "kind": "document",
-      "theme": "specifications-types",
+      "theme": "types",
       "package": "@tanstack/charts",
       "version": "0.16.0",
       "repository": "TanStack/charts",

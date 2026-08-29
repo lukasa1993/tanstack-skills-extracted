@@ -52,10 +52,10 @@
 | `charts:docs/reference/marks/text-frame-and-facet.md` | document | `marks-composite` | `@tanstack/charts` | `0.16.0` |  |
 | `charts:docs/reference/marks/treemap.md` | document | `marks-composite` | `@tanstack/charts` | `0.16.0` |  |
 | `charts:docs/reference/marks/waffle.md` | document | `marks-composite` | `@tanstack/charts` | `0.16.0` |  |
-| `charts:docs/reference/chart-definitions.md` | document | `specifications-types` | `@tanstack/charts` | `0.16.0` |  |
-| `charts:docs/reference/chart-spec.md` | document | `specifications-types` | `@tanstack/charts` | `0.16.0` |  |
-| `charts:docs/reference/index.md` | document | `specifications-types` | `@tanstack/charts` | `0.16.0` |  |
-| `charts:docs/reference/types.md` | document | `specifications-types` | `@tanstack/charts` | `0.16.0` |  |
+| `charts:docs/reference/chart-definitions.md` | document | `specifications` | `@tanstack/charts` | `0.16.0` |  |
+| `charts:docs/reference/chart-spec.md` | document | `specifications` | `@tanstack/charts` | `0.16.0` |  |
+| `charts:docs/reference/index.md` | document | `specifications` | `@tanstack/charts` | `0.16.0` |  |
+| `charts:docs/reference/types.md` | document | `types` | `@tanstack/charts` | `0.16.0` |  |
 | `charts:docs/reference/focus-and-interaction.md` | document | `interaction-motion-reference` | `@tanstack/charts` | `0.16.0` |  |
 | `charts:docs/reference/motion.md` | document | `interaction-motion-reference` | `@tanstack/charts` | `0.16.0` |  |
 | `charts:docs/reference/runtime-and-scene.md` | document | `runtime-scales-reference` | `@tanstack/charts` | `0.16.0` |  |

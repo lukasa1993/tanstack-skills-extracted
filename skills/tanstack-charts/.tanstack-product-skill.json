@@ -11,7 +11,8 @@
     "marks-cartesian-statistical",
     "marks-spatial",
     "marks-composite",
-    "specifications-types",
+    "specifications",
+    "types",
     "interaction-motion-reference",
     "runtime-scales-reference",
     "rendering-composition-reference",
@@ -30,5 +31,5 @@
     "framework-react-native",
     "other-guides"
   ],
-  "inputSha256": "6c511e3cc91e33a1b8229481b16cc2c70757cc10b44489ea502291f57b081334"
+  "inputSha256": "08856b77fb2f5560439987e3d10099b5a05b62d09e088a8d12d977577004f575"
 }

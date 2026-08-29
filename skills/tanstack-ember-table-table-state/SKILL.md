@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "ember"
   tanstack-library: "@tanstack/ember-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/ember-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-ember-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/ember/guide/table-state.md\",\"TanStack/table:examples/ember/basic-external-atoms\",\"TanStack/table:examples/ember/basic-external-state\",\"TanStack/table:packages/ember-table/src/use-table.ts\",\"TanStack/table:packages/ember-table/src/reactivity.ts\",\"TanStack/table:packages/ember-table/src/signal.ts\"]"

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\"]"
   tanstack-source-skill: "api-not-found"
   tanstack-sources: "[\"TanStack/table:packages/table-core/src/index.ts\",\"TanStack/table:packages/table-core/src/types/TableFeatures.ts\",\"TanStack/table:docs/framework/react/guide/migrating.md\"]"

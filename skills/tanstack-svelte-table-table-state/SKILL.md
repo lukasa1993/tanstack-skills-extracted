@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/svelte-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-svelte-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/svelte/guide/table-state.md\",\"TanStack/table:docs/framework/svelte/guide/pagination.md\",\"TanStack/table:examples/svelte/basic-external-state\",\"TanStack/table:packages/svelte-table/src/createTable.svelte.ts\",\"TanStack/table:packages/svelte-table/src/createTableState.svelte.ts\"]"

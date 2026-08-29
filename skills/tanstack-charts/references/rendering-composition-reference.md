@@ -674,7 +674,7 @@ The default SVG host requires `definition` and `ariaLabel`.
 
 | Option               | Default           | Meaning                                                                                                         |
 | -------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| `definition`         | Required          | [Chart definition](./specifications-types.md#source-charts-docs-reference-chart-definitions-md). Its identity is the application update boundary.                    |
+| `definition`         | Required          | [Chart definition](./specifications.md#source-charts-docs-reference-chart-definitions-md). Its identity is the application update boundary.                    |
 | `ariaLabel`          | Required          | Accessible chart name placed on the SVG.                                                                        |
 | `ariaDescription`    | None              | Optional SVG description.                                                                                       |
 | `height`             | `320`             | Fixed scene height in CSS pixels.                                                                               |

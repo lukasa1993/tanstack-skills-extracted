@@ -204,7 +204,7 @@ const definition = defineChart({
 
 For live state, memoize the complete definition against the values it captures.
 Definition identity is the application update boundary; see
-[Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+[Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 ### Callback freshness
 
@@ -223,7 +223,7 @@ The adapter does not redefine:
 - custom marks or renderers
 
 Use [Scales](./chart-grammar.md#source-charts-docs-concepts-scales-and-d3-md) for the injected primitive
-boundary and the [core reference](./specifications-types.md#source-charts-docs-reference-index-md) for those APIs.
+boundary and the [core reference](./specifications.md#source-charts-docs-reference-index-md) for those APIs.
 
 <a id="source-charts-docs-framework-react-quick-start-md"></a>
 
@@ -389,7 +389,7 @@ export function LiveLetterFrequency({ rows, accent }: LetterFrequencyInput) {
 
 The dependency list owns application invalidation. The definition identity
 tells the chart host when captured values changed. See
-[Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+[Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 ### Interaction callbacks
 
@@ -443,7 +443,7 @@ still uses `tooltip` from `@tanstack/charts/tooltip`.
 
 Continue with the [React adapter](./framework-react.md#source-charts-docs-framework-react-adapter-md) for lifecycle and SSR, the
 [`Chart` reference](./framework-react.md#source-charts-docs-framework-react-reference-chart-md) for every prop, or the
-[core API reference](./specifications-types.md#source-charts-docs-reference-index-md) for definitions, marks, scales,
+[core API reference](./specifications.md#source-charts-docs-reference-index-md) for definitions, marks, scales,
 and rendering.
 
 <a id="source-charts-docs-framework-react-reference-chart-md"></a>
@@ -502,7 +502,7 @@ composition.
 | ------------ | -------- | ----------------------------------------------------------------------------- |
 | `definition` | Required | Framework-independent definition; identity is the application update boundary |
 
-See [Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+See [Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 The definition owns `focus`, `focusRing`, `cursor`, `maxFocusDistance`,
 `spatialIndex`, `svgAnimation`, `keyboard`, and `tooltip`. Adapters do not override
@@ -626,4 +626,4 @@ type ChartProps<
 
 The package also re-exports `ChartDefinition` and `ChartPoint`. Prefer
 inference at the component call site. Memoize definitions that capture
-component values; see [Types](./specifications-types.md#source-charts-docs-reference-types-md).
+component values; see [Types](./types.md#source-charts-docs-reference-types-md).

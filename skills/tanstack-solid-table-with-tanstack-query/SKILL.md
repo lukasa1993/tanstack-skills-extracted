@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/solid-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core-client-vs-server\",\"tanstack-solid-table-getting-started\",\"tanstack-solid-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-query"
   tanstack-sources: "[\"TanStack/table:examples/solid/with-tanstack-query\",\"TanStack/table:docs/framework/solid/guide/pagination.md\"]"

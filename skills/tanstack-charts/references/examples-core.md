@@ -743,7 +743,7 @@ Read [Grammar of Graphics](./chart-grammar.md#source-charts-docs-concepts-gramma
 [Marks and Layering](./chart-grammar.md#source-charts-docs-concepts-marks-and-layering-md) before replacing a
 composition with a custom mark.
 
-For implementation details, use the [API Reference](./specifications-types.md#source-charts-docs-reference-index-md).
+For implementation details, use the [API Reference](./specifications.md#source-charts-docs-reference-index-md).
 For behavior that crosses chart and application state, use the task-focused
 [Guides](./chart-grammar.md#source-charts-docs-guides-choosing-a-chart-md).
 

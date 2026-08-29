@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/solid-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core-migrate-v8-to-v9\",\"tanstack-solid-table-getting-started\",\"tanstack-solid-table-table-state\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/solid/guide/migrating.md\",\"TanStack/table:packages/solid-table/src/index.tsx\",\"TanStack/table:examples/solid/basic-use-table\"]"

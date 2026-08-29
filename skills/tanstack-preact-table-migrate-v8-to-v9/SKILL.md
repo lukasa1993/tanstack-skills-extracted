@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/preact-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core-migrate-v8-to-v9\",\"tanstack-preact-table-getting-started\",\"tanstack-preact-table-table-state\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/preact/guide/migrating.md\",\"TanStack/table:packages/preact-table/src/index.ts\",\"TanStack/table:examples/preact/basic-use-table\"]"

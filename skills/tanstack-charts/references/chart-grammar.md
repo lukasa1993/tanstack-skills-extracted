@@ -1372,7 +1372,7 @@ A mark turns data and channel values into renderer-neutral scene nodes. Marks ar
 
 Start from the analytical question in
 [Choosing a Chart](./chart-grammar.md#source-charts-docs-guides-choosing-a-chart-md). The
-[Mark Reference](./specifications-types.md#source-charts-docs-reference-index-md) lists every channel and
+[Mark Reference](./specifications.md#source-charts-docs-reference-index-md) lists every channel and
 style option. Polar and geographic marks use explicit capability subpaths.
 
 ### Layer order is declaration order
@@ -2485,7 +2485,7 @@ import type {
 
 Use them to describe reusable helpers without repeating a datum or coordinate
 union manually. The exact utility contracts are listed in
-[Types](./specifications-types.md#source-charts-docs-reference-types-md).
+[Types](./types.md#source-charts-docs-reference-types-md).
 
 ### Custom marks
 

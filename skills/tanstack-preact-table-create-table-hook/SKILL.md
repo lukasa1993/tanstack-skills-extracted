@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/preact-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-preact-table-getting-started\",\"tanstack-preact-table-table-state\"]"
   tanstack-source-skill: "create-table-hook"
   tanstack-sources: "[\"TanStack/table:docs/framework/preact/guide/composable-tables.md\",\"TanStack/table:docs/framework/preact/guide/table-context.md\",\"TanStack/table:examples/preact/composable-tables\",\"TanStack/table:packages/preact-table/src/createTableHook.tsx\",\"TanStack/table:packages/preact-table/src/createTableHookContexts.tsx\"]"

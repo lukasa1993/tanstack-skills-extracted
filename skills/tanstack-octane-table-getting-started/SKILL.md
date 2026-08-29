@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/octane-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/octane-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\"]"
   tanstack-source-skill: "getting-started"
   tanstack-sources: "[\"TanStack/table:docs/framework/octane/quick-start.md\",\"TanStack/table:examples/octane/basic-use-table\",\"TanStack/table:packages/octane-table/src/index.ts\",\"TanStack/table:packages/octane-table/src/useTable.tsrx\"]"

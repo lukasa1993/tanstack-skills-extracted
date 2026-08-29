@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "alpine"
   tanstack-library: "@tanstack/alpine-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/alpine-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-alpine-table-getting-started\",\"tanstack-alpine-table-table-state\"]"
   tanstack-source-skill: "create-table-hook"
   tanstack-sources: "[\"TanStack/table:docs/framework/alpine/guide/composable-tables.md\",\"TanStack/table:examples/alpine/basic-app-table\",\"TanStack/table:packages/alpine-table/src/createTableHook.ts\"]"

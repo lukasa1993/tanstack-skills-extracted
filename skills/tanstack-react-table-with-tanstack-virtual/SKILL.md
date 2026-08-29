@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/react-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-react-table-getting-started\",\"tanstack-react-table-table-state\"]"
   tanstack-source-skill: "with-tanstack-virtual"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/virtualization.md\",\"TanStack/table:examples/react/virtualized-rows\",\"TanStack/table:examples/react/virtualized-columns\",\"TanStack/table:examples/react/virtualized-infinite-scrolling\"]"

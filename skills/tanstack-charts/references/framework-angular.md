@@ -73,7 +73,7 @@ swatches. The shared host owns focus, placement, portaling, inert transient
 state, pinning, and dismissal; Angular owns the embedded-view lifecycle.
 
 See the [`Chart` reference](./framework-angular.md#source-charts-docs-framework-angular-reference-chart-md) and
-[Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+[Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 <a id="source-charts-docs-framework-angular-reference-chart-md"></a>
 

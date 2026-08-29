@@ -85,7 +85,7 @@ The shared host owns focus, placement, portaling, and dismissal. Preact owns
 the returned component lifecycle inside the stable tooltip body target.
 
 See the [`Chart` reference](./framework-preact.md#source-charts-docs-framework-preact-reference-chart-md), [SSR and hydration](./production.md#source-charts-docs-guides-ssr-and-hydration-md),
-and [Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+and [Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 <a id="source-charts-docs-framework-preact-reference-chart-md"></a>
 

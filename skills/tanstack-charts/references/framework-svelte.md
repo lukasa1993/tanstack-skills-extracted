@@ -67,7 +67,7 @@ placement, portaling, inert transient state, pinning, and dismissal; Svelte
 owns the snippet lifecycle inside the body target.
 
 See the [`Chart` reference](./framework-svelte.md#source-charts-docs-framework-svelte-reference-chart-md), [SSR and hydration](./production.md#source-charts-docs-guides-ssr-and-hydration-md),
-and [Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+and [Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 <a id="source-charts-docs-framework-svelte-reference-chart-md"></a>
 

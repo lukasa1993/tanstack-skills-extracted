@@ -31,7 +31,8 @@ Typed chart grammar guidance for marks, scales, layouts, interaction, accessibil
 - [Cartesian and statistical marks](references/marks-cartesian-statistical.md) — Cartesian, distribution, density, regression, and statistical mark reference.
 - [Spatial and polar marks](references/marks-spatial.md) — Spatial, polar, focus-guide, Delaunay, geo, and Voronoi mark reference.
 - [Composite and hierarchy marks](references/marks-composite.md) — Composite, network, hierarchy, rule, frame, and waffle mark reference.
-- [Specifications and types](references/specifications-types.md) — Chart definitions, specifications, reference index, and type reference.
+- [Specifications](references/specifications.md) — Chart definitions, specifications, and reference index.
+- [Type reference](references/types.md) — Chart TypeScript definitions and type reference.
 - [Interaction and motion reference](references/interaction-motion-reference.md) — Focus, interaction, and motion reference.
 - [Runtime and scales reference](references/runtime-scales-reference.md) — Runtime, scene, scales, guides, and color reference.
 - [Rendering and composition reference](references/rendering-composition-reference.md) — Adapters, extensions, hosts, rendering, export, transforms, and view composition.

@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/solid-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-solid-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/solid/guide/table-state.md\",\"TanStack/table:examples/solid/basic-external-state\",\"TanStack/table:packages/solid-table/src/createTable.ts\"]"

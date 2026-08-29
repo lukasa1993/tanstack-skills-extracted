@@ -10,7 +10,7 @@ Source: `charts:docs/reference/runtime-and-scene.md`.
 
 TanStack Charts separates semantic chart construction from rendering:
 
-1. a definition produces a [chart spec](./specifications-types.md#source-charts-docs-reference-chart-spec-md)
+1. a definition produces a [chart spec](./specifications.md#source-charts-docs-reference-chart-spec-md)
 2. marks materialize channels
 3. scales and guide layout resolve against the current size
 4. marks emit a keyed `ChartScene`
@@ -119,7 +119,7 @@ The exported theme contains:
 - six CSS-variable-backed palette entries
 
 Definitions merge partial overrides into this value. A supplied palette
-replaces the default palette. See [Chart spec](./specifications-types.md#source-charts-docs-reference-chart-spec-md).
+replaces the default palette. See [Chart spec](./specifications.md#source-charts-docs-reference-chart-spec-md).
 
 ### `findNearestPoint`
 
@@ -1034,7 +1034,7 @@ legends should remain renderer-neutral scene output.
 
 ### Theme and gradients
 
-The built-in theme is described in [Chart spec](./specifications-types.md#source-charts-docs-reference-chart-spec-md).
+The built-in theme is described in [Chart spec](./specifications.md#source-charts-docs-reference-chart-spec-md).
 Chart gradients are independent SVG resources:
 
 ```ts

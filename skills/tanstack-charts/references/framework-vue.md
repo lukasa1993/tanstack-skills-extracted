@@ -71,7 +71,7 @@ shared host owns focus, placement, portaling, inert transient state, pinning,
 and dismissal; Vue owns the slot lifecycle inside the body target.
 
 See the [`Chart` reference](./framework-vue.md#source-charts-docs-framework-vue-reference-chart-md), [SSR and hydration](./production.md#source-charts-docs-guides-ssr-and-hydration-md),
-and [Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+and [Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 <a id="source-charts-docs-framework-vue-reference-chart-md"></a>
 

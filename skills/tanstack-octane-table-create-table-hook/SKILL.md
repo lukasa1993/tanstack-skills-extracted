@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "octane"
   tanstack-library: "@tanstack/octane-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/octane-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-octane-table-getting-started\",\"tanstack-octane-table-table-state\"]"
   tanstack-source-skill: "create-table-hook"
   tanstack-sources: "[\"TanStack/table:docs/framework/octane/guide/composable-tables.md\",\"TanStack/table:docs/framework/octane/guide/table-context.md\",\"TanStack/table:examples/octane/composable-tables\",\"TanStack/table:packages/octane-table/src/createTableHook.tsrx\",\"TanStack/table:packages/octane-table/src/createTableHookContexts.ts\"]"

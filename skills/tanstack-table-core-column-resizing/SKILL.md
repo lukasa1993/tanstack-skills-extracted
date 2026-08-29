@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\",\"tanstack-table-core-column-sizing\"]"
   tanstack-source-skill: "column-resizing"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/column-resizing.md\",\"TanStack/table:packages/table-core/src/features/column-resizing\",\"TanStack/table:examples/react/column-resizing-performant\"]"

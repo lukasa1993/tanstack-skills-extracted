@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-source-skill: "core"
   tanstack-sources: "[\"TanStack/table:docs/overview.md\",\"TanStack/table:docs/guide/tables.md\",\"TanStack/table:docs/guide/data.md\",\"TanStack/table:docs/guide/rows.md\",\"TanStack/table:packages/table-core/src/index.ts\"]"
   tanstack-type: "core"

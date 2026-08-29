@@ -72,7 +72,7 @@ host owns focus, placement, portaling, inert transient state, pinning, and
 dismissal; Lit owns the rendered template lifecycle.
 
 See the [`Chart` reference](./framework-lit.md#source-charts-docs-framework-lit-reference-chart-md) and
-[Chart Definition API](./specifications-types.md#source-charts-docs-reference-chart-definitions-md).
+[Chart Definition API](./specifications.md#source-charts-docs-reference-chart-definitions-md).
 
 <a id="source-charts-docs-framework-lit-reference-chart-md"></a>
 

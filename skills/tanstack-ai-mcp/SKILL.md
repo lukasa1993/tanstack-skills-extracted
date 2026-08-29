@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.5"
   tanstack-package: "@tanstack/ai-mcp"
-  tanstack-package-version: "0.3.6"
+  tanstack-package-version: "0.3.8"
   tanstack-source-skill: "ai-mcp"
   tanstack-sources: "[\"TanStack/ai:docs/tools/mcp.md\",\"TanStack/ai:packages/ai-mcp/src/client.ts\",\"TanStack/ai:packages/ai-mcp/src/pool.ts\",\"TanStack/ai:packages/ai-mcp/src/resources.ts\",\"TanStack/ai:packages/ai-mcp/src/transport.ts\"]"
   tanstack-type: "sub-skill"

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/offline-transactions"
-  tanstack-package-version: "1.0.51"
+  tanstack-package-version: "1.0.52"
   tanstack-requires: "[\"tanstack-db-core\",\"tanstack-db-core-mutations-optimistic\"]"
   tanstack-source-skill: "offline"
   tanstack-sources: "[\"TanStack/db:packages/offline-transactions/src/OfflineExecutor.ts\",\"TanStack/db:packages/offline-transactions/src/types.ts\",\"TanStack/db:packages/offline-transactions/src/index.ts\"]"

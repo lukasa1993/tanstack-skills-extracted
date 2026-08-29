@@ -53,7 +53,7 @@ Use one documentation owner for each decision:
 - large-data representation:
   [Large Data](./production.md#source-charts-docs-guides-large-data-md);
 - exact signatures and options:
-  [API Reference](./specifications-types.md#source-charts-docs-reference-index-md).
+  [API Reference](./specifications.md#source-charts-docs-reference-index-md).
 
 Do not reconstruct an API from an example when the reference owns the
 signature. Do not restate D3 behavior when the D3 bridge links to its

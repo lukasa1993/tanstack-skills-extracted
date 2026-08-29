@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
-  tanstack-library-version: "9.2.3"
+  tanstack-library-version: "9.2.4"
   tanstack-package: "@tanstack/vue-table"
-  tanstack-package-version: "9.2.3"
+  tanstack-package-version: "9.2.4"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-vue-table-getting-started\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/vue/guide/table-state.md\",\"TanStack/table:examples/vue/basic-external-state\",\"TanStack/table:packages/vue-table/src/useTable.ts\"]"
