@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.6"
+  tanstack-package-version: "0.8.7"
   tanstack-requires: "[\"tanstack-db-core\",\"tanstack-db-core-collection-setup\"]"
   tanstack-source-skill: "meta-framework"
   tanstack-sources: "[\"TanStack/db:examples/react/todo/src/routes/electric.tsx\",\"TanStack/db:examples/react/todo/src/routes/query.tsx\",\"TanStack/db:examples/react/todo/src/start.tsx\"]"
