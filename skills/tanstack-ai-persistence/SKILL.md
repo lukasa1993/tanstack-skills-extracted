@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.5.4"
+  tanstack-package-version: "0.5.5"
   tanstack-source-skill: "ai-persistence"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/overview.md\",\"TanStack/ai:docs/persistence/chat-persistence.md\",\"TanStack/ai:docs/persistence/client-persistence.md\",\"TanStack/ai:docs/persistence/controls.md\",\"TanStack/ai:docs/persistence/build-your-own-adapter.md\"]"
   tanstack-type: "core"
