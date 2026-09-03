@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.52.1"
+  tanstack-package-version: "0.52.2"
   tanstack-source-skill: "ai-core/custom-backend-integration"
   tanstack-sources: "[\"TanStack/ai:docs/chat/connection-adapters.md\"]"
   tanstack-type: "composition"

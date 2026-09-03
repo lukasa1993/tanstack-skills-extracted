@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.52.1"
+  tanstack-package-version: "0.52.2"
   tanstack-source-skill: "ai-core/locks"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/locks.md\",\"TanStack/ai:packages/ai/src/activities/chat/middleware/locks.ts\"]"
   tanstack-type: "sub-skill"
