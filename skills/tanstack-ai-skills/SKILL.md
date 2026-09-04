@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-skills"
-  tanstack-package-version: "0.1.1"
+  tanstack-package-version: "0.1.2"
   tanstack-source-skill: "ai-skills"
   tanstack-sources: "[\"TanStack/ai:docs/skills/agent-skills.md\",\"TanStack/ai:docs/skills/skill-sources.md\",\"TanStack/ai:docs/skills/writing-adapters.md\",\"TanStack/ai:docs/tools/provider-skills.md\"]"
   tanstack-type: "core"

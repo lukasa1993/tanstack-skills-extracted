@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.4"
   tanstack-package: "@tanstack/ai-sandbox"
-  tanstack-package-version: "0.5.5"
+  tanstack-package-version: "0.5.6"
   tanstack-source-skill: "ai-sandbox"
   tanstack-sources: "[\"TanStack/ai:docs/sandbox/overview.md\",\"TanStack/ai:docs/sandbox/takeover.md\",\"TanStack/ai:docs/sandbox/reaping.md\"]"
   tanstack-type: "sub-skill"
