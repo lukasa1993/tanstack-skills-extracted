@@ -8,12 +8,20 @@ Trust boundaries, configuration, registry, and overview.
 
 Source: `intent:docs/concepts/configuration.md`.
 
-Intent reads consumer configuration from the `intent` object in `package.json`. Two keys control which discovered skills Intent surfaces: `skills` (the allowlist) and `exclude` (the blocklist).
+Configure Intent in the `intent` object in `package.json`:
+
+- **`skills`** permits packages or individual skills.
+- **`exclude`** blocks packages or skills after permissions are evaluated.
 
 ```json
 {
   "intent": {
-    "skills": ["@tanstack/query", "workspace:@scope/internal"],
+    "skills": [
+      "@tanstack/query",
+      "@acme/*",
+      "@tanstack/start#routing",
+      "workspace:@scope/internal"
+    ],
     "exclude": ["@tanstack/router#experimental-*"]
   }
 }
@@ -21,20 +29,22 @@ Intent reads consumer configuration from the `intent` object in `package.json`. 
 
 ### Configuration inheritance
 
-- **`intent.skills`:** Intent uses the nearest non-null declaration between the current working directory and the workspace or project root. A nearer declaration replaces its parent. An omitted or null value inherits the nearest parent declaration.
-- **`intent.exclude`:** Intent combines arrays from the root through the current working directory, then adds excludes passed by the caller.
+| Key | Inheritance rule |
+| --- | --- |
+| `intent.skills` | Uses the nearest non-null declaration between the current directory and the workspace or project root. A nearer declaration replaces its parent; omitted or null values inherit. |
+| `intent.exclude` | Combines arrays from the root through the current directory, then adds excludes passed by the caller. |
 
 ### `intent.skills`
 
-`intent.skills` is a package-source allowlist. A permitted package can:
+`intent.skills` is a package-source and skill allowlist. A permitted package or skill can:
 
 - Appear in `list` and `stale`.
 - Resolve through `load`.
 - Contribute mappings to `install --map`.
 
-The default `install` command writes generic loading guidance without scanning packages. See [Trust model](./trust-configuration.md#source-intent-docs-concepts-trust-model-md) for the reasoning and lifecycle boundaries.
+Default `install` helps configure permissions on first use. See [Existing projects](#existing-projects) for how it handles saved or inherited configuration, and [Trust model](./trust-configuration.md#source-intent-docs-concepts-trust-model-md) for the trust boundaries.
 
-The allowlist permits packages, not individual skills. An entry containing `#` is invalid; use `intent.exclude` for skill-specific filtering.
+Package selectors permit current and future skills in the package. Exact selectors use `<package>#<skill>` and permit only that skill. If both match, the package selector takes precedence. `intent.exclude` is applied afterward and can still block either choice.
 
 #### Source entries
 
@@ -43,28 +53,70 @@ Each array entry names one source:
 | Entry | Kind | Meaning |
 | ----- | ---- | ------- |
 | `@scope/pkg` or `pkg` | npm | An npm package reachable through the dependency tree, direct or transitive. |
+| `@scope/pkg#skill` | npm | One exact skill in an npm package. |
 | `workspace:@scope/pkg` | workspace | A package in the current workspace. |
+| `workspace:@scope/pkg#skill` | workspace | One exact skill in a workspace package. |
 | `@scope/*` | npm | Every discovered npm package whose name matches the pattern. |
 | `workspace:@scope/*` | workspace | Every discovered workspace package whose name matches the pattern. |
 | `git:<host>/<repo>#<ref>` | git | Reserved. Not yet supported, and rejected until a future version adds it. |
 
-A malformed entry fails the whole command, and every bad entry is reported at once. Package patterns support `*` wildcards, including scoped patterns such as `@tanstack/*`. Intent matches both the package name and source kind: a bare entry permits only an npm source, and a `workspace:` entry permits only a workspace source.
+##### Validation rules
+
+- Exact selectors require a non-empty package name and a non-empty skill name without wildcards.
+- Package patterns support `*`, including scoped patterns such as `@tanstack/*`. Patterns cannot be combined with an exact skill selector.
+- Source kinds must match: bare selectors permit npm sources; `workspace:` selectors permit workspace sources.
+- `git:` entries are rejected, including entries containing `#` for a Git ref.
+
+A malformed entry fails the whole command. Intent reports every bad entry at once.
 
 #### Special forms
 
 | Form | Result | Notice |
 | --- | --- | --- |
-| **Absent:** no `intent.skills` key | Surfaces every discovered package as an upgrade path for existing projects. A future version will require an explicit allowlist. | Deprecation notice on stderr on each run until you set `intent.skills`. |
+| **Absent:** no effective `intent.skills` key | Discovery commands surface every discovered package as migration behavior. | Deprecation notice until you configure permissions. |
 | **Empty:** `"skills": []` | Surfaces no packages. | Info notice on stderr. |
-| **Wildcard:** `"skills": ["*"]` | Surfaces every discovered package across package scopes and source kinds. This is broader than a pattern such as `@tanstack/*`. | Acknowledged-risk notice on stderr because unvetted skills may reach your agent. |
+| **Wildcard:** `"skills": ["*"]` | Permits every discovered package across scopes and source kinds, broader than `@tanstack/*`. | Acknowledged-risk notice: unvetted skills may reach your agent. |
 
-A package that ships skills but is not listed is dropped. In human output, Intent adds one policy notice naming packages dropped this way so you can opt in. Agent sessions receive only the hidden package and skill counts. A listed package that was not discovered is reported as a notice as well.
+All policy notices go to stderr. Exclusions still apply to these forms.
+
+##### Discovery notices
+
+| Situation | Notice |
+| --- | --- |
+| Discovered package is not permitted | Human output names omitted packages in one notice. Agent sessions receive only hidden package and skill counts. |
+| Configured package was not discovered | Reports that the package was not discovered. |
+| Package was explicitly excluded | No unlisted-source notice. |
 
 #### Existing projects
 
 Run `intent list` to see which packages the current policy surfaces.
 
-A project without `intent.skills` uses the absent form: Intent surfaces every discovered package and prints its deprecation notice. Add an allowlist to permit specific sources before a future version requires one.
+| Current configuration | Default `intent install` behavior |
+| --- | --- |
+| Saved or inherited `intent.skills` | Updates guidance only. Keeps permissions unchanged and does not prompt. |
+| No effective `intent.skills` | Starts interactive permission setup. Non-TTY execution fails without writes. |
+
+First-run setup offers **Enable all**, **Choose packages or scopes**, and **Choose individual skills**, followed by one confirmation before saving to the nearest owning `package.json` and installing guidance.
+
+- **Compact rules:** Enable all saves `"*"`; package choices save names such as `"@tanstack/ai"`; explicit scope choices save patterns such as `"@tanstack/*"`. These rules include future matching skills and packages. Individual choices save exact names such as `"@tanstack/ai#skill"`.
+- **Optional skill review:** choose **Review individual skills** at confirmation, then pick which selected packages to inspect. Leave the list empty to keep all selected skills. Only those packages open individual skill lists; unchecking a skill covered by a broad rule adds an exclusion. Existing and inherited exclusions stay in force.
+- **Changing instructions:** access choices do not record approval of specific content. Skills can change with dependency updates; update notifications are not available yet.
+- **Empty selection:** explicitly confirms disabling all skills with `[]`. Empty or fully excluded discovery writes nothing, so setup can be retried.
+
+For example, enabling a scope and unchecking one skill saves:
+
+```json
+{
+  "intent": {
+    "skills": ["@tanstack/*"],
+    "exclude": ["@tanstack/ai#skill"]
+  }
+}
+```
+
+This permits matching npm packages, including future additions, except the excluded skill. Selecting several packages individually never silently expands to a scope rule.
+
+See [Default install](./consumer-workflow.md#source-intent-docs-cli-intent-install-md) for picker controls and cancellation behavior.
 
 #### Suppressing notices temporarily
 
@@ -99,15 +151,17 @@ npx @tanstack/intent@latest exclude list
 }
 ```
 
-Pattern grammar:
+#### Exclusion patterns
 
-- A pattern without `#` excludes a whole package: `@scope/pkg`.
-- A pattern with `#` excludes a single skill: `@scope/pkg#search-params`.
-- The skill segment may be a glob: `@scope/pkg#experimental-*`.
-- A pattern may cross package boundaries at skill granularity: `*#experimental-*`.
-- The `#*` shortcut excludes the whole package: `@scope/pkg#*`.
+| Pattern | Excludes |
+| --- | --- |
+| `@scope/pkg` | The whole package. |
+| `@scope/pkg#search-params` | One named skill. |
+| `@scope/pkg#experimental-*` | Matching skills in one package. |
+| `*#experimental-*` | Matching skills across packages. |
+| `@scope/pkg#*` | The whole package, using the `#*` shortcut. |
 
-Only exact names and `*` wildcards are supported on each segment. Excludes are source-kind agnostic, so a package pattern excludes matching npm and workspace sources. An excluded package does not trigger the unlisted-source notice, because an exclude is an explicit decision.
+Each segment supports exact names and `*` wildcards only. Excludes apply to both npm and workspace sources with matching names, regardless of source kind.
 
 <a id="source-intent-docs-concepts-trust-model-md"></a>
 
@@ -115,17 +169,58 @@ Only exact names and `*` wildcards are supported on each segment. Excludes are s
 
 Source: `intent:docs/concepts/trust-model.md`.
 
-Intent discovers skills from your dependencies and can surface permitted skills through its CLI and agent integrations. A skill is instructions an agent follows, so the set of packages allowed to contribute skills is a trust decision. Intent makes that decision explicit through the `intent.skills` allowlist.
+Skills contain instructions for an agent. Choosing which packages can supply those instructions is a trust decision, controlled by the `intent.skills` allowlist.
 
 ### Explicit sources
 
 A package ships skills in a `skills/` directory. Discovery finds every installed package that has one, including transitive dependencies. Discovery does not grant trust.
 
-`package.json#intent.skills` is the gate. A discovered package contributes skills only when an exact entry or `*` pattern in the allowlist matches its package name and source kind. An unlisted package is dropped, and Intent reports it so you can opt in or ignore it.
+When configured, `package.json#intent.skills` controls which discovered skills can surface through the CLI and agent integrations:
 
-The gate is opt-in today. A project with no `intent.skills` key still surfaces every discovered package, and Intent prints a deprecation notice to stderr on each run until you set `intent.skills`. A future version will require an explicit allowlist. See the [special forms](./trust-configuration.md#source-intent-docs-concepts-configuration-md) in Configuration.
+- **Package entries** enable skills from matching packages, including skills added later.
+- **Exact skill entries** enable only the named skill; its instructions can still change.
+- **Source kinds stay separate:** `foo` permits an npm source; `workspace:foo` permits a workspace source. Their wildcard patterns remain kind-specific. The exact `*` entry permits every discovered npm and workspace source.
 
-Trust does not propagate. A listed package may depend on another package that ships skills, but that dependency stays unlisted unless another entry matches it. A bare entry such as `foo` permits an npm source, while `workspace:foo` permits a workspace source. Their wildcard forms remain kind-specific. The exact `*` entry permits every discovered npm and workspace source.
+Enabling a source does not record approval of its specific instructions. Skill content can change when dependencies update, and Intent does not yet track or notify you about those changes.
+
+Trust does not propagate to dependencies. A dependency that ships skills needs its own matching entry. Intent omits unlisted packages and reports them so you can opt in or ignore them.
+
+#### Projects without an allowlist
+
+The gate is opt-in today. Without an effective `intent.skills` declaration, discovery commands still surface every discovered package and print a deprecation notice to stderr. A future version will require an explicit allowlist. See [Special forms](./trust-configuration.md#source-intent-docs-concepts-configuration-md).
+
+Default `intent install` handles this state through interactive permission setup.
+
+#### Invalid policy files
+
+Intent stops policy-controlled listing, loading, and installation when a policy `package.json` cannot be read, contains invalid JSON, or is not a JSON object. The error names the file. Repair or restore that file, then retry the command.
+
+This also applies while finding the workspace root: an unreadable or malformed ancestor `package.json` cannot be skipped, because it may contain inherited restrictions. Repair or restore the named manifest before retrying.
+
+Workspace discovery checks ancestors up to the first workspace declaration or Git repository boundary (`.git` directory or worktree file), including that directory's manifest. It does not inspect manifests above that boundary. Without either boundary, an invalid ancestor stops discovery even if the nearest package is intended to be standalone; Intent cannot determine from an unreadable manifest whether it owns workspace policy. A nested Git repository is treated as a separate project.
+
+### First-run permission review
+
+When no effective policy exists, `intent install` follows this flow:
+
+1. **Discover:** summarize npm and workspace skill counts. Descriptions and exclusions are available through optional inspection.
+2. **Choose:** enable all sources, choose packages or scopes, or select individual skills. Package and scope selections stay compact and include future matching skills. A whole scope requires an explicit selection.
+3. **Confirm once:** show the current skill count, saved rules, and destination file. Optional individual review opens skill lists only for the selected packages you choose to inspect. It can add exclusions while retaining broad rules; unreviewed packages keep their selection. Only affirmative confirmation saves permissions and exclusions atomically, then installs guidance. An empty selection explicitly confirms disabling all skills.
+
+| Outcome | Files changed |
+| --- | --- |
+| No skills discovered, or all excluded | None. |
+| Cancel any prompt | None. |
+| Run first-time setup without a TTY | None; the command fails. |
+| Save permissions, then fail to write or verify guidance | Confirmed permissions remain saved; the guidance failure is reported separately. |
+
+The completion summary reports skills available under the saved policy. It does not prove that an agent loaded or applied them. See [Default install](./consumer-workflow.md#source-intent-docs-cli-intent-install-md) for picker controls and permission choices.
+
+### Revisiting permissions
+
+Run `intent install --review` to revisit current permissions. Existing decisions are retained until you confirm changes. The review can add permission rules, remove selected rules, and add individual exclusions under broader rules. Existing exclusions continue to win.
+
+A review inside a workspace starts with inherited permissions. Confirmed edits create a local override; an unchanged review preserves inheritance. This reviews permission configuration, not whether skill content has changed. See [Review existing permissions](./consumer-workflow.md#source-intent-docs-cli-intent-install-md).
 
 ### Static discovery
 
