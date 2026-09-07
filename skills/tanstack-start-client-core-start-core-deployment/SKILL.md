@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.27"
+  tanstack-package-version: "1.170.28"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "deployment"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/hosting.md\",\"TanStack/router:docs/start/framework/react/guide/selective-ssr.md\",\"TanStack/router:docs/start/framework/react/guide/static-prerendering.md\",\"TanStack/router:docs/start/framework/react/guide/seo.md\"]"

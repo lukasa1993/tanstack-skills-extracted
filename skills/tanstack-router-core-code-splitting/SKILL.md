@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.27"
+  tanstack-package-version: "1.171.28"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "code-splitting"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/code-splitting.md\",\"TanStack/router:docs/router/guide/automatic-code-splitting.md\"]"

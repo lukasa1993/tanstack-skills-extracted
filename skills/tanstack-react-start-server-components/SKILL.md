@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.168.32"
   tanstack-package: "@tanstack/react-start"
-  tanstack-package-version: "1.168.49"
+  tanstack-package-version: "1.168.50"
   tanstack-requires: "[\"tanstack-react-start\",\"tanstack-start-client-core-start-core-server-functions\",\"tanstack-start-client-core-start-core-execution-model\"]"
   tanstack-source-skill: "server-components"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/server-components.md\",\"TanStack/router:docs/start/framework/react/guide/server-functions.md\",\"TanStack/router:docs/start/framework/react/guide/execution-model.md\",\"TanStack/router:docs/router/guide/data-loading.md\"]"

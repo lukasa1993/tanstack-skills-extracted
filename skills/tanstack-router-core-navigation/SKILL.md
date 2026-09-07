@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.27"
+  tanstack-package-version: "1.171.28"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "navigation"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/navigation.md\",\"TanStack/router:docs/router/guide/preloading.md\",\"TanStack/router:docs/router/guide/navigation-blocking.md\",\"TanStack/router:docs/router/guide/link-options.md\",\"TanStack/router:docs/router/guide/custom-link.md\",\"TanStack/router:docs/router/guide/scroll-restoration.md\"]"

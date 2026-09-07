@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.27"
+  tanstack-package-version: "1.171.28"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "auth-and-guards"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/authenticated-routes.md\",\"TanStack/router:docs/router/how-to/setup-authentication.md\",\"TanStack/router:docs/router/how-to/setup-auth-providers.md\",\"TanStack/router:docs/router/how-to/setup-rbac.md\"]"

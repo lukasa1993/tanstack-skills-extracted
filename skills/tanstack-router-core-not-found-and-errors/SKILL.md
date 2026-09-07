@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.27"
+  tanstack-package-version: "1.171.28"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "not-found-and-errors"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/not-found-errors.md\",\"TanStack/router:docs/router/guide/route-masking.md\"]"
@@ -167,15 +167,15 @@ export const Route = createFileRoute('/posts/$postId')({
 function PostErrorComponent({
   error,
 }: {
-  error: Error
-  info: { componentStack: string }
+  error: unknown
+  info?: { componentStack: string }
   reset: () => void
 }) {
   const router = useRouter()
 
   return (
     <div>
-      <p>Error: {error.message}</p>
+      <p>Error: {error instanceof Error ? error.message : String(error)}</p>
       <button
         onClick={() => {
           // Invalidate re-runs the loader and resets the error boundary
@@ -203,7 +203,10 @@ const router = createRouter({
     const router = useRouter()
     return (
       <div>
-        <p>Something went wrong: {error.message}</p>
+        <p>
+          Something went wrong:{' '}
+          {error instanceof Error ? error.message : String(error)}
+        </p>
         <button
           onClick={() => {
             router.invalidate()
@@ -409,12 +412,18 @@ Masking data lives in `location.state` (browser history). When a masked URL is c
 
 ```tsx
 // WRONG — reset() clears the error boundary but does NOT re-run the loader
-function ErrorFallback({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorFallback({
+  error,
+  reset,
+}: {
+  error: unknown
+  reset: () => void
+}) {
   return <button onClick={reset}>Retry</button>
 }
 
 // CORRECT — invalidate re-runs loaders and resets the error boundary
-function ErrorFallback({ error }: { error: Error; reset: () => void }) {
+function ErrorFallback({ error }: { error: unknown; reset: () => void }) {
   const router = useRouter()
   return (
     <button
