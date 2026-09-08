@@ -25,7 +25,7 @@ const virtualizer = useVirtualizer({
 })
 ```
 
-See the full [React chat example](https://github.com/TanStack/virtual/blob/e9874f033c74afd3251eeb9f3e60b2530cc7ae88/examples/react/chat/README.md).
+See the full [React chat example](https://github.com/TanStack/virtual/blob/171029d81350d62e040fe3a1374ed1499c034b41/examples/react/chat/README.md).
 
 ### Behaviors
 
@@ -267,4 +267,4 @@ function Messages({ rows }: { rows: Array<{ id: string; text: string }> }) {
 - Keep a fallback for unsupported runtimes. Pretext currently needs `Intl.Segmenter` and Canvas 2D text measurement.
 - Use `resizeItem(index, size)` when you know a row's final size outside render, such as after markdown preprocessing, image metadata loading, or a controlled expand/collapse transition.
 
-See the React Pretext example for a complete chat-style implementation: [React Pretext](https://github.com/TanStack/virtual/blob/e9874f033c74afd3251eeb9f3e60b2530cc7ae88/examples/react/pretext/README.md).
+See the React Pretext example for a complete chat-style implementation: [React Pretext](https://github.com/TanStack/virtual/blob/171029d81350d62e040fe3a1374ed1499c034b41/examples/react/pretext/README.md).

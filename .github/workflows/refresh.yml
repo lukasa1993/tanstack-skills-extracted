@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: refresh-extracted-tanstack-skills
@@ -15,176 +15,70 @@ concurrency:
 jobs:
   refresh:
     if: github.repository == 'lukasa1993/tanstack-skills-extracted' && github.ref == 'refs/heads/main'
-    runs-on: tanstack-skills
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
-    outputs:
-      publish_needed: ${{ steps.release.outputs.needed }}
-      release_version: ${{ steps.release.outputs.version }}
-      publish_sha: ${{ steps.release.outputs.sha }}
-
+    permissions:
+      contents: write
     steps:
       - name: Check out main
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
-          fetch-depth: 0
-          fetch-tags: true
           persist-credentials: false
 
-      - name: Check runner tools
-        run: |
-          set -euo pipefail
-          node --version
-          node -e 'const [major, minor] = process.versions.node.split(".").map(Number); if (major < 22 || (major === 22 && minor < 20)) throw new Error("Node.js 22.20.0 or newer is required")'
-          npm --version
-          tar --version
-          gh --version
-          gh skill publish --help >/dev/null
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
 
-      - name: Test exporter and catalog routing
+      - name: Restore source cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .tanstack-source-cache
+          key: sources-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: sources-v1-${{ runner.os }}-
+
+      - name: Test refresh pipeline
         run: |
-          set -euo pipefail
           ./extractor.sh --self-test
           node --test ./scripts/*.test.mjs
 
-      - name: Extract current official skills
-        run: ./extractor.sh skills
-
-      - name: Fetch current official documentation
-        run: node ./scripts/fetch-doc-sources.mjs
-
-      - name: Build product skills and metadata
-        run: node ./scripts/build-groups.mjs
-
-      - name: Validate product catalog and discovery
-        env:
-          NPM_CONFIG_IGNORE_SCRIPTS: "true"
-        run: |
-          set -euo pipefail
-          node ./scripts/validate-catalog.mjs
-          npx --yes skills@1.5.22 add . --list
-
-      - name: Validate Agent Skills
+      - name: Acquire, build, validate, and apply candidate
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh skill publish --dry-run
+        run: node scripts/refresh.mjs
 
-      - name: Detect changes
-        id: changes
+      - name: Commit validated output
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
-          git add -A -- "${generated[@]}"
-          if git diff --cached --quiet -- "${generated[@]}"; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+          git add -A -- skills skills.sh.json .claude-plugin/marketplace.json sources.lock.json
+          if git diff --cached --quiet; then
+            echo "Generated output and source snapshot are unchanged." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
           fi
-
-      - name: Commit and push changed skills
-        if: steps.changes.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: refresh extracted TanStack skills"
+          # A concurrent edit to main rejects this push. Rebuild against it on rerun.
           git -c credential.helper='!gh auth git-credential' push origin HEAD:main
 
-      - name: Select release version
-        id: release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
-          publish_sha="$(git log -1 --format=%H -- "${generated[@]}")"
-          skill_commit_count="$(git rev-list --count "$publish_sha" -- "${generated[@]}")"
-          version="v0.1.${skill_commit_count}"
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-          echo "sha=$publish_sha" >> "$GITHUB_OUTPUT"
-          if ! gh release view "$version" >/dev/null 2>&1; then
-            echo "needed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "needed=false" >> "$GITHUB_OUTPUT"
-          fi
-
-  publish:
-    needs: refresh
-    if: needs.refresh.outputs.publish_needed == 'true'
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-
-    steps:
-      - name: Check out published main
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Save verified downloads, including after failed builds
+        if: always()
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          ref: ${{ needs.refresh.outputs.publish_sha }}
-          fetch-depth: 0
-          persist-credentials: false
+          path: .tanstack-source-cache
+          key: sources-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
 
-      - name: Verify published skills are current
-        env:
-          EXPECTED_SHA: ${{ needs.refresh.outputs.publish_sha }}
-        run: |
-          set -euo pipefail
-          git fetch --no-tags origin main
-          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
-          if ! git diff --quiet "$EXPECTED_SHA" origin/main -- "${generated[@]}"; then
-            echo "The published skills or metadata on main changed after the refresh job." >&2
-            exit 1
-          fi
-
-      - name: Refresh skills.sh index
-        env:
-          NPM_CONFIG_IGNORE_SCRIPTS: "true"
-        run: |
-          set -euo pipefail
-          install_dir="$(mktemp -d "${RUNNER_TEMP}/skills-sh-install.XXXXXX")"
-          cd "$install_dir"
-
-          mapfile -t expected_skills < <(node "$GITHUB_WORKSPACE/scripts/list-product-skills.mjs")
-          mapfile -t marker_files < <(
-            find "$GITHUB_WORKSPACE/skills" -mindepth 2 -maxdepth 2 \
-              -name '.tanstack-product-skill.json' -type f | LC_ALL=C sort
-          )
-          if (( ${#marker_files[@]} != ${#expected_skills[@]} )); then
-            echo "Expected ${#expected_skills[@]} product markers, found ${#marker_files[@]}." >&2
-            exit 1
-          fi
-
-          batch=()
-          batch_count=0
-          published_count=0
-          for skill_name in "${expected_skills[@]}"; do
-            marker_file="$GITHUB_WORKSPACE/skills/$skill_name/.tanstack-product-skill.json"
-            if [[ ! -f "$marker_file" ]]; then
-              echo "Missing product marker for $skill_name." >&2
-              exit 1
-            fi
-            batch+=(--skill "$skill_name")
-            batch_count=$((batch_count + 1))
-            published_count=$((published_count + 1))
-            if (( batch_count == 8 )); then
-              npx --yes skills@1.5.22 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
-              batch=()
-              batch_count=0
-            fi
-          done
-          if (( batch_count > 0 )); then
-            npx --yes skills@1.5.22 add "$GITHUB_REPOSITORY" --agent codex --copy --yes "${batch[@]}"
-          fi
-          echo "Reported $published_count product skills to skills.sh."
-
-      - name: Publish GitHub skill release
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RELEASE_VERSION: ${{ needs.refresh.outputs.release_version }}
-          PUBLISH_SHA: ${{ needs.refresh.outputs.publish_sha }}
-        run: |
-          gh api --method POST "repos/${GITHUB_REPOSITORY}/releases" \
-            -f tag_name="$RELEASE_VERSION" \
-            -f target_commitish="$PUBLISH_SHA" \
-            -F generate_release_notes=true \
-            --jq .html_url
+      - name: Upload refresh diagnostics
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: refresh-diagnostics-${{ github.run_attempt }}
+          path: |
+            .tanstack-refresh/report.json
+            .tanstack-refresh/run-*/*.log
+            .tanstack-refresh/run-*/sources.lock.json
+          include-hidden-files: true
+          retention-days: 14

@@ -19,7 +19,7 @@ import { fileURLToPath } from 'node:url'
 import { categoryGroups, expectedCatalogIds } from './catalog-config.mjs'
 import { createThemeBuckets, resolveProduct, selectTheme } from './product-routing.mjs'
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+const root = resolve(process.env.TANSTACK_BUILD_ROOT || resolve(dirname(fileURLToPath(import.meta.url)), '..'))
 const skillsDir = join(root, 'skills')
 const docSourceDir = join(root, '.tanstack-doc-sources')
 const exportManifestPath = join(skillsDir, '.tanstack-skills-export.tsv')

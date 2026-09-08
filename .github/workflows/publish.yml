@@ -1,0 +1,117 @@
+name: Publish skills
+
+on:
+  workflow_run:
+    workflows: [Refresh extracted skills]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-tanstack-skills
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    if: >-
+      github.repository == 'lukasa1993/tanstack-skills-extracted' &&
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      sha: ${{ steps.snapshot.outputs.sha }}
+      version: ${{ steps.snapshot.outputs.version }}
+      code_sha: ${{ steps.snapshot.outputs.code_sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Select immutable catalog commit
+        id: snapshot
+        run: |
+          set -euo pipefail
+          generated=(skills skills.sh.json .claude-plugin/marketplace.json)
+          sha="$(git log -1 --format=%H -- "${generated[@]}")"
+          count="$(git rev-list --count "$sha" -- "${generated[@]}")"
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "version=v0.1.$count" >> "$GITHUB_OUTPUT"
+          echo "code_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  release:
+    needs: snapshot
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.snapshot.outputs.code_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+      - name: Reconcile GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ needs.snapshot.outputs.version }}
+          PUBLISH_SHA: ${{ needs.snapshot.outputs.sha }}
+        run: node scripts/publish-release.mjs
+
+  index:
+    needs: snapshot
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.snapshot.outputs.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+      - name: Validate committed catalog
+        run: node scripts/validate-catalog.mjs
+      - name: Check whether this snapshot was already reported
+        id: indexed
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .skills-index-state
+          key: skills-index-v1-${{ needs.snapshot.outputs.sha }}
+          lookup-only: true
+      - name: Report product installs to skills.sh
+        id: index
+        if: steps.indexed.outputs.cache-hit != 'true'
+        env:
+          NPM_CONFIG_IGNORE_SCRIPTS: 'true'
+          PUBLISH_SHA: ${{ needs.snapshot.outputs.sha }}
+        run: |
+          set -euo pipefail
+          mapfile -t products < <(node scripts/list-product-skills.mjs)
+          if (( ${#products[@]} == 0 )); then
+            echo "No product skills selected." >&2
+            exit 1
+          fi
+          args=()
+          for product in "${products[@]}"; do
+            args+=(--skill "$product")
+          done
+          install_dir="$(mktemp -d "${RUNNER_TEMP}/skills-index.XXXXXX")"
+          cd "$install_dir"
+          npx --yes skills@1.5.22 add "https://github.com/${GITHUB_REPOSITORY}/tree/${PUBLISH_SHA}" \
+            --agent codex --copy --yes "${args[@]}"
+          mkdir -p "$GITHUB_WORKSPACE/.skills-index-state"
+          echo "$PUBLISH_SHA" > "$GITHUB_WORKSPACE/.skills-index-state/sha"
+          echo "Reported installs for ${#products[@]} product skills at $PUBLISH_SHA." >> "$GITHUB_STEP_SUMMARY"
+      - name: Remember successful indexing
+        if: steps.index.outcome == 'success'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .skills-index-state
+          key: skills-index-v1-${{ needs.snapshot.outputs.sha }}

@@ -5,3 +5,6 @@ node_modules/
 .tanstack-doc-sources.backup-*/
 .tanstack-product-build.tmp-*/
 .tanstack-product-backup.tmp-*/
+.tanstack-source-cache/
+.tanstack-refresh/
+.tanstack-refresh-backup-*/

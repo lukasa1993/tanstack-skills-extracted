@@ -53,17 +53,70 @@ TanStack Charts is currently pre-alpha. Its skill preserves that warning and use
 
 ## Refresh
 
+Use Node.js 24, Bash, and tar. Authenticate GitHub source requests with `GH_TOKEN`
+or `GITHUB_TOKEN` (the Actions workflow supplies its built-in token).
+
 ```sh
 ./extractor.sh --self-test
 node --test ./scripts/*.test.mjs
-./extractor.sh skills
-node ./scripts/fetch-doc-sources.mjs
-node ./scripts/build-groups.mjs
-node ./scripts/validate-catalog.mjs
-gh skill publish --dry-run
+node scripts/refresh.mjs
 ```
 
-The GitHub Actions workflow checks npm, official documentation, and the Query draft once each day. It rebuilds the extracted atomic sources and the 18 product skills. Product ownership is resolved from authoritative skill, package, documentation, and library metadata. Newly published topics without a curated route are preserved under **Additional official guidance** and reported as warnings; contradictory ownership or invalid source data still fails validation. Atomic skills remain hidden from the default picker but exact-installable. The workflow commits only changed generated output and reports only marker-backed product skills to skills.sh.
+The refresh runs in a disposable directory, validates the entire candidate, and
+then replaces the generated catalog and `sources.lock.json` together, restoring
+the previous files if replacement fails. `--check` builds and validates a candidate
+without applying it. The report names the candidate directory.
+
+Source acquisition resolves each mutable URL once per run. npm versions and
+archive URLs come from that snapshot; downloads run with bounded concurrency
+and npm tarballs must match the registry's SHA-512 integrity. Requests have size
+limits, timeouts, and bounded retries for connection failures, rate limits, and
+server errors. GitHub credentials are sent only to `api.github.com`.
+
+The source lock records URLs, response status, byte counts, and SHA-256 hashes.
+Downloaded bodies live in the ignored `.tanstack-source-cache/`, with their
+hashes checked on every read. Fresh runs resolve moving sources again and reuse
+immutable archives. An outage never silently substitutes old mutable metadata.
+
+Rebuild the exact saved snapshot without network access:
+
+```sh
+node scripts/refresh.mjs --offline --check
+```
+
+Offline replay requires both the lock and its downloaded bodies. Actions restores
+and saves the source cache, including downloads from failed builds. The
+`refresh-diagnostics` artifact contains stage logs, a report, and the run's lock.
+After restoring the matching cache, use `--offline --lock path/to/sources.lock.json`
+to replay that run. A lock from a failed acquisition may be incomplete; offline
+mode reports any missing source explicitly. `TANSTACK_SOURCE_CACHE` selects a
+different cache directory. `.tanstack-refresh/` and the cache can be removed when
+no refresh is running; removing the cache makes the next online run download again.
+
+Three workflows have separate responsibilities:
+
+- **Validate refresh pipeline** runs tests, catalog checks, and actionlint on pushes
+  and pull requests. These checks do not depend on live upstream content.
+- **Refresh extracted skills** checks upstream sources daily on a hosted Ubuntu
+  runner with Node 24, validates a candidate, and commits changed generated files
+  plus the source lock. A concurrent edit to main rejects the push; rerunning
+  rebuilds against the new main.
+- **Publish skills** runs after a successful refresh, or through manual dispatch.
+  It selects an immutable catalog commit and independently reconciles its GitHub
+  release and reports product installs to skills.sh. Either job can be retried
+  without repeating acquisition. Existing releases must point to the expected
+  commit; API failures are not treated as missing releases. Indexing installs
+  from the selected commit instead of following a moving branch. A cached success
+  marker skips repeat index reports for that commit; cache eviction can cause a
+  repeat report, since the installer has no idempotency API.
+
+Product ownership is resolved from skill, package, documentation, and library
+metadata. Newly published topics without a curated route are preserved under
+**Additional official guidance** and reported as warnings. Catalog reorderings
+and new library announcements do not invalidate supported products. Contradictory
+ownership, missing required products, invalid sources, and broken links still
+fail validation. Atomic skills remain hidden from the default picker but
+exact-installable; only marker-backed product skills are reported to skills.sh.
 
 ## License
 

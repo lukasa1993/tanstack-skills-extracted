@@ -15,29 +15,13 @@ import { tmpdir } from 'node:os'
 import { dirname, join, posix, resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+import { sources } from './source-client.mjs'
+import { expectedCatalogIds, inspectCatalogIds } from './catalog-config.mjs'
+
+const root = resolve(process.env.TANSTACK_BUILD_ROOT || resolve(dirname(fileURLToPath(import.meta.url)), '..'))
 const outputDir = join(root, '.tanstack-doc-sources')
 const catalogUrl = 'https://tanstack.com/api/data/libraries'
-const expectedLibraryIds = [
-  'start',
-  'router',
-  'query',
-  'table',
-  'charts',
-  'form',
-  'db',
-  'ai',
-  'intent',
-  'virtual',
-  'pacer',
-  'hotkeys',
-  'markdown',
-  'highlight',
-  'store',
-  'config',
-  'devtools',
-  'cli',
-]
+const expectedLibraryIds = expectedCatalogIds
 
 const externalGithubLinkSpecs = [
   {
@@ -391,35 +375,8 @@ function checkedUrl(value, hosts, label) {
   return url
 }
 
-async function fetchBytes(urlValue, { hosts, label, limit, headers = {} }) {
-  const url = checkedUrl(urlValue, hosts, label)
-  const response = await fetch(url, {
-    headers: { 'user-agent': 'tanstack-skills-doc-source-fetcher/1', ...headers },
-    redirect: 'error',
-    signal: AbortSignal.timeout(60_000),
-  })
-  if (!response.ok) {
-    fail(`${label} request failed with HTTP ${response.status}: ${url.href}`)
-  }
-  const finalUrl = checkedUrl(response.url, hosts, `${label} response`)
-  if (finalUrl.href !== url.href) {
-    fail(`${label} response URL changed unexpectedly: ${finalUrl.href}`)
-  }
-  const declaredLength = response.headers.get('content-length')
-  if (declaredLength && (!/^\d+$/.test(declaredLength) || Number(declaredLength) > limit)) {
-    fail(`${label} response is larger than ${limit} bytes`)
-  }
-
-  const chunks = []
-  let length = 0
-  for await (const chunk of response.body) {
-    length += chunk.length
-    if (length > limit) {
-      fail(`${label} response is larger than ${limit} bytes`)
-    }
-    chunks.push(chunk)
-  }
-  return Buffer.concat(chunks, length)
+async function fetchBytes(urlValue, { hosts, label, limit }) {
+  return sources.bytes(urlValue, { hosts, label, limit })
 }
 
 function decodeUtf8(bytes, label) {
@@ -440,21 +397,6 @@ async function fetchJson(url, options) {
     }
     throw error
   }
-}
-
-function githubApiHeaders() {
-  const headers = {
-    accept: 'application/vnd.github+json',
-    'x-github-api-version': '2022-11-28',
-  }
-  const token = process.env.GITHUB_TOKEN
-  if (token) {
-    if (token.length > 4096 || /[^\x21-\x7e]/.test(token)) {
-      fail('GITHUB_TOKEN is not a safe HTTP credential')
-    }
-    headers.authorization = `Bearer ${token}`
-  }
-  return headers
 }
 
 function parseExternalGithubLinkSpec(spec) {
@@ -515,7 +457,6 @@ async function resolveExternalGithubLinks() {
       const repositoryMetadata = assertPlainObject(
         await fetchJson(repositoryApiUrl, {
           hosts: ['api.github.com'],
-          headers: githubApiHeaders(),
           label: `${spec.repository} GitHub repository metadata`,
           limit: maxBytes.githubApi,
         }),
@@ -548,7 +489,6 @@ async function resolveExternalGithubLinks() {
     const commitApiUrl = commitApi.href
     const commitList = await fetchJson(commitApiUrl, {
       hosts: ['api.github.com'],
-      headers: githubApiHeaders(),
       label: `${spec.repository} latest ${spec.targetPath} commit`,
       limit: maxBytes.githubApi,
     })
@@ -1872,13 +1812,8 @@ async function validateCatalog() {
     throw error
   }
   const catalog = assertPlainObject(parsedCatalog, 'TanStack public library catalog')
-  if (!Array.isArray(catalog.libraries)) fail('TanStack public library catalog has no libraries array')
-  const ids = catalog.libraries.map((library) => library?.id)
-  if (!arraysEqual(ids, expectedLibraryIds)) {
-    fail(
-      `TanStack public library catalog changed. Expected [${expectedLibraryIds.join(', ')}], received [${ids.join(', ')}]`,
-    )
-  }
+  const { ids, additional } = inspectCatalogIds(catalog.libraries)
+  if (additional.length) process.stderr.write(`WARNING: upstream catalog has products awaiting configuration: ${additional.join(', ')}\n`)
   const byId = new Map()
   for (const library of catalog.libraries) {
     assertPlainObject(library, 'TanStack public library')

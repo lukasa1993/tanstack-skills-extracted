@@ -48,6 +48,6 @@ Use these separate product skills when the task crosses their boundary: `tanstac
 
 ## Source status
 
-Official documentation from `TanStack/virtual`, matched to these verified release inputs: @tanstack/virtual-core@3.17.8.
+Official documentation from `TanStack/virtual`, matched to these verified release inputs: @tanstack/virtual-core@3.17.9.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.
