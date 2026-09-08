@@ -18,8 +18,11 @@ import { fileURLToPath } from 'node:url'
 
 import { categoryGroups, expectedCatalogIds } from './catalog-config.mjs'
 import { createThemeBuckets, resolveProduct, selectTheme } from './product-routing.mjs'
+import { guideId, planGuide, sourceStatus } from './guide-layout.mjs'
 
 const root = resolve(process.env.TANSTACK_BUILD_ROOT || resolve(dirname(fileURLToPath(import.meta.url)), '..'))
+const exampleDir = join(dirname(fileURLToPath(import.meta.url)), 'examples')
+const examples = JSON.parse(await readFile(join(exampleDir, 'manifest.json'), 'utf8'))
 const skillsDir = join(root, 'skills')
 const docSourceDir = join(root, '.tanstack-doc-sources')
 const exportManifestPath = join(skillsDir, '.tanstack-skills-export.tsv')
@@ -105,9 +108,12 @@ const productSpecs = [
     related: ['tanstack-start', 'tanstack-query'],
   }),
   product('query', 'TanStack Query', 'Server-state guidance for queries, mutations, caching, optimistic updates, SSR, persistence, testing, and all official adapters.', {
-    maturity: 'The curated source is TanStack Query Intent draft PR #10879 until an npm skill package is released. Verify draft APIs against the installed Query version.',
+    maturity: 'Start with release-matched adapter documentation. Query Intent draft guidance is preserved separately and must be checked against the installed version.',
+    docSupplement: true,
     atomicMatch: (name) => name.startsWith(queryPrefix),
     themes: [
+      ...['react', 'preact', 'vue', 'solid', 'svelte', 'angular', 'lit'].map((framework) =>
+        theme(`framework-${framework}`, `${titleCase(framework)} adapter`, `Release-matched ${titleCase(framework)} setup, queries, and reactivity.`, (_name, source) => source.kind === 'document' && source.frameworks.includes(framework))),
       theme('foundations', 'Foundations', 'Client setup, keys, options, fetching, defaults, and abstractions.', contains('setup-query-client', 'design-query-keys', 'fetch-and-observe', 'coordinate-query-execution', 'tune-defaults', 'understand-query-internals', 'build-query-abstractions')),
       theme('mutations', 'Mutations and cache updates', 'Mutations, invalidation, cancellation, and optimistic updates.', contains('write-mutations', 'cancel-queries', 'optimistic-updates', 'automatic-invalidati')),
       theme('data-shaping', 'Data shaping', 'Pagination, infinite queries, placeholders, selectors, and render efficiency.', contains('paginate-and-build', 'seed-placeholder', 'selectors-and-derived', 'shape-data-and-render')),
@@ -125,7 +131,11 @@ const productSpecs = [
       ['angular', '@tanstack/angular-query-experimental'],
       ['lit', '@tanstack/lit-query'],
     ],
-    frameworkNote: 'Most draft examples use React syntax. Read the Frameworks and UI State reference first, then translate only through the installed adapter.',
+    frameworkNote: 'Adapter versions are listed on their guides. In particular, Svelte and Lit may use different major versions from Query Core. Draft task examples are not evidence that an API exists in another adapter.',
+    tasks: [
+      ['React: optimistic updates and rollback', 'docs/framework/react/guides/optimistic-updates.md'],
+      ['Vue: refetch when reactive inputs change', 'docs/framework/vue/reactivity.md'],
+    ],
     related: ['tanstack-router', 'tanstack-start', 'tanstack-form'],
   }),
   product('table', 'TanStack Table', 'Headless table and data-grid guidance with shared Table Core features and framework-specific adapters.', {
@@ -158,6 +168,7 @@ const productSpecs = [
     atomicMatch: () => false,
     docOnly: true,
     themes: docThemes('form'),
+    tasks: [['React: field validation and submission', 'docs/framework/react/guides/validation.md']],
     related: ['tanstack-start', 'tanstack-devtools'],
   }),
   product('db', 'TanStack DB', 'Reactive collection guidance for live queries, optimistic mutations, persistence, sync engines, and framework adapters.', {
@@ -518,7 +529,7 @@ function validateDocManifest(manifest) {
     throw new Error('documentation source catalog does not match the expected public catalog')
   }
   const ids = manifest.products?.map((entry) => entry.id)
-  const expected = productSpecs.filter((spec) => spec.docOnly).map((spec) => spec.id).sort(ascii)
+  const expected = productSpecs.filter((spec) => spec.docOnly || spec.docSupplement).map((spec) => spec.id).sort(ascii)
   if (!Array.isArray(ids) || JSON.stringify([...ids].sort(ascii)) !== JSON.stringify(expected)) {
     throw new Error(`documentation source products must be exactly: ${expected.join(', ')}`)
   }
@@ -644,26 +655,6 @@ function splitH2(body) {
   return blocks
 }
 
-function demoteHeadings(text, levels = 1) {
-  let fence = null
-  return text
-    .split('\n')
-    .map((line) => {
-      const fenceMatch = line.match(/^\s*(```+|~~~+)/)
-      if (fenceMatch) {
-        const marker = fenceMatch[1]
-        if (!fence) fence = { character: marker[0], length: marker.length }
-        else if (fence.character === marker[0] && marker.length >= fence.length) fence = null
-        return line
-      }
-      if (fence) return line
-      const heading = line.match(/^(#{1,6})(\s+.*)$/)
-      if (!heading) return line
-      return `${'#'.repeat(Math.min(6, heading[1].length + levels))}${heading[2]}`
-    })
-    .join('\n')
-}
-
 function sourceLabel(source) {
   if (source.kind === 'document') {
     return titleCase(source.outputPath.replace(/\.(?:md|mdx)$/i, '').split('/').at(-1))
@@ -735,6 +726,10 @@ function rewriteLinks(text, context) {
     if (!parts) return match
     let target = parts[1]
     const suffix = parts[2] || ''
+    if (!target && suffix.startsWith('#')) {
+      const output = context.sourceOutputMap.get(context.source.id)
+      return `](${relativeLink(context.outputFile, output.file)}${suffix})`
+    }
     if (!target || /^(?:[a-z]+:|#)/i.test(target)) return match
     if (target.startsWith('/')) {
       return context.source.kind === 'document' ? `](https://tanstack.com${target}${suffix})` : match
@@ -903,7 +898,7 @@ function frameworkReference(spec, themes, framework, foundationTheme) {
     || (framework === 'vanilla' ? foundationTheme : undefined)
 }
 
-function buildRootSkill(spec, themes, sourceCount, docManifest) {
+function buildRootSkill(spec, themes, sourceCount, docManifest, routes) {
   const frameworkRoutes = spec.frameworks || documentationFrameworks(spec, docManifest)
   const foundationTheme = themes.find((entry) => ['foundations', 'getting-started'].includes(entry.key))
   const hasFrameworkReference = frameworkRoutes.some(([framework]) => frameworkReference(spec, themes, framework, foundationTheme))
@@ -911,6 +906,7 @@ function buildRootSkill(spec, themes, sourceCount, docManifest) {
   if (foundationTheme && hasFrameworkReference) workflowStep2 = '2. Read the foundation reference and the adapter reference for the detected framework.'
   else if (foundationTheme) workflowStep2 = '2. Read the foundation reference before the task-specific reference.'
   else if (hasFrameworkReference) workflowStep2 = '2. Read the adapter reference for the detected framework when the task uses an adapter.'
+  if (spec.id === 'query') workflowStep2 = '2. Open the installed adapter’s index or a common task below. Use draft task guides as supplementary guidance after checking their APIs against the release-matched adapter.'
   const lines = [
     '---',
     `name: ${spec.name}`,
@@ -933,7 +929,7 @@ function buildRootSkill(spec, themes, sourceCount, docManifest) {
     '',
     '1. Inspect installed TanStack packages and exact versions.',
     workflowStep2,
-    '3. Read only the task topic that applies. Load another topic only across a real feature boundary.',
+    '3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.',
     '4. Prefer installed package types and version-matched source guidance over memory.',
     frameworkRoutes.length ? '5. Preserve headless/core behavior when translating examples to a framework adapter.' : '5. Validate the implementation with the project types and tests.',
     '',
@@ -943,11 +939,19 @@ function buildRootSkill(spec, themes, sourceCount, docManifest) {
   for (const entry of themes) {
     lines.push(`- [${entry.title}](references/${entry.key}.md) — ${entry.description}`)
   }
+  if (spec.tasks?.length) {
+    lines.push('', '## Common tasks', '')
+    for (const [title, sourcePath] of spec.tasks) {
+      const route = routes.find((entry) => entry.sourcePath === sourcePath)
+      if (!route) throw new Error(`Missing task guide: ${spec.id}/${sourcePath}`)
+      lines.push(`- [${title}](${route.file})`)
+    }
+  }
   if (frameworkRoutes.length) {
     lines.push('', '## Framework routing', '')
     for (const [framework, packageName, experimental] of frameworkRoutes) {
       const selectedTheme = frameworkReference(spec, themes, framework, foundationTheme)
-      const link = selectedTheme ? ` Read [${selectedTheme.title}](references/${selectedTheme.key}.md).` : ''
+      const link = selectedTheme ? ` Read [${selectedTheme.title}](references/${selectedTheme.key}.md).${selectedTheme.key === `framework-${framework}` ? '' : ' Shared guidance; check adapter-specific differences.'}` : ' No dedicated adapter guide is bundled; consult the installed package documentation.'
       lines.push(`- **${titleCase(framework)}** — detect \`${packageName}\`.${experimental ? ' Experimental adapter.' : ''}${link}`)
     }
     if (spec.frameworkNote) lines.push('', spec.frameworkNote)
@@ -968,7 +972,7 @@ function buildOpenAiYaml(spec) {
   return [
     'interface:',
     `  display_name: ${JSON.stringify(spec.title)}`,
-    `  short_description: ${JSON.stringify(spec.description.slice(0, 120))}`,
+    `  short_description: ${JSON.stringify(`Task and framework guides for ${spec.title}`)}`,
     `  default_prompt: ${JSON.stringify(`Use $${spec.name} to implement this ${spec.title} task with the installed framework and package versions.`)}`,
     '',
   ].join('\n')
@@ -1044,65 +1048,105 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
   const docPathMap = new Map((docs?.sources || []).map((source) => [posix.normalize(source.sourcePath), source]))
   const sourceOutputMap = new Map()
   for (const entry of usedThemes) {
-    const file = join(productDir, 'references', `${entry.key}.md`)
-    for (const source of entry.sources) sourceOutputMap.set(source.id, { file, anchor: anchorFor(source), theme: entry.key })
+    for (const source of entry.sources) sourceOutputMap.set(source.id, { file: join(productDir, 'references', 'guides', `${guideId(source.id)}.md`), anchor: anchorFor(source), theme: entry.key })
   }
 
   const provenanceSources = []
   const duplicateDocuments = []
   const duplicateSections = []
+  const routes = []
+  await mkdir(join(productDir, 'references', 'guides'), { recursive: true })
   for (const entry of usedThemes) {
-    const outputFile = join(productDir, 'references', `${entry.key}.md`)
-    const lines = [`# ${entry.title}`, '', entry.description, '']
+    const indexFile = join(productDir, 'references', `${entry.key}.md`)
+    const indexLines = [`# ${entry.title}`, '', entry.description, '',
+      'Choose the guide for the task. Each guide records its source and package version.', '',
+      '| Guide | Source status | Package version |', '| --- | --- | --- |']
     const seenDocuments = new Map()
     const seenSections = new Map()
     for (const source of entry.sources) {
+      const outputFile = sourceOutputMap.get(source.id).file
+      const context = { source, outputFile, productDir, atomicAssetMap, docAssetMap,
+        atomicFileMap, atomicOriginById, atomicOriginMap, docPathMap, sourceOutputMap }
+      const sourceLink = relativeLink(indexFile, outputFile)
+      indexLines.push(`| [${escapeTable(sourceLabel(source))}](${sourceLink}) | ${sourceStatus(source)} | \`${escapeTable(source.packageName)}@${escapeTable(source.packageVersion)}\` |`)
       const docHash = sha256(Buffer.from(normalizeText(source.body)))
       const priorDocument = seenDocuments.get(docHash)
+      const kept = []
       if (priorDocument) {
         duplicateDocuments.push({ duplicate: source.id, canonical: priorDocument.id, theme: entry.key, sha256: docHash })
-        provenanceSources.push(provenanceRecord(source, entry.key, priorDocument.id))
-        lines.push(`<a id="${anchorFor(source)}"></a>`, '', `Exact duplicate of \`${priorDocument.id}\`; use the preceding canonical content.`, '')
-        continue
-      }
-      seenDocuments.set(docHash, source)
-      const kept = []
-      for (const block of splitH2(source.body)) {
-        const blockHash = sha256(Buffer.from(canonicalBlock(block)))
-        const prior = seenSections.get(blockHash)
-        if (prior) {
-          duplicateSections.push({ duplicate: `${source.id}#${block.heading}`, canonical: `${prior.source.id}#${prior.block.heading}`, theme: entry.key, sha256: blockHash })
-          continue
+        kept.push({ heading: 'Canonical guidance', rewritten: true, content: `This source is an exact duplicate. Read [${sourceLabel(priorDocument)}](${relativeLink(outputFile, sourceOutputMap.get(priorDocument.id).file)}).\n` })
+      } else {
+        seenDocuments.set(docHash, source)
+        for (const block of splitH2(source.body)) {
+          const blockHash = sha256(Buffer.from(canonicalBlock(block)))
+          const prior = seenSections.get(blockHash)
+          if (prior) {
+            duplicateSections.push({ duplicate: `${source.id}#${block.heading}`, canonical: `${prior.source.id}#${prior.block.heading}`, theme: entry.key, sha256: blockHash })
+            const destination = relativeLink(outputFile, sourceOutputMap.get(prior.source.id).file)
+            kept.push({ heading: block.heading, rewritten: true, content: `This section is an exact duplicate. Read [${prior.block.heading} in ${sourceLabel(prior.source)}](${destination}).\n` })
+          } else {
+            seenSections.set(blockHash, { source, block })
+            kept.push(block)
+          }
         }
-        seenSections.set(blockHash, { source, block })
-        kept.push(block)
       }
-      if (!kept.length) {
-        provenanceSources.push(provenanceRecord(source, entry.key, 'all-sections-deduplicated'))
-        lines.push(`<a id="${anchorFor(source)}"></a>`, '', 'All sections are exact duplicates of canonical content in this reference.', '')
-        continue
+      const plan = planGuide(kept)
+      const prerequisites = source.kind === 'atomic'
+        ? parseJsonArray(source.metadata.get('tanstack-requires'), `prerequisites of ${source.id}`).map((id) => {
+          const output = sourceOutputMap.get(id)
+          return output ? { id, file: relative(productDir, output.file).split(sep).join('/') } : { id }
+        }) : []
+      const header = [
+        `# ${sourceLabel(source)}`, '', `<a id="${anchorFor(source)}"></a>`, '',
+        `${sourceStatus(source)} · \`${source.packageName}@${source.packageVersion}\`.`, '',
+        ...(sourceStatus(source) === 'Draft guidance' ? ['This is unpublished draft guidance. Check APIs against the installed adapter and its release-matched documentation.', ''] : []),
+        `[Topic index](${relativeLink(outputFile, indexFile)}) · [Source provenance](../SOURCES.md)`, '',
+        ...prerequisites.filter((prerequisite) => prerequisite.file).map((prerequisite) => `Prerequisite: [${sourceLabel(sources.find((item) => item.id === prerequisite.id))}](${relativeLink(outputFile, join(productDir, prerequisite.file))}).`),
+        ...(prerequisites.length ? [''] : []),
+      ]
+      const sourceExamples = []
+      for (const example of examples.filter((item) => item.product === spec.id && item.sourcePath === source.sourcePath)) {
+        const file = `references/examples/${example.file}`
+        await mkdir(dirname(join(productDir, file)), { recursive: true })
+        await copyFile(join(exampleDir, example.file), join(productDir, file))
+        sourceExamples.push({ file, title: example.title, testedPackages: example.testedPackages })
+        const tested = Object.entries(example.testedPackages).map(([name, version]) => `\`${name}@${version}\``).join(', ')
+        header.push(`Runnable repository example: [${example.title}](${relativeLink(outputFile, join(productDir, file))}). Tested with ${tested}. This MIT-licensed example is maintained here; the official guidance follows.`, '')
       }
-      lines.push(`<a id="${anchorFor(source)}"></a>`, '', `## ${sourceLabel(source)}`, '', `Source: \`${source.id}\`.`, '')
-      for (const block of kept) {
-        if (block.heading !== 'Overview') lines.push(`### ${block.heading}`, '')
-        const rewritten = rewriteLinks(demoteHeadings(block.content, 1), {
-          source,
-          outputFile,
-          productDir,
-          atomicAssetMap,
-          docAssetMap,
-          atomicFileMap,
-          atomicOriginById,
-          atomicOriginMap,
-          docPathMap,
-          sourceOutputMap,
-        })
-        lines.push(rewritten.trimEnd(), '')
+      const guideLines = [...header]
+      const sectionRoutes = []
+      if (plan.split) guideLines.push('## Choose a section', '', 'Read the overview or setup when it is a prerequisite, then the section needed for the task.', '')
+      for (const page of plan.pages) {
+        const pageFile = page.key ? outputFile.replace(/\.md$/, `--${page.key}.md`) : outputFile
+        const pageLines = plan.split ? [`# ${sourceLabel(source)} — ${page.blocks[0].heading}`, '',
+          `[Guide and prerequisites](${relativeLink(pageFile, outputFile)}) · ${sourceStatus(source)} · \`${source.packageName}@${source.packageVersion}\`.`, ''] : guideLines
+        for (const block of page.blocks) {
+          if (block.heading !== 'Overview') pageLines.push(`## ${block.heading}`, '')
+          pageLines.push((block.rewritten ? block.content : rewriteLinks(block.content, { ...context, outputFile: pageFile })).trimEnd(), '')
+        }
+        const body = normalizeText(pageLines.join('\n'))
+        if (plan.split) {
+          await writeFile(pageFile, body)
+          guideLines.push(`- [${page.blocks[0].heading}](${relativeLink(outputFile, pageFile)}) — ${Math.ceil(Buffer.byteLength(body) / 1024)} KiB`)
+        }
+        sectionRoutes.push({ title: page.blocks.map((block) => block.heading).join('; '), file: relative(productDir, pageFile).split(sep).join('/'), bytes: Buffer.byteLength(body) })
       }
-      provenanceSources.push(provenanceRecord(source, entry.key, null))
+      // Preserve original inbound fragments on split/duplicate guide entry points.
+      if (plan.split || priorDocument) {
+        guideLines.push('', '<!-- Original source anchors retained for inbound links. -->')
+        for (const fragment of markdownHeadingFragments(source.body)) guideLines.push(`<a id="${fragment}"></a>`)
+      }
+      const guideBody = normalizeText(guideLines.join('\n'))
+      await writeFile(outputFile, guideBody)
+      routes.push({ id: source.id, title: sourceLabel(source), theme: entry.key, kind: source.kind,
+        status: sourceStatus(source), frameworks: source.frameworks, package: source.packageName,
+        version: source.packageVersion, file: relative(productDir, outputFile).split(sep).join('/'),
+        sourcePath: source.sourcePath, bytes: Buffer.byteLength(guideBody), prerequisites, sections: sectionRoutes, examples: sourceExamples })
+      provenanceSources.push(provenanceRecord(source, entry.key, priorDocument?.id || null))
     }
-    await writeFile(outputFile, normalizeText(lines.join('\n')))
+    await writeFile(indexFile, normalizeText(indexLines.join('\n')))
   }
+  await writeFile(join(productDir, 'references', 'ROUTES.json'), json({ schemaVersion: 1, product: spec.id, guides: routes }))
 
   const licenseMap = new Map()
   const licenseInputs = []
@@ -1137,7 +1181,7 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
     ...provenanceSources.map((source) =>
       `| \`${escapeTable(source.id)}\` | ${source.kind} | \`${source.theme}\` | \`${escapeTable(source.package || source.repository || '')}\` | \`${escapeTable(source.version || source.commit || '')}\` | ${source.duplicateOf ? `\`${escapeTable(source.duplicateOf)}\`` : ''} |`),
     '',
-    `Exact duplicate documents removed: ${duplicateDocuments.length}. Exact duplicate H2 sections removed: ${duplicateSections.length}. No fuzzy deduplication is used.`,
+    `Exact duplicate documents replaced with canonical links: ${duplicateDocuments.length}. Exact duplicate H2 sections replaced with canonical links: ${duplicateSections.length}. No fuzzy deduplication is used.`,
     '',
   ]
   await writeFile(join(productDir, 'references', 'SOURCES.md'), sourcesMarkdown.join('\n'))
@@ -1158,7 +1202,7 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
     } : undefined,
   }
   await writeFile(join(productDir, 'references', 'PROVENANCE.json'), json(provenance))
-  await writeFile(join(productDir, 'SKILL.md'), buildRootSkill(spec, usedThemes, sources.length, docs?.manifest))
+  await writeFile(join(productDir, 'SKILL.md'), buildRootSkill(spec, usedThemes, sources.length, docs?.manifest, routes))
   await mkdir(join(productDir, 'agents'), { recursive: true })
   await writeFile(join(productDir, 'agents', 'openai.yaml'), buildOpenAiYaml(spec))
 
@@ -1168,6 +1212,8 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
     product: spec.id,
     sourceCount: sources.length,
     themes: usedThemes.map((entry) => entry.key),
+    guideCount: routes.length,
+    largestGuideEntryBytes: Math.max(...routes.map((route) => route.bytes)),
     inputSha256: sha256(Buffer.from(json(provenance))),
   }
   await writeFile(join(productDir, productMarker), json(marker))

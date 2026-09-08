@@ -8,4 +8,4 @@
 | `tanstack-cli-query-docs-library-metadata` | atomic | `ecosystem-discovery` | `@tanstack/cli` | `0.71.0` |  |
 | `tanstack-cli-maintain-custom-addons-dev-watch` | atomic | `addon-authoring` | `@tanstack/cli` | `0.71.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Query"
-  short_description: "Server-state guidance for queries, mutations, caching, optimistic updates, SSR, persistence, testing, and all official a"
+  short_description: "Task and framework guides for TanStack Query"
   default_prompt: "Use $tanstack-query to implement this TanStack Query task with the installed framework and package versions."

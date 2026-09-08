@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+acceptance/.run-*/
 .tanstack-doc-sources/
 .tanstack-doc-sources.tmp-*/
 .tanstack-doc-sources.backup-*/

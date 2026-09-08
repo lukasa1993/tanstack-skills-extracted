@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "product": "config",
+  "guides": [
+    {
+      "id": "config:docs/dependencies.md",
+      "title": "Dependencies",
+      "theme": "package-structure",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "file": "references/guides/config-docs-dependencies-md-3b287aca.md",
+      "sourcePath": "docs/dependencies.md",
+      "bytes": 923,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/config-docs-dependencies-md-3b287aca.md",
+          "bytes": 923
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "config:docs/overview.md",
+      "title": "Overview",
+      "theme": "package-structure",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "file": "references/guides/config-docs-overview-md-0a599a90.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 1210,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Required Pre-Requisites; Utilities; Conventions",
+          "file": "references/guides/config-docs-overview-md-0a599a90.md",
+          "bytes": 1210
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "config:docs/package-structure.md",
+      "title": "Package Structure",
+      "theme": "package-structure",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "file": "references/guides/config-docs-package-structure-md-b4a915a3.md",
+      "sourcePath": "docs/package-structure.md",
+      "bytes": 1424,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/config-docs-package-structure-md-b4a915a3.md",
+          "bytes": 1424
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "config:docs/eslint.md",
+      "title": "Eslint",
+      "theme": "toolchain",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/eslint-config",
+      "version": "0.4.0",
+      "file": "references/guides/config-docs-eslint-md-a592eb7f.md",
+      "sourcePath": "docs/eslint.md",
+      "bytes": 1439,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Purpose; Installation; Setup; Plugins; Rules",
+          "file": "references/guides/config-docs-eslint-md-a592eb7f.md",
+          "bytes": 1439
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "config:docs/vite.md",
+      "title": "Vite",
+      "theme": "toolchain",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "file": "references/guides/config-docs-vite-md-56851a43.md",
+      "sourcePath": "docs/vite.md",
+      "bytes": 3874,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Do I need dual publishing?; Do I need this package?; Installation; Frameworks; Legacy Setup",
+          "file": "references/guides/config-docs-vite-md-56851a43.md",
+          "bytes": 3874
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "config:docs/ci-cd.md",
+      "title": "Ci Cd",
+      "theme": "publishing-ci",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/vite-config",
+      "version": "0.6.0",
+      "file": "references/guides/config-docs-ci-cd-md-4cff9c4c.md",
+      "sourcePath": "docs/ci-cd.md",
+      "bytes": 1431,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "GitHub Workflows; Nx",
+          "file": "references/guides/config-docs-ci-cd-md-4cff9c4c.md",
+          "bytes": 1431
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "config:docs/publish.md",
+      "title": "Publish",
+      "theme": "publishing-ci",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/publish-config",
+      "version": "0.2.7",
+      "file": "references/guides/config-docs-publish-md-685f842f.md",
+      "sourcePath": "docs/publish.md",
+      "bytes": 2163,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Usage; Trusted Publishing",
+          "file": "references/guides/config-docs-publish-md-685f842f.md",
+          "bytes": 2163
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

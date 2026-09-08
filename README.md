@@ -2,7 +2,7 @@
 
 [![skills.sh](https://skills.sh/b/lukasa1993/tanstack-skills-extracted)](https://skills.sh/lukasa1993/tanstack-skills-extracted)
 
-This is an unofficial mirror of TanStack agent guidance. It is not affiliated with or endorsed by TanStack. It extracts the skills that TanStack publishes and synthesizes product skills from version-matched official documentation when a product has no upstream skill.
+This is an unofficial collection of TanStack agent guides. It is not affiliated with or endorsed by TanStack. It combines published skills, release-matched official documentation, and clearly labeled repository examples into one installable skill per product.
 
 The exporter inspects published `@tanstack/*` packages and official documentation. It converts nested skills to the flat Agent Skills format, groups them by product and task, removes exact duplicate guidance, validates links, records source provenance, and preserves upstream licenses.
 
@@ -22,7 +22,9 @@ The normal picker shows exactly 18 product skills in five practical groups:
 - Performance: Virtual and Pacer.
 - Tooling: Devtools, Config, CLI, and Intent.
 
-Select a product once. Its skill routes to the relevant thematic guidance and framework adapter without requiring separate subskill selection.
+Select a product once. Its entry point links to small topic indexes, individual guides, and sections of longer guides. Each guide identifies its source status and package version. Prerequisites and examples stay inside the installed product, so separate subskill selection is unnecessary.
+
+Query includes direct routes for React optimistic updates and Vue reactivity; Form includes React validation. These routes include runnable examples whose types and behavior are checked against named, pinned package versions. Other tasks use the topic and framework indexes.
 
 Install a product without the interactive picker:
 
@@ -47,7 +49,9 @@ npx skills update
 
 TanStack Form, Charts, Intent, Virtual, Pacer, Hotkeys, Store, and Config do not currently publish complete product skills. Their product skills are synthesized from version-matched official documentation and package metadata.
 
-TanStack Query is different: its source is the official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879), not a published npm package. The exporter uses the PR head until the package is published, including when the draft is closed but its official branch remains available.
+TanStack Query includes release-matched setup and selected task documentation for React, Preact, Vue, Solid, Svelte, Angular, and Lit. Each adapter uses its own published version and repository commit; adapters can have different major versions. Query and Form framework documents are matched to the adapter release that owns them.
+
+Query also preserves the official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879) as separately labeled supplementary guidance. The exporter uses the PR head until the package is published, including when the draft is closed but its official branch remains available. Draft examples do not establish compatibility with another adapter or release.
 
 TanStack Charts is currently pre-alpha. Its skill preserves that warning and uses release-matched documentation instead of unreleased `main` APIs.
 
@@ -59,10 +63,12 @@ or `GITHUB_TOKEN` (the Actions workflow supplies its built-in token).
 ```sh
 ./extractor.sh --self-test
 node --test ./scripts/*.test.mjs
+npm ci --prefix acceptance --ignore-scripts --no-audit --no-fund
 node scripts/refresh.mjs
 ```
 
-The refresh runs in a disposable directory, validates the entire candidate, and
+The refresh runs in a disposable directory, validates navigation, source coverage,
+and representative implementations in copied product installations, and
 then replaces the generated catalog and `sources.lock.json` together, restoring
 the previous files if replacement fails. `--check` builds and validates a candidate
 without applying it. The report names the candidate directory.
@@ -84,7 +90,8 @@ Rebuild the exact saved snapshot without network access:
 node scripts/refresh.mjs --offline --check
 ```
 
-Offline replay requires both the lock and its downloaded bodies. Actions restores
+Offline replay requires the source lock, its downloaded bodies, and the already
+installed acceptance dependencies. Actions restores
 and saves the source cache, including downloads from failed builds. The
 `refresh-diagnostics` artifact contains stage logs, a report, and the run's lock.
 After restoring the matching cache, use `--offline --lock path/to/sources.lock.json`
@@ -95,8 +102,9 @@ no refresh is running; removing the cache makes the next online run download aga
 
 Three workflows have separate responsibilities:
 
-- **Validate refresh pipeline** runs tests, catalog checks, and actionlint on pushes
-  and pull requests. These checks do not depend on live upstream content.
+- **Validate refresh pipeline** runs pipeline tests, catalog and navigation checks,
+  installed-example type and behavior checks, and actionlint on pushes and pull
+  requests. It installs locked test dependencies and uses committed guidance.
 - **Refresh extracted skills** checks upstream sources daily on a hosted Ubuntu
   runner with Node 24, validates a candidate, and commits changed generated files
   plus the source lock. A concurrent edit to main rejects the push; rerunning
@@ -117,6 +125,10 @@ and new library announcements do not invalidate supported products. Contradictor
 ownership, missing required products, invalid sources, and broken links still
 fail validation. Atomic skills remain hidden from the default picker but
 exact-installable; only marker-backed product skills are reported to skills.sh.
+
+The [product contract](DESIGN.md) defines the intended user outcomes and acceptance
+criteria. See [acceptance checks](acceptance/README.md) for the tested scenarios,
+version coverage, and how to update examples.
 
 ## License
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Form"
-  short_description: "Type-safe form guidance for fields, validation, composition, submission, SSR, devtools, and framework adapters."
+  short_description: "Task and framework guides for TanStack Form"
   default_prompt: "Use $tanstack-form to implement this TanStack Form task with the installed framework and package versions."

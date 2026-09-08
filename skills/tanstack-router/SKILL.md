@@ -16,7 +16,7 @@ Type-safe routing guidance for navigation, URL state, data loading, authenticati
 
 1. Inspect installed TanStack packages and exact versions.
 2. Read the foundation reference and the adapter reference for the detected framework.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 
@@ -31,7 +31,7 @@ Type-safe routing guidance for navigation, URL state, data loading, authenticati
 
 ## Framework routing
 
-- **React** — detect `@tanstack/react-router`. Read [Foundations](references/foundations.md).
+- **React** — detect `@tanstack/react-router`. Read [Foundations](references/foundations.md). Shared guidance; check adapter-specific differences.
 - **Solid** — detect `@tanstack/solid-router`. Read [Solid adapter](references/framework-solid.md).
 - **Vue** — detect `@tanstack/vue-router`. Read [Vue adapter](references/framework-vue.md).
 

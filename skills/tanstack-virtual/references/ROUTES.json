@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "product": "virtual",
+  "guides": [
+    {
+      "id": "virtual:docs/api/virtual-item.md",
+      "title": "Virtual Item",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-api-virtual-item-md-e07aeecc.md",
+      "sourcePath": "docs/api/virtual-item.md",
+      "bytes": 2184,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/virtual-docs-api-virtual-item-md-e07aeecc.md",
+          "bytes": 2184
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/api/virtualizer.md",
+      "title": "Virtualizer",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3.md",
+      "sourcePath": "docs/api/virtualizer.md",
+      "bytes": 6047,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--overview.md",
+          "bytes": 514
+        },
+        {
+          "title": "Required Options",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--required-options.md",
+          "bytes": 1085
+        },
+        {
+          "title": "Optional Options: `enabled`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-enabled.md",
+          "bytes": 337
+        },
+        {
+          "title": "Optional Options: `debug`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-debug.md",
+          "bytes": 282
+        },
+        {
+          "title": "Optional Options: `initialRect`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-initialrect.md",
+          "bytes": 481
+        },
+        {
+          "title": "Optional Options: `onChange`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-onchange.md",
+          "bytes": 674
+        },
+        {
+          "title": "Optional Options: `overscan`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-overscan.md",
+          "bytes": 565
+        },
+        {
+          "title": "Optional Options: `horizontal`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-horizontal.md",
+          "bytes": 327
+        },
+        {
+          "title": "Optional Options: `paddingStart`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-paddingstart.md",
+          "bytes": 331
+        },
+        {
+          "title": "Optional Options: `paddingEnd`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-paddingend.md",
+          "bytes": 323
+        },
+        {
+          "title": "Optional Options: `scrollPaddingStart`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollpaddingstart.md",
+          "bytes": 378
+        },
+        {
+          "title": "Optional Options: `scrollPaddingEnd`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollpaddingend.md",
+          "bytes": 370
+        },
+        {
+          "title": "Optional Options: `initialOffset`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-initialoffset.md",
+          "bytes": 462
+        },
+        {
+          "title": "Optional Options: `getItemKey`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-getitemkey.md",
+          "bytes": 950
+        },
+        {
+          "title": "Optional Options: `rangeExtractor`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-rangeextractor.md",
+          "bytes": 673
+        },
+        {
+          "title": "Optional Options: `scrollToFn`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrolltofn.md",
+          "bytes": 1041
+        },
+        {
+          "title": "Optional Options: `observeElementRect`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-observeelementrect.md",
+          "bytes": 941
+        },
+        {
+          "title": "Optional Options: `observeElementOffset`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-observeelementoffset.md",
+          "bytes": 941
+        },
+        {
+          "title": "Optional Options: `measureElement`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-measureelement.md",
+          "bytes": 642
+        },
+        {
+          "title": "Optional Options: `scrollMargin`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollmargin.md",
+          "bytes": 1065
+        },
+        {
+          "title": "Optional Options: `gap`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-gap.md",
+          "bytes": 506
+        },
+        {
+          "title": "Optional Options: `lanes`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-lanes.md",
+          "bytes": 593
+        },
+        {
+          "title": "Optional Options: `laneAssignmentMode`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-laneassignmentmode.md",
+          "bytes": 797
+        },
+        {
+          "title": "Optional Options: `anchorTo`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-anchorto.md",
+          "bytes": 1014
+        },
+        {
+          "title": "Optional Options: `followOnAppend`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-followonappend.md",
+          "bytes": 863
+        },
+        {
+          "title": "Optional Options: `scrollEndThreshold`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollendthreshold.md",
+          "bytes": 442
+        },
+        {
+          "title": "Optional Options: `isScrollingResetDelay`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-isscrollingresetdelay.md",
+          "bytes": 663
+        },
+        {
+          "title": "Optional Options: `useScrollendEvent`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-usescrollendevent.md",
+          "bytes": 730
+        },
+        {
+          "title": "Optional Options: `isRtl`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-isrtl.md",
+          "bytes": 328
+        },
+        {
+          "title": "Optional Options: `initialMeasurementsCache`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-initialmeasurementscache.md",
+          "bytes": 946
+        },
+        {
+          "title": "Optional Options: `useAnimationFrameWithResizeObserver`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-useanimationframewithresizeobserver.md",
+          "bytes": 1644
+        },
+        {
+          "title": "Optional Options: `useCachedMeasurements`",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--optional-options-usecachedmeasurements.md",
+          "bytes": 1241
+        },
+        {
+          "title": "Virtualizer Instance",
+          "file": "references/guides/virtual-docs-api-virtualizer-md-c3b477a3--virtualizer-instance.md",
+          "bytes": 8267
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/installation.md",
+      "title": "Installation",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-installation-md-5984e8ca.md",
+      "sourcePath": "docs/installation.md",
+      "bytes": 898,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; React Virtual; Solid Virtual; Svelte Virtual; Vue Virtual; Lit Virtual; Angular Virtual; Marko Virtual; Virtual Core (no framework)",
+          "file": "references/guides/virtual-docs-installation-md-5984e8ca.md",
+          "bytes": 898
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/introduction.md",
+      "title": "Introduction",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-introduction-md-b5bc11c8.md",
+      "sourcePath": "docs/introduction.md",
+      "bytes": 2561,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; The Virtualizer",
+          "file": "references/guides/virtual-docs-introduction-md-b5bc11c8.md",
+          "bytes": 2561
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/chat.md",
+      "title": "Chat",
+      "theme": "measurement-feeds",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-chat-md-213070d1.md",
+      "sourcePath": "docs/chat.md",
+      "bytes": 5229,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Behaviors; Recommended Pattern; Production Checklist; API Reference",
+          "file": "references/guides/virtual-docs-chat-md-213070d1.md",
+          "bytes": 5229
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/pretext.md",
+      "title": "Pretext",
+      "theme": "measurement-feeds",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-pretext-md-a2ff5187.md",
+      "sourcePath": "docs/pretext.md",
+      "bytes": 4870,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; When to use it; Install; Basic pattern; Robustness checklist",
+          "file": "references/guides/virtual-docs-pretext-md-a2ff5187.md",
+          "bytes": 4870
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/react/react-virtual.md",
+      "title": "React Virtual",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-react-react-virtual-md-3c7c24bb.md",
+      "sourcePath": "docs/framework/react/react-virtual.md",
+      "bytes": 5989,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `useVirtualizer`; `useWindowVirtualizer`; React-Specific Options",
+          "file": "references/guides/virtual-docs-framework-react-react-virtual-md-3c7c24bb.md",
+          "bytes": 5989
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/solid/solid-virtual.md",
+      "title": "Solid Virtual",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-solid-solid-virtual-md-476a1c7a.md",
+      "sourcePath": "docs/framework/solid/solid-virtual.md",
+      "bytes": 1155,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `createVirtualizer`; `createWindowVirtualizer`",
+          "file": "references/guides/virtual-docs-framework-solid-solid-virtual-md-476a1c7a.md",
+          "bytes": 1155
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/vue/vue-virtual.md",
+      "title": "Vue Virtual",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-vue-vue-virtual-md-a8901797.md",
+      "sourcePath": "docs/framework/vue/vue-virtual.md",
+      "bytes": 1133,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `useVirtualizer`; `useWindowVirtualizer`",
+          "file": "references/guides/virtual-docs-framework-vue-vue-virtual-md-a8901797.md",
+          "bytes": 1133
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/svelte/svelte-virtual.md",
+      "title": "Svelte Virtual",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-svelte-svelte-virtual-md-662b115a.md",
+      "sourcePath": "docs/framework/svelte/svelte-virtual.md",
+      "bytes": 1160,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `createVirtualizer`; `createWindowVirtualizer`",
+          "file": "references/guides/virtual-docs-framework-svelte-svelte-virtual-md-662b115a.md",
+          "bytes": 1160
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/lit/lit-virtual.md",
+      "title": "Lit Virtual",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-lit-lit-virtual-md-692a2aed.md",
+      "sourcePath": "docs/framework/lit/lit-virtual.md",
+      "bytes": 1338,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `createVirtualizer`; `createWindowVirtualizer`",
+          "file": "references/guides/virtual-docs-framework-lit-lit-virtual-md-692a2aed.md",
+          "bytes": 1338
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/angular/angular-virtual.md",
+      "title": "Angular Virtual",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-angular-angular-virtual-md-f28e31b9.md",
+      "sourcePath": "docs/framework/angular/angular-virtual.md",
+      "bytes": 1725,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `injectVirtualizer`; `injectWindowVirtualizer`",
+          "file": "references/guides/virtual-docs-framework-angular-angular-virtual-md-f28e31b9.md",
+          "bytes": 1725
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "virtual:docs/framework/marko/marko-virtual.md",
+      "title": "Marko Virtual",
+      "theme": "framework-marko",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "marko"
+      ],
+      "package": "@tanstack/virtual-core",
+      "version": "3.17.9",
+      "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md",
+      "sourcePath": "docs/framework/marko/marko-virtual.md",
+      "bytes": 2637,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--overview.md",
+          "bytes": 820
+        },
+        {
+          "title": "Installation",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--installation.md",
+          "bytes": 254
+        },
+        {
+          "title": "Row virtualisation",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--row-virtualisation.md",
+          "bytes": 821
+        },
+        {
+          "title": "Column virtualisation",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--column-virtualisation.md",
+          "bytes": 881
+        },
+        {
+          "title": "Grid virtualisation",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--grid-virtualisation.md",
+          "bytes": 1329
+        },
+        {
+          "title": "Window virtualisation",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--window-virtualisation.md",
+          "bytes": 725
+        },
+        {
+          "title": "Dynamic / variable item sizes",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--dynamic-variable-item-sizes.md",
+          "bytes": 1107
+        },
+        {
+          "title": "Tag variable reference",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--tag-variable-reference.md",
+          "bytes": 2029
+        },
+        {
+          "title": "`<virtualizer>` input reference",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--virtualizer-input-reference.md",
+          "bytes": 4256
+        },
+        {
+          "title": "`<window-virtualizer>` input reference",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--window-virtualizer-input-reference.md",
+          "bytes": 1155
+        },
+        {
+          "title": "Inside your own scroll handler, read the element — not the virtualizer",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--inside-your-own-scroll-handler-read-the-element-not-the-virtualizer.md",
+          "bytes": 1060
+        },
+        {
+          "title": "The virtualizer's lifetime must match its scroll element's",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--the-virtualizer-s-lifetime-must-match-its-scroll-element-s.md",
+          "bytes": 1306
+        },
+        {
+          "title": "SSR",
+          "file": "references/guides/virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--ssr.md",
+          "bytes": 4787
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

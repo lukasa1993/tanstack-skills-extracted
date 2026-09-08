@@ -9,4 +9,4 @@
 | `tanstack-markdown-react-rendering` | atomic | `framework-react` | `@tanstack/markdown` | `0.0.13` |  |
 | `tanstack-markdown-octane-rendering` | atomic | `framework-octane` | `@tanstack/markdown` | `0.0.13` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Router"
-  short_description: "Type-safe routing guidance for navigation, URL state, data loading, authentication, SSR, and framework adapters."
+  short_description: "Task and framework guides for TanStack Router"
   default_prompt: "Use $tanstack-router to implement this TanStack Router task with the installed framework and package versions."

@@ -18,7 +18,7 @@ Execution-control guidance for debounce, throttle, rate limit, queue, batch, asy
 
 1. Inspect installed TanStack packages and exact versions.
 2. Read the foundation reference and the adapter reference for the detected framework.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 
@@ -40,7 +40,7 @@ Execution-control guidance for debounce, throttle, rate limit, queue, batch, asy
 - **Preact** — detect `@tanstack/preact-pacer`. Read [Preact adapter](references/framework-preact.md).
 - **Solid** — detect `@tanstack/solid-pacer`. Read [Solid adapter](references/framework-solid.md).
 - **Angular** — detect `@tanstack/angular-pacer`. Read [Angular adapter](references/framework-angular.md).
-- **Vanilla** — detect `@tanstack/pacer`. Read [Foundations and selection](references/foundations.md).
+- **Vanilla** — detect `@tanstack/pacer`. Read [Foundations and selection](references/foundations.md). Shared guidance; check adapter-specific differences.
 
 ## Product boundaries
 

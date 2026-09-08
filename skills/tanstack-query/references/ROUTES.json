@@ -1,0 +1,2131 @@
+{
+  "schemaVersion": 1,
+  "product": "query",
+  "guides": [
+    {
+      "id": "query:docs/framework/react/guides/mutations.md",
+      "title": "Mutations",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80.md",
+      "sourcePath": "docs/framework/react/guides/mutations.md",
+      "bytes": 1538,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--overview.md",
+          "bytes": 3545
+        },
+        {
+          "title": "Resetting Mutation State",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--resetting-mutation-state.md",
+          "bytes": 997
+        },
+        {
+          "title": "Mutation Side Effects",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--mutation-side-effects.md",
+          "bytes": 4033
+        },
+        {
+          "title": "Promises",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--promises.md",
+          "bytes": 616
+        },
+        {
+          "title": "Retry",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--retry.md",
+          "bytes": 536
+        },
+        {
+          "title": "Persist mutations",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--persist-mutations.md",
+          "bytes": 3876
+        },
+        {
+          "title": "Mutation Scopes",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--mutation-scopes.md",
+          "bytes": 852
+        },
+        {
+          "title": "Further reading",
+          "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80--further-reading.md",
+          "bytes": 402
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/react/guides/optimistic-updates.md",
+      "title": "Optimistic Updates",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md",
+      "sourcePath": "docs/framework/react/guides/optimistic-updates.md",
+      "bytes": 7496,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Via the UI; Via the cache; When to use what; Further reading",
+          "file": "references/guides/query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md",
+          "bytes": 7496
+        }
+      ],
+      "examples": [
+        {
+          "file": "references/examples/react-optimistic.tsx",
+          "title": "React optimistic update with cancellation and rollback",
+          "testedPackages": {
+            "@tanstack/react-query": "5.102.8",
+            "react": "19.2.8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/guides/queries.md",
+      "title": "Queries",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-guides-queries-md-4c7087b8.md",
+      "sourcePath": "docs/framework/react/guides/queries.md",
+      "bytes": 5233,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Query Basics; Further Reading",
+          "file": "references/guides/query-docs-framework-react-guides-queries-md-4c7087b8.md",
+          "bytes": 5233
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/react/guides/query-keys.md",
+      "title": "Query Keys",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-guides-query-keys-md-2e55d5aa.md",
+      "sourcePath": "docs/framework/react/guides/query-keys.md",
+      "bytes": 3724,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Simple Query Keys; Array Keys with variables; Query Keys are hashed deterministically!; If your query function depends on a variable, include it in your query key; Further reading",
+          "file": "references/guides/query-docs-framework-react-guides-query-keys-md-2e55d5aa.md",
+          "bytes": 3724
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/react/guides/query-options.md",
+      "title": "Query Options",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-guides-query-options-md-e9cc42b7.md",
+      "sourcePath": "docs/framework/react/guides/query-options.md",
+      "bytes": 2074,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-react-guides-query-options-md-e9cc42b7.md",
+          "bytes": 2074
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/react/installation.md",
+      "title": "Installation",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-installation-md-ff0427b6.md",
+      "sourcePath": "docs/framework/react/installation.md",
+      "bytes": 2551,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-react-installation-md-ff0427b6.md",
+          "bytes": 2551
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/react/overview.md",
+      "title": "Overview",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-overview-md-c65b979c.md",
+      "sourcePath": "docs/framework/react/overview.md",
+      "bytes": 5174,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Motivation; Enough talk, show me some code already!; You talked me into it, so what now?",
+          "file": "references/guides/query-docs-framework-react-overview-md-c65b979c.md",
+          "bytes": 5174
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/react/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-react-quick-start-md-19b9db31.md",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "bytes": 2312,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-react-quick-start-md-19b9db31.md",
+          "bytes": 2312
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/guides/mutations.md",
+      "title": "Mutations",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-guides-mutations-md-0f3744ef.md",
+      "sourcePath": "docs/framework/preact/guides/mutations.md",
+      "bytes": 297,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-preact-guides-mutations-md-0f3744ef.md",
+          "bytes": 297
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "title": "Optimistic Updates",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-guides-optimistic-updates-md-4f4cdba0.md",
+      "sourcePath": "docs/framework/preact/guides/optimistic-updates.md",
+      "bytes": 244,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "",
+          "file": "references/guides/query-docs-framework-preact-guides-optimistic-updates-md-4f4cdba0.md",
+          "bytes": 244
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/guides/queries.md",
+      "title": "Queries",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-guides-queries-md-69aa4ee2.md",
+      "sourcePath": "docs/framework/preact/guides/queries.md",
+      "bytes": 443,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Canonical guidance",
+          "file": "references/guides/query-docs-framework-preact-guides-queries-md-69aa4ee2.md",
+          "bytes": 380
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/guides/query-keys.md",
+      "title": "Query Keys",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-guides-query-keys-md-351275cd.md",
+      "sourcePath": "docs/framework/preact/guides/query-keys.md",
+      "bytes": 449,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Canonical guidance",
+          "file": "references/guides/query-docs-framework-preact-guides-query-keys-md-351275cd.md",
+          "bytes": 386
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/guides/query-options.md",
+      "title": "Query Options",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-guides-query-options-md-d05e4e86.md",
+      "sourcePath": "docs/framework/preact/guides/query-options.md",
+      "bytes": 455,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Canonical guidance",
+          "file": "references/guides/query-docs-framework-preact-guides-query-options-md-d05e4e86.md",
+          "bytes": 392
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/installation.md",
+      "title": "Installation",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-installation-md-474fffb7.md",
+      "sourcePath": "docs/framework/preact/installation.md",
+      "bytes": 679,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-preact-installation-md-474fffb7.md",
+          "bytes": 679
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/overview.md",
+      "title": "Overview",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-overview-md-f9012a78.md",
+      "sourcePath": "docs/framework/preact/overview.md",
+      "bytes": 438,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Canonical guidance",
+          "file": "references/guides/query-docs-framework-preact-overview-md-f9012a78.md",
+          "bytes": 375
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/preact/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-preact-quick-start-md-cb17a3a2.md",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "bytes": 444,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Canonical guidance",
+          "file": "references/guides/query-docs-framework-preact-quick-start-md-cb17a3a2.md",
+          "bytes": 381
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/guides/mutations.md",
+      "title": "Mutations",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-guides-mutations-md-7a6dcc6d.md",
+      "sourcePath": "docs/framework/vue/guides/mutations.md",
+      "bytes": 2241,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-vue-guides-mutations-md-7a6dcc6d.md",
+          "bytes": 2241
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/guides/optimistic-updates.md",
+      "title": "Optimistic Updates",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-guides-optimistic-updates-md-5e17a092.md",
+      "sourcePath": "docs/framework/vue/guides/optimistic-updates.md",
+      "bytes": 235,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "",
+          "file": "references/guides/query-docs-framework-vue-guides-optimistic-updates-md-5e17a092.md",
+          "bytes": 235
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/guides/queries.md",
+      "title": "Queries",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-guides-queries-md-f9913b8f.md",
+      "sourcePath": "docs/framework/vue/guides/queries.md",
+      "bytes": 1480,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-vue-guides-queries-md-f9913b8f.md",
+          "bytes": 1480
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/guides/query-keys.md",
+      "title": "Query Keys",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-guides-query-keys-md-eb802e06.md",
+      "sourcePath": "docs/framework/vue/guides/query-keys.md",
+      "bytes": 469,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-vue-guides-query-keys-md-eb802e06.md",
+          "bytes": 469
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/guides/query-options.md",
+      "title": "Query Options",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-guides-query-options-md-898f57ed.md",
+      "sourcePath": "docs/framework/vue/guides/query-options.md",
+      "bytes": 443,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Canonical guidance",
+          "file": "references/guides/query-docs-framework-vue-guides-query-options-md-898f57ed.md",
+          "bytes": 380
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/installation.md",
+      "title": "Installation",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-installation-md-470329c4.md",
+      "sourcePath": "docs/framework/vue/installation.md",
+      "bytes": 1788,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-vue-installation-md-470329c4.md",
+          "bytes": 1788
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/overview.md",
+      "title": "Overview",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-overview-md-516c7a38.md",
+      "sourcePath": "docs/framework/vue/overview.md",
+      "bytes": 656,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; You talked me into it, so what now?",
+          "file": "references/guides/query-docs-framework-vue-overview-md-516c7a38.md",
+          "bytes": 656
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-quick-start-md-6977bdcc.md",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "bytes": 1381,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-vue-quick-start-md-6977bdcc.md",
+          "bytes": 1381
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/vue/reactivity.md",
+      "title": "Reactivity",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-vue-reactivity-md-933ef827.md",
+      "sourcePath": "docs/framework/vue/reactivity.md",
+      "bytes": 7531,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Accounting for Non-Reactive Queries; Using Derived State inside Queries; Other tracked Query Options; Immutability",
+          "file": "references/guides/query-docs-framework-vue-reactivity-md-933ef827.md",
+          "bytes": 7531
+        }
+      ],
+      "examples": [
+        {
+          "file": "references/examples/vue-reactivity.ts",
+          "title": "Vue query with reactive inputs and enabled state",
+          "testedPackages": {
+            "@tanstack/vue-query": "5.102.8",
+            "vue": "3.5.42"
+          }
+        }
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/guides/mutations.md",
+      "title": "Mutations",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-guides-mutations-md-82905d3a.md",
+      "sourcePath": "docs/framework/solid/guides/mutations.md",
+      "bytes": 7021,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Further reading",
+          "file": "references/guides/query-docs-framework-solid-guides-mutations-md-82905d3a.md",
+          "bytes": 7021
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/guides/optimistic-updates.md",
+      "title": "Optimistic Updates",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-guides-optimistic-updates-md-ff6f20a7.md",
+      "sourcePath": "docs/framework/solid/guides/optimistic-updates.md",
+      "bytes": 4061,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-solid-guides-optimistic-updates-md-ff6f20a7.md",
+          "bytes": 4061
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/guides/queries.md",
+      "title": "Queries",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-guides-queries-md-60657832.md",
+      "sourcePath": "docs/framework/solid/guides/queries.md",
+      "bytes": 2044,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-solid-guides-queries-md-60657832.md",
+          "bytes": 2044
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/guides/query-keys.md",
+      "title": "Query Keys",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-guides-query-keys-md-d976525e.md",
+      "sourcePath": "docs/framework/solid/guides/query-keys.md",
+      "bytes": 1483,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-solid-guides-query-keys-md-d976525e.md",
+          "bytes": 1483
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/guides/query-options.md",
+      "title": "Query Options",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-guides-query-options-md-af212341.md",
+      "sourcePath": "docs/framework/solid/guides/query-options.md",
+      "bytes": 1154,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-solid-guides-query-options-md-af212341.md",
+          "bytes": 1154
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/installation.md",
+      "title": "Installation",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-installation-md-9c0c737c.md",
+      "sourcePath": "docs/framework/solid/installation.md",
+      "bytes": 1562,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-solid-installation-md-9c0c737c.md",
+          "bytes": 1562
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/overview.md",
+      "title": "Overview",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-overview-md-7b6993ae.md",
+      "sourcePath": "docs/framework/solid/overview.md",
+      "bytes": 6859,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Motivation; Enough talk, show me some code already!; Well, that seems like more lines of code to do the same thing?",
+          "file": "references/guides/query-docs-framework-solid-overview-md-7b6993ae.md",
+          "bytes": 6859
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/solid/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-solid-quick-start-md-5070faf1.md",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "bytes": 5866,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Example; Important Differences between Solid Query & React Query",
+          "file": "references/guides/query-docs-framework-solid-quick-start-md-5070faf1.md",
+          "bytes": 5866
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/svelte/installation.md",
+      "title": "Installation",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-query",
+      "version": "6.1.48",
+      "file": "references/guides/query-docs-framework-svelte-installation-md-6e75ce07.md",
+      "sourcePath": "docs/framework/svelte/installation.md",
+      "bytes": 668,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-svelte-installation-md-6e75ce07.md",
+          "bytes": 668
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/svelte/overview.md",
+      "title": "Overview",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-query",
+      "version": "6.1.48",
+      "file": "references/guides/query-docs-framework-svelte-overview-md-c5e116c5.md",
+      "sourcePath": "docs/framework/svelte/overview.md",
+      "bytes": 2208,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Example; SvelteKit; Available Functions; Important Differences between Svelte Query & React Query",
+          "file": "references/guides/query-docs-framework-svelte-overview-md-c5e116c5.md",
+          "bytes": 2208
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/svelte/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-query",
+      "version": "6.1.48",
+      "file": "references/guides/query-docs-framework-svelte-quick-start-md-55a89661.md",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "bytes": 4224,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Example; Important Differences between Svelte Query & React Query",
+          "file": "references/guides/query-docs-framework-svelte-quick-start-md-55a89661.md",
+          "bytes": 4224
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/guides/mutations.md",
+      "title": "Mutations",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-guides-mutations-md-87c5141f.md",
+      "sourcePath": "docs/framework/angular/guides/mutations.md",
+      "bytes": 6234,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-guides-mutations-md-87c5141f.md",
+          "bytes": 6234
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/guides/optimistic-updates.md",
+      "title": "Optimistic Updates",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-guides-optimistic-updates-md-929e9dce.md",
+      "sourcePath": "docs/framework/angular/guides/optimistic-updates.md",
+      "bytes": 4259,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-guides-optimistic-updates-md-929e9dce.md",
+          "bytes": 4259
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/guides/queries.md",
+      "title": "Queries",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-guides-queries-md-84dae94e.md",
+      "sourcePath": "docs/framework/angular/guides/queries.md",
+      "bytes": 1944,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-guides-queries-md-84dae94e.md",
+          "bytes": 1944
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/guides/query-keys.md",
+      "title": "Query Keys",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-guides-query-keys-md-40f33b3a.md",
+      "sourcePath": "docs/framework/angular/guides/query-keys.md",
+      "bytes": 1549,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-guides-query-keys-md-40f33b3a.md",
+          "bytes": 1549
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/guides/query-options.md",
+      "title": "Query Options",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-guides-query-options-md-500ae26a.md",
+      "sourcePath": "docs/framework/angular/guides/query-options.md",
+      "bytes": 1322,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-guides-query-options-md-500ae26a.md",
+          "bytes": 1322
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/installation.md",
+      "title": "Installation",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-installation-md-c0c2b309.md",
+      "sourcePath": "docs/framework/angular/installation.md",
+      "bytes": 1175,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-installation-md-c0c2b309.md",
+          "bytes": 1175
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/overview.md",
+      "title": "Overview",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-overview-md-6bd342f9.md",
+      "sourcePath": "docs/framework/angular/overview.md",
+      "bytes": 6090,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Feedback welcome!; Supported Angular Versions; Motivation; Enough talk, show me some code already!; You talked me into it, so what now?",
+          "file": "references/guides/query-docs-framework-angular-overview-md-6bd342f9.md",
+          "bytes": 6090
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/angular/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "file": "references/guides/query-docs-framework-angular-quick-start-md-cf2de3cd.md",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "bytes": 3029,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-angular-quick-start-md-cf2de3cd.md",
+          "bytes": 3029
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/lit/guides/mutations.md",
+      "title": "Mutations",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "file": "references/guides/query-docs-framework-lit-guides-mutations-md-38f7fec7.md",
+      "sourcePath": "docs/framework/lit/guides/mutations.md",
+      "bytes": 4903,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Mutation States; Variables; Resetting Mutation State; Side Effects",
+          "file": "references/guides/query-docs-framework-lit-guides-mutations-md-38f7fec7.md",
+          "bytes": 4903
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/lit/guides/queries.md",
+      "title": "Queries",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "file": "references/guides/query-docs-framework-lit-guides-queries-md-7bbefb64.md",
+      "sourcePath": "docs/framework/lit/guides/queries.md",
+      "bytes": 4803,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Query Basics; Query States; Fetch Status; Reactive Query Options; Refetching",
+          "file": "references/guides/query-docs-framework-lit-guides-queries-md-7bbefb64.md",
+          "bytes": 4803
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/lit/guides/query-keys.md",
+      "title": "Query Keys",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "file": "references/guides/query-docs-framework-lit-guides-query-keys-md-2f82e369.md",
+      "sourcePath": "docs/framework/lit/guides/query-keys.md",
+      "bytes": 2063,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Simple Keys; Keys with Variables; Deterministic Hashing; Query Keys as Dependencies",
+          "file": "references/guides/query-docs-framework-lit-guides-query-keys-md-2f82e369.md",
+          "bytes": 2063
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/lit/installation.md",
+      "title": "Installation",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "file": "references/guides/query-docs-framework-lit-installation-md-e6a1af16.md",
+      "sourcePath": "docs/framework/lit/installation.md",
+      "bytes": 3485,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Requirements; Provider Setup; Render Roots; Devtools Status",
+          "file": "references/guides/query-docs-framework-lit-installation-md-e6a1af16.md",
+          "bytes": 3485
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/lit/overview.md",
+      "title": "Overview",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "file": "references/guides/query-docs-framework-lit-overview-md-bb5f419c.md",
+      "sourcePath": "docs/framework/lit/overview.md",
+      "bytes": 5014,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Core APIs; A First Query; Status Notes",
+          "file": "references/guides/query-docs-framework-lit-overview-md-bb5f419c.md",
+          "bytes": 5014
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "query:docs/framework/lit/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "file": "references/guides/query-docs-framework-lit-quick-start-md-2745312c.md",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "bytes": 3079,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/query-docs-framework-lit-quick-start-md-2745312c.md",
+          "bytes": 3079
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-build-query-abstractions",
+      "title": "Build Query Abstractions",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-build-query-abstractions-aa47722e.md",
+      "sourcePath": "core/build-query-abstractions",
+      "bytes": 2818,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-build-query-abstractions-aa47722e.md",
+          "bytes": 2818
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-coordinate-query-execution",
+      "title": "Coordinate Query Execution",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-coordinate-query-execution-32f2cfb9.md",
+      "sourcePath": "core/coordinate-query-execution",
+      "bytes": 4018,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+          "file": "references/guides/tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9-51f821a0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-coordinate-query-execution-32f2cfb9.md",
+          "bytes": 4018
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-design-query-keys-and-options",
+      "title": "Design Query Keys And Options",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md",
+      "sourcePath": "core/design-query-keys-and-options",
+      "bytes": 3954,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md",
+          "bytes": 3954
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+      "title": "Fetch And Observe Queries",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md",
+      "sourcePath": "core/fetch-and-observe-queries",
+      "bytes": 4126,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md",
+          "bytes": 4126
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+      "title": "Tune Defaults Freshness Retries And Refetching",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9-51f821a0.md",
+      "sourcePath": "core/tune-defaults-freshness-retries-and-refetching",
+      "bytes": 3409,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9-51f821a0.md",
+          "bytes": 3409
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-understand-query-internals-a-8ab976f4",
+      "title": "Understand Query Internals And Observers",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-understand-query-internals-a-8ab976f4-1e5a278c.md",
+      "sourcePath": "core/understand-query-internals-and-observers",
+      "bytes": 3097,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Mental Model; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-understand-query-internals-a-8ab976f4-1e5a278c.md",
+          "bytes": 3097
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+      "title": "Setup Query Client And Providers",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md",
+      "sourcePath": "lifecycle/setup-query-client-and-providers",
+      "bytes": 3858,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md",
+          "bytes": 3858
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-compositions-automatic-invalidati-a8e9b778",
+      "title": "Automatic Invalidation After Mutations",
+      "theme": "mutations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-compositions-automatic-invalidati-a8e9b778-0f5571ad.md",
+      "sourcePath": "compositions/automatic-invalidation-after-mutations",
+      "bytes": 3291,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+          "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-compositions-automatic-invalidati-a8e9b778-0f5571ad.md",
+          "bytes": 3291
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b",
+      "title": "Cancel Queries And Consume Abort Signals",
+      "theme": "mutations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b-b460b0b7.md",
+      "sourcePath": "core/cancel-queries-and-consume-abort-signals",
+      "bytes": 4049,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b-b460b0b7.md",
+          "bytes": 4049
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-concurrent-optimistic-updates",
+      "title": "Concurrent Optimistic Updates",
+      "theme": "mutations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-concurrent-optimistic-updates-9039903c.md",
+      "sourcePath": "core/concurrent-optimistic-updates",
+      "bytes": 3865,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-implement-optimistic-updates-20e8c58a",
+          "file": "references/guides/tanstack-query-intent-core-implement-optimistic-updates-20e8c58a-e3aa0c21.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b",
+          "file": "references/guides/tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b-b460b0b7.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-concurrent-optimistic-updates-9039903c.md",
+          "bytes": 3865
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-implement-optimistic-updates-20e8c58a",
+      "title": "Implement Optimistic Updates And Cache Writes",
+      "theme": "mutations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-implement-optimistic-updates-20e8c58a-e3aa0c21.md",
+      "sourcePath": "core/implement-optimistic-updates-and-cache-writes",
+      "bytes": 4623,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+          "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b",
+          "file": "references/guides/tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b-b460b0b7.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-implement-optimistic-updates-20e8c58a-e3aa0c21.md",
+          "bytes": 4623
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+      "title": "Write Mutations And Invalidate Related Queries",
+      "theme": "mutations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md",
+      "sourcePath": "core/write-mutations-and-invalidate-related-queries",
+      "bytes": 4323,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md",
+          "bytes": 4323
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-paginate-and-build-infinite-queries",
+      "title": "Paginate And Build Infinite Queries",
+      "theme": "data-shaping",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-paginate-and-build-infinite-queries-d752755a.md",
+      "sourcePath": "core/paginate-and-build-infinite-queries",
+      "bytes": 4284,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-paginate-and-build-infinite-queries-d752755a.md",
+          "bytes": 4284
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-seed-placeholder-select-and-5c98438e",
+      "title": "Seed Placeholder Select And Transform Data",
+      "theme": "data-shaping",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-seed-placeholder-select-and-5c98438e-84b92527.md",
+      "sourcePath": "core/seed-placeholder-select-and-transform-data",
+      "bytes": 4175,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-seed-placeholder-select-and-5c98438e-84b92527.md",
+          "bytes": 4175
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-core-selectors-and-derived-state",
+      "title": "Selectors And Derived State",
+      "theme": "data-shaping",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-core-selectors-and-derived-state-ca3ffd5f.md",
+      "sourcePath": "core/selectors-and-derived-state",
+      "bytes": 3582,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-seed-placeholder-select-and-5c98438e",
+          "file": "references/guides/tanstack-query-intent-core-seed-placeholder-select-and-5c98438e-84b92527.md"
+        },
+        {
+          "id": "tanstack-query-intent-framework-shape-data-and-render-e-feb144a6",
+          "file": "references/guides/tanstack-query-intent-framework-shape-data-and-render-e-feb144a6-276ce42a.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-core-selectors-and-derived-state-ca3ffd5f.md",
+          "bytes": 3582
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-framework-shape-data-and-render-e-feb144a6",
+      "title": "Shape Data And Render Efficiently",
+      "theme": "data-shaping",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-framework-shape-data-and-render-e-feb144a6-276ce42a.md",
+      "sourcePath": "framework/shape-data-and-render-efficiently",
+      "bytes": 3979,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-seed-placeholder-select-and-5c98438e",
+          "file": "references/guides/tanstack-query-intent-core-seed-placeholder-select-and-5c98438e-84b92527.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-framework-shape-data-and-render-e-feb144a6-276ce42a.md",
+          "bytes": 3979
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-framework-debug-with-devtools",
+      "title": "Debug With Devtools",
+      "theme": "frameworks-ui",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-framework-debug-with-devtools-60697c38.md",
+      "sourcePath": "framework/debug-with-devtools",
+      "bytes": 3385,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-framework-debug-with-devtools-60697c38.md",
+          "bytes": 3385
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-framework-handle-status-and-errors",
+      "title": "Handle Status And Errors",
+      "theme": "frameworks-ui",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-framework-handle-status-and-errors-740dc94d.md",
+      "sourcePath": "framework/handle-status-and-errors",
+      "bytes": 3028,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        },
+        {
+          "id": "tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec",
+          "file": "references/guides/tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec-ef1e87bf.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-framework-handle-status-and-errors-740dc94d.md",
+          "bytes": 3028
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-framework-use-framework-adapter-reactivity",
+      "title": "Use Framework Adapter Reactivity",
+      "theme": "frameworks-ui",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-framework-use-framework-adapter-reactivity-dec72155.md",
+      "sourcePath": "framework/use-framework-adapter-reactivity",
+      "bytes": 3996,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-framework-use-framework-adapter-reactivity-dec72155.md",
+          "bytes": 3996
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec",
+      "title": "Use Suspense And Error Boundaries",
+      "theme": "frameworks-ui",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec-ef1e87bf.md",
+      "sourcePath": "framework/use-suspense-and-error-boundaries",
+      "bytes": 4664,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        },
+        {
+          "id": "tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1",
+          "file": "references/guides/tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1-4d3d468c.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec-ef1e87bf.md",
+          "bytes": 4664
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe",
+      "title": "Compose Query With Tanstack Router And Start",
+      "theme": "routing-ssr",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe-36a83b16.md",
+      "sourcePath": "compositions/compose-query-with-tanstack-router-and-start",
+      "bytes": 7099,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        },
+        {
+          "id": "tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1",
+          "file": "references/guides/tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1-4d3d468c.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Integration Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe-36a83b16.md",
+          "bytes": 7099
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1",
+      "title": "Prefetch And Remove Request Waterfalls",
+      "theme": "routing-ssr",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1-4d3d468c.md",
+      "sourcePath": "lifecycle/prefetch-and-remove-request-waterfalls",
+      "bytes": 5372,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+          "file": "references/guides/tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9-51f821a0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1-4d3d468c.md",
+          "bytes": 5372
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-ssr-hydration-and-streaming",
+      "title": "Ssr Hydration And Streaming",
+      "theme": "routing-ssr",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-lifecycle-ssr-hydration-and-streaming-0050972d.md",
+      "sourcePath": "lifecycle/ssr-hydration-and-streaming",
+      "bytes": 4857,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1",
+          "file": "references/guides/tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1-4d3d468c.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-lifecycle-ssr-hydration-and-streaming-0050972d.md",
+          "bytes": 4857
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-compositions-broadcast-realtime-a-6360b276",
+      "title": "Broadcast Realtime And Multi Tab Synchronization",
+      "theme": "offline-integrations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-compositions-broadcast-realtime-a-6360b276-c05e4489.md",
+      "sourcePath": "compositions/broadcast-realtime-and-multi-tab-synchronization",
+      "bytes": 4058,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+          "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md"
+        },
+        {
+          "id": "tanstack-query-intent-compositions-persist-offline-and-ca66cce0",
+          "file": "references/guides/tanstack-query-intent-compositions-persist-offline-and-ca66cce0-a83a7ca7.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Integration Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-compositions-broadcast-realtime-a-6360b276-c05e4489.md",
+          "bytes": 4058
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-compositions-persist-offline-and-ca66cce0",
+      "title": "Persist Offline And Restore Caches",
+      "theme": "offline-integrations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-compositions-persist-offline-and-ca66cce0-a83a7ca7.md",
+      "sourcePath": "compositions/persist-offline-and-restore-caches",
+      "bytes": 4745,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+          "file": "references/guides/tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9-51f821a0.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+          "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Integration Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-compositions-persist-offline-and-ca66cce0-a83a7ca7.md",
+          "bytes": 4745
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-compositions-query-data-and-forms",
+      "title": "Query Data And Forms",
+      "theme": "offline-integrations",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-compositions-query-data-and-forms-8c09fc3b.md",
+      "sourcePath": "compositions/query-data-and-forms",
+      "bytes": 4043,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8",
+          "file": "references/guides/tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8-d6860664.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-selectors-and-derived-state",
+          "file": "references/guides/tanstack-query-intent-core-selectors-and-derived-state-ca3ffd5f.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-compositions-query-data-and-forms-8c09fc3b.md",
+          "bytes": 4043
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb",
+      "title": "Enforce Query Best Practices With Eslint",
+      "theme": "quality",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb-fe01ade8.md",
+      "sourcePath": "compositions/enforce-query-best-practices-with-eslint",
+      "bytes": 3660,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-core-design-query-keys-and-options",
+          "file": "references/guides/tanstack-query-intent-core-design-query-keys-and-options-c4c8f493.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-fetch-and-observe-queries",
+          "file": "references/guides/tanstack-query-intent-core-fetch-and-observe-queries-d2520b98.md"
+        },
+        {
+          "id": "tanstack-query-intent-framework-shape-data-and-render-e-feb144a6",
+          "file": "references/guides/tanstack-query-intent-framework-shape-data-and-render-e-feb144a6-276ce42a.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Integration Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb-fe01ade8.md",
+          "bytes": 3660
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce",
+      "title": "Migrate Major Versions And Codemods",
+      "theme": "quality",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce-ecaba352.md",
+      "sourcePath": "lifecycle/migrate-major-versions-and-codemods",
+      "bytes": 3313,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce-ecaba352.md",
+          "bytes": 3313
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-query-intent-lifecycle-test-query-code",
+      "title": "Test Query Code",
+      "theme": "quality",
+      "kind": "atomic",
+      "status": "Draft guidance",
+      "frameworks": [],
+      "package": "@tanstack/query-intent",
+      "version": "5.101.0",
+      "file": "references/guides/tanstack-query-intent-lifecycle-test-query-code-1d124c53.md",
+      "sourcePath": "lifecycle/test-query-code",
+      "bytes": 3491,
+      "prerequisites": [
+        {
+          "id": "tanstack-query-intent-lifecycle-setup-query-client-and-providers",
+          "file": "references/guides/tanstack-query-intent-lifecycle-setup-query-client-and-providers-72d53007.md"
+        },
+        {
+          "id": "tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9",
+          "file": "references/guides/tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9-51f821a0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-query-intent-lifecycle-test-query-code-1d124c53.md",
+          "bytes": 3491
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

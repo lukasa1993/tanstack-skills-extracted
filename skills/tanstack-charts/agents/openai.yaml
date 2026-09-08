@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Charts"
-  short_description: "Typed chart grammar guidance for marks, scales, layouts, interaction, accessibility, rendering, and framework adapters."
+  short_description: "Task and framework guides for TanStack Charts"
   default_prompt: "Use $tanstack-charts to implement this TanStack Charts task with the installed framework and package versions."

@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Table"
-  short_description: "Headless table and data-grid guidance with shared Table Core features and framework-specific adapters."
+  short_description: "Task and framework guides for TanStack Table"
   default_prompt: "Use $tanstack-table to implement this TanStack Table task with the installed framework and package versions."

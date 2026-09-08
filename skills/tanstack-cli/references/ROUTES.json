@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "product": "cli",
+  "guides": [
+    {
+      "id": "tanstack-cli-add-addons-existing-app",
+      "title": "Add Addons Existing App",
+      "theme": "projects-addons",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/cli",
+      "version": "0.71.0",
+      "file": "references/guides/tanstack-cli-add-addons-existing-app-14730942.md",
+      "sourcePath": "add-addons-existing-app",
+      "bytes": 2637,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-cli-add-addons-existing-app-14730942.md",
+          "bytes": 2637
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-cli-create-app-scaffold",
+      "title": "Create App Scaffold",
+      "theme": "projects-addons",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/cli",
+      "version": "0.71.0",
+      "file": "references/guides/tanstack-cli-create-app-scaffold-0edcdf66.md",
+      "sourcePath": "create-app-scaffold",
+      "bytes": 4803,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-cli-create-app-scaffold-0edcdf66.md",
+          "bytes": 4803
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-cli-choose-ecosystem-integrations",
+      "title": "Choose Ecosystem Integrations",
+      "theme": "ecosystem-discovery",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/cli",
+      "version": "0.71.0",
+      "file": "references/guides/tanstack-cli-choose-ecosystem-integrations-dc478cbd.md",
+      "sourcePath": "choose-ecosystem-integrations",
+      "bytes": 4131,
+      "prerequisites": [
+        {
+          "id": "tanstack-cli-create-app-scaffold",
+          "file": "references/guides/tanstack-cli-create-app-scaffold-0edcdf66.md"
+        },
+        {
+          "id": "tanstack-cli-query-docs-library-metadata",
+          "file": "references/guides/tanstack-cli-query-docs-library-metadata-bf917a48.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-cli-choose-ecosystem-integrations-dc478cbd.md",
+          "bytes": 4131
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-cli-query-docs-library-metadata",
+      "title": "Query Docs Library Metadata",
+      "theme": "ecosystem-discovery",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/cli",
+      "version": "0.71.0",
+      "file": "references/guides/tanstack-cli-query-docs-library-metadata-bf917a48.md",
+      "sourcePath": "query-docs-library-metadata",
+      "bytes": 2686,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-cli-query-docs-library-metadata-bf917a48.md",
+          "bytes": 2686
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-cli-maintain-custom-addons-dev-watch",
+      "title": "Maintain Custom Addons Dev Watch",
+      "theme": "addon-authoring",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/cli",
+      "version": "0.71.0",
+      "file": "references/guides/tanstack-cli-maintain-custom-addons-dev-watch-66140342.md",
+      "sourcePath": "maintain-custom-addons-dev-watch",
+      "bytes": 3035,
+      "prerequisites": [
+        {
+          "id": "tanstack-cli-add-addons-existing-app",
+          "file": "references/guides/tanstack-cli-add-addons-existing-app-14730942.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-cli-maintain-custom-addons-dev-watch-66140342.md",
+          "bytes": 3035
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

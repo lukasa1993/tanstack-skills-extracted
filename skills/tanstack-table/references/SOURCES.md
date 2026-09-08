@@ -84,4 +84,4 @@
 | `tanstack-octane-table-getting-started` | atomic | `framework-octane` | `@tanstack/octane-table` | `9.2.4` |  |
 | `tanstack-octane-table-table-state` | atomic | `framework-octane` | `@tanstack/octane-table` | `9.2.4` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 1. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 1. No fuzzy deduplication is used.

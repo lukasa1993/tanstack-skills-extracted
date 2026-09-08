@@ -12,4 +12,4 @@
 | `tanstack-devtools-event-client-devtools-bidirectional` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |
 | `tanstack-devtools-event-client-devtools-instrumentation` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

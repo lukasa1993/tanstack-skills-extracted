@@ -2,39 +2,8 @@
 
 Svelte-specific setup and behavior.
 
-<a id="source-virtual-docs-framework-svelte-svelte-virtual-md"></a>
+Choose the guide for the task. Each guide records its source and package version.
 
-## Svelte Virtual
-
-Source: `virtual:docs/framework/svelte/svelte-virtual.md`.
-
-The `@tanstack/svelte-virtual` adapter is a wrapper around the core virtual logic.
-
-### `createVirtualizer`
-
-```tsx
-function createVirtualizer<TScrollElement, TItemElement = unknown>(
-  options: PartialKeys<
-    VirtualizerOptions<TScrollElement, TItemElement>,
-    'observeElementRect' | 'observeElementOffset' | 'scrollToFn'
-  >,
-): Virtualizer<TScrollElement, TItemElement>
-```
-
-This function returns a standard `Virtualizer` instance configured to work with an HTML element as the scrollElement.
-
-### `createWindowVirtualizer`
-
-```tsx
-function createWindowVirtualizer<TItemElement = unknown>(
-  options: PartialKeys<
-    VirtualizerOptions<Window, TItemElement>,
-    | 'getScrollElement'
-    | 'observeElementRect'
-    | 'observeElementOffset'
-    | 'scrollToFn'
-  >,
-): Virtualizer<Window, TItemElement>
-```
-
-This function returns a window-based `Virtualizer` instance configured to work with the window as the scrollElement.
+| Guide | Source status | Package version |
+| --- | --- | --- |
+| [Svelte Virtual](./guides/virtual-docs-framework-svelte-svelte-virtual-md-662b115a.md) | Release-matched documentation | `@tanstack/virtual-core@3.17.9` |

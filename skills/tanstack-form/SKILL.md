@@ -16,7 +16,7 @@ Type-safe form guidance for fields, validation, composition, submission, SSR, de
 
 1. Inspect installed TanStack packages and exact versions.
 2. Read the foundation reference and the adapter reference for the detected framework.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 
@@ -32,6 +32,10 @@ Type-safe form guidance for fields, validation, composition, submission, SSR, de
 - [Solid adapter](references/framework-solid.md) — Solid-specific setup and behavior.
 - [Lit adapter](references/framework-lit.md) — Lit-specific setup and behavior.
 - [Svelte adapter](references/framework-svelte.md) — Svelte-specific setup and behavior.
+
+## Common tasks
+
+- [React: field validation and submission](references/guides/form-docs-framework-react-guides-validation-md-d751e17c.md)
 
 ## Framework routing
 

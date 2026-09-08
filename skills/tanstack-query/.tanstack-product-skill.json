@@ -2,8 +2,15 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-query",
   "product": "query",
-  "sourceCount": 29,
+  "sourceCount": 79,
   "themes": [
+    "framework-react",
+    "framework-preact",
+    "framework-vue",
+    "framework-solid",
+    "framework-svelte",
+    "framework-angular",
+    "framework-lit",
     "foundations",
     "mutations",
     "data-shaping",
@@ -12,5 +19,7 @@
     "offline-integrations",
     "quality"
   ],
-  "inputSha256": "3053595997db341fc1300c56b595a633bf379a153c4fa43f8cfa2fd3bc5a86b2"
+  "guideCount": 79,
+  "largestGuideEntryBytes": 7531,
+  "inputSha256": "0783b4a86b128302c19db4d72e3da4f239e3e2153062e20c5887798db327969a"
 }

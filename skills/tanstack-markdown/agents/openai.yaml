@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Markdown"
-  short_description: "Markdown parsing, extensions, rendering, production pipeline, and framework-adapter guidance."
+  short_description: "Task and framework guides for TanStack Markdown"
   default_prompt: "Use $tanstack-markdown to implement this TanStack Markdown task with the installed framework and package versions."

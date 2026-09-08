@@ -23,4 +23,4 @@
 | `intent:packages/intent/meta/skill-staleness-check/SKILL.md` | document | `meta-tree-maintenance` | `@tanstack/intent` | `0.4.0` |  |
 | `intent:packages/intent/meta/tree-generator/SKILL.md` | document | `meta-tree-maintenance` | `@tanstack/intent` | `0.4.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

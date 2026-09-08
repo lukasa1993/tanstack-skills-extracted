@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Hotkeys"
-  short_description: "Type-safe keyboard shortcut guidance for registration, sequences, scopes, recording, key state, display, and adapters."
+  short_description: "Task and framework guides for TanStack Hotkeys"
   default_prompt: "Use $tanstack-hotkeys to implement this TanStack Hotkeys task with the installed framework and package versions."

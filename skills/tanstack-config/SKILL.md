@@ -16,7 +16,7 @@ Library-maintenance guidance for package structure, dependencies, ESLint, Vite, 
 
 1. Inspect installed TanStack packages and exact versions.
 2. Choose the task reference that matches the requested outcome.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Validate the implementation with the project types and tests.
 

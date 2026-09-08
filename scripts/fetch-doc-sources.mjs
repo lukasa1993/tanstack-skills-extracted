@@ -36,6 +36,26 @@ const externalGithubLinkSpecs = [
 
 const products = [
   {
+    id: 'query',
+    name: 'TanStack Query',
+    repository: 'TanStack/query',
+    sourcePackage: '@tanstack/query-core',
+    matchAdapterDocuments: true,
+    releasePackages: [
+      { name: '@tanstack/query-core', role: 'core', repositoryDirectory: 'packages/query-core' },
+      ...['react', 'preact', 'vue', 'solid', 'svelte', 'angular', 'lit'].map((framework) => {
+        const name = framework === 'angular' ? 'angular-query-experimental' : `${framework}-query`
+        return { name: `@tanstack/${name}`, role: 'adapter', frameworks: [framework], repositoryDirectory: `packages/${name}` }
+      }),
+    ],
+    generatedApiRoots: [/^docs\/reference\//, /^docs\/framework\/[^/]+\/reference\//],
+    selectDocument: (path) => /^docs\/framework\/[^/]+\/(?:overview|installation|quick-start|reactivity|guides\/(?:query-keys|query-options|optimistic-updates|mutations|queries))\.mdx?$/.test(path),
+    required: [
+      ['Vue reactivity', (path) => path === 'docs/framework/vue/reactivity.md'],
+      ['React optimistic updates', (path) => path === 'docs/framework/react/guides/optimistic-updates.md'],
+    ],
+  },
+  {
     id: 'charts',
     name: 'TanStack Charts',
     repository: 'TanStack/charts',
@@ -123,6 +143,7 @@ const products = [
     name: 'TanStack Form',
     repository: 'TanStack/form',
     sourcePackage: '@tanstack/form-core',
+    matchAdapterDocuments: true,
     requireAdapterPackageCoverage: true,
     releasePackages: [
       {
@@ -878,6 +899,7 @@ function isGeneratedReference(product, path) {
 }
 
 function isDocument(product, path) {
+  if (product.selectDocument && !product.selectDocument(path)) return false
   if (/^docs\/.+\.mdx?$/.test(path) && !isGeneratedReference(product, path)) return true
   return product.id === 'intent' && /^packages\/intent\/meta\/[^/]+\/SKILL\.md$/.test(path)
 }
@@ -1293,8 +1315,19 @@ async function buildProduct(
 
   const primaryDocumentSource =
     product.documentSource === 'npm-package' ? sourceRelease : sourceRepository
-  const documentDefinitions = primaryDocumentSource.entries
-    .filter((path) => isDocument(product, path))
+  const adapterReleases = product.matchAdapterDocuments
+    ? new Map(releaseSources.flatMap((release) => release.manifest.frameworks.map((framework) => [framework, release])))
+    : new Map()
+  const selectedDocumentSources = [{ repository: primaryDocumentSource, release: sourceRelease, framework: null }]
+  for (const [framework, release] of adapterReleases) {
+    selectedDocumentSources.push({ repository: await getRepositorySource(release.manifest.commit), release, framework })
+  }
+  const documentDefinitions = selectedDocumentSources.flatMap(({ repository, release, framework }) => repository.entries
+    .filter((path) => {
+      if (!isDocument(product, path)) return false
+      const owner = documentMetadata(path).frameworks[0]
+      return framework ? owner === framework : !adapterReleases.has(owner)
+    })
     .map((sourcePath) => {
       const { kind, frameworks } = documentMetadata(sourcePath)
       return {
@@ -1306,15 +1339,15 @@ async function buildProduct(
         ),
         kind,
         frameworks,
-        sourcePackage: sourceRelease.manifest.name,
-        sourceCommit: commit,
+        sourcePackage: release.manifest.name,
+        sourceCommit: release.manifest.commit,
         sourceKind:
           product.documentSource === 'npm-package'
             ? 'npm-package'
             : 'github-release-archive',
-        fileSource: primaryDocumentSource,
+        fileSource: repository,
       }
-    })
+    }))
 
   for (const additional of product.additionalDocuments ?? []) {
     const release = releaseSources.find(

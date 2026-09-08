@@ -1,0 +1,3732 @@
+{
+  "schemaVersion": 1,
+  "product": "charts",
+  "guides": [
+    {
+      "id": "charts:docs/comparison.md",
+      "title": "Comparison",
+      "theme": "getting-started",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-comparison-md-7faf855b.md",
+      "sourcePath": "docs/comparison.md",
+      "bytes": 1082,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-comparison-md-7faf855b--overview.md",
+          "bytes": 433
+        },
+        {
+          "title": "Tested versions",
+          "file": "references/guides/charts-docs-comparison-md-7faf855b--tested-versions.md",
+          "bytes": 1346
+        },
+        {
+          "title": "Capability matrix",
+          "file": "references/guides/charts-docs-comparison-md-7faf855b--capability-matrix.md",
+          "bytes": 11892
+        },
+        {
+          "title": "Bundle snapshot",
+          "file": "references/guides/charts-docs-comparison-md-7faf855b--bundle-snapshot.md",
+          "bytes": 4220
+        },
+        {
+          "title": "Broader conformance",
+          "file": "references/guides/charts-docs-comparison-md-7faf855b--broader-conformance.md",
+          "bytes": 2370
+        },
+        {
+          "title": "Evidence and reproduction",
+          "file": "references/guides/charts-docs-comparison-md-7faf855b--evidence-and-reproduction.md",
+          "bytes": 1526
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/installation.md",
+      "title": "Installation",
+      "theme": "getting-started",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-installation-md-6ab2967d.md",
+      "sourcePath": "docs/installation.md",
+      "bytes": 1568,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--overview.md",
+          "bytes": 3050
+        },
+        {
+          "title": "Framework compatibility",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--framework-compatibility.md",
+          "bytes": 1920
+        },
+        {
+          "title": "React Native and Expo",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--react-native-and-expo.md",
+          "bytes": 1486
+        },
+        {
+          "title": "Choose scale capabilities",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--choose-scale-capabilities.md",
+          "bytes": 2688
+        },
+        {
+          "title": "Package-manager examples",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--package-manager-examples.md",
+          "bytes": 621
+        },
+        {
+          "title": "Import boundaries",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--import-boundaries.md",
+          "bytes": 2172
+        },
+        {
+          "title": "TypeScript",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--typescript.md",
+          "bytes": 984
+        },
+        {
+          "title": "Browser and server requirements",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--browser-and-server-requirements.md",
+          "bytes": 870
+        },
+        {
+          "title": "Verify the installation",
+          "file": "references/guides/charts-docs-installation-md-6ab2967d--verify-the-installation.md",
+          "bytes": 992
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/overview.md",
+      "title": "Overview",
+      "theme": "getting-started",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-overview-md-6bc1476c.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 8425,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; A chart is a composition; What TanStack Charts owns; Keep ownership explicit; Defaults for the common case; Package subpaths; Where to go next",
+          "file": "references/guides/charts-docs-overview-md-6bc1476c.md",
+          "bytes": 8425
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/quick-start.md",
+      "title": "Quick Start",
+      "theme": "getting-started",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-quick-start-md-b139d2e1.md",
+      "sourcePath": "docs/quick-start.md",
+      "bytes": 4201,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; 1. Add a chart container; 2. Define the data and chart; 3. Mount it; 4. Update the chart; 5. Clean up; What the declaration means",
+          "file": "references/guides/charts-docs-quick-start-md-b139d2e1.md",
+          "bytes": 4201
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/concepts/chart-definitions.md",
+      "title": "Chart Definitions",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-concepts-chart-definitions-md-fe2aa9fa.md",
+      "sourcePath": "docs/concepts/chart-definitions.md",
+      "bytes": 4347,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Static definitions; Responsive definitions; Transform beside the definition; Memoize the complete definition; Vanilla updates",
+          "file": "references/guides/charts-docs-concepts-chart-definitions-md-fe2aa9fa.md",
+          "bytes": 4347
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/concepts/data-and-channels.md",
+      "title": "Data And Channels",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-concepts-data-and-channels-md-e25a7b78.md",
+      "sourcePath": "docs/concepts/data-and-channels.md",
+      "bytes": 11631,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Field channels; Accessor channels; Positional channels; Grouping with `z`; Color channels and constants; Radius is explicit; Stable identity; Missing and invalid values; Different marks can use different rows; Derived data stays explicit; Complete bubble-scatter example",
+          "file": "references/guides/charts-docs-concepts-data-and-channels-md-e25a7b78.md",
+          "bytes": 11631
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/concepts/grammar-of-graphics.md",
+      "title": "Grammar Of Graphics",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-concepts-grammar-of-graphics-md-3b814e73.md",
+      "sourcePath": "docs/concepts/grammar-of-graphics.md",
+      "bytes": 8910,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; The smallest useful declaration; Data belongs to marks; Marks choose geometry; Channels map data to meaning; Scale factories derive semantic space; Guides explain scales; Layers build richer charts; Definitions compile the grammar; Rendering is downstream",
+          "file": "references/guides/charts-docs-concepts-grammar-of-graphics-md-3b814e73.md",
+          "bytes": 8910
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/concepts/layout-axes-and-coordinates.md",
+      "title": "Layout Axes And Coordinates",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md",
+      "sourcePath": "docs/concepts/layout-axes-and-coordinates.md",
+      "bytes": 2673,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--overview.md",
+          "bytes": 382
+        },
+        {
+          "title": "Surface, margin, and plot rectangle",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--surface-margin-and-plot-rectangle.md",
+          "bytes": 648
+        },
+        {
+          "title": "Container responsiveness",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--container-responsiveness.md",
+          "bytes": 1373
+        },
+        {
+          "title": "Automatic margins",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--automatic-margins.md",
+          "bytes": 1368
+        },
+        {
+          "title": "Text measurement",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--text-measurement.md",
+          "bytes": 891
+        },
+        {
+          "title": "Axis guide options",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--axis-guide-options.md",
+          "bytes": 2518
+        },
+        {
+          "title": "Multiple axes",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--multiple-axes.md",
+          "bytes": 1005
+        },
+        {
+          "title": "Scale ranges and coordinate direction",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--scale-ranges-and-coordinate-direction.md",
+          "bytes": 887
+        },
+        {
+          "title": "Continuous viewports",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--continuous-viewports.md",
+          "bytes": 3231
+        },
+        {
+          "title": "Non-cartesian coordinates",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--non-cartesian-coordinates.md",
+          "bytes": 1489
+        },
+        {
+          "title": "Band alignment",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--band-alignment.md",
+          "bytes": 1051
+        },
+        {
+          "title": "Scene and pointer coordinates",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--scene-and-pointer-coordinates.md",
+          "bytes": 910
+        },
+        {
+          "title": "Clipping and overflow",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--clipping-and-overflow.md",
+          "bytes": 631
+        },
+        {
+          "title": "Complete horizontal ranking",
+          "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--complete-horizontal-ranking.md",
+          "bytes": 2471
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/concepts/marks-and-layering.md",
+      "title": "Marks And Layering",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-concepts-marks-and-layering-md-cbd6c26d.md",
+      "sourcePath": "docs/concepts/marks-and-layering.md",
+      "bytes": 10743,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Built-in mark families; Layer order is declaration order; Opt individual marks into Canvas; Decorative layers; Mark identity; Grouped geometry; Line and area gaps; Baselines and intervals; Style values and visual channels; Clipping; Complete range-band composition; Custom marks",
+          "file": "references/guides/charts-docs-concepts-marks-and-layering-md-cbd6c26d.md",
+          "bytes": 10743
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/concepts/scales-and-d3.md",
+      "title": "Scales And D3",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4.md",
+      "sourcePath": "docs/concepts/scales-and-d3.md",
+      "bytes": 3233,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--overview.md",
+          "bytes": 1454
+        },
+        {
+          "title": "Start with compact scales",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--start-with-compact-scales.md",
+          "bytes": 3222
+        },
+        {
+          "title": "Upgrade one scale at a time",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--upgrade-one-scale-at-a-time.md",
+          "bytes": 811
+        },
+        {
+          "title": "Direct dependency ownership",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--direct-dependency-ownership.md",
+          "bytes": 1291
+        },
+        {
+          "title": "Capability map",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--capability-map.md",
+          "bytes": 5569
+        },
+        {
+          "title": "Positional scales follow materialized dimensions",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--positional-scales-follow-materialized-dimensions.md",
+          "bytes": 1035
+        },
+        {
+          "title": "Factory domains come from marks",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--factory-domains-come-from-marks.md",
+          "bytes": 1163
+        },
+        {
+          "title": "Fixed domains remain application semantics",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--fixed-domains-remain-application-semantics.md",
+          "bytes": 1022
+        },
+        {
+          "title": "Responsive ranges belong to TanStack Charts",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--responsive-ranges-belong-to-tanstack-charts.md",
+          "bytes": 973
+        },
+        {
+          "title": "Categorical scales and bandwidth",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--categorical-scales-and-bandwidth.md",
+          "bytes": 863
+        },
+        {
+          "title": "Color scales",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--color-scales.md",
+          "bytes": 1547
+        },
+        {
+          "title": "Full D3 scale semantics",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--full-d3-scale-semantics.md",
+          "bytes": 964
+        },
+        {
+          "title": "Radius scales",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--radius-scales.md",
+          "bytes": 613
+        },
+        {
+          "title": "Curves",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--curves.md",
+          "bytes": 719
+        },
+        {
+          "title": "Transforms produce rows",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--transforms-produce-rows.md",
+          "bytes": 1143
+        },
+        {
+          "title": "Pixel-to-value inversion",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--pixel-to-value-inversion.md",
+          "bytes": 1648
+        },
+        {
+          "title": "Log-scale example",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--log-scale-example.md",
+          "bytes": 1606
+        },
+        {
+          "title": "Custom scales are the final extension",
+          "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4--custom-scales-are-the-final-extension.md",
+          "bytes": 985
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/choosing-a-chart.md",
+      "title": "Choosing A Chart",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-choosing-a-chart-md-c305fbfb.md",
+      "sourcePath": "docs/guides/choosing-a-chart.md",
+      "bytes": 6306,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Task-first choices; Check the data shape; Prefer the smallest complete composition; Avoid misleading defaults; Verify the result",
+          "file": "references/guides/charts-docs-guides-choosing-a-chart-md-c305fbfb.md",
+          "bytes": 6306
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/typescript.md",
+      "title": "Typescript",
+      "theme": "chart-grammar",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-typescript-md-eab57f94.md",
+      "sourcePath": "docs/guides/typescript.md",
+      "bytes": 5639,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Infer from mark channels; Capture application values; Keep literal information; Callback types; Extract inferred types; Custom marks; Type tests; No-cast checklist",
+          "file": "references/guides/charts-docs-guides-typescript-md-eab57f94.md",
+          "bytes": 5639
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/annotations-and-overlays.md",
+      "title": "Annotations And Overlays",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-annotations-and-overlays-md-a564e52b.md",
+      "sourcePath": "docs/examples/annotations-and-overlays.md",
+      "bytes": 5711,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the annotation; Label before-and-after change; Show two-dimensional movement; Add thresholds and bands; Select annotations in data preparation; Use HTML overlays only when necessary; Production checks",
+          "file": "references/guides/charts-docs-examples-annotations-and-overlays-md-a564e52b.md",
+          "bytes": 5711
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/bars-and-rankings.md",
+      "title": "Bars And Rankings",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-bars-and-rankings-md-28e82163.md",
+      "sourcePath": "docs/examples/bars-and-rankings.md",
+      "bytes": 6061,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the comparison; Rank categories with bars; Reduce visual weight with lollipops; Compare two values per category; Explain a bridge to a total; Production checks",
+          "file": "references/guides/charts-docs-examples-bars-and-rankings-md-28e82163.md",
+          "bytes": 6061
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/distributions.md",
+      "title": "Distributions",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-distributions-md-84a67bfd.md",
+      "sourcePath": "docs/examples/distributions.md",
+      "bytes": 8378,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the comparison; Preserve observations with a beeswarm; Inspect frequency with a histogram; Compare compact summaries; Preserve every rank with an ECDF; Compare binned profiles; Compare detailed group shapes; Production checks",
+          "file": "references/guides/charts-docs-examples-distributions-md-84a67bfd.md",
+          "bytes": 8378
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/heatmaps-and-densities.md",
+      "title": "Heatmaps And Densities",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-heatmaps-and-densities-md-a788d416.md",
+      "sourcePath": "docs/examples/heatmaps-and-densities.md",
+      "bytes": 8253,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the comparison; Start with a labeled matrix; Bin events into a calendar; Aggregate into quantitative cells; Trace levels through a scalar grid; Estimate point concentration with density contours; Retain local structure with hexagonal bins; Production checks",
+          "file": "references/guides/charts-docs-examples-heatmaps-and-densities-md-a788d416.md",
+          "bytes": 8253
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/index.md",
+      "title": "Index",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-index-md-af22062f.md",
+      "sourcePath": "docs/examples/index.md",
+      "bytes": 6757,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose a family; Use an example without inheriting accidental choices; Build from the grammar",
+          "file": "references/guides/charts-docs-examples-index-md-af22062f.md",
+          "bytes": 6757
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/intervals-and-financial.md",
+      "title": "Intervals And Financial",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-intervals-and-financial-md-5f290ac4.md",
+      "sourcePath": "docs/examples/intervals-and-financial.md",
+      "bytes": 7037,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the comparison; Compare open-to-close spans; Preserve uncertainty bounds; Encode open, high, low, and close; Show an interval over time; Production checks",
+          "file": "references/guides/charts-docs-examples-intervals-and-financial-md-5f290ac4.md",
+          "bytes": 7037
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/lines-and-areas.md",
+      "title": "Lines And Areas",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-lines-and-areas-md-f56bb4ec.md",
+      "sourcePath": "docs/examples/lines-and-areas.md",
+      "bytes": 8548,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the comparison; Start with one ordered series; Compare several series from a common baseline; Show a derived trend honestly; Compare two boundaries at their exact crossings; Add context with an interval; Annotate selected observations; Production checks",
+          "file": "references/guides/charts-docs-examples-lines-and-areas-md-f56bb4ec.md",
+          "bytes": 8548
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/scatterplots-and-relationships.md",
+      "title": "Scatterplots And Relationships",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-scatterplots-and-relationships-md-dfd185c2.md",
+      "sourcePath": "docs/examples/scatterplots-and-relationships.md",
+      "bytes": 6104,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the comparison; Start with two quantitative measures; Add a linear regression; Connect observations only when order matters; Compare each observation with its predecessor; Separate visible cells from nearest-point focus; Production checks",
+          "file": "references/guides/charts-docs-examples-scatterplots-and-relationships-md-dfd185c2.md",
+          "bytes": 6104
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/stacked-and-composition.md",
+      "title": "Stacked And Composition",
+      "theme": "examples-core",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-stacked-and-composition-md-e79a97ca.md",
+      "sourcePath": "docs/examples/stacked-and-composition.md",
+      "bytes": 9663,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the composition; Preserve totals with a stacked area; Center an ordered response scale; Compare proportional mix; Emphasize changing shape; Show stage attrition; Show shares as fixed units; Encode two part-to-whole dimensions; Production checks",
+          "file": "references/guides/charts-docs-examples-stacked-and-composition-md-e79a97ca.md",
+          "bytes": 9663
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/facets-and-multiple-views.md",
+      "title": "Facets And Multiple Views",
+      "theme": "examples-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-facets-and-multiple-views-md-e510b301.md",
+      "sourcePath": "docs/examples/facets-and-multiple-views.md",
+      "bytes": 7949,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the layout; Repeat one encoding by group; Add marginal context; Overlay a summary; Pair detail with context; Coordinate views by values, not pixels; Production checks",
+          "file": "references/guides/charts-docs-examples-facets-and-multiple-views-md-e510b301.md",
+          "bytes": 7949
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/interactive-charts.md",
+      "title": "Interactive Charts",
+      "theme": "examples-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-interactive-charts-md-2668d57c.md",
+      "sourcePath": "docs/examples/interactive-charts.md",
+      "bytes": 10782,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the interaction; Compare focus marks; Follow focus with a crosshair; Pin and expand rich detail; Scroll a wide schedule; Zoom and pan a time domain; Edit an interval; State and lifecycle; Production checks",
+          "file": "references/guides/charts-docs-examples-interactive-charts-md-2668d57c.md",
+          "bytes": 10782
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/maps-and-spatial.md",
+      "title": "Maps And Spatial",
+      "theme": "examples-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-maps-and-spatial-md-be409a35.md",
+      "sourcePath": "docs/examples/maps-and-spatial.md",
+      "bytes": 10092,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Choose the spatial encoding; Compare regional aggregates; Prepare atlas boundaries; Project GeoJSON responsively; Project points by magnitude; Change the projection; Layer routes over geography; Show direction and magnitude; Projection and responsive layout; Color, boundaries, and missing data; Accessibility and interaction; Production checks",
+          "file": "references/guides/charts-docs-examples-maps-and-spatial-md-be409a35.md",
+          "bytes": 10092
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/networks-and-hierarchies.md",
+      "title": "Networks And Hierarchies",
+      "theme": "examples-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md",
+      "sourcePath": "docs/examples/networks-and-hierarchies.md",
+      "bytes": 2188,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--overview.md",
+          "bytes": 720
+        },
+        {
+          "title": "Choose the topology",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--choose-the-topology.md",
+          "bytes": 1700
+        },
+        {
+          "title": "Start with a basic Sankey",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--start-with-a-basic-sankey.md",
+          "bytes": 2654
+        },
+        {
+          "title": "Customize a Sankey",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--customize-a-sankey.md",
+          "bytes": 1380
+        },
+        {
+          "title": "Show a strict hierarchy",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--show-a-strict-hierarchy.md",
+          "bytes": 3295
+        },
+        {
+          "title": "Compare hierarchy area",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--compare-hierarchy-area.md",
+          "bytes": 1839
+        },
+        {
+          "title": "Partition hierarchy depth",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--partition-hierarchy-depth.md",
+          "bytes": 1593
+        },
+        {
+          "title": "Reveal spatial adjacency",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--reveal-spatial-adjacency.md",
+          "bytes": 1173
+        },
+        {
+          "title": "Explore an unconstrained character network",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--explore-an-unconstrained-character-network.md",
+          "bytes": 2275
+        },
+        {
+          "title": "Labels, direction, and weight",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--labels-direction-and-weight.md",
+          "bytes": 977
+        },
+        {
+          "title": "Production checks",
+          "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30--production-checks.md",
+          "bytes": 840
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/polar-and-radar.md",
+      "title": "Polar And Radar",
+      "theme": "examples-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13.md",
+      "sourcePath": "docs/examples/polar-and-radar.md",
+      "bytes": 1731,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--overview.md",
+          "bytes": 701
+        },
+        {
+          "title": "Pie and donut",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--pie-and-donut.md",
+          "bytes": 2731
+        },
+        {
+          "title": "Partial-circle gauge",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--partial-circle-gauge.md",
+          "bytes": 1963
+        },
+        {
+          "title": "Radar profile",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--radar-profile.md",
+          "bytes": 3753
+        },
+        {
+          "title": "Numeric polar line",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--numeric-polar-line.md",
+          "bytes": 2405
+        },
+        {
+          "title": "Numeric polar scatter",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--numeric-polar-scatter.md",
+          "bytes": 2019
+        },
+        {
+          "title": "Radial bars",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--radial-bars.md",
+          "bytes": 2390
+        },
+        {
+          "title": "Polar hierarchy",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--polar-hierarchy.md",
+          "bytes": 2193
+        },
+        {
+          "title": "Coordinate and bundle boundary",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--coordinate-and-bundle-boundary.md",
+          "bytes": 1271
+        },
+        {
+          "title": "Production checks",
+          "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13--production-checks.md",
+          "bytes": 714
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/examples/themes-and-motion.md",
+      "title": "Themes And Motion",
+      "theme": "examples-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-examples-themes-and-motion-md-37980877.md",
+      "sourcePath": "docs/examples/themes-and-motion.md",
+      "bytes": 5004,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Cases; Ownership; Motion boundary; Paint boundary; Current limits",
+          "file": "references/guides/charts-docs-examples-themes-and-motion-md-37980877.md",
+          "bytes": 5004
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/bar-and-rect.md",
+      "title": "Bar And Rect",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md",
+      "sourcePath": "docs/reference/marks/bar-and-rect.md",
+      "bytes": 1658,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--overview.md",
+          "bytes": 519
+        },
+        {
+          "title": "`barY`",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--bary.md",
+          "bytes": 3648
+        },
+        {
+          "title": "`barX`",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--barx.md",
+          "bytes": 2881
+        },
+        {
+          "title": "Bar bandwidth",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--bar-bandwidth.md",
+          "bytes": 1326
+        },
+        {
+          "title": "Grouped bars",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--grouped-bars.md",
+          "bytes": 1232
+        },
+        {
+          "title": "Stacked bars",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--stacked-bars.md",
+          "bytes": 2859
+        },
+        {
+          "title": "Bar baselines and invalid rows",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--bar-baselines-and-invalid-rows.md",
+          "bytes": 594
+        },
+        {
+          "title": "`bandX` and `bandY`",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--bandx-and-bandy.md",
+          "bytes": 956
+        },
+        {
+          "title": "`rect`",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--rect.md",
+          "bytes": 4087
+        },
+        {
+          "title": "`cell`",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--cell.md",
+          "bytes": 544
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/box.md",
+      "title": "Box",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-box-md-aab0dd81.md",
+      "sourcePath": "docs/reference/marks/box.md",
+      "bytes": 6710,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Signatures; Summary semantics; Eager rows; Options; Derived data and lineage; Interaction",
+          "file": "references/guides/charts-docs-reference-marks-box-md-aab0dd81.md",
+          "bytes": 6710
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/contour.md",
+      "title": "Contour",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-contour-md-76f842db.md",
+      "sourcePath": "docs/reference/marks/contour.md",
+      "bytes": 5124,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Grid and lifecycle; Geometry and interaction",
+          "file": "references/guides/charts-docs-reference-marks-contour-md-76f842db.md",
+          "bytes": 5124
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/density.md",
+      "title": "Density",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-density-md-a4d4a2ed.md",
+      "sourcePath": "docs/reference/marks/density.md",
+      "bytes": 6104,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Resolved estimation; Geometry and interaction",
+          "file": "references/guides/charts-docs-reference-marks-density-md-a4d4a2ed.md",
+          "bytes": 6104
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/difference.md",
+      "title": "Difference",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-difference-md-2f5d5bad.md",
+      "sourcePath": "docs/reference/marks/difference.md",
+      "bytes": 8033,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Signatures; Crossing and gap semantics; Options; Derived data and lineage; Interaction",
+          "file": "references/guides/charts-docs-reference-marks-difference-md-2f5d5bad.md",
+          "bytes": 8033
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/dodge.md",
+      "title": "Dodge",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-dodge-md-880e331b.md",
+      "sourcePath": "docs/reference/marks/dodge.md",
+      "bytes": 3787,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Signatures; Custom layouts; Scale ownership; Collision and radius; Identity, facets, and grouping",
+          "file": "references/guides/charts-docs-reference-marks-dodge-md-880e331b.md",
+          "bytes": 3787
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/dot-and-hexagon.md",
+      "title": "Dot And Hexagon",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-dot-and-hexagon-md-df946606.md",
+      "sourcePath": "docs/reference/marks/dot-and-hexagon.md",
+      "bytes": 7094,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `dot`; `hexagon`; Valid rows and points; Radius scales",
+          "file": "references/guides/charts-docs-reference-marks-dot-and-hexagon-md-df946606.md",
+          "bytes": 7094
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/hexbin.md",
+      "title": "Hexbin",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-hexbin-md-aeb4ac1c.md",
+      "sourcePath": "docs/reference/marks/hexbin.md",
+      "bytes": 4874,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Reducers and lineage; Responsive behavior",
+          "file": "references/guides/charts-docs-reference-marks-hexbin-md-aeb4ac1c.md",
+          "bytes": 4874
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/line-and-area.md",
+      "title": "Line And Area",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2.md",
+      "sourcePath": "docs/reference/marks/line-and-area.md",
+      "bytes": 1266,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--overview.md",
+          "bytes": 523
+        },
+        {
+          "title": "`lineY`",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--liney.md",
+          "bytes": 3051
+        },
+        {
+          "title": "`lineX`",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--linex.md",
+          "bytes": 990
+        },
+        {
+          "title": "`areaY`",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--areay.md",
+          "bytes": 4023
+        },
+        {
+          "title": "`areaX`",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--areax.md",
+          "bytes": 3412
+        },
+        {
+          "title": "Curves",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--curves.md",
+          "bytes": 1112
+        },
+        {
+          "title": "Layering area and line",
+          "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--layering-area-and-line.md",
+          "bytes": 817
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/regression.md",
+      "title": "Regression",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-regression-md-ff635935.md",
+      "sourcePath": "docs/reference/marks/regression.md",
+      "bytes": 6464,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Signatures; Fit and confidence semantics; Eager rows; Options; Derived data and lineage",
+          "file": "references/guides/charts-docs-reference-marks-regression-md-ff635935.md",
+          "bytes": 6464
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/ridgeline.md",
+      "title": "Ridgeline",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-ridgeline-md-ba6db520.md",
+      "sourcePath": "docs/reference/marks/ridgeline.md",
+      "bytes": 6525,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Prepared profiles; Signatures; Options; Category scale and padding; Identity and interaction",
+          "file": "references/guides/charts-docs-reference-marks-ridgeline-md-ba6db520.md",
+          "bytes": 6525
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/violin.md",
+      "title": "Violin",
+      "theme": "marks-cartesian-statistical",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-violin-md-83fb131b.md",
+      "sourcePath": "docs/reference/marks/violin.md",
+      "bytes": 6375,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Prepared profiles and summaries; Signatures; Options; Category scale, identity, and interaction",
+          "file": "references/guides/charts-docs-reference-marks-violin-md-83fb131b.md",
+          "bytes": 6375
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/delaunay.md",
+      "title": "Delaunay",
+      "theme": "marks-spatial",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-delaunay-md-53f33821.md",
+      "sourcePath": "docs/reference/marks/delaunay.md",
+      "bytes": 4984,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Final-screen topology; Edge lineage and identity; Visible links versus nearest-point lookup",
+          "file": "references/guides/charts-docs-reference-marks-delaunay-md-53f33821.md",
+          "bytes": 4984
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/focus-guide.md",
+      "title": "Focus Guide",
+      "theme": "marks-spatial",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-focus-guide-md-7c751ac1.md",
+      "sourcePath": "docs/reference/marks/focus-guide.md",
+      "bytes": 4949,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Focus and motion",
+          "file": "references/guides/charts-docs-reference-marks-focus-guide-md-7c751ac1.md",
+          "bytes": 4949
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/geo.md",
+      "title": "Geo",
+      "theme": "marks-spatial",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-geo-md-2e4a1799.md",
+      "sourcePath": "docs/reference/marks/geo.md",
+      "bytes": 5048,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `geoShape`",
+          "file": "references/guides/charts-docs-reference-marks-geo-md-2e4a1799.md",
+          "bytes": 5048
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/polar.md",
+      "title": "Polar",
+      "theme": "marks-spatial",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849.md",
+      "sourcePath": "docs/reference/marks/polar.md",
+      "bytes": 1751,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--overview.md",
+          "bytes": 848
+        },
+        {
+          "title": "`polar`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--polar.md",
+          "bytes": 4454
+        },
+        {
+          "title": "`focusGroupAngle`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--focusgroupangle.md",
+          "bytes": 984
+        },
+        {
+          "title": "`pie`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--pie.md",
+          "bytes": 2380
+        },
+        {
+          "title": "`radialArc`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialarc.md",
+          "bytes": 3183
+        },
+        {
+          "title": "`radialBarRadius` and `radialBarAngle`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialbarradius-and-radialbarangle.md",
+          "bytes": 2296
+        },
+        {
+          "title": "`radialLine` and `radialArea`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialline-and-radialarea.md",
+          "bytes": 1522
+        },
+        {
+          "title": "`radialDot`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialdot.md",
+          "bytes": 722
+        },
+        {
+          "title": "`radialText`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialtext.md",
+          "bytes": 1300
+        },
+        {
+          "title": "`radialRule`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialrule.md",
+          "bytes": 1284
+        },
+        {
+          "title": "`radialGrid` and `angleGrid`",
+          "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849--radialgrid-and-anglegrid.md",
+          "bytes": 3025
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/voronoi.md",
+      "title": "Voronoi",
+      "theme": "marks-spatial",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-voronoi-md-4818337f.md",
+      "sourcePath": "docs/reference/marks/voronoi.md",
+      "bytes": 6085,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Final-screen topology; Groups and identity; Visible cells versus focus",
+          "file": "references/guides/charts-docs-reference-marks-voronoi-md-4818337f.md",
+          "bytes": 6085
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/rules-links-arrows-vectors-and-ticks.md",
+      "title": "Rules Links Arrows Vectors And Ticks",
+      "theme": "marks-composite",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb.md",
+      "sourcePath": "docs/reference/marks/rules-links-arrows-vectors-and-ticks.md",
+      "bytes": 1466,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--overview.md",
+          "bytes": 546
+        },
+        {
+          "title": "`ruleX` and `ruleY`",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--rulex-and-ruley.md",
+          "bytes": 2331
+        },
+        {
+          "title": "`link`",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--link.md",
+          "bytes": 2941
+        },
+        {
+          "title": "`arrow`",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--arrow.md",
+          "bytes": 2433
+        },
+        {
+          "title": "`vector`",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--vector.md",
+          "bytes": 2796
+        },
+        {
+          "title": "`tickX` and `tickY`",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--tickx-and-ticky.md",
+          "bytes": 3075
+        },
+        {
+          "title": "Invalid rows and identity",
+          "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb--invalid-rows-and-identity.md",
+          "bytes": 542
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/sankey.md",
+      "title": "Sankey",
+      "theme": "marks-composite",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-sankey-md-7c353525.md",
+      "sourcePath": "docs/reference/marks/sankey.md",
+      "bytes": 9212,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Graph input; Options; Child marks; Node and link rows; Types",
+          "file": "references/guides/charts-docs-reference-marks-sankey-md-7c353525.md",
+          "bytes": 9212
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/sunburst.md",
+      "title": "Sunburst",
+      "theme": "marks-composite",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-sunburst-md-ebf0a51e.md",
+      "sourcePath": "docs/reference/marks/sunburst.md",
+      "bytes": 9904,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Hierarchy input; Options; Responsive partition; Drill-down and motion; Nodes and lineage; Types",
+          "file": "references/guides/charts-docs-reference-marks-sunburst-md-ebf0a51e.md",
+          "bytes": 9904
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/text-frame-and-facet.md",
+      "title": "Text Frame And Facet",
+      "theme": "marks-composite",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-text-frame-and-facet-md-f338f5fc.md",
+      "sourcePath": "docs/reference/marks/text-frame-and-facet.md",
+      "bytes": 10986,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `text`; `frame`; `facet`; `facetChart`",
+          "file": "references/guides/charts-docs-reference-marks-text-frame-and-facet-md-f338f5fc.md",
+          "bytes": 10986
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/treemap.md",
+      "title": "Treemap",
+      "theme": "marks-composite",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-treemap-md-4dc515c2.md",
+      "sourcePath": "docs/reference/marks/treemap.md",
+      "bytes": 8578,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Hierarchy input; Options; Responsive layout; Nodes, labels, and interaction; Types",
+          "file": "references/guides/charts-docs-reference-marks-treemap-md-4dc515c2.md",
+          "bytes": 8578
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/marks/waffle.md",
+      "title": "Waffle",
+      "theme": "marks-composite",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-marks-waffle-md-b493d928.md",
+      "sourcePath": "docs/reference/marks/waffle.md",
+      "bytes": 6358,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Orientation; Options; Unit boundaries; Responsive packing; Source identity and interaction",
+          "file": "references/guides/charts-docs-reference-marks-waffle-md-b493d928.md",
+          "bytes": 6358
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/chart-definitions.md",
+      "title": "Chart Definitions",
+      "theme": "specifications",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-chart-definitions-md-6855d09b.md",
+      "sourcePath": "docs/reference/chart-definitions.md",
+      "bytes": 6162,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "`defineChart`; Static definitions; Responsive definitions; Definition behavior; Identity and updates; Types",
+          "file": "references/guides/charts-docs-reference-chart-definitions-md-6855d09b.md",
+          "bytes": 6162
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/chart-spec.md",
+      "title": "Chart Spec",
+      "theme": "specifications",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-chart-spec-md-b8fe14b4.md",
+      "sourcePath": "docs/reference/chart-spec.md",
+      "bytes": 7457,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Properties; Marks and layer order; Required positional scales; Guides and margins; Clip and gradient resources; Theme",
+          "file": "references/guides/charts-docs-reference-chart-spec-md-b8fe14b4.md",
+          "bytes": 7457
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/index.md",
+      "title": "Index",
+      "theme": "specifications",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc.md",
+      "sourcePath": "docs/reference/index.md",
+      "bytes": 1045,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--overview.md",
+          "bytes": 497
+        },
+        {
+          "title": "Core reference",
+          "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--core-reference.md",
+          "bytes": 2895
+        },
+        {
+          "title": "Mark reference",
+          "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--mark-reference.md",
+          "bytes": 6892
+        },
+        {
+          "title": "Framework adapters",
+          "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--framework-adapters.md",
+          "bytes": 3891
+        },
+        {
+          "title": "Surface tiers",
+          "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--surface-tiers.md",
+          "bytes": 1316
+        },
+        {
+          "title": "Import map",
+          "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--import-map.md",
+          "bytes": 27431
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/types.md",
+      "title": "Types",
+      "theme": "types",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-types-md-686ca8ea.md",
+      "sourcePath": "docs/reference/types.md",
+      "bytes": 2192,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--overview.md",
+          "bytes": 720
+        },
+        {
+          "title": "Callback shape",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--callback-shape.md",
+          "bytes": 497
+        },
+        {
+          "title": "Values and channels",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--values-and-channels.md",
+          "bytes": 1653
+        },
+        {
+          "title": "Inference path",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--inference-path.md",
+          "bytes": 3037
+        },
+        {
+          "title": "Definitions",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--definitions.md",
+          "bytes": 1822
+        },
+        {
+          "title": "Marks and scenes",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--marks-and-scenes.md",
+          "bytes": 4411
+        },
+        {
+          "title": "Scene-node types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--scene-node-types.md",
+          "bytes": 953
+        },
+        {
+          "title": "Scale, guide, color, and theme types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--scale-guide-color-and-theme-types.md",
+          "bytes": 5958
+        },
+        {
+          "title": "Host and runtime types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--host-and-runtime-types.md",
+          "bytes": 1878
+        },
+        {
+          "title": "Focus and tooltip types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--focus-and-tooltip-types.md",
+          "bytes": 10062
+        },
+        {
+          "title": "Rendering types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--rendering-types.md",
+          "bytes": 2188
+        },
+        {
+          "title": "Capability-specific types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--capability-specific-types.md",
+          "bytes": 6139
+        },
+        {
+          "title": "Mark option types",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--mark-option-types.md",
+          "bytes": 1294
+        },
+        {
+          "title": "Correcting a type error",
+          "file": "references/guides/charts-docs-reference-types-md-686ca8ea--correcting-a-type-error.md",
+          "bytes": 790
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/focus-and-interaction.md",
+      "title": "Focus And Interaction",
+      "theme": "interaction-motion-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe.md",
+      "sourcePath": "docs/reference/focus-and-interaction.md",
+      "bytes": 2808,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--overview.md",
+          "bytes": 582
+        },
+        {
+          "title": "Default behavior",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--default-behavior.md",
+          "bytes": 5539
+        },
+        {
+          "title": "Focus modes",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--focus-modes.md",
+          "bytes": 2677
+        },
+        {
+          "title": "Crosshair guides",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--crosshair-guides.md",
+          "bytes": 7945
+        },
+        {
+          "title": "Controlled cursors",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--controlled-cursors.md",
+          "bytes": 7308
+        },
+        {
+          "title": "Controlled keyed selection",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--controlled-keyed-selection.md",
+          "bytes": 2679
+        },
+        {
+          "title": "Continuous cursor",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--continuous-cursor.md",
+          "bytes": 3241
+        },
+        {
+          "title": "Horizontal brush",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--horizontal-brush.md",
+          "bytes": 1552
+        },
+        {
+          "title": "Horizontal scale handle",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--horizontal-scale-handle.md",
+          "bytes": 2999
+        },
+        {
+          "title": "Horizontal zoom",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--horizontal-zoom.md",
+          "bytes": 3043
+        },
+        {
+          "title": "Disabling chart-owned focus",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--disabling-chart-owned-focus.md",
+          "bytes": 961
+        },
+        {
+          "title": "Custom focus strategies",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--custom-focus-strategies.md",
+          "bytes": 1212
+        },
+        {
+          "title": "Tooltips",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--tooltips.md",
+          "bytes": 8357
+        },
+        {
+          "title": "Callbacks",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--callbacks.md",
+          "bytes": 930
+        },
+        {
+          "title": "Spatial indexes",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--spatial-indexes.md",
+          "bytes": 1508
+        },
+        {
+          "title": "Application-owned gestures",
+          "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--application-owned-gestures.md",
+          "bytes": 1951
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/motion.md",
+      "title": "Motion",
+      "theme": "interaction-motion-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-motion-md-125c7e38.md",
+      "sourcePath": "docs/reference/motion.md",
+      "bytes": 1347,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--overview.md",
+          "bytes": 293
+        },
+        {
+          "title": "`motion`",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--motion.md",
+          "bytes": 3531
+        },
+        {
+          "title": "Definition-local motion",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--definition-local-motion.md",
+          "bytes": 3604
+        },
+        {
+          "title": "Spreading timing utilities",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--spreading-timing-utilities.md",
+          "bytes": 1275
+        },
+        {
+          "title": "Timing types",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--timing-types.md",
+          "bytes": 1856
+        },
+        {
+          "title": "Rolling paths",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--rolling-paths.md",
+          "bytes": 4073
+        },
+        {
+          "title": "Standalone spring",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--standalone-spring.md",
+          "bytes": 1103
+        },
+        {
+          "title": "Compatibility",
+          "file": "references/guides/charts-docs-reference-motion-md-125c7e38--compatibility.md",
+          "bytes": 804
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/runtime-and-scene.md",
+      "title": "Runtime And Scene",
+      "theme": "runtime-scales-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-runtime-and-scene-md-e3fcc593.md",
+      "sourcePath": "docs/reference/runtime-and-scene.md",
+      "bytes": 11671,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `createChartRuntime`; `createChartScene`; `defaultChartTheme`; `findNearestPoint`; `viewportInteractionPoints`; `ChartScene`; Scene nodes; Interaction points",
+          "file": "references/guides/charts-docs-reference-runtime-and-scene-md-e3fcc593.md",
+          "bytes": 11671
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/scales-guides-and-color.md",
+      "title": "Scales Guides And Color",
+      "theme": "runtime-scales-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024.md",
+      "sourcePath": "docs/reference/scales-guides-and-color.md",
+      "bytes": 2647,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--overview.md",
+          "bytes": 1265
+        },
+        {
+          "title": "Default compact scale entries",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--default-compact-scale-entries.md",
+          "bytes": 1870
+        },
+        {
+          "title": "Positional scale factories",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--positional-scale-factories.md",
+          "bytes": 1235
+        },
+        {
+          "title": "D3 scale upgrades",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--d3-scale-upgrades.md",
+          "bytes": 1100
+        },
+        {
+          "title": "Fixed domains",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--fixed-domains.md",
+          "bytes": 947
+        },
+        {
+          "title": "Axis options",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--axis-options.md",
+          "bytes": 7494
+        },
+        {
+          "title": "Named scales and multiple axes",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--named-scales-and-multiple-axes.md",
+          "bytes": 1560
+        },
+        {
+          "title": "Automatic guide layout",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--automatic-guide-layout.md",
+          "bytes": 1721
+        },
+        {
+          "title": "Custom scales",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--custom-scales.md",
+          "bytes": 1693
+        },
+        {
+          "title": "Color",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--color.md",
+          "bytes": 3983
+        },
+        {
+          "title": "Automatic color legend",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--automatic-color-legend.md",
+          "bytes": 945
+        },
+        {
+          "title": "Gradient legend",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--gradient-legend.md",
+          "bytes": 871
+        },
+        {
+          "title": "Interactive categorical legend",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--interactive-categorical-legend.md",
+          "bytes": 1771
+        },
+        {
+          "title": "Custom legends",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--custom-legends.md",
+          "bytes": 952
+        },
+        {
+          "title": "Theme and gradients",
+          "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--theme-and-gradients.md",
+          "bytes": 957
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/adapter-controller.md",
+      "title": "Adapter Controller",
+      "theme": "rendering-composition-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-adapter-controller-md-3c6899b7.md",
+      "sourcePath": "docs/reference/adapter-controller.md",
+      "bytes": 5889,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Entry points; Controller factories; Prerender and mount; Initial layout; Ownership boundary",
+          "file": "references/guides/charts-docs-reference-adapter-controller-md-3c6899b7.md",
+          "bytes": 5889
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/custom-extensions.md",
+      "title": "Custom Extensions",
+      "theme": "rendering-composition-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0.md",
+      "sourcePath": "docs/reference/custom-extensions.md",
+      "bytes": 2058,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--overview.md",
+          "bytes": 440
+        },
+        {
+          "title": "Composite marks",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--composite-marks.md",
+          "bytes": 1582
+        },
+        {
+          "title": "Custom marks",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--custom-marks.md",
+          "bytes": 8581
+        },
+        {
+          "title": "Distinct point and scale values",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--distinct-point-and-scale-values.md",
+          "bytes": 1330
+        },
+        {
+          "title": "Curves",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--curves.md",
+          "bytes": 1028
+        },
+        {
+          "title": "Custom positional scales",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--custom-positional-scales.md",
+          "bytes": 603
+        },
+        {
+          "title": "Custom color scales and legends",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--custom-color-scales-and-legends.md",
+          "bytes": 700
+        },
+        {
+          "title": "Custom text measurement",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--custom-text-measurement.md",
+          "bytes": 714
+        },
+        {
+          "title": "Spatial indexes",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--spatial-indexes.md",
+          "bytes": 918
+        },
+        {
+          "title": "Custom focus and gestures",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--custom-focus-and-gestures.md",
+          "bytes": 704
+        },
+        {
+          "title": "Custom renderers",
+          "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0--custom-renderers.md",
+          "bytes": 2712
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/dom-host.md",
+      "title": "Dom Host",
+      "theme": "rendering-composition-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-dom-host-md-10380040.md",
+      "sourcePath": "docs/reference/dom-host.md",
+      "bytes": 12616,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Signature; Basic use; Renderer-neutral and Canvas hosts; Host options; Responsive sizing; Font measurement; `ChartHost`; Browser ownership",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040.md",
+          "bytes": 12616
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/rendering-and-export.md",
+      "title": "Rendering And Export",
+      "theme": "rendering-composition-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527.md",
+      "sourcePath": "docs/reference/rendering-and-export.md",
+      "bytes": 2089,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--overview.md",
+          "bytes": 671
+        },
+        {
+          "title": "Choose a renderer",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--choose-a-renderer.md",
+          "bytes": 2683
+        },
+        {
+          "title": "React Native adapter",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--react-native-adapter.md",
+          "bytes": 1347
+        },
+        {
+          "title": "`renderChartSvg`",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--renderchartsvg.md",
+          "bytes": 1906
+        },
+        {
+          "title": "Canvas renderer",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--canvas-renderer.md",
+          "bytes": 5490
+        },
+        {
+          "title": "SVG resources",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--svg-resources.md",
+          "bytes": 869
+        },
+        {
+          "title": "`reconcileChartSvg`",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--reconcilechartsvg.md",
+          "bytes": 1844
+        },
+        {
+          "title": "Animation options",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--animation-options.md",
+          "bytes": 1856
+        },
+        {
+          "title": "SVG serialization",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--svg-serialization.md",
+          "bytes": 1477
+        },
+        {
+          "title": "Browser image export",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--browser-image-export.md",
+          "bytes": 1802
+        },
+        {
+          "title": "Mark-level renderers",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--mark-level-renderers.md",
+          "bytes": 3115
+        },
+        {
+          "title": "Custom renderers",
+          "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--custom-renderers.md",
+          "bytes": 10490
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/transforms.md",
+      "title": "Transforms",
+      "theme": "rendering-composition-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab.md",
+      "sourcePath": "docs/reference/transforms.md",
+      "bytes": 1842,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--overview.md",
+          "bytes": 335
+        },
+        {
+          "title": "Functions",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--functions.md",
+          "bytes": 3294
+        },
+        {
+          "title": "Fold wide rows",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--fold-wide-rows.md",
+          "bytes": 1156
+        },
+        {
+          "title": "Group fields",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--group-fields.md",
+          "bytes": 583
+        },
+        {
+          "title": "Reducers",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--reducers.md",
+          "bytes": 1201
+        },
+        {
+          "title": "Ordering and flat rows",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--ordering-and-flat-rows.md",
+          "bytes": 1013
+        },
+        {
+          "title": "Mosaic intervals",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--mosaic-intervals.md",
+          "bytes": 1303
+        },
+        {
+          "title": "Waterfall intervals",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--waterfall-intervals.md",
+          "bytes": 1650
+        },
+        {
+          "title": "Tidy hierarchy trees",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--tidy-hierarchy-trees.md",
+          "bytes": 2201
+        },
+        {
+          "title": "Static force layouts",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--static-force-layouts.md",
+          "bytes": 3284
+        },
+        {
+          "title": "Lineage",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--lineage.md",
+          "bytes": 834
+        },
+        {
+          "title": "Types",
+          "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab--types.md",
+          "bytes": 2399
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/reference/view-composition.md",
+      "title": "View Composition",
+      "theme": "rendering-composition-reference",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-reference-view-composition-md-2d7f8e9e.md",
+      "sourcePath": "docs/reference/view-composition.md",
+      "bytes": 6677,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Overlay a donut summary; Layout primitives; Shared and aligned ranges; Scene and interaction ownership; `viewGrid` convenience syntax",
+          "file": "references/guides/charts-docs-reference-view-composition-md-2d7f8e9e.md",
+          "bytes": 6677
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/custom-marks-and-renderers.md",
+      "title": "Custom Marks And Renderers",
+      "theme": "composition",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847.md",
+      "sourcePath": "docs/guides/custom-marks-and-renderers.md",
+      "bytes": 2417,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--overview.md",
+          "bytes": 583
+        },
+        {
+          "title": "Start with composition",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--start-with-composition.md",
+          "bytes": 1602
+        },
+        {
+          "title": "Group reusable child marks",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--group-reusable-child-marks.md",
+          "bytes": 1390
+        },
+        {
+          "title": "Create a mark",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--create-a-mark.md",
+          "bytes": 3074
+        },
+        {
+          "title": "Interaction points",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--interaction-points.md",
+          "bytes": 1792
+        },
+        {
+          "title": "Focus-only anchors",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--focus-only-anchors.md",
+          "bytes": 887
+        },
+        {
+          "title": "Focus-guide marks",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--focus-guide-marks.md",
+          "bytes": 2435
+        },
+        {
+          "title": "Separate point and scale values",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--separate-point-and-scale-values.md",
+          "bytes": 908
+        },
+        {
+          "title": "Custom scales and legends",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--custom-scales-and-legends.md",
+          "bytes": 821
+        },
+        {
+          "title": "Custom renderer",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--custom-renderer.md",
+          "bytes": 2485
+        },
+        {
+          "title": "Custom SVG serializer",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--custom-svg-serializer.md",
+          "bytes": 1293
+        },
+        {
+          "title": "Custom focus and spatial indexes",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--custom-focus-and-spatial-indexes.md",
+          "bytes": 767
+        },
+        {
+          "title": "Extension checklist",
+          "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--extension-checklist.md",
+          "bytes": 733
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/dynamic-data-and-animation.md",
+      "title": "Dynamic Data And Animation",
+      "theme": "composition",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-dynamic-data-and-animation-md-f2a556c9.md",
+      "sourcePath": "docs/guides/dynamic-data-and-animation.md",
+      "bytes": 8890,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; React; Vanilla; Stable keys; Lightweight SVG tweening; Optional tween and spring motion; Streaming",
+          "file": "references/guides/charts-docs-guides-dynamic-data-and-animation-md-f2a556c9.md",
+          "bytes": 8890
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/faceting-and-composition.md",
+      "title": "Faceting And Composition",
+      "theme": "composition",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-faceting-and-composition-md-9af69e08.md",
+      "sourcePath": "docs/guides/faceting-and-composition.md",
+      "bytes": 5848,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Layer marks; Facet one view by a field; Share domains intentionally; Compose distinct views; Composition checklist",
+          "file": "references/guides/charts-docs-guides-faceting-and-composition-md-9af69e08.md",
+          "bytes": 5848
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/legends-and-color.md",
+      "title": "Legends And Color",
+      "theme": "composition",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-legends-and-color-md-715f4e34.md",
+      "sourcePath": "docs/guides/legends-and-color.md",
+      "bytes": 7861,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Automatic categorical color; Quantitative color; Automatic color legend; Explicit gradient legend; Controlled interactive legend; Direct labels versus legends; Theme and accessibility rules",
+          "file": "references/guides/charts-docs-guides-legends-and-color-md-715f4e34.md",
+          "bytes": 7861
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/themes-and-styling.md",
+      "title": "Themes And Styling",
+      "theme": "composition",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-themes-and-styling-md-d4e17373.md",
+      "sourcePath": "docs/guides/themes-and-styling.md",
+      "bytes": 7576,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Palette tokens; Definition-level theme; Mark styling; Canvas styling; Gradients and clipping; HTML tooltip styling; Theme checklist",
+          "file": "references/guides/charts-docs-guides-themes-and-styling-md-d4e17373.md",
+          "bytes": 7576
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/transforms-and-reactivity.md",
+      "title": "Transforms And Reactivity",
+      "theme": "composition",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-transforms-and-reactivity-md-38773ca5.md",
+      "sourcePath": "docs/guides/transforms-and-reactivity.md",
+      "bytes": 4463,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Hoist the calculation; Compose structural and analytic transforms; Use callbacks and escape hatches; Memoize at the owner; Keep geometry separate",
+          "file": "references/guides/charts-docs-guides-transforms-and-reactivity-md-38773ca5.md",
+          "bytes": 4463
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/accessibility.md",
+      "title": "Accessibility",
+      "theme": "interaction-accessibility",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-accessibility-md-3af2af82.md",
+      "sourcePath": "docs/guides/accessibility.md",
+      "bytes": 12268,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Name the chart; Preserve semantic context outside the surface; Keyboard focus and selection; Never rely on color alone; Motion; Tooltips are supplemental; Linked table pattern; Testing checklist",
+          "file": "references/guides/charts-docs-guides-accessibility-md-3af2af82.md",
+          "bytes": 12268
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/interactions-and-selections.md",
+      "title": "Interactions And Selections",
+      "theme": "interaction-accessibility",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d.md",
+      "sourcePath": "docs/guides/interactions-and-selections.md",
+      "bytes": 3203,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--overview.md",
+          "bytes": 572
+        },
+        {
+          "title": "Choose the owner",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--choose-the-owner.md",
+          "bytes": 1382
+        },
+        {
+          "title": "Cursors and crosshairs",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--cursors-and-crosshairs.md",
+          "bytes": 4964
+        },
+        {
+          "title": "Controlled signals",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--controlled-signals.md",
+          "bytes": 797
+        },
+        {
+          "title": "Controlled keyed selection",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--controlled-keyed-selection.md",
+          "bytes": 2247
+        },
+        {
+          "title": "Continuous cursor",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--continuous-cursor.md",
+          "bytes": 2425
+        },
+        {
+          "title": "Custom interaction loop",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--custom-interaction-loop.md",
+          "bytes": 700
+        },
+        {
+          "title": "Controlled point inspection",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--controlled-point-inspection.md",
+          "bytes": 2030
+        },
+        {
+          "title": "Invert resolved scales",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--invert-resolved-scales.md",
+          "bytes": 1376
+        },
+        {
+          "title": "Disable competing datum focus",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--disable-competing-datum-focus.md",
+          "bytes": 1180
+        },
+        {
+          "title": "Brush selection",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--brush-selection.md",
+          "bytes": 4202
+        },
+        {
+          "title": "Scale-bound handle",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--scale-bound-handle.md",
+          "bytes": 2025
+        },
+        {
+          "title": "Zoom and pan",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--zoom-and-pan.md",
+          "bytes": 2134
+        },
+        {
+          "title": "Linked views",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--linked-views.md",
+          "bytes": 630
+        },
+        {
+          "title": "Timelines and editors",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--timelines-and-editors.md",
+          "bytes": 641
+        },
+        {
+          "title": "Scrollable lanes",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--scrollable-lanes.md",
+          "bytes": 539
+        },
+        {
+          "title": "Lifecycle",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--lifecycle.md",
+          "bytes": 893
+        },
+        {
+          "title": "Interaction checklist",
+          "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--interaction-checklist.md",
+          "bytes": 867
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/tooltips-and-focus.md",
+      "title": "Tooltips And Focus",
+      "theme": "interaction-accessibility",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918.md",
+      "sourcePath": "docs/guides/tooltips-and-focus.md",
+      "bytes": 2395,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--overview.md",
+          "bytes": 481
+        },
+        {
+          "title": "Default nearest point",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--default-nearest-point.md",
+          "bytes": 723
+        },
+        {
+          "title": "Axis focus modes",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--axis-focus-modes.md",
+          "bytes": 1089
+        },
+        {
+          "title": "Angular focus",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--angular-focus.md",
+          "bytes": 4137
+        },
+        {
+          "title": "Automatic tooltip mapping",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--automatic-tooltip-mapping.md",
+          "bytes": 3642
+        },
+        {
+          "title": "Tooltip motion",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--tooltip-motion.md",
+          "bytes": 1306
+        },
+        {
+          "title": "Application-owned pointer timing",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--application-owned-pointer-timing.md",
+          "bytes": 1062
+        },
+        {
+          "title": "Anchoring and placement",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--anchoring-and-placement.md",
+          "bytes": 2104
+        },
+        {
+          "title": "Escaping clipped containers",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--escaping-clipped-containers.md",
+          "bytes": 1385
+        },
+        {
+          "title": "Typed callbacks",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--typed-callbacks.md",
+          "bytes": 1160
+        },
+        {
+          "title": "Rich and nested tooltips",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--rich-and-nested-tooltips.md",
+          "bytes": 4859
+        },
+        {
+          "title": "Keyboard behavior",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--keyboard-behavior.md",
+          "bytes": 625
+        },
+        {
+          "title": "Dense data",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--dense-data.md",
+          "bytes": 779
+        },
+        {
+          "title": "Ownership checklist",
+          "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918--ownership-checklist.md",
+          "bytes": 1091
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/ai-authoring.md",
+      "title": "Ai Authoring",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-ai-authoring-md-ba4db9b1.md",
+      "sourcePath": "docs/guides/ai-authoring.md",
+      "bytes": 7248,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; The authoring sequence; Canonical sources; Choose the smallest scale; Prefer complete, typed examples; Use the public boundary; Validate generated work; Request template; Skills boundary",
+          "file": "references/guides/charts-docs-guides-ai-authoring-md-ba4db9b1.md",
+          "bytes": 7248
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/bundle-size-and-performance.md",
+      "title": "Bundle Size And Performance",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e.md",
+      "sourcePath": "docs/guides/bundle-size-and-performance.md",
+      "bytes": 1704,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--overview.md",
+          "bytes": 380
+        },
+        {
+          "title": "Import the narrow path",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--import-the-narrow-path.md",
+          "bytes": 8421
+        },
+        {
+          "title": "Add D3 by capability",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--add-d3-by-capability.md",
+          "bytes": 1242
+        },
+        {
+          "title": "Measure the complete feature",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--measure-the-complete-feature.md",
+          "bytes": 1388
+        },
+        {
+          "title": "Separate preparation, scene, and paint",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--separate-preparation-scene-and-paint.md",
+          "bytes": 711
+        },
+        {
+          "title": "Choose a sane representation",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--choose-a-sane-representation.md",
+          "bytes": 1054
+        },
+        {
+          "title": "Update efficiently",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--update-efficiently.md",
+          "bytes": 973
+        },
+        {
+          "title": "Performance acceptance",
+          "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--performance-acceptance.md",
+          "bytes": 902
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/exporting.md",
+      "title": "Exporting",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-exporting-md-21385bf6.md",
+      "sourcePath": "docs/guides/exporting.md",
+      "bytes": 5854,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Render a scene to SVG; Serialize a mounted chart; Export PNG, JPEG, or WebP; Export a Canvas chart; Export a mixed SVG and Canvas chart; Theme and resource policy; Security and portability; Export checklist",
+          "file": "references/guides/charts-docs-guides-exporting-md-21385bf6.md",
+          "bytes": 5854
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/large-data.md",
+      "title": "Large Data",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-large-data-md-937914ac.md",
+      "sourcePath": "docs/guides/large-data.md",
+      "bytes": 7907,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Count every stage; Bounded representations; When raw output is still useful; When Canvas helps; Transform ownership; Interaction over dense output; Streaming windows; Performance measurement; Large-data checklist",
+          "file": "references/guides/charts-docs-guides-large-data-md-937914ac.md",
+          "bytes": 7907
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/migrating.md",
+      "title": "Migrating",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-migrating-md-d8cb4b55.md",
+      "sourcePath": "docs/guides/migrating.md",
+      "bytes": 8673,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Move pre-Alpha root scales into the registry; Inventory the current contract; Preserve transforms; Translate to the grammar; Consolidate package imports; Establish parity gates; Migrate incrementally; Know what not to migrate; Close the migration",
+          "file": "references/guides/charts-docs-guides-migrating-md-d8cb4b55.md",
+          "bytes": 8673
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/responsive-charts.md",
+      "title": "Responsive Charts",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-responsive-charts-md-aaa3953e.md",
+      "sourcePath": "docs/guides/responsive-charts.md",
+      "bytes": 7328,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Container-responsive width; Height and aspect ratio; Automatic guide space; Text measurement; Deterministic server output; Responsive construction; Responsive checklist",
+          "file": "references/guides/charts-docs-guides-responsive-charts-md-aaa3953e.md",
+          "bytes": 7328
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/ssr-and-hydration.md",
+      "title": "Ssr And Hydration",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-ssr-and-hydration-md-ff83bc62.md",
+      "sourcePath": "docs/guides/ssr-and-hydration.md",
+      "bytes": 8244,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Adapter support; Give the server a real size; Keep output deterministic; Hydration ownership; Canvas server shell; Fonts and text measurement; Render without a framework; Hydration checklist",
+          "file": "references/guides/charts-docs-guides-ssr-and-hydration-md-ff83bc62.md",
+          "bytes": 8244
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/guides/testing-and-debugging.md",
+      "title": "Testing And Debugging",
+      "theme": "production",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-guides-testing-and-debugging-md-84886915.md",
+      "sourcePath": "docs/guides/testing-and-debugging.md",
+      "bytes": 5093,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Test the scene first; Test serialized SVG; Test the DOM host; Test interaction as a sequence; Visual regression tests; Accessibility tests; Diagnose by layer; Performance tests need correctness gates",
+          "file": "references/guides/charts-docs-guides-testing-and-debugging-md-84886915.md",
+          "bytes": 5093
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/react/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-react-adapter-md-173a5842.md",
+      "sourcePath": "docs/framework/react/adapter.md",
+      "bytes": 8839,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Public exports; Render lifecycle; SSR and hydration; Sizing and layout; `className` and `style`; Tooltip body composition; Definition identity; Callback freshness; Core boundary",
+          "file": "references/guides/charts-docs-framework-react-adapter-md-173a5842.md",
+          "bytes": 8839
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/react/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-react-quick-start-md-75004790.md",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "bytes": 5878,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Define a chart; Responsive sizing; Memoize live definitions; Interaction callbacks; Render React tooltip content",
+          "file": "references/guides/charts-docs-framework-react-quick-start-md-75004790.md",
+          "bytes": 5878
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/react/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-react-reference-chart-md-0c0d868c.md",
+      "sourcePath": "docs/framework/react/reference/chart.md",
+      "bytes": 8804,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Renderer entry points; Definition props; Accessibility and sizing; Callbacks; Tooltip body; Rendering and layout extensions; Exported prop types",
+          "file": "references/guides/charts-docs-framework-react-reference-chart-md-0c0d868c.md",
+          "bytes": 8804
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/preact/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-preact-adapter-md-66591c4e.md",
+      "sourcePath": "docs/framework/preact/adapter.md",
+      "bytes": 2950,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; SSR and hydration; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-preact-adapter-md-66591c4e.md",
+          "bytes": 2950
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/preact/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-preact-reference-chart-md-a4765ba0.md",
+      "sourcePath": "docs/framework/preact/reference/chart.md",
+      "bytes": 5468,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Props; Exported types",
+          "file": "references/guides/charts-docs-framework-preact-reference-chart-md-a4765ba0.md",
+          "bytes": 5468
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/vue/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-vue-adapter-md-d7e382de.md",
+      "sourcePath": "docs/framework/vue/adapter.md",
+      "bytes": 2743,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; SSR and hydration; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-vue-adapter-md-d7e382de.md",
+          "bytes": 2743
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/vue/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-vue-reference-chart-md-c55f0cc9.md",
+      "sourcePath": "docs/framework/vue/reference/chart.md",
+      "bytes": 5568,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Props; Tooltip body slot; Exported types",
+          "file": "references/guides/charts-docs-framework-vue-reference-chart-md-c55f0cc9.md",
+          "bytes": 5568
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/solid/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-solid-adapter-md-cf732459.md",
+      "sourcePath": "docs/framework/solid/adapter.md",
+      "bytes": 2823,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; SSR and hydration; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-solid-adapter-md-cf732459.md",
+          "bytes": 2823
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/solid/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-solid-reference-chart-md-18b62c2a.md",
+      "sourcePath": "docs/framework/solid/reference/chart.md",
+      "bytes": 5480,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Props; Exported types",
+          "file": "references/guides/charts-docs-framework-solid-reference-chart-md-18b62c2a.md",
+          "bytes": 5480
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/svelte/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-svelte-adapter-md-b9959b13.md",
+      "sourcePath": "docs/framework/svelte/adapter.md",
+      "bytes": 2628,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; SSR and hydration; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-svelte-adapter-md-b9959b13.md",
+          "bytes": 2628
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/svelte/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-svelte-reference-chart-md-3ead8997.md",
+      "sourcePath": "docs/framework/svelte/reference/chart.md",
+      "bytes": 5339,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Props; Exported types",
+          "file": "references/guides/charts-docs-framework-svelte-reference-chart-md-3ead8997.md",
+          "bytes": 5339
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/angular/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-angular-adapter-md-314154ab.md",
+      "sourcePath": "docs/framework/angular/adapter.md",
+      "bytes": 2939,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; Browser and server status; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-angular-adapter-md-314154ab.md",
+          "bytes": 2939
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/angular/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-angular-reference-chart-md-d3a1d893.md",
+      "sourcePath": "docs/framework/angular/reference/chart.md",
+      "bytes": 5834,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `options`; Tooltip body template; Exported types",
+          "file": "references/guides/charts-docs-framework-angular-reference-chart-md-d3a1d893.md",
+          "bytes": 5834
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/lit/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-lit-adapter-md-16871155.md",
+      "sourcePath": "docs/framework/lit/adapter.md",
+      "bytes": 2558,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; Browser and server status; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-lit-adapter-md-16871155.md",
+          "bytes": 2558
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/lit/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-lit-reference-chart-md-ce66ce5f.md",
+      "sourcePath": "docs/framework/lit/reference/chart.md",
+      "bytes": 5774,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `options`; Registration and exported types",
+          "file": "references/guides/charts-docs-framework-lit-reference-chart-md-ce66ce5f.md",
+          "bytes": 5774
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/alpine/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-alpine",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-alpine-adapter-md-9404e3c3.md",
+      "sourcePath": "docs/framework/alpine/adapter.md",
+      "bytes": 2555,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Lifecycle; Browser-only contract; Presentation and rendering; Tooltip body composition",
+          "file": "references/guides/charts-docs-framework-alpine-adapter-md-9404e3c3.md",
+          "bytes": 2555
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/alpine/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-alpine",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-alpine-reference-chart-md-f52f25f9.md",
+      "sourcePath": "docs/framework/alpine/reference/chart.md",
+      "bytes": 5897,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Directive options; Exported types",
+          "file": "references/guides/charts-docs-framework-alpine-reference-chart-md-f52f25f9.md",
+          "bytes": 5897
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/octane/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-octane",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-octane-adapter-md-84d0f010.md",
+      "sourcePath": "docs/framework/octane/adapter.md",
+      "bytes": 6707,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Public exports; Render lifecycle; SSR and hydration; Sizing and layout; `class` and `style`; Definition and option identity; Tooltip body composition; Core boundary",
+          "file": "references/guides/charts-docs-framework-octane-adapter-md-84d0f010.md",
+          "bytes": 6707
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/octane/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-octane",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-octane-quick-start-md-de2f4c44.md",
+      "sourcePath": "docs/framework/octane/quick-start.md",
+      "bytes": 4850,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Define and render a chart; Responsive sizing; Memoize live definitions; Interaction callbacks",
+          "file": "references/guides/charts-docs-framework-octane-quick-start-md-de2f4c44.md",
+          "bytes": 4850
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/framework/octane/reference/chart.md",
+      "title": "Chart",
+      "theme": "framework-octane",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-framework-octane-reference-chart-md-5d2228b4.md",
+      "sourcePath": "docs/framework/octane/reference/chart.md",
+      "bytes": 7473,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Renderer entry points; Definition props; Accessibility and sizing; Focus, tooltip, and callbacks; Rendering and layout extensions; Exported prop types",
+          "file": "references/guides/charts-docs-framework-octane-reference-chart-md-5d2228b4.md",
+          "bytes": 7473
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:packages/react-native-charts/README.md",
+      "title": "README",
+      "theme": "framework-react-native",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react-native"
+      ],
+      "package": "@tanstack/react-native-charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-packages-react-native-charts-readme-md-847545d3.md",
+      "sourcePath": "packages/react-native-charts/README.md",
+      "bytes": 2379,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Install; Usage; Typography",
+          "file": "references/guides/charts-packages-react-native-charts-readme-md-847545d3.md",
+          "bytes": 2379
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-build-chart-interactions",
+      "title": "Build Chart Interactions",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-build-chart-interactions-e6508ffb.md",
+      "sourcePath": "build-chart-interactions",
+      "bytes": 7172,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-build-chart-interactions-e6508ffb.md",
+          "bytes": 7172
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-compose-marks-and-views",
+      "title": "Compose Marks And Views",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-compose-marks-and-views-9437b112.md",
+      "sourcePath": "compose-marks-and-views",
+      "bytes": 5671,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-compose-marks-and-views-9437b112.md",
+          "bytes": 5671
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-configure-scales-guides-color",
+      "title": "Configure Scales Guides Color",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-configure-scales-guides-color-2708fed7.md",
+      "sourcePath": "configure-scales-guides-color",
+      "bytes": 5608,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-configure-scales-guides-color-2708fed7.md",
+          "bytes": 5608
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-coordinate-charts-with-tanstack",
+      "title": "Coordinate Charts With Tanstack",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-coordinate-charts-with-tanstack-c02cf542.md",
+      "sourcePath": "coordinate-charts-with-tanstack",
+      "bytes": 10609,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-coordinate-charts-with-tanstack-c02cf542.md",
+          "bytes": 10609
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-debug-and-verify-charts",
+      "title": "Debug And Verify Charts",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-debug-and-verify-charts-2847fe26.md",
+      "sourcePath": "debug-and-verify-charts",
+      "bytes": 6417,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Semantic and Scene Checks; Interaction and Lifecycle Checks; Package and Performance Checks; Common Mistakes; Release Summary",
+          "file": "references/guides/tanstack-charts-debug-and-verify-charts-2847fe26.md",
+          "bytes": 6417
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-design-a-chart",
+      "title": "Design A Chart",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-design-a-chart-95ed488b.md",
+      "sourcePath": "design-a-chart",
+      "bytes": 5799,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-design-a-chart-95ed488b.md",
+          "bytes": 5799
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-design-responsive-charts",
+      "title": "Design Responsive Charts",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-design-responsive-charts-4db4e527.md",
+      "sourcePath": "design-responsive-charts",
+      "bytes": 6627,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-charts-design-responsive-charts-4db4e527.md",
+          "bytes": 6627
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-extend-tanstack-charts",
+      "title": "Extend Tanstack Charts",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-extend-tanstack-charts-7d59a379.md",
+      "sourcePath": "extend-tanstack-charts",
+      "bytes": 5911,
+      "prerequisites": [
+        {
+          "id": "tanstack-charts-compose-marks-and-views",
+          "file": "references/guides/tanstack-charts-compose-marks-and-views-9437b112.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-extend-tanstack-charts-7d59a379.md",
+          "bytes": 5911
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-migrate-to-tanstack-charts",
+      "title": "Migrate To Tanstack Charts",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-migrate-to-tanstack-charts-cd62f68d.md",
+      "sourcePath": "migrate-to-tanstack-charts",
+      "bytes": 6414,
+      "prerequisites": [
+        {
+          "id": "tanstack-charts-design-a-chart",
+          "file": "references/guides/tanstack-charts-design-a-chart-95ed488b.md"
+        },
+        {
+          "id": "tanstack-charts-debug-and-verify-charts",
+          "file": "references/guides/tanstack-charts-debug-and-verify-charts-2847fe26.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Integration Setup; Core Integration Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-migrate-to-tanstack-charts-cd62f68d.md",
+          "bytes": 6414
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-prepare-chart-data",
+      "title": "Prepare Chart Data",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-prepare-chart-data-b0946b81.md",
+      "sourcePath": "prepare-chart-data",
+      "bytes": 6307,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-charts-prepare-chart-data-b0946b81.md",
+          "bytes": 6307
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-ship-accessible-charts",
+      "title": "Ship Accessible Charts",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-ship-accessible-charts-94d273f3.md",
+      "sourcePath": "ship-accessible-charts",
+      "bytes": 8822,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Accessibility Checks; Lifecycle Checks; Renderer and Export Checks; Common Mistakes; Pre-Deploy Summary; References",
+          "file": "references/guides/tanstack-charts-ship-accessible-charts-94d273f3.md",
+          "bytes": 8822
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-charts-update-and-animate-charts",
+      "title": "Update And Animate Charts",
+      "theme": "other-guides",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/tanstack-charts-update-and-animate-charts-7f17ca0c.md",
+      "sourcePath": "update-and-animate-charts",
+      "bytes": 5596,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes",
+          "file": "references/guides/tanstack-charts-update-and-animate-charts-7f17ca0c.md",
+          "bytes": 5596
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "charts:docs/stability.md",
+      "title": "Stability",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/charts",
+      "version": "0.16.0",
+      "file": "references/guides/charts-docs-stability-md-45da0c9d.md",
+      "sourcePath": "docs/stability.md",
+      "bytes": 2224,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Version contract; Public surface; Breaking changes; Report a regression",
+          "file": "references/guides/charts-docs-stability-md-45da0c9d.md",
+          "bytes": 2224
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

@@ -1,0 +1,2949 @@
+{
+  "schemaVersion": 1,
+  "product": "table",
+  "guides": [
+    {
+      "id": "tanstack-table-core",
+      "title": "Core",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-e5f4d128.md",
+      "sourcePath": "core",
+      "bytes": 4314,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md",
+          "bytes": 4314
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-table-features",
+      "title": "Table Features",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-table-features-d2215548.md",
+      "sourcePath": "table-features",
+      "bytes": 3864,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md",
+          "bytes": 3864
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-typescript",
+      "title": "Typescript",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-typescript-aaac5f64.md",
+      "sourcePath": "typescript",
+      "bytes": 2692,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-typescript-aaac5f64.md",
+          "bytes": 2692
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-aggregation",
+      "title": "Aggregation",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-aggregation-64f79ebe.md",
+      "sourcePath": "aggregation",
+      "bytes": 4404,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-aggregation-64f79ebe.md",
+          "bytes": 4404
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-client-vs-server",
+      "title": "Client Vs Server",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md",
+      "sourcePath": "client-vs-server",
+      "bytes": 3857,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md",
+          "bytes": 3857
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-faceting",
+      "title": "Column Faceting",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-faceting-05869b48.md",
+      "sourcePath": "column-faceting",
+      "bytes": 3094,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-column-filtering",
+          "file": "references/guides/tanstack-table-core-column-filtering-4aa17d9e.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-faceting-05869b48.md",
+          "bytes": 3094
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-filtering",
+      "title": "Column Filtering",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-filtering-4aa17d9e.md",
+      "sourcePath": "column-filtering",
+      "bytes": 2685,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-filtering-4aa17d9e.md",
+          "bytes": 2685
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-global-filtering",
+      "title": "Global Filtering",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-global-filtering-80e68344.md",
+      "sourcePath": "global-filtering",
+      "bytes": 2679,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-table-core-column-filtering",
+          "file": "references/guides/tanstack-table-core-column-filtering-4aa17d9e.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-global-filtering-80e68344.md",
+          "bytes": 2679
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-grouping",
+      "title": "Grouping",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-grouping-1424cc92.md",
+      "sourcePath": "grouping",
+      "bytes": 2773,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-grouping-1424cc92.md",
+          "bytes": 2773
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-pagination",
+      "title": "Pagination",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-pagination-db8a6227.md",
+      "sourcePath": "pagination",
+      "bytes": 2296,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-pagination-db8a6227.md",
+          "bytes": 2296
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-sorting",
+      "title": "Sorting",
+      "theme": "data-processing",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-sorting-d5049c44.md",
+      "sourcePath": "sorting",
+      "bytes": 2870,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-sorting-d5049c44.md",
+          "bytes": 2870
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-cell-selection",
+      "title": "Cell Selection",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-cell-selection-0a397b53.md",
+      "sourcePath": "cell-selection",
+      "bytes": 9695,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-cell-selection-0a397b53.md",
+          "bytes": 9695
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-cell-spanning",
+      "title": "Cell Spanning",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-cell-spanning-4dc9df7c.md",
+      "sourcePath": "cell-spanning",
+      "bytes": 5570,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-cell-spanning-4dc9df7c.md",
+          "bytes": 5570
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-ordering",
+      "title": "Column Ordering",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-ordering-b447f5c9.md",
+      "sourcePath": "column-ordering",
+      "bytes": 2110,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-ordering-b447f5c9.md",
+          "bytes": 2110
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-pinning",
+      "title": "Column Pinning",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-pinning-8bf8d750.md",
+      "sourcePath": "column-pinning",
+      "bytes": 2332,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-column-sizing",
+          "file": "references/guides/tanstack-table-core-column-sizing-4548ba82.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-pinning-8bf8d750.md",
+          "bytes": 2332
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-resizing",
+      "title": "Column Resizing",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-resizing-91b4bd54.md",
+      "sourcePath": "column-resizing",
+      "bytes": 2549,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-column-sizing",
+          "file": "references/guides/tanstack-table-core-column-sizing-4548ba82.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-resizing-91b4bd54.md",
+          "bytes": 2549
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-sizing",
+      "title": "Column Sizing",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-sizing-4548ba82.md",
+      "sourcePath": "column-sizing",
+      "bytes": 1981,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-sizing-4548ba82.md",
+          "bytes": 1981
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-column-visibility",
+      "title": "Column Visibility",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-column-visibility-ebab060c.md",
+      "sourcePath": "column-visibility",
+      "bytes": 2121,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-column-visibility-ebab060c.md",
+          "bytes": 2121
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-expanding",
+      "title": "Expanding",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-expanding-21b41f39.md",
+      "sourcePath": "expanding",
+      "bytes": 2341,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-expanding-21b41f39.md",
+          "bytes": 2341
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-row-pinning",
+      "title": "Row Pinning",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-row-pinning-7e6a7407.md",
+      "sourcePath": "row-pinning",
+      "bytes": 2186,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; Choose the pinned-row visibility policy; API Discovery",
+          "file": "references/guides/tanstack-table-core-row-pinning-7e6a7407.md",
+          "bytes": 2186
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-row-selection",
+      "title": "Row Selection",
+      "theme": "layout-interaction",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-row-selection-27dec3c2.md",
+      "sourcePath": "row-selection",
+      "bytes": 6417,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-row-selection-27dec3c2.md",
+          "bytes": 6417
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-match-sorter-utils-fuzzy-ranking",
+      "title": "Fuzzy Ranking",
+      "theme": "integrations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/match-sorter-utils",
+      "version": "9.1.2",
+      "file": "references/guides/tanstack-match-sorter-utils-fuzzy-ranking-1b7d1e7e.md",
+      "sourcePath": "fuzzy-ranking",
+      "bytes": 3029,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-match-sorter-utils-fuzzy-ranking-1b7d1e7e.md",
+          "bytes": 3029
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-devtools",
+      "title": "Devtools",
+      "theme": "integrations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-devtools",
+      "version": "9.2.0",
+      "file": "references/guides/tanstack-table-devtools-c60d6343.md",
+      "sourcePath": "devtools",
+      "bytes": 2785,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-devtools-c60d6343.md",
+          "bytes": 2785
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-api-not-found",
+      "title": "Api Not Found",
+      "theme": "advanced",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-api-not-found-11c84050.md",
+      "sourcePath": "api-not-found",
+      "bytes": 2758,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-table-core-api-not-found-11c84050.md",
+          "bytes": 2758
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-custom-features",
+      "title": "Custom Features",
+      "theme": "advanced",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-custom-features-cea374eb.md",
+      "sourcePath": "custom-features",
+      "bytes": 9207,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-typescript",
+          "file": "references/guides/tanstack-table-core-typescript-aaac5f64.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Extension Surface; Table Instance Lifecycle; Complete Example; Guardrails; API Discovery",
+          "file": "references/guides/tanstack-table-core-custom-features-cea374eb.md",
+          "bytes": 9207
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-table-core-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "advanced",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/table-core",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 5507,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        },
+        {
+          "id": "tanstack-table-core-typescript",
+          "file": "references/guides/tanstack-table-core-typescript-aaac5f64.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--overview.md",
+          "bytes": 388
+        },
+        {
+          "title": "Migration strategy",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--migration-strategy.md",
+          "bytes": 874
+        },
+        {
+          "title": "Minimal v9 shape",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--minimal-v9-shape.md",
+          "bytes": 811
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 1. Register every non-core feature explicitly",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-1-register-every-non-core-feature-explicitly.md",
+          "bytes": 2251
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 2. Move row models into feature slots and rename factories",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-2-move-row-models-into-feature-slots-and-rename-factories.md",
+          "bytes": 4159
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 3. Migrate state reads and whole-state observation",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-3-migrate-state-reads-and-whole-state-observation.md",
+          "bytes": 1549
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 4. Keep instance methods bound",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-4-keep-instance-methods-bound.md",
+          "bytes": 849
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 5. Replace physical column pinning with logical pinning",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-5-replace-physical-column-pinning-with-logical-pinning.md",
+          "bytes": 2942
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 6. Split column sizing from resizing",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-6-split-column-sizing-from-resizing.md",
+          "bytes": 962
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 7. Rename sorting APIs",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-7-rename-sorting-apis.md",
+          "bytes": 828
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 8. Split the table-level pinning switch",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-8-split-the-table-level-pinning-switch.md",
+          "bytes": 529
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 9. Remove internal APIs and use public surfaces",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-9-remove-internal-apis-and-use-public-surfaces.md",
+          "bytes": 1286
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 10. Update row-selection predicates",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-10-update-row-selection-predicates.md",
+          "bytes": 734
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 11. Update TypeScript feature generics and helpers",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-11-update-typescript-feature-generics-and-helpers.md",
+          "bytes": 2042
+        },
+        {
+          "title": "Complete shared breaking-change inventory: 12. Migrate adapter construction and rendering separately",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-shared-breaking-change-inventory-12-migrate-adapter-construction-and-rendering-separately.md",
+          "bytes": 712
+        },
+        {
+          "title": "Optional v9 adoption after parity",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--optional-v9-adoption-after-parity.md",
+          "bytes": 541
+        },
+        {
+          "title": "Complete audit checklist",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--complete-audit-checklist.md",
+          "bytes": 3227
+        },
+        {
+          "title": "Common migration failures",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--common-migration-failures.md",
+          "bytes": 1054
+        },
+        {
+          "title": "Installed API discovery",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275--installed-api-discovery.md",
+          "bytes": 850
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-react-table-create-table-hook-27dd0ade.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 5053,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-react-table-getting-started",
+          "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md"
+        },
+        {
+          "id": "tanstack-react-table-table-state",
+          "file": "references/guides/tanstack-react-table-table-state-6e56d1e0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-react-table-create-table-hook-27dd0ade.md",
+          "bytes": 5053
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-devtools",
+      "title": "Devtools",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table-devtools",
+      "version": "9.2.0",
+      "file": "references/guides/tanstack-react-table-devtools-5db6f3c9.md",
+      "sourcePath": "devtools",
+      "bytes": 2328,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-devtools",
+          "file": "references/guides/tanstack-table-devtools-c60d6343.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-react-table-devtools-5db6f3c9.md",
+          "bytes": 2328
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md",
+      "sourcePath": "getting-started",
+      "bytes": 3914,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md",
+          "bytes": 3914
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 2650,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-react-table-getting-started",
+          "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md"
+        },
+        {
+          "id": "tanstack-react-table-table-state",
+          "file": "references/guides/tanstack-react-table-table-state-6e56d1e0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--overview.md",
+          "bytes": 479
+        },
+        {
+          "title": "Target architecture",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--target-architecture.md",
+          "bytes": 1075
+        },
+        {
+          "title": "Complete breaking-change map: Construction and feature registration",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-construction-and-feature-registration.md",
+          "bytes": 3264
+        },
+        {
+          "title": "Complete breaking-change map: State and React subscriptions",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-state-and-react-subscriptions.md",
+          "bytes": 2180
+        },
+        {
+          "title": "Complete breaking-change map: Rendering and composition",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-rendering-and-composition.md",
+          "bytes": 1058
+        },
+        {
+          "title": "Complete breaking-change map: TypeScript and helper changes",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-typescript-and-helper-changes.md",
+          "bytes": 2221
+        },
+        {
+          "title": "Complete breaking-change map: Shared API and behavior changes",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-shared-api-and-behavior-changes.md",
+          "bytes": 5044
+        },
+        {
+          "title": "Migration procedure",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--migration-procedure.md",
+          "bytes": 1410
+        },
+        {
+          "title": "Final migration checklist",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--final-migration-checklist.md",
+          "bytes": 2032
+        },
+        {
+          "title": "Common migration failures",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--common-migration-failures.md",
+          "bytes": 902
+        },
+        {
+          "title": "API discovery",
+          "file": "references/guides/tanstack-react-table-migrate-v8-to-v9-d475ddab--api-discovery.md",
+          "bytes": 440
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-table-state",
+      "title": "Table State",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-react-table-table-state-6e56d1e0.md",
+      "sourcePath": "table-state",
+      "bytes": 8285,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-react-table-getting-started",
+          "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-react-table-table-state-6e56d1e0.md",
+          "bytes": 8285
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-with-tanstack-query",
+      "title": "With Tanstack Query",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-react-table-with-tanstack-query-97f2ed51.md",
+      "sourcePath": "with-tanstack-query",
+      "bytes": 4207,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-react-table-getting-started",
+          "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md"
+        },
+        {
+          "id": "tanstack-react-table-table-state",
+          "file": "references/guides/tanstack-react-table-table-state-6e56d1e0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-react-table-with-tanstack-query-97f2ed51.md",
+          "bytes": 4207
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-react-table-with-tanstack-virtual-d2919225.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 4645,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-react-table-getting-started",
+          "file": "references/guides/tanstack-react-table-getting-started-d10c472e.md"
+        },
+        {
+          "id": "tanstack-react-table-table-state",
+          "file": "references/guides/tanstack-react-table-table-state-6e56d1e0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-react-table-with-tanstack-virtual-d2919225.md",
+          "bytes": 4645
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-preact-table-create-table-hook-14474db5.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 4300,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-preact-table-getting-started",
+          "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md"
+        },
+        {
+          "id": "tanstack-preact-table-table-state",
+          "file": "references/guides/tanstack-preact-table-table-state-dc1496a8.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-preact-table-create-table-hook-14474db5.md",
+          "bytes": 4300
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-devtools",
+      "title": "Devtools",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table-devtools",
+      "version": "9.2.0",
+      "file": "references/guides/tanstack-preact-table-devtools-35b00d92.md",
+      "sourcePath": "devtools",
+      "bytes": 2301,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-devtools",
+          "file": "references/guides/tanstack-table-devtools-c60d6343.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-preact-table-devtools-35b00d92.md",
+          "bytes": 2301
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md",
+      "sourcePath": "getting-started",
+      "bytes": 3351,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md",
+          "bytes": 3351
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 1832,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-preact-table-getting-started",
+          "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md"
+        },
+        {
+          "id": "tanstack-preact-table-table-state",
+          "file": "references/guides/tanstack-preact-table-table-state-dc1496a8.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--overview.md",
+          "bytes": 484
+        },
+        {
+          "title": "Target architecture",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--target-architecture.md",
+          "bytes": 828
+        },
+        {
+          "title": "Complete breaking-change map",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--complete-breaking-change-map.md",
+          "bytes": 11605
+        },
+        {
+          "title": "Migration procedure",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--migration-procedure.md",
+          "bytes": 1159
+        },
+        {
+          "title": "Final migration checklist",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--final-migration-checklist.md",
+          "bytes": 1704
+        },
+        {
+          "title": "Common migration failures",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--common-migration-failures.md",
+          "bytes": 757
+        },
+        {
+          "title": "API discovery",
+          "file": "references/guides/tanstack-preact-table-migrate-v8-to-v9-a66482cf--api-discovery.md",
+          "bytes": 389
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-table-state",
+      "title": "Table State",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-preact-table-table-state-dc1496a8.md",
+      "sourcePath": "table-state",
+      "bytes": 4974,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-preact-table-getting-started",
+          "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-preact-table-table-state-dc1496a8.md",
+          "bytes": 4974
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-with-tanstack-query",
+      "title": "With Tanstack Query",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-preact-table-with-tanstack-query-7df667fd.md",
+      "sourcePath": "with-tanstack-query",
+      "bytes": 3088,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-preact-table-getting-started",
+          "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md"
+        },
+        {
+          "id": "tanstack-preact-table-table-state",
+          "file": "references/guides/tanstack-preact-table-table-state-dc1496a8.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-preact-table-with-tanstack-query-7df667fd.md",
+          "bytes": 3088
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-preact-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-preact",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/preact-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-preact-table-with-tanstack-virtual-70e8ec02.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 3397,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-preact-table-getting-started",
+          "file": "references/guides/tanstack-preact-table-getting-started-c2713634.md"
+        },
+        {
+          "id": "tanstack-preact-table-table-state",
+          "file": "references/guides/tanstack-preact-table-table-state-dc1496a8.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-preact-table-with-tanstack-virtual-70e8ec02.md",
+          "bytes": 3397
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-vue-table-create-table-hook-cdb1e0a3.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 3407,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-vue-table-getting-started",
+          "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md"
+        },
+        {
+          "id": "tanstack-vue-table-table-state",
+          "file": "references/guides/tanstack-vue-table-table-state-31f07562.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-vue-table-create-table-hook-cdb1e0a3.md",
+          "bytes": 3407
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-devtools",
+      "title": "Devtools",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table-devtools",
+      "version": "9.2.0",
+      "file": "references/guides/tanstack-vue-table-devtools-303b673e.md",
+      "sourcePath": "devtools",
+      "bytes": 2155,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-devtools",
+          "file": "references/guides/tanstack-table-devtools-c60d6343.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-vue-table-devtools-303b673e.md",
+          "bytes": 2155
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md",
+      "sourcePath": "getting-started",
+      "bytes": 3552,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md",
+          "bytes": 3552
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-vue-table-migrate-v8-to-v9-1c6bee18.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 12721,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-vue-table-getting-started",
+          "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md"
+        },
+        {
+          "id": "tanstack-vue-table-table-state",
+          "file": "references/guides/tanstack-vue-table-table-state-31f07562.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Recommended Migration Order; Construction and Feature Registration; Vue State Migration; Rendering and Composition; Complete Shared Breaking-Change Map; TypeScript Migration; Common Migration Failures; Final Checklist; API Discovery",
+          "file": "references/guides/tanstack-vue-table-migrate-v8-to-v9-1c6bee18.md",
+          "bytes": 12721
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-table-state",
+      "title": "Table State",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-vue-table-table-state-31f07562.md",
+      "sourcePath": "table-state",
+      "bytes": 5907,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-vue-table-getting-started",
+          "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-vue-table-table-state-31f07562.md",
+          "bytes": 5907
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-with-tanstack-query",
+      "title": "With Tanstack Query",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-vue-table-with-tanstack-query-6b15ddd6.md",
+      "sourcePath": "with-tanstack-query",
+      "bytes": 3215,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-vue-table-getting-started",
+          "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md"
+        },
+        {
+          "id": "tanstack-vue-table-table-state",
+          "file": "references/guides/tanstack-vue-table-table-state-31f07562.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-vue-table-with-tanstack-query-6b15ddd6.md",
+          "bytes": 3215
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-vue-table-with-tanstack-virtual-3e15a09f.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 3223,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-vue-table-getting-started",
+          "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md"
+        },
+        {
+          "id": "tanstack-vue-table-table-state",
+          "file": "references/guides/tanstack-vue-table-table-state-31f07562.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-vue-table-with-tanstack-virtual-3e15a09f.md",
+          "bytes": 3223
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-solid-table-create-table-hook-299ebffa.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 2529,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-solid-table-getting-started",
+          "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md"
+        },
+        {
+          "id": "tanstack-solid-table-table-state",
+          "file": "references/guides/tanstack-solid-table-table-state-6d957041.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-solid-table-create-table-hook-299ebffa.md",
+          "bytes": 2529
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-devtools",
+      "title": "Devtools",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table-devtools",
+      "version": "9.2.0",
+      "file": "references/guides/tanstack-solid-table-devtools-95d045ac.md",
+      "sourcePath": "devtools",
+      "bytes": 2183,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-devtools",
+          "file": "references/guides/tanstack-table-devtools-c60d6343.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-solid-table-devtools-95d045ac.md",
+          "bytes": 2183
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md",
+      "sourcePath": "getting-started",
+      "bytes": 3434,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md",
+          "bytes": 3434
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 1827,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-solid-table-getting-started",
+          "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md"
+        },
+        {
+          "id": "tanstack-solid-table-table-state",
+          "file": "references/guides/tanstack-solid-table-table-state-6d957041.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--overview.md",
+          "bytes": 450
+        },
+        {
+          "title": "Target architecture",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--target-architecture.md",
+          "bytes": 686
+        },
+        {
+          "title": "Complete breaking-change map",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--complete-breaking-change-map.md",
+          "bytes": 11171
+        },
+        {
+          "title": "Migration procedure",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--migration-procedure.md",
+          "bytes": 1146
+        },
+        {
+          "title": "Final migration checklist",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--final-migration-checklist.md",
+          "bytes": 1549
+        },
+        {
+          "title": "Common migration failures",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--common-migration-failures.md",
+          "bytes": 747
+        },
+        {
+          "title": "API discovery",
+          "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75--api-discovery.md",
+          "bytes": 395
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-table-state",
+      "title": "Table State",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-solid-table-table-state-6d957041.md",
+      "sourcePath": "table-state",
+      "bytes": 5133,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-solid-table-getting-started",
+          "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-solid-table-table-state-6d957041.md",
+          "bytes": 5133
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-with-tanstack-query",
+      "title": "With Tanstack Query",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-solid-table-with-tanstack-query-94db7d1b.md",
+      "sourcePath": "with-tanstack-query",
+      "bytes": 3333,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-solid-table-getting-started",
+          "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md"
+        },
+        {
+          "id": "tanstack-solid-table-table-state",
+          "file": "references/guides/tanstack-solid-table-table-state-6d957041.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-solid-table-with-tanstack-query-94db7d1b.md",
+          "bytes": 3333
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-solid-table-with-tanstack-virtual-906ea001.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 3584,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-solid-table-getting-started",
+          "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md"
+        },
+        {
+          "id": "tanstack-solid-table-table-state",
+          "file": "references/guides/tanstack-solid-table-table-state-6d957041.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-solid-table-with-tanstack-virtual-906ea001.md",
+          "bytes": 3584
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-svelte-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-svelte",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/svelte-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-svelte-table-create-table-hook-2388c3ea.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 3807,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-svelte-table-getting-started",
+          "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md"
+        },
+        {
+          "id": "tanstack-svelte-table-table-state",
+          "file": "references/guides/tanstack-svelte-table-table-state-fe47e547.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-svelte-table-create-table-hook-2388c3ea.md",
+          "bytes": 3807
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-svelte-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-svelte",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/svelte-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md",
+      "sourcePath": "getting-started",
+      "bytes": 3973,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md",
+          "bytes": 3973
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-svelte-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-svelte",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/svelte-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 2569,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-svelte-table-getting-started",
+          "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md"
+        },
+        {
+          "id": "tanstack-svelte-table-table-state",
+          "file": "references/guides/tanstack-svelte-table-table-state-fe47e547.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--overview.md",
+          "bytes": 439
+        },
+        {
+          "title": "Recommended Migration Order",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--recommended-migration-order.md",
+          "bytes": 862
+        },
+        {
+          "title": "Construction and Feature Registration",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--construction-and-feature-registration.md",
+          "bytes": 3282
+        },
+        {
+          "title": "Svelte State Migration",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--svelte-state-migration.md",
+          "bytes": 1477
+        },
+        {
+          "title": "Rendering and Composition",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--rendering-and-composition.md",
+          "bytes": 1262
+        },
+        {
+          "title": "Complete Shared Breaking-Change Map",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--complete-shared-breaking-change-map.md",
+          "bytes": 4397
+        },
+        {
+          "title": "TypeScript Migration",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--typescript-migration.md",
+          "bytes": 1082
+        },
+        {
+          "title": "Common Migration Failures",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--common-migration-failures.md",
+          "bytes": 1183
+        },
+        {
+          "title": "Final Checklist",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--final-checklist.md",
+          "bytes": 1114
+        },
+        {
+          "title": "API Discovery",
+          "file": "references/guides/tanstack-svelte-table-migrate-v8-to-v9-45336202--api-discovery.md",
+          "bytes": 443
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-svelte-table-table-state",
+      "title": "Table State",
+      "theme": "framework-svelte",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/svelte-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-svelte-table-table-state-fe47e547.md",
+      "sourcePath": "table-state",
+      "bytes": 7904,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-svelte-table-getting-started",
+          "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-svelte-table-table-state-fe47e547.md",
+          "bytes": 7904
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-svelte-table-with-tanstack-query",
+      "title": "With Tanstack Query",
+      "theme": "framework-svelte",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/svelte-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-svelte-table-with-tanstack-query-5c555890.md",
+      "sourcePath": "with-tanstack-query",
+      "bytes": 3677,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-svelte-table-getting-started",
+          "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md"
+        },
+        {
+          "id": "tanstack-svelte-table-table-state",
+          "file": "references/guides/tanstack-svelte-table-table-state-fe47e547.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-svelte-table-with-tanstack-query-5c555890.md",
+          "bytes": 3677
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-svelte-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-svelte",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/svelte-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-svelte-table-with-tanstack-virtual-1307859a.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 4148,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-svelte-table-getting-started",
+          "file": "references/guides/tanstack-svelte-table-getting-started-0192405f.md"
+        },
+        {
+          "id": "tanstack-svelte-table-table-state",
+          "file": "references/guides/tanstack-svelte-table-table-state-fe47e547.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-svelte-table-with-tanstack-virtual-1307859a.md",
+          "bytes": 4148
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-create-table-hook-08bb8e8f.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 3433,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-angular-table-getting-started",
+          "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md"
+        },
+        {
+          "id": "tanstack-angular-table-table-state",
+          "file": "references/guides/tanstack-angular-table-table-state-d17d401d.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-angular-table-create-table-hook-08bb8e8f.md",
+          "bytes": 3433
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-devtools",
+      "title": "Devtools",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table-devtools",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-devtools-389bec91.md",
+      "sourcePath": "devtools",
+      "bytes": 2514,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-devtools",
+          "file": "references/guides/tanstack-table-devtools-c60d6343.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-angular-table-devtools-389bec91.md",
+          "bytes": 2514
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md",
+      "sourcePath": "getting-started",
+      "bytes": 3453,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md",
+          "bytes": 3453
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-migrate-v8-to-v9-0face369.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 12658,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-angular-table-getting-started",
+          "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md"
+        },
+        {
+          "id": "tanstack-angular-table-table-state",
+          "file": "references/guides/tanstack-angular-table-table-state-d17d401d.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Recommended Migration Order; Construction and Feature Registration; Angular State Migration; Angular Rendering and Composition; Complete Shared Breaking-Change Map; TypeScript Migration; Common Migration Failures; Final Checklist; API Discovery",
+          "file": "references/guides/tanstack-angular-table-migrate-v8-to-v9-0face369.md",
+          "bytes": 12658
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-table-state",
+      "title": "Table State",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-table-state-d17d401d.md",
+      "sourcePath": "table-state",
+      "bytes": 6156,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-angular-table-getting-started",
+          "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-angular-table-table-state-d17d401d.md",
+          "bytes": 6156
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-with-tanstack-query",
+      "title": "With Tanstack Query",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-with-tanstack-query-9bdde5a1.md",
+      "sourcePath": "with-tanstack-query",
+      "bytes": 3698,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-client-vs-server",
+          "file": "references/guides/tanstack-table-core-client-vs-server-32e9d046.md"
+        },
+        {
+          "id": "tanstack-angular-table-getting-started",
+          "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md"
+        },
+        {
+          "id": "tanstack-angular-table-table-state",
+          "file": "references/guides/tanstack-angular-table-table-state-d17d401d.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-angular-table-with-tanstack-query-9bdde5a1.md",
+          "bytes": 3698
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-angular-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-angular",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/angular-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-angular-table-with-tanstack-virtual-0a404d68.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 3486,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-angular-table-getting-started",
+          "file": "references/guides/tanstack-angular-table-getting-started-b8ab31c4.md"
+        },
+        {
+          "id": "tanstack-angular-table-table-state",
+          "file": "references/guides/tanstack-angular-table-table-state-d17d401d.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-angular-table-with-tanstack-virtual-0a404d68.md",
+          "bytes": 3486
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-lit-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-lit",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/lit-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-lit-table-create-table-hook-d83066bd.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 3296,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-lit-table-getting-started",
+          "file": "references/guides/tanstack-lit-table-getting-started-592e9498.md"
+        },
+        {
+          "id": "tanstack-lit-table-table-state",
+          "file": "references/guides/tanstack-lit-table-table-state-2569e6f4.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-lit-table-create-table-hook-d83066bd.md",
+          "bytes": 3296
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-lit-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-lit",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/lit-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-lit-table-getting-started-592e9498.md",
+      "sourcePath": "getting-started",
+      "bytes": 4509,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-lit-table-getting-started-592e9498.md",
+          "bytes": 4509
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-lit-table-migrate-v8-to-v9",
+      "title": "Migrate V8 To V9",
+      "theme": "framework-lit",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/lit-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd.md",
+      "sourcePath": "migrate-v8-to-v9",
+      "bytes": 2531,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core-migrate-v8-to-v9",
+          "file": "references/guides/tanstack-table-core-migrate-v8-to-v9-654ca275.md"
+        },
+        {
+          "id": "tanstack-lit-table-getting-started",
+          "file": "references/guides/tanstack-lit-table-getting-started-592e9498.md"
+        },
+        {
+          "id": "tanstack-lit-table-table-state",
+          "file": "references/guides/tanstack-lit-table-table-state-2569e6f4.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--overview.md",
+          "bytes": 472
+        },
+        {
+          "title": "Recommended Migration Order",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--recommended-migration-order.md",
+          "bytes": 1107
+        },
+        {
+          "title": "Construction and Feature Registration",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--construction-and-feature-registration.md",
+          "bytes": 3211
+        },
+        {
+          "title": "Lit State Migration",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--lit-state-migration.md",
+          "bytes": 1240
+        },
+        {
+          "title": "Rendering and Composition",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--rendering-and-composition.md",
+          "bytes": 1112
+        },
+        {
+          "title": "Complete Shared Breaking-Change Map",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--complete-shared-breaking-change-map.md",
+          "bytes": 4128
+        },
+        {
+          "title": "TypeScript Migration",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--typescript-migration.md",
+          "bytes": 975
+        },
+        {
+          "title": "Common Migration Failures",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--common-migration-failures.md",
+          "bytes": 902
+        },
+        {
+          "title": "Final Checklist",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--final-checklist.md",
+          "bytes": 865
+        },
+        {
+          "title": "API Discovery",
+          "file": "references/guides/tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd--api-discovery.md",
+          "bytes": 409
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-lit-table-table-state",
+      "title": "Table State",
+      "theme": "framework-lit",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/lit-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-lit-table-table-state-2569e6f4.md",
+      "sourcePath": "table-state",
+      "bytes": 6096,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-lit-table-getting-started",
+          "file": "references/guides/tanstack-lit-table-getting-started-592e9498.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-lit-table-table-state-2569e6f4.md",
+          "bytes": 6096
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-lit-table-with-tanstack-virtual",
+      "title": "With Tanstack Virtual",
+      "theme": "framework-lit",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/lit-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-lit-table-with-tanstack-virtual-842f08d1.md",
+      "sourcePath": "with-tanstack-virtual",
+      "bytes": 4713,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-lit-table-getting-started",
+          "file": "references/guides/tanstack-lit-table-getting-started-592e9498.md"
+        },
+        {
+          "id": "tanstack-lit-table-table-state",
+          "file": "references/guides/tanstack-lit-table-table-state-2569e6f4.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-lit-table-with-tanstack-virtual-842f08d1.md",
+          "bytes": 4713
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-alpine-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-alpine",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/alpine-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-alpine-table-create-table-hook-b306c764.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 3052,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-alpine-table-getting-started",
+          "file": "references/guides/tanstack-alpine-table-getting-started-37491f6a.md"
+        },
+        {
+          "id": "tanstack-alpine-table-table-state",
+          "file": "references/guides/tanstack-alpine-table-table-state-bdc59bd0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-alpine-table-create-table-hook-b306c764.md",
+          "bytes": 3052
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-alpine-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-alpine",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/alpine-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-alpine-table-getting-started-37491f6a.md",
+      "sourcePath": "getting-started",
+      "bytes": 3178,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-alpine-table-getting-started-37491f6a.md",
+          "bytes": 3178
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-alpine-table-table-state",
+      "title": "Table State",
+      "theme": "framework-alpine",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/alpine-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-alpine-table-table-state-bdc59bd0.md",
+      "sourcePath": "table-state",
+      "bytes": 5478,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-alpine-table-getting-started",
+          "file": "references/guides/tanstack-alpine-table-getting-started-37491f6a.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Initialize, Update, and Reset; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-alpine-table-table-state-bdc59bd0.md",
+          "bytes": 5478
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ember-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-ember",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ember-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-ember-table-create-table-hook-56f0497f.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 5100,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-ember-table-getting-started",
+          "file": "references/guides/tanstack-ember-table-getting-started-c3d276e2.md"
+        },
+        {
+          "id": "tanstack-ember-table-table-state",
+          "file": "references/guides/tanstack-ember-table-table-state-74110664.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Composition Contract; Render Normally; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-ember-table-create-table-hook-56f0497f.md",
+          "bytes": 5100
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ember-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-ember",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ember-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-ember-table-getting-started-c3d276e2.md",
+      "sourcePath": "getting-started",
+      "bytes": 5440,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Ember-Specific Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-ember-table-getting-started-c3d276e2.md",
+          "bytes": 5440
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ember-table-table-state",
+      "title": "Table State",
+      "theme": "framework-ember",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ember-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-ember-table-table-state-74110664.md",
+      "sourcePath": "table-state",
+      "bytes": 6877,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-ember-table-getting-started",
+          "file": "references/guides/tanstack-ember-table-getting-started-c3d276e2.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Surfaces; Choose One Owner Per Slice; Internal and Initial State; External Ember Atoms; Controlled Tracked State; Low-Level Writes and Types; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-ember-table-table-state-74110664.md",
+          "bytes": 6877
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-octane-table-create-table-hook",
+      "title": "Create Table Hook",
+      "theme": "framework-octane",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/octane-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-octane-table-create-table-hook-7f513d93.md",
+      "sourcePath": "create-table-hook",
+      "bytes": 4401,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-octane-table-getting-started",
+          "file": "references/guides/tanstack-octane-table-getting-started-bb43503b.md"
+        },
+        {
+          "id": "tanstack-octane-table-table-state",
+          "file": "references/guides/tanstack-octane-table-table-state-5b321686.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-octane-table-create-table-hook-7f513d93.md",
+          "bytes": 4401
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-octane-table-getting-started",
+      "title": "Getting Started",
+      "theme": "framework-octane",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/octane-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-octane-table-getting-started-bb43503b.md",
+      "sourcePath": "getting-started",
+      "bytes": 4094,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-table-core-table-features",
+          "file": "references/guides/tanstack-table-core-table-features-d2215548.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-octane-table-getting-started-bb43503b.md",
+          "bytes": 4094
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-octane-table-table-state",
+      "title": "Table State",
+      "theme": "framework-octane",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/octane-table",
+      "version": "9.2.4",
+      "file": "references/guides/tanstack-octane-table-table-state-5b321686.md",
+      "sourcePath": "table-state",
+      "bytes": 4970,
+      "prerequisites": [
+        {
+          "id": "tanstack-table-core",
+          "file": "references/guides/tanstack-table-core-e5f4d128.md"
+        },
+        {
+          "id": "tanstack-octane-table-getting-started",
+          "file": "references/guides/tanstack-octane-table-getting-started-bb43503b.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; State Mental Model; Setup; Core Patterns; Choose State Ownership; Common Mistakes; API Discovery",
+          "file": "references/guides/tanstack-octane-table-table-state-5b321686.md",
+          "bytes": 4970
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

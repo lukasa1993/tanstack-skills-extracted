@@ -17,11 +17,11 @@
 | `pacer:docs/guides/queuing.md` | document | `queue-batch` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/guides/async-rate-limiting.md` | document | `rate-limiting` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/guides/rate-limiting.md` | document | `rate-limiting` | `@tanstack/pacer` | `0.22.0` |  |
-| `pacer:docs/guides/server-rate-limiting.md` | document | `rate-limiting` | `@tanstack/pacer` | `0.22.0` | `all-sections-deduplicated` |
+| `pacer:docs/guides/server-rate-limiting.md` | document | `rate-limiting` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/guides/async-retrying.md` | document | `async-retry` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/framework/react/adapter.md` | document | `framework-react` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/framework/preact/adapter.md` | document | `framework-preact` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/framework/solid/adapter.md` | document | `framework-solid` | `@tanstack/pacer` | `0.22.0` |  |
 | `pacer:docs/framework/angular/adapter.md` | document | `framework-angular` | `@tanstack/pacer` | `0.22.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

@@ -1,0 +1,766 @@
+{
+  "schemaVersion": 1,
+  "product": "pacer",
+  "guides": [
+    {
+      "id": "pacer:docs/devtools.md",
+      "title": "Devtools",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-devtools-md-2f4aa95a.md",
+      "sourcePath": "docs/devtools.md",
+      "bytes": 2771,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Installation; Basic Setup; Production Builds; Registering Utilities",
+          "file": "references/guides/pacer-docs-devtools-md-2f4aa95a.md",
+          "bytes": 2771
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/which-pacer-utility-should-i-choose.md",
+      "title": "Which Pacer Utility Should I Choose",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md",
+      "sourcePath": "docs/guides/which-pacer-utility-should-i-choose.md",
+      "bytes": 8820,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Synchronous vs Asynchronous; Pacer Lite vs Pacer; Which Hook Variation Should I Use?",
+          "file": "references/guides/pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md",
+          "bytes": 8820
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/installation.md",
+      "title": "Installation",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-installation-md-e6fbfc6c.md",
+      "sourcePath": "docs/installation.md",
+      "bytes": 1940,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Devtools; Devtools",
+          "file": "references/guides/pacer-docs-installation-md-e6fbfc6c.md",
+          "bytes": 1940
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/overview.md",
+      "title": "Overview",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-overview-md-870cf847.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 5632,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Origin; Features; Interactive Comparison Demo; Pacer Lite",
+          "file": "references/guides/pacer-docs-overview-md-870cf847.md",
+          "bytes": 5632
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/quick-start.md",
+      "title": "Quick Start",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-quick-start-md-afe431ad.md",
+      "sourcePath": "docs/quick-start.md",
+      "bytes": 3254,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Understanding Which Pacer Utility to Use; API References; Basic Usage",
+          "file": "references/guides/pacer-docs-quick-start-md-afe431ad.md",
+          "bytes": 3254
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/async-debouncing.md",
+      "title": "Async Debouncing",
+      "theme": "debounce-throttle",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af.md",
+      "sourcePath": "docs/guides/async-debouncing.md",
+      "bytes": 2232,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--overview.md",
+          "bytes": 342
+        },
+        {
+          "title": "When to Use Async Debouncing",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--when-to-use-async-debouncing.md",
+          "bytes": 555
+        },
+        {
+          "title": "Async Debouncing in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--async-debouncing-in-tanstack-pacer.md",
+          "bytes": 1319
+        },
+        {
+          "title": "Key Differences from Synchronous Debouncing",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--key-differences-from-synchronous-debouncing.md",
+          "bytes": 3187
+        },
+        {
+          "title": "Advanced Features: Retry and Abort Support",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--advanced-features-retry-and-abort-support.md",
+          "bytes": 2905
+        },
+        {
+          "title": "Dynamic Options and Enabling/Disabling",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--dynamic-options-and-enabling-disabling.md",
+          "bytes": 1705
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--state-management.md",
+          "bytes": 4874
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-async-debouncing-md-97c781af--framework-adapters.md",
+          "bytes": 652
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/async-throttling.md",
+      "title": "Async Throttling",
+      "theme": "debounce-throttle",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145.md",
+      "sourcePath": "docs/guides/async-throttling.md",
+      "bytes": 2232,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--overview.md",
+          "bytes": 342
+        },
+        {
+          "title": "When to Use Async Throttling",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--when-to-use-async-throttling.md",
+          "bytes": 555
+        },
+        {
+          "title": "Async Throttling in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--async-throttling-in-tanstack-pacer.md",
+          "bytes": 1323
+        },
+        {
+          "title": "Key Differences from Synchronous Throttling",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--key-differences-from-synchronous-throttling.md",
+          "bytes": 3247
+        },
+        {
+          "title": "Advanced Features: Retry and Abort Support",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--advanced-features-retry-and-abort-support.md",
+          "bytes": 2911
+        },
+        {
+          "title": "Dynamic Options and Enabling/Disabling",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--dynamic-options-and-enabling-disabling.md",
+          "bytes": 1705
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--state-management.md",
+          "bytes": 4943
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-async-throttling-md-de3ed145--framework-adapters.md",
+          "bytes": 652
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/debouncing.md",
+      "title": "Debouncing",
+      "theme": "debounce-throttle",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-debouncing-md-2946516b.md",
+      "sourcePath": "docs/guides/debouncing.md",
+      "bytes": 1663,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-debouncing-md-2946516b--overview.md",
+          "bytes": 607
+        },
+        {
+          "title": "Debouncing Concept",
+          "file": "references/guides/pacer-docs-guides-debouncing-md-2946516b--debouncing-concept.md",
+          "bytes": 2052
+        },
+        {
+          "title": "Debouncing in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-debouncing-md-2946516b--debouncing-in-tanstack-pacer.md",
+          "bytes": 6493
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-debouncing-md-2946516b--state-management.md",
+          "bytes": 4301
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-debouncing-md-2946516b--framework-adapters.md",
+          "bytes": 645
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/throttling.md",
+      "title": "Throttling",
+      "theme": "debounce-throttle",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-throttling-md-b3667c78.md",
+      "sourcePath": "docs/guides/throttling.md",
+      "bytes": 1636,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-throttling-md-b3667c78--overview.md",
+          "bytes": 607
+        },
+        {
+          "title": "Throttling Concept",
+          "file": "references/guides/pacer-docs-guides-throttling-md-b3667c78--throttling-concept.md",
+          "bytes": 2114
+        },
+        {
+          "title": "Throttling in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-throttling-md-b3667c78--throttling-in-tanstack-pacer.md",
+          "bytes": 6146
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-throttling-md-b3667c78--state-management.md",
+          "bytes": 4353
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-throttling-md-b3667c78--framework-adapters.md",
+          "bytes": 645
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/async-batching.md",
+      "title": "Async Batching",
+      "theme": "queue-batch",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1.md",
+      "sourcePath": "docs/guides/async-batching.md",
+      "bytes": 2366,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--overview.md",
+          "bytes": 330
+        },
+        {
+          "title": "When to Use Async Batching",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--when-to-use-async-batching.md",
+          "bytes": 719
+        },
+        {
+          "title": "Async Batching in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--async-batching-in-tanstack-pacer.md",
+          "bytes": 2883
+        },
+        {
+          "title": "Key Differences from Synchronous Batching",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--key-differences-from-synchronous-batching.md",
+          "bytes": 3057
+        },
+        {
+          "title": "Advanced Features: Retry and Abort Support",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--advanced-features-retry-and-abort-support.md",
+          "bytes": 2977
+        },
+        {
+          "title": "Error Handling Options",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--error-handling-options.md",
+          "bytes": 1269
+        },
+        {
+          "title": "Dynamic Options",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--dynamic-options.md",
+          "bytes": 2142
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--state-management.md",
+          "bytes": 6002
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-async-batching-md-151108d1--framework-adapters.md",
+          "bytes": 601
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/async-queuing.md",
+      "title": "Async Queuing",
+      "theme": "queue-batch",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-async-queuing-md-388e02df.md",
+      "sourcePath": "docs/guides/async-queuing.md",
+      "bytes": 1940,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-async-queuing-md-388e02df--overview.md",
+          "bytes": 1434
+        },
+        {
+          "title": "Async Queuing Concept",
+          "file": "references/guides/pacer-docs-guides-async-queuing-md-388e02df--async-queuing-concept.md",
+          "bytes": 2196
+        },
+        {
+          "title": "Async Queuing in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-async-queuing-md-388e02df--async-queuing-in-tanstack-pacer.md",
+          "bytes": 8298
+        },
+        {
+          "title": "Advanced Features: Retry and Abort Support",
+          "file": "references/guides/pacer-docs-guides-async-queuing-md-388e02df--advanced-features-retry-and-abort-support.md",
+          "bytes": 2950
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-async-queuing-md-388e02df--state-management.md",
+          "bytes": 5729
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/batching.md",
+      "title": "Batching",
+      "theme": "queue-batch",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-batching-md-c3c877da.md",
+      "sourcePath": "docs/guides/batching.md",
+      "bytes": 11775,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Batching Concept; When to Use Batching; When Not to Use Batching; Batching in TanStack Pacer; Batcher Options; Batcher Methods; Custom Batch Triggers; Dynamic Configuration; State Management; Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-batching-md-c3c877da.md",
+          "bytes": 11775
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/queuing.md",
+      "title": "Queuing",
+      "theme": "queue-batch",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-queuing-md-4661e110.md",
+      "sourcePath": "docs/guides/queuing.md",
+      "bytes": 1709,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-queuing-md-4661e110--overview.md",
+          "bytes": 938
+        },
+        {
+          "title": "Queuing Concept",
+          "file": "references/guides/pacer-docs-guides-queuing-md-4661e110--queuing-concept.md",
+          "bytes": 2314
+        },
+        {
+          "title": "Queuing in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-queuing-md-4661e110--queuing-in-tanstack-pacer.md",
+          "bytes": 11162
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-queuing-md-4661e110--state-management.md",
+          "bytes": 5254
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/async-rate-limiting.md",
+      "title": "Async Rate Limiting",
+      "theme": "rate-limiting",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188.md",
+      "sourcePath": "docs/guides/async-rate-limiting.md",
+      "bytes": 2272,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--overview.md",
+          "bytes": 360
+        },
+        {
+          "title": "When to Use Async Rate Limiting",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--when-to-use-async-rate-limiting.md",
+          "bytes": 579
+        },
+        {
+          "title": "Async Rate Limiting in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--async-rate-limiting-in-tanstack-pacer.md",
+          "bytes": 1395
+        },
+        {
+          "title": "Key Differences from Synchronous Rate Limiting",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--key-differences-from-synchronous-rate-limiting.md",
+          "bytes": 3402
+        },
+        {
+          "title": "Advanced Features: Retry and Abort Support",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--advanced-features-retry-and-abort-support.md",
+          "bytes": 2993
+        },
+        {
+          "title": "Dynamic Options and Enabling/Disabling",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--dynamic-options-and-enabling-disabling.md",
+          "bytes": 822
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--state-management.md",
+          "bytes": 5345
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-async-rate-limiting-md-62bd8188--framework-adapters.md",
+          "bytes": 680
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/rate-limiting.md",
+      "title": "Rate Limiting",
+      "theme": "rate-limiting",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-rate-limiting-md-9f0c5f8e.md",
+      "sourcePath": "docs/guides/rate-limiting.md",
+      "bytes": 1609,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-rate-limiting-md-9f0c5f8e--overview.md",
+          "bytes": 734
+        },
+        {
+          "title": "Rate Limiting Concept",
+          "file": "references/guides/pacer-docs-guides-rate-limiting-md-9f0c5f8e--rate-limiting-concept.md",
+          "bytes": 3812
+        },
+        {
+          "title": "Rate Limiting in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-rate-limiting-md-9f0c5f8e--rate-limiting-in-tanstack-pacer.md",
+          "bytes": 6577
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-rate-limiting-md-9f0c5f8e--state-management.md",
+          "bytes": 4963
+        },
+        {
+          "title": "Framework Adapters",
+          "file": "references/guides/pacer-docs-guides-rate-limiting-md-9f0c5f8e--framework-adapters.md",
+          "bytes": 670
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/server-rate-limiting.md",
+      "title": "Server Rate Limiting",
+      "theme": "rate-limiting",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-server-rate-limiting-md-e1cdc337.md",
+      "sourcePath": "docs/guides/server-rate-limiting.md",
+      "bytes": 220,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "",
+          "file": "references/guides/pacer-docs-guides-server-rate-limiting-md-e1cdc337.md",
+          "bytes": 220
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/guides/async-retrying.md",
+      "title": "Async Retrying",
+      "theme": "async-retry",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe.md",
+      "sourcePath": "docs/guides/async-retrying.md",
+      "bytes": 2855,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--overview.md",
+          "bytes": 1327
+        },
+        {
+          "title": "Danger with Misconfigured Retries",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--danger-with-misconfigured-retries.md",
+          "bytes": 2764
+        },
+        {
+          "title": "Async Retrying in TanStack Pacer",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--async-retrying-in-tanstack-pacer.md",
+          "bytes": 3973
+        },
+        {
+          "title": "Backoff Strategies",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--backoff-strategies.md",
+          "bytes": 1377
+        },
+        {
+          "title": "Max Wait",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--max-wait.md",
+          "bytes": 1498
+        },
+        {
+          "title": "Jitter",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--jitter.md",
+          "bytes": 961
+        },
+        {
+          "title": "Timeout Controls",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--timeout-controls.md",
+          "bytes": 1754
+        },
+        {
+          "title": "Error Handling",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--error-handling.md",
+          "bytes": 4831
+        },
+        {
+          "title": "Dynamic Options and Enabling/Disabling",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--dynamic-options-and-enabling-disabling.md",
+          "bytes": 1380
+        },
+        {
+          "title": "Abort and Cancellation",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--abort-and-cancellation.md",
+          "bytes": 2146
+        },
+        {
+          "title": "State Management",
+          "file": "references/guides/pacer-docs-guides-async-retrying-md-099a4ebe--state-management.md",
+          "bytes": 3492
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/framework/react/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-framework-react-adapter-md-526adec5.md",
+      "sourcePath": "docs/framework/react/adapter.md",
+      "bytes": 7316,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Installation; React Hooks; Basic Usage; Option Helpers; Provider; Subscribing to State; Examples",
+          "file": "references/guides/pacer-docs-framework-react-adapter-md-526adec5.md",
+          "bytes": 7316
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/framework/preact/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-framework-preact-adapter-md-cfba1f1c.md",
+      "sourcePath": "docs/framework/preact/adapter.md",
+      "bytes": 7389,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Installation; Preact Hooks; Basic Usage; Option Helpers; Provider; Subscribing to State; Examples",
+          "file": "references/guides/pacer-docs-framework-preact-adapter-md-cfba1f1c.md",
+          "bytes": 7389
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/framework/solid/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-framework-solid-adapter-md-b0b7bf51.md",
+      "sourcePath": "docs/framework/solid/adapter.md",
+      "bytes": 7679,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Installation; Solid Hooks; Basic Usage; Option Helpers; Provider; Subscribing to State; Examples",
+          "file": "references/guides/pacer-docs-framework-solid-adapter-md-b0b7bf51.md",
+          "bytes": 7679
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "pacer:docs/framework/angular/adapter.md",
+      "title": "Adapter",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/pacer",
+      "version": "0.22.0",
+      "file": "references/guides/pacer-docs-framework-angular-adapter-md-f68875f2.md",
+      "sourcePath": "docs/framework/angular/adapter.md",
+      "bytes": 5793,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Installation; Angular inject API; Basic Usage; Provider; State selector; Examples",
+          "file": "references/guides/pacer-docs-framework-angular-adapter-md-f68875f2.md",
+          "bytes": 5793
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

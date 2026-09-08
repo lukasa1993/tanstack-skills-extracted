@@ -18,7 +18,7 @@ Markdown parsing, extensions, rendering, production pipeline, and framework-adap
 
 1. Inspect installed TanStack packages and exact versions.
 2. Read the adapter reference for the detected framework when the task uses an adapter.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 

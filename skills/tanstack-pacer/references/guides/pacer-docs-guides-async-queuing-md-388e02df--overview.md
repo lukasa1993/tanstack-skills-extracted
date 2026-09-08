@@ -1,0 +1,7 @@
+# Async Queuing — Overview
+
+[Guide and prerequisites](./pacer-docs-guides-async-queuing-md-388e02df.md) · Release-matched documentation · `@tanstack/pacer@0.22.0`.
+
+> **Note:** All core queuing concepts from the [Queuing Guide](./pacer-docs-guides-queuing-md-4661e110.md#source-pacer-docs-guides-queuing-md) also apply to AsyncQueuer. AsyncQueuer extends these concepts with advanced features like concurrency (multiple tasks at once) and robust error handling. If you are new to queuing, start with the [Queuing Guide](./pacer-docs-guides-queuing-md-4661e110.md#source-pacer-docs-guides-queuing-md) to learn about FIFO/LIFO, priority, expiration, rejection, and queue management. This guide focuses on what makes AsyncQueuer unique and powerful for asynchronous and concurrent task processing.
+
+While the [Queuer](./pacer-docs-guides-queuing-md-4661e110.md#source-pacer-docs-guides-queuing-md) provides synchronous queuing with timing controls, the `AsyncQueuer` is designed specifically for handling concurrent asynchronous operations. It implements what is traditionally known as a "task pool" or "worker pool" pattern, allowing multiple operations to be processed simultaneously while maintaining control over concurrency and timing. The implementation is mostly copied from [Swimmer](https://github.com/tannerlinsley/swimmer), Tanner's original task pooling utility that has been serving the JavaScript community since 2017.

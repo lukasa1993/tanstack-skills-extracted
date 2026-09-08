@@ -1,0 +1,2436 @@
+{
+  "schemaVersion": 1,
+  "product": "form",
+  "guides": [
+    {
+      "id": "form:docs/community-resources.md",
+      "title": "Community Resources",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/form-core",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-community-resources-md-a3070668.md",
+      "sourcePath": "docs/community-resources.md",
+      "bytes": 212,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "",
+          "file": "references/guides/form-docs-community-resources-md-a3070668.md",
+          "bytes": 212
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/comparison.md",
+      "title": "Comparison",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/form-core",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-comparison-md-0737b564.md",
+      "sourcePath": "docs/comparison.md",
+      "bytes": 7144,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-comparison-md-0737b564.md",
+          "bytes": 7144
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/installation.md",
+      "title": "Installation",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/form-core",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-installation-md-70b06999.md",
+      "sourcePath": "docs/installation.md",
+      "bytes": 1962,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Meta-frameworks; Devtools; Devtools",
+          "file": "references/guides/form-docs-installation-md-70b06999.md",
+          "bytes": 1962
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/overview.md",
+      "title": "Overview",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/form-core",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-overview-md-de5a4961.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 999,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-overview-md-de5a4961--overview.md",
+          "bytes": 500
+        },
+        {
+          "title": "Motivation",
+          "file": "references/guides/form-docs-overview-md-de5a4961--motivation.md",
+          "bytes": 1020
+        },
+        {
+          "title": "Enough talk, show me some code already!",
+          "file": "references/guides/form-docs-overview-md-de5a4961--enough-talk-show-me-some-code-already.md",
+          "bytes": 23123
+        },
+        {
+          "title": "You talked me into it, so what now?",
+          "file": "references/guides/form-docs-overview-md-de5a4961--you-talked-me-into-it-so-what-now.md",
+          "bytes": 508
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/philosophy.md",
+      "title": "Philosophy",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/form-core",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-philosophy-md-1a773d34.md",
+      "sourcePath": "docs/philosophy.md",
+      "bytes": 3713,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Upgrading unified APIs; Forms need flexibility; Controlled is Cool; Generics are grim; Libraries are liberating",
+          "file": "references/guides/form-docs-philosophy-md-1a773d34.md",
+          "bytes": 3713
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/typescript.md",
+      "title": "Typescript",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/form-core",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-typescript-md-a3ce50fb.md",
+      "sourcePath": "docs/typescript.md",
+      "bytes": 1028,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-typescript-md-a3ce50fb.md",
+          "bytes": 1028
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-arrays-md-9a219cee.md",
+      "sourcePath": "docs/framework/react/guides/arrays.md",
+      "bytes": 3065,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-react-guides-arrays-md-9a219cee.md",
+          "bytes": 3065
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/async-initial-values.md",
+      "title": "Async Initial Values",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-async-initial-values-md-45165e08.md",
+      "sourcePath": "docs/framework/react/guides/async-initial-values.md",
+      "bytes": 1870,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage",
+          "file": "references/guides/form-docs-framework-react-guides-async-initial-values-md-45165e08.md",
+          "bytes": 1870
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-basic-concepts-md-f90df1f7.md",
+      "sourcePath": "docs/framework/react/guides/basic-concepts.md",
+      "bytes": 12267,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries; Field API; Validation; Validation with Standard Schema Libraries; Reactivity; Listeners; Array Fields; Reset Buttons",
+          "file": "references/guides/form-docs-framework-react-guides-basic-concepts-md-f90df1f7.md",
+          "bytes": 12267
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/linked-fields.md",
+      "title": "Linked Fields",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-linked-fields-md-37f1a676.md",
+      "sourcePath": "docs/framework/react/guides/linked-fields.md",
+      "bytes": 2463,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-guides-linked-fields-md-37f1a676.md",
+          "bytes": 2463
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/listeners.md",
+      "title": "Listeners",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-listeners-md-91abc662.md",
+      "sourcePath": "docs/framework/react/guides/listeners.md",
+      "bytes": 3531,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-guides-listeners-md-91abc662.md",
+          "bytes": 3531
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/reactivity.md",
+      "title": "Reactivity",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-reactivity-md-8413e529.md",
+      "sourcePath": "docs/framework/react/guides/reactivity.md",
+      "bytes": 2925,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; useSelector; form.Subscribe",
+          "file": "references/guides/form-docs-framework-react-guides-reactivity-md-8413e529.md",
+          "bytes": 2925
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/submission-handling.md",
+      "title": "Submission Handling",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-submission-handling-md-75de4e64.md",
+      "sourcePath": "docs/framework/react/guides/submission-handling.md",
+      "bytes": 2793,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Passing additional data to submission handling; Transforming data with Standard Schemas",
+          "file": "references/guides/form-docs-framework-react-guides-submission-handling-md-75de4e64.md",
+          "bytes": 2793
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c.md",
+      "sourcePath": "docs/framework/react/guides/validation.md",
+      "bytes": 2043,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--overview.md",
+          "bytes": 572
+        },
+        {
+          "title": "When is validation performed?",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--when-is-validation-performed.md",
+          "bytes": 3520
+        },
+        {
+          "title": "Displaying Errors",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--displaying-errors.md",
+          "bytes": 1712
+        },
+        {
+          "title": "Validation at field-level vs at form-level",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--validation-at-field-level-vs-at-form-level.md",
+          "bytes": 5019
+        },
+        {
+          "title": "Asynchronous Functional Validation",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--asynchronous-functional-validation.md",
+          "bytes": 3399
+        },
+        {
+          "title": "Validation through Schema Libraries",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--validation-through-schema-libraries.md",
+          "bytes": 2979
+        },
+        {
+          "title": "Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--preventing-invalid-forms-from-being-submitted.md",
+          "bytes": 1483
+        }
+      ],
+      "examples": [
+        {
+          "file": "references/examples/react-validation.tsx",
+          "title": "React field validation and guarded submission",
+          "testedPackages": {
+            "@tanstack/react-form": "1.33.5",
+            "react": "19.2.8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "form:docs/framework/react/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-quick-start-md-228851e5.md",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "bytes": 4459,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-quick-start-md-228851e5.md",
+          "bytes": 4459
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/custom-errors.md",
+      "title": "Custom Errors",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-custom-errors-md-7071baae.md",
+      "sourcePath": "docs/framework/react/guides/custom-errors.md",
+      "bytes": 7014,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Return String Values from Forms; The `disableErrorFlat` Prop on Fields; Type Safety of `errors` and `errorMap`",
+          "file": "references/guides/form-docs-framework-react-guides-custom-errors-md-7071baae.md",
+          "bytes": 7014
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/debugging.md",
+      "title": "Debugging",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-debugging-md-7da5786f.md",
+      "sourcePath": "docs/framework/react/guides/debugging.md",
+      "bytes": 2314,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Changing an uncontrolled input to be controlled; Field value is of type `unknown`; `Type instantiation is excessively deep and possibly infinite`",
+          "file": "references/guides/form-docs-framework-react-guides-debugging-md-7da5786f.md",
+          "bytes": 2314
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/devtools.md",
+      "title": "Devtools",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-devtools-md-45bf4fd1.md",
+      "sourcePath": "docs/framework/react/guides/devtools.md",
+      "bytes": 1761,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup",
+          "file": "references/guides/form-docs-framework-react-guides-devtools-md-45bf4fd1.md",
+          "bytes": 1761
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-dynamic-validation-md-6f17ef38.md",
+      "sourcePath": "docs/framework/react/guides/dynamic-validation.md",
+      "bytes": 5994,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-react-guides-dynamic-validation-md-6f17ef38.md",
+          "bytes": 5994
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/focus-management.md",
+      "title": "Focus Management",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-focus-management-md-cae2a29a.md",
+      "sourcePath": "docs/framework/react/guides/focus-management.md",
+      "bytes": 3985,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; React DOM; React Native",
+          "file": "references/guides/form-docs-framework-react-guides-focus-management-md-cae2a29a.md",
+          "bytes": 3985
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/form-composition.md",
+      "title": "Form Composition",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890.md",
+      "sourcePath": "docs/framework/react/guides/form-composition.md",
+      "bytes": 1920,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--overview.md",
+          "bytes": 590
+        },
+        {
+          "title": "Custom Form Hooks",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--custom-form-hooks.md",
+          "bytes": 6732
+        },
+        {
+          "title": "Breaking big forms into smaller pieces",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--breaking-big-forms-into-smaller-pieces.md",
+          "bytes": 4163
+        },
+        {
+          "title": "Reusing groups of fields in multiple forms",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--reusing-groups-of-fields-in-multiple-forms.md",
+          "bytes": 6649
+        },
+        {
+          "title": "Tree-shaking form and field components",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--tree-shaking-form-and-field-components.md",
+          "bytes": 1999
+        },
+        {
+          "title": "Putting it all together",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--putting-it-all-together.md",
+          "bytes": 2143
+        },
+        {
+          "title": "API Usage Guidance",
+          "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--api-usage-guidance.md",
+          "bytes": 349
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-form-groups-md-173e5bfc.md",
+      "sourcePath": "docs/framework/react/guides/form-groups.md",
+      "bytes": 5406,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-react-guides-form-groups-md-173e5bfc.md",
+          "bytes": 5406
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/react-native.md",
+      "title": "React Native",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-react-native-md-d3ff60f3.md",
+      "sourcePath": "docs/framework/react/guides/react-native.md",
+      "bytes": 787,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-guides-react-native-md-d3ff60f3.md",
+          "bytes": 787
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f.md",
+      "sourcePath": "docs/framework/react/guides/ssr.md",
+      "bytes": 1492,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--overview.md",
+          "bytes": 515
+        },
+        {
+          "title": "Using TanStack Form in TanStack Start",
+          "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--using-tanstack-form-in-tanstack-start.md",
+          "bytes": 4785
+        },
+        {
+          "title": "Using TanStack Form in a Next.js App Router",
+          "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--using-tanstack-form-in-a-next-js-app-router.md",
+          "bytes": 1118
+        },
+        {
+          "title": "App Router integration",
+          "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--app-router-integration.md",
+          "bytes": 4620
+        },
+        {
+          "title": "Using TanStack Form in Remix",
+          "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--using-tanstack-form-in-remix.md",
+          "bytes": 782
+        },
+        {
+          "title": "Remix integration",
+          "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--remix-integration.md",
+          "bytes": 4154
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/react/guides/ui-libraries.md",
+      "title": "Ui Libraries",
+      "theme": "framework-react-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/react-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-react-guides-ui-libraries-md-79171c70.md",
+      "sourcePath": "docs/framework/react/guides/ui-libraries.md",
+      "bytes": 8238,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Usage of TanStack Form with UI Libraries",
+          "file": "references/guides/form-docs-framework-react-guides-ui-libraries-md-79171c70.md",
+          "bytes": 8238
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-arrays-md-c6bfae9f.md",
+      "sourcePath": "docs/framework/preact/guides/arrays.md",
+      "bytes": 3066,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-preact-guides-arrays-md-c6bfae9f.md",
+          "bytes": 3066
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/async-initial-values.md",
+      "title": "Async Initial Values",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-async-initial-values-md-c2699126.md",
+      "sourcePath": "docs/framework/preact/guides/async-initial-values.md",
+      "bytes": 1874,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage",
+          "file": "references/guides/form-docs-framework-preact-guides-async-initial-values-md-c2699126.md",
+          "bytes": 1874
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-basic-concepts-md-df48f281.md",
+      "sourcePath": "docs/framework/preact/guides/basic-concepts.md",
+      "bytes": 12219,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries; Field API; Validation; Validation with Standard Schema Libraries; Reactivity; Listeners; Array Fields; Reset Buttons",
+          "file": "references/guides/form-docs-framework-preact-guides-basic-concepts-md-df48f281.md",
+          "bytes": 12219
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/linked-fields.md",
+      "title": "Linked Fields",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-linked-fields-md-1fc84bef.md",
+      "sourcePath": "docs/framework/preact/guides/linked-fields.md",
+      "bytes": 2464,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-preact-guides-linked-fields-md-1fc84bef.md",
+          "bytes": 2464
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/listeners.md",
+      "title": "Listeners",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-listeners-md-384a035d.md",
+      "sourcePath": "docs/framework/preact/guides/listeners.md",
+      "bytes": 3532,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-preact-guides-listeners-md-384a035d.md",
+          "bytes": 3532
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/reactivity.md",
+      "title": "Reactivity",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-reactivity-md-12a0cb94.md",
+      "sourcePath": "docs/framework/preact/guides/reactivity.md",
+      "bytes": 2337,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; useSelector; form.Subscribe",
+          "file": "references/guides/form-docs-framework-preact-guides-reactivity-md-12a0cb94.md",
+          "bytes": 2337
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/submission-handling.md",
+      "title": "Submission Handling",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-submission-handling-md-d9c8da17.md",
+      "sourcePath": "docs/framework/preact/guides/submission-handling.md",
+      "bytes": 2799,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Passing additional data to submission handling; Transforming data with Standard Schemas",
+          "file": "references/guides/form-docs-framework-preact-guides-submission-handling-md-d9c8da17.md",
+          "bytes": 2799
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87.md",
+      "sourcePath": "docs/framework/preact/guides/validation.md",
+      "bytes": 1804,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--overview.md",
+          "bytes": 574
+        },
+        {
+          "title": "When is validation performed?",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--when-is-validation-performed.md",
+          "bytes": 3519
+        },
+        {
+          "title": "Displaying Errors",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--displaying-errors.md",
+          "bytes": 1714
+        },
+        {
+          "title": "Validation at field-level vs at form-level",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--validation-at-field-level-vs-at-form-level.md",
+          "bytes": 4348
+        },
+        {
+          "title": "Asynchronous Functional Validation",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--asynchronous-functional-validation.md",
+          "bytes": 3399
+        },
+        {
+          "title": "Validation through Schema Libraries",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--validation-through-schema-libraries.md",
+          "bytes": 2983
+        },
+        {
+          "title": "Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87--preventing-invalid-forms-from-being-submitted.md",
+          "bytes": 1485
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-quick-start-md-d3550125.md",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "bytes": 4354,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-preact-quick-start-md-d3550125.md",
+          "bytes": 4354
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/custom-errors.md",
+      "title": "Custom Errors",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-custom-errors-md-f8eee861.md",
+      "sourcePath": "docs/framework/preact/guides/custom-errors.md",
+      "bytes": 7017,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Return String Values from Forms; The `disableErrorFlat` Prop on Fields; Type Safety of `errors` and `errorMap`",
+          "file": "references/guides/form-docs-framework-preact-guides-custom-errors-md-f8eee861.md",
+          "bytes": 7017
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/debugging.md",
+      "title": "Debugging",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-debugging-md-18ef60aa.md",
+      "sourcePath": "docs/framework/preact/guides/debugging.md",
+      "bytes": 2317,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Changing an uncontrolled input to be controlled; Field value is of type `unknown`; `Type instantiation is excessively deep and possibly infinite`",
+          "file": "references/guides/form-docs-framework-preact-guides-debugging-md-18ef60aa.md",
+          "bytes": 2317
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-dynamic-validation-md-6f2c4201.md",
+      "sourcePath": "docs/framework/preact/guides/dynamic-validation.md",
+      "bytes": 5998,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-preact-guides-dynamic-validation-md-6f2c4201.md",
+          "bytes": 5998
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/focus-management.md",
+      "title": "Focus Management",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-focus-management-md-1c151518.md",
+      "sourcePath": "docs/framework/preact/guides/focus-management.md",
+      "bytes": 4003,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; DOM; React Native (via compat)",
+          "file": "references/guides/form-docs-framework-preact-guides-focus-management-md-1c151518.md",
+          "bytes": 4003
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/form-composition.md",
+      "title": "Form Composition",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23.md",
+      "sourcePath": "docs/framework/preact/guides/form-composition.md",
+      "bytes": 1892,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--overview.md",
+          "bytes": 592
+        },
+        {
+          "title": "Custom Form Hooks",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--custom-form-hooks.md",
+          "bytes": 4671
+        },
+        {
+          "title": "Breaking big forms into smaller pieces",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--breaking-big-forms-into-smaller-pieces.md",
+          "bytes": 3883
+        },
+        {
+          "title": "Reusing groups of fields in multiple forms",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--reusing-groups-of-fields-in-multiple-forms.md",
+          "bytes": 6653
+        },
+        {
+          "title": "Tree-shaking form and field components",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--tree-shaking-form-and-field-components.md",
+          "bytes": 2018
+        },
+        {
+          "title": "Putting it all together",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--putting-it-all-together.md",
+          "bytes": 2144
+        },
+        {
+          "title": "API Usage Guidance",
+          "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23--api-usage-guidance.md",
+          "bytes": 351
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-form-groups-md-6fb2c301.md",
+      "sourcePath": "docs/framework/preact/guides/form-groups.md",
+      "bytes": 5413,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-preact-guides-form-groups-md-6fb2c301.md",
+          "bytes": 5413
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/preact/guides/ui-libraries.md",
+      "title": "Ui Libraries",
+      "theme": "framework-preact-advanced",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/preact-form",
+      "version": "1.30.5",
+      "file": "references/guides/form-docs-framework-preact-guides-ui-libraries-md-63b67c1a.md",
+      "sourcePath": "docs/framework/preact/guides/ui-libraries.md",
+      "bytes": 8236,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Usage of TanStack Form with UI Libraries",
+          "file": "references/guides/form-docs-framework-preact-guides-ui-libraries-md-63b67c1a.md",
+          "bytes": 8236
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-arrays-md-ba965091.md",
+      "sourcePath": "docs/framework/vue/guides/arrays.md",
+      "bytes": 3596,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-vue-guides-arrays-md-ba965091.md",
+          "bytes": 3596
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/async-initial-values.md",
+      "title": "Async Initial Values",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-async-initial-values-md-fa0fd5bf.md",
+      "sourcePath": "docs/framework/vue/guides/async-initial-values.md",
+      "bytes": 2062,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage",
+          "file": "references/guides/form-docs-framework-vue-guides-async-initial-values-md-fa0fd5bf.md",
+          "bytes": 2062
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-basic-concepts-md-a557ed20.md",
+      "sourcePath": "docs/framework/vue/guides/basic-concepts.md",
+      "bytes": 12086,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries; Field API; Validation; Validation with Standard Schema Libraries; Reactivity; Listeners; Array Fields",
+          "file": "references/guides/form-docs-framework-vue-guides-basic-concepts-md-a557ed20.md",
+          "bytes": 12086
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-dynamic-validation-md-b4751847.md",
+      "sourcePath": "docs/framework/vue/guides/dynamic-validation.md",
+      "bytes": 6148,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-vue-guides-dynamic-validation-md-b4751847.md",
+          "bytes": 6148
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-form-groups-md-18e5cc1d.md",
+      "sourcePath": "docs/framework/vue/guides/form-groups.md",
+      "bytes": 5684,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-vue-guides-form-groups-md-18e5cc1d.md",
+          "bytes": 5684
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/linked-fields.md",
+      "title": "Linked Fields",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-linked-fields-md-0fe3391d.md",
+      "sourcePath": "docs/framework/vue/guides/linked-fields.md",
+      "bytes": 2687,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-vue-guides-linked-fields-md-0fe3391d.md",
+          "bytes": 2687
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/listeners.md",
+      "title": "Listeners",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-listeners-md-caeea7fa.md",
+      "sourcePath": "docs/framework/vue/guides/listeners.md",
+      "bytes": 3582,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-vue-guides-listeners-md-caeea7fa.md",
+          "bytes": 3582
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/submission-handling.md",
+      "title": "Submission Handling",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-submission-handling-md-653bde54.md",
+      "sourcePath": "docs/framework/vue/guides/submission-handling.md",
+      "bytes": 2843,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Passing additional data to submission handling; Transforming data with Standard Schemas",
+          "file": "references/guides/form-docs-framework-vue-guides-submission-handling-md-653bde54.md",
+          "bytes": 2843
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa.md",
+      "sourcePath": "docs/framework/vue/guides/validation.md",
+      "bytes": 1774,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--overview.md",
+          "bytes": 567
+        },
+        {
+          "title": "When is validation performed?",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--when-is-validation-performed.md",
+          "bytes": 3888
+        },
+        {
+          "title": "Displaying Errors",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--displaying-errors.md",
+          "bytes": 1863
+        },
+        {
+          "title": "Validation at field level vs at form level",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--validation-at-field-level-vs-at-form-level.md",
+          "bytes": 3464
+        },
+        {
+          "title": "Asynchronous Functional Validation",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--asynchronous-functional-validation.md",
+          "bytes": 4028
+        },
+        {
+          "title": "Validation through Schema Libraries",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--validation-through-schema-libraries.md",
+          "bytes": 3045
+        },
+        {
+          "title": "Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa--preventing-invalid-forms-from-being-submitted.md",
+          "bytes": 1499
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/vue/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/vue-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-vue-quick-start-md-3f6031c8.md",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "bytes": 1267,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-vue-quick-start-md-3f6031c8.md",
+          "bytes": 1267
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-arrays-md-0b0d36e6.md",
+      "sourcePath": "docs/framework/angular/guides/arrays.md",
+      "bytes": 4436,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-angular-guides-arrays-md-0b0d36e6.md",
+          "bytes": 4436
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-basic-concepts-md-23e082ea.md",
+      "sourcePath": "docs/framework/angular/guides/basic-concepts.md",
+      "bytes": 11150,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries; Field API; Validation; Validation with Standard Schema Libraries; Reactivity; Listeners; Array Fields",
+          "file": "references/guides/form-docs-framework-angular-guides-basic-concepts-md-23e082ea.md",
+          "bytes": 11150
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-dynamic-validation-md-86a4132d.md",
+      "sourcePath": "docs/framework/angular/guides/dynamic-validation.md",
+      "bytes": 8144,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-angular-guides-dynamic-validation-md-86a4132d.md",
+          "bytes": 8144
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/form-composition.md",
+      "title": "Form Composition",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-form-composition-md-87447c33.md",
+      "sourcePath": "docs/framework/angular/guides/form-composition.md",
+      "bytes": 8820,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Pre-bound Field Components; Breaking big forms into smaller pieces",
+          "file": "references/guides/form-docs-framework-angular-guides-form-composition-md-87447c33.md",
+          "bytes": 8820
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-form-groups-md-4edf82c8.md",
+      "sourcePath": "docs/framework/angular/guides/form-groups.md",
+      "bytes": 8323,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-angular-guides-form-groups-md-4edf82c8.md",
+          "bytes": 8323
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/listeners.md",
+      "title": "Listeners",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-listeners-md-85d37563.md",
+      "sourcePath": "docs/framework/angular/guides/listeners.md",
+      "bytes": 1749,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-angular-guides-listeners-md-85d37563.md",
+          "bytes": 1749
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/submission-handling.md",
+      "title": "Submission Handling",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-submission-handling-md-100620c8.md",
+      "sourcePath": "docs/framework/angular/guides/submission-handling.md",
+      "bytes": 3055,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Passing additional data to submission handling; Transforming data with Standard Schemas",
+          "file": "references/guides/form-docs-framework-angular-guides-submission-handling-md-100620c8.md",
+          "bytes": 3055
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b.md",
+      "sourcePath": "docs/framework/angular/guides/validation.md",
+      "bytes": 1814,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--overview.md",
+          "bytes": 575
+        },
+        {
+          "title": "When is validation performed?",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--when-is-validation-performed.md",
+          "bytes": 4537
+        },
+        {
+          "title": "Displaying Errors",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--displaying-errors.md",
+          "bytes": 2571
+        },
+        {
+          "title": "Validation at field level vs at form level",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--validation-at-field-level-vs-at-form-level.md",
+          "bytes": 5116
+        },
+        {
+          "title": "Asynchronous Functional Validation",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--asynchronous-functional-validation.md",
+          "bytes": 3991
+        },
+        {
+          "title": "Validation through Schema Libraries",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--validation-through-schema-libraries.md",
+          "bytes": 3439
+        },
+        {
+          "title": "Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b--preventing-invalid-forms-from-being-submitted.md",
+          "bytes": 1548
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/angular/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/angular-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-angular-quick-start-md-307223f4.md",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "bytes": 1711,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-angular-quick-start-md-307223f4.md",
+          "bytes": 1711
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-arrays-md-6b5c3ad0.md",
+      "sourcePath": "docs/framework/solid/guides/arrays.md",
+      "bytes": 3387,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-solid-guides-arrays-md-6b5c3ad0.md",
+          "bytes": 3387
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/async-initial-values.md",
+      "title": "Async Initial Values",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-async-initial-values-md-e742432f.md",
+      "sourcePath": "docs/framework/solid/guides/async-initial-values.md",
+      "bytes": 1966,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage",
+          "file": "references/guides/form-docs-framework-solid-guides-async-initial-values-md-e742432f.md",
+          "bytes": 1966
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-basic-concepts-md-0767458b.md",
+      "sourcePath": "docs/framework/solid/guides/basic-concepts.md",
+      "bytes": 10150,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries; Field API; Validation; Validation with Standard Schema Libraries; Reactivity; Array Fields",
+          "file": "references/guides/form-docs-framework-solid-guides-basic-concepts-md-0767458b.md",
+          "bytes": 10150
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/devtools.md",
+      "title": "Devtools",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-devtools-md-58036254.md",
+      "sourcePath": "docs/framework/solid/guides/devtools.md",
+      "bytes": 1725,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup",
+          "file": "references/guides/form-docs-framework-solid-guides-devtools-md-58036254.md",
+          "bytes": 1725
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-dynamic-validation-md-5c4777cd.md",
+      "sourcePath": "docs/framework/solid/guides/dynamic-validation.md",
+      "bytes": 6058,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-solid-guides-dynamic-validation-md-5c4777cd.md",
+          "bytes": 6058
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/form-composition.md",
+      "title": "Form Composition",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da.md",
+      "sourcePath": "docs/framework/solid/guides/form-composition.md",
+      "bytes": 1800,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--overview.md",
+          "bytes": 569
+        },
+        {
+          "title": "Custom Form Hooks",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--custom-form-hooks.md",
+          "bytes": 3942
+        },
+        {
+          "title": "Breaking big forms into smaller pieces",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--breaking-big-forms-into-smaller-pieces.md",
+          "bytes": 2090
+        },
+        {
+          "title": "Reusing groups of fields in multiple forms",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--reusing-groups-of-fields-in-multiple-forms.md",
+          "bytes": 6723
+        },
+        {
+          "title": "Tree-shaking form and field components",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--tree-shaking-form-and-field-components.md",
+          "bytes": 2009
+        },
+        {
+          "title": "Putting it all together",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--putting-it-all-together.md",
+          "bytes": 2213
+        },
+        {
+          "title": "API Usage Guidance",
+          "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da--api-usage-guidance.md",
+          "bytes": 349
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-form-groups-md-9ce75a19.md",
+      "sourcePath": "docs/framework/solid/guides/form-groups.md",
+      "bytes": 5349,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-solid-guides-form-groups-md-9ce75a19.md",
+          "bytes": 5349
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/linked-fields.md",
+      "title": "Linked Fields",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-linked-fields-md-1e40c9c5.md",
+      "sourcePath": "docs/framework/solid/guides/linked-fields.md",
+      "bytes": 2462,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-solid-guides-linked-fields-md-1e40c9c5.md",
+          "bytes": 2462
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/submission-handling.md",
+      "title": "Submission Handling",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-submission-handling-md-4cd820e1.md",
+      "sourcePath": "docs/framework/solid/guides/submission-handling.md",
+      "bytes": 2911,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Passing additional data to submission handling; Transforming data with Standard Schemas",
+          "file": "references/guides/form-docs-framework-solid-guides-submission-handling-md-4cd820e1.md",
+          "bytes": 2911
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce.md",
+      "sourcePath": "docs/framework/solid/guides/validation.md",
+      "bytes": 1794,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--overview.md",
+          "bytes": 571
+        },
+        {
+          "title": "When is validation performed?",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--when-is-validation-performed.md",
+          "bytes": 3560
+        },
+        {
+          "title": "Displaying Errors",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--displaying-errors.md",
+          "bytes": 1730
+        },
+        {
+          "title": "Validation at field level vs at form level",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--validation-at-field-level-vs-at-form-level.md",
+          "bytes": 4621
+        },
+        {
+          "title": "Asynchronous Functional Validation",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--asynchronous-functional-validation.md",
+          "bytes": 3427
+        },
+        {
+          "title": "Validation through Schema Libraries",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--validation-through-schema-libraries.md",
+          "bytes": 2723
+        },
+        {
+          "title": "Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce--preventing-invalid-forms-from-being-submitted.md",
+          "bytes": 1520
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/solid/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/solid-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-solid-quick-start-md-e99afc94.md",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "bytes": 1408,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-solid-quick-start-md-e99afc94.md",
+          "bytes": 1408
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-guides-arrays-md-6f2d2c2e.md",
+      "sourcePath": "docs/framework/lit/guides/arrays.md",
+      "bytes": 4373,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-lit-guides-arrays-md-6f2d2c2e.md",
+          "bytes": 4373
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-guides-basic-concepts-md-818c1ff0.md",
+      "sourcePath": "docs/framework/lit/guides/basic-concepts.md",
+      "bytes": 4614,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries",
+          "file": "references/guides/form-docs-framework-lit-guides-basic-concepts-md-818c1ff0.md",
+          "bytes": 4614
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-guides-dynamic-validation-md-65a7cdfb.md",
+      "sourcePath": "docs/framework/lit/guides/dynamic-validation.md",
+      "bytes": 7838,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-lit-guides-dynamic-validation-md-65a7cdfb.md",
+          "bytes": 7838
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/guides/form-composition.md",
+      "title": "Form Composition",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-guides-form-composition-md-084681ff.md",
+      "sourcePath": "docs/framework/lit/guides/form-composition.md",
+      "bytes": 9186,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reusable field components with `AnyFieldApi`; Breaking big forms into smaller pieces; Reusing groups of fields across multiple forms",
+          "file": "references/guides/form-docs-framework-lit-guides-form-composition-md-084681ff.md",
+          "bytes": 9186
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-guides-form-groups-md-3d478226.md",
+      "sourcePath": "docs/framework/lit/guides/form-groups.md",
+      "bytes": 7395,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-lit-guides-form-groups-md-3d478226.md",
+          "bytes": 7395
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73.md",
+      "sourcePath": "docs/framework/lit/guides/validation.md",
+      "bytes": 1774,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--overview.md",
+          "bytes": 567
+        },
+        {
+          "title": "When is validation performed?",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--when-is-validation-performed.md",
+          "bytes": 3738
+        },
+        {
+          "title": "Displaying Errors",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--displaying-errors.md",
+          "bytes": 1898
+        },
+        {
+          "title": "Validation at field level vs at form level",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--validation-at-field-level-vs-at-form-level.md",
+          "bytes": 5052
+        },
+        {
+          "title": "Asynchronous Functional Validation",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--asynchronous-functional-validation.md",
+          "bytes": 3815
+        },
+        {
+          "title": "Validation through Schema Libraries",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--validation-through-schema-libraries.md",
+          "bytes": 3252
+        },
+        {
+          "title": "Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73--preventing-invalid-forms-from-being-submitted.md",
+          "bytes": 1483
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/lit/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/lit-form",
+      "version": "1.25.5",
+      "file": "references/guides/form-docs-framework-lit-quick-start-md-efece333.md",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "bytes": 2418,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-lit-quick-start-md-efece333.md",
+          "bytes": 2418
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/arrays.md",
+      "title": "Arrays",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-arrays-md-94ec3832.md",
+      "sourcePath": "docs/framework/svelte/guides/arrays.md",
+      "bytes": 2677,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Full Example",
+          "file": "references/guides/form-docs-framework-svelte-guides-arrays-md-94ec3832.md",
+          "bytes": 2677
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/async-initial-values.md",
+      "title": "Async Initial Values",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-async-initial-values-md-f77018ef.md",
+      "sourcePath": "docs/framework/svelte/guides/async-initial-values.md",
+      "bytes": 1937,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage",
+          "file": "references/guides/form-docs-framework-svelte-guides-async-initial-values-md-f77018ef.md",
+          "bytes": 1937
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/basic-concepts.md",
+      "title": "Basic Concepts",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-basic-concepts-md-fb046053.md",
+      "sourcePath": "docs/framework/svelte/guides/basic-concepts.md",
+      "bytes": 9903,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries; Field API; Validation; Validation with Standard Schema Libraries; Reactivity; Array Fields",
+          "file": "references/guides/form-docs-framework-svelte-guides-basic-concepts-md-fb046053.md",
+          "bytes": 9903
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/dynamic-validation.md",
+      "title": "Dynamic Validation",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-dynamic-validation-md-16ecb3b4.md",
+      "sourcePath": "docs/framework/svelte/guides/dynamic-validation.md",
+      "bytes": 6051,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Revalidation Options; Accessing Errors; Usage with Other Validation Logic",
+          "file": "references/guides/form-docs-framework-svelte-guides-dynamic-validation-md-16ecb3b4.md",
+          "bytes": 6051
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/form-composition.md",
+      "title": "Form Composition",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5.md",
+      "sourcePath": "docs/framework/svelte/guides/form-composition.md",
+      "bytes": 1892,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--overview.md",
+          "bytes": 571
+        },
+        {
+          "title": "Custom Form Methods",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--custom-form-methods.md",
+          "bytes": 4623
+        },
+        {
+          "title": "Breaking big forms into smaller pieces",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--breaking-big-forms-into-smaller-pieces.md",
+          "bytes": 1681
+        },
+        {
+          "title": "Getting the Form Type",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--getting-the-form-type.md",
+          "bytes": 2098
+        },
+        {
+          "title": "Reusing groups of fields in multiple forms",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--reusing-groups-of-fields-in-multiple-forms.md",
+          "bytes": 2721
+        },
+        {
+          "title": "Tree-shaking form and field components",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--tree-shaking-form-and-field-components.md",
+          "bytes": 1738
+        },
+        {
+          "title": "Putting it all together",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--putting-it-all-together.md",
+          "bytes": 3063
+        },
+        {
+          "title": "API Usage Guidance",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5--api-usage-guidance.md",
+          "bytes": 374
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/form-groups.md",
+      "title": "Form Groups",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-form-groups-md-d7da18da.md",
+      "sourcePath": "docs/framework/svelte/guides/form-groups.md",
+      "bytes": 5894,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Usage; Form Group Validation; Form Group State",
+          "file": "references/guides/form-docs-framework-svelte-guides-form-groups-md-d7da18da.md",
+          "bytes": 5894
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/linked-fields.md",
+      "title": "Linked Fields",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-linked-fields-md-e6b1933c.md",
+      "sourcePath": "docs/framework/svelte/guides/linked-fields.md",
+      "bytes": 2350,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-svelte-guides-linked-fields-md-e6b1933c.md",
+          "bytes": 2350
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/guides/validation.md",
+      "title": "Validation",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-guides-validation-md-337264ae.md",
+      "sourcePath": "docs/framework/svelte/guides/validation.md",
+      "bytes": 12527,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; When is validation performed?; Displaying Errors; Validation at field level vs at form level; Asynchronous Functional Validation; Validation through Schema Libraries; Preventing invalid forms from being submitted",
+          "file": "references/guides/form-docs-framework-svelte-guides-validation-md-337264ae.md",
+          "bytes": 12527
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "form:docs/framework/svelte/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/svelte-form",
+      "version": "1.33.5",
+      "file": "references/guides/form-docs-framework-svelte-quick-start-md-e8dcf4c6.md",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "bytes": 1310,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/form-docs-framework-svelte-quick-start-md-e8dcf4c6.md",
+          "bytes": 1310
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack DB"
-  short_description: "Reactive collection guidance for live queries, optimistic mutations, persistence, sync engines, and framework adapters."
+  short_description: "Task and framework guides for TanStack DB"
   default_prompt: "Use $tanstack-db to implement this TanStack DB task with the installed framework and package versions."

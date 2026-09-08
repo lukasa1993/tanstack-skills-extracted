@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "product": "highlight",
+  "guides": [
+    {
+      "id": "tanstack-highlight-configure-selective-highlighting",
+      "title": "Configure Selective Highlighting",
+      "theme": "languages-configuration",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/highlight",
+      "version": "0.0.10",
+      "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md",
+      "sourcePath": "configure-selective-highlighting",
+      "bytes": 7069,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md",
+          "bytes": 7069
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-highlight-extend-language-support",
+      "title": "Extend Language Support",
+      "theme": "languages-configuration",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/highlight",
+      "version": "0.0.10",
+      "file": "references/guides/tanstack-highlight-extend-language-support-752c4660.md",
+      "sourcePath": "extend-language-support",
+      "bytes": 8832,
+      "prerequisites": [
+        {
+          "id": "tanstack-highlight-configure-selective-highlighting",
+          "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-highlight-extend-language-support-752c4660.md",
+          "bytes": 8832
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-highlight-integrate-framework-code-blocks",
+      "title": "Integrate Framework Code Blocks",
+      "theme": "integrations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/highlight",
+      "version": "0.0.10",
+      "file": "references/guides/tanstack-highlight-integrate-framework-code-blocks-9c88ca76.md",
+      "sourcePath": "integrate-framework-code-blocks",
+      "bytes": 9456,
+      "prerequisites": [
+        {
+          "id": "tanstack-highlight-configure-selective-highlighting",
+          "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md"
+        },
+        {
+          "id": "tanstack-highlight-integrate-markdown-pipelines",
+          "file": "references/guides/tanstack-highlight-integrate-markdown-pipelines-32cb443f.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Integration Setup; Core Integration Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-highlight-integrate-framework-code-blocks-9c88ca76.md",
+          "bytes": 9456
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-highlight-integrate-markdown-pipelines",
+      "title": "Integrate Markdown Pipelines",
+      "theme": "integrations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/highlight",
+      "version": "0.0.10",
+      "file": "references/guides/tanstack-highlight-integrate-markdown-pipelines-32cb443f.md",
+      "sourcePath": "integrate-markdown-pipelines",
+      "bytes": 8374,
+      "prerequisites": [
+        {
+          "id": "tanstack-highlight-configure-selective-highlighting",
+          "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-highlight-integrate-markdown-pipelines-32cb443f.md",
+          "bytes": 8374
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-highlight-theme-and-annotate-code",
+      "title": "Theme And Annotate Code",
+      "theme": "themes-annotations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/highlight",
+      "version": "0.0.10",
+      "file": "references/guides/tanstack-highlight-theme-and-annotate-code-f5bc5628.md",
+      "sourcePath": "theme-and-annotate-code",
+      "bytes": 6924,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
+          "file": "references/guides/tanstack-highlight-theme-and-annotate-code-f5bc5628.md",
+          "bytes": 6924
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

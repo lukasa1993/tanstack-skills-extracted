@@ -1,0 +1,81 @@
+# Adapter
+
+<a id="source-charts-docs-framework-solid-adapter-md"></a>
+
+Release-matched documentation · `@tanstack/charts@0.16.0`.
+
+[Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
+
+```sh
+pnpm add @tanstack/charts solid-js
+```
+
+```tsx
+import { defineChart } from '@tanstack/charts'
+import { tooltip } from '@tanstack/charts/tooltip'
+import { Chart } from '@tanstack/charts/solid'
+
+const definition = createMemo(() =>
+  defineChart(createRevenueChart(rows()), { tooltip }),
+)
+
+;<Chart
+  definition={definition()}
+  ariaLabel="Revenue by month"
+  aspectRatio={16 / 9}
+/>
+```
+
+Reactive props update the shared host without replacing its SVG. `class` and
+`style` target the outer host. The component renders the initial SVG during
+Solid SSR.
+
+## Lifecycle
+
+The component creates one shared adapter controller, forwards reactive props
+from `createEffect`, mounts it in `onMount`, and destroys it in `onCleanup`.
+Keep stable definitions at module scope. Use `createMemo` for definitions that
+capture reactive values.
+
+## SSR and hydration
+
+Solid SSR emits the complete `.ts-chart-host`, `.ts-chart-surface`, and
+accessible SVG. `initialWidth` controls responsive server geometry.
+`createUniqueId()` supplies the generated resource prefix. Keep server and
+browser definitions, formatters, and dimensions deterministic.
+
+## Presentation and rendering
+
+`class` and `style: JSX.CSSProperties` apply to the outer host. `className`
+applies to the rendered chart surface. Custom outer styles are spread after
+adapter sizing. The component starts with SVG and can compose marks that use
+`canvasChartRenderer`. Use `renderSvg` to replace SVG serialization without
+replacing the shared host.
+
+Exports: `Chart`, `ChartCommonProps`, `ChartPresentationProps`, `ChartProps`,
+`ChartTooltipBodyRenderContext`, `ChartDefinition`, and `ChartPoint`.
+
+## Tooltip body composition
+
+```tsx
+<Chart
+  definition={definition()}
+  ariaLabel="Revenue"
+  renderTooltipBody={(tooltip) => (
+    <div>
+      {tooltip.defaultBody}
+      <SeriesDetail points={tooltip.points} />
+      <Show when={tooltip.pinned}>
+        <button onClick={tooltip.dismiss}>Close</button>
+      </Show>
+    </div>
+  )}
+/>
+```
+
+Read the context through `tooltip` instead of destructuring it so Solid tracks
+focused points and pinned state. The shared host owns focus, placement,
+portaling, and dismissal; Solid owns the returned component lifecycle.
+
+See the [`Chart` reference](./charts-docs-framework-solid-reference-chart-md-18b62c2a.md#source-charts-docs-framework-solid-reference-chart-md), [SSR and hydration](./charts-docs-guides-ssr-and-hydration-md-ff83bc62.md#source-charts-docs-guides-ssr-and-hydration-md),
+and [Chart Definition API](./charts-docs-reference-chart-definitions-md-6855d09b.md#source-charts-docs-reference-chart-definitions-md).

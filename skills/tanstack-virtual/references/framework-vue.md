@@ -2,39 +2,8 @@
 
 Vue-specific setup and behavior.
 
-<a id="source-virtual-docs-framework-vue-vue-virtual-md"></a>
+Choose the guide for the task. Each guide records its source and package version.
 
-## Vue Virtual
-
-Source: `virtual:docs/framework/vue/vue-virtual.md`.
-
-The `@tanstack/vue-virtual` adapter is a wrapper around the core virtual logic.
-
-### `useVirtualizer`
-
-```tsx
-function useVirtualizer<TScrollElement, TItemElement = unknown>(
-  options: PartialKeys<
-    VirtualizerOptions<TScrollElement, TItemElement>,
-    'observeElementRect' | 'observeElementOffset' | 'scrollToFn'
-  >,
-): Virtualizer<TScrollElement, TItemElement>
-```
-
-This function returns a standard `Virtualizer` instance configured to work with an HTML element as the scrollElement.
-
-### `useWindowVirtualizer`
-
-```tsx
-function useWindowVirtualizer<TItemElement = unknown>(
-  options: PartialKeys<
-    VirtualizerOptions<Window, TItemElement>,
-    | 'getScrollElement'
-    | 'observeElementRect'
-    | 'observeElementOffset'
-    | 'scrollToFn'
-  >,
-): Virtualizer<Window, TItemElement>
-```
-
-This function returns a window-based `Virtualizer` instance configured to work with the window as the scrollElement.
+| Guide | Source status | Package version |
+| --- | --- | --- |
+| [Vue Virtual](./guides/virtual-docs-framework-vue-vue-virtual-md-a8901797.md) | Release-matched documentation | `@tanstack/virtual-core@3.17.9` |

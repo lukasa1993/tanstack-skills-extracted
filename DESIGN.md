@@ -31,28 +31,33 @@ should require little routine maintainer intervention.
   the installed skills, and publish useful updates. Keep the last validated
   catalog available when a new candidate cannot be produced.
 
-## Current evidence and gaps
+## Implemented behavior and evidence
 
 The September 8, 2026 catalog contains 18 product skills and 229 extracted skills.
-Its product guides draw on extracted skills and 312 official documents.
+Its product guides now draw on extracted skills and 362 official documents.
 
 - The installer exposes the 18 product skills, and extracted skills remain
   available by exact name. This supports the intended install experience.
-- Some individual task references exceed 80 KiB. Charts has approximately
-  126,000 words across task references. Total coverage is substantial, but these
-  measurements do not establish efficient retrieval for an individual task.
-- Query sends all listed frameworks to one shared framework reference. That
-  reference contains substantial React guidance, and the router explicitly asks
-  agents to translate draft examples through the installed adapter. Framework
-  coverage needs a task-based assessment.
-- Existing checks cover source integrity, provenance, links, catalog membership,
-  formatting, and pipeline behavior. They do not demonstrate that an agent can
-  implement a representative task correctly using the installed skill.
-- The workflow redesign adds authenticated acquisition, reproducible inputs,
-  staged replacement, and independent publishing. These support maintenance and
-  recovery. They are not sufficient evidence of product quality.
+- Topic references are small indexes, with separate guides and sections of longer
+  guides. This replaces references that previously exceeded 80 KiB. Sources,
+  licenses, and exact-deduplication records remain available; splitting does not
+  truncate code examples or split fenced blocks.
+- Query has separate release-matched routes for all seven listed adapters.
+  Svelte and Lit use their own release versions, which differ from Query Core.
+  Draft guidance remains supplementary and visibly labeled. Form documents also
+  use their owning adapter's release commit.
+- Every source must have a reachable route inside its installed product.
+  Entry points and topic indexes have a 12 KiB limit. Representative task paths
+  have a 24 KiB reading limit, including an example and one section choice.
+- Six behavior checks execute the actual bundled examples in copied Query and
+  Form installations, using pinned packages and TypeScript checking. These
+  complement source integrity, provenance, links, catalog, and pipeline checks.
+- The refresh requires navigation and behavior checks before promoting a
+  candidate. Source acquisition or validation failures preserve the previous
+  catalog. A Git-history test verifies that unrelated metadata and maintainer
+  documentation changes preserve the release and indexing identity.
 
-## Acceptance scenarios for further changes
+## Acceptance scenarios
 
 | Scenario | Evidence to collect |
 | --- | --- |
@@ -67,6 +72,13 @@ Its product guides draw on extracted skills and 312 official documents.
 Representative implementation scenarios should use small projects with pinned
 package versions and meaningful checks of their behavior. Passing directory,
 link, or file-size checks is complementary evidence, not a substitute.
+
+The current suite establishes those properties for three representative paths,
+not all tasks or frameworks, and does not measure an autonomous agent's ability
+to follow the guides. Other upstream examples retain their source status without
+an implied execution guarantee. See [the acceptance suite](acceptance/README.md)
+for exact scope and version maintenance. New scenarios should expand this
+evidence when a routing, framework, or compatibility change requires it.
 
 ## How to make design decisions
 

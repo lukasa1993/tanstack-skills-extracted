@@ -18,7 +18,7 @@ Type-safe keyboard shortcut guidance for registration, sequences, scopes, record
 
 1. Inspect installed TanStack packages and exact versions.
 2. Read the foundation reference and the adapter reference for the detected framework.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 
@@ -35,7 +35,7 @@ Type-safe keyboard shortcut guidance for registration, sequences, scopes, record
 
 ## Framework routing
 
-- **Vanilla** — detect `@tanstack/hotkeys`. Read [Foundations](references/foundations.md).
+- **Vanilla** — detect `@tanstack/hotkeys`. Read [Foundations](references/foundations.md). Shared guidance; check adapter-specific differences.
 - **React** — detect `@tanstack/react-hotkeys`. Read [React adapter](references/framework-react.md).
 - **Preact** — detect `@tanstack/preact-hotkeys`. Read [Preact adapter](references/framework-preact.md).
 - **Solid** — detect `@tanstack/solid-hotkeys`. Read [Solid adapter](references/framework-solid.md).

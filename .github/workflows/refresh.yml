@@ -43,6 +43,9 @@ jobs:
           ./extractor.sh --self-test
           node --test ./scripts/*.test.mjs
 
+      - name: Install pinned acceptance dependencies
+        run: npm ci --prefix acceptance --ignore-scripts --no-audit --no-fund
+
       - name: Acquire, build, validate, and apply candidate
         env:
           GH_TOKEN: ${{ github.token }}

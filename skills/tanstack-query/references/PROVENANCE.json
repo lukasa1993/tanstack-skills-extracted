@@ -4,6 +4,762 @@
   "product": "query",
   "sources": [
     {
+      "id": "query:docs/framework/react/guides/mutations.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/guides/mutations.md",
+      "sha256": "a03c78748433caabb257c175fe7eeb8b340bc77724d46a1c5da1b86ddb5f45cb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/guides/optimistic-updates.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/guides/optimistic-updates.md",
+      "sha256": "0c32fabbe875f00ac62e7e1f70156e95e27eca0a8446b09005ca5faf6ec1ecc7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/guides/queries.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/guides/queries.md",
+      "sha256": "8c709eeabc2ee3f9a89a0ec018d25ab45e52dc8ca6415827d22d10bdd8cfb53f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/guides/query-keys.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/guides/query-keys.md",
+      "sha256": "9deb4ff5f30e40fe4a1641ad5f1e36d87e324df63f81011939f3ee03af5f54b0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/guides/query-options.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/guides/query-options.md",
+      "sha256": "75b822194b29467b4f509858a5ba8b593d769b4320c7382b4008cb597ad19b70",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/installation.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/installation.md",
+      "sha256": "964a69abca562ff5854ba3c8d7ab14c6af3993c3201ea30bfd447d9810aded4b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/overview.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/overview.md",
+      "sha256": "5204256a195a3e286ff523560f896614417583801ed85f866b428d29c1e075a5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/react/quick-start.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/react-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "sha256": "ef7539fe2b108e2a52ca6c6b3370afbf779292d3fba374911d1470d4ee8d4a67",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/preact/guides/mutations.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/guides/mutations.md",
+      "sha256": "48b8adf1c2f935b74882f02ce289ab04733e580e9ef8b62115ad1c6da447e204",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/guides/optimistic-updates.md",
+      "sha256": "333ee83f940988ad6b58f37ac42a5a7f216865db11e4b5996fdb672ef4184cba",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/preact/guides/queries.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/guides/queries.md",
+      "sha256": "fc959c6b8d57cf85676f1efb84762d29d322791888f87340c0d6c29db45a2b02",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ],
+      "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
+    },
+    {
+      "id": "query:docs/framework/preact/guides/query-keys.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/guides/query-keys.md",
+      "sha256": "6b5d895fb2b1bc7d020d9ec416f9082e639bea2058e7e1282617a4e9d9d51d89",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ],
+      "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
+    },
+    {
+      "id": "query:docs/framework/preact/guides/query-options.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/guides/query-options.md",
+      "sha256": "228a036bdb67f428ca1bea01894cdc7999047a25688068b6dc3cc0c67890a3c3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ],
+      "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
+    },
+    {
+      "id": "query:docs/framework/preact/installation.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/installation.md",
+      "sha256": "e912b4855fa1734ea54b9dadec6fb5d7ebdb7b61272430ea87459efb532cf0a6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/preact/overview.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/overview.md",
+      "sha256": "7c24d379e659c7bfd1312bf3731fc4799a6061c3f944885d6b26b3f60bc32883",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ],
+      "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
+    },
+    {
+      "id": "query:docs/framework/preact/quick-start.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/preact-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "sha256": "de94454d76558097cbf2735399c10b6c9f5c5bf08414a40a882f487efe5fe78e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ],
+      "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
+    },
+    {
+      "id": "query:docs/framework/vue/guides/mutations.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/guides/mutations.md",
+      "sha256": "53530f8e06d9d4ae58bb62a1298c1f3ac0c4e8e2baf92a95119648f64e477165",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/guides/optimistic-updates.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/guides/optimistic-updates.md",
+      "sha256": "9cff71fdc76ad4535425576d5149e02cee083f5303877bd6df318619e5c67783",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/guides/queries.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/guides/queries.md",
+      "sha256": "fe0800a08aa83c85fb04188b9e7c72b50fe816f66bbceaf7ab102274bf5d3932",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/guides/query-keys.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/guides/query-keys.md",
+      "sha256": "5a412bc3c1fb7d5b36054e370ce3026a1645e2519bdcbebc2fa56c34a394f65e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/guides/query-options.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/guides/query-options.md",
+      "sha256": "a7996c769eec0ea277d3c0a5da0385be1b0736e83a0c5b47856797fcb9bbd461",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ],
+      "duplicateOf": "query:docs/framework/vue/guides/optimistic-updates.md"
+    },
+    {
+      "id": "query:docs/framework/vue/installation.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/installation.md",
+      "sha256": "171a7f02cdcc3ac67653b46ffa47f7dbe9e6e2a36a851b27438ce19b23d4592b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/overview.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/overview.md",
+      "sha256": "c60b9932e85068384dfbffd09fbbbc312e5131eafcc377cb22058b1ae5d2ff7e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/quick-start.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "sha256": "c243790fb15fe00aca02fc7c8d31062a6676e9dff5b4a7403f0cddaf4c4db9aa",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/vue/reactivity.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/vue-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/vue/reactivity.md",
+      "sha256": "90112af5dd3674f0e52b1d6ca057e441c52b0fba0bc87c8788ec694ad2ed4e03",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/guides/mutations.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/guides/mutations.md",
+      "sha256": "03c9c6a5ebff34b6210066c5ffd460f23a14efb7565cf95f01bdea0f35496871",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/guides/optimistic-updates.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/guides/optimistic-updates.md",
+      "sha256": "848f9ba52e89ddae4ef2e241f130beb6a753419c59f7a3e9feffc960ab5aed4e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/guides/queries.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/guides/queries.md",
+      "sha256": "8e68f52b5bbda5d5bcd66fb9196d87a62012f1833386ab8b1e6b459ef62f4cd0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/guides/query-keys.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/guides/query-keys.md",
+      "sha256": "783d7530cc93518bbbc56965b6f9e02171cac97a25661ed40a442d5e62a324df",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/guides/query-options.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/guides/query-options.md",
+      "sha256": "f1cd472a7c8e37b7c9bc4fd63d1c272b7078eb16f316b14eee9729907e9b2013",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/installation.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/installation.md",
+      "sha256": "89150d0b04cdf3ac7b3d20e28fc97a89e665de0e2feddfd3035138dd67959035",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/overview.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/overview.md",
+      "sha256": "8159906285aa4accef669f1debc413f0c190c0efca3e64247d17d6b4c9e26f5e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/solid/quick-start.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/solid-query",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "sha256": "fe86d6a524cbace790f2dab44fa668108b60af2e3b0b4b6c8ab57030c01ca8ff",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/svelte/installation.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/svelte-query",
+      "version": "6.1.48",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/svelte/installation.md",
+      "sha256": "25d6d4bd2982fb5baa94ab54967fad5521bfb8b0f490fe1d3bbe80174fca9a5b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/svelte/overview.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/svelte-query",
+      "version": "6.1.48",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/svelte/overview.md",
+      "sha256": "d804bbd10fd1d5ba05724b14f3c9b03c78a3ec019d5f176d4bba552bec5a8dfb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/svelte/quick-start.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/svelte-query",
+      "version": "6.1.48",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "sha256": "8968bd5318f2471061a334e1d8dafb063431bde50e4f3ca1e5b6a2d40354c1f5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/guides/mutations.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/guides/mutations.md",
+      "sha256": "0377cf2536950d182dbcc4ae02424bf19742dc26e53805508ac172ecde95d83a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/guides/optimistic-updates.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/guides/optimistic-updates.md",
+      "sha256": "75afb861d1aed9777e4fb69e640f98cb6e675d4f65da31261d87646fe11d8666",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/guides/queries.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/guides/queries.md",
+      "sha256": "cc0a202be37be8dbc7c062158a03f10642bea4d53fa918b5b3f1de52b0c35cf0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/guides/query-keys.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/guides/query-keys.md",
+      "sha256": "ac501357625248b65bc3ea2cda26ca83ccb1c95549be364d0e58c440c3eba888",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/guides/query-options.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/guides/query-options.md",
+      "sha256": "55464a181da261df41e14509277647abc33019a50b0d3f881b91d6e2dab218eb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/installation.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/installation.md",
+      "sha256": "86a6d12b1c45e2c3e0ca2b529ae23dd6d8fbf7a9bf8f0acd1d3689371f9c9dd2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/overview.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/overview.md",
+      "sha256": "01af7b81da94fbe8444e73840b3df80574551a23731f4b3d12c56c0c3a3af361",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/angular/quick-start.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/angular-query-experimental",
+      "version": "5.102.8",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "sha256": "0b29d55142839e6b0bbef2599633b32e9a84134ed086555c24c30a599a2caaec",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/lit/guides/mutations.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/lit/guides/mutations.md",
+      "sha256": "3e5f651040b699c3e63ef1876cb1284ff51ef0ce5a48d630ba522496e7561714",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/lit/guides/queries.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/lit/guides/queries.md",
+      "sha256": "f701b8151070b4005d1eff6c0123e099a2379d5666b167da4da72c359af9f6c1",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/lit/guides/query-keys.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/lit/guides/query-keys.md",
+      "sha256": "22c1eba7f373f45482882e3d2a4d56d75b29f2bae9ba2a22653ede15aa0701b0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/lit/installation.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/lit/installation.md",
+      "sha256": "502997571a94463daf23624b06f592af14ba92a964036eb1189d7fec4f84bf77",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/lit/overview.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/lit/overview.md",
+      "sha256": "78c15ec552c835b045059345cea6e0cc8dd10c8707bd500b3be9f5499188c93d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
+      "id": "query:docs/framework/lit/quick-start.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/lit-query",
+      "version": "0.2.20",
+      "repository": "TanStack/query",
+      "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "sha256": "cc43570cd4c30e50707111c02b495840297d160ad0fcea5264b2bdd125043e6a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "2969edf32f7e0c48e2a108d84712d6e01edfde21"
+      ]
+    },
+    {
       "id": "tanstack-query-intent-core-build-query-abstractions",
       "kind": "atomic",
       "theme": "foundations",
@@ -265,13 +1021,51 @@
       "sha256": "09d9af8ba62759ee59aa9a50a69ab9cec27b16b4c38a2c74eee2de008ba79627"
     }
   ],
-  "duplicateDocuments": [],
+  "duplicateDocuments": [
+    {
+      "duplicate": "query:docs/framework/preact/guides/queries.md",
+      "canonical": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "theme": "framework-preact",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "duplicate": "query:docs/framework/preact/guides/query-keys.md",
+      "canonical": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "theme": "framework-preact",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "duplicate": "query:docs/framework/preact/guides/query-options.md",
+      "canonical": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "theme": "framework-preact",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "duplicate": "query:docs/framework/preact/overview.md",
+      "canonical": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "theme": "framework-preact",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "duplicate": "query:docs/framework/preact/quick-start.md",
+      "canonical": "query:docs/framework/preact/guides/optimistic-updates.md",
+      "theme": "framework-preact",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "duplicate": "query:docs/framework/vue/guides/query-options.md",
+      "canonical": "query:docs/framework/vue/guides/optimistic-updates.md",
+      "theme": "framework-vue",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    }
+  ],
   "duplicateSections": [],
   "licenses": [
     {
       "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7",
       "path": "licenses/a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7.txt",
       "sources": [
+        "query:LICENSE",
         "tanstack-query-intent-compositions-automatic-invalidati-a8e9b778",
         "tanstack-query-intent-compositions-broadcast-realtime-a-6360b276",
         "tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe",
@@ -303,5 +1097,28 @@
         "tanstack-query-intent-lifecycle-test-query-code"
       ]
     }
-  ]
+  ],
+  "documentationVerification": {
+    "catalogSha256": "c15db621517c8934f21ad3d928b110d15c0dfa9f75607d160ee27d1a8310eb46",
+    "verification": {
+      "npmTarballs": "sha512 integrity verified against npm registry metadata",
+      "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
+      "provenanceSignatures": "not cryptographically verified because this repository has no local Sigstore verifier"
+    },
+    "repositoryArchives": [
+      {
+        "url": "https://codeload.github.com/TanStack/query/tar.gz/2969edf32f7e0c48e2a108d84712d6e01edfde21",
+        "commit": "2969edf32f7e0c48e2a108d84712d6e01edfde21",
+        "sha256": "19c6763b7c6520c5ef37be8a4aa6034779432278d33259eb745994d16b139205"
+      }
+    ],
+    "linkValidation": {
+      "localDocuments": 15,
+      "localAssets": 0,
+      "pinnedRepository": 50,
+      "pinnedExternalRepository": 0,
+      "externalRepositoryPins": [],
+      "unavailableAssets": []
+    }
+  }
 }

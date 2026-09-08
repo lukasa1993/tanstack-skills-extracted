@@ -1,0 +1,1200 @@
+{
+  "schemaVersion": 1,
+  "product": "hotkeys",
+  "guides": [
+    {
+      "id": "hotkeys:docs/devtools.md",
+      "title": "Devtools",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
+      "sourcePath": "docs/devtools.md",
+      "bytes": 3148,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Features; Installation; Setup; Production Builds",
+          "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
+          "bytes": 3148
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/installation.md",
+      "title": "Installation",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
+      "sourcePath": "docs/installation.md",
+      "bytes": 4387,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
+          "bytes": 4387
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/overview.md",
+      "title": "Overview",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 3790,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Motivation; Features",
+          "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
+          "bytes": 3790
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
+      "sourcePath": "docs/framework/react/guides/formatting-display.md",
+      "bytes": 6840,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in React; Platform Symbols Reference; Parsing and Normalization; Validation",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
+          "bytes": 6840
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md",
+      "sourcePath": "docs/framework/react/guides/hotkey-recording.md",
+      "bytes": 5985,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Return Value; Options; Recording Behavior; Building a Shortcut Settings UI; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md",
+          "bytes": 5985
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
+      "sourcePath": "docs/framework/react/guides/hotkeys.md",
+      "bytes": 12422,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Default Options; Hotkey Options; Stale Closure Prevention; Automatic Cleanup; Registering Multiple Hotkeys; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
+          "bytes": 12422
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md",
+      "sourcePath": "docs/framework/react/guides/key-state-tracking.md",
+      "bytes": 5305,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common Patterns; Platform Quirks; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md",
+          "bytes": 5305
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-sequence-recording-md-d18571b6.md",
+      "sourcePath": "docs/framework/react/guides/sequence-recording.md",
+      "bytes": 4048,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic usage; Return value; Options; Behavior; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-sequence-recording-md-d18571b6.md",
+          "bytes": 4048
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
+      "sourcePath": "docs/framework/react/guides/sequences.md",
+      "bytes": 6702,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Many sequences at once; Sequence Options; Sequences with Modifiers; Chained modifier chords; Common Sequence Patterns; How Sequences Work; The Sequence Manager",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
+          "bytes": 6702
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "bytes": 5428,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Your First Hotkey; Common Patterns; Setting Up Devtools; Default Options Provider; Next Steps",
+          "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
+          "bytes": 5428
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
+      "sourcePath": "docs/framework/preact/guides/formatting-display.md",
+      "bytes": 6062,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in Preact; Platform Symbols Reference; Parsing and Normalization; Validation",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
+          "bytes": 6062
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md",
+      "sourcePath": "docs/framework/preact/guides/hotkey-recording.md",
+      "bytes": 5999,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Return Value; Options; Recording Behavior; Building a Shortcut Settings UI; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md",
+          "bytes": 5999
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
+      "sourcePath": "docs/framework/preact/guides/hotkeys.md",
+      "bytes": 12434,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Default Options; Hotkey Options; Stale Closure Prevention; Automatic Cleanup; Registering Multiple Hotkeys; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
+          "bytes": 12434
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-key-state-tracking-md-ba04b9a5.md",
+      "sourcePath": "docs/framework/preact/guides/key-state-tracking.md",
+      "bytes": 5316,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common Patterns; Platform Quirks; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-key-state-tracking-md-ba04b9a5.md",
+          "bytes": 5316
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-sequence-recording-md-f2ae56bf.md",
+      "sourcePath": "docs/framework/preact/guides/sequence-recording.md",
+      "bytes": 4052,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic usage; Return value; Options; Behavior; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-sequence-recording-md-f2ae56bf.md",
+          "bytes": 4052
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
+      "sourcePath": "docs/framework/preact/guides/sequences.md",
+      "bytes": 6941,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Many sequences at once; Sequence Options; Sequences with Modifiers; Chained modifier chords; Common Sequence Patterns; How Sequences Work; The Sequence Manager",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
+          "bytes": 6941
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
+      "sourcePath": "docs/framework/solid/guides/formatting-display.md",
+      "bytes": 4567,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in Solid; Platform Symbols Reference; Parsing and Normalization; Validation",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
+          "bytes": 4567
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md",
+      "sourcePath": "docs/framework/solid/guides/hotkey-recording.md",
+      "bytes": 5864,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Return Value; Options; Recording Behavior; Building a Shortcut Settings UI; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md",
+          "bytes": 5864
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
+      "sourcePath": "docs/framework/solid/guides/hotkeys.md",
+      "bytes": 11606,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Reactive Options; Default Options; Hotkey Options; Automatic Dependency Tracking; Automatic Cleanup; Registering Multiple Hotkeys; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
+          "bytes": 11606
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-key-state-tracking-md-92176d1e.md",
+      "sourcePath": "docs/framework/solid/guides/key-state-tracking.md",
+      "bytes": 5241,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `createHeldKeys`; `createHeldKeyCodes`; `createKeyHold`; Common Patterns; Platform Quirks; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-key-state-tracking-md-92176d1e.md",
+          "bytes": 5241
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-sequence-recording-md-e932b875.md",
+      "sourcePath": "docs/framework/solid/guides/sequence-recording.md",
+      "bytes": 1212,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-sequence-recording-md-e932b875.md",
+          "bytes": 1212
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
+      "sourcePath": "docs/framework/solid/guides/sequences.md",
+      "bytes": 6597,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Many sequences at once; Reactive Options; Sequence Options; Sequences with Modifiers; Chained modifier chords; Common Sequence Patterns; How Sequences Work; The Sequence Manager",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
+          "bytes": 6597
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
+      "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
+      "bytes": 1458,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in Svelte; Validation",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
+          "bytes": 1458
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md",
+      "sourcePath": "docs/framework/svelte/guides/hotkey-recording.md",
+      "bytes": 2579,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Return Value; Options; Recording Behavior",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md",
+          "bytes": 2579
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
+      "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
+      "bytes": 6894,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Global hotkeys; Scoped hotkeys; Reactive inputs; Default options; Common Options; Automatic Cleanup; Registering Multiple Hotkeys; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
+          "bytes": 6894
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md",
+      "sourcePath": "docs/framework/svelte/guides/key-state-tracking.md",
+      "bytes": 2088,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `getHeldKeys`; `getHeldKeyCodesMap`; `getIsKeyHeld`; Common Patterns; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md",
+          "bytes": 2088
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md",
+      "sourcePath": "docs/framework/svelte/guides/sequence-recording.md",
+      "bytes": 1093,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md",
+          "bytes": 1093
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
+      "sourcePath": "docs/framework/svelte/guides/sequences.md",
+      "bytes": 4009,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Global sequences; Many sequences at once; Scoped sequences; Sequence options; Default options; Chained modifier chords; Common Patterns; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
+          "bytes": 4009
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "bytes": 4624,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Your First Hotkey; Common Patterns; Default options; Next Steps",
+          "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
+          "bytes": 4624
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
+      "sourcePath": "docs/framework/vue/guides/formatting-display.md",
+      "bytes": 1590,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in Vue; Validation",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
+          "bytes": 1590
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md",
+      "sourcePath": "docs/framework/vue/guides/hotkey-recording.md",
+      "bytes": 2755,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Return Value; Options; Global Default Options via Provider; Recording Behavior",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md",
+          "bytes": 2755
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
+      "sourcePath": "docs/framework/vue/guides/hotkeys.md",
+      "bytes": 6289,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Default Options; Reactive Options; Global Default Options via Provider; Common Options; Automatic Cleanup; Registering Multiple Hotkeys; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
+          "bytes": 6289
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md",
+      "sourcePath": "docs/framework/vue/guides/key-state-tracking.md",
+      "bytes": 2081,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common Patterns; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md",
+          "bytes": 2081
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-sequence-recording-md-d1fba53e.md",
+      "sourcePath": "docs/framework/vue/guides/sequence-recording.md",
+      "bytes": 4046,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic usage; Return value; Options; Behavior; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-sequence-recording-md-d1fba53e.md",
+          "bytes": 4046
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
+      "sourcePath": "docs/framework/vue/guides/sequences.md",
+      "bytes": 3757,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Many sequences at once; Sequence Options; Global Default Options via Provider; Chained modifier chords; Common Patterns; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
+          "bytes": 3757
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "bytes": 4493,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Your First Hotkey; Common Patterns; Default Options Provider; Next Steps",
+          "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
+          "bytes": 4493
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
+      "sourcePath": "docs/framework/angular/guides/formatting-display.md",
+      "bytes": 2046,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in Angular; Validation",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
+          "bytes": 2046
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md",
+      "sourcePath": "docs/framework/angular/guides/hotkey-recording.md",
+      "bytes": 2918,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Return Value; Options; Global Default Options via Provider; Recording Behavior",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md",
+          "bytes": 2918
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
+      "sourcePath": "docs/framework/angular/guides/hotkeys.md",
+      "bytes": 7112,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Default Options; Reactive Options; Global Default Options via Provider; Common Options; Automatic Cleanup; Registering Multiple Hotkeys; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
+          "bytes": 7112
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md",
+      "sourcePath": "docs/framework/angular/guides/key-state-tracking.md",
+      "bytes": 2171,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `injectHeldKeys`; `injectHeldKeyCodes`; `injectKeyHold`; Common Patterns; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md",
+          "bytes": 2171
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md",
+      "sourcePath": "docs/framework/angular/guides/sequence-recording.md",
+      "bytes": 1077,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md",
+          "bytes": 1077
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
+      "sourcePath": "docs/framework/angular/guides/sequences.md",
+      "bytes": 4210,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Many sequences at once; Sequence Options; Global Default Options via Provider; Chained modifier chords; Common Patterns; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
+          "bytes": 4210
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "bytes": 4919,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Your First Hotkey; Common Patterns; Default Options Provider; Next Steps",
+          "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
+          "bytes": 4919
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
+      "sourcePath": "docs/framework/lit/guides/formatting-display.md",
+      "bytes": 8210,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `formatForDisplay`; `formatWithLabels`; Using Formatted Hotkeys in Lit; Platform Symbols Reference; Parsing and Normalization; Validation",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
+          "bytes": 8210
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md",
+      "sourcePath": "docs/framework/lit/guides/hotkey-recording.md",
+      "bytes": 7329,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Controller API; Options; Recording Behavior; Building a Shortcut Settings UI; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md",
+          "bytes": 7329
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
+      "sourcePath": "docs/framework/lit/guides/hotkeys.md",
+      "bytes": 12611,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Default Options; Hotkey Options; Automatic Cleanup; Multiple Hotkeys; Choosing Between Decorator and Controller; Metadata (name & description); Introspecting Registrations; The Hotkey Manager",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
+          "bytes": 12611
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md",
+      "sourcePath": "docs/framework/lit/guides/key-state-tracking.md",
+      "bytes": 7001,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `HeldKeysController`; `HeldKeyCodesController`; `KeyHoldController`; Common patterns; Platform quirks; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md",
+          "bytes": 7001
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-sequence-recording-md-026a99f1.md",
+      "sourcePath": "docs/framework/lit/guides/sequence-recording.md",
+      "bytes": 5509,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Controller API; Options; Recording Behavior; Under the Hood",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-sequence-recording-md-026a99f1.md",
+          "bytes": 5509
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
+      "sourcePath": "docs/framework/lit/guides/sequences.md",
+      "bytes": 8944,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic Usage; Many sequences at once; Sequence Options; Sequences with Modifiers; Chained modifier chords; Common Sequence Patterns; How sequences work; The sequence manager",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
+          "bytes": 8944
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.8.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "bytes": 8490,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Installation; Your First Hotkey; Common Patterns; Decorators vs Controllers; Next Steps",
+          "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
+          "bytes": 8490
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

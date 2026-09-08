@@ -8,4 +8,4 @@
 | `tanstack-highlight-integrate-markdown-pipelines` | atomic | `integrations` | `@tanstack/highlight` | `0.0.10` |  |
 | `tanstack-highlight-theme-and-annotate-code` | atomic | `themes-annotations` | `@tanstack/highlight` | `0.0.10` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

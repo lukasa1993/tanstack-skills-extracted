@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "product": "markdown",
+  "guides": [
+    {
+      "id": "tanstack-markdown-custom-extensions",
+      "title": "Custom Extensions",
+      "theme": "parsing-extensions",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "file": "references/guides/tanstack-markdown-custom-extensions-0739b840.md",
+      "sourcePath": "custom-extensions",
+      "bytes": 12233,
+      "prerequisites": [
+        {
+          "id": "tanstack-markdown-render-markdown",
+          "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; Tensions and Boundaries; Related Skills",
+          "file": "references/guides/tanstack-markdown-custom-extensions-0739b840.md",
+          "bytes": 12233
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-markdown-docs-features",
+      "title": "Docs Features",
+      "theme": "parsing-extensions",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "file": "references/guides/tanstack-markdown-docs-features-62c13998.md",
+      "sourcePath": "docs-features",
+      "bytes": 10018,
+      "prerequisites": [
+        {
+          "id": "tanstack-markdown-render-markdown",
+          "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; Boundaries; References",
+          "file": "references/guides/tanstack-markdown-docs-features-62c13998.md",
+          "bytes": 10018
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-markdown-render-markdown",
+      "title": "Render Markdown",
+      "theme": "parsing-extensions",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md",
+      "sourcePath": "render-markdown",
+      "bytes": 8782,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Behavioral Contracts; Compatibility and Option Timing; Common Mistakes; Related Skills; References",
+          "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md",
+          "bytes": 8782
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-markdown-production-pipelines",
+      "title": "Production Pipelines",
+      "theme": "production",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc.md",
+      "sourcePath": "production-pipelines",
+      "bytes": 12778,
+      "prerequisites": [
+        {
+          "id": "tanstack-markdown-render-markdown",
+          "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Trust Boundary Checks; Highlighting Checks; Compatibility Checks; Performance and Cache Checks; Release Checks; Common Production Mistakes; Tensions; Pre-Deploy Summary; Related Skills",
+          "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc.md",
+          "bytes": 12778
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-markdown-react-rendering",
+      "title": "React Rendering",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "file": "references/guides/tanstack-markdown-react-rendering-65b773b4.md",
+      "sourcePath": "react-rendering",
+      "bytes": 7657,
+      "prerequisites": [
+        {
+          "id": "tanstack-markdown-render-markdown",
+          "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-markdown-react-rendering-65b773b4.md",
+          "bytes": 7657
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-markdown-octane-rendering",
+      "title": "Octane Rendering",
+      "theme": "framework-octane",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/markdown",
+      "version": "0.0.13",
+      "file": "references/guides/tanstack-markdown-octane-rendering-821e3074.md",
+      "sourcePath": "octane-rendering",
+      "bytes": 8452,
+      "prerequisites": [
+        {
+          "id": "tanstack-markdown-render-markdown",
+          "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Hooks and Components; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-markdown-octane-rendering-821e3074.md",
+          "bytes": 8452
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

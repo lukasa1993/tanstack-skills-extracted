@@ -16,4 +16,4 @@
 | `virtual:docs/framework/angular/angular-virtual.md` | document | `framework-angular` | `@tanstack/virtual-core` | `3.17.9` |  |
 | `virtual:docs/framework/marko/marko-virtual.md` | document | `framework-marko` | `@tanstack/virtual-core` | `3.17.9` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

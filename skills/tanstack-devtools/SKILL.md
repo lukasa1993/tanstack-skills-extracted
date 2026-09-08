@@ -18,7 +18,7 @@ Devtools guidance for setup, framework adapters, plugins, event instrumentation,
 
 1. Inspect installed TanStack packages and exact versions.
 2. Read the adapter reference for the detected framework when the task uses an adapter.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 
@@ -30,12 +30,12 @@ Devtools guidance for setup, framework adapters, plugins, event instrumentation,
 
 ## Framework routing
 
-- **Vanilla** — detect `@tanstack/devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
-- **React** — detect `@tanstack/react-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
-- **Preact** — detect `@tanstack/preact-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
-- **Solid** — detect `@tanstack/solid-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
-- **Vue** — detect `@tanstack/vue-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
-- **Svelte** — detect `@tanstack/svelte-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
-- **Angular** — detect `@tanstack/angular-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md).
+- **Vanilla** — detect `@tanstack/devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
+- **React** — detect `@tanstack/react-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
+- **Preact** — detect `@tanstack/preact-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
+- **Solid** — detect `@tanstack/solid-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
+- **Vue** — detect `@tanstack/vue-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
+- **Svelte** — detect `@tanstack/svelte-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
+- **Angular** — detect `@tanstack/angular-devtools`. Read [Plugins and marketplace](references/plugins-marketplace.md). Shared guidance; check adapter-specific differences.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

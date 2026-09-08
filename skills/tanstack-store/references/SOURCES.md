@@ -14,4 +14,4 @@
 | `store:docs/framework/lit/quick-start.md` | document | `framework-lit` | `@tanstack/store` | `0.11.1` |  |
 | `store:docs/framework/octane/quick-start.md` | document | `framework-octane` | `@tanstack/store` | `0.11.1` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

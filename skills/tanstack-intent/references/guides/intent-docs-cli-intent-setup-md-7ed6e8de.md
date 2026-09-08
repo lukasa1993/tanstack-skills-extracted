@@ -1,0 +1,61 @@
+# Intent Setup
+
+<a id="source-intent-docs-cli-intent-setup-md"></a>
+
+Release-matched documentation · `@tanstack/intent@0.4.0`.
+
+[Topic index](../maintainer-workflow.md) · [Source provenance](../SOURCES.md)
+
+Intent exposes publishing setup as two commands.
+
+```bash
+npx @tanstack/intent@latest edit-package-json
+npx @tanstack/intent@latest setup
+```
+
+## Commands
+
+- `edit-package-json`: add or normalize `package.json` entries needed to publish skills
+- `setup`: copy workflow templates to `.github/workflows`
+- `setup-github-actions`: legacy alias for `setup`
+
+## What each command changes
+
+### `edit-package-json`
+
+- Requires a valid `package.json` in the current directory
+- Ensures `keywords` includes `tanstack-intent`
+- Ensures `files` includes required publish entries
+- Preserves existing indentation
+
+### `setup`
+
+- Copies the `check-skills.yml` workflow template from `@tanstack/intent/meta/templates/workflows` to `.github/workflows`
+- Applies variable substitution (`PACKAGE_NAME`, `PACKAGE_LABEL`, `PAYLOAD_PACKAGE`, `REPO`, `DOCS_PATH`, `SRC_PATH`, `WATCH_PATHS`)
+- Detects the workspace root in monorepos and writes repo-level workflows there
+- Skips files that already exist at the destination
+
+## Required `files` entries
+
+`edit-package-json` enforces different `files` sets based on package location:
+
+- Monorepo package: `skills`
+- Non-monorepo package: `skills`, `!skills/_artifacts`
+
+## Common errors
+
+- Missing or invalid `package.json` when running `edit-package-json`
+- Missing template source when running `setup`
+
+## Notes
+
+- `setup` skips existing files
+- `check-skills.yml` validates skills on PRs and opens review PRs from release/manual runs
+- To adopt updated workflow templates, delete or move the old generated workflow files first, then rerun `setup`
+- If your repo has an older generated `validate-skills.yml`, remove it after adopting the current `check-skills.yml`; PR validation now lives in `check-skills.yml`
+- In monorepos, run `setup` from either the repo root or a package directory; Intent writes workflows to the workspace root
+
+## Related
+
+- [intent validate](./intent-docs-cli-intent-validate-md-f634a848.md#source-intent-docs-cli-intent-validate-md)
+- [intent scaffold](./intent-docs-cli-intent-scaffold-md-4d10a2a2.md#source-intent-docs-cli-intent-scaffold-md)

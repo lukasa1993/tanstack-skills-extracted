@@ -33,4 +33,4 @@
 | `tanstack-ai-code-mode` | atomic | `code-execution` | `@tanstack/ai-code-mode` | `0.4.8` |  |
 | `tanstack-ai-sandbox` | atomic | `code-execution` | `@tanstack/ai-sandbox` | `0.5.6` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 1. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 1. No fuzzy deduplication is used.

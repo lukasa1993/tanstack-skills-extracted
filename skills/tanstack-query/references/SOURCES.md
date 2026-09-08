@@ -2,6 +2,56 @@
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
+| `query:docs/framework/react/guides/mutations.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/guides/optimistic-updates.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/guides/queries.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/guides/query-keys.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/guides/query-options.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/installation.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/overview.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/react/quick-start.md` | document | `framework-react` | `@tanstack/react-query` | `5.102.8` |  |
+| `query:docs/framework/preact/guides/mutations.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` |  |
+| `query:docs/framework/preact/guides/optimistic-updates.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` |  |
+| `query:docs/framework/preact/guides/queries.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` | `query:docs/framework/preact/guides/optimistic-updates.md` |
+| `query:docs/framework/preact/guides/query-keys.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` | `query:docs/framework/preact/guides/optimistic-updates.md` |
+| `query:docs/framework/preact/guides/query-options.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` | `query:docs/framework/preact/guides/optimistic-updates.md` |
+| `query:docs/framework/preact/installation.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` |  |
+| `query:docs/framework/preact/overview.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` | `query:docs/framework/preact/guides/optimistic-updates.md` |
+| `query:docs/framework/preact/quick-start.md` | document | `framework-preact` | `@tanstack/preact-query` | `5.102.8` | `query:docs/framework/preact/guides/optimistic-updates.md` |
+| `query:docs/framework/vue/guides/mutations.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/guides/optimistic-updates.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/guides/queries.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/guides/query-keys.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/guides/query-options.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` | `query:docs/framework/vue/guides/optimistic-updates.md` |
+| `query:docs/framework/vue/installation.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/overview.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/quick-start.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/vue/reactivity.md` | document | `framework-vue` | `@tanstack/vue-query` | `5.102.8` |  |
+| `query:docs/framework/solid/guides/mutations.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/guides/optimistic-updates.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/guides/queries.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/guides/query-keys.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/guides/query-options.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/installation.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/overview.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/solid/quick-start.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.102.8` |  |
+| `query:docs/framework/svelte/installation.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.1.48` |  |
+| `query:docs/framework/svelte/overview.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.1.48` |  |
+| `query:docs/framework/svelte/quick-start.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.1.48` |  |
+| `query:docs/framework/angular/guides/mutations.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/guides/optimistic-updates.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/guides/queries.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/guides/query-keys.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/guides/query-options.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/installation.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/overview.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/angular/quick-start.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.102.8` |  |
+| `query:docs/framework/lit/guides/mutations.md` | document | `framework-lit` | `@tanstack/lit-query` | `0.2.20` |  |
+| `query:docs/framework/lit/guides/queries.md` | document | `framework-lit` | `@tanstack/lit-query` | `0.2.20` |  |
+| `query:docs/framework/lit/guides/query-keys.md` | document | `framework-lit` | `@tanstack/lit-query` | `0.2.20` |  |
+| `query:docs/framework/lit/installation.md` | document | `framework-lit` | `@tanstack/lit-query` | `0.2.20` |  |
+| `query:docs/framework/lit/overview.md` | document | `framework-lit` | `@tanstack/lit-query` | `0.2.20` |  |
+| `query:docs/framework/lit/quick-start.md` | document | `framework-lit` | `@tanstack/lit-query` | `0.2.20` |  |
 | `tanstack-query-intent-core-build-query-abstractions` | atomic | `foundations` | `@tanstack/query-intent` | `5.101.0` |  |
 | `tanstack-query-intent-core-coordinate-query-execution` | atomic | `foundations` | `@tanstack/query-intent` | `5.101.0` |  |
 | `tanstack-query-intent-core-design-query-keys-and-options` | atomic | `foundations` | `@tanstack/query-intent` | `5.101.0` |  |
@@ -32,4 +82,4 @@
 | `tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce` | atomic | `quality` | `@tanstack/query-intent` | `5.101.0` |  |
 | `tanstack-query-intent-lifecycle-test-query-code` | atomic | `quality` | `@tanstack/query-intent` | `5.101.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 6. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

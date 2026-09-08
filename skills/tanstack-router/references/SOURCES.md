@@ -17,4 +17,4 @@
 | `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.31` |  |
 | `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.30` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

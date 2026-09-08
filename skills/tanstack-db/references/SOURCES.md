@@ -28,4 +28,4 @@
 | `tanstack-svelte-db` | atomic | `framework-svelte` | `@tanstack/svelte-db` | `0.3.7` |  |
 | `tanstack-angular-db` | atomic | `framework-angular` | `@tanstack/angular-db` | `0.1.88` |  |
 
-Exact duplicate documents removed: 6. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 6. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

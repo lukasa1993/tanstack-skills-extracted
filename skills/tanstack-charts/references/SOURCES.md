@@ -118,4 +118,4 @@
 | `tanstack-charts-update-and-animate-charts` | atomic | `other-guides` | `@tanstack/charts` | `0.16.0` |  |
 | `charts:docs/stability.md` | document | `other-guides` | `@tanstack/charts` | `0.16.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

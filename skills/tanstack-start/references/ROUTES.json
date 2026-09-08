@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "product": "start",
+  "guides": [
+    {
+      "id": "tanstack-start-client-core-start-core",
+      "title": "Start Core",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md",
+      "sourcePath": "start-core",
+      "bytes": 8354,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Sub-Skills; Quick Decision Tree; Full-Stack Delivery Workflow; Project Setup; Common Mistakes; Version Note",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md",
+          "bytes": 8354
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-client-core-start-core-execution-model",
+      "title": "Execution Model",
+      "theme": "foundations",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-execution-model-6669e01c.md",
+      "sourcePath": "execution-model",
+      "bytes": 11740,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Execution Control APIs; Server-Only Execution; Client-Only Execution; Environment-Specific Implementations; Import Protection: File Markers; Environment Variables; Common Mistakes; Architecture Decision Framework; Cross-References",
+          "file": "references/guides/tanstack-start-client-core-start-core-execution-model-6669e01c.md",
+          "bytes": 11740
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-client-core-start-core-server-functions",
+      "title": "Server Functions",
+      "theme": "server-runtime",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0.md",
+      "sourcePath": "server-functions",
+      "bytes": 2849,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--overview.md",
+          "bytes": 1294
+        },
+        {
+          "title": "Basic Usage",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--basic-usage.md",
+          "bytes": 509
+        },
+        {
+          "title": "Calling from Loaders",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--calling-from-loaders.md",
+          "bytes": 781
+        },
+        {
+          "title": "Calling from Components",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--calling-from-components.md",
+          "bytes": 808
+        },
+        {
+          "title": "Cache-Coherent Mutations",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--cache-coherent-mutations.md",
+          "bytes": 1544
+        },
+        {
+          "title": "Input Validation",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--input-validation.md",
+          "bytes": 1460
+        },
+        {
+          "title": "Error Handling",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--error-handling.md",
+          "bytes": 1002
+        },
+        {
+          "title": "Server Context Utilities",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--server-context-utilities.md",
+          "bytes": 1721
+        },
+        {
+          "title": "File Organization",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--file-organization.md",
+          "bytes": 1128
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--common-mistakes.md",
+          "bytes": 7641
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0--cross-references.md",
+          "bytes": 1197
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-client-core-start-core-server-routes",
+      "title": "Server Routes",
+      "theme": "server-runtime",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-server-routes-6852c613.md",
+      "sourcePath": "server-routes",
+      "bytes": 8277,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Basic Server Route; Combining Server Route and App Route; Sharing Data with a Start Route; File Route Conventions; Unique Route Paths; Handler Context; Dynamic Path Params; Splat/Wildcard Params; Request Body Handling; JSON Responses; Status Codes and Headers; Middleware on Server Routes; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-routes-6852c613.md",
+          "bytes": 8277
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-server-core",
+      "title": "Start Server Core",
+      "theme": "server-runtime",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-server-core",
+      "version": "1.169.32",
+      "file": "references/guides/tanstack-start-server-core-bbadb7b0.md",
+      "sourcePath": "start-server-core",
+      "bytes": 11394,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; `createStartHandler`; Request Utilities; Cookie Management; Session Management; Query Validation; How Request Handling Works; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-start-server-core-bbadb7b0.md",
+          "bytes": 11394
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-client-core-start-core-auth-server-primitives",
+      "title": "Auth Server Primitives",
+      "theme": "middleware-auth",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md",
+      "sourcePath": "auth-server-primitives",
+      "bytes": 3246,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        },
+        {
+          "id": "tanstack-start-client-core-start-core-server-functions",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0.md"
+        },
+        {
+          "id": "tanstack-start-client-core-start-core-middleware",
+          "file": "references/guides/tanstack-start-client-core-start-core-middleware-4735b1c5.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--overview.md",
+          "bytes": 1282
+        },
+        {
+          "title": "Production Checklist",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--production-checklist.md",
+          "bytes": 1232
+        },
+        {
+          "title": "Session Cookies",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--session-cookies.md",
+          "bytes": 2337
+        },
+        {
+          "title": "Session Lookup as Middleware",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--session-lookup-as-middleware.md",
+          "bytes": 1531
+        },
+        {
+          "title": "Issuing a Session on Login",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--issuing-a-session-on-login.md",
+          "bytes": 1450
+        },
+        {
+          "title": "Logout",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--logout.md",
+          "bytes": 620
+        },
+        {
+          "title": "OAuth: state + PKCE",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--oauth-state-pkce.md",
+          "bytes": 2004
+        },
+        {
+          "title": "Password Reset: defeat user enumeration",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--password-reset-defeat-user-enumeration.md",
+          "bytes": 1211
+        },
+        {
+          "title": "CSRF for non-GET RPCs",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--csrf-for-non-get-rpcs.md",
+          "bytes": 1389
+        },
+        {
+          "title": "Rate Limiting Auth Endpoints",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--rate-limiting-auth-endpoints.md",
+          "bytes": 1253
+        },
+        {
+          "title": "Session Rotation on Privilege Change",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--session-rotation-on-privilege-change.md",
+          "bytes": 992
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--common-mistakes.md",
+          "bytes": 3063
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-start-client-core-start-core-auth-server-primitives-8c264874--cross-references.md",
+          "bytes": 1080
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-client-core-start-core-middleware",
+      "title": "Middleware",
+      "theme": "middleware-auth",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-middleware-4735b1c5.md",
+      "sourcePath": "middleware",
+      "bytes": 13372,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        },
+        {
+          "id": "tanstack-start-client-core-start-core-server-functions",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Two Types of Middleware; Request Middleware; Server Function Middleware; Attaching Middleware to Server Functions; Context Passing via next(); Sending Context Between Client and Server; Input Validation in Middleware; Global Middleware; Using Middleware with Server Routes; Middleware Factories; Custom Headers and Fetch; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-start-client-core-start-core-middleware-4735b1c5.md",
+          "bytes": 13372
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-start-server-components",
+      "title": "Server Components",
+      "theme": "deployment-rendering",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-start",
+      "version": "1.168.50",
+      "file": "references/guides/tanstack-react-start-server-components-93d115ff.md",
+      "sourcePath": "server-components",
+      "bytes": 6129,
+      "prerequisites": [
+        {
+          "id": "tanstack-react-start",
+          "file": "references/guides/tanstack-react-start-d9f2ca2e.md"
+        },
+        {
+          "id": "tanstack-start-client-core-start-core-server-functions",
+          "file": "references/guides/tanstack-start-client-core-start-core-server-functions-49d113b0.md"
+        },
+        {
+          "id": "tanstack-start-client-core-start-core-execution-model",
+          "file": "references/guides/tanstack-start-client-core-start-core-execution-model-6669e01c.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; When this skill is active; Hard invariants; Decide three things immediately; Pattern chooser; Slot choice; Review / refactor checklist; Debug fast; Copy-paste patterns; Default implementation sequence",
+          "file": "references/guides/tanstack-react-start-server-components-93d115ff.md",
+          "bytes": 6129
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-start-client-core-start-core-deployment",
+      "title": "Deployment",
+      "theme": "deployment-rendering",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/start-client-core",
+      "version": "1.170.28",
+      "file": "references/guides/tanstack-start-client-core-start-core-deployment-9cda074c.md",
+      "sourcePath": "deployment",
+      "bytes": 7877,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Hosting Providers; Selective SSR; Static Prerendering; SEO and Head Management; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-start-client-core-start-core-deployment-9cda074c.md",
+          "bytes": 7877
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-start",
+      "title": "React Start",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-start",
+      "version": "1.168.50",
+      "file": "references/guides/tanstack-react-start-d9f2ca2e.md",
+      "sourcePath": "react-start",
+      "bytes": 8527,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Full-Stack Workflow; Package API Surface; Full Project Setup; useServerFn Hook; Global Start Configuration (src/start.ts); React-Specific Components; Hooks Reference; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-react-start-d9f2ca2e.md",
+          "bytes": 8527
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-start-lifecycle-migrate-from-nextjs",
+      "title": "Migrate From Nextjs",
+      "theme": "framework-react",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-start",
+      "version": "1.168.50",
+      "file": "references/guides/tanstack-react-start-lifecycle-migrate-from-nextjs-fcda4574.md",
+      "sourcePath": "migrate-from-nextjs",
+      "bytes": 11077,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        },
+        {
+          "id": "tanstack-react-start",
+          "file": "references/guides/tanstack-react-start-d9f2ca2e.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Pre-Migration; Concept Mapping; Step 1: Vite Configuration; Step 2: Router Factory; Step 3: Convert Layout → Root Route; Step 4: Convert Pages → File Routes; Step 5: Convert Server Actions → Server Functions; Step 6: Convert Data Fetching; Step 7: Convert API Routes → Server Routes; Step 8: Convert Navigation; Step 9: Convert Middleware; Step 10: Convert Metadata/SEO; Post-Migration Checklist; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-react-start-lifecycle-migrate-from-nextjs-fcda4574.md",
+          "bytes": 11077
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-start",
+      "title": "Solid Start",
+      "theme": "framework-solid",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-start",
+      "version": "1.168.48",
+      "file": "references/guides/tanstack-solid-start-20feb738.md",
+      "sourcePath": "solid-start",
+      "bytes": 7903,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Package API Surface; Full Project Setup; useServerFn Hook; Solid-Specific Components; Hooks Reference; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-solid-start-20feb738.md",
+          "bytes": 7903
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-start",
+      "title": "Vue Start",
+      "theme": "framework-vue",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-start",
+      "version": "1.168.47",
+      "file": "references/guides/tanstack-vue-start-4bef1fbe.md",
+      "sourcePath": "vue-start",
+      "bytes": 8078,
+      "prerequisites": [
+        {
+          "id": "tanstack-start-client-core-start-core",
+          "file": "references/guides/tanstack-start-client-core-start-core-18293f60.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Package API Surface; Full Project Setup; useServerFn Composable; Vue-Specific Components; Composables Reference; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-vue-start-4bef1fbe.md",
+          "bytes": 8078
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core",
+      "title": "Router Core",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-3c7fd849.md",
+      "sourcePath": "router-core",
+      "bytes": 6908,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Sub-Skills; Quick Decision Tree; Cross-Cutting Completion Checks; Minimal Working Example; Common Mistakes; Version Note",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md",
+          "bytes": 6908
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-auth-and-guards",
+      "title": "Auth And Guards",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499.md",
+      "sourcePath": "auth-and-guards",
+      "bytes": 1615,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--overview.md",
+          "bytes": 1044
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--setup.md",
+          "bytes": 1148
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--core-patterns.md",
+          "bytes": 7970
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--common-mistakes.md",
+          "bytes": 4729
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--cross-references.md",
+          "bytes": 904
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-data-loading",
+      "title": "Data Loading",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-data-loading-9f5ce056.md",
+      "sourcePath": "data-loading",
+      "bytes": 2114,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--overview.md",
+          "bytes": 176
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--setup.md",
+          "bytes": 898
+        },
+        {
+          "title": "Route Loading Lifecycle",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--route-loading-lifecycle.md",
+          "bytes": 830
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--core-patterns.md",
+          "bytes": 7718
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--common-mistakes.md",
+          "bytes": 4422
+        },
+        {
+          "title": "Tensions",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--tensions.md",
+          "bytes": 801
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--cross-references.md",
+          "bytes": 503
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-navigation",
+      "title": "Navigation",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-navigation-ec84fd49.md",
+      "sourcePath": "navigation",
+      "bytes": 10311,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-router-core-navigation-ec84fd49.md",
+          "bytes": 10311
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-not-found-and-errors",
+      "title": "Not Found And Errors",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-not-found-and-errors-9b2e7a89.md",
+      "sourcePath": "not-found-and-errors",
+      "bytes": 11288,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Not Found Handling; `notFoundMode`: Fuzzy vs Root; Error Handling; Data in `notFoundComponent`; Route Masking; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-router-core-not-found-and-errors-9b2e7a89.md",
+          "bytes": 11288
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-path-params",
+      "title": "Path Params",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-path-params-ee026ef1.md",
+      "sourcePath": "path-params",
+      "bytes": 8968,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Dynamic Segments; Splat / Catch-All Routes; Optional Params; Prefix and Suffix Patterns; Navigating with Path Params; Reading Params Outside Route Components; Params in Loaders and `beforeLoad`; Allowed Characters; Common Mistakes",
+          "file": "references/guides/tanstack-router-core-path-params-ee026ef1.md",
+          "bytes": 8968
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-search-params",
+      "title": "Search Params",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-search-params-5373becb.md",
+      "sourcePath": "search-params",
+      "bytes": 8654,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup: Zod Adapter (Recommended); Reading Search Params; Writing Search Params; Search Param Inheritance; Search Middlewares; Custom Serialization; Using Search Params in Loaders via `loaderDeps`; Common Mistakes; References",
+          "file": "references/guides/tanstack-router-core-search-params-5373becb.md",
+          "bytes": 8654
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-type-safety",
+      "title": "Type Safety",
+      "theme": "router-essentials",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-type-safety-d349a495.md",
+      "sourcePath": "type-safety",
+      "bytes": 3030,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--overview.md",
+          "bytes": 810
+        },
+        {
+          "title": "The ONE Required Type Annotation: Register",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--the-one-required-type-annotation-register.md",
+          "bytes": 804
+        },
+        {
+          "title": "Types Flow Automatically",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--types-flow-automatically.md",
+          "bytes": 2341
+        },
+        {
+          "title": "Narrowing with `from`",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--narrowing-with-from.md",
+          "bytes": 1300
+        },
+        {
+          "title": "Shared Components: `strict: false`",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--shared-components-strict-false.md",
+          "bytes": 588
+        },
+        {
+          "title": "Code-Split Files: `getRouteApi`",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--code-split-files-getrouteapi.md",
+          "bytes": 700
+        },
+        {
+          "title": "TypeScript Performance",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--typescript-performance.md",
+          "bytes": 2439
+        },
+        {
+          "title": "Type Utilities for Generic Components",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--type-utilities-for-generic-components.md",
+          "bytes": 2552
+        },
+        {
+          "title": "Render Optimizations",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--render-optimizations.md",
+          "bytes": 945
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-router-core-type-safety-d349a495--common-mistakes.md",
+          "bytes": 3906
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-code-splitting",
+      "title": "Code Splitting",
+      "theme": "router-ssr-tooling-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-code-splitting-21d488b4.md",
+      "sourcePath": "code-splitting",
+      "bytes": 8649,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; What Stays in the Main Bundle (Critical); What Gets Split (Non-Critical); Setup: Automatic Code Splitting; Manual Splitting with `.lazy.tsx`; Virtual Routes; Code-Based Splitting; Accessing Typed Hooks in Split Files: `getRouteApi`; Per-Route Split Overrides: `codeSplitGroupings`; Global Split Configuration; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-router-core-code-splitting-21d488b4.md",
+          "bytes": 8649
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-core-ssr",
+      "title": "Ssr",
+      "theme": "router-ssr-tooling-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-core",
+      "version": "1.171.28",
+      "file": "references/guides/tanstack-router-core-ssr-e95e1bf1.md",
+      "sourcePath": "ssr",
+      "bytes": 2839,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        },
+        {
+          "id": "tanstack-router-core-data-loading",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--overview.md",
+          "bytes": 935
+        },
+        {
+          "title": "Concepts",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--concepts.md",
+          "bytes": 660
+        },
+        {
+          "title": "Setup: Shared Router Factory",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--setup-shared-router-factory.md",
+          "bytes": 652
+        },
+        {
+          "title": "Non-Streaming SSR",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--non-streaming-ssr.md",
+          "bytes": 1439
+        },
+        {
+          "title": "Streaming SSR",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--streaming-ssr.md",
+          "bytes": 1328
+        },
+        {
+          "title": "Document Head Management",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--document-head-management.md",
+          "bytes": 2095
+        },
+        {
+          "title": "Body Scripts",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--body-scripts.md",
+          "bytes": 473
+        },
+        {
+          "title": "ScriptOnce for Pre-Hydration Scripts",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--scriptonce-for-pre-hydration-scripts.md",
+          "bytes": 1074
+        },
+        {
+          "title": "Express Integration Example",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--express-integration-example.md",
+          "bytes": 1589
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--common-mistakes.md",
+          "bytes": 3370
+        },
+        {
+          "title": "Tension: Client-First Loaders vs SSR",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--tension-client-first-loaders-vs-ssr.md",
+          "bytes": 702
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--cross-references.md",
+          "bytes": 480
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-router-plugin",
+      "title": "Router Plugin",
+      "theme": "router-ssr-tooling-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/router-plugin",
+      "version": "1.168.36",
+      "file": "references/guides/tanstack-router-plugin-5aa7d950.md",
+      "sourcePath": "router-plugin",
+      "bytes": 8748,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Install; Bundler Setup; Configuration Options; How It Works; Route Refactor Workflow; Individual Plugin Exports; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-router-plugin-5aa7d950.md",
+          "bytes": 8748
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-solid-router",
+      "title": "Solid Router",
+      "theme": "router-ssr-tooling-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/solid-router",
+      "version": "1.170.31",
+      "file": "references/guides/tanstack-solid-router-bd6ae87e.md",
+      "sourcePath": "solid-router",
+      "bytes": 11785,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Full Setup: File-Based Routing with Vite; Hooks Reference; Components Reference; Solid-Specific Patterns; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-solid-router-bd6ae87e.md",
+          "bytes": 11785
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-virtual-file-routes",
+      "title": "Virtual File Routes",
+      "theme": "router-ssr-tooling-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/virtual-file-routes",
+      "version": "1.162.0",
+      "file": "references/guides/tanstack-virtual-file-routes-58d31d57.md",
+      "sourcePath": "virtual-file-routes",
+      "bytes": 5311,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Install; API Reference; Integration with Router Plugin; Full Example; Common Mistakes",
+          "file": "references/guides/tanstack-virtual-file-routes-58d31d57.md",
+          "bytes": 5311
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-vue-router",
+      "title": "Vue Router",
+      "theme": "router-ssr-tooling-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/vue-router",
+      "version": "1.170.30",
+      "file": "references/guides/tanstack-vue-router-550286fd.md",
+      "sourcePath": "vue-router",
+      "bytes": 9689,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Full Setup: File-Based Routing with Vite; Composables Reference; Components Reference; Vue-Specific Patterns; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-vue-router-550286fd.md",
+          "bytes": 9689
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "product": "store",
+  "guides": [
+    {
+      "id": "store:docs/installation.md",
+      "title": "Installation",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-installation-md-eb8c3278.md",
+      "sourcePath": "docs/installation.md",
+      "bytes": 1284,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; React; Preact; Vue; Angular; SolidJS; Svelte; Lit; Octane",
+          "file": "references/guides/store-docs-installation-md-eb8c3278.md",
+          "bytes": 1284
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/overview.md",
+      "title": "Overview",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-overview-md-c307418a.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 553,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-overview-md-c307418a.md",
+          "bytes": 553
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/quick-start.md",
+      "title": "Quick Start",
+      "theme": "foundations",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-quick-start-md-6364d2fe.md",
+      "sourcePath": "docs/quick-start.md",
+      "bytes": 2265,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Store; Derived Stores; Subscriptions",
+          "file": "references/guides/store-docs-quick-start-md-6364d2fe.md",
+          "bytes": 2265
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/react/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-react-quick-start-md-ed2bdbbf.md",
+      "sourcePath": "docs/framework/react/quick-start.md",
+      "bytes": 1623,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-react-quick-start-md-ed2bdbbf.md",
+          "bytes": 1623
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/preact/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-preact-quick-start-md-ebe2ea57.md",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "bytes": 1554,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-preact-quick-start-md-ebe2ea57.md",
+          "bytes": 1554
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/solid/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-solid-quick-start-md-c0d49fb0.md",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "bytes": 1508,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-solid-quick-start-md-c0d49fb0.md",
+          "bytes": 1508
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/svelte/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-svelte-quick-start-md-05ca33fd.md",
+      "sourcePath": "docs/framework/svelte/quick-start.md",
+      "bytes": 1825,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-svelte-quick-start-md-05ca33fd.md",
+          "bytes": 1825
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/vue/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-vue-quick-start-md-52d7b8c1.md",
+      "sourcePath": "docs/framework/vue/quick-start.md",
+      "bytes": 1811,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-vue-quick-start-md-52d7b8c1.md",
+          "bytes": 1811
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/angular/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-angular-quick-start-md-20f4dec2.md",
+      "sourcePath": "docs/framework/angular/quick-start.md",
+      "bytes": 2313,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-angular-quick-start-md-20f4dec2.md",
+          "bytes": 2313
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/lit/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-lit-quick-start-md-3ce96be3.md",
+      "sourcePath": "docs/framework/lit/quick-start.md",
+      "bytes": 2776,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-lit-quick-start-md-3ce96be3.md",
+          "bytes": 2776
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "store:docs/framework/octane/quick-start.md",
+      "title": "Quick Start",
+      "theme": "framework-octane",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/store",
+      "version": "0.11.1",
+      "file": "references/guides/store-docs-framework-octane-quick-start-md-57c946c2.md",
+      "sourcePath": "docs/framework/octane/quick-start.md",
+      "bytes": 2115,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/store-docs-framework-octane-quick-start-md-57c946c2.md",
+          "bytes": 2115
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

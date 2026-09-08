@@ -30,4 +30,4 @@
 | `tanstack-virtual-file-routes` | atomic | `router-ssr-tooling-adapters` | `@tanstack/virtual-file-routes` | `1.162.0` |  |
 | `tanstack-vue-router` | atomic | `router-ssr-tooling-adapters` | `@tanstack/vue-router` | `1.170.30` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 1. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 1. No fuzzy deduplication is used.

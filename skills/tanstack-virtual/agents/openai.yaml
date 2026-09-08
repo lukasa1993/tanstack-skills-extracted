@@ -1,4 +1,4 @@
 interface:
   display_name: "TanStack Virtual"
-  short_description: "Virtualization guidance for large lists, grids, dynamic measurement, reverse feeds, and framework adapters."
+  short_description: "Task and framework guides for TanStack Virtual"
   default_prompt: "Use $tanstack-virtual to implement this TanStack Virtual task with the installed framework and package versions."

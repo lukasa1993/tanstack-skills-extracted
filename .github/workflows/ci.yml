@@ -29,5 +29,10 @@ jobs:
           ./extractor.sh --self-test
           node --test ./scripts/*.test.mjs
           node scripts/validate-catalog.mjs
+          node scripts/validate-guidance.mjs
+      - name: Install pinned acceptance dependencies
+        run: npm ci --prefix acceptance --ignore-scripts --no-audit --no-fund
+      - name: Exercise installed skill examples
+        run: npm test --prefix acceptance
       - name: Lint GitHub Actions workflows
         run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12 -color

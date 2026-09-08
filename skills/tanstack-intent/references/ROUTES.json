@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "product": "intent",
+  "guides": [
+    {
+      "id": "intent:docs/cli/intent-exclude.md",
+      "title": "Intent Exclude",
+      "theme": "consumer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-exclude-md-0db9f5a4.md",
+      "sourcePath": "docs/cli/intent-exclude.md",
+      "bytes": 1470,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Actions; Examples; Behavior; Related",
+          "file": "references/guides/intent-docs-cli-intent-exclude-md-0db9f5a4.md",
+          "bytes": 1470
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-install.md",
+      "title": "Intent Install",
+      "theme": "consumer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-install-md-9e9b9fd2.md",
+      "sourcePath": "docs/cli/intent-install.md",
+      "bytes": 10528,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Behavior; Default output; Mapping output; Status messages; Related",
+          "file": "references/guides/intent-docs-cli-intent-install-md-9e9b9fd2.md",
+          "bytes": 10528
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-list.md",
+      "title": "Intent List",
+      "theme": "consumer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-list-md-4aea1d54.md",
+      "sourcePath": "docs/cli/intent-list.md",
+      "bytes": 9549,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Behavior; Default output; JSON output; Status messages; Common errors; Related",
+          "file": "references/guides/intent-docs-cli-intent-list-md-4aea1d54.md",
+          "bytes": 9549
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-load.md",
+      "title": "Intent Load",
+      "theme": "consumer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-load-md-40c79fd4.md",
+      "sourcePath": "docs/cli/intent-load.md",
+      "bytes": 3924,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; What you get; JSON output; Common errors; Related",
+          "file": "references/guides/intent-docs-cli-intent-load-md-40c79fd4.md",
+          "bytes": 3924
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/getting-started/quick-start-consumers.md",
+      "title": "Quick Start Consumers",
+      "theme": "consumer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-getting-started-quick-start-consumers-md-865fe368.md",
+      "sourcePath": "docs/getting-started/quick-start-consumers.md",
+      "bytes": 6187,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "1. Run install; 2. Review the saved permissions; 3. Use skills in your workflow; 4. Keep skills up-to-date",
+          "file": "references/guides/intent-docs-getting-started-quick-start-consumers-md-865fe368.md",
+          "bytes": 6187
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-hooks.md",
+      "title": "Intent Hooks",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-hooks-md-387452b2.md",
+      "sourcePath": "docs/cli/intent-hooks.md",
+      "bytes": 3993,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Behavior; Hook support; Status messages; Related",
+          "file": "references/guides/intent-docs-cli-intent-hooks-md-387452b2.md",
+          "bytes": 3993
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-meta.md",
+      "title": "Intent Meta",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-meta-md-6ce60220.md",
+      "sourcePath": "docs/cli/intent-meta.md",
+      "bytes": 1122,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Arguments; Output; Common errors",
+          "file": "references/guides/intent-docs-cli-intent-meta-md-6ce60220.md",
+          "bytes": 1122
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-scaffold.md",
+      "title": "Intent Scaffold",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-scaffold-md-4d10a2a2.md",
+      "sourcePath": "docs/cli/intent-scaffold.md",
+      "bytes": 1159,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Behavior; Output; Related",
+          "file": "references/guides/intent-docs-cli-intent-scaffold-md-4d10a2a2.md",
+          "bytes": 1159
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-setup.md",
+      "title": "Intent Setup",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-setup-md-7ed6e8de.md",
+      "sourcePath": "docs/cli/intent-setup.md",
+      "bytes": 2311,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Commands; What each command changes; Required `files` entries; Common errors; Notes; Related",
+          "file": "references/guides/intent-docs-cli-intent-setup-md-7ed6e8de.md",
+          "bytes": 2311
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-stale.md",
+      "title": "Intent Stale",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-stale-md-4e814c2e.md",
+      "sourcePath": "docs/cli/intent-stale.md",
+      "bytes": 4021,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Options; Behavior; JSON report schema; Text output; Common errors; Notes; Related",
+          "file": "references/guides/intent-docs-cli-intent-stale-md-4e814c2e.md",
+          "bytes": 4021
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-validate.md",
+      "title": "Intent Validate",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-cli-intent-validate-md-f634a848.md",
+      "sourcePath": "docs/cli/intent-validate.md",
+      "bytes": 3555,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Arguments; Options; Frontmatter migration fixes; Validation checks; Packaging warnings; Common errors; Related",
+          "file": "references/guides/intent-docs-cli-intent-validate-md-f634a848.md",
+          "bytes": 3555
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/getting-started/quick-start-maintainers.md",
+      "title": "Quick Start Maintainers",
+      "theme": "maintainer-workflow",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-getting-started-quick-start-maintainers-md-0ea73e8c.md",
+      "sourcePath": "docs/getting-started/quick-start-maintainers.md",
+      "bytes": 7574,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Install; Initial Setup (With Agent); Publish Configuration; Ongoing Maintenance (Manual or Agent-Assisted)",
+          "file": "references/guides/intent-docs-getting-started-quick-start-maintainers-md-0ea73e8c.md",
+          "bytes": 7574
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/concepts/configuration.md",
+      "title": "Configuration",
+      "theme": "trust-configuration",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-concepts-configuration-md-138c87c1.md",
+      "sourcePath": "docs/concepts/configuration.md",
+      "bytes": 7670,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Configuration inheritance; `intent.skills`; `intent.exclude`",
+          "file": "references/guides/intent-docs-concepts-configuration-md-138c87c1.md",
+          "bytes": 7670
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/concepts/trust-model.md",
+      "title": "Trust Model",
+      "theme": "trust-configuration",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-concepts-trust-model-md-2527dceb.md",
+      "sourcePath": "docs/concepts/trust-model.md",
+      "bytes": 6970,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Explicit sources; First-run permission review; Revisiting permissions; Static discovery; Lifecycle boundaries; Unsupported sources",
+          "file": "references/guides/intent-docs-concepts-trust-model-md-2527dceb.md",
+          "bytes": 6970
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/overview.md",
+      "title": "Overview",
+      "theme": "trust-configuration",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-overview-md-ccd169b3.md",
+      "sourcePath": "docs/overview.md",
+      "bytes": 3942,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; What Intent does; How it works",
+          "file": "references/guides/intent-docs-overview-md-ccd169b3.md",
+          "bytes": 3942
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/registry.md",
+      "title": "Registry",
+      "theme": "trust-configuration",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-docs-registry-md-01f43510.md",
+      "sourcePath": "docs/registry.md",
+      "bytes": 2520,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; How discovery works; Ship skills in 4 steps; Keeping skills current; Requesting a library",
+          "file": "references/guides/intent-docs-registry-md-01f43510.md",
+          "bytes": 2520
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:packages/intent/meta/domain-discovery/SKILL.md",
+      "title": "SKILL",
+      "theme": "meta-discovery-generation",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md",
+      "sourcePath": "packages/intent/meta/domain-discovery/SKILL.md",
+      "bytes": 3044,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--overview.md",
+          "bytes": 5103
+        },
+        {
+          "title": "Phase 1 — Quick scan (autonomous, ~10 minutes)",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--phase-1-quick-scan-autonomous-10-minutes.md",
+          "bytes": 3166
+        },
+        {
+          "title": "Phase 2 — High-level interview (interactive — requires maintainer)",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--phase-2-high-level-interview-interactive-requires-maintainer.md",
+          "bytes": 3512
+        },
+        {
+          "title": "Phase 3 — Deep read (autonomous)",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--phase-3-deep-read-autonomous.md",
+          "bytes": 884
+        },
+        {
+          "title": "Phase 4 — Detail interview (interactive — requires maintainer)",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--phase-4-detail-interview-interactive-requires-maintainer.md",
+          "bytes": 6097
+        },
+        {
+          "title": "Phase 5 — Finalize artifacts",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--phase-5-finalize-artifacts.md",
+          "bytes": 824
+        },
+        {
+          "title": "Output artifacts",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--output-artifacts.md",
+          "bytes": 597
+        },
+        {
+          "title": "Constraints",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--constraints.md",
+          "bytes": 5289
+        },
+        {
+          "title": "Cross-model compatibility notes",
+          "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5--cross-model-compatibility-notes.md",
+          "bytes": 1203
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:packages/intent/meta/generate-skill/SKILL.md",
+      "title": "SKILL",
+      "theme": "meta-discovery-generation",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239.md",
+      "sourcePath": "packages/intent/meta/generate-skill/SKILL.md",
+      "bytes": 2124,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--overview.md",
+          "bytes": 860
+        },
+        {
+          "title": "Inputs",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--inputs.md",
+          "bytes": 1238
+        },
+        {
+          "title": "Step 1 — Determine skill type",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-1-determine-skill-type.md",
+          "bytes": 1361
+        },
+        {
+          "title": "Step 2 — Extract content from sources",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-2-extract-content-from-sources.md",
+          "bytes": 3704
+        },
+        {
+          "title": "Step 3 — Write the frontmatter",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-3-write-the-frontmatter.md",
+          "bytes": 2810
+        },
+        {
+          "title": "Step 4 — Write the body",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-4-write-the-body.md",
+          "bytes": 2751
+        },
+        {
+          "title": "Common Security Mistakes",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--common-security-mistakes.md",
+          "bytes": 286
+        },
+        {
+          "title": "Pre-Deploy Summary",
+          "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239--pre-deploy-summary.md",
+          "bytes": 4579
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:packages/intent/meta/skill-staleness-check/SKILL.md",
+      "title": "SKILL",
+      "theme": "meta-tree-maintenance",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-packages-intent-meta-skill-staleness-check-skill-md-ad82bd49.md",
+      "sourcePath": "packages/intent/meta/skill-staleness-check/SKILL.md",
+      "bytes": 9159,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Inputs; Step 1 — Match changed files to skills; Step 2 — Evaluate each candidate; Step 3 — Update stale skills; Step 4 — Check cross-skill references; Step 5 — Mark skills as synced; Step 6 — Open PRs; No-op behavior; Operational notes; Constraints",
+          "file": "references/guides/intent-packages-intent-meta-skill-staleness-check-skill-md-ad82bd49.md",
+          "bytes": 9159
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:packages/intent/meta/tree-generator/SKILL.md",
+      "title": "SKILL",
+      "theme": "meta-tree-maintenance",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.4.0",
+      "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md",
+      "sourcePath": "packages/intent/meta/tree-generator/SKILL.md",
+      "bytes": 2729,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--overview.md",
+          "bytes": 1848
+        },
+        {
+          "title": "Workflow A — Generate skill tree: Prerequisites",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-prerequisites.md",
+          "bytes": 1102
+        },
+        {
+          "title": "Workflow A — Generate skill tree: Scaffold flow output",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-scaffold-flow-output.md",
+          "bytes": 1901
+        },
+        {
+          "title": "Workflow A — Generate skill tree: Minimal library fast path",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-minimal-library-fast-path.md",
+          "bytes": 1072
+        },
+        {
+          "title": "Workflow A — Generate skill tree: Step 1 — Plan the file tree",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-step-1-plan-the-file-tree.md",
+          "bytes": 5974
+        },
+        {
+          "title": "Workflow A — Generate skill tree: Steps 2–7 — Write skills",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-steps-2-7-write-skills.md",
+          "bytes": 976
+        },
+        {
+          "title": "Workflow A — Generate skill tree: Step 8 — Validate the complete tree",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-step-8-validate-the-complete-tree.md",
+          "bytes": 4109
+        },
+        {
+          "title": "Workflow B — Update existing skills",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-b-update-existing-skills.md",
+          "bytes": 702
+        },
+        {
+          "title": "Constraints — verify for every file",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--constraints-verify-for-every-file.md",
+          "bytes": 2938
+        },
+        {
+          "title": "Cross-model compatibility",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--cross-model-compatibility.md",
+          "bytes": 791
+        },
+        {
+          "title": "Output order",
+          "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--output-order.md",
+          "bytes": 669
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

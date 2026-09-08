@@ -1,0 +1,23 @@
+[
+  {
+    "product": "query",
+    "sourcePath": "docs/framework/react/guides/optimistic-updates.md",
+    "file": "react-optimistic.tsx",
+    "title": "React optimistic update with cancellation and rollback",
+    "testedPackages": { "@tanstack/react-query": "5.102.8", "react": "19.2.8" }
+  },
+  {
+    "product": "query",
+    "sourcePath": "docs/framework/vue/reactivity.md",
+    "file": "vue-reactivity.ts",
+    "title": "Vue query with reactive inputs and enabled state",
+    "testedPackages": { "@tanstack/vue-query": "5.102.8", "vue": "3.5.42" }
+  },
+  {
+    "product": "form",
+    "sourcePath": "docs/framework/react/guides/validation.md",
+    "file": "react-validation.tsx",
+    "title": "React field validation and guarded submission",
+    "testedPackages": { "@tanstack/react-form": "1.33.5", "react": "19.2.8" }
+  }
+]

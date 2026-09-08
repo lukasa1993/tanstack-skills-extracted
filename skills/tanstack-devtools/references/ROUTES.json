@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "product": "devtools",
+  "guides": [
+    {
+      "id": "tanstack-devtools-app-setup",
+      "title": "Devtools App Setup",
+      "theme": "setup-production",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools",
+      "version": "0.14.2",
+      "file": "references/guides/tanstack-devtools-app-setup-a09047cc.md",
+      "sourcePath": "devtools-app-setup",
+      "bytes": 9424,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; See Also",
+          "file": "references/guides/tanstack-devtools-app-setup-a09047cc.md",
+          "bytes": 9424
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-production",
+      "title": "Devtools Production",
+      "theme": "setup-production",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools",
+      "version": "0.14.2",
+      "file": "references/guides/tanstack-devtools-production-258b04dd.md",
+      "sourcePath": "devtools-production",
+      "bytes": 2219,
+      "prerequisites": [
+        {
+          "id": "tanstack-devtools-app-setup",
+          "file": "references/guides/tanstack-devtools-app-setup-a09047cc.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--overview.md",
+          "bytes": 396
+        },
+        {
+          "title": "How Production Stripping Works",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--how-production-stripping-works.md",
+          "bytes": 2655
+        },
+        {
+          "title": "The Two Workflows",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--the-two-workflows.md",
+          "bytes": 2619
+        },
+        {
+          "title": "Non-Vite Projects",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--non-vite-projects.md",
+          "bytes": 2005
+        },
+        {
+          "title": "NoOp Plugin Variants for Tree-Shaking",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--noop-plugin-variants-for-tree-shaking.md",
+          "bytes": 2187
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--common-mistakes.md",
+          "bytes": 3213
+        },
+        {
+          "title": "Design Tension",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--design-tension.md",
+          "bytes": 955
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--cross-references.md",
+          "bytes": 601
+        },
+        {
+          "title": "Key Source Files",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--key-source-files.md",
+          "bytes": 891
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-vite-plugin",
+      "title": "Devtools Vite Plugin",
+      "theme": "setup-production",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools-vite",
+      "version": "0.8.5",
+      "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562.md",
+      "sourcePath": "devtools-vite-plugin",
+      "bytes": 2067,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--overview.md",
+          "bytes": 518
+        },
+        {
+          "title": "Installation and Basic Setup",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--installation-and-basic-setup.md",
+          "bytes": 746
+        },
+        {
+          "title": "Exports",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--exports.md",
+          "bytes": 474
+        },
+        {
+          "title": "Architecture: Sub-Plugins",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--architecture-sub-plugins.md",
+          "bytes": 2873
+        },
+        {
+          "title": "Subsystem Details",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--subsystem-details.md",
+          "bytes": 6082
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--common-mistakes.md",
+          "bytes": 2702
+        },
+        {
+          "title": "Internal Middleware Endpoints",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--internal-middleware-endpoints.md",
+          "bytes": 994
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--cross-references.md",
+          "bytes": 438
+        },
+        {
+          "title": "Key Source Files",
+          "file": "references/guides/tanstack-devtools-vite-plugin-cfc5c562--key-source-files.md",
+          "bytes": 1128
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-marketplace",
+      "title": "Devtools Marketplace",
+      "theme": "plugins-marketplace",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools",
+      "version": "0.14.2",
+      "file": "references/guides/tanstack-devtools-marketplace-8bf06759.md",
+      "sourcePath": "devtools-marketplace",
+      "bytes": 2215,
+      "prerequisites": [
+        {
+          "id": "tanstack-devtools-plugin-panel",
+          "file": "references/guides/tanstack-devtools-plugin-panel-b0545901.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--overview.md",
+          "bytes": 431
+        },
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--overview-2.md",
+          "bytes": 487
+        },
+        {
+          "title": "PluginMetadata Interface",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--pluginmetadata-interface.md",
+          "bytes": 2560
+        },
+        {
+          "title": "Registry Entry Examples",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--registry-entry-examples.md",
+          "bytes": 3546
+        },
+        {
+          "title": "How Auto-Install Works",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--how-auto-install-works.md",
+          "bytes": 1259
+        },
+        {
+          "title": "PR Submission Process",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--pr-submission-process.md",
+          "bytes": 1269
+        },
+        {
+          "title": "Framework Detection",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--framework-detection.md",
+          "bytes": 670
+        },
+        {
+          "title": "Featured Plugins",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--featured-plugins.md",
+          "bytes": 561
+        },
+        {
+          "title": "Plugin ID Matching",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--plugin-id-matching.md",
+          "bytes": 908
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--common-mistakes.md",
+          "bytes": 3616
+        },
+        {
+          "title": "See Also",
+          "file": "references/guides/tanstack-devtools-marketplace-8bf06759--see-also.md",
+          "bytes": 381
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-plugin-panel",
+      "title": "Devtools Plugin Panel",
+      "theme": "plugins-marketplace",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools",
+      "version": "0.14.2",
+      "file": "references/guides/tanstack-devtools-plugin-panel-b0545901.md",
+      "sourcePath": "devtools-plugin-panel",
+      "bytes": 11023,
+      "prerequisites": [
+        {
+          "id": "tanstack-devtools-event-client",
+          "file": "references/guides/tanstack-devtools-event-client-b11524e7.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "TanStackDevtoolsPlugin Interface; Two Development Paths; Path 1: Solid.js Core Panel; Path 2: Framework-Specific Panel (React Example); Plugin Lifecycle Sequence; Common Mistakes; References",
+          "file": "references/guides/tanstack-devtools-plugin-panel-b0545901.md",
+          "bytes": 11023
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-utils-devtools-framework-adapters",
+      "title": "Devtools Framework Adapters",
+      "theme": "plugins-marketplace",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools-utils",
+      "version": "0.7.0",
+      "file": "references/guides/tanstack-devtools-utils-devtools-framework-adapters-dfa9d9d5.md",
+      "sourcePath": "devtools-framework-adapters",
+      "bytes": 8373,
+      "prerequisites": [
+        {
+          "id": "tanstack-devtools-plugin-panel",
+          "file": "references/guides/tanstack-devtools-plugin-panel-b0545901.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Key Source Files; Shared Pattern; Primary Example (React); Framework API Differences; Common Mistakes; Design Tension; Cross-References; Reference Files",
+          "file": "references/guides/tanstack-devtools-utils-devtools-framework-adapters-dfa9d9d5.md",
+          "bytes": 8373
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-event-client",
+      "title": "Devtools Event Client",
+      "theme": "events-instrumentation",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools-event-client",
+      "version": "0.5.0",
+      "file": "references/guides/tanstack-devtools-event-client-b11524e7.md",
+      "sourcePath": "devtools-event-client",
+      "bytes": 10374,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Core Patterns; Common Mistakes; See Also",
+          "file": "references/guides/tanstack-devtools-event-client-b11524e7.md",
+          "bytes": 10374
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-event-client-devtools-bidirectional",
+      "title": "Devtools Bidirectional",
+      "theme": "events-instrumentation",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools-event-client",
+      "version": "0.5.0",
+      "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88.md",
+      "sourcePath": "devtools-bidirectional",
+      "bytes": 1753,
+      "prerequisites": [
+        {
+          "id": "tanstack-devtools-event-client",
+          "file": "references/guides/tanstack-devtools-event-client-b11524e7.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88--overview.md",
+          "bytes": 794
+        },
+        {
+          "title": "Core Concept",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88--core-concept.md",
+          "bytes": 760
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88--core-patterns.md",
+          "bytes": 8565
+        },
+        {
+          "title": "Debouncing Frequent Observations",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88--debouncing-frequent-observations.md",
+          "bytes": 897
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88--common-mistakes.md",
+          "bytes": 3160
+        },
+        {
+          "title": "See Also",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-bidirectional-02c62d88--see-also.md",
+          "bytes": 491
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-event-client-devtools-instrumentation",
+      "title": "Devtools Instrumentation",
+      "theme": "events-instrumentation",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools-event-client",
+      "version": "0.5.0",
+      "file": "references/guides/tanstack-devtools-event-client-devtools-instrumentation-6363dc09.md",
+      "sourcePath": "devtools-instrumentation",
+      "bytes": 11283,
+      "prerequisites": [
+        {
+          "id": "tanstack-devtools-event-client",
+          "file": "references/guides/tanstack-devtools-event-client-b11524e7.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Key Insight; Where to Instrument; Core Patterns; Instrumentation Checklist; Common Mistakes",
+          "file": "references/guides/tanstack-devtools-event-client-devtools-instrumentation-6363dc09.md",
+          "bytes": 11283
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

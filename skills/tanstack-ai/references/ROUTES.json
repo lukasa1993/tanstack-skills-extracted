@@ -1,0 +1,1496 @@
+{
+  "schemaVersion": 1,
+  "product": "ai",
+  "guides": [
+    {
+      "id": "tanstack-ai-core",
+      "title": "Ai Core",
+      "theme": "chat-providers",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-d384359d.md",
+      "sourcePath": "ai-core",
+      "bytes": 7618,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Sub-Skills; Companion packages; Quick Decision Tree; Critical Rules; Version",
+          "file": "references/guides/tanstack-ai-core-d384359d.md",
+          "bytes": 7618
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-adapter-configuration",
+      "title": "Adapter Configuration",
+      "theme": "chat-providers",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef.md",
+      "sourcePath": "ai-core/adapter-configuration",
+      "bytes": 2868,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--overview.md",
+          "bytes": 727
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--setup.md",
+          "bytes": 1045
+        },
+        {
+          "title": "Core Patterns: 1. Adapter Selection",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-1-adapter-selection.md",
+          "bytes": 5375
+        },
+        {
+          "title": "Core Patterns: 2. Runtime Adapter Switching",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-2-runtime-adapter-switching.md",
+          "bytes": 1277
+        },
+        {
+          "title": "Core Patterns: 3. Configuring Reasoning / Thinking",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-3-configuring-reasoning-thinking.md",
+          "bytes": 1608
+        },
+        {
+          "title": "Core Patterns: 4. Extending Adapters with Custom Models",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-4-extending-adapters-with-custom-models.md",
+          "bytes": 1268
+        },
+        {
+          "title": "Core Patterns: 5. Configuring Sampling",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-5-configuring-sampling.md",
+          "bytes": 2969
+        },
+        {
+          "title": "Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-capability-flag-supportscombinedtoolsandschema.md",
+          "bytes": 3040
+        },
+        {
+          "title": "Core Patterns: 6. OpenAI-Compatible Providers",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-openai-compatible-providers.md",
+          "bytes": 2345
+        },
+        {
+          "title": "Behind a proxy or gateway",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--behind-a-proxy-or-gateway.md",
+          "bytes": 893
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--common-mistakes.md",
+          "bytes": 2363
+        },
+        {
+          "title": "References",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--references.md",
+          "bytes": 1014
+        },
+        {
+          "title": "Tension",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--tension.md",
+          "bytes": 517
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef--cross-references.md",
+          "bytes": 499
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-ag-ui-protocol",
+      "title": "Ag Ui Protocol",
+      "theme": "chat-providers",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289.md",
+      "sourcePath": "ai-core/ag-ui-protocol",
+      "bytes": 1783,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--overview.md",
+          "bytes": 232
+        },
+        {
+          "title": "Setup — Server Endpoint Producing AG-UI Events via SSE",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--setup-server-endpoint-producing-ag-ui-events-via-sse.md",
+          "bytes": 852
+        },
+        {
+          "title": "Setup — Receiving AG-UI RunAgentInput on the Server",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--setup-receiving-ag-ui-runagentinput-on-the-server.md",
+          "bytes": 2092
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--core-patterns.md",
+          "bytes": 9125
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--common-mistakes.md",
+          "bytes": 1707
+        },
+        {
+          "title": "Tension",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--tension.md",
+          "bytes": 569
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289--cross-references.md",
+          "bytes": 777
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-chat-experience",
+      "title": "Chat Experience",
+      "theme": "chat-providers",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a.md",
+      "sourcePath": "ai-core/chat-experience",
+      "bytes": 3593,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--overview.md",
+          "bytes": 235
+        },
+        {
+          "title": "Setup — Minimal Chat App",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--setup-minimal-chat-app.md",
+          "bytes": 2694
+        },
+        {
+          "title": "Core Patterns: 1. Streaming Chat with SSE",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-1-streaming-chat-with-sse.md",
+          "bytes": 2073
+        },
+        {
+          "title": "Core Patterns: 2. Rendering Thinking/Reasoning Content",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-2-rendering-thinking-reasoning-content.md",
+          "bytes": 1604
+        },
+        {
+          "title": "Core Patterns: 3. Sending Multimodal Content (Images)",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-3-sending-multimodal-content-images.md",
+          "bytes": 1421
+        },
+        {
+          "title": "Core Patterns: 4. Sending Audio Messages (Browser Recording)",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-4-sending-audio-messages-browser-recording.md",
+          "bytes": 1108
+        },
+        {
+          "title": "Core Patterns: 5. HTTP Stream Format (Alternative to SSE)",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-5-http-stream-format-alternative-to-sse.md",
+          "bytes": 1410
+        },
+        {
+          "title": "Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-6-mcp-tool-discovery-via-chat-mcp.md",
+          "bytes": 3026
+        },
+        {
+          "title": "Core Patterns: 7. Queueing Messages Sent While Streaming",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-7-queueing-messages-sent-while-streaming.md",
+          "bytes": 2550
+        },
+        {
+          "title": "Core Patterns: 8. Browser-Refresh Durability (client persistence)",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--core-patterns-8-browser-refresh-durability-client-persistence.md",
+          "bytes": 3600
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--common-mistakes.md",
+          "bytes": 5957
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a--cross-references.md",
+          "bytes": 846
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-custom-backend-integration",
+      "title": "Custom Backend Integration",
+      "theme": "chat-providers",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192.md",
+      "sourcePath": "ai-core/custom-backend-integration",
+      "bytes": 1397,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192--overview.md",
+          "bytes": 279
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192--setup.md",
+          "bytes": 1274
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192--core-patterns.md",
+          "bytes": 7065
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192--common-mistakes.md",
+          "bytes": 4316
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192--cross-references.md",
+          "bytes": 740
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-debug-logging",
+      "title": "Debug Logging",
+      "theme": "chat-providers",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-debug-logging-12e2d18d.md",
+      "sourcePath": "ai-core/debug-logging",
+      "bytes": 8252,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Turn it on; Turn it off; `DebugOption` — the accepted shapes; Narrow what's printed; Pipe into your own logger; Categories; Non-chat activities; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-ai-core-debug-logging-12e2d18d.md",
+          "bytes": 8252
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-middleware",
+      "title": "Middleware",
+      "theme": "tools-outputs-middleware",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-middleware-b87affa9.md",
+      "sourcePath": "ai-core/middleware",
+      "bytes": 2638,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--overview.md",
+          "bytes": 243
+        },
+        {
+          "title": "Setup — Analytics Tracking Middleware",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--setup-analytics-tracking-middleware.md",
+          "bytes": 773
+        },
+        {
+          "title": "Hooks Reference",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--hooks-reference.md",
+          "bytes": 7531
+        },
+        {
+          "title": "onStructuredOutputConfig",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--onstructuredoutputconfig.md",
+          "bytes": 1778
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--core-patterns.md",
+          "bytes": 7877
+        },
+        {
+          "title": "Pattern: tool-call budget (app-owned)",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--pattern-tool-call-budget-app-owned.md",
+          "bytes": 1276
+        },
+        {
+          "title": "Built-in: toolCacheMiddleware",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--built-in-toolcachemiddleware.md",
+          "bytes": 921
+        },
+        {
+          "title": "Server State Persistence: withPersistence",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--server-state-persistence-withpersistence.md",
+          "bytes": 7296
+        },
+        {
+          "title": "Sandbox File-Event Hooks (`sandbox` group)",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--sandbox-file-event-hooks-sandbox-group.md",
+          "bytes": 4914
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--common-mistakes.md",
+          "bytes": 3572
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-middleware-b87affa9--cross-references.md",
+          "bytes": 1159
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-structured-outputs",
+      "title": "Structured Outputs",
+      "theme": "tools-outputs-middleware",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef.md",
+      "sourcePath": "ai-core/structured-outputs",
+      "bytes": 3028,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--overview.md",
+          "bytes": 427
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--setup.md",
+          "bytes": 1060
+        },
+        {
+          "title": "Decision: which pattern fits",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--decision-which-pattern-fits.md",
+          "bytes": 1551
+        },
+        {
+          "title": "Core Patterns: Pattern 1: Basic structured output with Zod",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-1-basic-structured-output-with-zod.md",
+          "bytes": 1079
+        },
+        {
+          "title": "Core Patterns: Pattern 2: Complex nested schemas",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-2-complex-nested-schemas.md",
+          "bytes": 1335
+        },
+        {
+          "title": "Core Patterns: Pattern 3: Direct stream iteration",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-3-direct-stream-iteration.md",
+          "bytes": 6171
+        },
+        {
+          "title": "Core Patterns: Pattern 4: useChat with outputSchema (progressive UI)",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-4-usechat-with-outputschema-progressive-ui.md",
+          "bytes": 2872
+        },
+        {
+          "title": "Core Patterns: Pattern 5: Multi-turn structured chat",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-5-multi-turn-structured-chat.md",
+          "bytes": 3880
+        },
+        {
+          "title": "Core Patterns: Pattern 6: Harness adapters (Claude Code, Codex, OpenCode, Grok Build, ACP)",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-6-harness-adapters-claude-code-codex-opencode-grok-build-acp.md",
+          "bytes": 2555
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--common-mistakes.md",
+          "bytes": 6003
+        },
+        {
+          "title": "Middleware coverage",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--middleware-coverage.md",
+          "bytes": 917
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef--cross-references.md",
+          "bytes": 1407
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-tool-calling",
+      "title": "Tool Calling",
+      "theme": "tools-outputs-middleware",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c.md",
+      "sourcePath": "ai-core/tool-calling",
+      "bytes": 1944,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--overview.md",
+          "bytes": 226
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--setup.md",
+          "bytes": 3217
+        },
+        {
+          "title": "Core Patterns",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns.md",
+          "bytes": 10845
+        },
+        {
+          "title": "MCP Tools",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--mcp-tools.md",
+          "bytes": 7930
+        },
+        {
+          "title": "Provider Skills",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--provider-skills.md",
+          "bytes": 3509
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--common-mistakes.md",
+          "bytes": 977
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c--cross-references.md",
+          "bytes": 430
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-media-generation",
+      "title": "Media Generation",
+      "theme": "media",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-media-generation-f3029c96.md",
+      "sourcePath": "ai-core/media-generation",
+      "bytes": 3464,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--overview.md",
+          "bytes": 494
+        },
+        {
+          "title": "Setup -- Image Generation End-to-End",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--setup-image-generation-end-to-end.md",
+          "bytes": 3094
+        },
+        {
+          "title": "Core Patterns: 1. Image Generation",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md",
+          "bytes": 11717
+        },
+        {
+          "title": "Core Patterns: 2. Audio Generation (Music, Sound Effects)",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-2-audio-generation-music-sound-effects.md",
+          "bytes": 1200
+        },
+        {
+          "title": "Core Patterns: 3. Text-to-Speech",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-3-text-to-speech.md",
+          "bytes": 1988
+        },
+        {
+          "title": "Core Patterns: 4. Audio Transcription",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-4-audio-transcription.md",
+          "bytes": 2727
+        },
+        {
+          "title": "Core Patterns: 5. Video Generation (Experimental -- async polling)",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-5-video-generation-experimental-async-polling.md",
+          "bytes": 7904
+        },
+        {
+          "title": "Core Patterns: 6. Cost tracking (fal billable units)",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-6-cost-tracking-fal-billable-units.md",
+          "bytes": 1391
+        },
+        {
+          "title": "Core Patterns: 7. Durable persistence (job lifecycle + artifact bytes)",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-7-durable-persistence-job-lifecycle-artifact-bytes.md",
+          "bytes": 4234
+        },
+        {
+          "title": "Common Hook API",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--common-hook-api.md",
+          "bytes": 2201
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--common-mistakes.md",
+          "bytes": 8404
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--cross-references.md",
+          "bytes": 919
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-client-persistence",
+      "title": "Client Persistence",
+      "theme": "persistence-coordination",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-client-persistence-9ee3012c.md",
+      "sourcePath": "ai-core/client-persistence",
+      "bytes": 10025,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Adapters; Mode A — cache everything (client-authoritative); Mode B — server-authoritative (`persistence: true`); What a reload restores; Stable `threadId` is the identity; Generation hooks: server-driven only; Common mistakes; Cross-references",
+          "file": "references/guides/tanstack-ai-core-client-persistence-9ee3012c.md",
+          "bytes": 10025
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-core-locks",
+      "title": "Locks",
+      "theme": "persistence-coordination",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai",
+      "version": "0.53.0",
+      "file": "references/guides/tanstack-ai-core-locks-b6cb9694.md",
+      "sourcePath": "ai-core/locks",
+      "bytes": 4332,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Why separate?; Wire locks; The contract; Lease semantics; Capability identity; Common mistakes; Cross-references",
+          "file": "references/guides/tanstack-ai-core-locks-b6cb9694.md",
+          "bytes": 4332
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence",
+      "title": "Ai Persistence",
+      "theme": "persistence-coordination",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-2fec28cd.md",
+      "sourcePath": "ai-persistence",
+      "bytes": 12981,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Persistence is a contract, not a database; Sub-skills; State persistence has two halves; Identity: `threadId` and `Scope`; Authoritative-history contract; Recommended production stack; Minimal end-to-end sketch; Critical rules; Cross-references",
+          "file": "references/guides/tanstack-ai-persistence-2fec28cd.md",
+          "bytes": 12981
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-server",
+      "title": "Server",
+      "theme": "persistence-coordination",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-server-3b558cfc.md",
+      "sourcePath": "ai-persistence/server",
+      "bytes": 8869,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; What each store does; Authoritative-history contract; When state is written; Interrupt / resume flow; Hydrate a thread for the client (`reconstructChat`); Generation activities; Common mistakes; Cross-references",
+          "file": "references/guides/tanstack-ai-persistence-server-3b558cfc.md",
+          "bytes": 8869
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-stores",
+      "title": "Stores",
+      "theme": "persistence-coordination",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-stores-e6061122.md",
+      "sourcePath": "ai-persistence/stores",
+      "bytes": 2992,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--overview.md",
+          "bytes": 906
+        },
+        {
+          "title": "Choose a shape",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--choose-a-shape.md",
+          "bytes": 1732
+        },
+        {
+          "title": "Contracts and invariants: `MessageStore`",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-messagestore.md",
+          "bytes": 555
+        },
+        {
+          "title": "Contracts and invariants: `RunStore`",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-runstore.md",
+          "bytes": 10866
+        },
+        {
+          "title": "Contracts and invariants: `InterruptStore`",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-interruptstore.md",
+          "bytes": 1004
+        },
+        {
+          "title": "Contracts and invariants: `MetadataStore`",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-metadatastore.md",
+          "bytes": 1002
+        },
+        {
+          "title": "Timestamp convention",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--timestamp-convention.md",
+          "bytes": 437
+        },
+        {
+          "title": "Minimal message store example",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--minimal-message-store-example.md",
+          "bytes": 988
+        },
+        {
+          "title": "Adopt part of it",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--adopt-part-of-it.md",
+          "bytes": 1022
+        },
+        {
+          "title": "Map onto an existing schema",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--map-onto-an-existing-schema.md",
+          "bytes": 744
+        },
+        {
+          "title": "Authorization",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--authorization.md",
+          "bytes": 372
+        },
+        {
+          "title": "Conformance tests (required)",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--conformance-tests-required.md",
+          "bytes": 2265
+        },
+        {
+          "title": "Common mistakes",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--common-mistakes.md",
+          "bytes": 1117
+        },
+        {
+          "title": "Cross-references",
+          "file": "references/guides/tanstack-ai-persistence-stores-e6061122--cross-references.md",
+          "bytes": 402
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-build-custom-adapter",
+      "title": "Build Custom Adapter",
+      "theme": "persistence-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md",
+      "sourcePath": "ai-persistence/build-custom-adapter",
+      "bytes": 1798,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--overview.md",
+          "bytes": 1306
+        },
+        {
+          "title": "1. Read the app before writing anything",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--1-read-the-app-before-writing-anything.md",
+          "bytes": 1411
+        },
+        {
+          "title": "2. Shape the storage",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--2-shape-the-storage.md",
+          "bytes": 2748
+        },
+        {
+          "title": "3. The invariants",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--3-the-invariants.md",
+          "bytes": 2781
+        },
+        {
+          "title": "4. Write `src/lib/chat-persistence.ts`",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--4-write-src-lib-chat-persistence-ts.md",
+          "bytes": 3906
+        },
+        {
+          "title": "Engine notes",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--engine-notes.md",
+          "bytes": 2378
+        },
+        {
+          "title": "Adopt part of it",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--adopt-part-of-it.md",
+          "bytes": 797
+        },
+        {
+          "title": "Wire it into the chat route",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--wire-it-into-the-chat-route.md",
+          "bytes": 1073
+        },
+        {
+          "title": "Verify (required)",
+          "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7--verify-required.md",
+          "bytes": 1339
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-build-drizzle-adapter",
+      "title": "Build Drizzle Adapter",
+      "theme": "persistence-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048.md",
+      "sourcePath": "ai-persistence/build-drizzle-adapter",
+      "bytes": 1699,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--overview.md",
+          "bytes": 920
+        },
+        {
+          "title": "1. Read the app before writing anything",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--1-read-the-app-before-writing-anything.md",
+          "bytes": 2032
+        },
+        {
+          "title": "2. Add the tables to their schema file",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--2-add-the-tables-to-their-schema-file.md",
+          "bytes": 4080
+        },
+        {
+          "title": "3. Write `src/lib/chat-persistence.ts`",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--3-write-src-lib-chat-persistence-ts.md",
+          "bytes": 11575
+        },
+        {
+          "title": "4. Wire it into the chat route",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--4-wire-it-into-the-chat-route.md",
+          "bytes": 1081
+        },
+        {
+          "title": "5. Verify",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--5-verify.md",
+          "bytes": 1059
+        },
+        {
+          "title": "Only if you are publishing this as a package",
+          "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048--only-if-you-are-publishing-this-as-a-package.md",
+          "bytes": 1687
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-build-prisma-adapter",
+      "title": "Build Prisma Adapter",
+      "theme": "persistence-adapters",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c.md",
+      "sourcePath": "ai-persistence/build-prisma-adapter",
+      "bytes": 1640,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--overview.md",
+          "bytes": 923
+        },
+        {
+          "title": "1. Read the app before writing anything",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--1-read-the-app-before-writing-anything.md",
+          "bytes": 1982
+        },
+        {
+          "title": "2. Add the models to their schema",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--2-add-the-models-to-their-schema.md",
+          "bytes": 2913
+        },
+        {
+          "title": "3. Write `src/lib/chat-persistence.ts`",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--3-write-src-lib-chat-persistence-ts.md",
+          "bytes": 11500
+        },
+        {
+          "title": "4. Wire it into the chat route",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--4-wire-it-into-the-chat-route.md",
+          "bytes": 398
+        },
+        {
+          "title": "5. Verify",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--5-verify.md",
+          "bytes": 1050
+        },
+        {
+          "title": "Only if you are publishing this as a package",
+          "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c--only-if-you-are-publishing-this-as-a-package.md",
+          "bytes": 1391
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-build-cloudflare-adapter",
+      "title": "Build Cloudflare Adapter",
+      "theme": "persistence-cloudflare",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md",
+      "sourcePath": "ai-persistence/build-cloudflare-adapter",
+      "bytes": 2267,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--overview.md",
+          "bytes": 904
+        },
+        {
+          "title": "1. Read the app before writing anything",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--1-read-the-app-before-writing-anything.md",
+          "bytes": 1509
+        },
+        {
+          "title": "2. Two independent pieces",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--2-two-independent-pieces.md",
+          "bytes": 1035
+        },
+        {
+          "title": "3. Bindings are per-request",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--3-bindings-are-per-request.md",
+          "bytes": 1122
+        },
+        {
+          "title": "4. The stores",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--4-the-stores.md",
+          "bytes": 5574
+        },
+        {
+          "title": "5. The migration",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--5-the-migration.md",
+          "bytes": 1941
+        },
+        {
+          "title": "6. Wire it into the chat route",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--6-wire-it-into-the-chat-route.md",
+          "bytes": 1134
+        },
+        {
+          "title": "7. Durable Object lock store (only if needed)",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--7-durable-object-lock-store-only-if-needed.md",
+          "bytes": 1144
+        },
+        {
+          "title": "wrangler bindings",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--wrangler-bindings.md",
+          "bytes": 737
+        },
+        {
+          "title": "Verify",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--verify.md",
+          "bytes": 1494
+        },
+        {
+          "title": "Only if you are publishing this as a package",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a--only-if-you-are-publishing-this-as-a-package.md",
+          "bytes": 746
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-persistence-build-cloudflare-artifact-store",
+      "title": "Build Cloudflare Artifact Store",
+      "theme": "persistence-cloudflare",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-persistence",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md",
+      "sourcePath": "ai-persistence/build-cloudflare-artifact-store",
+      "bytes": 1809,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--overview.md",
+          "bytes": 1176
+        },
+        {
+          "title": "The two contracts",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--the-two-contracts.md",
+          "bytes": 4123
+        },
+        {
+          "title": "1. BlobStore backed by R2",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--1-blobstore-backed-by-r2.md",
+          "bytes": 10563
+        },
+        {
+          "title": "2. ArtifactStore backed by D1",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--2-artifactstore-backed-by-d1.md",
+          "bytes": 4659
+        },
+        {
+          "title": "3. Compose and wire",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--3-compose-and-wire.md",
+          "bytes": 2644
+        },
+        {
+          "title": "4. Serve the bytes back",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--4-serve-the-bytes-back.md",
+          "bytes": 3176
+        },
+        {
+          "title": "Other backends — the contract is tiny, here's how each maps",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--other-backends-the-contract-is-tiny-here-s-how-each-maps.md",
+          "bytes": 3869
+        },
+        {
+          "title": "Verify",
+          "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe--verify.md",
+          "bytes": 2558
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-memory",
+      "title": "Tanstack Ai Memory",
+      "theme": "memory",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-memory",
+      "version": "0.1.10",
+      "file": "references/guides/tanstack-ai-memory-7f80961d.md",
+      "sourcePath": "tanstack-ai-memory",
+      "bytes": 3962,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; When to reach for it; Wire it up; The contract; Scope security; Adapters; Failure modes; Devtools",
+          "file": "references/guides/tanstack-ai-memory-7f80961d.md",
+          "bytes": 3962
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-memory-hindsight",
+      "title": "Tanstack Ai Memory Hindsight",
+      "theme": "memory",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-memory",
+      "version": "0.1.10",
+      "file": "references/guides/tanstack-ai-memory-hindsight-9ec344e6.md",
+      "sourcePath": "tanstack-ai-memory-hindsight",
+      "bytes": 1598,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Options; Tools",
+          "file": "references/guides/tanstack-ai-memory-hindsight-9ec344e6.md",
+          "bytes": 1598
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-memory-honcho",
+      "title": "Tanstack Ai Memory Honcho",
+      "theme": "memory",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-memory",
+      "version": "0.1.10",
+      "file": "references/guides/tanstack-ai-memory-honcho-07008c21.md",
+      "sourcePath": "tanstack-ai-memory-honcho",
+      "bytes": 1535,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Options",
+          "file": "references/guides/tanstack-ai-memory-honcho-07008c21.md",
+          "bytes": 1535
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-memory-in-memory",
+      "title": "Tanstack Ai Memory In Memory",
+      "theme": "memory",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-memory",
+      "version": "0.1.10",
+      "file": "references/guides/tanstack-ai-memory-in-memory-4965b7c3.md",
+      "sourcePath": "tanstack-ai-memory-in-memory",
+      "bytes": 1579,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; When to use it; When NOT to use it; Setup; Options; Capacity",
+          "file": "references/guides/tanstack-ai-memory-in-memory-4965b7c3.md",
+          "bytes": 1579
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-memory-mem0",
+      "title": "Tanstack Ai Memory Mem0",
+      "theme": "memory",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-memory",
+      "version": "0.1.10",
+      "file": "references/guides/tanstack-ai-memory-mem0-e91f689b.md",
+      "sourcePath": "tanstack-ai-memory-mem0",
+      "bytes": 1427,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Options",
+          "file": "references/guides/tanstack-ai-memory-mem0-e91f689b.md",
+          "bytes": 1427
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-memory-redis",
+      "title": "Tanstack Ai Memory Redis",
+      "theme": "memory",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-memory",
+      "version": "0.1.10",
+      "file": "references/guides/tanstack-ai-memory-redis-d13f2626.md",
+      "sourcePath": "tanstack-ai-memory-redis",
+      "bytes": 2895,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Setup; Storage model; Ranking limits; Troubleshooting",
+          "file": "references/guides/tanstack-ai-memory-redis-d13f2626.md",
+          "bytes": 2895
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-mcp",
+      "title": "Ai Mcp",
+      "theme": "agent-runtimes",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-mcp",
+      "version": "0.3.9",
+      "file": "references/guides/tanstack-ai-mcp-e69fe118.md",
+      "sourcePath": "ai-mcp",
+      "bytes": 3235,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--overview.md",
+          "bytes": 364
+        },
+        {
+          "title": "When to use this package",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--when-to-use-this-package.md",
+          "bytes": 748
+        },
+        {
+          "title": "Install",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--install.md",
+          "bytes": 422
+        },
+        {
+          "title": "`createMCPClient` — single server",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md",
+          "bytes": 3124
+        },
+        {
+          "title": "Three type-safety modes",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--three-type-safety-modes.md",
+          "bytes": 2169
+        },
+        {
+          "title": "Lifecycle",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--lifecycle.md",
+          "bytes": 1694
+        },
+        {
+          "title": "`chat({ mcp })` — discovery + lifecycle in one prop",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--chat-mcp-discovery-lifecycle-in-one-prop.md",
+          "bytes": 3470
+        },
+        {
+          "title": "`createMCPClients` — multiple servers",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--createmcpclients-multiple-servers.md",
+          "bytes": 1343
+        },
+        {
+          "title": "Abort signal — cancelling in-flight MCP calls",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--abort-signal-cancelling-in-flight-mcp-calls.md",
+          "bytes": 778
+        },
+        {
+          "title": "Resources",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--resources.md",
+          "bytes": 1181
+        },
+        {
+          "title": "Prompts",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--prompts.md",
+          "bytes": 679
+        },
+        {
+          "title": "MCP Apps",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--mcp-apps.md",
+          "bytes": 6512
+        },
+        {
+          "title": "Codegen CLI",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--codegen-cli.md",
+          "bytes": 1844
+        },
+        {
+          "title": "Error classes",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--error-classes.md",
+          "bytes": 1395
+        },
+        {
+          "title": "Complete server-route example",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--complete-server-route-example.md",
+          "bytes": 1660
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--common-mistakes.md",
+          "bytes": 2911
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-mcp-e69fe118--cross-references.md",
+          "bytes": 470
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-skills",
+      "title": "Ai Skills",
+      "theme": "agent-runtimes",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-skills",
+      "version": "0.1.2",
+      "file": "references/guides/tanstack-ai-skills-f9e7226a.md",
+      "sourcePath": "ai-skills",
+      "bytes": 5016,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Two skill features, do not confuse them; Add skills to a chat; Sources; Resources; Skills that carry code; Write a custom source; Entry points; Docs",
+          "file": "references/guides/tanstack-ai-skills-f9e7226a.md",
+          "bytes": 5016
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-code-mode",
+      "title": "Ai Code Mode",
+      "theme": "code-execution",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-code-mode",
+      "version": "0.4.8",
+      "file": "references/guides/tanstack-ai-code-mode-e0b454df.md",
+      "sourcePath": "ai-code-mode",
+      "bytes": 1861,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--overview.md",
+          "bytes": 287
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--setup.md",
+          "bytes": 2106
+        },
+        {
+          "title": "Core Patterns: 1. Choosing an Isolate Driver",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-1-choosing-an-isolate-driver.md",
+          "bytes": 3087
+        },
+        {
+          "title": "Core Patterns: 2. Adding Persistent Snippets with codeModeWithSnippets()",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-2-adding-persistent-snippets-with-codemodewithsnippets.md",
+          "bytes": 2962
+        },
+        {
+          "title": "Core Patterns: 3. Client-Side Execution Progress Display",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-3-client-side-execution-progress-display.md",
+          "bytes": 4154
+        },
+        {
+          "title": "Core Patterns: 4. Lazy Tools",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-4-lazy-tools.md",
+          "bytes": 3754
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--common-mistakes.md",
+          "bytes": 3591
+        },
+        {
+          "title": "Cross-References",
+          "file": "references/guides/tanstack-ai-code-mode-e0b454df--cross-references.md",
+          "bytes": 514
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-ai-sandbox",
+      "title": "Ai Sandbox",
+      "theme": "code-execution",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/ai-sandbox",
+      "version": "0.5.6",
+      "file": "references/guides/tanstack-ai-sandbox-c1c16d85.md",
+      "sourcePath": "ai-sandbox",
+      "bytes": 4722,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--overview.md",
+          "bytes": 380
+        },
+        {
+          "title": "Setup — Claude Code in a Docker sandbox",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--setup-claude-code-in-a-docker-sandbox.md",
+          "bytes": 1091
+        },
+        {
+          "title": "Type-safe secrets",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--type-safe-secrets.md",
+          "bytes": 871
+        },
+        {
+          "title": "Declarative provisioning (skills, plugins, MCP, instructions)",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--declarative-provisioning-skills-plugins-mcp-instructions.md",
+          "bytes": 1779
+        },
+        {
+          "title": "Fast init",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--fast-init.md",
+          "bytes": 5912
+        },
+        {
+          "title": "Providers",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--providers.md",
+          "bytes": 1070
+        },
+        {
+          "title": "Policy",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--policy.md",
+          "bytes": 737
+        },
+        {
+          "title": "Lifecycle &amp; resume",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--lifecycle-amp-resume.md",
+          "bytes": 418
+        },
+        {
+          "title": "Instance durability (durable resume)",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--instance-durability-durable-resume.md",
+          "bytes": 1600
+        },
+        {
+          "title": "File-event hooks",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--file-event-hooks.md",
+          "bytes": 2879
+        },
+        {
+          "title": "Edge / serverless execution",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--edge-serverless-execution.md",
+          "bytes": 6251
+        },
+        {
+          "title": "Durable runs (the run journal)",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--durable-runs-the-run-journal.md",
+          "bytes": 6375
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety.md",
+          "bytes": 635
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: Durability is ONE opt-in, not two",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-durability-is-one-opt-in-not-two.md",
+          "bytes": 2026
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: Detach vs cancel — intent NEVER comes from the disconnect",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-detach-vs-cancel-intent-never-comes-from-the-disconnect.md",
+          "bytes": 2808
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: `sandboxRunDriver` — the supported way to drive a resumed run",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-sandboxrundriver-the-supported-way-to-drive-a-resumed-run.md",
+          "bytes": 4925
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: Single-writer safety: BOTH seams are fenced",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-single-writer-safety-both-seams-are-fenced.md",
+          "bytes": 2905
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: Replay from zero, and `JournalReplayDivergedError`",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-replay-from-zero-and-journalreplaydivergederror.md",
+          "bytes": 2523
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: A real `LockStore` is required",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-a-real-lockstore-is-required.md",
+          "bytes": 1631
+        },
+        {
+          "title": "Takeover: detached runs and single-writer safety: The reaper ships as a function, not a scheduler",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety-the-reaper-ships-as-a-function-not-a-scheduler.md",
+          "bytes": 4284
+        },
+        {
+          "title": "Events",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--events.md",
+          "bytes": 477
+        },
+        {
+          "title": "Critical rules",
+          "file": "references/guides/tanstack-ai-sandbox-c1c16d85--critical-rules.md",
+          "bytes": 2142
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

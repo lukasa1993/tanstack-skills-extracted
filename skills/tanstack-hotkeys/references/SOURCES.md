@@ -53,4 +53,4 @@
 | `hotkeys:docs/framework/lit/guides/sequences.md` | document | `framework-lit` | `@tanstack/hotkeys` | `0.8.0` |  |
 | `hotkeys:docs/framework/lit/quick-start.md` | document | `framework-lit` | `@tanstack/hotkeys` | `0.8.0` |  |
 
-Exact duplicate documents removed: 0. Exact duplicate H2 sections removed: 0. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

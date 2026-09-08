@@ -18,7 +18,7 @@ Provider-agnostic AI guidance for chat, tools, structured output, persistence, m
 
 1. Inspect installed TanStack packages and exact versions.
 2. Choose the task reference that matches the requested outcome.
-3. Read only the task topic that applies. Load another topic only across a real feature boundary.
+3. Topic references are indexes. Choose one guide or section for the task; follow its prerequisite links only when needed.
 4. Prefer installed package types and version-matched source guidance over memory.
 5. Preserve headless/core behavior when translating examples to a framework adapter.
 
@@ -36,13 +36,13 @@ Provider-agnostic AI guidance for chat, tools, structured output, persistence, m
 
 ## Framework routing
 
-- **Vanilla** — detect `@tanstack/ai`.
-- **React** — detect `@tanstack/ai-react`.
-- **Preact** — detect `@tanstack/ai-preact`.
-- **Vue** — detect `@tanstack/ai-vue`.
-- **Solid** — detect `@tanstack/ai-solid`.
-- **Svelte** — detect `@tanstack/ai-svelte`.
-- **Angular** — detect `@tanstack/ai-angular`.
+- **Vanilla** — detect `@tanstack/ai`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **React** — detect `@tanstack/ai-react`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Preact** — detect `@tanstack/ai-preact`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Vue** — detect `@tanstack/ai-vue`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Solid** — detect `@tanstack/ai-solid`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Svelte** — detect `@tanstack/ai-svelte`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Angular** — detect `@tanstack/ai-angular`. No dedicated adapter guide is bundled; consult the installed package documentation.
 
 The extracted upstream skills focus on core/server behavior. Confirm client adapter APIs from the installed package types.
 
