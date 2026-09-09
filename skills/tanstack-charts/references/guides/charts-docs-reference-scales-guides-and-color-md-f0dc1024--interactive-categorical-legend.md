@@ -1,6 +1,6 @@
 # Scales Guides And Color — Interactive categorical legend
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Interactive categorical legend
 

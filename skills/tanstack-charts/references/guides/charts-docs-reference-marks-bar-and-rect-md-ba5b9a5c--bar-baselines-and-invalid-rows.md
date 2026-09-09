@@ -1,6 +1,6 @@
 # Bar And Rect — Bar baselines and invalid rows
 
-[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Bar baselines and invalid rows
 

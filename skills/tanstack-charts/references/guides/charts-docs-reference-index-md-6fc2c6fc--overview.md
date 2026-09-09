@@ -1,6 +1,6 @@
 # Index — Overview
 
-[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 TanStack Charts has a small framework-neutral core and thin framework
 adapters. Most applications use `defineChart`, one or more marks, configured

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.0"
+  tanstack-library-version: "0.16.2"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.16.2"
   tanstack-source-skill: "prepare-chart-data"
   tanstack-sources: "[\"TanStack/charts:docs/guides/transforms-and-reactivity.md\",\"TanStack/charts:docs/reference/transforms.md\",\"TanStack/charts:docs/reference/marks/line-and-area.md\"]"
   tanstack-type: "core"

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-custom-extensions-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.0`.
+Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 [Topic index](../rendering-composition-reference.md) · [Source provenance](../SOURCES.md)
 

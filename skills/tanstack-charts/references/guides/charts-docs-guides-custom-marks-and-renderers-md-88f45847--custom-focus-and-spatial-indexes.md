@@ -1,6 +1,6 @@
 # Custom Marks And Renderers — Custom focus and spatial indexes
 
-[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Custom focus and spatial indexes
 

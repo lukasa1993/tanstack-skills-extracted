@@ -1,6 +1,6 @@
 # Index — Mark reference
 
-[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Mark reference
 

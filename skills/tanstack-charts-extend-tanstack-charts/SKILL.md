@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.0"
+  tanstack-library-version: "0.16.2"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.16.2"
   tanstack-requires: "[\"tanstack-charts-compose-marks-and-views\"]"
   tanstack-source-skill: "extend-tanstack-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/custom-marks-and-renderers.md\",\"TanStack/charts:docs/reference/custom-extensions.md\",\"TanStack/charts:packages/charts-core/src/mark.ts\",\"TanStack/charts:packages/charts-core/src/mark-with-scale-values.ts\"]"

@@ -1,6 +1,6 @@
 # Networks And Hierarchies — Start with a basic Sankey
 
-[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Start with a basic Sankey
 

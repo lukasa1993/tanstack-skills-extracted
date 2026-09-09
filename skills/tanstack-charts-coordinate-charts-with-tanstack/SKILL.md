@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.0"
+  tanstack-library-version: "0.16.2"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.16.2"
   tanstack-source-skill: "coordinate-charts-with-tanstack"
   tanstack-sources: "[\"TanStack/charts:docs/guides/interactions-and-selections.md\",\"TanStack/charts:docs/guides/transforms-and-reactivity.md\",\"TanStack/charts:docs/guides/dynamic-data-and-animation.md\",\"https://tanstack.com/table/latest/docs/guide/row-models\",\"https://tanstack.com/db/latest/docs/guides/live-queries\",\"https://tanstack.com/db/latest/docs/guides/mutations\",\"https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults\"]"
   tanstack-type: "composition"

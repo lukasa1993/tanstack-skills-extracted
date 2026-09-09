@@ -1,6 +1,6 @@
 # Types — Focus and tooltip types
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Focus and tooltip types
 
@@ -75,8 +75,8 @@
 | `ChartDefinitionOptions`              | Focus, selection, controls, cursor, tooltip, and host interaction policy |
 | `ResponsiveChartConfig`               | Responsive builder plus definition-owned interaction policy              |
 | `ChartTooltipContent`                 | Safe title and row model for a built-in tooltip                          |
-| `ChartTooltipRow`                     | Label, formatted value, and optional color swatch                        |
-| `ChartTooltipContentContext`          | Pinned state, axis labels, and value formatters for tooltip callbacks    |
+| `ChartTooltipRow`                     | Label, formatted value, optional color swatch, and active state          |
+| `ChartTooltipContentContext`          | Primary point, pinned state, axis labels, and value formatters           |
 | `ChartTooltipBodyContext`             | Focused points, content, pinned state, and dismissal                     |
 | `ChartTooltipBodyTarget`              | Renderer-adapter body mount element plus body context                    |
 | `TooltipBounds`                       | Host-local tooltip placement boundary                                    |

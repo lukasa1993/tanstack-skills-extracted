@@ -1,6 +1,6 @@
 # Bar And Rect — Overview
 
-[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 Bar marks encode a numeric interval against a categorical or positional
 channel. Rect marks encode independent x and y intervals and are the general

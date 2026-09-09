@@ -1,6 +1,6 @@
 # Scales And D3 — Categorical scales and bandwidth
 
-[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Categorical scales and bandwidth
 

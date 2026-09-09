@@ -1,6 +1,6 @@
 # Custom Extensions — Custom focus and gestures
 
-[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Custom focus and gestures
 

@@ -1,6 +1,6 @@
 # Scales Guides And Color — Overview
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 Pass a compatible scale factory when its domain should come from mark channels.
 Pass a scale instance when the domain is fixed application state. TanStack

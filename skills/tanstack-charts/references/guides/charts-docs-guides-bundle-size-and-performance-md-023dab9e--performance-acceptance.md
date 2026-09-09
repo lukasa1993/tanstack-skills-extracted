@@ -1,6 +1,6 @@
 # Bundle Size And Performance — Performance acceptance
 
-[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Performance acceptance
 

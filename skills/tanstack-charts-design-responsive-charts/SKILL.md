@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.0"
+  tanstack-library-version: "0.16.2"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.16.2"
   tanstack-source-skill: "design-responsive-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/responsive-charts.md\",\"TanStack/charts:docs/reference/chart-definitions.md\",\"TanStack/charts:docs/reference/marks/waffle.md\",\"TanStack/charts:docs/reference/marks/treemap.md\"]"
   tanstack-type: "core"

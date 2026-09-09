@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-framework-lit-adapter-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.0`.
+Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 

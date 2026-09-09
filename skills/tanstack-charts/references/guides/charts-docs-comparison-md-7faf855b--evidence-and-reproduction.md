@@ -1,14 +1,14 @@
 # Comparison — Evidence and reproduction
 
-[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Evidence and reproduction
 
-- [Standard comparison protocol](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/README.md)
-- [Current tracked bundle baseline](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/bundle-baseline.json)
-- [Pinned release-source bundle baseline](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/bundle-baseline.json)
-- [Stress protocol](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/comparison/stress/README.md)
-- [Catalog conformance protocol](https://github.com/TanStack/charts/blob/258ed39382b09843f98e6f48a2e9d4d0bd3f1d41/benchmarks/conformance/README.md)
+- [Standard comparison protocol](https://github.com/TanStack/charts/blob/7747d71585562481dc2284b734b134a90aae589b/benchmarks/comparison/README.md)
+- [Current tracked bundle baseline](https://github.com/TanStack/charts/blob/7747d71585562481dc2284b734b134a90aae589b/benchmarks/comparison/bundle-baseline.json)
+- [Pinned release-source bundle baseline](https://github.com/TanStack/charts/blob/7747d71585562481dc2284b734b134a90aae589b/benchmarks/comparison/bundle-baseline.json)
+- [Stress protocol](https://github.com/TanStack/charts/blob/7747d71585562481dc2284b734b134a90aae589b/benchmarks/comparison/stress/README.md)
+- [Catalog conformance protocol](https://github.com/TanStack/charts/blob/7747d71585562481dc2284b734b134a90aae589b/benchmarks/conformance/README.md)
 
 ```sh
 pnpm benchmark:size

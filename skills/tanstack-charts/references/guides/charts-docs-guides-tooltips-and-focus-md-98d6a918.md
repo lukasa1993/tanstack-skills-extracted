@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-tooltips-and-focus-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.0`.
+Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 [Topic index](../interaction-accessibility.md) · [Source provenance](../SOURCES.md)
 
@@ -23,7 +23,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Rich and nested tooltips](./charts-docs-guides-tooltips-and-focus-md-98d6a918--rich-and-nested-tooltips.md) — 5 KiB
 - [Keyboard behavior](./charts-docs-guides-tooltips-and-focus-md-98d6a918--keyboard-behavior.md) — 1 KiB
 - [Dense data](./charts-docs-guides-tooltips-and-focus-md-98d6a918--dense-data.md) — 1 KiB
-- [Ownership checklist](./charts-docs-guides-tooltips-and-focus-md-98d6a918--ownership-checklist.md) — 2 KiB
+- [Ownership checklist](./charts-docs-guides-tooltips-and-focus-md-98d6a918--ownership-checklist.md) — 3 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="default-nearest-point"></a>
@@ -39,3 +39,4 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="keyboard-behavior"></a>
 <a id="dense-data"></a>
 <a id="ownership-checklist"></a>
+<a id="active-series"></a>

@@ -1,6 +1,6 @@
 # Layout Axes And Coordinates — Non-cartesian coordinates
 
-[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Non-cartesian coordinates
 

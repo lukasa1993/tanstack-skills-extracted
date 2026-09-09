@@ -1,6 +1,6 @@
 # Tooltips And Focus — Escaping clipped containers
 
-[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## Escaping clipped containers
 

@@ -1,6 +1,6 @@
 # Polar — `radialDot`
 
-[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@0.16.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
 
 ## `radialDot`
 

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.0"
+  tanstack-library-version: "0.16.2"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.16.2"
   tanstack-source-skill: "ship-accessible-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/accessibility.md\",\"TanStack/charts:docs/guides/ssr-and-hydration.md\",\"TanStack/charts:docs/guides/exporting.md\",\"TanStack/charts:docs/framework/*/adapter.md\",\"TanStack/charts:packages/react-native-charts/README.md\"]"
   tanstack-type: "lifecycle"

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-charts-build-chart-interactions"></a>
 
-Published skill · `@tanstack/charts@0.16.0`.
+Published skill · `@tanstack/charts@0.16.2`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
