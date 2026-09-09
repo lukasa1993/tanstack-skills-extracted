@@ -91,6 +91,7 @@ export async function refresh({ offline = false, check = false, lockFile = join(
     ['validate', process.execPath, [join(repository, 'scripts/validate-catalog.mjs')]],
     ['guidance', process.execPath, [join(repository, 'scripts/validate-guidance.mjs')]],
     ['acceptance', process.execPath, [join(repository, 'acceptance/run.mjs')]],
+    ['publishing', process.execPath, ['--test', join(repository, 'acceptance/publish.test.mjs')]],
   ]
   try {
     for (const [name, command, args] of steps) {

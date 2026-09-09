@@ -6,10 +6,19 @@ Install the locked dependencies with Node 24, then run:
 npm ci --prefix acceptance --ignore-scripts --no-audit --no-fund
 node scripts/validate-guidance.mjs
 npm test --prefix acceptance
+node --test acceptance/publish.test.mjs
 ```
 
 `TANSTACK_BUILD_ROOT` can select a candidate catalog. Refresh sets it automatically
 and requires both navigation and behavioral checks before promotion.
+
+The publishing test runs the locked skills CLI through the production publishing
+script against local lightweight and annotated release tags. It installs all 18
+products, compares every copied file with the catalog, and checks the remote-source
+telemetry payload without sending it to skills.sh. The fixture advances main after
+tagging to catch accidental installs from a moving branch. Missing tags, wrong
+commits, and different installed content must fail without saving a success marker.
+CI runs it on committed output; refresh runs it on the candidate before promotion.
 
 The runner copies the entire Query and Form product folders into temporary,
 independent installations, compiles the examples reached through their task

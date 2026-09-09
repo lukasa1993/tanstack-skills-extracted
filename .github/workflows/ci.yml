@@ -34,5 +34,7 @@ jobs:
         run: npm ci --prefix acceptance --ignore-scripts --no-audit --no-fund
       - name: Exercise installed skill examples
         run: npm test --prefix acceptance
+      - name: Exercise publishing with the pinned skills installer
+        run: node --test acceptance/publish.test.mjs
       - name: Lint GitHub Actions workflows
         run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12 -color

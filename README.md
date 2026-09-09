@@ -103,20 +103,27 @@ no refresh is running; removing the cache makes the next online run download aga
 Three workflows have separate responsibilities:
 
 - **Validate refresh pipeline** runs pipeline tests, catalog and navigation checks,
-  installed-example type and behavior checks, and actionlint on pushes and pull
-  requests. It installs locked test dependencies and uses committed guidance.
+  installed-example type and behavior checks, an actual publishing install, and
+  actionlint on pushes and pull requests. It installs locked dependencies and uses
+  committed guidance. The publishing check uses the same pinned skills CLI as
+  production against local release tags, without sending test install telemetry.
 - **Refresh extracted skills** checks upstream sources daily on a hosted Ubuntu
-  runner with Node 24, validates a candidate, and commits changed generated files
-  plus the source lock. A concurrent edit to main rejects the push; rerunning
-  rebuilds against the new main.
+  runner with Node 24, validates a candidate (including the publishing install),
+  and commits changed generated files plus the source lock. A concurrent edit to
+  main rejects the push; rerunning rebuilds against the new main.
 - **Publish skills** runs after a successful refresh, or through manual dispatch.
-  It selects an immutable catalog commit and independently reconciles its GitHub
-  release and reports product installs to skills.sh. Either job can be retried
-  without repeating acquisition. Existing releases must point to the expected
-  commit; API failures are not treated as missing releases. Indexing installs
-  from the selected commit instead of following a moving branch. A cached success
-  marker skips repeat index reports for that commit; cache eviction can cause a
-  repeat report, since the installer has no idempotency API.
+  It selects an immutable catalog commit, reconciles its GitHub release, then
+  installs through the verified release tag to report product installs to skills.sh.
+  The pinned CLI clones branches and tags; raw commit hashes are not supported.
+  Publishing uses current infrastructure code even when the catalog is unchanged.
+  Existing releases must point to the expected commit; API failures are not treated
+  as missing releases. The installer must copy all 18 products and every file must
+  match the selected catalog before a cached success marker is saved. Either job
+  can be retried without repeating acquisition. The marker skips repeat installs
+  for that commit; cache eviction can cause a repeat report. The CLI's telemetry
+  is best-effort and does not confirm skills.sh indexing or provide idempotency.
+  After a publishing code fix, manually dispatch **Publish skills** to use the new
+  workflow; rerunning an old failed run retains its old workflow definition.
 
 Product ownership is resolved from skill, package, documentation, and library
 metadata. Newly published topics without a curated route are preserved under
