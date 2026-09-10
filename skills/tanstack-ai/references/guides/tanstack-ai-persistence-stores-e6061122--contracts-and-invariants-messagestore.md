@@ -1,14 +1,16 @@
 # Stores — Contracts and invariants: `MessageStore`
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## Contracts and invariants: `MessageStore`
 
 
 ```ts
+import type { ModelMessage } from '@tanstack/ai'
+
 interface MessageStore {
-  loadThread(threadId: string): Promise<Array<ModelMessage>>
-  saveThread(threadId: string, messages: Array<ModelMessage>): Promise<void>
+  loadThread: (threadId: string) => Promise<Array<ModelMessage>>
+  saveThread: (threadId: string, messages: Array<ModelMessage>) => Promise<void>
 }
 ```
 

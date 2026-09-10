@@ -1,6 +1,6 @@
 # Interactions And Selections — Zoom and pan
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Zoom and pan
 
@@ -41,9 +41,11 @@ const definition = defineChart({
 `extent` is the complete allowed x domain. `scaleExtent` is `[1, maximum]` and
 defaults to `[1, Infinity]`. The behavior owns final-scale inversion,
 pointer-anchored wheel zoom, drag and horizontal-wheel pan, touch input,
-keyboard zoom and pan, clamping, cancellation, and teardown. It captures the
-wheel only after its plot surface receives focus, so normal page scrolling
-remains available beforehand.
+keyboard zoom and pan, clamping, cancellation, and teardown. By default, it
+captures the wheel only after its plot surface receives focus. Set
+`wheelActivation: 'modifier'` to capture Control+wheel or Command+wheel without
+prior focus while leaving every unmodified wheel to the page. Set it to
+`always` only when every wheel over the plot should be chart-owned.
 
 Every proposal is a complete number or Date window. `ZoomXChange` distinguishes
 gesture `preview`, `commit`, and `cancel` events, includes the gesture origin,

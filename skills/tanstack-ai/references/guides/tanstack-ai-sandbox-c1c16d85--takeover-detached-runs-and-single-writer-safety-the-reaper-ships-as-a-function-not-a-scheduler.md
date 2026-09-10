@@ -1,6 +1,6 @@
 # Ai Sandbox — Takeover: detached runs and single-writer safety: The reaper ships as a function, not a scheduler
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## Takeover: detached runs and single-writer safety: The reaper ships as a function, not a scheduler
 
@@ -31,6 +31,17 @@ import {
 } from '@tanstack/ai-sandbox'
 import type { RunRecord } from '@tanstack/ai'
 import type { ReapResult, RunExitProbe } from '@tanstack/ai-sandbox'
+// Your distributed LockStore, the same one `withSandbox` gets.
+import { locks } from './locks'
+// Your persistence — the SAME RunStore the chat routes use.
+import { runs } from './persistence'
+// Your `defineSandbox(...)` result and the `SandboxInstanceStore` you passed to
+// `withSandbox(sandbox, { instances })`.
+import { instances, sandbox } from './sandbox'
+// The per-run log factory, resolving the SAME log the producing route wrote.
+import { durabilityFor } from './durability'
+// The same `drive` the attach route passes to `sandboxRunDriver`.
+import { driveRun } from './drive-run'
 
 async function hasFinished(record: RunRecord): Promise<RunExitProbe> {
   if (record.sandboxKey === undefined) return { state: 'unknown' }

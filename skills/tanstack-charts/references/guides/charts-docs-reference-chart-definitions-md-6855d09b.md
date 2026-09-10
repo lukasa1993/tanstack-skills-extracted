@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-chart-definitions-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../specifications.md) · [Source provenance](../SOURCES.md)
 
@@ -105,6 +105,13 @@ does not return or own them.
 `spatialIndex`, `svgAnimation`, `pointer`, `keyboard`, and `tooltip`. These options
 belong to both static and responsive definitions. Hosts and framework adapters
 do not override them.
+
+`focusRing` accepts `true`, `false`, or a `ChartFocusRingOptions` object with
+`radius`, `strokeWidth`, `fill`, and `stroke`. Omitted fields keep the built-in
+defaults, including the focused point's resolved color for `stroke`. The same
+value on `theme.focusRing` provides a default, while an explicitly supplied
+definition-level value takes precedence. See
+[Focus and interaction](./charts-docs-reference-focus-and-interaction-md-949b11fe.md#source-charts-docs-reference-focus-and-interaction-md).
 
 Each `ChartControl` resolves after final scales and plot bounds exist. It can
 provide renderer-neutral fallback nodes and an optional host control. Control

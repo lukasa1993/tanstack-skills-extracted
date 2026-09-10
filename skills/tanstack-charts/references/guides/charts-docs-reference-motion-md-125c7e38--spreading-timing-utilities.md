@@ -1,6 +1,6 @@
 # Motion — Spreading timing utilities
 
-[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Spreading timing utilities
 

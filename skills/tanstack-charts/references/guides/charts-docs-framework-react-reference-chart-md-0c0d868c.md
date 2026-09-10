@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-framework-react-reference-chart-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

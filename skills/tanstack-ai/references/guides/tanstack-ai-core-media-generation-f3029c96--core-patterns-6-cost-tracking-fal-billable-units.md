@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 6. Cost tracking (fal billable units)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 6. Cost tracking (fal billable units)
 
@@ -24,6 +24,7 @@ const result = await generateImage({
 
 // usage.billed.quantity is the priced quantity. Multiply by the endpoint unit
 // price (GET https://api.fal.ai/v1/models/pricing?endpoint_id=…) for exact cost.
+const unitPrice = 0.025 // USD per unit, from the pricing endpoint
 if (result.usage?.billed) {
   const cost = result.usage.billed.quantity * unitPrice
 }

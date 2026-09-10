@@ -1,6 +1,6 @@
 # Type Safety — Code-Split Files: `getRouteApi`
 
-[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.28`.
+[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.29`.
 
 ## Code-Split Files: `getRouteApi`
 

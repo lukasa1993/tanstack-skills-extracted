@@ -1,6 +1,6 @@
 # Adapter Configuration — Behind a proxy or gateway
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Behind a proxy or gateway
 
@@ -12,11 +12,15 @@ ElevenLabs `baseUrl`/`headers`). The vendor names still work; when both are
 set, `baseURL` and `defaultHeaders` win.
 
 ```typescript
+import { createGeminiChat } from '@tanstack/ai-gemini'
+
 const gateway = {
   baseURL: 'https://gateway.example.com/google-ai-studio',
   defaultHeaders: {
     'cf-aig-authorization': `Bearer ${process.env.GATEWAY_TOKEN}`,
   },
 }
-createGeminiChat('gemini-3.8-flash', apiKey, { ...gateway })
+createGeminiChat('gemini-3.8-flash', process.env.GOOGLE_API_KEY!, {
+  ...gateway,
+})
 ```

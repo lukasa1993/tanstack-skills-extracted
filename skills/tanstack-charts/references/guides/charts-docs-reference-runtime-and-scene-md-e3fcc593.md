@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-runtime-and-scene-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../runtime-scales-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -117,7 +117,8 @@ The exported theme contains:
 - six CSS-variable-backed palette entries
 
 Definitions merge partial overrides into this value. A supplied palette
-replaces the default palette. See [Chart spec](./charts-docs-reference-chart-spec-md-b8fe14b4.md#source-charts-docs-reference-chart-spec-md).
+replaces the default palette. An omitted focus ring defaults to enabled. See
+[Chart spec](./charts-docs-reference-chart-spec-md-b8fe14b4.md#source-charts-docs-reference-chart-spec-md).
 
 ## `findNearestPoint`
 
@@ -198,7 +199,7 @@ interface ChartScene<
   points: readonly ChartPoint<TDatum, TXValue, TYValue>[]
   scales: Readonly<Record<string, ResolvedScale>>
   colors: ResolvedColorScale
-  gradients: readonly ChartLinearGradient[]
+  gradients: readonly ChartGradient[]
   theme: ChartTheme
   focusGuides?: readonly SceneFocusGuide[]
 }
@@ -213,7 +214,7 @@ interface ChartScene<
 | `points`          | Complete interaction set, including viewport-clipped points      |
 | `scales`          | Resolved positional scales, normally under `x` and `y`           |
 | `colors`          | Resolved chart color scale                                       |
-| `gradients`       | Declared linear-gradient resources                               |
+| `gradients`       | Declared linear and radial gradient resources                    |
 | `theme`           | Fully resolved theme                                             |
 | `focusGuides`     | Optional data-less guide descriptors resolved from current focus |
 
@@ -239,7 +240,7 @@ a `SceneInteraction`; groups and labels cannot.
 | `polyline` | point pairs and optional precomputed path data                      |
 | `area`     | closed points, structured polygons and holes, or optional path data |
 | `dot`      | center and radius                                                   |
-| `rect`     | origin, dimensions, and optional radius                             |
+| `rect`     | origin, dimensions, and optional uniform or per-corner radii        |
 | `label`    | origin, text, anchor, baseline, rotation, size, and weight          |
 
 `SceneStyle` supports fill, fill opacity, stroke, stroke opacity, stroke width,
@@ -256,7 +257,13 @@ overrides. Its optional `insetAxis` is `x`, `y`, or `xy`; vertical and
 horizontal bars use only their categorical axis, while ordinary rectangles use
 both axes. `SceneRect.maxThickness` retains a bar's categorical size ceiling so
 an inline-state inset cannot widen its resolved geometry past that ceiling.
-Renderers consume the already-resolved rectangle geometry.
+Renderers consume the already-resolved rectangle geometry. `SceneRect.radius`
+is the compatible uniform radius. `SceneRect.cornerRadii` stores physical
+top-left, top-right, bottom-right, and bottom-left radii. SVG and React Native
+render selective corners as a path, while Canvas paints the same normalized
+geometry directly. Custom renderers can import `resolveRectCornerRadii` and
+`rectCornerRadiiPath` from `@tanstack/charts/renderer/rect` instead of
+duplicating that geometry policy.
 
 ```ts
 type SceneInteraction =

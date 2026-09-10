@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-marks-line-and-area-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../marks-cartesian-statistical.md) · [Source provenance](../SOURCES.md)
 
@@ -11,8 +11,8 @@ Release-matched documentation · `@tanstack/charts@0.16.2`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--overview.md) — 1 KiB
-- [`lineY`](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--liney.md) — 3 KiB
-- [`lineX`](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--linex.md) — 1 KiB
+- [`lineY`](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--liney.md) — 4 KiB
+- [`lineX`](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--linex.md) — 2 KiB
 - [`areaY`](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--areay.md) — 4 KiB
 - [`areaX`](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--areax.md) — 4 KiB
 - [Curves](./charts-docs-reference-marks-line-and-area-md-6c72b4c2--curves.md) — 2 KiB

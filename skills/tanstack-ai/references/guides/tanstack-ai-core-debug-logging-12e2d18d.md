@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-debug-logging"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -22,8 +22,10 @@ printed, or pipe logs into a custom logger (pino, winston, etc.). The same
 import { chat } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 const stream = chat({
-  adapter: openaiText('gpt-5.2'),
+  adapter: openaiText('gpt-5.5'),
   messages,
   debug: true, // all categories on, prints to console
 })
@@ -41,8 +43,13 @@ Each log line is prefixed with an emoji and `[tanstack-ai:<category>]`:
 ## Turn it off
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 chat({
-  adapter: openaiText('gpt-5.2'),
+  adapter: openaiText('gpt-5.5'),
   messages,
   debug: false, // silence everything, including errors
 })
@@ -55,6 +62,9 @@ Omitting `debug` is **not** the same as `debug: false`. When omitted, the
 ## `DebugOption` — the accepted shapes
 
 ```typescript
+import type { Logger } from '@tanstack/ai'
+
+// As exported by '@tanstack/ai'
 type DebugOption = boolean | DebugConfig
 
 interface DebugConfig {
@@ -87,8 +97,13 @@ Pass a `DebugConfig` object. Unspecified categories default to `true`, so it's
 easiest to toggle by setting specific flags to `false`:
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 chat({
-  adapter: openaiText('gpt-5.2'),
+  adapter: openaiText('gpt-5.5'),
   messages,
   debug: { middleware: false }, // everything except middleware
 })
@@ -97,8 +112,13 @@ chat({
 To print only a specific set, set the rest to `false` explicitly:
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 chat({
-  adapter: openaiText('gpt-5.2'),
+  adapter: openaiText('gpt-5.5'),
   messages,
   debug: {
     provider: true,
@@ -116,7 +136,8 @@ chat({
 ## Pipe into your own logger
 
 ```typescript
-import type { Logger } from '@tanstack/ai'
+import { chat, type Logger } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
 import pino from 'pino'
 
 const pinoLogger = pino()
@@ -127,8 +148,10 @@ const logger: Logger = {
   error: (msg, meta) => pinoLogger.error(meta, msg),
 }
 
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 chat({
-  adapter: openaiText('gpt-5.2'),
+  adapter: openaiText('gpt-5.5'),
   messages,
   debug: { logger }, // all categories on, piped to pino
 })
@@ -162,11 +185,48 @@ concepts don't exist in their pipelines.
 Same `debug` option everywhere:
 
 ```typescript
-summarize({ adapter, text, debug: true })
-generateImage({ adapter, prompt: 'a cat', debug: { logger } })
-generateSpeech({ adapter, text, debug: { request: true } })
-generateTranscription({ adapter, audio, debug: false })
-generateVideo({ adapter, prompt: 'a wave', debug: { output: true } })
+import {
+  summarize,
+  generateImage,
+  generateSpeech,
+  generateTranscription,
+  generateVideo,
+} from '@tanstack/ai'
+import {
+  openaiSummarize,
+  openaiImage,
+  openaiSpeech,
+  openaiTranscription,
+  openaiVideo,
+} from '@tanstack/ai-openai'
+import { logger } from './logger'
+import { audio } from './recording'
+
+summarize({
+  adapter: openaiSummarize('gpt-5.5'),
+  text: 'Long article…',
+  debug: true,
+})
+generateImage({
+  adapter: openaiImage('gpt-image-2'),
+  prompt: 'a cat',
+  debug: { logger },
+})
+generateSpeech({
+  adapter: openaiSpeech('tts-1-hd'),
+  text: 'Hello',
+  debug: { request: true },
+})
+generateTranscription({
+  adapter: openaiTranscription('gpt-4o-transcribe'),
+  audio,
+  debug: false,
+})
+generateVideo({
+  adapter: openaiVideo('sora-2'),
+  prompt: 'a wave',
+  debug: { output: true },
+})
 ```
 
 Realtime session adapters in provider packages (e.g. `openaiRealtime`,
@@ -179,6 +239,12 @@ categories don't apply.
 ### a. HIGH: Treating omitted `debug` as silent
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+
+const adapter = openaiText('gpt-5.5')
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 // WRONG — expecting this to be completely silent
 chat({ adapter, messages })
 // Errors still print via [tanstack-ai:errors] ... on failure.
@@ -195,6 +261,12 @@ Source: docs/advanced/debug-logging.md
 ### b. MEDIUM: Reaching for middleware when `debug` would do
 
 ```typescript
+import { chat, type ChatMiddleware } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+
+const adapter = openaiText('gpt-5.5')
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 // WRONG — writing logging middleware to see chunks flow
 const chunkLogger: ChatMiddleware = {
   name: 'chunk-logger',
@@ -226,22 +298,32 @@ prefer implementations that don't throw — silenced exceptions are harder to
 debug than loud ones.
 
 ```typescript
+import type { Logger } from '@tanstack/ai'
+
 // WRONG — a logger that can throw on serialization
 const fragile: Logger = {
   debug: (msg, meta) => console.debug(msg, JSON.stringify(meta)), // cyclic meta → throws
-  /* ... */
+  info: (msg, meta) => console.info(msg, JSON.stringify(meta)),
+  warn: (msg, meta) => console.warn(msg, JSON.stringify(meta)),
+  error: (msg, meta) => console.error(msg, JSON.stringify(meta)),
 }
 
 // CORRECT — guard serialization in the logger itself
-const safe: Logger = {
-  debug: (msg, meta) => {
+const guarded =
+  (log: (...args: Array<unknown>) => void): Logger['debug'] =>
+  (msg, meta) => {
     try {
-      console.debug(msg, meta)
+      log(msg, JSON.stringify(meta))
     } catch {
-      console.debug(msg)
+      log(msg) // fall back to the bare message rather than throw
     }
-  },
-  /* ... */
+  }
+
+const safe: Logger = {
+  debug: guarded(console.debug),
+  info: guarded(console.info),
+  warn: guarded(console.warn),
+  error: guarded(console.error),
 }
 ```
 

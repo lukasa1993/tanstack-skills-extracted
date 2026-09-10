@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.2"
+  tanstack-library-version: "0.18.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.2"
+  tanstack-package-version: "0.18.0"
   tanstack-source-skill: "update-and-animate-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/dynamic-data-and-animation.md\",\"TanStack/charts:docs/reference/motion.md\",\"TanStack/charts:docs/reference/chart-definitions.md\"]"
   tanstack-type: "core"

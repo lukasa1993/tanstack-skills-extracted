@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 1. Streaming Chat with SSE
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 1. Streaming Chat with SSE
 
@@ -13,18 +13,23 @@ Server returns a streaming SSE Response; client parses it automatically.
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { anthropicText } from '@tanstack/ai-anthropic'
 
-const stream = chat({
-  adapter: anthropicText('claude-sonnet-4-5'),
-  messages,
-  modelOptions: {
-    temperature: 0.7,
-    max_tokens: 2000, // Anthropic-native key
-  },
-  systemPrompts: ['You are a helpful assistant.'],
-  abortController,
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+  const abortController = new AbortController()
 
-return toServerSentEventsResponse(stream, { abortController })
+  const stream = chat({
+    adapter: anthropicText('claude-opus-5'),
+    messages,
+    modelOptions: {
+      temperature: 0.7,
+      max_tokens: 2000, // Anthropic-native key
+    },
+    systemPrompts: ['You are a helpful assistant.'],
+    abortController,
+  })
+
+  return toServerSentEventsResponse(stream, { abortController })
+}
 ```
 
 To make the SSE response resumable (reconnect after a drop/refresh without
@@ -44,7 +49,7 @@ import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { messages, sendMessage, isLoading, error, stop, status } = useChat({
   connection: fetchServerSentEvents('/api/chat'),
-  body: { provider: 'anthropic', model: 'claude-sonnet-4-5' },
+  body: { provider: 'anthropic', model: 'claude-opus-5' },
   onFinish: (message) => {
     console.log('Response complete:', message.id)
   },

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.2"
+  tanstack-library-version: "0.18.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.2"
+  tanstack-package-version: "0.18.0"
   tanstack-source-skill: "configure-scales-guides-color"
   tanstack-sources: "[\"TanStack/charts:docs/concepts/scales-and-d3.md\",\"TanStack/charts:docs/reference/scales-guides-and-color.md\",\"TanStack/charts:docs/guides/legends-and-color.md\",\"TanStack/charts:docs/guides/responsive-charts.md\"]"
   tanstack-type: "core"

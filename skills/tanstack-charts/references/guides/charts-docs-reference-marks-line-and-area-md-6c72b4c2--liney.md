@@ -1,6 +1,6 @@
 # Line And Area — `lineY`
 
-[Guide and prerequisites](./charts-docs-reference-marks-line-and-area-md-6c72b4c2.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-marks-line-and-area-md-6c72b4c2.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## `lineY`
 
@@ -38,6 +38,8 @@ function lineY<TDatum>(
 | `strokeOpacity`   | `number`                        | SVG default                    | Stroke opacity                                 |
 | `strokeWidth`     | `number`                        | `2.25`                         | Stroke width                                   |
 | `strokeDasharray` | `string`                        | None                           | SVG dash array                                 |
+| `lineCap`         | `SceneStyle["lineCap"]`         | `"round"`                      | Stroke endpoint shape                          |
+| `lineJoin`        | `SceneStyle["lineJoin"]`        | `"round"`                      | Stroke corner shape                            |
 | `points`          | `boolean`                       | `false`                        | Draws a radius-`2.5` dot at each valid point   |
 | `curve`           | `ChartCurve`                    | Straight segments              | Optional path generator                        |
 | `states`          | `readonly ChartMarkState[]`     | None                           | Focus-driven presentation overrides            |

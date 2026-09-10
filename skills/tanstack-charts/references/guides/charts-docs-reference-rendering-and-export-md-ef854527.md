@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-rendering-and-export-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../rendering-composition-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -15,7 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [React Native adapter](./charts-docs-reference-rendering-and-export-md-ef854527--react-native-adapter.md) — 2 KiB
 - [`renderChartSvg`](./charts-docs-reference-rendering-and-export-md-ef854527--renderchartsvg.md) — 2 KiB
 - [Canvas renderer](./charts-docs-reference-rendering-and-export-md-ef854527--canvas-renderer.md) — 6 KiB
-- [SVG resources](./charts-docs-reference-rendering-and-export-md-ef854527--svg-resources.md) — 1 KiB
+- [SVG resources](./charts-docs-reference-rendering-and-export-md-ef854527--svg-resources.md) — 2 KiB
 - [`reconcileChartSvg`](./charts-docs-reference-rendering-and-export-md-ef854527--reconcilechartsvg.md) — 2 KiB
 - [Animation options](./charts-docs-reference-rendering-and-export-md-ef854527--animation-options.md) — 2 KiB
 - [SVG serialization](./charts-docs-reference-rendering-and-export-md-ef854527--svg-serialization.md) — 2 KiB
@@ -35,3 +35,4 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="browser-image-export"></a>
 <a id="mark-level-renderers"></a>
 <a id="custom-renderers"></a>
+<a id="rectangle-geometry-helpers"></a>

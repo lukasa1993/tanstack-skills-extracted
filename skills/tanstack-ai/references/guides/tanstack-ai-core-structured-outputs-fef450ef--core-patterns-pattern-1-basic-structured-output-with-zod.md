@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 1: Basic structured output with Zod
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: Pattern 1: Basic structured output with Zod
 

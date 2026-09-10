@@ -1,6 +1,6 @@
 # Scales Guides And Color — Named scales and multiple axes
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Named scales and multiple axes
 
@@ -48,3 +48,9 @@ Every non-null scale renders an axis by default. Set `axis: false` when a
 mapping should not draw another axis. X scales can use the top or bottom side,
 and y scales can use the left or right side. Axes on the same side stack
 outward and contribute their measured size to the automatic margin.
+
+Axis sides stay physical in a right-to-left container, so `side: 'right'`
+still puts the axis on the right. Automatic tick anchors account for the
+container's inline direction and keep labels outside the plot. An explicitly
+authored `start` or `end` anchor remains logical. Text measurement, SVG,
+Canvas, native rendering, and standalone SVG export preserve that direction.

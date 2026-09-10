@@ -1,6 +1,6 @@
 # Ai Sandbox — Durable runs (the run journal)
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## Durable runs (the run journal)
 
@@ -13,12 +13,17 @@ file from byte 0 at any point, including after the original host has died.
 
 ```typescript
 import { spawnNdjson } from '@tanstack/ai-sandbox'
+import type { SandboxHandle } from '@tanstack/ai-sandbox'
 
-for await (const event of spawnNdjson(sandbox, agentCommand, {
-  cwd,
-  journal: { runId }, // durability is opt-in: pass `journal` to route through it
-})) {
-  // parsed NDJSON objects, translated by the harness adapter as usual
+export async function runAgent(handle: SandboxHandle, runId: string) {
+  const agentCommand = 'claude -p --output-format stream-json'
+  for await (const event of spawnNdjson(handle, agentCommand, {
+    cwd: '/workspace',
+    journal: { runId }, // durability is opt-in: pass `journal` to route through it
+  })) {
+    // parsed NDJSON objects, translated by the harness adapter as usual
+    console.log(event)
+  }
 }
 ```
 

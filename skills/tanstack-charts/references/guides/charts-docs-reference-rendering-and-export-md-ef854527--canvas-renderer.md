@@ -1,6 +1,6 @@
 # Rendering And Export — Canvas renderer
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Canvas renderer
 
@@ -133,3 +133,11 @@ Renderer-specific tradeoffs:
 - Structured `SceneArea.polygons` render directly and do not require `Path2D`.
 - Scene-node `className` values do not create styleable Canvas descendants.
 - Gradients require geometry with measurable bounds.
+- Radial gradients support Canvas fills only. A radial stroke throws rather
+  than changing stroke width under a nonuniform bounds transform.
+
+Linear gradients map their normalized endpoints directly into each node's
+bounds. Radial fills are clipped to the node, then painted in normalized unit
+space under the node's bounds transform. This preserves SVG
+`objectBoundingBox` behavior, including an elliptical gradient on a non-square
+node.

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-memory-honcho"></a>
 
-Published skill · `@tanstack/ai-memory@0.1.10`.
+Published skill · `@tanstack/ai-memory@0.1.11`.
 
 [Topic index](../memory.md) · [Source provenance](../SOURCES.md)
 
@@ -19,9 +19,15 @@ appends the turn's messages to the session.
 import { memoryMiddleware } from '@tanstack/ai-memory'
 import { honcho } from '@tanstack/ai-memory/honcho'
 
-const memory = honcho({ user: currentUserId }) // baseURL defaults to HONCHO_URL
+// Build per request from the server-validated session — never from req.body.
+function memoryFor(session: { userId: string; threadId: string }) {
+  const memory = honcho({ user: session.userId }) // baseURL defaults to HONCHO_URL
 
-memoryMiddleware({ adapter: memory, scope })
+  return memoryMiddleware({
+    adapter: memory,
+    scope: { threadId: session.threadId, userId: session.userId },
+  })
+}
 ```
 
 `@honcho-ai/sdk` is an **optional peer dependency**, loaded lazily on first use — install

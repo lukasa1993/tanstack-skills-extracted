@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-custom-marks-and-renderers-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../composition.md) · [Source provenance](../SOURCES.md)
 
@@ -14,7 +14,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Start with composition](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--start-with-composition.md) — 2 KiB
 - [Group reusable child marks](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--group-reusable-child-marks.md) — 2 KiB
 - [Create a mark](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--create-a-mark.md) — 4 KiB
-- [Interaction points](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--interaction-points.md) — 2 KiB
+- [Interaction points](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--interaction-points.md) — 3 KiB
 - [Focus-only anchors](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--focus-only-anchors.md) — 1 KiB
 - [Focus-guide marks](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--focus-guide-marks.md) — 3 KiB
 - [Separate point and scale values](./charts-docs-guides-custom-marks-and-renderers-md-88f45847--separate-point-and-scale-values.md) — 1 KiB

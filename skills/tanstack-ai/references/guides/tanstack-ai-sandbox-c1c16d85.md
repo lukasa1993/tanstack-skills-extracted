@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-sandbox"></a>
 
-Published skill · `@tanstack/ai-sandbox@0.5.6`.
+Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 [Topic index](../code-execution.md) · [Source provenance](../SOURCES.md)
 
@@ -14,12 +14,12 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Setup — Claude Code in a Docker sandbox](./tanstack-ai-sandbox-c1c16d85--setup-claude-code-in-a-docker-sandbox.md) — 2 KiB
 - [Type-safe secrets](./tanstack-ai-sandbox-c1c16d85--type-safe-secrets.md) — 1 KiB
 - [Declarative provisioning (skills, plugins, MCP, instructions)](./tanstack-ai-sandbox-c1c16d85--declarative-provisioning-skills-plugins-mcp-instructions.md) — 2 KiB
-- [Fast init](./tanstack-ai-sandbox-c1c16d85--fast-init.md) — 6 KiB
+- [Fast init](./tanstack-ai-sandbox-c1c16d85--fast-init.md) — 7 KiB
 - [Providers](./tanstack-ai-sandbox-c1c16d85--providers.md) — 2 KiB
 - [Policy](./tanstack-ai-sandbox-c1c16d85--policy.md) — 1 KiB
 - [Lifecycle &amp; resume](./tanstack-ai-sandbox-c1c16d85--lifecycle-amp-resume.md) — 1 KiB
 - [Instance durability (durable resume)](./tanstack-ai-sandbox-c1c16d85--instance-durability-durable-resume.md) — 2 KiB
-- [File-event hooks](./tanstack-ai-sandbox-c1c16d85--file-event-hooks.md) — 3 KiB
+- [File-event hooks](./tanstack-ai-sandbox-c1c16d85--file-event-hooks.md) — 4 KiB
 - [Edge / serverless execution](./tanstack-ai-sandbox-c1c16d85--edge-serverless-execution.md) — 7 KiB
 - [Durable runs (the run journal)](./tanstack-ai-sandbox-c1c16d85--durable-runs-the-run-journal.md) — 7 KiB
 - [Takeover: detached runs and single-writer safety](./tanstack-ai-sandbox-c1c16d85--takeover-detached-runs-and-single-writer-safety.md) — 1 KiB

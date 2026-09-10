@@ -1,6 +1,6 @@
 # Line And Area — `lineX`
 
-[Guide and prerequisites](./charts-docs-reference-marks-line-and-area-md-6c72b4c2.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-marks-line-and-area-md-6c72b4c2.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## `lineX`
 
@@ -29,3 +29,10 @@ to row index. Identity falls back to y, invalid rows create segment gaps, and
 input order remains path order. Grouping, paint, points, curves, states, and
 motion use the same contract. Line interaction follows y affinity so keyboard
 and pointer traversal match the longitudinal axis.
+
+`lineX` inherits these stroke-shape options from the shared line contract:
+
+| Option     | Type                     | Default   | Meaning               |
+| ---------- | ------------------------ | --------- | --------------------- |
+| `lineCap`  | `SceneStyle["lineCap"]`  | `"round"` | Stroke endpoint shape |
+| `lineJoin` | `SceneStyle["lineJoin"]` | `"round"` | Stroke corner shape   |

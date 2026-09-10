@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 3. Sending Multimodal Content (Images)
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 3. Sending Multimodal Content (Images)
 
@@ -42,12 +42,15 @@ function sendImageUrl(text: string, imageUrl: string) {
 
 Render image parts in received messages:
 
-```typescript
-if (part.type === 'image') {
+```tsx
+import type { UIMessage } from '@tanstack/ai-react'
+
+function ImagePart({ part }: { part: UIMessage['parts'][number] }) {
+  if (part.type !== 'image') return null
   const src =
     part.source.type === 'url'
       ? part.source.value
       : `data:${part.source.mimeType};base64,${part.source.value}`
-  return <img key={i} src={src} alt="Attached image" />
+  return <img src={src} alt="Attached image" />
 }
 ```

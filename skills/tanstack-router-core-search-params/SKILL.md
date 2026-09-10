@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.28"
+  tanstack-package-version: "1.171.29"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "search-params"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/search-params.md\",\"TanStack/router:docs/router/how-to/setup-basic-search-params.md\",\"TanStack/router:docs/router/how-to/validate-search-params.md\",\"TanStack/router:docs/router/how-to/navigate-with-search-params.md\",\"TanStack/router:docs/router/how-to/share-search-params-across-routes.md\",\"TanStack/router:docs/router/guide/custom-search-param-serialization.md\"]"

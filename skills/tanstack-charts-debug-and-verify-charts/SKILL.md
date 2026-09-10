@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.2"
+  tanstack-library-version: "0.18.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.2"
+  tanstack-package-version: "0.18.0"
   tanstack-source-skill: "debug-and-verify-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/testing-and-debugging.md\",\"TanStack/charts:docs/guides/typescript.md\",\"TanStack/charts:docs/guides/bundle-size-and-performance.md\",\"TanStack/charts:API-FRICTION.md\"]"
   tanstack-type: "lifecycle"

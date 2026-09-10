@@ -67,6 +67,6 @@ Typed chart grammar guidance for marks, scales, layouts, interaction, accessibil
 
 ## Source status
 
-Official documentation from `TanStack/charts`, matched to these verified release inputs: @tanstack/charts@0.16.2, @tanstack/react-native-charts@0.16.2.
+Official documentation from `TanStack/charts`, matched to these verified release inputs: @tanstack/charts@0.18.0, @tanstack/react-native-charts@0.18.0.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

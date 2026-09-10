@@ -1,6 +1,6 @@
 # Ai Sandbox — Instance durability (durable resume)
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## Instance durability (durable resume)
 
@@ -11,20 +11,30 @@ distributed lock: either `withLocks` from `@tanstack/ai/locks` (ordered
 **before** `withSandbox`) or the `locks` option.
 
 ```typescript
-import { chat } from '@tanstack/ai'
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { InMemoryLockStore, withLocks } from '@tanstack/ai/locks'
+import { claudeCodeText } from '@tanstack/ai-claude-code'
 import { withSandbox } from '@tanstack/ai-sandbox'
+// Your `defineSandbox(...)` result.
+import { sandbox } from './sandbox'
 // Production: your BYO store — docs/sandbox/durability.md
 import { instanceStore } from './sandbox-instance-store'
 
-chat({
-  adapter,
-  messages,
-  middleware: [
-    withLocks(new InMemoryLockStore()), // multi-replica: distributed lock
-    withSandbox(sandbox, { instances: instanceStore }),
-  ],
-})
+export async function POST(request: Request) {
+  const { threadId, messages } = await request.json()
+
+  const stream = chat({
+    threadId,
+    adapter: claudeCodeText('sonnet'),
+    messages,
+    middleware: [
+      withLocks(new InMemoryLockStore()), // multi-replica: distributed lock
+      withSandbox(sandbox, { instances: instanceStore }),
+    ],
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 The store option takes precedence over an ambient `SandboxInstanceStoreCapability`

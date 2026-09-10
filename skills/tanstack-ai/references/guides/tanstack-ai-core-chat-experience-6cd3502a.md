@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-chat-experience"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -20,7 +20,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-6-mcp-tool-discovery-via-chat-mcp.md) — 3 KiB
 - [Core Patterns: 7. Queueing Messages Sent While Streaming](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-7-queueing-messages-sent-while-streaming.md) — 3 KiB
 - [Core Patterns: 8. Browser-Refresh Durability (client persistence)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-8-browser-refresh-durability-client-persistence.md) — 4 KiB
-- [Common Mistakes](./tanstack-ai-core-chat-experience-6cd3502a--common-mistakes.md) — 6 KiB
+- [Common Mistakes](./tanstack-ai-core-chat-experience-6cd3502a--common-mistakes.md) — 9 KiB
 - [Cross-References](./tanstack-ai-core-chat-experience-6cd3502a--cross-references.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->

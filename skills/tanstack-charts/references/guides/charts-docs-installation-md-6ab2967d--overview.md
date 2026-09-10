@@ -1,10 +1,10 @@
 # Installation — Overview
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 These docs follow unreleased `main`, the official Alpha line. The latest
-published release is TanStack Charts `0.16.2`; use its
-[release-source docs](https://github.com/TanStack/charts/tree/7747d71585562481dc2284b734b134a90aae589b/docs)
+published release is TanStack Charts `0.18.0`; use its
+[release-source docs](https://github.com/TanStack/charts/tree/015f5f26dd3242e5eff4e45d4afd9c56e015865c/docs)
 for the exact surface. Alpha releases use regular `0.x` versions and may break
 APIs between minor releases. Install TanStack Charts in each application that
 authors chart definitions:

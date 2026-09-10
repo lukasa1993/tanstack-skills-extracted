@@ -1,6 +1,6 @@
 # Ai Code Mode — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.8`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.9`.
 
 ## Common Mistakes
 
@@ -11,11 +11,17 @@ Code Mode executes LLM-generated code. Any secrets available in the sandbox cont
 Wrong:
 
 ```typescript
+import { toolDefinition } from '@tanstack/ai'
+import { createCodeModeTool } from '@tanstack/ai-code-mode'
+import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
+import { z } from 'zod'
+
 const codeModeTool = createCodeModeTool({
-  driver,
+  driver: createNodeIsolateDriver(),
   tools: [
     toolDefinition({
       name: 'callApi',
+      description: 'Call an HTTP API',
       inputSchema: z.object({ url: z.string(), apiKey: z.string() }),
       outputSchema: z.any(),
     }).server(async ({ url, apiKey }) =>
@@ -30,16 +36,22 @@ const codeModeTool = createCodeModeTool({
 Right:
 
 ```typescript
+import { toolDefinition } from '@tanstack/ai'
+import { createCodeModeTool } from '@tanstack/ai-code-mode'
+import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
+import { z } from 'zod'
+
 const codeModeTool = createCodeModeTool({
-  driver,
+  driver: createNodeIsolateDriver(),
   tools: [
     toolDefinition({
       name: 'callApi',
+      description: 'Call an HTTP API',
       inputSchema: z.object({ url: z.string() }),
       outputSchema: z.any(),
     }).server(async ({ url }) =>
       fetch(url, {
-        headers: { Authorization: process.env.API_KEY }, // secret stays in host
+        headers: { Authorization: `Bearer ${process.env.API_KEY}` }, // secret stays in host
       }),
     ),
   ],
@@ -55,12 +67,16 @@ LLM-generated code may contain infinite loops. The default timeout is 30s, but d
 Wrong:
 
 ```typescript
+import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
+
 const driver = createNodeIsolateDriver({ timeout: 0 })
 ```
 
 Right:
 
 ```typescript
+import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
+
 const driver = createNodeIsolateDriver({ timeout: 30_000 })
 ```
 

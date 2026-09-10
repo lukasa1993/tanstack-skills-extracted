@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 4. Sending Audio Messages (Browser Recording)
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 4. Sending Audio Messages (Browser Recording)
 

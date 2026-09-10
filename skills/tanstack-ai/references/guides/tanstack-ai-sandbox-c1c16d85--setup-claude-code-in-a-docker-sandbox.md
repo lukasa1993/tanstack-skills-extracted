@@ -1,13 +1,14 @@
 # Ai Sandbox — Setup — Claude Code in a Docker sandbox
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## Setup — Claude Code in a Docker sandbox
 
 ```typescript
-import { chat } from '@tanstack/ai'
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { claudeCodeText } from '@tanstack/ai-claude-code'
 import {
+  createSecrets,
   defineSandbox,
   defineWorkspace,
   withSandbox,
@@ -22,15 +23,23 @@ const sandbox = defineSandbox({
     packageManager: 'pnpm',
     setup: ['corepack enable', 'pnpm install'],
     scripts: { test: 'pnpm test' },
-    secrets: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY ?? '' },
+    secrets: createSecrets({
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY ?? '',
+    }),
   }),
   lifecycle: { reuse: 'thread', snapshot: 'after-setup', keepAlive: '30m' },
 })
 
-const stream = chat({
-  threadId,
-  adapter: claudeCodeText('sonnet'),
-  messages,
-  middleware: [withSandbox(sandbox)],
-})
+export async function POST(request: Request) {
+  const { threadId, messages } = await request.json()
+
+  const stream = chat({
+    threadId,
+    adapter: claudeCodeText('sonnet'),
+    messages,
+    middleware: [withSandbox(sandbox)],
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```

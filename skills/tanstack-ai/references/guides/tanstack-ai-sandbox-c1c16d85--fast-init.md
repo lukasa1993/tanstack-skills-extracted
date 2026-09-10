@@ -1,6 +1,6 @@
 # Ai Sandbox — Fast init
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## Fast init
 
@@ -23,6 +23,8 @@ serial and parallel groups over a **persistent shell** whose cwd/env carry over
 between serial steps:
 
 ```typescript
+import { githubRepo, defineWorkspace } from '@tanstack/ai-sandbox'
+
 defineWorkspace({
   source: githubRepo({ repo: 'owner/app' }),
   setup: ({ serial, parallel }) => {
@@ -41,10 +43,17 @@ When the provider supports snapshots, bootstrap takes one automatically after
 Override or add a TTL:
 
 ```typescript
-lifecycle: {
-  snapshot: 'after-setup', // default when provider.capabilities().snapshots
-  snapshotMaxAge: '24h',   // re-create when the snapshot is older than this
-}
+import { defineSandbox } from '@tanstack/ai-sandbox'
+import { dockerSandbox } from '@tanstack/ai-sandbox-docker'
+
+const sandbox = defineSandbox({
+  id: 'repo-agent',
+  provider: dockerSandbox({ image: 'node:22' }),
+  lifecycle: {
+    snapshot: 'after-setup', // default when provider.capabilities().snapshots
+    snapshotMaxAge: '24h', // re-create when the snapshot is older than this
+  },
+})
 ```
 
 Providers without snapshot support skip the step silently.
@@ -57,8 +66,15 @@ middleware in this order, with the same persistence value in both places:
 
 ```typescript
 import { withPersistence } from '@tanstack/ai-persistence'
-import { memorySandboxSnapshots, withSandbox } from '@tanstack/ai-sandbox'
+import {
+  InMemorySandboxInstanceStore,
+  memorySandboxSnapshots,
+  withSandbox,
+} from '@tanstack/ai-sandbox'
+// Your `defineSandbox(...)` result.
+import { sandbox } from './sandbox'
 
+const instances = new InMemorySandboxInstanceStore()
 const snapshots = await memorySandboxSnapshots({ sandbox, instances })
 
 const middleware = [

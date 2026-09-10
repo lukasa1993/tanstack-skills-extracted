@@ -1,6 +1,6 @@
 # Rules Links Arrows Vectors And Ticks — Invalid rows and identity
 
-[Guide and prerequisites](./charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Invalid rows and identity
 

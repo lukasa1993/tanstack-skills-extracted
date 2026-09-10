@@ -1,13 +1,13 @@
 # Structured Outputs — Core Patterns: Pattern 3: Direct stream iteration
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: Pattern 3: Direct stream iteration
 
 
 Pass `stream: true` alongside `outputSchema` to get an async iterable of standard streaming chunks plus a completed typed object. Use this when you're a single process end-to-end — Node script, CLI, test, or a server endpoint that responds with one JSON blob. For the in-browser progressive-UI case, jump to Pattern 4 instead.
 
-```typescript
+```typescript group=person-stream
 import { chat } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { z } from 'zod'

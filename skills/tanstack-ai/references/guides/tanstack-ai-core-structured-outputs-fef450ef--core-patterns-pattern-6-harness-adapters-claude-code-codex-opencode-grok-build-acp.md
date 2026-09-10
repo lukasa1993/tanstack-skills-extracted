@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 6: Harness adapters (Claude Code, Codex, OpenCode, Grok Build, ACP)
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: Pattern 6: Harness adapters (Claude Code, Codex, OpenCode, Grok Build, ACP)
 
@@ -51,12 +51,19 @@ const ReportSchema = z.object({
   oneLiner: z.string(),
 })
 
-const { final } = useChat({
-  connection: fetchServerSentEvents('/api/repo-report'),
-  outputSchema: ReportSchema,
-})
+function RepoReport() {
+  const { final, sendMessage } = useChat({
+    connection: fetchServerSentEvents('/api/repo-report'),
+    outputSchema: ReportSchema,
+  })
 
-final?.name
+  return (
+    <div>
+      <button onClick={() => sendMessage('Describe this repo')}>Report</button>
+      {final && <h2>{final.name}</h2>}
+    </div>
+  )
+}
 ```
 
 - Claude Code: `--json-schema`. Codex: `--output-schema`. OpenCode, Grok Build, and `acpCompatible`: prompt-and-parse.

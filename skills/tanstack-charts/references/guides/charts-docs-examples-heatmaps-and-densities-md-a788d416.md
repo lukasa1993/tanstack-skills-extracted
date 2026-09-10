@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-heatmaps-and-densities-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../examples-core.md) · [Source provenance](../SOURCES.md)
 

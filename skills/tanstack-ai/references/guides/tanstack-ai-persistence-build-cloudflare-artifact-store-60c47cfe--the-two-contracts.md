@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — The two contracts
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## The two contracts
 
@@ -9,6 +9,17 @@ type an object literal inline (autocomplete + contract checking, no separate
 annotation).
 
 ```ts
+import type {
+  ArtifactRecord,
+  BlobBody,
+  BlobGetOptions,
+  BlobListOptions,
+  BlobListPage,
+  BlobObject,
+  BlobPutOptions,
+  BlobRecord,
+} from '@tanstack/ai-persistence'
+
 // BlobStore — the byte layer. R2 backs it.
 interface BlobStore {
   put: (

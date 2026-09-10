@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 5. HTTP Stream Format (Alternative to SSE)
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 5. HTTP Stream Format (Alternative to SSE)
 
@@ -13,13 +13,18 @@ Use `toHttpResponse` + `fetchHttpStream` for newline-delimited JSON instead of S
 import { chat, toHttpResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
-const stream = chat({
-  adapter: openaiText('gpt-5.5'),
-  messages,
-  abortController,
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+  const abortController = new AbortController()
 
-return toHttpResponse(stream, { abortController })
+  const stream = chat({
+    adapter: openaiText('gpt-5.6'),
+    messages,
+    abortController,
+  })
+
+  return toHttpResponse(stream, { abortController })
+}
 ```
 
 **Client:**

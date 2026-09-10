@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-lines-and-areas-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../examples-core.md) · [Source provenance](../SOURCES.md)
 
@@ -51,6 +51,7 @@ const chart = defineChart({
       y: 'downloads',
       points: true,
       stroke: '#2563eb',
+      lineCap: 'butt',
     }),
   ],
   scales: {
@@ -66,6 +67,10 @@ const chart = defineChart({
 
 export default chart
 ```
+
+`lineCap: 'butt'` ends the stroke at each path endpoint. Omit it to retain the
+default round endpoints. `lineX` accepts the same `lineCap` and `lineJoin`
+options.
 
 ## Compare several series from a common baseline
 

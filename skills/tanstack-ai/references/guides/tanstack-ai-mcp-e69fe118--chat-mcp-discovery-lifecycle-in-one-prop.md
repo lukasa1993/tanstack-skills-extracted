@@ -1,6 +1,6 @@
 # Ai Mcp — `chat({ mcp })` — discovery + lifecycle in one prop
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.9`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 ## `chat({ mcp })` — discovery + lifecycle in one prop
 
@@ -40,53 +40,60 @@ Rather than calling `client.tools()` and `client.close()` yourself, pass the
 **Server-side example:**
 
 ```typescript
-import { createFileRoute } from '@tanstack/react-router'
+// Any framework route handler that receives a Request works (TanStack Start,
+// Next.js, Hono, ...).
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
-export const Route = createFileRoute('/api/chat')({
-  server: {
-    handlers: {
-      POST: async ({ request }) => {
-        const { messages } = await request.json()
+// Created once at module scope; connection: 'keep-alive' below keeps it warm
+// across requests.
+const mcpClient = await createMCPClient({
+  transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+})
 
-        const mcpClient = await createMCPClient({
-          transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
-        })
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-        const stream = chat({
-          adapter: openaiText('gpt-5.5'),
-          messages,
-          mcp: {
-            clients: [mcpClient],
-            connection: 'keep-alive', // chat() won't close it — reuse across requests
-            onDiscoveryError: (err, source) => {
-              console.warn('MCP discovery failed for source, skipping:', err)
-              // returning skips this source; throw to fail the whole call fast
-            },
-          },
-        })
-
-        return toServerSentEventsResponse(stream)
-        // connection: 'keep-alive' — chat() never closes mcpClient; it stays warm for the next request.
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    mcp: {
+      clients: [mcpClient],
+      connection: 'keep-alive', // chat() won't close it — reuse across requests
+      onDiscoveryError: (err, source) => {
+        console.warn('MCP discovery failed for source, skipping:', err)
+        // returning skips this source; throw to fail the whole call fast
       },
     },
-  },
-})
+  })
+
+  return toServerSentEventsResponse(stream)
+  // connection: 'keep-alive' — chat() never closes mcpClient; it stays warm for the next request.
+}
 ```
 
 You can also pass an `MCPClients` pool directly:
 
 ```typescript
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+import { createMCPClients } from '@tanstack/ai-mcp'
+
 const pool = await createMCPClients({
   github: { transport: { type: 'http', url: 'https://mcp.github.com/mcp' } },
   linear: { transport: { type: 'http', url: 'https://mcp.linear.app/mcp' } },
 })
 
-const stream = chat({
-  adapter: openaiText('gpt-5.5'),
-  messages,
-  mcp: { clients: [pool], connection: 'keep-alive' },
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    mcp: { clients: [pool], connection: 'keep-alive' },
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```

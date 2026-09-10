@@ -1,6 +1,6 @@
 # Middleware — Server State Persistence: withPersistence
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Server State Persistence: withPersistence
 
@@ -108,7 +108,12 @@ implement, and what `@tanstack/ai-sandbox`'s run driver resolves per run — its
 `snapshot()` method alongside `append`, `read`, and `close`:
 
 ```ts
-snapshot: () => Promise<Array<{ offset: TOffset; chunk: StreamChunk }>>
+import type { StreamChunk } from '@tanstack/ai'
+
+// Excerpt of the `StreamDurability` interface exported by '@tanstack/ai'
+interface StreamDurability<TOffset extends string = string> {
+  snapshot: () => Promise<Array<{ offset: TOffset; chunk: StreamChunk }>>
+}
 ```
 
 It returns everything stored for a run right now, in append order, then

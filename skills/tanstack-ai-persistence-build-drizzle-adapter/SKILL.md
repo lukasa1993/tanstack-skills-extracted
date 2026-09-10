@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.5.6"
+  tanstack-package-version: "0.5.7"
   tanstack-source-skill: "ai-persistence/build-drizzle-adapter"
 ---
 
@@ -522,7 +522,7 @@ route** — derive the user from the session, never trust a client-supplied id.
 
 ## 5. Verify
 
-```ts ignore
+```ts
 import { runPersistenceConformance } from '@tanstack/ai-persistence/testkit'
 import { chatPersistence } from '../src/lib/chat-persistence'
 

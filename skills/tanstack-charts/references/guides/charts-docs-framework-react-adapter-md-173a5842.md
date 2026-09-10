@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-framework-react-adapter-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -136,8 +136,8 @@ The outer host has `position: relative`.
 `width` is absent. A fixed `height` takes precedence over `aspectRatio`.
 Nonpositive and nonfinite ratios fall back to the default height.
 
-The DOM host observes responsive width and measures the inherited container
-font. Its exact fallback and relayout behavior is documented in
+The DOM host observes responsive dimensions and measures the inherited
+container font. Its exact fallback and relayout behavior is documented in
 [DOM host](./charts-docs-reference-dom-host-md-10380040.md#source-charts-docs-reference-dom-host-md).
 
 ## `className` and `style`
@@ -160,7 +160,9 @@ React-specific presentation props apply to the outer `.ts-chart-host`:
 
 Do not give `style.width` a value that conflicts with a fixed `width` prop. The
 style controls the outer CSS box, while the prop continues to lock the scene
-width.
+width. A custom `style.height` remains live when both `height` and
+`aspectRatio` are absent. Either sizing prop stays authoritative over CSS
+height when supplied.
 
 Core renderer `className` options apply to a surface when calling it directly.
 The React adapter's `className` intentionally owns the outer element instead.

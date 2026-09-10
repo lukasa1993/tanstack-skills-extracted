@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`
 
@@ -42,34 +42,27 @@ clients across calls.
 **Server-side example:**
 
 ```typescript
-import { createFileRoute } from '@tanstack/react-router'
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
-export const Route = createFileRoute('/api/chat')({
-  server: {
-    handlers: {
-      POST: async ({ request }) => {
-        const { messages } = await request.json()
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-        const mcpClient = await createMCPClient({
-          transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
-        })
+  const mcpClient = await createMCPClient({
+    transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  })
 
-        const stream = chat({
-          adapter: openaiText('gpt-5.5'),
-          messages,
-          mcp: {
-            clients: [mcpClient],
-            connection: 'keep-alive', // chat() won't close it — reuse across requests
-          },
-        })
-
-        return toServerSentEventsResponse(stream)
-        // connection: 'keep-alive' — chat() never closes mcpClient; it stays open for reuse across runs.
-      },
+  const stream = chat({
+    adapter: openaiText('gpt-5.6'),
+    messages,
+    mcp: {
+      clients: [mcpClient],
+      connection: 'keep-alive', // chat() won't close it — reuse across requests
     },
-  },
-})
+  })
+
+  return toServerSentEventsResponse(stream)
+  // connection: 'keep-alive' — chat() never closes mcpClient; it stays open for reuse across runs.
+}
 ```

@@ -1,6 +1,6 @@
 # Ai Sandbox — Takeover: detached runs and single-writer safety: `sandboxRunDriver` — the supported way to drive a resumed run
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## Takeover: detached runs and single-writer safety: `sandboxRunDriver` — the supported way to drive a resumed run
 

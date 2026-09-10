@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 1. Image Generation
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 1. Image Generation
 
@@ -38,7 +38,7 @@ const openaiResult = await generateImage({
   modelOptions: {
     quality: 'high',
     background: 'transparent',
-    outputFormat: 'png',
+    output_format: 'png',
   },
 })
 
@@ -105,10 +105,10 @@ await generateImage({
   adapter: openaiImage('gpt-image-2'),
   prompt: [
     { type: 'text', content: 'Replace the masked region with a tree' },
-    { type: 'image', source: { type: 'url', value: photoUrl } },
+    { type: 'image', source: { type: 'url', value: 'https://…/photo.png' } },
     {
       type: 'image',
-      source: { type: 'url', value: maskUrl },
+      source: { type: 'url', value: 'https://…/mask.png' },
       metadata: { role: 'mask' },
     },
   ],
@@ -122,11 +122,11 @@ import { falVideo } from '@tanstack/ai-fal'
 await generateVideo({
   adapter: falVideo('fal-ai/kling-video/v3/pro/image-to-video'),
   prompt: [
-    { type: 'image', source: { type: 'url', value: firstFrameUrl } },
+    { type: 'image', source: { type: 'url', value: 'https://…/first.png' } },
     { type: 'text', content: 'Slow cinematic push-in' },
     {
       type: 'image',
-      source: { type: 'url', value: lastFrameUrl },
+      source: { type: 'url', value: 'https://…/last.png' },
       metadata: { role: 'end_frame' },
     },
   ],

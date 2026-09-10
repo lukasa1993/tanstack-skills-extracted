@@ -1,6 +1,6 @@
 # Rendering And Export — SVG serialization
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## SVG serialization
 
@@ -35,9 +35,10 @@ unless `includeFocus` is true, and resolves dimensions from options, then the
 The serializer can inline computed `color`, fill, fill opacity, font family,
 font size, font weight, opacity, stroke, stroke opacity, stroke width, and
 stroke dash array when they depend on inherited font, `currentColor`, or CSS
-custom properties. Gradient stop color and opacity receive the same treatment.
-Keep other CSS-dependent resource styling explicit until it is part of that
-serialization contract.
+custom properties. Linear and radial resources remain in the cloned `<defs>`,
+and their stop color and opacity receive the same treatment. Keep other
+CSS-dependent resource styling explicit until it is part of that serialization
+contract.
 
 `downloadChartSvg(target, filename?, options?)` defaults to `chart.svg` and
 downloads an SVG blob through the target's document.

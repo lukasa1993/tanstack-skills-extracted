@@ -1,6 +1,6 @@
 # Custom Marks And Renderers — Interaction points
 
-[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Interaction points
 
@@ -35,6 +35,14 @@ const node: SceneRect = {
 
 return { nodes: [node], points: [point] }
 ```
+
+For custom rectangle renderers, preserve `SceneRect.radius` as the uniform
+radius and consume `SceneRect.cornerRadii` in physical top-left, top-right,
+bottom-right, bottom-left order. Selective corners need equivalent path or
+native geometry in every renderer the mark supports. Import
+`resolveRectCornerRadii` and `rectCornerRadiiPath` from
+`@tanstack/charts/renderer/rect` to share the built-in normalization and path
+serialization.
 
 Use `x` for vertically oriented marks, `y` for horizontal marks, `xy` for
 ordinary two-dimensional proximity, and `geometry` when only exact

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-framework-solid-reference-chart-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

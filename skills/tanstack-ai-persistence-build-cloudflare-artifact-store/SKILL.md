@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.5.6"
+  tanstack-package-version: "0.5.7"
   tanstack-source-skill: "ai-persistence/build-cloudflare-artifact-store"
 ---
 
@@ -34,6 +34,17 @@ type an object literal inline (autocomplete + contract checking, no separate
 annotation).
 
 ```ts
+import type {
+  ArtifactRecord,
+  BlobBody,
+  BlobGetOptions,
+  BlobListOptions,
+  BlobListPage,
+  BlobObject,
+  BlobPutOptions,
+  BlobRecord,
+} from '@tanstack/ai-persistence'
+
 // BlobStore — the byte layer. R2 backs it.
 interface BlobStore {
   put: (

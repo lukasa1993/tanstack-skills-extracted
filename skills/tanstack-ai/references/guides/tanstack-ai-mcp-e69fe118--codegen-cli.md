@@ -1,6 +1,6 @@
 # Ai Mcp — Codegen CLI
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.9`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 ## Codegen CLI
 
@@ -37,7 +37,7 @@ per server plus a combined `interface MCPServers` for pool typing.
 ```typescript
 // Single server — narrows tools() return to descriptor-keyed tool names.
 import type { GithubServer } from './src/mcp-types.generated'
-import { createMCPClient } from '@tanstack/ai-mcp'
+import { createMCPClient, createMCPClients } from '@tanstack/ai-mcp'
 
 const client = await createMCPClient<GithubServer>({
   transport: { type: 'http', url: 'https://mcp.github.com/mcp' },

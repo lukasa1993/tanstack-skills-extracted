@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-mcp"></a>
 
-Published skill · `@tanstack/ai-mcp@0.3.9`.
+Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 
@@ -15,17 +15,17 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Install](./tanstack-ai-mcp-e69fe118--install.md) — 1 KiB
 - [`createMCPClient` — single server](./tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md) — 4 KiB
 - [Three type-safety modes](./tanstack-ai-mcp-e69fe118--three-type-safety-modes.md) — 3 KiB
-- [Lifecycle](./tanstack-ai-mcp-e69fe118--lifecycle.md) — 2 KiB
+- [Lifecycle](./tanstack-ai-mcp-e69fe118--lifecycle.md) — 3 KiB
 - [`chat({ mcp })` — discovery + lifecycle in one prop](./tanstack-ai-mcp-e69fe118--chat-mcp-discovery-lifecycle-in-one-prop.md) — 4 KiB
 - [`createMCPClients` — multiple servers](./tanstack-ai-mcp-e69fe118--createmcpclients-multiple-servers.md) — 2 KiB
-- [Abort signal — cancelling in-flight MCP calls](./tanstack-ai-mcp-e69fe118--abort-signal-cancelling-in-flight-mcp-calls.md) — 1 KiB
+- [Abort signal — cancelling in-flight MCP calls](./tanstack-ai-mcp-e69fe118--abort-signal-cancelling-in-flight-mcp-calls.md) — 2 KiB
 - [Resources](./tanstack-ai-mcp-e69fe118--resources.md) — 2 KiB
 - [Prompts](./tanstack-ai-mcp-e69fe118--prompts.md) — 1 KiB
 - [MCP Apps](./tanstack-ai-mcp-e69fe118--mcp-apps.md) — 7 KiB
 - [Codegen CLI](./tanstack-ai-mcp-e69fe118--codegen-cli.md) — 2 KiB
 - [Error classes](./tanstack-ai-mcp-e69fe118--error-classes.md) — 2 KiB
 - [Complete server-route example](./tanstack-ai-mcp-e69fe118--complete-server-route-example.md) — 2 KiB
-- [Common Mistakes](./tanstack-ai-mcp-e69fe118--common-mistakes.md) — 3 KiB
+- [Common Mistakes](./tanstack-ai-mcp-e69fe118--common-mistakes.md) — 4 KiB
 - [Cross-References](./tanstack-ai-mcp-e69fe118--cross-references.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->

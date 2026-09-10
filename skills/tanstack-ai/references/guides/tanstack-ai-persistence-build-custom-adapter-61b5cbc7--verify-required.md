@@ -1,6 +1,6 @@
 # Build Custom Adapter — Verify (required)
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## Verify (required)
 
@@ -8,7 +8,7 @@ This matters more here than anywhere else: there is no reference driver to
 compare against, so the testkit is the only thing standing between a subtle
 idempotency bug and stuck approvals in production.
 
-```ts ignore
+```ts
 import { runPersistenceConformance } from '@tanstack/ai-persistence/testkit'
 import { chatPersistence } from '../src/lib/chat-persistence'
 

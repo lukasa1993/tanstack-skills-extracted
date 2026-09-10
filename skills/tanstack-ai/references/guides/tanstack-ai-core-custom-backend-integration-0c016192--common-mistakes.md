@@ -1,6 +1,6 @@
 # Custom Backend Integration — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Common Mistakes
 
@@ -10,35 +10,43 @@ The `ConnectionAdapter` interface has two mutually exclusive modes. Providing
 both throws at runtime.
 
 ```typescript
-// WRONG -- throws "Connection adapter must provide either connect or both
-// subscribe and send, not both modes"
-const adapter = {
+import type {
+  ConnectConnectionAdapter,
+  ConnectionAdapter,
+  SubscribeConnectionAdapter,
+} from '@tanstack/ai-react'
+import { channel } from './channel'
+
+// WRONG -- type-checks (ConnectionAdapter is a union) but throws at runtime:
+// "Connection adapter must provide either connect or both subscribe and
+// send, not both modes"
+const adapter: ConnectionAdapter = {
   async *connect(messages) {
     /* ... */
   },
   subscribe(signal) {
-    /* ... */
+    return channel.chunks(signal)
   },
   async send(messages) {
-    /* ... */
+    await channel.send(messages)
   },
 }
 
 // CORRECT -- pick one mode
 // Option A: ConnectConnectionAdapter (pull-based)
-const pullAdapter = {
+const pullAdapter: ConnectConnectionAdapter = {
   async *connect(messages, data, abortSignal) {
     // ... yield StreamChunks
   },
 }
 
 // Option B: SubscribeConnectionAdapter (push-based)
-const pushAdapter = {
+const pushAdapter: SubscribeConnectionAdapter = {
   subscribe(abortSignal) {
-    return longLivedAsyncIterable
+    return channel.chunks(abortSignal)
   },
   async send(messages, data, abortSignal) {
-    await connection.dispatch({ messages, ...data })
+    await channel.send({ messages, ...data }, abortSignal)
   },
 }
 ```
@@ -74,15 +82,11 @@ streaming, implement retry logic in your connection adapter:
 
 ```typescript
 import { useChat } from '@tanstack/ai-react'
-import type { ConnectionAdapter } from '@tanstack/ai-react'
-import type { StreamChunk, UIMessage } from '@tanstack/ai'
+import type { ConnectConnectionAdapter } from '@tanstack/ai-react'
+import type { StreamChunk } from '@tanstack/ai'
 
-const resilientAdapter: ConnectionAdapter = {
-  async *connect(
-    messages: Array<UIMessage>,
-    data?: Record<string, any>,
-    abortSignal?: AbortSignal,
-  ): AsyncGenerator<StreamChunk> {
+const resilientAdapter: ConnectConnectionAdapter = {
+  async *connect(messages, data, abortSignal) {
     const maxRetries = 3
     let attempt = 0
 
@@ -113,7 +117,8 @@ const resilientAdapter: ConnectionAdapter = {
 
           for (const line of lines) {
             if (line.trim()) {
-              yield JSON.parse(line) as StreamChunk
+              const chunk: StreamChunk = JSON.parse(line)
+              yield chunk
             }
           }
         }

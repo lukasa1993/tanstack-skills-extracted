@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 5. Configuring Sampling
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 5. Configuring Sampling
 
@@ -10,6 +10,14 @@ inside `modelOptions` using each provider's **native** key. They are not
 top-level fields on `chat()`/`ai()`/`generate()`.
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+import { anthropicText } from '@tanstack/ai-anthropic'
+import { geminiText } from '@tanstack/ai-gemini'
+import { ollamaText } from '@tanstack/ai-ollama'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 // OpenAI — native keys
 chat({
   adapter: openaiText('gpt-5.2'),
@@ -32,8 +40,9 @@ chat({
 })
 
 // Ollama — NESTED under modelOptions.options
+// (use the `family:tag` id — a bare `llama3.3` falls back to untyped options)
 chat({
-  adapter: ollamaText('llama3.3'),
+  adapter: ollamaText('llama3.3:latest'),
   messages,
   modelOptions: {
     options: { temperature: 0.7, top_p: 0.9, num_predict: 1000 },
@@ -48,7 +57,7 @@ Per-provider sampling keys (all live inside `modelOptions`):
 | OpenAI            | `temperature` | `top_p` | `max_output_tokens`                       |
 | Anthropic         | `temperature` | `top_p` | `max_tokens`                              |
 | Gemini            | `temperature` | `topP`  | `maxOutputTokens`                         |
-| Grok (xAI)        | `temperature` | `top_p` | `max_tokens`                              |
+| Grok (xAI)        | `temperature` | `top_p` | `max_output_tokens`                       |
 | Groq              | `temperature` | `top_p` | `max_completion_tokens`                   |
 | OpenRouter (chat) | `temperature` | `topP`  | `maxCompletionTokens`                     |
 | Ollama            | `temperature` | `top_p` | `num_predict` (nested in `options`)       |

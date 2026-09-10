@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`
 
@@ -8,7 +8,16 @@
 Adapters can declare an optional capability method:
 
 ```ts
-supportsCombinedToolsAndSchema?(modelOptions?: TProviderOptions): boolean
+import { AnthropicTextAdapter } from '@tanstack/ai-anthropic'
+
+// The TextAdapter contract:
+//   supportsCombinedToolsAndSchema?: (modelOptions?: TProviderOptions) => boolean
+// Subclasses override it to narrow the capability:
+class LegacyPathAnthropic extends AnthropicTextAdapter<'claude-sonnet-4-6'> {
+  override supportsCombinedToolsAndSchema(): boolean {
+    return false
+  }
+}
 ```
 
 When `true`, the engine wires `outputSchema` into the regular
@@ -20,16 +29,16 @@ runs.
 
 Current per-adapter status (#605):
 
-| Adapter                                      | Returns                                                                                               |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `openaiText` / `openaiChatCompletions`       | `true` (all supported models)                                                                         |
-| `anthropicText`                              | `true` for Claude 4.5+ (gated by `ANTHROPIC_COMBINED_TOOLS_AND_SCHEMA_MODELS`), `false` otherwise     |
-| `geminiText`                                 | `true` for Gemini 3.x (gated by `GEMINI_COMBINED_TOOLS_AND_SCHEMA_MODELS`), `false` otherwise         |
-| `grokText`                                   | `true` for Grok 4 family (gated by `GROK_COMBINED_TOOLS_AND_SCHEMA_MODELS`), `false` otherwise        |
-| `groqText`                                   | `false` (Groq API rejects schema + tools + stream)                                                    |
-| `openRouterText` / `openRouterResponsesText` | `false` (per-call resolution is a follow-up)                                                          |
-| `ollamaText`                                 | `false` (constrained-decoding vs tool-call grammar conflict)                                          |
-| `byteplusText`                               | Per model — `true` only for the 10 ids in `BYTEPLUS_STRUCTURED_OUTPUT_CHAT_MODELS`, `false` otherwise |
+| Adapter                                      | Returns                                                                                                                              |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `openaiText` / `openaiChatCompletions`       | `true` (all supported models)                                                                                                        |
+| `anthropicText`                              | `true` for Claude 4.5+ (gated by `ANTHROPIC_COMBINED_TOOLS_AND_SCHEMA_MODELS`), `false` otherwise                                    |
+| `geminiText`                                 | `true` for Gemini 3.x (gated by `GEMINI_COMBINED_TOOLS_AND_SCHEMA_MODELS`), `false` otherwise                                        |
+| `grokText`                                   | `true` (all chat models — inherits the OpenAI Responses base; no per-model gate)                                                     |
+| `groqText`                                   | `false` (Groq API rejects schema + tools + stream)                                                                                   |
+| `openRouterText` / `openRouterResponsesText` | Per model — `true` only when the model and every `modelOptions.models` fallback are in `OPENROUTER_COMBINED_TOOLS_AND_SCHEMA_MODELS` |
+| `ollamaText`                                 | `false` (constrained-decoding vs tool-call grammar conflict)                                                                         |
+| `byteplusText`                               | Per model — `true` only for the 10 ids in `BYTEPLUS_STRUCTURED_OUTPUT_CHAT_MODELS`, `false` otherwise                                |
 
 Subclasses can override to narrow the capability. When extending an
 adapter for a custom model that doesn't support the combination, return

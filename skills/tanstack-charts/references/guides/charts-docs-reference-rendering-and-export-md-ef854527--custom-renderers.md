@@ -1,6 +1,6 @@
 # Rendering And Export — Custom renderers
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Custom renderers
 
@@ -110,8 +110,26 @@ interface ChartRenderContext<
 | `paintFocus()`                  | Paint or clear authored focus layers and guides, then optionally return the destination scene used for subsequent pointer hits |
 | `destroy()`                     | Release renderer-owned animation, observers, listeners, and resources                                                          |
 
+### Rectangle geometry helpers
+
+Custom rectangle renderers can share the built-in corner-fit policy:
+
+```ts
+import {
+  rectCornerRadiiPath,
+  resolveRectCornerRadii,
+} from '@tanstack/charts/renderer/rect'
+```
+
+`resolveRectCornerRadii(corners, width, height)` changes invalid or negative
+values to zero and proportionally fits adjacent radii within the rectangle.
+`rectCornerRadiiPath(x, y, width, height, corners)` serializes the same
+normalized geometry as a stable SVG path. The helper accepts reversed width or
+height and keeps the tuple in physical corner order.
+
 `requestRender()` asks the shared host to rebuild and repaint on its next
-animation frame; ordinary requests proceed only when responsive width changed.
+animation frame; ordinary requests proceed only when a container-owned width
+or height changed.
 `requestRender(true)` forces the work when renderer state changed without a
 width or chart-option change, such as device-pixel ratio or resolved theme
 colors. Requests made before the same frame are coalesced.

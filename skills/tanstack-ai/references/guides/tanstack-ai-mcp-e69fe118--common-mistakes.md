@@ -1,6 +1,6 @@
 # Ai Mcp — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.9`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 ## Common Mistakes
 
@@ -13,10 +13,20 @@ in-flight tool calls will fail.
 Wrong:
 
 ```typescript
-const tools = await client.tools()
-const stream = chat({ adapter, messages, tools })
-await client.close() // closes before the stream runs tools
-return toServerSentEventsResponse(stream)
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+import { createMCPClient } from '@tanstack/ai-mcp'
+
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+  const client = await createMCPClient({
+    transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  })
+  const tools = await client.tools()
+  const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
+  await client.close() // closes before the stream runs tools
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 This includes `try/finally` around the `return`, and `await using` at function
@@ -28,26 +38,30 @@ before closing:
 
 ```typescript
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
-const client = await createMCPClient({
-  transport: { type: 'http', url: '...' },
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+  const client = await createMCPClient({
+    transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  })
 
-const stream = chat({
-  adapter: openaiText('gpt-5.5'),
-  messages,
-  tools: await client.tools(),
-  middleware: [
-    {
-      name: 'mcp-close',
-      onFinish: () => client.close(),
-      onAbort: () => client.close(),
-      onError: () => client.close(),
-    },
-  ],
-})
-return toServerSentEventsResponse(stream)
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    tools: await client.tools(),
+    middleware: [
+      {
+        name: 'mcp-close',
+        onFinish: () => client.close(),
+        onAbort: () => client.close(),
+        onError: () => client.close(),
+      },
+    ],
+  })
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 ### b. HIGH: importing `stdioTransport` from the main entry point
@@ -58,7 +72,7 @@ bundle Node.js child-process code into edge bundles.
 
 Wrong:
 
-```typescript
+```typescript ignore
 import { stdioTransport } from '@tanstack/ai-mcp' // does not exist here
 ```
 

@@ -1,6 +1,6 @@
 # Adapter Configuration — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Setup
 
@@ -10,16 +10,20 @@ Create an adapter and use it with `chat()`:
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
-const stream = chat({
-  adapter: openaiText('gpt-5.2'),
-  messages,
-  modelOptions: {
-    temperature: 0.7,
-    max_output_tokens: 1000,
-  },
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-return toServerSentEventsResponse(stream)
+  const stream = chat({
+    adapter: openaiText('gpt-5.2'),
+    messages,
+    modelOptions: {
+      temperature: 0.7,
+      max_output_tokens: 1000,
+    },
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 The adapter factory function takes the model name as a string literal and an

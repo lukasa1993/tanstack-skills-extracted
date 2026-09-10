@@ -1,6 +1,6 @@
 # Ssr — Overview
 
-[Guide and prerequisites](./tanstack-router-core-ssr-e95e1bf1.md) · Published skill · `@tanstack/router-core@1.171.28`.
+[Guide and prerequisites](./tanstack-router-core-ssr-e95e1bf1.md) · Published skill · `@tanstack/router-core@1.171.29`.
 
 # SSR (Server-Side Rendering)
 

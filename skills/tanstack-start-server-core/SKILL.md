@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.169.17"
   tanstack-package: "@tanstack/start-server-core"
-  tanstack-package-version: "1.169.32"
+  tanstack-package-version: "1.169.33"
   tanstack-source-skill: "start-server-core"
   tanstack-sources: "[\"TanStack/router:packages/start-server-core/src\",\"TanStack/router:docs/start/framework/react/guide/server-entry-point.md\"]"
   tanstack-type: "core"

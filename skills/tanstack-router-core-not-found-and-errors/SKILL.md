@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.28"
+  tanstack-package-version: "1.171.29"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "not-found-and-errors"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/not-found-errors.md\",\"TanStack/router:docs/router/guide/route-masking.md\"]"

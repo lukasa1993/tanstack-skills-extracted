@@ -1,6 +1,6 @@
 # Layout Axes And Coordinates — Scale ranges and coordinate direction
 
-[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Scale ranges and coordinate direction
 

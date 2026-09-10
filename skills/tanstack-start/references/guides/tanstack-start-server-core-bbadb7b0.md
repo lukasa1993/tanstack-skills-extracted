@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-start-server-core"></a>
 
-Published skill · `@tanstack/start-server-core@1.169.32`.
+Published skill · `@tanstack/start-server-core@1.169.33`.
 
 [Topic index](../server-runtime.md) · [Source provenance](../SOURCES.md)
 

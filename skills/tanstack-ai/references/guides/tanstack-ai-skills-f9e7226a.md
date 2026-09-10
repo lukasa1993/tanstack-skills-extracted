@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-skills"></a>
 
-Published skill · `@tanstack/ai-skills@0.1.2`.
+Published skill · `@tanstack/ai-skills@0.1.3`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 
@@ -39,11 +39,17 @@ const pptx = inlineSkill({
   instructions: '# Building a deck\nUse python-pptx. Edit slides, then save.',
 })
 
-const stream = chat({
-  adapter: anthropicText('claude-sonnet-4-5'),
-  messages,
-  middleware: [withSkills(pptx)],
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const stream = chat({
+    adapter: anthropicText('claude-sonnet-4-6'),
+    messages,
+    middleware: [withSkills(pptx)],
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 `withSkills` adds a catalog to the system prompt and a `load_skill` tool whose
@@ -81,9 +87,11 @@ your own execution tool to `chat({ tools })` alongside `withSkills` and write th
 skill so it tells the model to call that tool. `withSkills` composes with any
 tools you provide.
 
-```ts ignore
+```ts
 import { toolDefinition } from '@tanstack/ai'
 import { z } from 'zod'
+// Your own runner: a provider sandbox, a Code Mode isolate, a remote worker.
+import { runSomewhere } from './shell'
 
 const executeShell = toolDefinition({
   name: 'execute_shell',
@@ -107,6 +115,10 @@ Implement `SkillSource` (`list` + `load`, optional `revision`/`listResources`/
 
 ```typescript
 import { runSkillSourceConformance } from '@tanstack/ai-skills/testing'
+// Your SkillSource implementation, seeded with the `alpha` / `beta` fixture
+// skills the suite expects.
+import { myS3Source } from './my-s3-source'
+import { fixtures } from './fixtures'
 
 runSkillSourceConformance(() => myS3Source(fixtures), 's3')
 ```

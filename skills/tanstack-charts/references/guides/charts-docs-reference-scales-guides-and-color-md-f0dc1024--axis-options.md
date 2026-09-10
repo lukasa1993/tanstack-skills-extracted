@@ -1,6 +1,6 @@
 # Scales Guides And Color — Axis options
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Axis options
 
@@ -12,16 +12,24 @@ interface ChartPositionScaleOptions<
   side?: 'top' | 'right' | 'bottom' | 'left'
 }
 
+interface ChartGuideLineStyle {
+  stroke?: string
+  strokeOpacity?: number
+  strokeWidth?: number
+  strokeDasharray?: string
+  lineCap?: 'butt' | 'round' | 'square'
+}
+
 interface ChartAxisOptions<TValue extends ChartValue> {
   scale: ChartScale | ChartScaleInput<TValue>
   nice?: boolean | number
   reverse?: boolean
   viewport?: ChartAxisViewportOptions<Extract<TValue, ChartContinuousValue>>
-  grid?: boolean
+  grid?: boolean | ChartGuideLineStyle
   axis?:
     | false
     | {
-        line?: boolean
+        line?: boolean | ChartGuideLineStyle
         ticks?:
           | false
           | {
@@ -76,7 +84,17 @@ interface ChartAxisOptions<TValue extends ChartValue> {
                     keep?: readonly TValue[]
                   }
             }
-        label?: string | { text: string; offset?: number | 'auto' }
+        label?:
+          | string
+          | {
+              text: string
+              offset?: number | 'auto'
+              fontSize?: number
+              fontWeight?: number
+              fill?: string
+              opacity?: number
+              motion?: ChartMotionDefinition
+            }
       }
 }
 ```
@@ -87,10 +105,16 @@ interface ChartAxisOptions<TValue extends ChartValue> {
 | `nice`     | `false`                      | Nice the resolved domain using the responsive or supplied tick count.    |
 | `reverse`  | `false`                      | Reverses the responsive pixel range without changing the caller's scale. |
 | `viewport` | None                         | Commits a continuous semantic window and optional transient translation. |
-| `grid`     | `false` for x; `true` for y  | Draws grid rules from semantic tick candidates.                          |
+| `grid`     | `false`                      | Draws grid rules from semantic tick candidates.                          |
 | `axis`     | Inferred axis                | Axis line, tick candidates, labels, and title; `false` hides the axis.   |
 | `channel`  | Inferred for `x` and `y`     | Required on named scales; selects the Cartesian channel and range.       |
 | `side`     | `bottom` for x; `left` for y | Places an x axis on top/bottom or a y axis on left/right.                |
+
+Set `grid` or `axis.line` to a `ChartGuideLineStyle` object to enable the
+guide and override its stroke, opacity, width, dash pattern, or line cap.
+Omitted style fields keep the normal theme defaults. An empty object is
+equivalent to `true`, and `axis.line` styles only the axis baseline, not its
+tick stubs. Use finite non-negative widths and opacity values from zero to one.
 
 ```ts
 type ChartContinuousValue = number | Date
@@ -191,8 +215,33 @@ const x = {
 }
 ```
 
-`anchor` defaults to the rotation-derived x anchor or `end` on y. `dx` and
+`anchor` defaults to an outward anchor derived from x rotation or the y-axis
+side. The automatic value accounts for the host's inline direction. `dx` and
 `dy` apply after the normal tick position and padding. Resolved font size,
 weight, anchor, offset, opacity, and rotation all participate in collision
 thinning and automatic margins. Numeric typography follows tick-label motion;
 anchor changes snap.
+
+Axis titles keep the compact string form when only text is needed. Use the
+object form for title typography, paint, offset, or motion:
+
+```ts
+const y = {
+  scale: scaleLinear,
+  axis: {
+    label: {
+      text: 'Average order value (PLN)',
+      fontSize: 14,
+      fontWeight: 500,
+      fill: '#363636',
+      opacity: 0.9,
+    },
+  },
+}
+```
+
+`fill` sets the text color. Omitted presentation fields retain the existing
+title defaults: responsive 10 or 11 pixel sizing on x, 11 pixels on y, weight
+600, theme foreground fill, and 0.76 fill opacity. Configured font size and
+weight participate in text measurement, automatic offsets, and automatic
+margins for SVG, Canvas, and native rendering.

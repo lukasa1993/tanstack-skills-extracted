@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 1. Adapter Selection
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 1. Adapter Selection
 
@@ -30,7 +30,7 @@ The text adapter is the primary one for chat/completions:
 
 ```typescript
 // Each factory takes model as first arg, optional config as second
-import { openaiText } from '@tanstack/ai-openai'
+import { openaiText, createOpenaiChat } from '@tanstack/ai-openai'
 import { anthropicText } from '@tanstack/ai-anthropic'
 import { geminiText } from '@tanstack/ai-gemini'
 import { grokText } from '@tanstack/ai-grok'
@@ -44,17 +44,16 @@ import { byteplusText } from '@tanstack/ai-byteplus'
 const adapter = openaiText('gpt-5.2')
 const adapter2 = anthropicText('claude-sonnet-4-6')
 const adapter3 = geminiText('gemini-2.5-pro')
-const adapter4 = grokText('grok-4')
+const adapter4 = grokText('grok-4.6')
 const adapter5 = groqText('llama-3.3-70b-versatile')
 const adapter6 = openRouterText('anthropic/claude-sonnet-4')
-const adapter7 = ollamaText('llama3.3')
+const adapter7 = ollamaText('llama3.3:latest')
 const adapter8 = bedrockText('us.anthropic.claude-3-7-sonnet-20250219-v1:0')
 const adapter9 = byteplusText('seed-2-0-lite-260428')
 
-// Optional: pass explicit API key
-const adapterWithKey = openaiText('gpt-5.2', {
-  apiKey: 'sk-...',
-})
+// Optional: pass an explicit API key via the create* sibling
+// (the plain factory reads it from the environment)
+const adapterWithKey = createOpenaiChat('gpt-5.2', 'sk-...')
 ```
 
 `@tanstack/ai-bedrock` (Amazon Bedrock) branches on `config.api`:

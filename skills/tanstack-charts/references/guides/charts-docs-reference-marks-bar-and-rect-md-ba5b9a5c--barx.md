@@ -1,6 +1,6 @@
 # Bar And Rect — `barX`
 
-[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## `barX`
 
@@ -37,7 +37,7 @@ Its options transpose `barY`:
 | `layout`       | `GroupLayout \| StackLayout`         | Implicit diverging stack       | Configures grouping or stack order/offset   |
 | `inset`        | `number`                             | `0`                            | Pixels removed from both categorical edges  |
 | `maxThickness` | `number`                             | Unbounded                      | Maximum painted height after grouping/inset |
-| `radius`       | `number`                             | None                           | Corner radius                               |
+| `radius`       | `BarRadius<TDatum>`                  | None                           | Uniform, physical, or semantic end radii    |
 | `states`       | `readonly ChartMarkState[]`          | None                           | Focus-driven presentation overrides         |
 
 The interaction point is at the `x2`/`x` endpoint and group-band center.

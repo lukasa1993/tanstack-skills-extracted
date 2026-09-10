@@ -1,6 +1,6 @@
 # Scales And D3 — Overview
 
-[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 TanStack Charts accepts callable, copyable scale factories and instances. Start
 with the exact compact scale entry that matches the mapping. Upgrade only the

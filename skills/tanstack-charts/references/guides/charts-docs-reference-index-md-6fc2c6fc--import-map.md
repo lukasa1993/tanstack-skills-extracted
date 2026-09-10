@@ -1,6 +1,6 @@
 # Index — Import map
 
-[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Import map
 
@@ -68,7 +68,7 @@ aggregate `/scales` export.
 | `@tanstack/charts/interaction/brush`    | `brushX` and horizontal-brush range, change, source, target, and option types                                                                                                                                                   |
 | `@tanstack/charts/interaction/cursor`   | `continuousCursor` and continuous-cursor position, change, guide, label, and option types                                                                                                                                       |
 | `@tanstack/charts/interaction/signal`   | `controlledSignal`, `ControlledSignal`, `ControlledSignalChangeContext`                                                                                                                                                         |
-| `@tanstack/charts/interaction/zoom`     | `zoomX`, `ZoomXValue`, `ZoomXWindow`, `ZoomXSource`, `ZoomXAction`, `ZoomXChange`, and `ZoomXOptions`                                                                                                                           |
+| `@tanstack/charts/interaction/zoom`     | `zoomX`, `ZoomXValue`, `ZoomXWindow`, `ZoomXSource`, `ZoomXAction`, `ZoomXWheelActivation`, `ZoomXChange`, and `ZoomXOptions`                                                                                                   |
 | `@tanstack/charts/legend`               | `colorLegend`, `colorGradientLegend`, `interactiveColorLegend`, `InteractiveColorLegendItemContext`, and legend option/change types                                                                                             |
 | `@tanstack/charts/line`                 | `lineY`, `lineX`, `LineYOptions`, and `LineXOptions`                                                                                                                                                                            |
 | `@tanstack/charts/regression`           | `linearRegressionRowsY`, `linearRegressionRowsX`, `linearRegressionY`, `linearRegressionX`, derived datum types, and option types                                                                                               |
@@ -85,6 +85,7 @@ aggregate `/scales` export.
 | `@tanstack/charts/reconcile`            | `reconcileChartSvg`, `reconcileChartSvgFragment`                                                                                                                                                                                |
 | `@tanstack/charts/rect`                 | `rect`, `cell`                                                                                                                                                                                                                  |
 | `@tanstack/charts/renderer`             | `mountChartRenderer` and `resolveChartRenderer`                                                                                                                                                                                 |
+| `@tanstack/charts/renderer/rect`        | `resolveRectCornerRadii` and `rectCornerRadiiPath` for portable rectangle rendering                                                                                                                                             |
 | `@tanstack/charts/ridgeline`            | `ridgelineY`, `ridgelineX`, `RidgelineYOptions`, `RidgelineXOptions`, `RidgelinePosition`, `RidgelineCurve`, and `RidgelineStateStyle`                                                                                          |
 | `@tanstack/charts/rule`                 | `ruleX`, `ruleY`                                                                                                                                                                                                                |
 | `@tanstack/charts/runtime`              | `createChartRuntime`, `isResponsiveChartDefinition`                                                                                                                                                                             |

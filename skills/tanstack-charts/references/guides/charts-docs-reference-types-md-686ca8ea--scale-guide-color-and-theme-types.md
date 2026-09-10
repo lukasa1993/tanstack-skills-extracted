@@ -1,6 +1,6 @@
 # Types — Scale, guide, color, and theme types
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Scale, guide, color, and theme types
 
@@ -13,14 +13,14 @@
 | `ChartAxisSide`                 | Cartesian axis side                                                   |
 | `CartesianScaleBindings`        | Optional mark bindings to named `xScale` and `yScale` entries         |
 | `ChartAxisViewportOptions`      | Continuous semantic window and transient pixel translation            |
-| `ChartAxisGuideOptions`         | Guide behavior without the scale field                                |
+| `ChartGuideLineStyle`           | Static guide stroke treatment                                         |
 | `ChartAxisPresentationOptions`  | Axis line, ticks, tick labels, and title presentation                 |
 | `ChartAxisTickOptions`          | Candidate values, density, formatting, size, and padding              |
 | `ChartAxisTickLabelOptions`     | Per-candidate typography, anchor, offset, rotation, and thinning      |
 | `ChartAxisTickLabelContext`     | Semantic value, stable candidate index, pixel position, and bandwidth |
 | `ChartAxisTickLabelValue`       | Constant or context accessor for one tick-label property              |
 | `ChartAxisTickLabelThinOptions` | Minimum gap, end priority, and labels that must be kept               |
-| `ChartAxisLabelOptions`         | Axis title text and explicit or measured offset                       |
+| `ChartAxisLabelOptions`         | Axis title text, typography, paint, motion, and offset                |
 | `ChartScaleFactory`             | Creates a positional scale with a mark-inferred domain                |
 | `ChartScaleInput`               | Factory or configured positional scale instance                       |
 | `InferableScaleLike`            | Domain-configurable scale returned by a factory                       |
@@ -42,15 +42,18 @@
 | `ResolvedColorScale`            | Resolved mapping and optional stepped legend boundaries               |
 | `ResolvedColorScaleKind`        | Categorical, continuous, quantile, quantize, or threshold             |
 | `ChartColorLegend`              | Legend layout and scene rendering                                     |
-| `ChartColorLegendContext`       | Resolved colors, chart bounds, theme, and width                       |
+| `ChartColorLegendContext`       | Resolved colors, chart bounds, theme, layout, and viewport size       |
 | `CrosshairOptions`              | Data-less x/y guides, marker, style, and motion options               |
 | `CrosshairRuleOptions`          | Stroke shared by both crosshair axes or overridden per axis           |
 | `CrosshairAxisOptions`          | Per-axis rule or categorical band with an optional label              |
 | `CrosshairBandOptions`          | Categorical cursor-band inset, radius, fill, stroke, and opacity      |
 | `CrosshairLabelOptions`         | Guide label formatting, spacing, text, and halo paint                 |
 | `CrosshairMarkerOptions`        | Primary-coordinate marker geometry and paint                          |
-| `ChartTheme`                    | Foreground, muted, grid, background, and palette                      |
+| `ChartTheme`                    | Foreground, muted, grid, background, palette, and focus ring defaults |
+| `ChartGradient`                 | Linear or radial chart-gradient resource union                        |
+| `ChartGradientBase`             | Shared gradient ID and stops                                          |
 | `ChartLinearGradient`           | Named linear-gradient resource                                        |
+| `ChartRadialGradient`           | Named radial-gradient resource                                        |
 | `ChartGradientStop`             | Gradient offset, color, and optional opacity                          |
 | `ChartCurve`                    | Line and y-area path generation                                       |
 

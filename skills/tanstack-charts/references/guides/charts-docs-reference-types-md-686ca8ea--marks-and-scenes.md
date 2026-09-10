@@ -1,6 +1,6 @@
 # Types — Marks and scenes
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Marks and scenes
 
@@ -10,6 +10,10 @@
 | `ChartMarkOptions`                 | Shared optional mark renderer contract                                               |
 | `ChartMarkRenderer`                | Universal renderer-selection token stored on mark-owned scene nodes                  |
 | `CartesianChartMark`               | Cartesian mark alias that derives selected x and y scale IDs from its options        |
+| `RectCornerRadii`                  | Physical top-left, top-right, bottom-right, and bottom-left radius tuple             |
+| `RectRadius`                       | Uniform numeric radius or physical per-corner tuple                                  |
+| `BarEndRadius`                     | Semantic bar-end radius with optional outer-stack or per-segment behavior            |
+| `BarRadius`                        | Uniform, physical, accessor, or semantic bar-end radius                              |
 | `OptionScaleId`                    | Resolves an optional named-scale selector to its fallback scale ID                   |
 | `MarkInitializeContext`            | Mark layer index                                                                     |
 | `InitializedMark`                  | Stable ID, channels, viewport ownership, render, and optional resolved layout        |

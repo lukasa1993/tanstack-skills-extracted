@@ -1,6 +1,6 @@
 # Scales And D3 — Fixed domains remain application semantics
 
-[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Fixed domains remain application semantics
 

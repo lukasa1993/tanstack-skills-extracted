@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-search-params"></a>
 
-Published skill · `@tanstack/router-core@1.171.28`.
+Published skill · `@tanstack/router-core@1.171.29`.
 
 [Topic index](../urls-navigation.md) · [Source provenance](../SOURCES.md)
 

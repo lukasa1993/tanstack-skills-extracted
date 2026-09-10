@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Common Mistakes
 
@@ -11,7 +11,7 @@ causing events to arrive in batches instead of streaming token-by-token.
 
 Fix: Set proxy-bypass headers on the response.
 
-```typescript
+```typescript group=sse-response
 toServerSentEventsResponse(stream, {
   headers: {
     'X-Accel-Buffering': 'no', // nginx

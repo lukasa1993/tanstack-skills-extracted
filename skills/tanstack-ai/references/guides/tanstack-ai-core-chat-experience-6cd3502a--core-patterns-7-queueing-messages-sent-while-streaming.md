@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 7. Queueing Messages Sent While Streaming
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 7. Queueing Messages Sent While Streaming
 
@@ -45,18 +45,36 @@ generation, `stop()`, `clear()`, `unsubscribe()`, and `reload()`.
 from `messages` — render pending sends distinctly and cancel with
 `cancelQueued(id)`:
 
-```typescript
-{queue.map((q) => (
-  <div key={q.id}>
-    {typeof q.content === 'string' ? q.content : '[attachment]'}
-    <button onClick={() => cancelQueued(q.id)}>Cancel</button>
-  </div>
-))}
+```tsx
+import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
+
+function QueuedMessages() {
+  const { queue, cancelQueued } = useChat({
+    connection: fetchServerSentEvents('/api/chat'),
+  })
+
+  return (
+    <div>
+      {queue.map((q) => (
+        <div key={q.id}>
+          {typeof q.content === 'string' ? q.content : '[attachment]'}
+          <button onClick={() => cancelQueued(q.id)}>Cancel</button>
+        </div>
+      ))}
+    </div>
+  )
+}
 ```
 
 Override the configured policy for a single send with the second argument
 to `sendMessage`:
 
 ```typescript
+import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
+
+const { sendMessage } = useChat({
+  connection: fetchServerSentEvents('/api/chat'),
+})
+
 sendMessage('Never mind, do this instead', { whenBusy: 'interrupt' })
 ```

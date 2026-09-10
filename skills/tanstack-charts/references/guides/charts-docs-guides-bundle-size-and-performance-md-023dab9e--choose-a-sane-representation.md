@@ -1,6 +1,6 @@
 # Bundle Size And Performance — Choose a sane representation
 
-[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Choose a sane representation
 

@@ -1,6 +1,6 @@
 # Bundle Size And Performance — Import the narrow path
 
-[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Import the narrow path
 
@@ -145,7 +145,7 @@ Horizontal zoom is exact-subpath-only through
 behavior, final-scale interaction axis, DOM host control, `d3-zoom`, and
 `d3-selection` only for a consumer that imports it. Root, universal, ordinary
 DOM, brush, cursor, legend, and selection consumers retain none of those
-modules. Its incremental DOM-host fixture adds 20.28 KiB gzip under a 20.35 KiB
+modules. Its incremental DOM-host fixture adds 20.41 KiB gzip under a 20.55 KiB
 cap.
 
 Your bundler must honor ESM exports and tree shaking. Avoid namespace imports
@@ -163,14 +163,14 @@ const interactive = defineChart(definition, {
 })
 ```
 
-The locked compact React line consumer must remain at or below 26.6 KiB gzip.
+The locked compact React line consumer must remain at or below 31.03 KiB gzip.
 Its retained-module gate rejects tooltip, portal, `d3-scale`, `d3-format`,
 `d3-interpolate`, `d3-color`, transforms, and sibling compact-scale entries.
 Separate incremental gates limit tooltip and portal growth.
 
-The current locked fixtures measure the compact line scene at 10,526 gzip bytes
-versus 17,646 with D3 linear scales. The equivalent React consumers measure
-27,114 and 34,171 gzip bytes with React and React DOM external. These are
+The current locked fixtures measure the compact line scene at 12,726 gzip bytes
+versus 19,890 with D3 linear scales. The equivalent React consumers measure
+31,742 and 38,843 gzip bytes with React and React DOM external. These are
 fixture measurements, not universal savings claims; they show why the compact
 subset is the normal starting point.
 

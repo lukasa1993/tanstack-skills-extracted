@@ -1,6 +1,6 @@
 # Tool Calling — MCP Tools
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## MCP Tools
 
@@ -17,48 +17,41 @@ See the `@tanstack/ai-mcp` skill for the full MCP Apps API
 ### Basic usage — auto-discovery
 
 ```typescript
-// src/routes/api.chat.ts
-import { createFileRoute } from '@tanstack/react-router'
+// api/chat/route.ts
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
-export const Route = createFileRoute('/api/chat')({
-  server: {
-    handlers: {
-      POST: async ({ request }) => {
-        const { messages } = await request.json()
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-        // 1. Connect to the MCP server.
-        const mcp = await createMCPClient({
-          transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
-        })
+  // 1. Connect to the MCP server.
+  const mcp = await createMCPClient({
+    transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  })
 
-        // 2. Discover all tools from the server (returns ServerTool[]).
-        const mcpTools = await mcp.tools()
+  // 2. Discover all tools from the server (returns ServerTool[]).
+  const mcpTools = await mcp.tools()
 
-        // 3. Spread them into chat() — they work exactly like hand-written tools.
-        // Caller owns the lifecycle — chat() never closes the client. Tools run
-        // while the response streams, so close in a middleware terminal hook
-        // (a try/finally around the return would close before tools execute).
-        const stream = chat({
-          adapter: openaiText('gpt-5.5'),
-          messages,
-          tools: [...mcpTools],
-          middleware: [
-            {
-              name: 'mcp-close',
-              onFinish: () => mcp.close(),
-              onAbort: () => mcp.close(),
-              onError: () => mcp.close(),
-            },
-          ],
-        })
-        return toServerSentEventsResponse(stream)
+  // 3. Spread them into chat() — they work exactly like hand-written tools.
+  // Caller owns the lifecycle — chat() never closes the client. Tools run
+  // while the response streams, so close in a middleware terminal hook
+  // (a try/finally around the return would close before tools execute).
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    tools: [...mcpTools],
+    middleware: [
+      {
+        name: 'mcp-close',
+        onFinish: () => mcp.close(),
+        onAbort: () => mcp.close(),
+        onError: () => mcp.close(),
       },
-    },
-  },
-})
+    ],
+  })
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 ### Typed path — pass toolDefinition instances
@@ -68,7 +61,8 @@ The MCP client supplies a `callTool` proxy as the execute function, while
 input/output validation and types come from the definitions' Zod schemas.
 
 ```typescript
-import { toolDefinition } from '@tanstack/ai'
+import { chat, toolDefinition } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 import { z } from 'zod'
 
@@ -87,12 +81,15 @@ const mcp = await createMCPClient({
 // Throws MCPToolNotFoundError if the server does not expose a tool with that name.
 const tools = await mcp.tools([getWeather])
 
+const messages = [{ role: 'user' as const, content: 'Weather in Paris?' }]
 const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
 ```
 
 ### Multiple servers with `createMCPClients`
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClients } from '@tanstack/ai-mcp'
 
 // Each key becomes the default prefix for that server's tools.
@@ -104,6 +101,7 @@ await using pool = await createMCPClients({
 // Tools auto-prefixed: 'github_search_repos', 'linear_create_issue', etc.
 const tools = await pool.tools()
 
+const messages = [{ role: 'user' as const, content: 'Open an issue for #42' }]
 const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
 ```
 
@@ -120,9 +118,18 @@ cancelled automatically.
 You can also forward it from your own server tools:
 
 ```typescript
-const longRunningTool = myToolDef.server(async (args, ctx) => {
+import { toolDefinition } from '@tanstack/ai'
+import { z } from 'zod'
+
+const fetchReportDef = toolDefinition({
+  name: 'fetch_report',
+  description: 'Fetch a report from the slow reporting API',
+  inputSchema: z.object({ reportId: z.string() }),
+})
+
+const fetchReport = fetchReportDef.server(async ({ reportId }, ctx) => {
   // Forward to fetch, a DB query, or an MCP callTool call.
-  const response = await fetch('https://slow.api/data', {
+  const response = await fetch(`https://slow.api/reports/${reportId}`, {
     signal: ctx?.abortSignal,
   })
   return response.json()
@@ -181,37 +188,31 @@ Instead of manually calling `client.tools()` and managing `close()`, pass an
 **Example:**
 
 ```typescript
-import { createFileRoute } from '@tanstack/react-router'
+// api/chat/route.ts
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
-export const Route = createFileRoute('/api/chat')({
-  server: {
-    handlers: {
-      POST: async ({ request }) => {
-        const { messages } = await request.json()
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-        const mcpClient = await createMCPClient({
-          transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
-        })
+  const mcpClient = await createMCPClient({
+    transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  })
 
-        const stream = chat({
-          adapter: openaiText('gpt-5.5'),
-          messages,
-          mcp: {
-            clients: [mcpClient],
-            connection: 'keep-alive',
-            onDiscoveryError: (err, source) => {
-              console.warn('MCP discovery failed, skipping source:', err)
-              // returning (not throwing) skips this source and continues
-            },
-          },
-        })
-
-        return toServerSentEventsResponse(stream)
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    mcp: {
+      clients: [mcpClient],
+      connection: 'keep-alive',
+      onDiscoveryError: (err) => {
+        console.warn('MCP discovery failed, skipping source:', err)
+        // returning (not throwing) skips this source and continues
       },
     },
-  },
-})
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```

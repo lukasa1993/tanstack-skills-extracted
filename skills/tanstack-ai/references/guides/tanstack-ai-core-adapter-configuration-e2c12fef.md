@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-adapter-configuration"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -16,8 +16,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Core Patterns: 2. Runtime Adapter Switching](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-2-runtime-adapter-switching.md) — 2 KiB
 - [Core Patterns: 3. Configuring Reasoning / Thinking](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-3-configuring-reasoning-thinking.md) — 2 KiB
 - [Core Patterns: 4. Extending Adapters with Custom Models](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-4-extending-adapters-with-custom-models.md) — 2 KiB
-- [Core Patterns: 5. Configuring Sampling](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-5-configuring-sampling.md) — 3 KiB
-- [Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-capability-flag-supportscombinedtoolsandschema.md) — 3 KiB
+- [Core Patterns: 5. Configuring Sampling](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-5-configuring-sampling.md) — 4 KiB
+- [Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-capability-flag-supportscombinedtoolsandschema.md) — 4 KiB
 - [Core Patterns: 6. OpenAI-Compatible Providers](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-openai-compatible-providers.md) — 3 KiB
 - [Behind a proxy or gateway](./tanstack-ai-core-adapter-configuration-e2c12fef--behind-a-proxy-or-gateway.md) — 1 KiB
 - [Common Mistakes](./tanstack-ai-core-adapter-configuration-e2c12fef--common-mistakes.md) — 3 KiB

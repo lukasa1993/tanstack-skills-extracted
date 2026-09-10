@@ -2,9 +2,29 @@
 
 <a id="source-charts-packages-react-native-charts-readme-md"></a>
 
-Release-matched documentation · `@tanstack/react-native-charts@0.16.2`.
+Release-matched documentation · `@tanstack/react-native-charts@0.18.0`.
 
 [Topic index](../framework-react-native.md) · [Source provenance](../SOURCES.md)
+
+<div align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://tanstack.com/api/readme/charts.png?title=TanStack%20React%20Native%20Charts&theme=dark"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://tanstack.com/api/readme/charts.png?title=TanStack%20React%20Native%20Charts"
+    />
+    <img
+      src="https://tanstack.com/api/readme/charts.png?title=TanStack%20React%20Native%20Charts"
+      alt="TanStack React Native Charts"
+      width="900"
+    />
+  </picture>
+</div>
+
+# TanStack React Native Charts
 
 This compatibility package remains supported for existing applications. New
 applications use the experimental React Native SVG host from
@@ -65,13 +85,20 @@ export function RevenueChart() {
 `fontFamily`, `fontStyle`, `fontStretch`, `letterSpacing`, `direction`,
 `locale`, and `fontScale` are passed to the synchronous `measureText` contract.
 The SVG painter applies the corresponding family, style, stretch, spacing, and
-font scale. If native font metrics become available asynchronously, keep them
-in application state and render the chart again with an updated `measureText`
-function or typography prop.
+font scale. Set `direction="rtl"` explicitly when the chart reads right to left;
+the native painter preserves logical `start` and `end` anchors. If native font
+metrics become available asynchronously, keep them in application state and
+render the chart again with an updated `measureText` function or typography
+prop.
 
 Exact core subpaths keep Metro from retaining unrelated universal-entry
 exports. The `/universal` barrel remains valid when portability matters more
 than the native bundle floor.
+
+`focusFill` supplies the native `Canvas` fallback for the built-in focus ring's
+default CSS-variable fill and for line-dot legend centers when the chart
+background is transparent. Set it to the host background in dark themes. A
+literal `definition.focusRing.fill` takes precedence.
 
 The bare fixture uses React Native 0.86.2 with `react-native-svg` 15.15.5. The
 Expo 57 fixture uses `react-native-svg` 15.15.4 and renders in Expo Go on an iOS

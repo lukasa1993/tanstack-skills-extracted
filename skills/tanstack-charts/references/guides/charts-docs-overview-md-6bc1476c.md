@@ -2,12 +2,12 @@
 
 <a id="source-charts-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../getting-started.md) · [Source provenance](../SOURCES.md)
 
 These docs follow unreleased `main`, the official Alpha line. The latest
-published TanStack Charts release is `0.16.2`. Alpha uses regular `0.x`
+published TanStack Charts release is `0.18.0`. Alpha uses regular `0.x`
 versions, and APIs may change between minor releases. See
 [Alpha stability](./charts-docs-stability-md-45da0c9d.md#source-charts-docs-stability-md) for the release contract.
 

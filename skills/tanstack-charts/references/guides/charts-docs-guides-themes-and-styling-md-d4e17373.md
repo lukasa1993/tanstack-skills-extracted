@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-themes-and-styling-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../composition.md) · [Source provenance](../SOURCES.md)
 
@@ -96,6 +96,37 @@ Keep these responsibilities separate:
 For categorical or quantitative color mapping, use the canonical
 [Legends and Color](./charts-docs-guides-legends-and-color-md-715f4e34.md#source-charts-docs-guides-legends-and-color-md) guide.
 
+## Axis title styling
+
+String axis titles use the chart foreground and built-in title typography.
+Use the object form when one title needs an explicit text color, opacity, size,
+weight, or offset:
+
+```ts
+const definition = defineChart({
+  marks,
+  scales: {
+    x: { scale: xScale, axis: { label: 'Month' } },
+    y: {
+      scale: yScale,
+      axis: {
+        label: {
+          text: 'Revenue (USD)',
+          fontSize: 14,
+          fontWeight: 700,
+          fill: '#2563eb',
+          opacity: 0.85,
+        },
+      },
+    },
+  },
+})
+```
+
+`fill` is the title's text color. The layout measures the configured font size
+and weight before resolving automatic guide margins, so larger titles do not
+need matching manual margins.
+
 ## Canvas styling
 
 The Canvas renderer resolves scene paints such as `currentColor` and CSS
@@ -176,9 +207,13 @@ share a document.
 Set `clip: true` when marks should be clipped to the resolved plot rectangle.
 Clipping is a geometry policy, not a substitute for correct scale domains.
 
-Canvas consumes the same declared gradients and group clips. A Canvas gradient
-needs measurable node bounds; path-only geometry with no point bounds should
-use an explicit paint instead.
+SVG and React Native consume both linear and radial gradients for fills and
+strokes. Canvas consumes linear fills and strokes plus radial fills. It maps a
+radial fill through each shape's normalized bounds, so a non-square shape has
+the same `objectBoundingBox` ellipse as SVG, then clips the paint to the shape.
+A Canvas gradient needs measurable node bounds; path-only geometry with no
+point bounds should use an explicit paint instead. Canvas rejects radial
+strokes because the required nonuniform transform would distort stroke width.
 
 ## HTML tooltip styling
 

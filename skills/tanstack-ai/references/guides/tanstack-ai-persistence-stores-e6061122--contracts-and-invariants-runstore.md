@@ -1,6 +1,6 @@
 # Stores — Contracts and invariants: `RunStore`
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## Contracts and invariants: `RunStore`
 
@@ -41,6 +41,9 @@ always a choice you made on purpose rather than a check that quietly did not
 run. Declare yours and the suite reports them as skipped with a reason:
 
 ```ts
+import { runPersistenceConformance } from '@tanstack/ai-persistence/testkit'
+import { persistence } from './persistence'
+
 // The shipped sqlite example implements findActiveRun and listReclaimable and
 // declares only the one it omits.
 runPersistenceConformance('sqlite', () => persistence, {
@@ -49,14 +52,16 @@ runPersistenceConformance('sqlite', () => persistence, {
 ```
 
 ```ts
+import type { RunRecord, RunStatus } from '@tanstack/ai-persistence'
+
 interface RunStore {
   // Required
-  createOrResume(
+  createOrResume: (
     input: Pick<RunRecord, 'runId' | 'threadId' | 'startedAt'> & {
       status?: RunStatus
     },
-  ): Promise<RunRecord>
-  update(
+  ) => Promise<RunRecord>
+  update: (
     runId: string,
     patch: Partial<
       Pick<
@@ -71,16 +76,16 @@ interface RunStore {
         | 'driverEpoch'
       >
     >,
-  ): Promise<void>
-  get(runId: string): Promise<RunRecord | null>
-  findActiveRun(threadId: string): Promise<RunRecord | null>
+  ) => Promise<void>
+  get: (runId: string) => Promise<RunRecord | null>
+  findActiveRun: (threadId: string) => Promise<RunRecord | null>
 
   // Optional
-  listByThread?(threadId: string): Promise<Array<RunRecord>>
-  listReclaimable?(opts: {
+  listByThread?: (threadId: string) => Promise<Array<RunRecord>>
+  listReclaimable?: (opts: {
     now: number
     ttlMs: number
-  }): Promise<Array<RunRecord>>
+  }) => Promise<Array<RunRecord>>
 }
 ```
 

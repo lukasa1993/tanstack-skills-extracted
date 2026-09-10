@@ -10,7 +10,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-comparison-md-7faf855b.md",
       "sourcePath": "docs/comparison.md",
       "bytes": 1082,
@@ -57,7 +57,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-installation-md-6ab2967d.md",
       "sourcePath": "docs/installation.md",
       "bytes": 1568,
@@ -119,7 +119,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-overview-md-6bc1476c.md",
       "sourcePath": "docs/overview.md",
       "bytes": 8425,
@@ -141,7 +141,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-quick-start-md-b139d2e1.md",
       "sourcePath": "docs/quick-start.md",
       "bytes": 4201,
@@ -163,7 +163,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-concepts-chart-definitions-md-fe2aa9fa.md",
       "sourcePath": "docs/concepts/chart-definitions.md",
       "bytes": 4347,
@@ -185,7 +185,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-concepts-data-and-channels-md-e25a7b78.md",
       "sourcePath": "docs/concepts/data-and-channels.md",
       "bytes": 11631,
@@ -207,7 +207,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-concepts-grammar-of-graphics-md-3b814e73.md",
       "sourcePath": "docs/concepts/grammar-of-graphics.md",
       "bytes": 8910,
@@ -229,7 +229,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md",
       "sourcePath": "docs/concepts/layout-axes-and-coordinates.md",
       "bytes": 2673,
@@ -263,7 +263,7 @@
         {
           "title": "Axis guide options",
           "file": "references/guides/charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a--axis-guide-options.md",
-          "bytes": 2518
+          "bytes": 2745
         },
         {
           "title": "Multiple axes",
@@ -316,7 +316,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-concepts-marks-and-layering-md-cbd6c26d.md",
       "sourcePath": "docs/concepts/marks-and-layering.md",
       "bytes": 10743,
@@ -338,7 +338,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-concepts-scales-and-d3-md-690870a4.md",
       "sourcePath": "docs/concepts/scales-and-d3.md",
       "bytes": 3233,
@@ -445,7 +445,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-choosing-a-chart-md-c305fbfb.md",
       "sourcePath": "docs/guides/choosing-a-chart.md",
       "bytes": 6306,
@@ -467,7 +467,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-typescript-md-eab57f94.md",
       "sourcePath": "docs/guides/typescript.md",
       "bytes": 5639,
@@ -489,7 +489,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-annotations-and-overlays-md-a564e52b.md",
       "sourcePath": "docs/examples/annotations-and-overlays.md",
       "bytes": 5711,
@@ -511,7 +511,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-bars-and-rankings-md-28e82163.md",
       "sourcePath": "docs/examples/bars-and-rankings.md",
       "bytes": 6061,
@@ -533,7 +533,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-distributions-md-84a67bfd.md",
       "sourcePath": "docs/examples/distributions.md",
       "bytes": 8378,
@@ -555,7 +555,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-heatmaps-and-densities-md-a788d416.md",
       "sourcePath": "docs/examples/heatmaps-and-densities.md",
       "bytes": 8253,
@@ -577,7 +577,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-index-md-af22062f.md",
       "sourcePath": "docs/examples/index.md",
       "bytes": 6757,
@@ -599,7 +599,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-intervals-and-financial-md-5f290ac4.md",
       "sourcePath": "docs/examples/intervals-and-financial.md",
       "bytes": 7037,
@@ -621,16 +621,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-lines-and-areas-md-f56bb4ec.md",
       "sourcePath": "docs/examples/lines-and-areas.md",
-      "bytes": 8548,
+      "bytes": 8735,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Choose the comparison; Start with one ordered series; Compare several series from a common baseline; Show a derived trend honestly; Compare two boundaries at their exact crossings; Add context with an interval; Annotate selected observations; Production checks",
           "file": "references/guides/charts-docs-examples-lines-and-areas-md-f56bb4ec.md",
-          "bytes": 8548
+          "bytes": 8735
         }
       ],
       "examples": []
@@ -643,7 +643,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-scatterplots-and-relationships-md-dfd185c2.md",
       "sourcePath": "docs/examples/scatterplots-and-relationships.md",
       "bytes": 6104,
@@ -665,7 +665,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-stacked-and-composition-md-e79a97ca.md",
       "sourcePath": "docs/examples/stacked-and-composition.md",
       "bytes": 9663,
@@ -687,7 +687,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-facets-and-multiple-views-md-e510b301.md",
       "sourcePath": "docs/examples/facets-and-multiple-views.md",
       "bytes": 7949,
@@ -709,16 +709,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-interactive-charts-md-2668d57c.md",
       "sourcePath": "docs/examples/interactive-charts.md",
-      "bytes": 10782,
+      "bytes": 11225,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Choose the interaction; Compare focus marks; Follow focus with a crosshair; Pin and expand rich detail; Scroll a wide schedule; Zoom and pan a time domain; Edit an interval; State and lifecycle; Production checks",
           "file": "references/guides/charts-docs-examples-interactive-charts-md-2668d57c.md",
-          "bytes": 10782
+          "bytes": 11225
         }
       ],
       "examples": []
@@ -731,7 +731,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-maps-and-spatial-md-be409a35.md",
       "sourcePath": "docs/examples/maps-and-spatial.md",
       "bytes": 10092,
@@ -753,7 +753,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md",
       "sourcePath": "docs/examples/networks-and-hierarchies.md",
       "bytes": 2188,
@@ -825,7 +825,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-polar-and-radar-md-6fe0ac13.md",
       "sourcePath": "docs/examples/polar-and-radar.md",
       "bytes": 1731,
@@ -892,16 +892,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-examples-themes-and-motion-md-37980877.md",
       "sourcePath": "docs/examples/themes-and-motion.md",
-      "bytes": 5004,
+      "bytes": 5015,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Cases; Ownership; Motion boundary; Paint boundary; Current limits",
           "file": "references/guides/charts-docs-examples-themes-and-motion-md-37980877.md",
-          "bytes": 5004
+          "bytes": 5015
         }
       ],
       "examples": []
@@ -914,10 +914,10 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md",
       "sourcePath": "docs/reference/marks/bar-and-rect.md",
-      "bytes": 1658,
+      "bytes": 1796,
       "prerequisites": [],
       "sections": [
         {
@@ -939,6 +939,11 @@
           "title": "Bar bandwidth",
           "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--bar-bandwidth.md",
           "bytes": 1326
+        },
+        {
+          "title": "Bar corner radii",
+          "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--bar-corner-radii.md",
+          "bytes": 2187
         },
         {
           "title": "Grouped bars",
@@ -963,7 +968,7 @@
         {
           "title": "`rect`",
           "file": "references/guides/charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c--rect.md",
-          "bytes": 4087
+          "bytes": 4348
         },
         {
           "title": "`cell`",
@@ -981,7 +986,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-box-md-aab0dd81.md",
       "sourcePath": "docs/reference/marks/box.md",
       "bytes": 6710,
@@ -1003,7 +1008,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-contour-md-76f842db.md",
       "sourcePath": "docs/reference/marks/contour.md",
       "bytes": 5124,
@@ -1025,7 +1030,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-density-md-a4d4a2ed.md",
       "sourcePath": "docs/reference/marks/density.md",
       "bytes": 6104,
@@ -1047,7 +1052,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-difference-md-2f5d5bad.md",
       "sourcePath": "docs/reference/marks/difference.md",
       "bytes": 8033,
@@ -1069,7 +1074,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-dodge-md-880e331b.md",
       "sourcePath": "docs/reference/marks/dodge.md",
       "bytes": 3787,
@@ -1091,7 +1096,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-dot-and-hexagon-md-df946606.md",
       "sourcePath": "docs/reference/marks/dot-and-hexagon.md",
       "bytes": 7094,
@@ -1113,7 +1118,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-hexbin-md-aeb4ac1c.md",
       "sourcePath": "docs/reference/marks/hexbin.md",
       "bytes": 4874,
@@ -1135,7 +1140,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2.md",
       "sourcePath": "docs/reference/marks/line-and-area.md",
       "bytes": 1266,
@@ -1149,12 +1154,12 @@
         {
           "title": "`lineY`",
           "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--liney.md",
-          "bytes": 3051
+          "bytes": 3327
         },
         {
           "title": "`lineX`",
           "file": "references/guides/charts-docs-reference-marks-line-and-area-md-6c72b4c2--linex.md",
-          "bytes": 990
+          "bytes": 1379
         },
         {
           "title": "`areaY`",
@@ -1187,7 +1192,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-regression-md-ff635935.md",
       "sourcePath": "docs/reference/marks/regression.md",
       "bytes": 6464,
@@ -1209,7 +1214,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-ridgeline-md-ba6db520.md",
       "sourcePath": "docs/reference/marks/ridgeline.md",
       "bytes": 6525,
@@ -1231,7 +1236,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-violin-md-83fb131b.md",
       "sourcePath": "docs/reference/marks/violin.md",
       "bytes": 6375,
@@ -1253,7 +1258,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-delaunay-md-53f33821.md",
       "sourcePath": "docs/reference/marks/delaunay.md",
       "bytes": 4984,
@@ -1275,7 +1280,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-focus-guide-md-7c751ac1.md",
       "sourcePath": "docs/reference/marks/focus-guide.md",
       "bytes": 4949,
@@ -1297,7 +1302,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-geo-md-2e4a1799.md",
       "sourcePath": "docs/reference/marks/geo.md",
       "bytes": 5048,
@@ -1319,7 +1324,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-polar-md-29a92849.md",
       "sourcePath": "docs/reference/marks/polar.md",
       "bytes": 1751,
@@ -1391,7 +1396,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-voronoi-md-4818337f.md",
       "sourcePath": "docs/reference/marks/voronoi.md",
       "bytes": 6085,
@@ -1413,7 +1418,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb.md",
       "sourcePath": "docs/reference/marks/rules-links-arrows-vectors-and-ticks.md",
       "bytes": 1466,
@@ -1465,7 +1470,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-sankey-md-7c353525.md",
       "sourcePath": "docs/reference/marks/sankey.md",
       "bytes": 9212,
@@ -1487,7 +1492,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-sunburst-md-ebf0a51e.md",
       "sourcePath": "docs/reference/marks/sunburst.md",
       "bytes": 9904,
@@ -1509,7 +1514,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-text-frame-and-facet-md-f338f5fc.md",
       "sourcePath": "docs/reference/marks/text-frame-and-facet.md",
       "bytes": 10986,
@@ -1531,7 +1536,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-treemap-md-4dc515c2.md",
       "sourcePath": "docs/reference/marks/treemap.md",
       "bytes": 8578,
@@ -1553,7 +1558,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-marks-waffle-md-b493d928.md",
       "sourcePath": "docs/reference/marks/waffle.md",
       "bytes": 6358,
@@ -1575,16 +1580,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-chart-definitions-md-6855d09b.md",
       "sourcePath": "docs/reference/chart-definitions.md",
-      "bytes": 6162,
+      "bytes": 6661,
       "prerequisites": [],
       "sections": [
         {
           "title": "`defineChart`; Static definitions; Responsive definitions; Definition behavior; Identity and updates; Types",
           "file": "references/guides/charts-docs-reference-chart-definitions-md-6855d09b.md",
-          "bytes": 6162
+          "bytes": 6661
         }
       ],
       "examples": []
@@ -1597,16 +1602,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-chart-spec-md-b8fe14b4.md",
       "sourcePath": "docs/reference/chart-spec.md",
-      "bytes": 7457,
+      "bytes": 8294,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Properties; Marks and layer order; Required positional scales; Guides and margins; Clip and gradient resources; Theme",
           "file": "references/guides/charts-docs-reference-chart-spec-md-b8fe14b4.md",
-          "bytes": 7457
+          "bytes": 8294
         }
       ],
       "examples": []
@@ -1619,7 +1624,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc.md",
       "sourcePath": "docs/reference/index.md",
       "bytes": 1045,
@@ -1653,7 +1658,7 @@
         {
           "title": "Import map",
           "file": "references/guides/charts-docs-reference-index-md-6fc2c6fc--import-map.md",
-          "bytes": 27431
+          "bytes": 27701
         }
       ],
       "examples": []
@@ -1666,7 +1671,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-types-md-686ca8ea.md",
       "sourcePath": "docs/reference/types.md",
       "bytes": 2192,
@@ -1700,7 +1705,7 @@
         {
           "title": "Marks and scenes",
           "file": "references/guides/charts-docs-reference-types-md-686ca8ea--marks-and-scenes.md",
-          "bytes": 4411
+          "bytes": 4915
         },
         {
           "title": "Scene-node types",
@@ -1710,7 +1715,7 @@
         {
           "title": "Scale, guide, color, and theme types",
           "file": "references/guides/charts-docs-reference-types-md-686ca8ea--scale-guide-color-and-theme-types.md",
-          "bytes": 5958
+          "bytes": 6282
         },
         {
           "title": "Host and runtime types",
@@ -1730,12 +1735,12 @@
         {
           "title": "Capability-specific types",
           "file": "references/guides/charts-docs-reference-types-md-686ca8ea--capability-specific-types.md",
-          "bytes": 6139
+          "bytes": 6611
         },
         {
           "title": "Mark option types",
           "file": "references/guides/charts-docs-reference-types-md-686ca8ea--mark-option-types.md",
-          "bytes": 1294
+          "bytes": 1522
         },
         {
           "title": "Correcting a type error",
@@ -1753,10 +1758,10 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe.md",
       "sourcePath": "docs/reference/focus-and-interaction.md",
-      "bytes": 2808,
+      "bytes": 2841,
       "prerequisites": [],
       "sections": [
         {
@@ -1767,7 +1772,7 @@
         {
           "title": "Default behavior",
           "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--default-behavior.md",
-          "bytes": 5539
+          "bytes": 7063
         },
         {
           "title": "Focus modes",
@@ -1807,7 +1812,7 @@
         {
           "title": "Horizontal zoom",
           "file": "references/guides/charts-docs-reference-focus-and-interaction-md-949b11fe--horizontal-zoom.md",
-          "bytes": 3043
+          "bytes": 3432
         },
         {
           "title": "Disabling chart-owned focus",
@@ -1850,7 +1855,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-motion-md-125c7e38.md",
       "sourcePath": "docs/reference/motion.md",
       "bytes": 1347,
@@ -1907,16 +1912,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-runtime-and-scene-md-e3fcc593.md",
       "sourcePath": "docs/reference/runtime-and-scene.md",
-      "bytes": 11671,
+      "bytes": 12137,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; `createChartRuntime`; `createChartScene`; `defaultChartTheme`; `findNearestPoint`; `viewportInteractionPoints`; `ChartScene`; Scene nodes; Interaction points",
           "file": "references/guides/charts-docs-reference-runtime-and-scene-md-e3fcc593.md",
-          "bytes": 11671
+          "bytes": 12137
         }
       ],
       "examples": []
@@ -1929,7 +1934,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024.md",
       "sourcePath": "docs/reference/scales-guides-and-color.md",
       "bytes": 2647,
@@ -1963,12 +1968,12 @@
         {
           "title": "Axis options",
           "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--axis-options.md",
-          "bytes": 7494
+          "bytes": 9090
         },
         {
           "title": "Named scales and multiple axes",
           "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--named-scales-and-multiple-axes.md",
-          "bytes": 1560
+          "bytes": 1935
         },
         {
           "title": "Automatic guide layout",
@@ -1988,7 +1993,7 @@
         {
           "title": "Automatic color legend",
           "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--automatic-color-legend.md",
-          "bytes": 945
+          "bytes": 4551
         },
         {
           "title": "Gradient legend",
@@ -2008,7 +2013,7 @@
         {
           "title": "Theme and gradients",
           "file": "references/guides/charts-docs-reference-scales-guides-and-color-md-f0dc1024--theme-and-gradients.md",
-          "bytes": 957
+          "bytes": 2413
         }
       ],
       "examples": []
@@ -2021,7 +2026,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-adapter-controller-md-3c6899b7.md",
       "sourcePath": "docs/reference/adapter-controller.md",
       "bytes": 5889,
@@ -2043,7 +2048,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-custom-extensions-md-9e8eefa0.md",
       "sourcePath": "docs/reference/custom-extensions.md",
       "bytes": 2058,
@@ -2115,16 +2120,56 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-dom-host-md-10380040.md",
       "sourcePath": "docs/reference/dom-host.md",
-      "bytes": 12616,
+      "bytes": 1574,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Signature; Basic use; Renderer-neutral and Canvas hosts; Host options; Responsive sizing; Font measurement; `ChartHost`; Browser ownership",
-          "file": "references/guides/charts-docs-reference-dom-host-md-10380040.md",
-          "bytes": 12616
+          "title": "Overview",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--overview.md",
+          "bytes": 556
+        },
+        {
+          "title": "Signature",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--signature.md",
+          "bytes": 703
+        },
+        {
+          "title": "Basic use",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--basic-use.md",
+          "bytes": 731
+        },
+        {
+          "title": "Renderer-neutral and Canvas hosts",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--renderer-neutral-and-canvas-hosts.md",
+          "bytes": 1089
+        },
+        {
+          "title": "Host options",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--host-options.md",
+          "bytes": 5822
+        },
+        {
+          "title": "Responsive sizing",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--responsive-sizing.md",
+          "bytes": 2212
+        },
+        {
+          "title": "Font measurement",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--font-measurement.md",
+          "bytes": 774
+        },
+        {
+          "title": "`ChartHost`",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--charthost.md",
+          "bytes": 2473
+        },
+        {
+          "title": "Browser ownership",
+          "file": "references/guides/charts-docs-reference-dom-host-md-10380040--browser-ownership.md",
+          "bytes": 618
         }
       ],
       "examples": []
@@ -2137,10 +2182,10 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527.md",
       "sourcePath": "docs/reference/rendering-and-export.md",
-      "bytes": 2089,
+      "bytes": 2129,
       "prerequisites": [],
       "sections": [
         {
@@ -2166,12 +2211,12 @@
         {
           "title": "Canvas renderer",
           "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--canvas-renderer.md",
-          "bytes": 5490
+          "bytes": 5930
         },
         {
           "title": "SVG resources",
           "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--svg-resources.md",
-          "bytes": 869
+          "bytes": 1315
         },
         {
           "title": "`reconcileChartSvg`",
@@ -2186,7 +2231,7 @@
         {
           "title": "SVG serialization",
           "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--svg-serialization.md",
-          "bytes": 1477
+          "bytes": 1537
         },
         {
           "title": "Browser image export",
@@ -2201,7 +2246,7 @@
         {
           "title": "Custom renderers",
           "file": "references/guides/charts-docs-reference-rendering-and-export-md-ef854527--custom-renderers.md",
-          "bytes": 10490
+          "bytes": 11076
         }
       ],
       "examples": []
@@ -2214,7 +2259,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-transforms-md-6acdd0ab.md",
       "sourcePath": "docs/reference/transforms.md",
       "bytes": 1842,
@@ -2291,7 +2336,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-reference-view-composition-md-2d7f8e9e.md",
       "sourcePath": "docs/reference/view-composition.md",
       "bytes": 6677,
@@ -2313,7 +2358,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847.md",
       "sourcePath": "docs/guides/custom-marks-and-renderers.md",
       "bytes": 2417,
@@ -2342,7 +2387,7 @@
         {
           "title": "Interaction points",
           "file": "references/guides/charts-docs-guides-custom-marks-and-renderers-md-88f45847--interaction-points.md",
-          "bytes": 1792
+          "bytes": 2228
         },
         {
           "title": "Focus-only anchors",
@@ -2395,7 +2440,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-dynamic-data-and-animation-md-f2a556c9.md",
       "sourcePath": "docs/guides/dynamic-data-and-animation.md",
       "bytes": 8890,
@@ -2417,7 +2462,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-faceting-and-composition-md-9af69e08.md",
       "sourcePath": "docs/guides/faceting-and-composition.md",
       "bytes": 5848,
@@ -2439,16 +2484,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-legends-and-color-md-715f4e34.md",
       "sourcePath": "docs/guides/legends-and-color.md",
-      "bytes": 7861,
+      "bytes": 8971,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Automatic categorical color; Quantitative color; Automatic color legend; Explicit gradient legend; Controlled interactive legend; Direct labels versus legends; Theme and accessibility rules",
           "file": "references/guides/charts-docs-guides-legends-and-color-md-715f4e34.md",
-          "bytes": 7861
+          "bytes": 8971
         }
       ],
       "examples": []
@@ -2461,16 +2506,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-themes-and-styling-md-d4e17373.md",
       "sourcePath": "docs/guides/themes-and-styling.md",
-      "bytes": 7576,
+      "bytes": 8662,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Palette tokens; Definition-level theme; Mark styling; Canvas styling; Gradients and clipping; HTML tooltip styling; Theme checklist",
+          "title": "Overview; Palette tokens; Definition-level theme; Mark styling; Axis title styling; Canvas styling; Gradients and clipping; HTML tooltip styling; Theme checklist",
           "file": "references/guides/charts-docs-guides-themes-and-styling-md-d4e17373.md",
-          "bytes": 7576
+          "bytes": 8662
         }
       ],
       "examples": []
@@ -2483,7 +2528,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-transforms-and-reactivity-md-38773ca5.md",
       "sourcePath": "docs/guides/transforms-and-reactivity.md",
       "bytes": 4463,
@@ -2505,16 +2550,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-accessibility-md-3af2af82.md",
       "sourcePath": "docs/guides/accessibility.md",
-      "bytes": 12268,
+      "bytes": 12488,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name the chart; Preserve semantic context outside the surface; Keyboard focus and selection; Never rely on color alone; Motion; Tooltips are supplemental; Linked table pattern; Testing checklist",
           "file": "references/guides/charts-docs-guides-accessibility-md-3af2af82.md",
-          "bytes": 12268
+          "bytes": 12488
         }
       ],
       "examples": []
@@ -2527,7 +2572,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d.md",
       "sourcePath": "docs/guides/interactions-and-selections.md",
       "bytes": 3203,
@@ -2596,7 +2641,7 @@
         {
           "title": "Zoom and pan",
           "file": "references/guides/charts-docs-guides-interactions-and-selections-md-8a834d6d--zoom-and-pan.md",
-          "bytes": 2134
+          "bytes": 2315
         },
         {
           "title": "Linked views",
@@ -2634,7 +2679,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-tooltips-and-focus-md-98d6a918.md",
       "sourcePath": "docs/guides/tooltips-and-focus.md",
       "bytes": 2422,
@@ -2721,7 +2766,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-ai-authoring-md-ba4db9b1.md",
       "sourcePath": "docs/guides/ai-authoring.md",
       "bytes": 7248,
@@ -2743,7 +2788,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e.md",
       "sourcePath": "docs/guides/bundle-size-and-performance.md",
       "bytes": 1704,
@@ -2757,7 +2802,7 @@
         {
           "title": "Import the narrow path",
           "file": "references/guides/charts-docs-guides-bundle-size-and-performance-md-023dab9e--import-the-narrow-path.md",
-          "bytes": 8421
+          "bytes": 8422
         },
         {
           "title": "Add D3 by capability",
@@ -2800,7 +2845,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-exporting-md-21385bf6.md",
       "sourcePath": "docs/guides/exporting.md",
       "bytes": 5854,
@@ -2822,7 +2867,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-large-data-md-937914ac.md",
       "sourcePath": "docs/guides/large-data.md",
       "bytes": 7907,
@@ -2844,7 +2889,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-migrating-md-d8cb4b55.md",
       "sourcePath": "docs/guides/migrating.md",
       "bytes": 8673,
@@ -2866,16 +2911,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-responsive-charts-md-aaa3953e.md",
       "sourcePath": "docs/guides/responsive-charts.md",
-      "bytes": 7328,
+      "bytes": 7950,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Container-responsive width; Height and aspect ratio; Automatic guide space; Text measurement; Deterministic server output; Responsive construction; Responsive checklist",
           "file": "references/guides/charts-docs-guides-responsive-charts-md-aaa3953e.md",
-          "bytes": 7328
+          "bytes": 7950
         }
       ],
       "examples": []
@@ -2888,16 +2933,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-ssr-and-hydration-md-ff83bc62.md",
       "sourcePath": "docs/guides/ssr-and-hydration.md",
-      "bytes": 8244,
+      "bytes": 8508,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Adapter support; Give the server a real size; Keep output deterministic; Hydration ownership; Canvas server shell; Fonts and text measurement; Render without a framework; Hydration checklist",
           "file": "references/guides/charts-docs-guides-ssr-and-hydration-md-ff83bc62.md",
-          "bytes": 8244
+          "bytes": 8508
         }
       ],
       "examples": []
@@ -2910,7 +2955,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-guides-testing-and-debugging-md-84886915.md",
       "sourcePath": "docs/guides/testing-and-debugging.md",
       "bytes": 5093,
@@ -2934,16 +2979,16 @@
         "react"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-react-adapter-md-173a5842.md",
       "sourcePath": "docs/framework/react/adapter.md",
-      "bytes": 8839,
+      "bytes": 9000,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Public exports; Render lifecycle; SSR and hydration; Sizing and layout; `className` and `style`; Tooltip body composition; Definition identity; Callback freshness; Core boundary",
           "file": "references/guides/charts-docs-framework-react-adapter-md-173a5842.md",
-          "bytes": 8839
+          "bytes": 9000
         }
       ],
       "examples": []
@@ -2958,16 +3003,16 @@
         "react"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-react-quick-start-md-75004790.md",
       "sourcePath": "docs/framework/react/quick-start.md",
-      "bytes": 5878,
+      "bytes": 5998,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Define a chart; Responsive sizing; Memoize live definitions; Interaction callbacks; Render React tooltip content",
           "file": "references/guides/charts-docs-framework-react-quick-start-md-75004790.md",
-          "bytes": 5878
+          "bytes": 5998
         }
       ],
       "examples": []
@@ -2982,7 +3027,7 @@
         "react"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-react-reference-chart-md-0c0d868c.md",
       "sourcePath": "docs/framework/react/reference/chart.md",
       "bytes": 8804,
@@ -3006,7 +3051,7 @@
         "preact"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-preact-adapter-md-66591c4e.md",
       "sourcePath": "docs/framework/preact/adapter.md",
       "bytes": 2950,
@@ -3030,7 +3075,7 @@
         "preact"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-preact-reference-chart-md-a4765ba0.md",
       "sourcePath": "docs/framework/preact/reference/chart.md",
       "bytes": 5468,
@@ -3054,7 +3099,7 @@
         "vue"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-vue-adapter-md-d7e382de.md",
       "sourcePath": "docs/framework/vue/adapter.md",
       "bytes": 2743,
@@ -3078,7 +3123,7 @@
         "vue"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-vue-reference-chart-md-c55f0cc9.md",
       "sourcePath": "docs/framework/vue/reference/chart.md",
       "bytes": 5568,
@@ -3102,7 +3147,7 @@
         "solid"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-solid-adapter-md-cf732459.md",
       "sourcePath": "docs/framework/solid/adapter.md",
       "bytes": 2823,
@@ -3126,7 +3171,7 @@
         "solid"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-solid-reference-chart-md-18b62c2a.md",
       "sourcePath": "docs/framework/solid/reference/chart.md",
       "bytes": 5480,
@@ -3150,7 +3195,7 @@
         "svelte"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-svelte-adapter-md-b9959b13.md",
       "sourcePath": "docs/framework/svelte/adapter.md",
       "bytes": 2628,
@@ -3174,7 +3219,7 @@
         "svelte"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-svelte-reference-chart-md-3ead8997.md",
       "sourcePath": "docs/framework/svelte/reference/chart.md",
       "bytes": 5339,
@@ -3198,7 +3243,7 @@
         "angular"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-angular-adapter-md-314154ab.md",
       "sourcePath": "docs/framework/angular/adapter.md",
       "bytes": 2939,
@@ -3222,7 +3267,7 @@
         "angular"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-angular-reference-chart-md-d3a1d893.md",
       "sourcePath": "docs/framework/angular/reference/chart.md",
       "bytes": 5834,
@@ -3246,7 +3291,7 @@
         "lit"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-lit-adapter-md-16871155.md",
       "sourcePath": "docs/framework/lit/adapter.md",
       "bytes": 2558,
@@ -3270,7 +3315,7 @@
         "lit"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-lit-reference-chart-md-ce66ce5f.md",
       "sourcePath": "docs/framework/lit/reference/chart.md",
       "bytes": 5774,
@@ -3294,7 +3339,7 @@
         "alpine"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-alpine-adapter-md-9404e3c3.md",
       "sourcePath": "docs/framework/alpine/adapter.md",
       "bytes": 2555,
@@ -3318,7 +3363,7 @@
         "alpine"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-alpine-reference-chart-md-f52f25f9.md",
       "sourcePath": "docs/framework/alpine/reference/chart.md",
       "bytes": 5897,
@@ -3342,16 +3387,16 @@
         "octane"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-octane-adapter-md-84d0f010.md",
       "sourcePath": "docs/framework/octane/adapter.md",
-      "bytes": 6707,
+      "bytes": 6857,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Public exports; Render lifecycle; SSR and hydration; Sizing and layout; `class` and `style`; Definition and option identity; Tooltip body composition; Core boundary",
           "file": "references/guides/charts-docs-framework-octane-adapter-md-84d0f010.md",
-          "bytes": 6707
+          "bytes": 6857
         }
       ],
       "examples": []
@@ -3366,7 +3411,7 @@
         "octane"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-octane-quick-start-md-de2f4c44.md",
       "sourcePath": "docs/framework/octane/quick-start.md",
       "bytes": 4850,
@@ -3390,7 +3435,7 @@
         "octane"
       ],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-framework-octane-reference-chart-md-5d2228b4.md",
       "sourcePath": "docs/framework/octane/reference/chart.md",
       "bytes": 7473,
@@ -3414,16 +3459,16 @@
         "react-native"
       ],
       "package": "@tanstack/react-native-charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-packages-react-native-charts-readme-md-847545d3.md",
       "sourcePath": "packages/react-native-charts/README.md",
-      "bytes": 2379,
+      "bytes": 3386,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Install; Usage; Typography",
           "file": "references/guides/charts-packages-react-native-charts-readme-md-847545d3.md",
-          "bytes": 2379
+          "bytes": 3386
         }
       ],
       "examples": []
@@ -3436,7 +3481,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-build-chart-interactions-e6508ffb.md",
       "sourcePath": "build-chart-interactions",
       "bytes": 7172,
@@ -3458,7 +3503,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-compose-marks-and-views-9437b112.md",
       "sourcePath": "compose-marks-and-views",
       "bytes": 5671,
@@ -3480,7 +3525,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-configure-scales-guides-color-2708fed7.md",
       "sourcePath": "configure-scales-guides-color",
       "bytes": 5608,
@@ -3502,7 +3547,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-coordinate-charts-with-tanstack-c02cf542.md",
       "sourcePath": "coordinate-charts-with-tanstack",
       "bytes": 10609,
@@ -3524,7 +3569,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-debug-and-verify-charts-2847fe26.md",
       "sourcePath": "debug-and-verify-charts",
       "bytes": 6417,
@@ -3546,7 +3591,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-design-a-chart-95ed488b.md",
       "sourcePath": "design-a-chart",
       "bytes": 5799,
@@ -3568,7 +3613,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-design-responsive-charts-4db4e527.md",
       "sourcePath": "design-responsive-charts",
       "bytes": 6627,
@@ -3590,7 +3635,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-extend-tanstack-charts-7d59a379.md",
       "sourcePath": "extend-tanstack-charts",
       "bytes": 5911,
@@ -3617,7 +3662,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-migrate-to-tanstack-charts-cd62f68d.md",
       "sourcePath": "migrate-to-tanstack-charts",
       "bytes": 6414,
@@ -3648,7 +3693,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-prepare-chart-data-b0946b81.md",
       "sourcePath": "prepare-chart-data",
       "bytes": 6307,
@@ -3670,7 +3715,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-ship-accessible-charts-94d273f3.md",
       "sourcePath": "ship-accessible-charts",
       "bytes": 8822,
@@ -3692,7 +3737,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/tanstack-charts-update-and-animate-charts-7f17ca0c.md",
       "sourcePath": "update-and-animate-charts",
       "bytes": 5596,
@@ -3714,7 +3759,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/charts",
-      "version": "0.16.2",
+      "version": "0.18.0",
       "file": "references/guides/charts-docs-stability-md-45da0c9d.md",
       "sourcePath": "docs/stability.md",
       "bytes": 2224,

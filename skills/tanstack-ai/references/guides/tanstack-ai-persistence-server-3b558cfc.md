@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-server"></a>
 
-Published skill · `@tanstack/ai-persistence@0.5.6`.
+Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 
@@ -87,6 +87,9 @@ preserve plain-text and structured-output assistant messages separately when
 those messages use different ids.
 
 ```ts
+import { withPersistence } from '@tanstack/ai-persistence'
+import { persistence } from './persistence'
+
 withPersistence(persistence, {
   snapshotStreaming: true,
   snapshotIntervalMs: 1000, // default
@@ -148,6 +151,8 @@ Server-authoritative clients load history by `threadId` (often `GET`):
 
 ```ts
 import { reconstructChat } from '@tanstack/ai-persistence'
+import { persistence } from './persistence'
+import { sessionUserId, userOwnsThread } from './auth'
 
 export async function GET(request: Request) {
   return reconstructChat(persistence, request, {

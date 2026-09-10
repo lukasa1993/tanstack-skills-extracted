@@ -1,6 +1,6 @@
 # Build Prisma Adapter — Only if you are publishing this as a package
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## Only if you are publishing this as a package
 

@@ -1,6 +1,6 @@
 # Focus And Interaction — Horizontal zoom
 
-[Guide and prerequisites](./charts-docs-reference-focus-and-interaction-md-949b11fe.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-focus-and-interaction-md-949b11fe.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Horizontal zoom
 
@@ -18,9 +18,13 @@ with that same window.
 The behavior resolves against the final x scale and plot bounds. Its contained
 SVG or Canvas host control owns pointer-anchored vertical-wheel zoom, drag and
 horizontal-wheel pan, pointer and touch input, delta-mode normalization,
-clamping, cancellation, and teardown. It captures wheel input only while the
-plot control is focused. Plus and minus zoom around the center, arrow keys pan,
-Home proposes the full extent, and Escape cancels an active gesture.
+clamping, cancellation, and teardown. `wheelActivation` defaults to `focus`, so
+wheel input is captured only while the plot control is focused. Use `modifier`
+to capture Control+wheel or Command+wheel under the pointer without prior focus
+while every unmodified wheel continues to scroll the page. Use `always` only
+when the chart should capture every wheel over its plot. Plus and minus zoom
+around the center, arrow keys pan, Home proposes the full extent, and Escape
+cancels an active gesture.
 
 `ZoomXChange` reports `preview`, `commit`, or `cancel`; the proposed `value`,
 the gesture `origin`, a `zoom`, `pan`, or `reset` action, and a wheel, pointer,
@@ -40,11 +44,12 @@ render the accepted configured window but provide no zoom host control.
 
 The public zoom types are:
 
-| Type                   | Contract                                                               |
-| ---------------------- | ---------------------------------------------------------------------- |
-| `ZoomXValue`           | A finite `number` or valid `Date`                                      |
-| `ZoomXWindow<TValue>`  | Semantic `start` and `end` values                                      |
-| `ZoomXSource`          | Wheel, pointer, touch, or keyboard origin                              |
-| `ZoomXAction`          | Zoom, pan, or reset action                                             |
-| `ZoomXChange<TValue>`  | Preview, commit, and cancel reason union                               |
-| `ZoomXOptions<TValue>` | Controlled window, extent, limits, accessibility, and keyboard options |
+| Type                   | Contract                                                                 |
+| ---------------------- | ------------------------------------------------------------------------ |
+| `ZoomXValue`           | A finite `number` or valid `Date`                                        |
+| `ZoomXWindow<TValue>`  | Semantic `start` and `end` values                                        |
+| `ZoomXSource`          | Wheel, pointer, touch, or keyboard origin                                |
+| `ZoomXAction`          | Zoom, pan, or reset action                                               |
+| `ZoomXWheelActivation` | Focus, modifier-gated, or unconditional wheel capture                    |
+| `ZoomXChange<TValue>`  | Preview, commit, and cancel reason union                                 |
+| `ZoomXOptions<TValue>` | Controlled window, extent, limits, wheel, accessibility, and key options |

@@ -1,6 +1,6 @@
 # Interactions And Selections — Overview
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 TanStack Charts owns datum focus, selection, crosshair presentation, optional
 cursor bindings, and the mechanics of explicitly imported chart controls. The

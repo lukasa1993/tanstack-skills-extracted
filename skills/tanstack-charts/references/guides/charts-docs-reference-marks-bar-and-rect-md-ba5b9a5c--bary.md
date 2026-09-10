@@ -1,6 +1,6 @@
 # Bar And Rect — `barY`
 
-[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## `barY`
 
@@ -41,7 +41,7 @@ function barY<TDatum>(
 | `layout`          | `GroupLayout \| StackLayout`         | Implicit diverging stack       | Configures grouping or stack order/offset        |
 | `inset`           | `number`                             | `0`                            | Pixels removed from both categorical edges       |
 | `maxThickness`    | `number`                             | Unbounded                      | Maximum painted width after grouping and inset   |
-| `radius`          | `number`                             | None                           | SVG rectangle corner radius                      |
+| `radius`          | `BarRadius<TDatum>`                  | None                           | Uniform, physical, or semantic end corner radii  |
 | `states`          | `readonly ChartMarkState[]`          | None                           | Focus-driven presentation overrides              |
 
 The interaction point is at the group-band center and the `y2`/`y` endpoint.

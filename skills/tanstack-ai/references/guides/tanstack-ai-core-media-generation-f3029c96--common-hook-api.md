@@ -1,6 +1,6 @@
 # Media Generation — Common Hook API
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Common Hook API
 
@@ -30,6 +30,8 @@ Provide either `connection` (streaming SSE transport) or `fetcher`
 to transform what is stored:
 
 ```tsx
+import { useGenerateSpeech, fetchServerSentEvents } from '@tanstack/ai-react'
+
 const { result } = useGenerateSpeech({
   connection: fetchServerSentEvents('/api/generate/speech'),
   onResult: (raw) => ({

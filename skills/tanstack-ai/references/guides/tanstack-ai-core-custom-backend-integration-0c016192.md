@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-custom-backend-integration"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-core-custom-backend-integration-0c016192--overview.md) — 1 KiB
 - [Setup](./tanstack-ai-core-custom-backend-integration-0c016192--setup.md) — 2 KiB
-- [Core Patterns](./tanstack-ai-core-custom-backend-integration-0c016192--core-patterns.md) — 7 KiB
+- [Core Patterns](./tanstack-ai-core-custom-backend-integration-0c016192--core-patterns.md) — 8 KiB
 - [Common Mistakes](./tanstack-ai-core-custom-backend-integration-0c016192--common-mistakes.md) — 5 KiB
 - [Cross-References](./tanstack-ai-core-custom-backend-integration-0c016192--cross-references.md) — 1 KiB
 

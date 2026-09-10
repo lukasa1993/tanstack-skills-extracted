@@ -1,13 +1,13 @@
 # Chat Experience — Core Patterns: 2. Rendering Thinking/Reasoning Content
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 2. Rendering Thinking/Reasoning Content
 
 
 Models with extended thinking (Claude, Gemini) emit `ThinkingPart` in the message parts array.
 
-```typescript
+```tsx
 import type { UIMessage } from '@tanstack/ai-react'
 
 function MessageRenderer({ message }: { message: UIMessage }) {
@@ -20,7 +20,9 @@ function MessageRenderer({ message }: { message: UIMessage }) {
             .some((p) => p.type === 'text')
           return (
             <details key={i} open={!isComplete}>
-              <summary>{isComplete ? 'Thought process' : 'Thinking...'}</summary>
+              <summary>
+                {isComplete ? 'Thought process' : 'Thinking...'}
+              </summary>
               <pre>{part.content}</pre>
             </details>
           )
@@ -48,16 +50,23 @@ function MessageRenderer({ message }: { message: UIMessage }) {
 Server-side, enable thinking via `modelOptions` on the adapter:
 
 ```typescript
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { geminiText } from '@tanstack/ai-gemini'
 
-const stream = chat({
-  adapter: geminiText('gemini-2.5-flash'),
-  messages,
-  modelOptions: {
-    thinkingConfig: {
-      includeThoughts: true,
-      thinkingBudget: 100,
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const stream = chat({
+    adapter: geminiText('gemini-3.8-flash'),
+    messages,
+    modelOptions: {
+      thinkingConfig: {
+        includeThoughts: true,
+        thinkingLevel: 'HIGH', // Gemini 3.x; Gemini 2.x uses thinkingBudget
+      },
     },
-  },
-})
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```

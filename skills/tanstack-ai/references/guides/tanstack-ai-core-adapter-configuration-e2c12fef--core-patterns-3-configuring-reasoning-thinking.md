@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 3. Configuring Reasoning / Thinking
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 3. Configuring Reasoning / Thinking
 
@@ -12,6 +12,10 @@ import { chat } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { anthropicText } from '@tanstack/ai-anthropic'
 import { geminiText } from '@tanstack/ai-gemini'
+
+const messages = [
+  { role: 'user' as const, content: 'Plan a database migration.' },
+]
 
 // OpenAI: reasoning with effort and summary
 const openaiStream = chat({
@@ -38,16 +42,18 @@ const anthropicStream = chat({
   },
 })
 
-// Anthropic: adaptive thinking (claude-sonnet-4-6 and newer)
+// Anthropic: adaptive thinking (Sonnet 5, Fable 5, Opus 4.7+) — depth is
+// tuned with output_config.effort instead of a token budget
 const adaptiveStream = chat({
-  adapter: anthropicText('claude-sonnet-4-6'),
+  adapter: anthropicText('claude-sonnet-5'),
   messages,
   modelOptions: {
     max_tokens: 16000,
     thinking: {
       type: 'adaptive',
+      display: 'summarized', // stream the reasoning text (default 'omitted')
     },
-    effort: 'high', // 'max' | 'high' | 'medium' | 'low'
+    output_config: { effort: 'high' }, // 'low' | 'medium' | 'high' | 'xhigh' | 'max'
   },
 })
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-tool-calling"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../tools-outputs-middleware.md) · [Source provenance](../SOURCES.md)
 
@@ -12,10 +12,15 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-core-tool-calling-e2b5ca3c--overview.md) — 1 KiB
 - [Setup](./tanstack-ai-core-tool-calling-e2b5ca3c--setup.md) — 4 KiB
-- [Core Patterns](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns.md) — 11 KiB
+- [Core Patterns: Generic middleware interrupts](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns-generic-middleware-interrupts.md) — 2 KiB
+- [Core Patterns: Pattern 1: Server-Only Tool](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns-pattern-1-server-only-tool.md) — 2 KiB
+- [Core Patterns: Pattern 2: Client-Only Tool](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns-pattern-2-client-only-tool.md) — 3 KiB
+- [Core Patterns: Pattern 3: Tool with Approval Flow](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns-pattern-3-tool-with-approval-flow.md) — 4 KiB
+- [Core Patterns: Pattern 4: Lazy Tool Discovery](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns-pattern-4-lazy-tool-discovery.md) — 3 KiB
+- [Core Patterns: Tuning the lazy catalog with `lazyToolsConfig`](./tanstack-ai-core-tool-calling-e2b5ca3c--core-patterns-tuning-the-lazy-catalog-with-lazytoolsconfig.md) — 2 KiB
 - [MCP Tools](./tanstack-ai-core-tool-calling-e2b5ca3c--mcp-tools.md) — 8 KiB
 - [Provider Skills](./tanstack-ai-core-tool-calling-e2b5ca3c--provider-skills.md) — 4 KiB
-- [Common Mistakes](./tanstack-ai-core-tool-calling-e2b5ca3c--common-mistakes.md) — 1 KiB
+- [Common Mistakes](./tanstack-ai-core-tool-calling-e2b5ca3c--common-mistakes.md) — 2 KiB
 - [Cross-References](./tanstack-ai-core-tool-calling-e2b5ca3c--cross-references.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->

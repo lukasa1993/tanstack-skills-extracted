@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 4. Audio Transcription
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 4. Audio Transcription
 
@@ -12,35 +12,58 @@ gpt-4o-mini-transcribe, gpt-4o-transcribe-diarize) and `byteplusTranscription`
 
 > **Capturing audio in the browser:** Use `useAudioRecorder` from `@tanstack/ai-react` to record directly in the browser, then pass the recording as the `audio` input to `generate()`, or use `recording.part` as a prompt part in chat/generation calls. No transcoding or extra dependencies required — the recorder returns the native browser format (`audio/webm` or `audio/mp4`). For transcription, wrap it as a `data:` URL so the provider gets the real content type; passing raw `recording.base64` makes the adapter assume `audio/mpeg` and mislabel the webm/mp4 bytes.
 >
-> ```typescript
-> const { isRecording, start, stop } = useAudioRecorder()
-> const { generate } = useTranscription({
->   connection: fetchServerSentEvents('/api/transcribe'),
-> })
-> // ...
-> const recording = await stop()
-> const mimeType = recording.mimeType.split(';')[0] // strip ;codecs=...
-> await generate({ audio: `data:${mimeType};base64,${recording.base64}` })
+> ```tsx
+> import {
+>   useAudioRecorder,
+>   useTranscription,
+>   fetchServerSentEvents,
+> } from '@tanstack/ai-react'
+>
+> function VoiceNote() {
+>   const { isRecording, start, stop } = useAudioRecorder()
+>   const { generate } = useTranscription({
+>     connection: fetchServerSentEvents('/api/transcribe'),
+>   })
+>
+>   async function finish() {
+>     const recording = await stop()
+>     const mimeType = recording.mimeType.split(';')[0] // strip ;codecs=...
+>     await generate({ audio: `data:${mimeType};base64,${recording.base64}` })
+>   }
+>
+>   return (
+>     <button onClick={isRecording ? finish : start}>
+>       {isRecording ? 'Stop & transcribe' : 'Record'}
+>     </button>
+>   )
+> }
 > ```
 
 ```typescript
-import { generateTranscription } from '@tanstack/ai'
+// routes/api/transcribe.ts
+import { generateTranscription, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiTranscription } from '@tanstack/ai-openai'
 
-const result = await generateTranscription({
-  adapter: openaiTranscription('whisper-1'),
-  audio: audioFile, // File, Blob, base64 string, or data URL
-  language: 'en',
-  responseFormat: 'verbose_json',
-  modelOptions: {
-    timestamp_granularities: ['word', 'segment'],
-  },
-})
+export async function POST(request: Request) {
+  // The client hook below posts { data: { audio: dataUrl, language } }
+  const { audio, language } = (await request.json()).data
 
-// result.text       -- full transcribed text
-// result.language   -- detected/specified language
-// result.duration   -- audio duration in seconds
-// result.segments   -- timestamped segments (word-level timestamps are in result.words)
+  const stream = generateTranscription({
+    adapter: openaiTranscription('whisper-1'),
+    audio, // File, Blob, base64 string, or data URL
+    language,
+    responseFormat: 'verbose_json',
+    modelOptions: {
+      timestamp_granularities: ['word', 'segment'],
+    },
+    stream: true,
+  })
+
+  // On the client, result.text is the transcript, result.language the
+  // detected language, result.duration the seconds, result.segments the
+  // timestamped segments (word-level timestamps are in result.words).
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 For speaker diarization, use `openaiTranscription('gpt-4o-transcribe-diarize')`.

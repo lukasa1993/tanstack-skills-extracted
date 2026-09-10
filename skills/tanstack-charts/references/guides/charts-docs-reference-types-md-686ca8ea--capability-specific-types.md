@@ -1,6 +1,6 @@
 # Types — Capability-specific types
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Capability-specific types
 
@@ -53,8 +53,14 @@ their behavior:
 - `@tanstack/charts/interaction/signal`: `ControlledSignal` and
   `ControlledSignalChangeContext`. See
   [Controlled signals](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md#source-charts-docs-guides-interactions-and-selections-md).
-- `@tanstack/charts/legend`: `InteractiveColorLegendItemContext` and legend
-  option/change types. See
+- `@tanstack/charts/legend`: `ColorLegendOptions`, `ColorLegendItems`,
+  `ColorLegendItemOptions`, `ColorLegendItemValue`, `ColorLegendItemContext`,
+  `ColorLegendIndicatorOptions`, `ColorLegendIndicatorRenderContext`,
+  `ColorLegendIndicatorShape`, `ColorLegendLabelOptions`,
+  `ColorGradientLegendOptions`, `InteractiveColorLegendItemContext`, and
+  interactive legend option/change types. See
+  [Automatic color legend](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md#source-charts-docs-reference-scales-guides-and-color-md)
+  and
   [Interactive categorical legend](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md#source-charts-docs-reference-scales-guides-and-color-md).
 - `@tanstack/charts/interaction/brush`: `BrushRange`, `BrushXChange`,
   `BrushXSource`, `BrushXTarget`, `BrushXValuesOptions`, and
@@ -67,7 +73,8 @@ their behavior:
   `ContinuousCursorLabelOptions`, and `ContinuousCursorOptions`. See
   [Continuous cursor](./charts-docs-reference-focus-and-interaction-md-949b11fe.md#source-charts-docs-reference-focus-and-interaction-md).
 - `@tanstack/charts/interaction/zoom`: `ZoomXValue`, `ZoomXWindow`,
-  `ZoomXSource`, `ZoomXAction`, `ZoomXChange`, and `ZoomXOptions`. See
+  `ZoomXSource`, `ZoomXAction`, `ZoomXWheelActivation`, `ZoomXChange`, and
+  `ZoomXOptions`. See
   [Horizontal zoom](./charts-docs-reference-focus-and-interaction-md-949b11fe.md#source-charts-docs-reference-focus-and-interaction-md).
 - `@tanstack/charts/polar`: `PolarOptions`, `PolarScales`, `PolarMark`,
   `PolarGuide`, `PolarGuideScene`, `PolarAngleOptions`,

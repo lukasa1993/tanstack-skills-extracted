@@ -1,6 +1,6 @@
 # Data Loading — Cross-References
 
-[Guide and prerequisites](./tanstack-router-core-data-loading-9f5ce056.md) · Published skill · `@tanstack/router-core@1.171.28`.
+[Guide and prerequisites](./tanstack-router-core-data-loading-9f5ce056.md) · Published skill · `@tanstack/router-core@1.171.29`.
 
 ## Cross-References
 

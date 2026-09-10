@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-themes-and-motion-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../examples-advanced.md) · [Source provenance](../SOURCES.md)
 
@@ -63,8 +63,8 @@ gradient, Canvas, and tooltip behavior.
 
 ## Current limits
 
-- Chart specs declare linear gradients, but they do not declare pattern
-  resources.
+- Chart specs declare linear and radial gradients, but they do not declare
+  pattern resources.
 - `grid` and the static axis line are visibility controls. They do not accept
   stroke width, dash, or opacity.
 - Use `theme.grid` for shared guide paint. Use rule marks for styled static

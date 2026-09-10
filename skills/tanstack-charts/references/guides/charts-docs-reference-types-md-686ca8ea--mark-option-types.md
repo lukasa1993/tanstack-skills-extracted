@@ -1,6 +1,6 @@
 # Types — Mark option types
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Mark option types
 
@@ -21,7 +21,11 @@ subpath. Cartesian, radial, and composite option types include the shared
 - `TextOptions`, `TextAnchor`
 - `FrameOptions`
 - `FacetOptions`, `FacetAxes`, `FacetChartContext`
-- `ColorLegendOptions`, `ColorGradientLegendOptions`
+- `ColorLegendOptions`, `ColorLegendItems`, `ColorLegendItemOptions`,
+  `ColorLegendItemValue`, `ColorLegendItemContext`,
+  `ColorLegendIndicatorOptions`, `ColorLegendIndicatorRenderContext`,
+  `ColorLegendIndicatorShape`, `ColorLegendLabelOptions`,
+  `ColorGradientLegendOptions`
 
 Their public fields and defaults are owned by the
 [mark reference](./charts-docs-reference-index-md-6fc2c6fc.md#source-charts-docs-reference-index-md) and

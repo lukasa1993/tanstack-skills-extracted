@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 6. OpenAI-Compatible Providers
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 6. OpenAI-Compatible Providers
 
@@ -13,7 +13,9 @@ dedicated package required.
 
 ```typescript
 import { openaiCompatible } from '@tanstack/ai-openai/compatible'
-import { createModel } from '@tanstack/ai'
+import { chat, createModel } from '@tanstack/ai'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 // Provider-factory: configure baseURL + apiKey + models ONCE,
 // then select a model per call (the model arg is a type-safe union).
@@ -42,6 +44,9 @@ For a single model, use the one-shot helper:
 
 ```typescript
 import { openaiCompatibleText } from '@tanstack/ai-openai/compatible'
+import { chat } from '@tanstack/ai'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
   adapter: openaiCompatibleText('deepseek-chat', {

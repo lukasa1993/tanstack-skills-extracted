@@ -1,17 +1,16 @@
 # Ai Code Mode — Setup
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.8`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.9`.
 
 ## Setup
 
 Complete Code Mode setup with Node.js isolate driver:
 
 ```typescript
-import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import { chat, toServerSentEventsResponse, toolDefinition } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 import { createCodeModeTool } from '@tanstack/ai-code-mode'
 import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
-import { toolDefinition } from '@tanstack/ai'
 import { z } from 'zod'
 
 // Define a tool that code can call
@@ -35,22 +34,37 @@ const codeModeTool = createCodeModeTool({
 })
 
 // Use in chat
-const stream = chat({
-  adapter: openaiText('gpt-5.2'),
-  messages,
-  tools: [codeModeTool],
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-return toServerSentEventsResponse(stream)
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    tools: [codeModeTool],
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 The recommended higher-level entry point is `createCodeMode()`, which returns both the tool and a matching system prompt:
 
 ```typescript
-import { chat } from '@tanstack/ai'
+import { chat, toServerSentEventsResponse, toolDefinition } from '@tanstack/ai'
 import { createCodeMode } from '@tanstack/ai-code-mode'
 import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
 import { openaiText } from '@tanstack/ai-openai'
+import { z } from 'zod'
+
+const fetchWeather = toolDefinition({
+  name: 'fetchWeather',
+  description: 'Get current weather for a city',
+  inputSchema: z.object({ city: z.string() }),
+  outputSchema: z.object({ temp: z.number(), condition: z.string() }),
+}).server(async ({ city }) => {
+  const res = await fetch(`https://api.weather.com/${city}`)
+  return res.json()
+})
 
 const { tool, systemPrompt } = createCodeMode({
   driver: createNodeIsolateDriver(),
@@ -58,12 +72,18 @@ const { tool, systemPrompt } = createCodeMode({
   timeout: 30_000,
 })
 
-const stream = chat({
-  adapter: openaiText('gpt-4o'),
-  systemPrompts: ['You are a helpful assistant.', systemPrompt],
-  tools: [tool],
-  messages,
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    systemPrompts: ['You are a helpful assistant.', systemPrompt],
+    tools: [tool],
+    messages,
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 `createCodeMode` calls `createCodeModeTool` and `createCodeModeSystemPrompt` internally. The system prompt includes generated TypeScript type stubs for each tool so the LLM writes correct calls.

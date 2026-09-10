@@ -1,6 +1,6 @@
 # Bar And Rect — `rect`
 
-[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## `rect`
 
@@ -30,27 +30,31 @@ function rect<TDatum>(
 
 ### Options
 
-| Option        | Type                           | Default                                | Meaning                                              |
-| ------------- | ------------------------------ | -------------------------------------- | ---------------------------------------------------- |
-| `id`          | `string`                       | Layer-derived                          | Stable mark ID                                       |
-| `x`           | `Channel<TDatum, ChartValue?>` | Row index                              | X center/category and preferred semantic focus value |
-| `x1`          | `Channel<TDatum, ChartValue?>` | `x`, or row index when x is absent     | First x endpoint                                     |
-| `x2`          | `Channel<TDatum, ChartValue?>` | `x`                                    | Second x endpoint                                    |
-| `y`           | `Channel<TDatum, ChartValue?>` | Numeric datum                          | Y center/category and preferred semantic focus value |
-| `y1`          | `Channel<TDatum, ChartValue?>` | `y`                                    | First y endpoint                                     |
-| `y2`          | `Channel<TDatum, ChartValue?>` | `y`                                    | Second y endpoint                                    |
-| `z`           | `Channel<TDatum, ChartKey?>`   | No group                               | Interaction group                                    |
-| `color`       | `Channel<TDatum, ChartKey?>`   | `z`                                    | Value sent to the chart color scale                  |
-| `key`         | `Channel<TDatum, ChartKey>`    | Top/nested `id`, x/y tuple, then index | Stable identity                                      |
-| `fill`        | `string`                       | Resolved color                         | Final constant fill override                         |
-| `fillOpacity` | `number`                       | SVG default                            | Fill opacity                                         |
-| `stroke`      | `string`                       | None                                   | Constant stroke                                      |
-| `strokeWidth` | `number`                       | SVG default                            | Stroke width                                         |
-| `inset`       | `number`                       | `0.75`                                 | Pixels removed from all four edges                   |
-| `radius`      | `number`                       | None                                   | Corner radius                                        |
-| `states`      | `readonly ChartMarkState[]`    | None                                   | Focus-driven presentation overrides                  |
+| Option        | Type                                | Default                                | Meaning                                              |
+| ------------- | ----------------------------------- | -------------------------------------- | ---------------------------------------------------- |
+| `id`          | `string`                            | Layer-derived                          | Stable mark ID                                       |
+| `x`           | `Channel<TDatum, ChartValue?>`      | Row index                              | X center/category and preferred semantic focus value |
+| `x1`          | `Channel<TDatum, ChartValue?>`      | `x`, or row index when x is absent     | First x endpoint                                     |
+| `x2`          | `Channel<TDatum, ChartValue?>`      | `x`                                    | Second x endpoint                                    |
+| `y`           | `Channel<TDatum, ChartValue?>`      | Numeric datum                          | Y center/category and preferred semantic focus value |
+| `y1`          | `Channel<TDatum, ChartValue?>`      | `y`                                    | First y endpoint                                     |
+| `y2`          | `Channel<TDatum, ChartValue?>`      | `y`                                    | Second y endpoint                                    |
+| `z`           | `Channel<TDatum, ChartKey?>`        | No group                               | Interaction group                                    |
+| `color`       | `Channel<TDatum, ChartKey?>`        | `z`                                    | Value sent to the chart color scale                  |
+| `key`         | `Channel<TDatum, ChartKey>`         | Top/nested `id`, x/y tuple, then index | Stable identity                                      |
+| `fill`        | `string`                            | Resolved color                         | Final constant fill override                         |
+| `fillOpacity` | `number`                            | SVG default                            | Fill opacity                                         |
+| `stroke`      | `string`                            | None                                   | Constant stroke                                      |
+| `strokeWidth` | `number`                            | SVG default                            | Stroke width                                         |
+| `inset`       | `number`                            | `0.75`                                 | Pixels removed from all four edges                   |
+| `radius`      | `VisualChannel<TDatum, RectRadius>` | None                                   | Uniform or physical per-corner radii                 |
+| `states`      | `readonly ChartMarkState[]`         | None                                   | Focus-driven presentation overrides                  |
 
 Both endpoints must be valid chart values. Endpoint order may be reversed.
+
+Rect and cell corner tuples always use physical top-left, top-right,
+bottom-right, bottom-left order. Reversing either semantic endpoint does not
+reorder the tuple.
 
 When two semantic endpoints are equal and the resolved scale has bandwidth,
 the rect spans that complete band. Otherwise it spans the mapped endpoint

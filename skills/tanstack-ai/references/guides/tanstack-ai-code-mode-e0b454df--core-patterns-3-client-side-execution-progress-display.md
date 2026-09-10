@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 3. Client-Side Execution Progress Display
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.8`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.9`.
 
 ## Core Patterns: 3. Client-Side Execution Progress Display
 
@@ -17,7 +17,7 @@ Events emitted:
 | `code_mode:external_result`   | After successful external\_\* call   | `function`, `result`, `duration` |
 | `code_mode:external_error`    | When external\_\* call fails         | `function`, `error`, `duration`  |
 
-```typescript
+```tsx
 import { useCallback, useRef, useState } from 'react'
 import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 
@@ -35,11 +35,7 @@ export function CodeModeChat() {
   const eventIdCounter = useRef(0)
 
   const handleCustomEvent = useCallback(
-    (
-      eventType: string,
-      data: unknown,
-      context: { toolCallId?: string },
-    ) => {
+    (eventType: string, data: unknown, context: { toolCallId?: string }) => {
       const { toolCallId } = context
       if (!toolCallId) return
 
@@ -69,9 +65,9 @@ export function CodeModeChat() {
     <div>
       {messages.map((message) => (
         <div key={message.id}>
-          {message.parts.map((part) => {
+          {message.parts.map((part, index) => {
             if (part.type === 'text') {
-              return <p key={part.id}>{part.content}</p>
+              return <p key={index}>{part.content}</p>
             }
             if (
               part.type === 'tool-call' &&
@@ -104,7 +100,11 @@ export function CodeModeChat() {
 The `onCustomEvent` callback signature is identical across all framework integrations (`@tanstack/ai-react`, `@tanstack/ai-solid`, `@tanstack/ai-vue`, `@tanstack/ai-svelte`):
 
 ```typescript
-(eventType: string, data: unknown, context: { toolCallId?: string }) => void
+type OnCustomEvent = (
+  eventType: string,
+  data: unknown,
+  context: { toolCallId?: string },
+) => void
 ```
 
 Snippet-specific events (when using `codeModeWithSnippets`):

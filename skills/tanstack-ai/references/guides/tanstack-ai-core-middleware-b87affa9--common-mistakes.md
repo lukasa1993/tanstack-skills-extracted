@@ -1,17 +1,21 @@
 # Middleware — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Common Mistakes
 
 ### a. MEDIUM: Trying to modify StreamChunks in middleware
 
 ```typescript
+import type { ChatMiddleware } from '@tanstack/ai'
+
 // WRONG -- mutating the chunk object directly
 const broken: ChatMiddleware = {
   name: 'broken',
   onChunk: (ctx, chunk) => {
-    chunk.delta = 'modified' // Mutation does nothing; chunk is not modified in-place
+    if (chunk.type === 'TEXT_MESSAGE_CONTENT') {
+      chunk.delta = 'modified' // Mutation does nothing; chunk is not modified in-place
+    }
   },
 }
 
@@ -48,6 +52,9 @@ middleware had decided to reject. A throw from either fails the whole stream. Th
 is where an unhandled error actually costs you a response:
 
 ```typescript
+import type { ChatMiddleware } from '@tanstack/ai'
+import { logChunk, requireEnv } from './logging'
+
 // WRONG -- an unhandled error in onChunk kills the entire streaming response
 const fragile: ChatMiddleware = {
   name: 'fragile-chunk-logger',
@@ -57,7 +64,12 @@ const fragile: ChatMiddleware = {
   },
   onConfig: (ctx, config) => {
     // Same for a config transform that reads an env var that is not set
-    return { model: requireEnv('MODEL_OVERRIDE') }
+    return {
+      modelOptions: {
+        ...config.modelOptions,
+        temperature: Number(requireEnv('TEMPERATURE')),
+      },
+    }
   },
 }
 
@@ -73,9 +85,15 @@ const resilient: ChatMiddleware = {
     // Return void to pass through
   },
   onConfig: (ctx, config) => {
-    const override = process.env.MODEL_OVERRIDE
+    const temperature = process.env.TEMPERATURE
     // Decide, do not throw: no override means no transform.
-    return override === undefined ? undefined : { model: override }
+    if (temperature === undefined) return undefined
+    return {
+      modelOptions: {
+        ...config.modelOptions,
+        temperature: Number(temperature),
+      },
+    }
   },
   onFinish: (ctx, info) => {
     // Already guarded by core — but prefer ctx.defer() anyway, so a slow

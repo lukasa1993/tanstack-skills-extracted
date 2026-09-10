@@ -1,12 +1,13 @@
 # Stores — Choose a shape
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## Choose a shape
 
 ```ts
 import { defineAIPersistence } from '@tanstack/ai-persistence'
 import type { ChatWithInterruptsPersistence } from '@tanstack/ai-persistence'
+import { messages, runs, interrupts } from './stores'
 
 // Sparse is fine — only implement what you need.
 export const persistence: ChatWithInterruptsPersistence = defineAIPersistence({

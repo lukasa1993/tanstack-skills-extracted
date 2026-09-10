@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 5: Multi-turn structured chat
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: Pattern 5: Multi-turn structured chat
 
@@ -36,7 +36,7 @@ function RecipeBuilder() {
             .filter((p) => p.type === 'text')
             .map((p) => p.content)
             .join('')
-          return <UserBubble key={m.id} text={text} />
+          return <p key={m.id}>{text}</p>
         }
         if (m.role === 'assistant') {
           // `data` is `Recipe` because the schema generic flows from
@@ -58,8 +58,8 @@ function RecipeBuilder() {
 function RecipeCard({ part }: { part: RecipePart }) {
   // `data` lands on complete, `partial` fills in while streaming.
   // Both are typed against the schema. No casts.
-  const recipe = part.data ?? part.partial ?? ({} as Partial<Recipe>)
-  return <h3>{recipe.title ?? 'Plating up…'}</h3>
+  const recipe = part.data ?? part.partial
+  return <h3>{recipe?.title ?? 'Plating up…'}</h3>
 }
 ```
 

@@ -1,20 +1,30 @@
 # Stores — Contracts and invariants: `InterruptStore`
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## Contracts and invariants: `InterruptStore`
 
 
 ```ts
+import type {
+  InterruptCommitEntry,
+  InterruptRecord,
+} from '@tanstack/ai-persistence'
+
 interface InterruptStore {
-  create(record: Omit<InterruptRecord, 'status' | 'resolvedAt'>): Promise<void>
-  resolve(interruptId: string, response?: unknown): Promise<void>
-  cancel(interruptId: string): Promise<void>
-  get(interruptId: string): Promise<InterruptRecord | null>
-  list(threadId: string): Promise<Array<InterruptRecord>>
-  listPending(threadId: string): Promise<Array<InterruptRecord>>
-  listByRun(runId: string): Promise<Array<InterruptRecord>>
-  listPendingByRun(runId: string): Promise<Array<InterruptRecord>>
+  create: (
+    record: Omit<InterruptRecord, 'status' | 'resolvedAt'>,
+  ) => Promise<void>
+  resolve: (interruptId: string, response?: unknown) => Promise<void>
+  cancel: (interruptId: string) => Promise<void>
+  // Optional: apply a validated resume batch all-or-nothing instead of
+  // per-entry resolve/cancel.
+  commitBatch?: (entries: ReadonlyArray<InterruptCommitEntry>) => Promise<void>
+  get: (interruptId: string) => Promise<InterruptRecord | null>
+  list: (threadId: string) => Promise<Array<InterruptRecord>>
+  listPending: (threadId: string) => Promise<Array<InterruptRecord>>
+  listByRun: (runId: string) => Promise<Array<InterruptRecord>>
+  listPendingByRun: (runId: string) => Promise<Array<InterruptRecord>>
 }
 ```
 

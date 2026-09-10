@@ -1,6 +1,6 @@
 # Media Generation — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Common Mistakes
 
@@ -11,7 +11,7 @@ Agents trained on older code may still generate this pattern.
 
 **Wrong:**
 
-```typescript
+```typescript ignore
 import { embedding } from '@tanstack/ai'
 import { openaiEmbed } from '@tanstack/ai-openai'
 
@@ -46,27 +46,34 @@ stream from a server function will not work.
 
 **Wrong:**
 
-```typescript
-export const generateImageStreamFn = createServerFn({ method: 'POST' }).handler(
-  ({ data }) => {
+```typescript ignore
+import { createServerFn } from '@tanstack/react-start'
+import { generateImage } from '@tanstack/ai'
+import { openaiImage } from '@tanstack/ai-openai'
+
+export const generateImageStreamFn = createServerFn({ method: 'POST' })
+  .inputValidator((data: { prompt: string }) => data)
+  .handler(({ data }) => {
     // BUG: returning raw stream -- client cannot parse this
+    // (also a type error: an AsyncIterable is not a valid server-function return)
     return generateImage({
       adapter: openaiImage('gpt-image-1'),
       prompt: data.prompt,
       stream: true,
     })
-  },
-)
+  })
 ```
 
 **Correct:**
 
 ```typescript
+import { createServerFn } from '@tanstack/react-start'
 import { generateImage, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiImage } from '@tanstack/ai-openai'
 
-export const generateImageStreamFn = createServerFn({ method: 'POST' }).handler(
-  ({ data }) => {
+export const generateImageStreamFn = createServerFn({ method: 'POST' })
+  .inputValidator((data: { prompt: string }) => data)
+  .handler(({ data }) => {
     return toServerSentEventsResponse(
       generateImage({
         adapter: openaiImage('gpt-image-1'),
@@ -74,8 +81,7 @@ export const generateImageStreamFn = createServerFn({ method: 'POST' }).handler(
         stream: true,
       }),
     )
-  },
-)
+  })
 ```
 
 > Source: maintainer interview.
@@ -87,6 +93,9 @@ later, the image will silently break. Always download or display the image
 immediately, or convert to base64 for persistence.
 
 ```typescript
+import { generateImage } from '@tanstack/ai'
+import { openaiImage } from '@tanstack/ai-openai'
+
 const result = await generateImage({
   adapter: openaiImage('dall-e-3'),
   prompt: 'A mountain landscape',
@@ -125,7 +134,7 @@ Gemini's `GenerateContentConfig` (used by Lyria 3 Pro / Lyria 3 Clip) does
 returns 30-second `audio/mp3`; Lyria 3 Pro returns `audio/mp3`. These fields
 are not in `GeminiAudioProviderOptions` — don't reach for them via `as any`.
 
-```typescript
+```typescript ignore
 // WRONG — both fields are silently ignored or rejected by the SDK
 generateAudio({
   adapter: geminiAudio('lyria-3-pro-preview'),
@@ -135,6 +144,11 @@ generateAudio({
     negativePrompt: 'vocals', // unsupported
   } as any,
 })
+```
+
+```typescript
+import { generateAudio } from '@tanstack/ai'
+import { geminiAudio } from '@tanstack/ai-gemini'
 
 // CORRECT — shape the prompt itself for what you want
 generateAudio({
@@ -155,6 +169,10 @@ model's native field like `music_length_ms` or `seconds_total`), but not
 for Lyria.
 
 ```typescript
+import { generateAudio } from '@tanstack/ai'
+import { geminiAudio } from '@tanstack/ai-gemini'
+import { falAudio } from '@tanstack/ai-fal'
+
 // For Lyria: put length guidance in the prompt
 generateAudio({
   adapter: geminiAudio('lyria-3-pro-preview'),
@@ -179,6 +197,9 @@ generateAudio({
 `as any`.
 
 ```typescript
+import { generateSpeech } from '@tanstack/ai'
+import { geminiSpeech } from '@tanstack/ai-gemini'
+
 generateSpeech({
   adapter: geminiSpeech('gemini-2.5-pro-preview-tts'),
   text: '[Alice] Hi. [Bob] Hello!',
@@ -209,7 +230,7 @@ narrowed per model, so passing an image part to a text-only model
 also throw a clear runtime error as a backstop, so users learn at call
 time rather than getting silently wrong output.
 
-```typescript
+```typescript ignore
 // WRONG — dall-e-3 has no edit/inputs API; image parts are a type error
 generateImage({
   adapter: openaiImage('dall-e-3'),
@@ -227,6 +248,14 @@ generateImage({
     { type: 'image', source: { type: 'url', value: url } }, // ❌ type error
   ],
 })
+```
+
+```typescript
+import { generateImage } from '@tanstack/ai'
+import { openaiImage } from '@tanstack/ai-openai'
+import { geminiImage } from '@tanstack/ai-gemini'
+
+const url = 'https://…/photo.png'
 
 // CORRECT — use a model that supports image-conditioned generation
 generateImage({
@@ -256,6 +285,9 @@ same `debug?: DebugOption` option that `chat()` does. Reach for `debug`
 instead of wiring up logging middleware.
 
 ```typescript
+import { generateSpeech } from '@tanstack/ai'
+import { openaiSpeech } from '@tanstack/ai-openai'
+
 // When a speech generation sounds wrong or a transcription returns garbage
 generateSpeech({
   adapter: openaiSpeech('tts-1'),

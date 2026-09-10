@@ -1,6 +1,6 @@
 # Ai Sandbox — File-event hooks
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.7`.
 
 ## File-event hooks
 
@@ -15,8 +15,11 @@ middleware via the `sandbox` group (run-scoped):
 import { defineSandbox, withSandbox } from '@tanstack/ai-sandbox'
 // `defineChatMiddleware` is core's, not this package's — `@tanstack/ai-sandbox`
 // consumes it too (see its own `src/middleware.ts`).
-import { defineChatMiddleware } from '@tanstack/ai'
+import { chat, defineChatMiddleware } from '@tanstack/ai'
+import { claudeCodeText } from '@tanstack/ai-claude-code'
 import { dockerSandbox } from '@tanstack/ai-sandbox-docker'
+import { db } from './db'
+import { metrics } from './metrics'
 
 // Sandbox-scoped hooks (all optional):
 const sandbox = defineSandbox({
@@ -47,6 +50,13 @@ const auditMiddleware = defineChatMiddleware({
 
 // No extra middleware needed — sandbox.file CUSTOM events are emitted
 // automatically. Read them from the stream:
+const stream = chat({
+  threadId: 'thread-1',
+  adapter: claudeCodeText('sonnet'),
+  messages: [{ role: 'user', content: 'Add a README.' }],
+  middleware: [auditMiddleware, withSandbox(sandbox)],
+})
+
 for await (const chunk of stream) {
   if (chunk.type === 'CUSTOM' && chunk.name === 'sandbox.file') {
     const value = chunk.value
@@ -67,7 +77,10 @@ outside a `chat()` run:
 
 ```typescript
 import { watchWorkspace } from '@tanstack/ai-sandbox'
+// Your `defineSandbox(...)` result.
+import { sandbox } from './sandbox'
 
+const handle = await sandbox.ensure({ threadId: 'thread-1', runId: 'run-1' })
 const watcher = await watchWorkspace(handle, {
   onEvent: (e) => console.log(e.type, e.path),
   ignore: ['.git', 'node_modules'], // default
@@ -79,6 +92,22 @@ Enable the `sandbox` debug category to log watcher start/stop, event dispatch,
 and lifecycle transitions:
 
 ```typescript
-chat({ threadId, adapter, messages, debug: { sandbox: true } })
-// or debug: true to enable all categories
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import { claudeCodeText } from '@tanstack/ai-claude-code'
+import { withSandbox } from '@tanstack/ai-sandbox'
+import { sandbox } from './sandbox'
+
+export async function POST(request: Request) {
+  const { threadId, messages } = await request.json()
+
+  const stream = chat({
+    threadId,
+    adapter: claudeCodeText('sonnet'),
+    messages,
+    middleware: [withSandbox(sandbox)],
+    debug: { sandbox: true }, // or debug: true to enable all categories
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```

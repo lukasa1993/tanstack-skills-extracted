@@ -1,13 +1,14 @@
 # Custom Backend Integration — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Setup
 
 Connect `useChat` to a custom SSE backend with auth headers:
 
-```typescript
+```tsx
 import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
+import { token } from './auth'
 
 function Chat() {
   const { messages, sendMessage, isLoading } = useChat({

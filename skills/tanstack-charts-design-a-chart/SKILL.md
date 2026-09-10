@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "0.16.2"
+  tanstack-library-version: "0.18.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "0.16.2"
+  tanstack-package-version: "0.18.0"
   tanstack-source-skill: "design-a-chart"
   tanstack-sources: "[\"TanStack/charts:docs/guides/choosing-a-chart.md\",\"TanStack/charts:docs/examples/*.md\",\"TanStack/charts:docs/reference/transforms.md\"]"
   tanstack-type: "core"

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-chart-spec-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../specifications.md) · [Source provenance](../SOURCES.md)
 
@@ -16,7 +16,7 @@ type ChartSpec<TMarks extends readonly ChartMark[]> = {
   scales: ChartScales<TMarks>
   guides?: boolean
   color?: ChartColorOptions
-  gradients?: readonly ChartLinearGradient[]
+  gradients?: readonly ChartGradient[]
   clip?: boolean
   margin?: number | Partial<ChartMargin>
   theme?: Partial<ChartTheme>
@@ -38,7 +38,7 @@ type ChartScales<TMarks extends readonly ChartMark[]> = Readonly<
 | `scales`    | Yes      | Cartesian scale registry. Reserved `x` and `y` entries are required; additional named scales are optional.         |
 | `guides`    | No       | Set to `false` to suppress both axes, grid lines, titles, and their implicit margins.                              |
 | `color`     | No       | Shared categorical or quantitative color scale and optional legend.                                                |
-| `gradients` | No       | Linear-gradient resources consumed by the default SVG and Canvas renderers.                                        |
+| `gradients` | No       | Linear and radial gradient resources consumed by SVG, Canvas, and React Native renderers.                          |
 | `clip`      | No       | Clips the marks group to the resolved inner chart bounds in the default SVG and Canvas renderers.                  |
 | `margin`    | No       | Locks all margins with a number or selected sides with a partial object. Omitted sides are measured automatically. |
 | `theme`     | No       | Overrides default foreground, muted, grid, background, or palette tokens.                                          |
@@ -131,8 +131,10 @@ Guide visibility and geometry are separate:
 
 - `scales.x.axis: false` or `scales.y.axis: false` hides one axis.
 - `guides: false` hides all guides and removes their implicit margin.
-- Omitted `margin` sides are measured from ticks, rotation, titles, edge
-  overhang, color legends, and Cartesian `text` marks.
+- `grid` and `axis.line` accept a boolean or a `ChartGuideLineStyle` object
+  with stroke, opacity, width, dash, and line-cap overrides.
+- Omitted `margin` sides are measured from ticks, rotation, titles, guide
+  strokes, edge overhang, color legends, and Cartesian `text` marks.
 - `margin: 0` locks every side to zero.
 - `margin: { left: 80 }` locks only the left side.
 
@@ -161,13 +163,27 @@ const definition = defineChart({
         { offset: 1, color: '#2563eb', opacity: 0.72 },
       ],
     },
+    {
+      type: 'radial',
+      id: 'highlight',
+      cx: 0.5,
+      cy: 0.5,
+      r: 0.5,
+      stops: [
+        { offset: 0, color: '#ffffff', opacity: 0.7 },
+        { offset: 1, color: '#2563eb', opacity: 0 },
+      ],
+    },
   ],
 })
 ```
 
-Reference a declared gradient from a mark paint as `url(#revenue)`.
-`idPrefix` scopes generated resource IDs when multiple charts share a
-document. See
+Reference a declared gradient from a mark paint as `url(#revenue)` or
+`url(#highlight)`. Coordinates and stop offsets use SVG-style
+`objectBoundingBox` values normalized from `0` to `1`. `idPrefix` scopes
+generated SVG and React Native resource IDs when multiple charts share a
+document or native SVG tree. Stops keep their authored order. A stop before the
+previous offset is clamped forward to that offset. See
 [Rendering and export](./charts-docs-reference-rendering-and-export-md-ef854527.md#source-charts-docs-reference-rendering-and-export-md).
 
 ## Theme
@@ -181,11 +197,14 @@ interface ChartTheme {
   grid: string
   background: string
   palette: readonly string[]
+  focusRing?: boolean | ChartFocusRingOptions
 }
 ```
 
 `theme` is partial. The palette is replaced as one value rather than merged by
-index. The default palette uses CSS custom-property fallbacks:
+index. `focusRing` supplies the default built-in focus ring presentation for
+every chart using the theme. A definition-level `focusRing` value overrides it.
+The default palette uses CSS custom-property fallbacks:
 
 ```css
 .dashboard {

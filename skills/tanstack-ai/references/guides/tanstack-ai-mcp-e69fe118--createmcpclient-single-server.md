@@ -1,6 +1,6 @@
 # Ai Mcp — `createMCPClient` — single server
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.9`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 ## `createMCPClient` — single server
 
@@ -22,6 +22,8 @@ const client = await createMCPClient({
 #### Streamable HTTP (default for internet-facing servers)
 
 ```typescript
+import { createMCPClient } from '@tanstack/ai-mcp'
+
 const client = await createMCPClient({
   transport: {
     type: 'http',
@@ -34,6 +36,8 @@ const client = await createMCPClient({
 #### SSE
 
 ```typescript
+import { createMCPClient } from '@tanstack/ai-mcp'
+
 const client = await createMCPClient({
   transport: {
     type: 'sse',
@@ -63,8 +67,9 @@ const client = await createMCPClient({
 Pass any SDK `Transport` instance directly:
 
 ```typescript
-import { createMCPClient } from '@tanstack/ai-mcp'
-import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js'
+// InMemoryTransport (from @modelcontextprotocol/sdk) is re-exported for
+// in-process testing; any SDK Transport instance works the same way.
+import { createMCPClient, InMemoryTransport } from '@tanstack/ai-mcp'
 
 const [clientTransport] = InMemoryTransport.createLinkedPair()
 const client = await createMCPClient({ transport: clientTransport })
@@ -83,9 +88,9 @@ Two levels:
 
 ```typescript
 import { createMCPClient } from '@tanstack/ai-mcp'
-import type { OAuthClientProvider } from '@modelcontextprotocol/sdk/client/auth.js'
-
-declare const myOAuthProvider: OAuthClientProvider // backed by stored tokens
+// An OAuthClientProvider (from @modelcontextprotocol/sdk/client/auth.js)
+// backed by tokens you persist server-side.
+import { myOAuthProvider } from './oauth-provider'
 
 const client = await createMCPClient({
   transport: {

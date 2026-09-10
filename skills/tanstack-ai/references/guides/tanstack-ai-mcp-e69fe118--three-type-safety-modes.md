@@ -1,6 +1,6 @@
 # Ai Mcp — Three type-safety modes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.9`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 ## Three type-safety modes
 
@@ -10,12 +10,20 @@
 at compile time but the tool's JSON Schema is forwarded to the LLM.
 
 ```typescript
+import { chat } from '@tanstack/ai'
+import { openaiText } from '@tanstack/ai-openai'
+import { createMCPClient } from '@tanstack/ai-mcp'
+
+const client = await createMCPClient({
+  transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+})
+
 const tools = await client.tools()
-// tools: ServerTool[]  (args unknown)
+// tools: McpServerTool[]  (args unknown)
 
 const stream = chat({
   adapter: openaiText('gpt-5.5'),
-  messages,
+  messages: [{ role: 'user', content: 'What is the weather in Paris?' }],
   tools,
 })
 ```
@@ -23,6 +31,12 @@ const stream = chat({
 Use `{ lazy: true }` to defer schema sending via the existing `LazyToolManager`:
 
 ```typescript
+import { createMCPClient } from '@tanstack/ai-mcp'
+
+const client = await createMCPClient({
+  transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+})
+
 const tools = await client.tools({ lazy: true })
 ```
 

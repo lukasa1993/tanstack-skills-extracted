@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-structured-outputs"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../tools-outputs-middleware.md) · [Source provenance](../SOURCES.md)
 
@@ -19,7 +19,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Core Patterns: Pattern 4: useChat with outputSchema (progressive UI)](./tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-4-usechat-with-outputschema-progressive-ui.md) — 3 KiB
 - [Core Patterns: Pattern 5: Multi-turn structured chat](./tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-5-multi-turn-structured-chat.md) — 4 KiB
 - [Core Patterns: Pattern 6: Harness adapters (Claude Code, Codex, OpenCode, Grok Build, ACP)](./tanstack-ai-core-structured-outputs-fef450ef--core-patterns-pattern-6-harness-adapters-claude-code-codex-opencode-grok-build-acp.md) — 3 KiB
-- [Common Mistakes](./tanstack-ai-core-structured-outputs-fef450ef--common-mistakes.md) — 6 KiB
+- [Common Mistakes](./tanstack-ai-core-structured-outputs-fef450ef--common-mistakes.md) — 8 KiB
 - [Middleware coverage](./tanstack-ai-core-structured-outputs-fef450ef--middleware-coverage.md) — 1 KiB
 - [Cross-References](./tanstack-ai-core-structured-outputs-fef450ef--cross-references.md) — 2 KiB
 

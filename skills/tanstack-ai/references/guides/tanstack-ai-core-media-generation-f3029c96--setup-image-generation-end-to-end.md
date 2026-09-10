@@ -1,6 +1,6 @@
 # Media Generation — Setup -- Image Generation End-to-End
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Setup -- Image Generation End-to-End
 
@@ -79,9 +79,10 @@ parses it as SSE automatically:
 import { createServerFn } from '@tanstack/react-start'
 import { generateImage, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiImage } from '@tanstack/ai-openai'
+import type { OpenAIImageModel } from '@tanstack/ai-openai'
 
 export const generateImageStreamFn = createServerFn({ method: 'POST' })
-  .inputValidator((data: { prompt: string; model?: string }) => data)
+  .inputValidator((data: { prompt: string; model?: OpenAIImageModel }) => data)
   .handler(({ data }) => {
     return toServerSentEventsResponse(
       generateImage({

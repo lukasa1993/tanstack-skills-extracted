@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-code-mode"></a>
 
-Published skill · `@tanstack/ai-code-mode@0.4.8`.
+Published skill · `@tanstack/ai-code-mode@0.4.9`.
 
 [Topic index](../code-execution.md) · [Source provenance](../SOURCES.md)
 
@@ -13,10 +13,10 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./tanstack-ai-code-mode-e0b454df--overview.md) — 1 KiB
 - [Setup](./tanstack-ai-code-mode-e0b454df--setup.md) — 3 KiB
 - [Core Patterns: 1. Choosing an Isolate Driver](./tanstack-ai-code-mode-e0b454df--core-patterns-1-choosing-an-isolate-driver.md) — 4 KiB
-- [Core Patterns: 2. Adding Persistent Snippets with codeModeWithSnippets()](./tanstack-ai-code-mode-e0b454df--core-patterns-2-adding-persistent-snippets-with-codemodewithsnippets.md) — 3 KiB
+- [Core Patterns: 2. Adding Persistent Snippets with codeModeWithSnippets()](./tanstack-ai-code-mode-e0b454df--core-patterns-2-adding-persistent-snippets-with-codemodewithsnippets.md) — 4 KiB
 - [Core Patterns: 3. Client-Side Execution Progress Display](./tanstack-ai-code-mode-e0b454df--core-patterns-3-client-side-execution-progress-display.md) — 5 KiB
-- [Core Patterns: 4. Lazy Tools](./tanstack-ai-code-mode-e0b454df--core-patterns-4-lazy-tools.md) — 4 KiB
-- [Common Mistakes](./tanstack-ai-code-mode-e0b454df--common-mistakes.md) — 4 KiB
+- [Core Patterns: 4. Lazy Tools](./tanstack-ai-code-mode-e0b454df--core-patterns-4-lazy-tools.md) — 5 KiB
+- [Common Mistakes](./tanstack-ai-code-mode-e0b454df--common-mistakes.md) — 5 KiB
 - [Cross-References](./tanstack-ai-code-mode-e0b454df--cross-references.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->

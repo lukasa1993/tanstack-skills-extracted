@@ -1,6 +1,6 @@
 # Ai Mcp — MCP Apps
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.9`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
 
 ## MCP Apps
 
@@ -48,7 +48,7 @@ For a pool, the `serverId` on the `UIResourcePart` is the config key (the
 tool prefix); for a single client it is the client's `prefix` (or the sole
 default when `serverId` is absent and there is exactly one client).
 
-```typescript
+```typescript group=mcp-app-handler
 import { createMCPClients } from '@tanstack/ai-mcp'
 import {
   createMcpAppCallHandler,
@@ -86,9 +86,13 @@ const handlerWithStore = createMcpAppCallHandler({
 
 The handler invokes the server (`body: { threadId, serverId?, toolName, args?, messageId? }`):
 
-```typescript
-const result = await handler(body)
-// { ok: true; result: unknown } | { ok: false; error: string }
+```typescript group=mcp-app-handler
+export async function POST(request: Request) {
+  const body = await request.json()
+  const result = await handler(body)
+  // { ok: true; result: unknown } | { ok: false; error: string }
+  return Response.json(result)
+}
 ```
 
 ### Client side — `useMcpAppBridge` + `MCPAppResource`

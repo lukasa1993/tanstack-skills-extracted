@@ -1,6 +1,6 @@
 # Middleware — onStructuredOutputConfig
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## onStructuredOutputConfig
 
@@ -12,19 +12,30 @@ specific config changes that should not affect the agent-loop adapter calls.
 **Signature:**
 
 ```ts
-onStructuredOutputConfig?: (
-  ctx: ChatMiddlewareContext,
-  config: StructuredOutputMiddlewareConfig,
-) =>
-  | void
-  | null
-  | Partial<StructuredOutputMiddlewareConfig>
-  | Promise<void | null | Partial<StructuredOutputMiddlewareConfig>>
+import type {
+  ChatMiddlewareContext,
+  StructuredOutputMiddlewareConfig,
+} from '@tanstack/ai'
+
+// Excerpt of the `ChatMiddleware` interface exported by '@tanstack/ai'
+interface ChatMiddleware {
+  onStructuredOutputConfig?: (
+    ctx: ChatMiddlewareContext,
+    config: StructuredOutputMiddlewareConfig,
+  ) =>
+    | void
+    | null
+    | Partial<StructuredOutputMiddlewareConfig>
+    | Promise<void | null | Partial<StructuredOutputMiddlewareConfig>>
+}
 ```
 
 **`StructuredOutputMiddlewareConfig` shape:**
 
 ```ts
+import type { ChatMiddlewareConfig, JSONSchema } from '@tanstack/ai'
+
+// As exported by '@tanstack/ai'
 interface StructuredOutputMiddlewareConfig extends Omit<
   ChatMiddlewareConfig,
   'tools'

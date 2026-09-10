@@ -1,6 +1,6 @@
 # Middleware — Core Patterns
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns
 
@@ -53,13 +53,17 @@ const analytics: ChatMiddleware = {
   },
 }
 
-const stream = chat({
-  adapter: openaiText('gpt-5.2'),
-  messages,
-  middleware: [analytics],
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
 
-return toServerSentEventsResponse(stream)
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    middleware: [analytics],
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 ### Pattern 2: Tool Interception Middleware
@@ -128,11 +132,14 @@ native-combined schema.
 
 ```typescript
 import type { ChatMiddleware } from '@tanstack/ai'
+import { trace } from '@opentelemetry/api'
 
 const tracing: ChatMiddleware = {
   name: 'tracing',
   onChunk(ctx, chunk) {
-    span.addEvent('chunk', { phase: ctx.phase, type: chunk.type })
+    trace
+      .getActiveSpan()
+      ?.addEvent('chunk', { phase: ctx.phase, type: chunk.type })
   },
 }
 ```
@@ -146,6 +153,7 @@ the native-combined path, it observes the structured stream with
 
 ```typescript
 import type { ChatMiddleware } from '@tanstack/ai'
+import { sharedDefs } from './defs'
 
 const injectDefs: ChatMiddleware = {
   name: 'inject-defs',
@@ -167,9 +175,27 @@ Middleware executes in array order (left-to-right). Ordering matters for hooks t
 pipe or short-circuit:
 
 ```typescript
-import { chat, type ChatMiddleware } from '@tanstack/ai'
+import {
+  chat,
+  toolDefinition,
+  toServerSentEventsResponse,
+  type ChatMiddleware,
+} from '@tanstack/ai'
 import { toolCacheMiddleware } from '@tanstack/ai/middlewares'
 import { openaiText } from '@tanstack/ai-openai'
+import { z } from 'zod'
+
+const weatherTool = toolDefinition({
+  name: 'getWeather',
+  description: 'Get the current weather for a city',
+  inputSchema: z.object({ city: z.string() }),
+}).server(async ({ city }) => ({ city, tempC: 21 }))
+
+const stockTool = toolDefinition({
+  name: 'getStock',
+  description: 'Get the latest price for a ticker symbol',
+  inputSchema: z.object({ symbol: z.string() }),
+}).server(async ({ symbol }) => ({ symbol, price: 123.45 }))
 
 const logging: ChatMiddleware = {
   name: 'logging',
@@ -197,16 +223,22 @@ const configTransform: ChatMiddleware = {
   },
 }
 
-const stream = chat({
-  adapter: openaiText('gpt-5.2'),
-  messages,
-  tools: [weatherTool, stockTool],
-  middleware: [
-    logging, // Runs first
-    configTransform, // Transforms config second
-    toolCacheMiddleware({ ttl: 60_000 }), // Caches tool results third
-  ],
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    tools: [weatherTool, stockTool],
+    middleware: [
+      logging, // Runs first
+      configTransform, // Transforms config second
+      toolCacheMiddleware({ ttl: 60_000 }), // Caches tool results third
+    ],
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 **Composition rules by hook:**

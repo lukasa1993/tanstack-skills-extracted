@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -162,8 +162,8 @@ export function LiveLetterFrequency({ rows, accent }: LetterFrequencyInput) {
 }
 ```
 
-The dependency list owns application invalidation. The definition identity
-tells the chart host when captured values changed. See
+The application controls definition updates through the dependency list. A new
+definition identity tells TanStack Charts to rebuild the scene. See
 [Chart Definition API](./charts-docs-reference-chart-definitions-md-6855d09b.md#source-charts-docs-reference-chart-definitions-md).
 
 ## Interaction callbacks
@@ -199,17 +199,21 @@ tooltip entry:
 ```tsx
 import { Chart } from '@tanstack/charts/react/tooltip'
 
-;<Chart
-  definition={letterFrequencyChart}
-  height={320}
-  ariaLabel="English letter frequencies"
-  renderTooltipBody={({ defaultBody, pinned, dismiss }) => (
-    <>
-      {defaultBody}
-      {pinned ? <button onClick={dismiss}>Close</button> : null}
-    </>
-  )}
-/>
+export function ChartWithCustomTooltip() {
+  return (
+    <Chart
+      definition={letterFrequencyChart}
+      height={320}
+      ariaLabel="English letter frequencies"
+      renderTooltipBody={({ defaultBody, pinned, dismiss }) => (
+        <>
+          {defaultBody}
+          {pinned ? <button onClick={dismiss}>Close</button> : null}
+        </>
+      )}
+    />
+  )
+}
 ```
 
 Existing `renderTooltipBody` users should migrate the component import from

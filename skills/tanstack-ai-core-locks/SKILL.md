@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.53.0"
+  tanstack-package-version: "0.54.0"
   tanstack-source-skill: "ai-core/locks"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/locks.md\",\"TanStack/ai:packages/ai/src/activities/chat/middleware/locks.ts\"]"
   tanstack-type: "sub-skill"
@@ -32,20 +32,40 @@ per-thread (or other) lock yourself when multi-writer races matter.
 ## Wire locks
 
 ```ts
+import { chat } from '@tanstack/ai'
 import { withLocks, InMemoryLockStore } from '@tanstack/ai/locks'
+import { openaiText } from '@tanstack/ai-openai'
 
-middleware: [
-  withLocks(new InMemoryLockStore()), // single process
-]
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
+chat({
+  adapter: openaiText('gpt-5.6'),
+  messages,
+  middleware: [
+    withLocks(new InMemoryLockStore()), // single process
+  ],
+})
 ```
 
 Alongside persistence — optional, locks do not require it:
 
 ```ts
+import { chat } from '@tanstack/ai'
 import { withLocks, InMemoryLockStore } from '@tanstack/ai/locks'
-import { withPersistence } from '@tanstack/ai-persistence'
+import { openaiText } from '@tanstack/ai-openai'
+import { memoryPersistence, withPersistence } from '@tanstack/ai-persistence'
 
-middleware: [withPersistence(persistence), withLocks(new InMemoryLockStore())]
+const persistence = memoryPersistence()
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
+chat({
+  adapter: openaiText('gpt-5.6'),
+  messages,
+  middleware: [
+    withPersistence(persistence),
+    withLocks(new InMemoryLockStore()),
+  ],
+})
 ```
 
 `withLocks` provides `LocksCapability` for downstream middleware (e.g.
@@ -70,7 +90,9 @@ annotation), then hand it to `withLocks`. Acquire the key, run `fn`, release whe
 `fn` settles:
 
 ```ts
+import { chat } from '@tanstack/ai'
 import { defineLock, withLocks } from '@tanstack/ai/locks'
+import { openaiText } from '@tanstack/ai-openai'
 import { acquire } from './my-lock-backend'
 
 const locks = defineLock({
@@ -84,7 +106,13 @@ const locks = defineLock({
   },
 })
 
-middleware: [withLocks(locks)]
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
+chat({
+  adapter: openaiText('gpt-5.6'),
+  messages,
+  middleware: [withLocks(locks)],
+})
 ```
 
 ## Lease semantics

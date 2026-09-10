@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 1. Read the app before writing anything
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.5.6`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
 
 ## 1. Read the app before writing anything
 

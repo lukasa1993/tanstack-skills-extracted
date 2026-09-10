@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-index-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../specifications.md) · [Source provenance](../SOURCES.md)
 
@@ -15,7 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Mark reference](./charts-docs-reference-index-md-6fc2c6fc--mark-reference.md) — 7 KiB
 - [Framework adapters](./charts-docs-reference-index-md-6fc2c6fc--framework-adapters.md) — 4 KiB
 - [Surface tiers](./charts-docs-reference-index-md-6fc2c6fc--surface-tiers.md) — 2 KiB
-- [Import map](./charts-docs-reference-index-md-6fc2c6fc--import-map.md) — 27 KiB
+- [Import map](./charts-docs-reference-index-md-6fc2c6fc--import-map.md) — 28 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="core-reference"></a>

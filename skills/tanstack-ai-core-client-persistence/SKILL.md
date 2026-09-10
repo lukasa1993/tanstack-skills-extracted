@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.53.0"
+  tanstack-package-version: "0.54.0"
   tanstack-source-skill: "ai-core/client-persistence"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/client-persistence.md\",\"TanStack/ai:docs/persistence/overview.md\"]"
   tanstack-type: "sub-skill"
@@ -54,6 +54,12 @@ required for normal use.
 ## Mode A — cache everything (client-authoritative)
 
 ```tsx
+import {
+  useChat,
+  fetchServerSentEvents,
+  localStoragePersistence,
+} from '@tanstack/ai-react'
+
 function Chat() {
   const { messages, sendMessage } = useChat({
     threadId: 'support-chat', // stable — required
@@ -72,6 +78,8 @@ Best for: SPA, offline-first, single device, moderate conversation size.
 ## Mode B — server-authoritative (`persistence: true`)
 
 ```tsx
+import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
+
 function Chat({ threadId }: { threadId: string }) {
   const { messages, sendMessage } = useChat({
     threadId,
@@ -128,18 +136,22 @@ The hook return is exactly `generate` / `result` / `isLoading` / `error` /
 ### Turning it on (`persistence: true`)
 
 ```tsx
-const image = useGenerateImage({
-  threadId, // REQUIRED — the scope the last generation is hydrated under
-  connection: fetchServerSentEvents('/api/generate/image'),
-  persistence: true,
-})
-// After a reload: image.status / image.result / image.error are the last
-// generation for `threadId`, fetched from the server — nothing was cached.
+import { useGenerateImage, fetchServerSentEvents } from '@tanstack/ai-react'
+
+function ImageGenerator({ threadId }: { threadId: string }) {
+  const image = useGenerateImage({
+    threadId, // REQUIRED — the scope the last generation is hydrated under
+    connection: fetchServerSentEvents('/api/generate/image'),
+    persistence: true,
+  })
+  // After a reload: image.status / image.result / image.error are the last
+  // generation for `threadId`, fetched from the server — nothing was cached.
+}
 ```
 
 The server half — the same route handles the run and the hydration `GET`:
 
-```ts
+```ts group=generation-persistence
 import {
   generateImage,
   generationParamsFromRequest,
@@ -215,7 +227,7 @@ export function GET(request: Request) {
 (`stores.artifacts` + `stores.blobs`) AND `withGenerationPersistence` is given an
 `artifactUrl` mapper:
 
-```ts
+```ts group=generation-persistence
 withGenerationPersistence(persistence, {
   artifactUrl: (ref) => `/api/generate/image/artifact?id=${ref.artifactId}`,
 })

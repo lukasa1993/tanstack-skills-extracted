@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 5. Video Generation (Experimental -- async polling)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Core Patterns: 5. Video Generation (Experimental -- async polling)
 
@@ -37,14 +37,17 @@ while (status.status !== 'completed' && status.status !== 'failed') {
 }
 
 // Streaming: server handles polling, client gets real-time updates
-const stream = generateVideo({
-  adapter: openaiVideo('sora-2'),
-  prompt: 'A flying car over a city',
-  stream: true,
-  pollingInterval: 3000,
-  maxDuration: 600_000,
-})
-return toServerSentEventsResponse(stream)
+export async function POST(request: Request) {
+  const { prompt } = await request.json()
+  const stream = generateVideo({
+    adapter: openaiVideo('sora-2'),
+    prompt,
+    stream: true,
+    pollingInterval: 3000,
+    maxDuration: 600_000,
+  })
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 Google Veo (`@tanstack/ai-gemini`) uses the same jobs/polling flow. Its
@@ -56,6 +59,7 @@ Image prompt parts route by `metadata.role`: first un-roled /
 `'reference'` / `'character'` → `referenceImages`:
 
 ```typescript
+import { generateVideo } from '@tanstack/ai'
 import { geminiVideo } from '@tanstack/ai-gemini'
 
 const adapter = geminiVideo('veo-3.1-generate-preview')
@@ -89,6 +93,7 @@ media). For conversational editing, pass a prior generation's `jobId` as
 on 2026-09-30.
 
 ```typescript
+import { generateVideo } from '@tanstack/ai'
 import { geminiVideo } from '@tanstack/ai-gemini'
 
 const omni = geminiVideo('gemini-omni-1.1-flash')
@@ -141,6 +146,7 @@ from OpenRouter's published metadata, with the same `availableDurations()` /
 `snapDuration()` helpers:
 
 ```typescript
+import { generateVideo } from '@tanstack/ai'
 import { openRouterVideo } from '@tanstack/ai-openrouter'
 
 const adapter = openRouterVideo('bytedance/seedance-2.0')

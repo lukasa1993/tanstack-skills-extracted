@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-middleware"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../tools-outputs-middleware.md) · [Source provenance](../SOURCES.md)
 
@@ -13,10 +13,10 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./tanstack-ai-core-middleware-b87affa9--overview.md) — 1 KiB
 - [Setup — Analytics Tracking Middleware](./tanstack-ai-core-middleware-b87affa9--setup-analytics-tracking-middleware.md) — 1 KiB
 - [Hooks Reference](./tanstack-ai-core-middleware-b87affa9--hooks-reference.md) — 8 KiB
-- [onStructuredOutputConfig](./tanstack-ai-core-middleware-b87affa9--onstructuredoutputconfig.md) — 2 KiB
-- [Core Patterns](./tanstack-ai-core-middleware-b87affa9--core-patterns.md) — 8 KiB
+- [onStructuredOutputConfig](./tanstack-ai-core-middleware-b87affa9--onstructuredoutputconfig.md) — 3 KiB
+- [Core Patterns](./tanstack-ai-core-middleware-b87affa9--core-patterns.md) — 9 KiB
 - [Pattern: tool-call budget (app-owned)](./tanstack-ai-core-middleware-b87affa9--pattern-tool-call-budget-app-owned.md) — 2 KiB
-- [Built-in: toolCacheMiddleware](./tanstack-ai-core-middleware-b87affa9--built-in-toolcachemiddleware.md) — 1 KiB
+- [Built-in: toolCacheMiddleware](./tanstack-ai-core-middleware-b87affa9--built-in-toolcachemiddleware.md) — 2 KiB
 - [Server State Persistence: withPersistence](./tanstack-ai-core-middleware-b87affa9--server-state-persistence-withpersistence.md) — 8 KiB
 - [Sandbox File-Event Hooks (`sandbox` group)](./tanstack-ai-core-middleware-b87affa9--sandbox-file-event-hooks-sandbox-group.md) — 5 KiB
 - [Common Mistakes](./tanstack-ai-core-middleware-b87affa9--common-mistakes.md) — 4 KiB

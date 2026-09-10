@@ -1,12 +1,12 @@
 # Installation — Framework compatibility
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@0.16.2`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 ## Framework compatibility
 
 | Adapter subpath                 | Framework peers                                                                 |
 | ------------------------------- | ------------------------------------------------------------------------------- |
-| `@tanstack/charts/react`        | React and React DOM `^19.0.0`                                                   |
+| `@tanstack/charts/react`        | React and React DOM 18 or 19                                                    |
 | `@tanstack/charts/react-native` | React `^19.2.3`, React Native `^0.86.0`, and `react-native-svg` `>=15.15.4 <16` |
 | `@tanstack/charts/preact`       | Preact `>=10`                                                                   |
 | `@tanstack/charts/vue`          | Vue `>=3.5`                                                                     |

@@ -1,6 +1,6 @@
 # Server Functions — Common Mistakes
 
-[Guide and prerequisites](./tanstack-start-client-core-start-core-server-functions-49d113b0.md) · Published skill · `@tanstack/start-client-core@1.170.28`.
+[Guide and prerequisites](./tanstack-start-client-core-start-core-server-functions-49d113b0.md) · Published skill · `@tanstack/start-client-core@1.170.29`.
 
 ## Common Mistakes
 

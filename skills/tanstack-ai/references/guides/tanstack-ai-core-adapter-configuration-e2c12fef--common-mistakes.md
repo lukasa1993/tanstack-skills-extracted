@@ -1,6 +1,6 @@
 # Adapter Configuration — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Common Mistakes
 
@@ -9,13 +9,19 @@
 The legacy `openai()` (and `anthropic()`, etc.) monolithic adapters are
 deprecated. They take the model in `chat()`, not in the factory.
 
-```typescript
-// WRONG: Legacy monolithic adapter pattern
+```typescript ignore
+// WRONG: Legacy monolithic adapter pattern (no longer exported)
 import { openai } from '@tanstack/ai-openai'
 chat({ adapter: openai(), model: 'gpt-5.2', messages })
+```
 
+```typescript
 // CORRECT: Tree-shakeable adapter, model in factory
+import { chat } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
+
+const messages = [{ role: 'user' as const, content: 'Hello' }]
+
 chat({ adapter: openaiText('gpt-5.2'), messages })
 ```
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-ag-ui-protocol"></a>
 
-Published skill · `@tanstack/ai@0.53.0`.
+Published skill · `@tanstack/ai@0.54.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./tanstack-ai-core-ag-ui-protocol-5877d289--overview.md) — 1 KiB
 - [Setup — Server Endpoint Producing AG-UI Events via SSE](./tanstack-ai-core-ag-ui-protocol-5877d289--setup-server-endpoint-producing-ag-ui-events-via-sse.md) — 1 KiB
 - [Setup — Receiving AG-UI RunAgentInput on the Server](./tanstack-ai-core-ag-ui-protocol-5877d289--setup-receiving-ag-ui-runagentinput-on-the-server.md) — 3 KiB
-- [Core Patterns](./tanstack-ai-core-ag-ui-protocol-5877d289--core-patterns.md) — 9 KiB
+- [Core Patterns](./tanstack-ai-core-ag-ui-protocol-5877d289--core-patterns.md) — 10 KiB
 - [Common Mistakes](./tanstack-ai-core-ag-ui-protocol-5877d289--common-mistakes.md) — 2 KiB
 - [Tension](./tanstack-ai-core-ag-ui-protocol-5877d289--tension.md) — 1 KiB
 - [Cross-References](./tanstack-ai-core-ag-ui-protocol-5877d289--cross-references.md) — 1 KiB

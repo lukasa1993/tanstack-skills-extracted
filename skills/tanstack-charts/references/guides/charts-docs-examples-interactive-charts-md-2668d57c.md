@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-interactive-charts-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.16.2`.
+Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 [Topic index](../examples-advanced.md) · [Source provenance](../SOURCES.md)
 
@@ -49,6 +49,21 @@ dot(rows, {
       transition: { type: 'tween', duration: 140, easing: 'ease-out' },
     },
   ],
+})
+```
+
+The same definition can make the built-in indicator smaller while retaining
+its series-colored outline:
+
+```ts
+const definition = defineChart({
+  marks,
+  scales,
+  focusRing: {
+    radius: 4,
+    strokeWidth: 2,
+    fill: '#ffffff',
+  },
 })
 ```
 
@@ -195,9 +210,11 @@ start and end values.
 
 Import `zoomX` from `@tanstack/charts/interaction/zoom`, bind its `window` to a
 controlled signal, and provide the full `extent` and allowed `scaleExtent`.
-The behavior owns final-scale inversion, focus-gated wheel capture,
+The behavior owns final-scale inversion, configurable wheel capture,
 pointer-anchored zoom, pan, touch and keyboard input, cancellation, clamping,
-and teardown.
+and teardown. Wheel capture defaults to focused plots. Use
+`wheelActivation: 'modifier'` when Control+wheel or Command+wheel should act
+without prior focus while unmodified wheels continue scrolling the page.
 
 Keep the accepted window, visible-row or clipping policy, y-domain policy,
 status, reset control, persistence, and follow-latest behavior in application

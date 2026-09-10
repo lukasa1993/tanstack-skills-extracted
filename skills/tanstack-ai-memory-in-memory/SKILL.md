@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-memory"
-  tanstack-package-version: "0.1.10"
+  tanstack-package-version: "0.1.11"
   tanstack-source-skill: "tanstack-ai-memory-in-memory"
 ---
 
@@ -36,7 +36,11 @@ import { inMemory } from '@tanstack/ai-memory/in-memory'
 
 const memory = inMemory()
 
-memoryMiddleware({ adapter: memory, scope })
+// A static scope is fine for dev/tests; derive it from the session in real apps.
+memoryMiddleware({
+  adapter: memory,
+  scope: { threadId: 'demo-thread', userId: 'alice' },
+})
 ```
 
 ## Options

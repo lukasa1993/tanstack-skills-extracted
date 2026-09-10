@@ -1,12 +1,13 @@
 # Tool Calling — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.53.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.54.0`.
 
 ## Setup
 
 Complete end-to-end example: shared definition, server tool, client tool, server route, React client.
+The four files below share one scope, so later files use the earlier exports directly.
 
-```typescript
+```typescript group=product-catalog
 // tools/definitions.ts
 import { toolDefinition } from '@tanstack/ai'
 import { z } from 'zod'
@@ -33,24 +34,23 @@ export const updateCartUIDef = toolDefinition({
 })
 ```
 
-```typescript
-// tools/server.ts
-import { getProductsDef } from './definitions'
+```typescript group=product-catalog
+// tools/server.ts (uses getProductsDef from tools/definitions.ts)
+import { db } from './db'
 
 export const getProducts = getProductsDef.server(async ({ query, limit }) => {
-  const results = await db.products.search(query, { limit: limit ?? 10 })
+  const results: Array<{ id: string; name: string; price: number }> =
+    await db.products.search(query, { limit: limit ?? 10 })
   return {
     products: results.map((p) => ({ id: p.id, name: p.name, price: p.price })),
   }
 })
 ```
 
-```typescript
-// api/chat/route.ts
+```typescript group=product-catalog
+// api/chat/route.ts (uses getProducts and updateCartUIDef from tools/)
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
-import { getProducts } from '@/tools/server'
-import { updateCartUIDef } from '@/tools/definitions'
 
 export async function POST(request: Request) {
   const { messages } = await request.json()
@@ -63,32 +63,31 @@ export async function POST(request: Request) {
 }
 ```
 
-```typescript
-// app/chat.tsx
+```tsx group=product-catalog
+// app/chat.tsx (uses updateCartUIDef from tools/definitions.ts)
 import {
   useChat,
   fetchServerSentEvents,
-  clientTools,
   createChatClientOptions,
   type InferChatMessages,
-} from "@tanstack/ai-react";
-import { updateCartUIDef } from "@/tools/definitions";
-import { useState } from "react";
+} from '@tanstack/ai-react'
+import { clientTools } from '@tanstack/ai-client'
+import { useState } from 'react'
 
 function ChatPage() {
-  const [cartCount, setCartCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0)
 
   const updateCartUI = updateCartUIDef.client((input) => {
-    setCartCount(input.itemCount);
-    return { displayed: true };
-  });
+    setCartCount(input.itemCount)
+    return { displayed: true }
+  })
 
-  const tools = clientTools(updateCartUI);
+  const tools = clientTools(updateCartUI)
   const chatOptions = createChatClientOptions({
-    connection: fetchServerSentEvents("/api/chat"),
+    connection: fetchServerSentEvents('/api/chat'),
     tools,
-  });
-  const { messages, sendMessage } = useChat(chatOptions);
+  })
+  const { messages, sendMessage } = useChat(chatOptions)
   // InferChatMessages ties part types to the configured tools when needed:
   // type Messages = InferChatMessages<typeof chatOptions>
 
@@ -98,15 +97,19 @@ function ChatPage() {
       {messages.map((msg) => (
         <div key={msg.id}>
           {msg.parts.map((part) => {
-            if (part.type === "text") return <p>{part.content}</p>;
-            if (part.type === "tool-call") {
-              return <div key={part.id}>Tool: {part.name} ({part.state})</div>;
+            if (part.type === 'text') return <p>{part.content}</p>
+            if (part.type === 'tool-call') {
+              return (
+                <div key={part.id}>
+                  Tool: {part.name} ({part.state})
+                </div>
+              )
             }
-            return null;
+            return null
           })}
         </div>
       ))}
     </div>
-  );
+  )
 }
 ```

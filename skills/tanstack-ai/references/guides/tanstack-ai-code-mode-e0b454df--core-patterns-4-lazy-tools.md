@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 4. Lazy Tools
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.8`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.9`.
 
 ## Core Patterns: 4. Lazy Tools
 
@@ -9,9 +9,19 @@ When a large tool catalog would bloat the `execute_typescript` system prompt, ma
 
 **Marking a tool lazy:**
 
-```typescript
+```typescript group=lazy-tools
 import { toolDefinition } from '@tanstack/ai'
 import { z } from 'zod'
+
+const eagerTool = toolDefinition({
+  name: 'fetchWeather',
+  description: 'Get current weather for a city',
+  inputSchema: z.object({ city: z.string() }),
+  outputSchema: z.object({ temp: z.number(), condition: z.string() }),
+}).server(async ({ city }) => {
+  const res = await fetch(`https://api.weather.com/${city}`)
+  return res.json()
+})
 
 const rarelyUsedTool = toolDefinition({
   name: 'fetchStocks',
@@ -20,8 +30,8 @@ const rarelyUsedTool = toolDefinition({
   outputSchema: z.object({ price: z.number() }),
   lazy: true, // <-- opt out of full system-prompt documentation
 }).server(async ({ ticker }) => {
-  // ...
-  return { price: 0 }
+  const res = await fetch(`https://api.stocks.com/${ticker}`)
+  return res.json()
 })
 ```
 
@@ -29,8 +39,8 @@ const rarelyUsedTool = toolDefinition({
 
 `createCodeMode()` returns `{ tool, discoveryTool, tools, systemPrompt }`. When lazy tools are present `discoveryTool` is a `discover_tools` server tool; otherwise it is `null`. Always spread `tools` (not just `tool`) into `chat()` so the discovery tool is registered:
 
-```typescript
-import { chat } from '@tanstack/ai'
+```typescript group=lazy-tools
+import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { createCodeMode } from '@tanstack/ai-code-mode'
 import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
 import { openaiText } from '@tanstack/ai-openai'
@@ -40,12 +50,18 @@ const { tools, systemPrompt } = createCodeMode({
   tools: [eagerTool, rarelyUsedTool], // rarelyUsedTool has lazy: true
 })
 
-const stream = chat({
-  adapter: openaiText('gpt-5.5'),
-  systemPrompts: ['You are a helpful assistant.', systemPrompt],
-  tools: [...tools, ...otherTools], // spread tools, not just tool
-  messages,
-})
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    systemPrompts: ['You are a helpful assistant.', systemPrompt],
+    tools: [...tools], // spread tools, not just tool
+    messages,
+  })
+
+  return toServerSentEventsResponse(stream)
+}
 ```
 
 `tools` equals `[tool]` when there are no lazy tools (backward compatible) and `[tool, discoveryTool]` when lazy tools exist.
@@ -72,6 +88,10 @@ Control how much of each lazy tool's description appears in the Discoverable API
 | `'full'`           | `external_fetchStocks — Get stock prices. Returns a price quote.` |
 
 ```typescript
+import { createCodeMode } from '@tanstack/ai-code-mode'
+import { createNodeIsolateDriver } from '@tanstack/ai-isolate-node'
+import { eagerTool, rarelyUsedTool } from './tools'
+
 const { tools, systemPrompt } = createCodeMode({
   driver: createNodeIsolateDriver(),
   tools: [eagerTool, rarelyUsedTool],

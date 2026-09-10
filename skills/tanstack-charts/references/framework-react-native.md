@@ -6,4 +6,4 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [README](./guides/charts-packages-react-native-charts-readme-md-847545d3.md) | Release-matched documentation | `@tanstack/react-native-charts@0.16.2` |
+| [README](./guides/charts-packages-react-native-charts-readme-md-847545d3.md) | Release-matched documentation | `@tanstack/react-native-charts@0.18.0` |
