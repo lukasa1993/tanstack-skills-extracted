@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-db"></a>
 
-Published skill · `@tanstack/react-db@0.3.7`.
+Published skill · `@tanstack/react-db@0.3.8`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

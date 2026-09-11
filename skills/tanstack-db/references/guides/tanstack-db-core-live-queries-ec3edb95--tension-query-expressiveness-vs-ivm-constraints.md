@@ -1,6 +1,6 @@
 # Live Queries — Tension: Query expressiveness vs. IVM constraints
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.8.7`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.9.0`.
 
 ## Tension: Query expressiveness vs. IVM constraints
 

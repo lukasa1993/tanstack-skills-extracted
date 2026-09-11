@@ -116,18 +116,18 @@
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-router",
-      "version": "1.170.32",
+      "version": "1.170.33",
       "sourcePath": "solid-router",
-      "sha256": "da87778cffd2c6f34f58194d7f9a6e4413fa72468be44a45bc3c97cf2ec462ad"
+      "sha256": "2f52e780e6c09a5a97477ebf4feabdfa9eaa3f090b9bf342ce6c5695b6c83257"
     },
     {
       "id": "tanstack-vue-router",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-router",
-      "version": "1.170.31",
+      "version": "1.170.32",
       "sourcePath": "vue-router",
-      "sha256": "b0c3832448c192ca66083d95ddda8521545f34fe2baddbfb13d77ca8448f966f"
+      "sha256": "167f10262923db750061cf63a7eec90a3fd447f1d60c260025d088647dc2b860"
     }
   ],
   "duplicateDocuments": [],

@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/vue-start"
-  tanstack-package-version: "1.168.48"
+  tanstack-package-version: "1.168.49"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "vue-start"
   tanstack-sources: "[\"TanStack/router:packages/vue-start/src\"]"
@@ -150,20 +150,23 @@ function RootComponent() {
 ```tsx
 import { createFileRoute } from '@tanstack/vue-router'
 import { createServerFn } from '@tanstack/vue-start'
+import { defineComponent } from 'vue'
 
 const getGreeting = createServerFn({ method: 'GET' }).handler(async () => {
   return 'Hello from TanStack Start!'
+})
+
+const HomePage = defineComponent({
+  setup() {
+    const greeting = Route.useLoaderData()
+    return () => <h1>{greeting.value}</h1>
+  },
 })
 
 export const Route = createFileRoute('/')({
   loader: () => getGreeting(),
   component: HomePage,
 })
-
-function HomePage() {
-  const greeting = Route.useLoaderData()
-  return <h1>{greeting.value}</h1>
-}
 ```
 
 ## useServerFn Composable

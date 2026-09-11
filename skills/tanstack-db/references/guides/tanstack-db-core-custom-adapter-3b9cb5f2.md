@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-custom-adapter"></a>
 
-Published skill · `@tanstack/db@0.8.7`.
+Published skill · `@tanstack/db@0.9.0`.
 
 [Topic index](../sync-persistence.md) · [Source provenance](../SOURCES.md)
 

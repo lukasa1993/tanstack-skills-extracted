@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/vue-router"
-  tanstack-package-version: "1.170.31"
+  tanstack-package-version: "1.170.32"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "vue-router"
   tanstack-sources: "[\"TanStack/router:packages/vue-router/src\"]"

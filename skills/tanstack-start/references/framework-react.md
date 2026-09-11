@@ -6,5 +6,5 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [React Start](./guides/tanstack-react-start-d9f2ca2e.md) | Published skill | `@tanstack/react-start@1.168.51` |
-| [Migrate From Nextjs](./guides/tanstack-react-start-lifecycle-migrate-from-nextjs-fcda4574.md) | Published skill | `@tanstack/react-start@1.168.51` |
+| [React Start](./guides/tanstack-react-start-d9f2ca2e.md) | Published skill | `@tanstack/react-start@1.168.52` |
+| [Migrate From Nextjs](./guides/tanstack-react-start-lifecycle-migrate-from-nextjs-fcda4574.md) | Published skill | `@tanstack/react-start@1.168.52` |

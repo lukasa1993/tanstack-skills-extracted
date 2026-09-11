@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.8.7"
+  tanstack-package-version: "0.9.0"
   tanstack-source-skill: "db-core"
   tanstack-type: "core"
 ---

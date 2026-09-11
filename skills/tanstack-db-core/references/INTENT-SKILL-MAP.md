@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/db@0.8.7
+Published package: @tanstack/db@0.9.0
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

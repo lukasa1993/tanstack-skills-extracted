@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-start"></a>
 
-Published skill · `@tanstack/vue-start@1.168.48`.
+Published skill · `@tanstack/vue-start@1.168.49`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -143,20 +143,23 @@ function RootComponent() {
 ```tsx
 import { createFileRoute } from '@tanstack/vue-router'
 import { createServerFn } from '@tanstack/vue-start'
+import { defineComponent } from 'vue'
 
 const getGreeting = createServerFn({ method: 'GET' }).handler(async () => {
   return 'Hello from TanStack Start!'
+})
+
+const HomePage = defineComponent({
+  setup() {
+    const greeting = Route.useLoaderData()
+    return () => <h1>{greeting.value}</h1>
+  },
 })
 
 export const Route = createFileRoute('/')({
   loader: () => getGreeting(),
   component: HomePage,
 })
-
-function HomePage() {
-  const greeting = Route.useLoaderData()
-  return <h1>{greeting.value}</h1>
-}
 ```
 
 ## useServerFn Composable

@@ -14,7 +14,7 @@
 | `tanstack-router-core-ssr` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.29` |  |
 | `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.168.37` |  |
 | `tanstack-virtual-file-routes` | atomic | `ssr-build-tooling` | `@tanstack/virtual-file-routes` | `1.162.0` |  |
-| `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.32` |  |
-| `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.31` |  |
+| `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.33` |  |
+| `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.32` |  |
 
 Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-db"></a>
 
-Published skill · `@tanstack/angular-db@0.1.88`.
+Published skill · `@tanstack/angular-db@0.1.89`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

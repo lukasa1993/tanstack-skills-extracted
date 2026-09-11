@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.168.32"
   tanstack-package: "@tanstack/react-start"
-  tanstack-package-version: "1.168.51"
+  tanstack-package-version: "1.168.52"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\",\"tanstack-react-start\"]"
   tanstack-source-skill: "migrate-from-nextjs"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/server-functions.md\",\"TanStack/router:docs/start/framework/react/guide/middleware.md\",\"TanStack/router:docs/start/framework/react/guide/execution-model.md\"]"

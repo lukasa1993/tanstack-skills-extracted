@@ -1,6 +1,6 @@
 # Custom Adapter — Tension: Simplicity vs. Correctness in Sync
 
-[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.8.7`.
+[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.9.0`.
 
 ## Tension: Simplicity vs. Correctness in Sync
 
