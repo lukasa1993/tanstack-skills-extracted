@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/highlight"
-  tanstack-library-version: "0.0.10"
+  tanstack-library-version: "0.1.0"
   tanstack-package: "@tanstack/highlight"
-  tanstack-package-version: "0.0.10"
+  tanstack-package-version: "0.1.0"
   tanstack-source-skill: "theme-and-annotate-code"
   tanstack-sources: "[\"TanStack/highlight:docs/guides/themes.md\",\"TanStack/highlight:docs/guides/annotations.md\",\"TanStack/highlight:docs/guides/output-and-css.md\",\"TanStack/highlight:src/theme.ts\",\"TanStack/highlight:src/core.ts\"]"
   tanstack-type: "core"

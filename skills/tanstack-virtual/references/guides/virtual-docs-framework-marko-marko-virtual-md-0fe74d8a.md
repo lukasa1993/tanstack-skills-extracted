@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-framework-marko-marko-virtual-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.9`.
+Release-matched documentation · `@tanstack/virtual-core@3.17.10`.
 
 [Topic index](../framework-marko.md) · [Source provenance](../SOURCES.md)
 
@@ -25,7 +25,6 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [SSR](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a--ssr.md) — 5 KiB
 
 <!-- Original source anchors retained for inbound links. -->
-<a id="marko-virtual"></a>
 <a id="installation"></a>
 <a id="row-virtualisation"></a>
 <a id="column-virtualisation"></a>

@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/markdown"
-  tanstack-library-version: "0.0.13"
+  tanstack-library-version: "0.0.14"
   tanstack-package: "@tanstack/markdown"
-  tanstack-package-version: "0.0.13"
+  tanstack-package-version: "0.0.14"
   tanstack-requires: "[\"tanstack-markdown-render-markdown\"]"
   tanstack-source-skill: "react-rendering"
   tanstack-sources: "[\"TanStack/markdown:docs/guides/react.md\",\"TanStack/markdown:docs/reference/react.md\",\"TanStack/markdown:docs/guides/extensions.md\",\"TanStack/markdown:docs/core-concepts/security.md\",\"TanStack/markdown:src/react.ts\",\"TanStack/markdown:tests/ssr-react.test.tsx\"]"

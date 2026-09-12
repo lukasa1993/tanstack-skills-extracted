@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-pretext-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.9`.
+Release-matched documentation · `@tanstack/virtual-core@3.17.10`.
 
 [Topic index](../measurement-feeds.md) · [Source provenance](../SOURCES.md)
 
@@ -117,4 +117,4 @@ function Messages({ rows }: { rows: Array<{ id: string; text: string }> }) {
 - Keep a fallback for unsupported runtimes. Pretext currently needs `Intl.Segmenter` and Canvas 2D text measurement.
 - Use `resizeItem(index, size)` when you know a row's final size outside render, such as after markdown preprocessing, image metadata loading, or a controlled expand/collapse transition.
 
-See the React Pretext example for a complete chat-style implementation: [React Pretext](https://github.com/TanStack/virtual/blob/171029d81350d62e040fe3a1374ed1499c034b41/examples/react/pretext/README.md).
+See the React Pretext example for a complete chat-style implementation: [React Pretext](https://github.com/TanStack/virtual/blob/df47889fc87af0b5ff46a9805820f60cff6828ff/examples/react/pretext/README.md).

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/markdown"
-  tanstack-library-version: "0.0.13"
+  tanstack-library-version: "0.0.14"
   tanstack-package: "@tanstack/markdown"
-  tanstack-package-version: "0.0.13"
+  tanstack-package-version: "0.0.14"
   tanstack-requires: "[\"tanstack-markdown-render-markdown\"]"
   tanstack-source-skill: "custom-extensions"
   tanstack-sources: "[\"TanStack/markdown:docs/guides/extensions.md\",\"TanStack/markdown:docs/reference/extensions.md\",\"TanStack/markdown:src/types.ts\",\"TanStack/markdown:src/parser.ts\",\"TanStack/markdown:src/extensions/callouts.ts\",\"TanStack/markdown:src/extensions/comment-components.ts\"]"

@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-api-virtualizer-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.9`.
+Release-matched documentation · `@tanstack/virtual-core@3.17.10`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -34,7 +34,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Optional Options: `lanes`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-lanes.md) — 1 KiB
 - [Optional Options: `laneAssignmentMode`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-laneassignmentmode.md) — 1 KiB
 - [Optional Options: `anchorTo`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-anchorto.md) — 1 KiB
-- [Optional Options: `followOnAppend`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-followonappend.md) — 1 KiB
+- [Optional Options: `followOnAppend`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-followonappend.md) — 2 KiB
 - [Optional Options: `scrollEndThreshold`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollendthreshold.md) — 1 KiB
 - [Optional Options: `isScrollingResetDelay`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-isscrollingresetdelay.md) — 1 KiB
 - [Optional Options: `useScrollendEvent`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-usescrollendevent.md) — 1 KiB

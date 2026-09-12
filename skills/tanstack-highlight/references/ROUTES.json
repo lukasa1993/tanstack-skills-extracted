@@ -10,16 +10,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md",
       "sourcePath": "configure-selective-highlighting",
-      "bytes": 7069,
+      "bytes": 7068,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md",
-          "bytes": 7069
+          "bytes": 7068
         }
       ],
       "examples": []
@@ -32,10 +32,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "file": "references/guides/tanstack-highlight-extend-language-support-752c4660.md",
       "sourcePath": "extend-language-support",
-      "bytes": 8832,
+      "bytes": 8831,
       "prerequisites": [
         {
           "id": "tanstack-highlight-configure-selective-highlighting",
@@ -46,7 +46,7 @@
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-extend-language-support-752c4660.md",
-          "bytes": 8832
+          "bytes": 8831
         }
       ],
       "examples": []
@@ -59,10 +59,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "file": "references/guides/tanstack-highlight-integrate-framework-code-blocks-9c88ca76.md",
       "sourcePath": "integrate-framework-code-blocks",
-      "bytes": 9456,
+      "bytes": 9455,
       "prerequisites": [
         {
           "id": "tanstack-highlight-configure-selective-highlighting",
@@ -77,7 +77,7 @@
         {
           "title": "Overview; Integration Setup; Core Integration Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-integrate-framework-code-blocks-9c88ca76.md",
-          "bytes": 9456
+          "bytes": 9455
         }
       ],
       "examples": []
@@ -90,10 +90,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "file": "references/guides/tanstack-highlight-integrate-markdown-pipelines-32cb443f.md",
       "sourcePath": "integrate-markdown-pipelines",
-      "bytes": 8374,
+      "bytes": 8373,
       "prerequisites": [
         {
           "id": "tanstack-highlight-configure-selective-highlighting",
@@ -104,7 +104,7 @@
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-integrate-markdown-pipelines-32cb443f.md",
-          "bytes": 8374
+          "bytes": 8373
         }
       ],
       "examples": []
@@ -117,16 +117,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "file": "references/guides/tanstack-highlight-theme-and-annotate-code-f5bc5628.md",
       "sourcePath": "theme-and-annotate-code",
-      "bytes": 6924,
+      "bytes": 6923,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-theme-and-annotate-code-f5bc5628.md",
-          "bytes": 6924
+          "bytes": 6923
         }
       ],
       "examples": []

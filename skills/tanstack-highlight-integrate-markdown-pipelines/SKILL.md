@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/highlight"
-  tanstack-library-version: "0.0.10"
+  tanstack-library-version: "0.1.0"
   tanstack-package: "@tanstack/highlight"
-  tanstack-package-version: "0.0.10"
+  tanstack-package-version: "0.1.0"
   tanstack-requires: "[\"tanstack-highlight-configure-selective-highlighting\"]"
   tanstack-source-skill: "integrate-markdown-pipelines"
   tanstack-sources: "[\"TanStack/highlight:docs/guides/markdown-pipelines.md\",\"TanStack/highlight:docs/guides/annotations.md\",\"TanStack/highlight:src/markdown.ts\",\"TanStack/highlight:src/remark.ts\",\"TanStack/highlight:src/rehype.ts\"]"

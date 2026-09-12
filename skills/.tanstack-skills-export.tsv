@@ -27,9 +27,9 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/devtools-utils	0.7.0	MIT	1	1	tanstack-devtools-utils-devtools-framework-adapters
 @tanstack/devtools-vite	0.8.5	MIT	1	1	tanstack-devtools-vite-plugin
 @tanstack/ember-table	9.2.4	MIT	3	3	tanstack-ember-table-create-table-hook,tanstack-ember-table-getting-started,tanstack-ember-table-table-state
-@tanstack/highlight	0.0.10	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
+@tanstack/highlight	0.1.0	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
 @tanstack/lit-table	9.2.4	MIT	5	5	tanstack-lit-table-create-table-hook,tanstack-lit-table-getting-started,tanstack-lit-table-migrate-v8-to-v9,tanstack-lit-table-table-state,tanstack-lit-table-with-tanstack-virtual
-@tanstack/markdown	0.0.13	MIT	6	6	tanstack-markdown-custom-extensions,tanstack-markdown-docs-features,tanstack-markdown-octane-rendering,tanstack-markdown-production-pipelines,tanstack-markdown-react-rendering,tanstack-markdown-render-markdown
+@tanstack/markdown	0.0.14	MIT	6	6	tanstack-markdown-custom-extensions,tanstack-markdown-docs-features,tanstack-markdown-octane-rendering,tanstack-markdown-production-pipelines,tanstack-markdown-react-rendering,tanstack-markdown-render-markdown
 @tanstack/match-sorter-utils	9.1.2	MIT	1	1	tanstack-match-sorter-utils-fuzzy-ranking
 @tanstack/octane-table	9.2.4	MIT	3	3	tanstack-octane-table-create-table-hook,tanstack-octane-table-getting-started,tanstack-octane-table-table-state
 @tanstack/offline-transactions	1.0.54	MIT	1	1	tanstack-offline-transactions-offline

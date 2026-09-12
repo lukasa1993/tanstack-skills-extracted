@@ -5,11 +5,14 @@ Import only the definitions the application registers.
 | Language | Export | Direct import | Aliases |
 | --- | --- | --- | --- |
 | Apache | `apache` | `@tanstack/highlight/languages/apache` | - |
+| CMake | `cmake` | `@tanstack/highlight/languages/cmake` | - |
+| C++ | `cpp` | `@tanstack/highlight/languages/cpp` | `c++`, `cc`, `cxx`, `hpp`, `hxx` |
 | CSS | `css` | `@tanstack/highlight/languages/css` | - |
 | Diff | `diff` | `@tanstack/highlight/languages/diff` | `patch` |
 | Dockerfile | `dockerfile` | `@tanstack/highlight/languages/dockerfile` | `docker` |
 | EJS | `ejs` | `@tanstack/highlight/languages/ejs` | - |
 | Env | `env` | `@tanstack/highlight/languages/env` | `dotenv` |
+| Go | `go` | `@tanstack/highlight/languages/go` | `golang` |
 | HTML | `html` | `@tanstack/highlight/languages/html` | `htm`, `xml`, `angular-html` |
 | HTTP | `http` | `@tanstack/highlight/languages/http` | - |
 | JavaScript | `js` | `@tanstack/highlight/languages/js` | `javascript`, `mjs`, `cjs`, `js-vue` |
@@ -18,6 +21,7 @@ Import only the definitions the application registers.
 | Markdown | `markdown` | `@tanstack/highlight/languages/markdown` | `md` |
 | Mermaid | `mermaid` | `@tanstack/highlight/languages/mermaid` | - |
 | Nginx | `nginx` | `@tanstack/highlight/languages/nginx` | - |
+| PHP | `php` | `@tanstack/highlight/languages/php` | - |
 | Plaintext | `plaintext` | `@tanstack/highlight/languages/plaintext` | `text`, `txt`, `-->` |
 | Python | `python` | `@tanstack/highlight/languages/python` | `py` |
 | Scheme | `scheme` | `@tanstack/highlight/languages/scheme` | `scm`, `racket` |
@@ -39,6 +43,7 @@ Import only the definitions the application registers.
 | Vue | `js`, `ts`, `css` |
 | Svelte | `js`, `ts`, `css` |
 | EJS | `js` |
+| PHP | `html` (and its optional script/style languages) |
 | Markdown | The language named by each fence |
 
 The aggregate `@tanstack/highlight/languages` entry can tree-shake in a compatible bundler. Direct subpaths make isolation explicit and are the default for size-sensitive clients.

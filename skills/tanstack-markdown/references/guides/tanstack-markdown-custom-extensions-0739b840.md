@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-markdown-custom-extensions"></a>
 
-Published skill · `@tanstack/markdown@0.0.13`.
+Published skill · `@tanstack/markdown@0.0.14`.
 
 [Topic index](../parsing-extensions.md) · [Source provenance](../SOURCES.md)
 

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/highlight"
-  tanstack-library-version: "0.0.10"
+  tanstack-library-version: "0.1.0"
   tanstack-package: "@tanstack/highlight"
-  tanstack-package-version: "0.0.10"
+  tanstack-package-version: "0.1.0"
   tanstack-requires: "[\"tanstack-highlight-configure-selective-highlighting\",\"tanstack-highlight-integrate-markdown-pipelines\"]"
   tanstack-source-skill: "integrate-framework-code-blocks"
   tanstack-sources: "[\"TanStack/highlight:docs/guides/react.md\",\"TanStack/highlight:docs/guides/octane.md\",\"TanStack/highlight:docs/guides/ssr-and-client.md\",\"TanStack/highlight:src/react.ts\",\"TanStack/highlight:src/octane.ts\"]"

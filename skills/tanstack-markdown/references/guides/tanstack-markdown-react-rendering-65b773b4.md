@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-markdown-react-rendering"></a>
 
-Published skill · `@tanstack/markdown@0.0.13`.
+Published skill · `@tanstack/markdown@0.0.14`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

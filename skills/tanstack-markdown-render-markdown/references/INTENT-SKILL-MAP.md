@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/markdown@0.0.13
+Published package: @tanstack/markdown@0.0.14
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

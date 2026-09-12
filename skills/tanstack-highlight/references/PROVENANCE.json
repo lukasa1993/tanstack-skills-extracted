@@ -8,45 +8,45 @@
       "kind": "atomic",
       "theme": "languages-configuration",
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "sourcePath": "configure-selective-highlighting",
-      "sha256": "406460d0483d106cd34d335ee1937ed03dc65754a7d0bf88f5536597c96d2403"
+      "sha256": "f5689e089b9b7bb761e344f430a4df779892637b313384218fad8429beed2f58"
     },
     {
       "id": "tanstack-highlight-extend-language-support",
       "kind": "atomic",
       "theme": "languages-configuration",
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "sourcePath": "extend-language-support",
-      "sha256": "bd7a9f56a4c67ee63d247977c7e563d115dc7a704cfaed26c201995210e29272"
+      "sha256": "b7fd0dfae8c1cefdf0974ec5394e78b148e374774a92b00c550ca01385f3d2dc"
     },
     {
       "id": "tanstack-highlight-integrate-framework-code-blocks",
       "kind": "atomic",
       "theme": "integrations",
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "sourcePath": "integrate-framework-code-blocks",
-      "sha256": "7694c73b4a1b9c96f2ddbcd9c10bc7b8168e404e6978633314b337e8579cd73a"
+      "sha256": "187d660275c4a042c1c1532d8e07b53134ea34cc1b02d6ef9db112eb86e001a9"
     },
     {
       "id": "tanstack-highlight-integrate-markdown-pipelines",
       "kind": "atomic",
       "theme": "integrations",
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "sourcePath": "integrate-markdown-pipelines",
-      "sha256": "b194e119bf2c88ddc4144da441a23a482a436bb7f412569e53a8e7ac0bdb98ed"
+      "sha256": "ad4fb689e8dd11ff15877c06d8bd9a39c17bcee79380b1518b3199aa47b4cbb5"
     },
     {
       "id": "tanstack-highlight-theme-and-annotate-code",
       "kind": "atomic",
       "theme": "themes-annotations",
       "package": "@tanstack/highlight",
-      "version": "0.0.10",
+      "version": "0.1.0",
       "sourcePath": "theme-and-annotate-code",
-      "sha256": "dc3908329c567710ecb5fd4acee60ba6770aff5fa8c2518ac28b375b830347e8"
+      "sha256": "3f547be59ead3496f927b44ff51c79c742a4876742c3ae88c445a81f95d12c2b"
     }
   ],
   "duplicateDocuments": [],

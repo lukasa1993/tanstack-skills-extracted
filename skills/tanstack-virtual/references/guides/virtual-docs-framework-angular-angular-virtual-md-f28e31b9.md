@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-framework-angular-angular-virtual-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.9`.
+Release-matched documentation · `@tanstack/virtual-core@3.17.10`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

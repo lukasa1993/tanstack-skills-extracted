@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-highlight-configure-selective-highlighting"></a>
 
-Published skill · `@tanstack/highlight@0.0.10`.
+Published skill · `@tanstack/highlight@0.1.0`.
 
 [Topic index](../languages-configuration.md) · [Source provenance](../SOURCES.md)
 

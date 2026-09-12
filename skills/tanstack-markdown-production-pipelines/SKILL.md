@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/markdown"
-  tanstack-library-version: "0.0.13"
+  tanstack-library-version: "0.0.14"
   tanstack-package: "@tanstack/markdown"
-  tanstack-package-version: "0.0.13"
+  tanstack-package-version: "0.0.14"
   tanstack-requires: "[\"tanstack-markdown-render-markdown\"]"
   tanstack-source-skill: "production-pipelines"
   tanstack-sources: "[\"TanStack/markdown:docs/core-concepts/security.md\",\"TanStack/markdown:docs/core-concepts/document-model.md\",\"TanStack/markdown:docs/core-concepts/syntax-profile.md\",\"TanStack/markdown:docs/guides/react.md\",\"TanStack/markdown:docs/guides/syntax-highlighting.md\",\"TanStack/markdown:docs/guides/performance.md\",\"TanStack/markdown:docs/guides/testing.md\",\"TanStack/markdown:docs/comparison.md\",\"TanStack/markdown:src/utils.ts\",\"TanStack/markdown:tests/security.test.tsx\",\"TanStack/markdown:tests/bundle-size.test.ts\"]"
@@ -116,7 +116,7 @@ import { parseMarkdown } from '@tanstack/markdown/parser'
 const cache = new Map<string, MarkdownDocument>()
 
 export function renderCachedArticle(key: string, source: string): string {
-  const cacheKey = `markdown-0.0.13:${key}`
+  const cacheKey = `markdown-0.0.14:${key}`
   let document = cache.get(cacheKey)
   if (!document) {
     document = parseMarkdown(source, {

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/highlight"
-  tanstack-library-version: "0.0.10"
+  tanstack-library-version: "0.1.0"
   tanstack-package: "@tanstack/highlight"
-  tanstack-package-version: "0.0.10"
+  tanstack-package-version: "0.1.0"
   tanstack-source-skill: "configure-selective-highlighting"
   tanstack-sources: "[\"TanStack/highlight:docs/guides/language-registration.md\",\"TanStack/highlight:docs/guides/ssr-and-client.md\",\"TanStack/highlight:docs/guides/embedded-languages.md\",\"TanStack/highlight:src/core.ts\"]"
   tanstack-type: "core"

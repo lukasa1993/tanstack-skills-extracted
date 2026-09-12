@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-markdown-production-pipelines"></a>
 
-Published skill · `@tanstack/markdown@0.0.13`.
+Published skill · `@tanstack/markdown@0.0.14`.
 
 [Topic index](../production.md) · [Source provenance](../SOURCES.md)
 
@@ -110,7 +110,7 @@ import { parseMarkdown } from '@tanstack/markdown/parser'
 const cache = new Map<string, MarkdownDocument>()
 
 export function renderCachedArticle(key: string, source: string): string {
-  const cacheKey = `markdown-0.0.13:${key}`
+  const cacheKey = `markdown-0.0.14:${key}`
   let document = cache.get(cacheKey)
   if (!document) {
     document = parseMarkdown(source, {

@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/markdown"
-  tanstack-library-version: "0.0.13"
+  tanstack-library-version: "0.0.14"
   tanstack-package: "@tanstack/markdown"
-  tanstack-package-version: "0.0.13"
+  tanstack-package-version: "0.0.14"
   tanstack-source-skill: "render-markdown"
   tanstack-sources: "[\"TanStack/markdown:docs/quick-start.md\",\"TanStack/markdown:docs/core-concepts/document-model.md\",\"TanStack/markdown:docs/core-concepts/parsing.md\",\"TanStack/markdown:docs/core-concepts/rendering.md\",\"TanStack/markdown:docs/core-concepts/syntax-profile.md\",\"TanStack/markdown:src/parser.ts\",\"TanStack/markdown:src/html.ts\",\"TanStack/markdown:src/types.ts\"]"
   tanstack-type: "core"
