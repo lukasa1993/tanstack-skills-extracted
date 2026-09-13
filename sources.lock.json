@@ -3,7 +3,7 @@
   "requests": {
     "https://api.github.com/repos/TanStack/query/pulls/10879": {
       "status": 200,
-      "sha256": "e4c53c8012e0a5cb4616ceb024511d1e2588278ddd060e7a2ca1aec7625105a5",
+      "sha256": "a7760378b774f91e7f9d400fb287cc55929b6f7fc0d398a4a374f200dc5b4e57",
       "bytes": 17127
     },
     "https://api.github.com/repos/sxzz/userscripts": {
@@ -823,8 +823,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fmarkdown/latest": {
       "status": 200,
-      "sha256": "8a81f4e8f40c969d9188149ea3856f9022c1c6efb83f438871e0d3ed04465c8b",
-      "bytes": 4867
+      "sha256": "437add9dc38e72d000a4105b09240393274a1ecaeec5c08a47799ac5b9413510",
+      "bytes": 5067
     },
     "https://registry.npmjs.org/%40tanstack%2Fmarko-virtual/latest": {
       "status": 200,
@@ -1328,8 +1328,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fredact/latest": {
       "status": 200,
-      "sha256": "91911be9d409949af4b0562e188549f203af11a4f513d10543d5b2d1d0acb601",
-      "bytes": 3365
+      "sha256": "486abbefdba93d8c81d99f496c53887e73a6d1095e47c964a3378a5cacba7015",
+      "bytes": 3364
     },
     "https://registry.npmjs.org/%40tanstack%2Frouter-arktype-adapter/latest": {
       "status": 200,
@@ -2008,8 +2008,8 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fstore@0.11.1": {
       "status": 200,
-      "sha256": "110b7b2e0745fc97f2362d99837c59894778f53129162d588116d295153256b7",
-      "bytes": 14273
+      "sha256": "78a2e3ebca2bb0a21e8574015851bfb4680e50cfc07bbf7ebdf0211f19f54f96",
+      "bytes": 14199
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsvelte-form@1.33.5": {
       "status": 200,
@@ -2786,10 +2786,10 @@
       "sha256": "bb225a650f68166f680958a1311e18bd2ad798c78872c6748c98f60266ced926",
       "bytes": 210295
     },
-    "https://registry.npmjs.org/@tanstack/markdown/-/markdown-0.0.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/markdown/-/markdown-0.0.15.tgz": {
       "status": 200,
-      "sha256": "d58d6feb0c6cbdd04a82c87c073b3f60d4f31bb44b1e60b3b2175467861d5c80",
-      "bytes": 42708
+      "sha256": "889077edd4176c8c640bc389ec6648813df4f153e2cf0f3a9d206cc26b84a7df",
+      "bytes": 43928
     },
     "https://registry.npmjs.org/@tanstack/marko-virtual/-/marko-virtual-3.15.3.tgz": {
       "status": 200,
@@ -3291,10 +3291,10 @@
       "sha256": "a1b56d159f254889b3595f562c6849ff5d8e6c04458a4bc43f224e77f876203a",
       "bytes": 14262
     },
-    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.1.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.1.2.tgz": {
       "status": 200,
-      "sha256": "2f6f59cc0e2cf34a65621e6cc5a095a76542ab2a8bdc85571aa93da1435229fb",
-      "bytes": 333334
+      "sha256": "dd0572742b8d25df821968c4f301b80f8bfdd5892770e70a2ac2d59d6603b054",
+      "bytes": 333474
     },
     "https://registry.npmjs.org/@tanstack/router-arktype-adapter/-/router-arktype-adapter-1.81.5.tgz": {
       "status": 200,

@@ -1,13 +1,13 @@
 ---
 name: tanstack-markdown-custom-extensions
-description: "Implement MarkdownExtension block parsers, inline and document transforms, HTML hooks, and portable ComponentNode output. Load when adding deterministic custom syntax or rendering behavior across HTML, React, and Octane."
+description: "Implement MarkdownExtension block parsers, inline and document transforms, HTML hooks, and portable block and inline component output. Load when adding deterministic custom syntax or rendering behavior across HTML, React, and Octane."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/markdown"
-  tanstack-library-version: "0.0.14"
+  tanstack-library-version: "0.0.15"
   tanstack-package: "@tanstack/markdown"
-  tanstack-package-version: "0.0.14"
+  tanstack-package-version: "0.0.15"
   tanstack-requires: "[\"tanstack-markdown-render-markdown\"]"
   tanstack-source-skill: "custom-extensions"
   tanstack-sources: "[\"TanStack/markdown:docs/guides/extensions.md\",\"TanStack/markdown:docs/reference/extensions.md\",\"TanStack/markdown:src/types.ts\",\"TanStack/markdown:src/parser.ts\",\"TanStack/markdown:src/extensions/callouts.ts\",\"TanStack/markdown:src/extensions/comment-components.ts\"]"
@@ -105,6 +105,13 @@ console.log(html)
 ```
 
 Transforms receive built-in inline nodes and must return a deterministic replacement array.
+
+For custom inline UI, return an `InlineComponentNode` with `type: 'inlineComponent'`,
+`name`, `attributes`, inline `children`, and optional `tagName` and string `properties`.
+It uses the same emitted-tag component maps as a block `ComponentNode`, but defaults
+to `<span>` instead of `<md-comment-component>`. Keep tag and property names under
+extension control, use phrasing content, and recurse through inline `children` when
+transforming text nested inside links or emphasis. This does not require `allowHtml`.
 
 ### Derive document metadata after parsing
 
@@ -365,7 +372,7 @@ export function Article() {
 }
 ```
 
-`renderHtml` hooks do not run in React or Octane; a `ComponentNode` and emitted-tag component mapping is the portable path.
+`renderHtml` hooks do not run in React or Octane; a `ComponentNode` or `InlineComponentNode` and emitted-tag component mapping is the portable path.
 
 Source: `docs/guides/extensions.md`
 
@@ -420,7 +427,7 @@ Source: `docs/guides/extensions.md`
 
 ### HIGH Rich output versus untrusted-content safety
 
-Prefer `ComponentNode` plus application components for rich output. Treat `allowHtml`, extension HTML strings, and highlighter markup as explicit trusted boundaries; see `production-pipelines`.
+Prefer block or inline component nodes plus application components for rich output. Treat `allowHtml`, extension HTML strings, and highlighter markup as explicit trusted boundaries; see `production-pipelines`.
 
 ### MEDIUM Parse-ahead performance versus option timing
 

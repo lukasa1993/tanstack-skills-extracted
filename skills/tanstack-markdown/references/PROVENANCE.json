@@ -8,54 +8,54 @@
       "kind": "atomic",
       "theme": "parsing-extensions",
       "package": "@tanstack/markdown",
-      "version": "0.0.14",
+      "version": "0.0.15",
       "sourcePath": "custom-extensions",
-      "sha256": "d04bcbdec2064104036923179754e543bd6e936245ea60dee3a6711638e448ac"
+      "sha256": "9b3f7538d0334de041355bdd2e0fa48c6c599cad77af83b51c32fb5597a3512c"
     },
     {
       "id": "tanstack-markdown-docs-features",
       "kind": "atomic",
       "theme": "parsing-extensions",
       "package": "@tanstack/markdown",
-      "version": "0.0.14",
+      "version": "0.0.15",
       "sourcePath": "docs-features",
-      "sha256": "e1f7405c24ae41fe2c8b14e3fb59c92d3079e5ed2381fac1f7bea7daf417a518"
+      "sha256": "0309162680c129bb3edec0e3b81d8e5690c9118fa412761e5a058ef1d98b3b05"
     },
     {
       "id": "tanstack-markdown-render-markdown",
       "kind": "atomic",
       "theme": "parsing-extensions",
       "package": "@tanstack/markdown",
-      "version": "0.0.14",
+      "version": "0.0.15",
       "sourcePath": "render-markdown",
-      "sha256": "edc0ed92dd6f43e465c3343fde79e571e59a3bd23b47d350547db79e836fd37c"
+      "sha256": "e65541e6649ff1568c6bc230e062dfb88e20c50a7b418bdd3063976a067a752e"
     },
     {
       "id": "tanstack-markdown-production-pipelines",
       "kind": "atomic",
       "theme": "production",
       "package": "@tanstack/markdown",
-      "version": "0.0.14",
+      "version": "0.0.15",
       "sourcePath": "production-pipelines",
-      "sha256": "82bb5c5d2716a96fbfd70fed472211619bfa5513d58f1d4979007a1ab75bc677"
+      "sha256": "3ac01b851d07cee4620bbf34f0decedc829c451ec5d9537b8b66e30d8f0f94ea"
     },
     {
       "id": "tanstack-markdown-react-rendering",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/markdown",
-      "version": "0.0.14",
+      "version": "0.0.15",
       "sourcePath": "react-rendering",
-      "sha256": "de5044d797482174240d508b5a053194034e3357bd3ba6b316db330f0d369726"
+      "sha256": "bf5c8d50026ee2f287f454107c42d7e80b77e29888d94ed486f0d57d178686f0"
     },
     {
       "id": "tanstack-markdown-octane-rendering",
       "kind": "atomic",
       "theme": "framework-octane",
       "package": "@tanstack/markdown",
-      "version": "0.0.14",
+      "version": "0.0.15",
       "sourcePath": "octane-rendering",
-      "sha256": "36b0678c4b8f2e7f073744b9fc0b3e1e5847ee52125c47ee393b0048af0c3031"
+      "sha256": "6c232289824bd05290f683f9f7f17dbe825658c0958a971ebd1dc9461ffde288"
     }
   ],
   "duplicateDocuments": [],

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-markdown-octane-rendering"></a>
 
-Published skill · `@tanstack/markdown@0.0.14`.
+Published skill · `@tanstack/markdown@0.0.15`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
