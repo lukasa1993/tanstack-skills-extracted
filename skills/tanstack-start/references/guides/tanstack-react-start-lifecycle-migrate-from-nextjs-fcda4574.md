@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-start-lifecycle-migrate-from-nextjs"></a>
 
-Published skill · `@tanstack/react-start@1.168.52`.
+Published skill · `@tanstack/react-start@1.168.53`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

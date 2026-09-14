@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-auth-and-guards"></a>
 
-Published skill · `@tanstack/router-core@1.171.29`.
+Published skill · `@tanstack/router-core@1.171.30`.
 
 [Topic index](../router-essentials.md) · [Source provenance](../SOURCES.md)
 

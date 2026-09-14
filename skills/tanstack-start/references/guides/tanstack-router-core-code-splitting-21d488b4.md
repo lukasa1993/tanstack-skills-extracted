@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-code-splitting"></a>
 
-Published skill · `@tanstack/router-core@1.171.29`.
+Published skill · `@tanstack/router-core@1.171.30`.
 
 [Topic index](../router-ssr-tooling-adapters.md) · [Source provenance](../SOURCES.md)
 

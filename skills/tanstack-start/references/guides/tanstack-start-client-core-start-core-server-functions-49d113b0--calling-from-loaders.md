@@ -1,6 +1,6 @@
 # Server Functions — Calling from Loaders
 
-[Guide and prerequisites](./tanstack-start-client-core-start-core-server-functions-49d113b0.md) · Published skill · `@tanstack/start-client-core@1.170.29`.
+[Guide and prerequisites](./tanstack-start-client-core-start-core-server-functions-49d113b0.md) · Published skill · `@tanstack/start-client-core@1.170.30`.
 
 ## Calling from Loaders
 
