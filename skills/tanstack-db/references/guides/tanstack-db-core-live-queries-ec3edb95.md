@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-live-queries"></a>
 
-Published skill · `@tanstack/db@0.9.0`.
+Published skill · `@tanstack/db@0.9.2`.
 
 [Topic index](../live-queries.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-db-core-live-queries-ec3edb95--overview.md) — 1 KiB
 - [Setup](./tanstack-db-core-live-queries-ec3edb95--setup.md) — 2 KiB
-- [Core Patterns](./tanstack-db-core-live-queries-ec3edb95--core-patterns.md) — 4 KiB
+- [Core Patterns](./tanstack-db-core-live-queries-ec3edb95--core-patterns.md) — 5 KiB
 - [Virtual Properties](./tanstack-db-core-live-queries-ec3edb95--virtual-properties.md) — 1 KiB
 - [Includes (Subqueries in Select)](./tanstack-db-core-live-queries-ec3edb95--includes-subqueries-in-select.md) — 4 KiB
 - [One-Shot Queries with queryOnce](./tanstack-db-core-live-queries-ec3edb95--one-shot-queries-with-queryonce.md) — 1 KiB

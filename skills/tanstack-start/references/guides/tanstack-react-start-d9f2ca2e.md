@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-start"></a>
 
-Published skill · `@tanstack/react-start@1.168.53`.
+Published skill · `@tanstack/react-start@1.168.54`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

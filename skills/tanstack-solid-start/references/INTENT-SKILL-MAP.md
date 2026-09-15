@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/solid-start@1.168.51
+Published package: @tanstack/solid-start@1.168.52
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

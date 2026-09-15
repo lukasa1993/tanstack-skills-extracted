@@ -1,6 +1,6 @@
 # Live Queries — Virtual Properties
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.9.0`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.9.2`.
 
 ## Virtual Properties
 

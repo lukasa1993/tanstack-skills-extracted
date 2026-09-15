@@ -9,12 +9,12 @@
 | `tanstack-start-server-core` | atomic | `server-runtime` | `@tanstack/start-server-core` | `1.169.35` |  |
 | `tanstack-start-client-core-start-core-auth-server-primitives` | atomic | `middleware-auth` | `@tanstack/start-client-core` | `1.170.30` |  |
 | `tanstack-start-client-core-start-core-middleware` | atomic | `middleware-auth` | `@tanstack/start-client-core` | `1.170.30` |  |
-| `tanstack-react-start-server-components` | atomic | `deployment-rendering` | `@tanstack/react-start` | `1.168.53` |  |
+| `tanstack-react-start-server-components` | atomic | `deployment-rendering` | `@tanstack/react-start` | `1.168.54` |  |
 | `tanstack-start-client-core-start-core-deployment` | atomic | `deployment-rendering` | `@tanstack/start-client-core` | `1.170.30` |  |
-| `tanstack-react-start` | atomic | `framework-react` | `@tanstack/react-start` | `1.168.53` |  |
-| `tanstack-react-start-lifecycle-migrate-from-nextjs` | atomic | `framework-react` | `@tanstack/react-start` | `1.168.53` |  |
-| `tanstack-solid-start` | atomic | `framework-solid` | `@tanstack/solid-start` | `1.168.51` |  |
-| `tanstack-vue-start` | atomic | `framework-vue` | `@tanstack/vue-start` | `1.168.50` |  |
+| `tanstack-react-start` | atomic | `framework-react` | `@tanstack/react-start` | `1.168.54` |  |
+| `tanstack-react-start-lifecycle-migrate-from-nextjs` | atomic | `framework-react` | `@tanstack/react-start` | `1.168.54` |  |
+| `tanstack-solid-start` | atomic | `framework-solid` | `@tanstack/solid-start` | `1.168.52` |  |
+| `tanstack-vue-start` | atomic | `framework-vue` | `@tanstack/vue-start` | `1.168.51` |  |
 | `tanstack-router-core` | atomic | `router-essentials` | `@tanstack/router-core` | `1.171.30` |  |
 | `tanstack-router-core-auth-and-guards` | atomic | `router-essentials` | `@tanstack/router-core` | `1.171.30` |  |
 | `tanstack-router-core-data-loading` | atomic | `router-essentials` | `@tanstack/router-core` | `1.171.30` |  |

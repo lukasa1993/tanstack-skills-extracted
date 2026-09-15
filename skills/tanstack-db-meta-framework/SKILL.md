@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.9.0"
+  tanstack-package-version: "0.9.2"
   tanstack-requires: "[\"tanstack-db-core\",\"tanstack-db-core-collection-setup\"]"
   tanstack-source-skill: "meta-framework"
   tanstack-sources: "[\"TanStack/db:examples/react/todo/src/routes/electric.tsx\",\"TanStack/db:examples/react/todo/src/routes/query.tsx\",\"TanStack/db:examples/react/todo/src/start.tsx\"]"
@@ -376,7 +376,7 @@ export const Route = createFileRoute('/todos')({
 })
 ```
 
-Without preloading, the collection starts syncing only when the component mounts, causing a loading flash. Preloading in the route loader starts sync during navigation, making data available immediately when the component renders.
+Without preloading, the collection starts syncing when the component first renders, causing a loading flash. Preloading in the route loader starts sync during navigation, so the data is already there on that first render.
 
 ### MEDIUM Creating separate collection instances in one scope
 

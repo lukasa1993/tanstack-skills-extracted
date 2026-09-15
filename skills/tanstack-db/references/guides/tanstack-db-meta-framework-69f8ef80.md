@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-meta-framework"></a>
 
-Published skill · `@tanstack/db@0.9.0`.
+Published skill · `@tanstack/db@0.9.2`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -371,7 +371,7 @@ export const Route = createFileRoute('/todos')({
 })
 ```
 
-Without preloading, the collection starts syncing only when the component mounts, causing a loading flash. Preloading in the route loader starts sync during navigation, making data available immediately when the component renders.
+Without preloading, the collection starts syncing when the component first renders, causing a loading flash. Preloading in the route loader starts sync during navigation, so the data is already there on that first render.
 
 ### MEDIUM Creating separate collection instances in one scope
 

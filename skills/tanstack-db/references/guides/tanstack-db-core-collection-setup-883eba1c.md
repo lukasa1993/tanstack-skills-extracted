@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-collection-setup"></a>
 
-Published skill · `@tanstack/db@0.9.0`.
+Published skill · `@tanstack/db@0.9.2`.
 
 [Topic index](../collections-schema.md) · [Source provenance](../SOURCES.md)
 

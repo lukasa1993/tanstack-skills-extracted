@@ -2,30 +2,30 @@
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
-| `tanstack-db-core` | atomic | `foundations` | `@tanstack/db` | `0.9.0` |  |
-| `tanstack-db-meta-framework` | atomic | `foundations` | `@tanstack/db` | `0.9.0` |  |
+| `tanstack-db-core` | atomic | `foundations` | `@tanstack/db` | `0.9.2` |  |
+| `tanstack-db-meta-framework` | atomic | `foundations` | `@tanstack/db` | `0.9.2` |  |
 | `tanstack-db-playbook-tanstack-db` | atomic | `foundations` | `@tanstack/db-playbook` | `0.0.1` |  |
 | `tanstack-db-skills-tanstack-db` | atomic | `foundations` | `@tanstack/db-skills` | `0.0.1` | `tanstack-db-playbook-tanstack-db` |
-| `tanstack-db-core-collection-setup` | atomic | `collections-schema` | `@tanstack/db` | `0.9.0` |  |
+| `tanstack-db-core-collection-setup` | atomic | `collections-schema` | `@tanstack/db` | `0.9.2` |  |
 | `tanstack-db-playbook-tanstack-db-collections` | atomic | `collections-schema` | `@tanstack/db-playbook` | `0.0.1` |  |
 | `tanstack-db-playbook-tanstack-db-schemas` | atomic | `collections-schema` | `@tanstack/db-playbook` | `0.0.1` |  |
 | `tanstack-db-skills-tanstack-db-collections` | atomic | `collections-schema` | `@tanstack/db-skills` | `0.0.1` | `tanstack-db-playbook-tanstack-db-collections` |
 | `tanstack-db-skills-tanstack-db-schemas` | atomic | `collections-schema` | `@tanstack/db-skills` | `0.0.1` | `tanstack-db-playbook-tanstack-db-schemas` |
-| `tanstack-db-core-live-queries` | atomic | `live-queries` | `@tanstack/db` | `0.9.0` |  |
+| `tanstack-db-core-live-queries` | atomic | `live-queries` | `@tanstack/db` | `0.9.2` |  |
 | `tanstack-db-playbook-tanstack-db-live-queries` | atomic | `live-queries` | `@tanstack/db-playbook` | `0.0.1` |  |
 | `tanstack-db-skills-tanstack-db-live-queries` | atomic | `live-queries` | `@tanstack/db-skills` | `0.0.1` | `tanstack-db-playbook-tanstack-db-live-queries` |
-| `tanstack-db-core-mutations-optimistic` | atomic | `mutations` | `@tanstack/db` | `0.9.0` |  |
+| `tanstack-db-core-mutations-optimistic` | atomic | `mutations` | `@tanstack/db` | `0.9.2` |  |
 | `tanstack-db-playbook-tanstack-db-mutations` | atomic | `mutations` | `@tanstack/db-playbook` | `0.0.1` |  |
 | `tanstack-db-skills-tanstack-db-mutations` | atomic | `mutations` | `@tanstack/db-skills` | `0.0.1` | `tanstack-db-playbook-tanstack-db-mutations` |
-| `tanstack-db-core-custom-adapter` | atomic | `sync-persistence` | `@tanstack/db` | `0.9.0` |  |
-| `tanstack-db-core-persistence` | atomic | `sync-persistence` | `@tanstack/db` | `0.9.0` |  |
-| `tanstack-offline-transactions-offline` | atomic | `sync-persistence` | `@tanstack/offline-transactions` | `1.0.54` |  |
+| `tanstack-db-core-custom-adapter` | atomic | `sync-persistence` | `@tanstack/db` | `0.9.2` |  |
+| `tanstack-db-core-persistence` | atomic | `sync-persistence` | `@tanstack/db` | `0.9.2` |  |
+| `tanstack-offline-transactions-offline` | atomic | `sync-persistence` | `@tanstack/offline-transactions` | `1.0.56` |  |
 | `tanstack-db-playbook-tanstack-db-electric` | atomic | `sync-persistence` | `@tanstack/db-playbook` | `0.0.1` |  |
 | `tanstack-db-skills-tanstack-db-electric` | atomic | `sync-persistence` | `@tanstack/db-skills` | `0.0.1` | `tanstack-db-playbook-tanstack-db-electric` |
-| `tanstack-react-db` | atomic | `framework-react` | `@tanstack/react-db` | `0.3.8` |  |
-| `tanstack-vue-db` | atomic | `framework-vue` | `@tanstack/vue-db` | `0.1.10` |  |
-| `tanstack-solid-db` | atomic | `framework-solid` | `@tanstack/solid-db` | `0.2.43` |  |
-| `tanstack-svelte-db` | atomic | `framework-svelte` | `@tanstack/svelte-db` | `0.3.8` |  |
-| `tanstack-angular-db` | atomic | `framework-angular` | `@tanstack/angular-db` | `0.1.89` |  |
+| `tanstack-react-db` | atomic | `framework-react` | `@tanstack/react-db` | `0.4.1` |  |
+| `tanstack-vue-db` | atomic | `framework-vue` | `@tanstack/vue-db` | `0.2.1` |  |
+| `tanstack-solid-db` | atomic | `framework-solid` | `@tanstack/solid-db` | `0.2.45` |  |
+| `tanstack-svelte-db` | atomic | `framework-svelte` | `@tanstack/svelte-db` | `0.4.1` |  |
+| `tanstack-angular-db` | atomic | `framework-angular` | `@tanstack/angular-db` | `0.1.91` |  |
 
 Exact duplicate documents replaced with canonical links: 6. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

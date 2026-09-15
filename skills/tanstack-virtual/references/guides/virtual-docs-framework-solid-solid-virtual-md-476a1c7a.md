@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-framework-solid-solid-virtual-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.10`.
+Release-matched documentation · `@tanstack/virtual-core@3.17.11`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
