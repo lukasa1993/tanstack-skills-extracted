@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-guides-optimistic-updates-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.102.8`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.103.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

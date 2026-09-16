@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-overview-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.102.8`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.103.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -61,7 +61,7 @@ On a more technical note, TanStack Query will likely:
 
 In the example below, you can see TanStack Query in its most basic and simple form being used to fetch the GitHub stats for the TanStack Query GitHub project itself:
 
-[Open in StackBlitz](https://stackblitz.com/github/TanStack/query/tree/2969edf32f7e0c48e2a108d84712d6e01edfde21/examples/angular/simple)
+[Open in StackBlitz](https://stackblitz.com/github/TanStack/query/tree/19ccf2794b929e360234396682e64c047ab4bfda/examples/angular/simple)
 
 ```angular-ts
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
@@ -74,13 +74,13 @@ import { lastValueFrom } from 'rxjs'
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'simple-example',
   template: `
-    @if (query.isPending()) {
+    @if (repoDataQuery.isPending()) {
       Loading...
     }
-    @if (query.error()) {
-      An error has occurred: {{ query.error().message }}
+    @if (repoDataQuery.error()) {
+      An error has occurred: {{ repoDataQuery.error().message }}
     }
-    @if (query.data(); as data) {
+    @if (repoDataQuery.data(); as data) {
       <h1>{{ data.name }}</h1>
       <p>{{ data.description }}</p>
       <strong>👀 {{ data.subscribers_count }}</strong>
@@ -90,9 +90,9 @@ import { lastValueFrom } from 'rxjs'
   `,
 })
 export class SimpleExampleComponent {
-  http = inject(HttpClient)
+  readonly http = inject(HttpClient)
 
-  query = injectQuery(() => ({
+  readonly repoDataQuery = injectQuery(() => ({
     queryKey: ['repoData'],
     queryFn: () =>
       lastValueFrom(
@@ -112,4 +112,4 @@ interface Response {
 
 ## You talked me into it, so what now?
 
-- Learn TanStack Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-angular-installation-md-c0c2b309.md#source-query-docs-framework-angular-installation-md) and [API Reference](https://github.com/TanStack/query/blob/2969edf32f7e0c48e2a108d84712d6e01edfde21/docs/framework/angular/reference/functions/injectQuery.md)
+- Learn TanStack Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-angular-installation-md-c0c2b309.md#source-query-docs-framework-angular-installation-md) and [API Reference](https://github.com/TanStack/query/blob/19ccf2794b929e360234396682e64c047ab4bfda/docs/framework/angular/reference/functions/injectQuery.md)

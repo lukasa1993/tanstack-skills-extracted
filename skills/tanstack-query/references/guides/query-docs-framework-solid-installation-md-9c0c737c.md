@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-installation-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.102.8`.
+Release-matched documentation · `@tanstack/solid-query@5.103.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -34,7 +34,7 @@ or
 bun add @tanstack/solid-query
 ```
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/2969edf32f7e0c48e2a108d84712d6e01edfde21/examples/solid/simple/README.md) or [basic](https://github.com/TanStack/query/blob/2969edf32f7e0c48e2a108d84712d6e01edfde21/examples/solid/basic/README.md) examples!
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/19ccf2794b929e360234396682e64c047ab4bfda/examples/solid/simple/README.md) or [basic](https://github.com/TanStack/query/blob/19ccf2794b929e360234396682e64c047ab4bfda/examples/solid/basic/README.md) examples!
 
 ### CDN
 
