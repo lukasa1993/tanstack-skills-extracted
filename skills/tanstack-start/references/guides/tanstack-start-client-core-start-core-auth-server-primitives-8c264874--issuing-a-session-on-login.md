@@ -1,6 +1,6 @@
 # Auth Server Primitives — Issuing a Session on Login
 
-[Guide and prerequisites](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md) · Published skill · `@tanstack/start-client-core@1.170.30`.
+[Guide and prerequisites](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md) · Published skill · `@tanstack/start-client-core@1.170.32`.
 
 ## Issuing a Session on Login
 

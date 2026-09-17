@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/router-core@1.171.30
+Published package: @tanstack/router-core@1.171.32
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

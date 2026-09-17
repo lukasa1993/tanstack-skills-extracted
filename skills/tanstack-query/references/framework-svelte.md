@@ -6,6 +6,6 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Installation](./guides/query-docs-framework-svelte-installation-md-6e75ce07.md) | Release-matched documentation | `@tanstack/svelte-query@6.2.0` |
-| [Overview](./guides/query-docs-framework-svelte-overview-md-c5e116c5.md) | Release-matched documentation | `@tanstack/svelte-query@6.2.0` |
-| [Quick Start](./guides/query-docs-framework-svelte-quick-start-md-55a89661.md) | Release-matched documentation | `@tanstack/svelte-query@6.2.0` |
+| [Installation](./guides/query-docs-framework-svelte-installation-md-6e75ce07.md) | Release-matched documentation | `@tanstack/svelte-query@6.2.1` |
+| [Overview](./guides/query-docs-framework-svelte-overview-md-c5e116c5.md) | Release-matched documentation | `@tanstack/svelte-query@6.2.1` |
+| [Quick Start](./guides/query-docs-framework-svelte-quick-start-md-55a89661.md) | Release-matched documentation | `@tanstack/svelte-query@6.2.1` |

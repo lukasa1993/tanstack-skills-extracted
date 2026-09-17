@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-guides-optimistic-updates-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.103.0`.
+Release-matched documentation · `@tanstack/solid-query@5.103.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

@@ -12,7 +12,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-guides-mutations-md-38ec4d80.md",
       "sourcePath": "docs/framework/react/guides/mutations.md",
       "bytes": 1538,
@@ -71,7 +71,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md",
       "sourcePath": "docs/framework/react/guides/optimistic-updates.md",
       "bytes": 7496,
@@ -104,7 +104,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-guides-queries-md-4c7087b8.md",
       "sourcePath": "docs/framework/react/guides/queries.md",
       "bytes": 5233,
@@ -128,7 +128,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-guides-query-keys-md-2e55d5aa.md",
       "sourcePath": "docs/framework/react/guides/query-keys.md",
       "bytes": 3724,
@@ -152,7 +152,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-guides-query-options-md-e9cc42b7.md",
       "sourcePath": "docs/framework/react/guides/query-options.md",
       "bytes": 2084,
@@ -176,7 +176,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-installation-md-ff0427b6.md",
       "sourcePath": "docs/framework/react/installation.md",
       "bytes": 2551,
@@ -200,7 +200,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-overview-md-c65b979c.md",
       "sourcePath": "docs/framework/react/overview.md",
       "bytes": 5171,
@@ -224,7 +224,7 @@
         "react"
       ],
       "package": "@tanstack/react-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-react-quick-start-md-19b9db31.md",
       "sourcePath": "docs/framework/react/quick-start.md",
       "bytes": 2312,
@@ -248,7 +248,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-guides-mutations-md-0f3744ef.md",
       "sourcePath": "docs/framework/preact/guides/mutations.md",
       "bytes": 297,
@@ -272,7 +272,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-guides-optimistic-updates-md-4f4cdba0.md",
       "sourcePath": "docs/framework/preact/guides/optimistic-updates.md",
       "bytes": 244,
@@ -296,7 +296,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-guides-queries-md-69aa4ee2.md",
       "sourcePath": "docs/framework/preact/guides/queries.md",
       "bytes": 443,
@@ -320,7 +320,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-guides-query-keys-md-351275cd.md",
       "sourcePath": "docs/framework/preact/guides/query-keys.md",
       "bytes": 449,
@@ -344,7 +344,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-guides-query-options-md-d05e4e86.md",
       "sourcePath": "docs/framework/preact/guides/query-options.md",
       "bytes": 455,
@@ -368,7 +368,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-installation-md-474fffb7.md",
       "sourcePath": "docs/framework/preact/installation.md",
       "bytes": 679,
@@ -392,7 +392,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-overview-md-f9012a78.md",
       "sourcePath": "docs/framework/preact/overview.md",
       "bytes": 438,
@@ -416,7 +416,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-preact-quick-start-md-cb17a3a2.md",
       "sourcePath": "docs/framework/preact/quick-start.md",
       "bytes": 444,
@@ -440,7 +440,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-guides-mutations-md-7a6dcc6d.md",
       "sourcePath": "docs/framework/vue/guides/mutations.md",
       "bytes": 2241,
@@ -464,7 +464,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-guides-optimistic-updates-md-5e17a092.md",
       "sourcePath": "docs/framework/vue/guides/optimistic-updates.md",
       "bytes": 235,
@@ -488,7 +488,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-guides-queries-md-f9913b8f.md",
       "sourcePath": "docs/framework/vue/guides/queries.md",
       "bytes": 1480,
@@ -512,7 +512,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-guides-query-keys-md-eb802e06.md",
       "sourcePath": "docs/framework/vue/guides/query-keys.md",
       "bytes": 469,
@@ -536,7 +536,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-guides-query-options-md-898f57ed.md",
       "sourcePath": "docs/framework/vue/guides/query-options.md",
       "bytes": 443,
@@ -560,7 +560,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-installation-md-470329c4.md",
       "sourcePath": "docs/framework/vue/installation.md",
       "bytes": 1788,
@@ -584,7 +584,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-overview-md-516c7a38.md",
       "sourcePath": "docs/framework/vue/overview.md",
       "bytes": 666,
@@ -608,7 +608,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-quick-start-md-6977bdcc.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
       "bytes": 1381,
@@ -632,7 +632,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-vue-reactivity-md-933ef827.md",
       "sourcePath": "docs/framework/vue/reactivity.md",
       "bytes": 7547,
@@ -665,7 +665,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-guides-mutations-md-82905d3a.md",
       "sourcePath": "docs/framework/solid/guides/mutations.md",
       "bytes": 7021,
@@ -689,7 +689,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-guides-optimistic-updates-md-ff6f20a7.md",
       "sourcePath": "docs/framework/solid/guides/optimistic-updates.md",
       "bytes": 4061,
@@ -713,7 +713,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-guides-queries-md-60657832.md",
       "sourcePath": "docs/framework/solid/guides/queries.md",
       "bytes": 2044,
@@ -737,7 +737,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-guides-query-keys-md-d976525e.md",
       "sourcePath": "docs/framework/solid/guides/query-keys.md",
       "bytes": 1483,
@@ -761,7 +761,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-guides-query-options-md-af212341.md",
       "sourcePath": "docs/framework/solid/guides/query-options.md",
       "bytes": 1154,
@@ -785,7 +785,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-installation-md-9c0c737c.md",
       "sourcePath": "docs/framework/solid/installation.md",
       "bytes": 1562,
@@ -809,7 +809,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-overview-md-7b6993ae.md",
       "sourcePath": "docs/framework/solid/overview.md",
       "bytes": 6859,
@@ -833,7 +833,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-query",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-solid-quick-start-md-5070faf1.md",
       "sourcePath": "docs/framework/solid/quick-start.md",
       "bytes": 5866,
@@ -857,7 +857,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-query",
-      "version": "6.2.0",
+      "version": "6.2.1",
       "file": "references/guides/query-docs-framework-svelte-installation-md-6e75ce07.md",
       "sourcePath": "docs/framework/svelte/installation.md",
       "bytes": 667,
@@ -881,7 +881,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-query",
-      "version": "6.2.0",
+      "version": "6.2.1",
       "file": "references/guides/query-docs-framework-svelte-overview-md-c5e116c5.md",
       "sourcePath": "docs/framework/svelte/overview.md",
       "bytes": 2207,
@@ -905,7 +905,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-query",
-      "version": "6.2.0",
+      "version": "6.2.1",
       "file": "references/guides/query-docs-framework-svelte-quick-start-md-55a89661.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "bytes": 4223,
@@ -929,7 +929,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-guides-mutations-md-87c5141f.md",
       "sourcePath": "docs/framework/angular/guides/mutations.md",
       "bytes": 6502,
@@ -953,7 +953,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-guides-optimistic-updates-md-929e9dce.md",
       "sourcePath": "docs/framework/angular/guides/optimistic-updates.md",
       "bytes": 4259,
@@ -977,7 +977,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-guides-queries-md-84dae94e.md",
       "sourcePath": "docs/framework/angular/guides/queries.md",
       "bytes": 2028,
@@ -1001,7 +1001,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-guides-query-keys-md-40f33b3a.md",
       "sourcePath": "docs/framework/angular/guides/query-keys.md",
       "bytes": 1549,
@@ -1025,7 +1025,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-guides-query-options-md-500ae26a.md",
       "sourcePath": "docs/framework/angular/guides/query-options.md",
       "bytes": 1341,
@@ -1049,7 +1049,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-installation-md-c0c2b309.md",
       "sourcePath": "docs/framework/angular/installation.md",
       "bytes": 1175,
@@ -1073,7 +1073,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-overview-md-6bd342f9.md",
       "sourcePath": "docs/framework/angular/overview.md",
       "bytes": 6148,
@@ -1097,7 +1097,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-query-experimental",
-      "version": "5.103.0",
+      "version": "5.103.1",
       "file": "references/guides/query-docs-framework-angular-quick-start-md-cf2de3cd.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
       "bytes": 3098,
@@ -1121,7 +1121,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-query",
-      "version": "0.2.21",
+      "version": "0.2.22",
       "file": "references/guides/query-docs-framework-lit-guides-mutations-md-38f7fec7.md",
       "sourcePath": "docs/framework/lit/guides/mutations.md",
       "bytes": 4903,
@@ -1145,7 +1145,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-query",
-      "version": "0.2.21",
+      "version": "0.2.22",
       "file": "references/guides/query-docs-framework-lit-guides-queries-md-7bbefb64.md",
       "sourcePath": "docs/framework/lit/guides/queries.md",
       "bytes": 4803,
@@ -1169,7 +1169,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-query",
-      "version": "0.2.21",
+      "version": "0.2.22",
       "file": "references/guides/query-docs-framework-lit-guides-query-keys-md-2f82e369.md",
       "sourcePath": "docs/framework/lit/guides/query-keys.md",
       "bytes": 2063,
@@ -1193,7 +1193,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-query",
-      "version": "0.2.21",
+      "version": "0.2.22",
       "file": "references/guides/query-docs-framework-lit-installation-md-e6a1af16.md",
       "sourcePath": "docs/framework/lit/installation.md",
       "bytes": 3485,
@@ -1217,7 +1217,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-query",
-      "version": "0.2.21",
+      "version": "0.2.22",
       "file": "references/guides/query-docs-framework-lit-overview-md-bb5f419c.md",
       "sourcePath": "docs/framework/lit/overview.md",
       "bytes": 5014,
@@ -1241,7 +1241,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-query",
-      "version": "0.2.21",
+      "version": "0.2.22",
       "file": "references/guides/query-docs-framework-lit-quick-start-md-2745312c.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
       "bytes": 3079,

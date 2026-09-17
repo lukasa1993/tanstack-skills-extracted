@@ -2,11 +2,11 @@
 
 <a id="source-query-docs-framework-react-guides-query-options-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.103.0`.
+Release-matched documentation · `@tanstack/react-query@5.103.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
-One of the best ways to share `queryKey` and `queryFn` between multiple places, yet keep them co-located to one another, is to use the `queryOptions` helper. At runtime, this helper just returns whatever you pass into it, but it has a lot of advantages when using it [with TypeScript](https://github.com/TanStack/query/blob/19ccf2794b929e360234396682e64c047ab4bfda/docs/framework/react/typescript.md#typing-query-options). You can define all possible options for a query in one place, and you'll also get type inference and type safety for all of them.
+One of the best ways to share `queryKey` and `queryFn` between multiple places, yet keep them co-located to one another, is to use the `queryOptions` helper. At runtime, this helper just returns whatever you pass into it, but it has a lot of advantages when using it [with TypeScript](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/docs/framework/react/typescript.md#typing-query-options). You can define all possible options for a query in one place, and you'll also get type inference and type safety for all of them.
 
 [//]: # 'Example1'
 
@@ -34,11 +34,11 @@ queryClient.setQueryData(groupOptions(42).queryKey, newGroups)
 
 [//]: # 'Example1'
 
-For Infinite Queries, a separate [`infiniteQueryOptions`](https://github.com/TanStack/query/blob/19ccf2794b929e360234396682e64c047ab4bfda/docs/framework/react/reference/functions/infiniteQueryOptions.md) helper is available.
+For Infinite Queries, a separate [`infiniteQueryOptions`](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/docs/framework/react/reference/functions/infiniteQueryOptions.md) helper is available.
 
 [//]: # 'SelectDescription'
 
-You can still override some options at the component level. A very common and useful pattern is to create per-component [`select`](https://github.com/TanStack/query/blob/19ccf2794b929e360234396682e64c047ab4bfda/docs/framework/react/guides/render-optimizations.md#select) functions:
+You can still override some options at the component level. A very common and useful pattern is to create per-component [`select`](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/docs/framework/react/guides/render-optimizations.md#select) functions:
 
 [//]: # 'SelectDescription'
 [//]: # 'Example2'

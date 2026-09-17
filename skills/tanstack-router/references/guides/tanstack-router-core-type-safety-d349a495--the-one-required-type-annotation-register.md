@@ -1,6 +1,6 @@
 # Type Safety — The ONE Required Type Annotation: Register
 
-[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.30`.
+[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.32`.
 
 ## The ONE Required Type Annotation: Register
 

@@ -1,6 +1,6 @@
 # Server Functions — Input Validation
 
-[Guide and prerequisites](./tanstack-start-client-core-start-core-server-functions-49d113b0.md) · Published skill · `@tanstack/start-client-core@1.170.30`.
+[Guide and prerequisites](./tanstack-start-client-core-start-core-server-functions-49d113b0.md) · Published skill · `@tanstack/start-client-core@1.170.32`.
 
 ## Input Validation
 

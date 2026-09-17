@@ -1,6 +1,6 @@
 # Type Safety — Type Utilities for Generic Components
 
-[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.30`.
+[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.32`.
 
 ## Type Utilities for Generic Components
 
