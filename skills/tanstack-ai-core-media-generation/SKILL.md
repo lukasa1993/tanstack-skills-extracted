@@ -1,15 +1,15 @@
 ---
 name: tanstack-ai-core-media-generation
-description: "Image, audio, video, speech (TTS), and transcription generation using activity-specific adapters: generateImage() with openaiImage/geminiImage/byteplusImage, generateAudio() with geminiAudio/falAudio, generateVideo() with async polling (openaiVideo/geminiVideo/grokVideo/falVideo/byteplusVideo/openRouterVideo, per-model typed durations), generateSpeech() with openaiSpeech/byteplusSpeech, generateTranscription() with openaiTranscription/byteplusTranscription. React hooks: useGenerateImage, useGenerateAudio, useGenerateSpeech, useTranscription, useGenerateVideo. TanStack Start server function integration with toServerSentEventsResponse."
+description: "Image, audio, video, speech (TTS), and transcription generation using activity-specific adapters: generateImage() with openaiImage/geminiImage/byteplusImage, generateAudio() with geminiAudio/falAudio, generateVideo() with async polling (openaiVideo/geminiVideo/grokVideo/falVideo/byteplusVideo/openRouterVideo, per-model typed durations), generateSpeech() with openaiSpeech/byteplusSpeech/elevenlabsSpeech, generateTranscription() with openaiTranscription/byteplusTranscription. React hooks: useGenerateImage, useGenerateAudio, useGenerateSpeech, useTranscription, useGenerateVideo. TanStack Start server function integration with toServerSentEventsResponse."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.54.0"
+  tanstack-package-version: "0.55.0"
   tanstack-source-skill: "ai-core/media-generation"
-  tanstack-sources: "[\"TanStack/ai:docs/media/generations.md\",\"TanStack/ai:docs/media/generation-hooks.md\",\"TanStack/ai:docs/media/image-generation.md\",\"TanStack/ai:docs/media/audio-generation.md\",\"TanStack/ai:docs/media/video-generation.md\",\"TanStack/ai:docs/media/text-to-speech.md\",\"TanStack/ai:docs/media/transcription.md\",\"TanStack/ai:docs/advanced/debug-logging.md\"]"
+  tanstack-sources: "[\"TanStack/ai:docs/media/generations.md\",\"TanStack/ai:docs/media/generation-hooks.md\",\"TanStack/ai:docs/media/image-generation.md\",\"TanStack/ai:docs/media/audio-generation.md\",\"TanStack/ai:docs/media/video-generation.md\",\"TanStack/ai:docs/media/text-to-speech.md\",\"TanStack/ai:docs/adapters/elevenlabs.md\",\"TanStack/ai:docs/media/transcription.md\",\"TanStack/ai:docs/advanced/debug-logging.md\"]"
   tanstack-type: "sub-skill"
 ---
 
@@ -292,14 +292,14 @@ with `allowUrlFetch: true` on the adapter config
 
 **Provider support matrix:**
 
-| Provider   | `generateImage` image parts                                                                                                                                                                              | `generateVideo` image parts                                                                                                                                                                                                                                                                                  |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| OpenAI     | gpt-image-2 / gpt-image-1 / -mini → `images.edit()` (up to 16). dall-e-2 → edit (1). dall-e-3 throws.                                                                                                    | Sora-2 / -pro → `input_reference` (single). Throws if >1.                                                                                                                                                                                                                                                    |
-| Gemini     | Native (gemini-\*-flash-image, "nano-banana") → multimodal `contents`. Imagen throws.                                                                                                                    | Veo → first un-roled / `'start_frame'` image is the input image; `'end_frame'` → `lastFrame`; `'reference'` / `'character'` → `referenceImages`. Omni Flash sends image/video parts as interaction content blocks (no role routing).                                                                         |
-| fal        | Per-endpoint field names from a generated map (`pnpm generate:fal-image-fields`). Defaults: 1 input → `image_url`; >1 → `image_urls`; roles → `mask_url` / `control_image_url` / `reference_image_urls`. | Per-endpoint map (e.g. Kling i2v start frame → `image_url`). Defaults: 1 input → `image_url`; `start_frame`/`end_frame` → `start_image_url`/`end_image_url`; `reference` → `reference_image_urls`.                                                                                                           |
-| Grok       | grok-imagine models → `/v1/images/edits` JSON endpoint (≤3 sources, addressed by xAI in request order; prompt sent verbatim; mask/control throw). grok-2-image-1212 throws.                              | Un-roled / `'start_frame'` image → starting frame; `'reference'` / `'character'` → `reference_images` (1.5). Starting frame and reference inputs cannot be combined. A `video` part + `modelOptions.mode: 'edit' \| 'extend'` routes to `/videos/edits` / `/videos/extensions` on `grok-imagine-video` only. |
-| OpenRouter | Prompt parts map 1:1 onto multimodal `text` / `image_url` content parts, preserving interleaved order.                                                                                                   | Dedicated async API (`openRouterVideo`): `start_frame`/`end_frame` → `frame_images[]` (`first_frame`/`last_frame`); `reference`/`character` → `input_references[]`; an unroled image defaults to the start frame. Frame roles validated against the model's `supported_frame_images` metadata.               |
-| Anthropic  | n/a (no image generation API).                                                                                                                                                                           | n/a                                                                                                                                                                                                                                                                                                          |
+| Provider   | `generateImage` image parts                                                                                                                                                                              | `generateVideo` image parts                                                                                                                                                                                                                                                                                                                   |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI     | gpt-image-2 / gpt-image-1 / -mini → `images.edit()` (up to 16). dall-e-2 → edit (1). dall-e-3 throws.                                                                                                    | Sora-2 / -pro → `input_reference` (single). Throws if >1.                                                                                                                                                                                                                                                                                     |
+| Gemini     | Native (gemini-\*-flash-image, "nano-banana") → multimodal `contents`. Imagen throws.                                                                                                                    | Veo → first un-roled / `'start_frame'` image is the input image; `'end_frame'` → `lastFrame`; `'reference'` / `'character'` → `referenceImages`. Omni Flash sends image/video parts as interaction content blocks (no role routing).                                                                                                          |
+| fal        | Per-endpoint field names from a generated map (`pnpm generate:fal-image-fields`). Defaults: 1 input → `image_url`; >1 → `image_urls`; roles → `mask_url` / `control_image_url` / `reference_image_urls`. | Per-endpoint map (e.g. Kling i2v start frame → `image_url`). Defaults: 1 input → `image_url`; `start_frame`/`end_frame` → `start_image_url`/`end_image_url`; `reference` → `reference_image_urls`.                                                                                                                                            |
+| Grok       | grok-imagine models → `/v1/images/edits` JSON endpoint (≤3 sources, addressed by xAI in request order; prompt sent verbatim; mask/control throw). grok-2-image-1212 throws.                              | Un-roled / `'start_frame'` image → starting frame; `'reference'` / `'character'` → `reference_images` (1.5). On 1.5 a starting frame can be combined with reference inputs (it pins the first frame). A `video` part + `modelOptions.mode: 'edit' \| 'extend'` routes to `/videos/edits` / `/videos/extensions` on `grok-imagine-video` only. |
+| OpenRouter | Prompt parts map 1:1 onto multimodal `text` / `image_url` content parts, preserving interleaved order.                                                                                                   | Dedicated async API (`openRouterVideo`): `start_frame`/`end_frame` → `frame_images[]` (`first_frame`/`last_frame`); `reference`/`character` → `input_references[]`; an unroled image defaults to the start frame. Frame roles validated against the model's `supported_frame_images` metadata.                                                |
+| Anthropic  | n/a (no image generation API).                                                                                                                                                                           | n/a                                                                                                                                                                                                                                                                                                                                           |
 
 Video and audio prompt parts follow the same `metadata.role` convention
 for video-to-video and lipsync flows on fal. Grok accepts one source
@@ -341,8 +341,14 @@ const { generate, result, isLoading } = useGenerateAudio({
 
 ### 3. Text-to-Speech
 
-Adapters: `openaiSpeech` (tts-1, tts-1-hd, gpt-4o-audio-preview) and
-`byteplusSpeech` (`seed-audio-1.0`).
+Adapters include `openaiSpeech` (tts-1, tts-1-hd, gpt-4o-audio-preview),
+`byteplusSpeech` (`seed-audio-1.0`), and `elevenlabsSpeech` (`eleven_v3`).
+
+`elevenlabsSpeech` accepts `format: 'mp3' | 'pcm' | 'opus' | 'wav'`.
+WAV output contains 44.1 kHz, 16-bit mono PCM with a RIFF header.
+AAC and FLAC requests throw before the API call.
+An explicit `modelOptions.outputFormat` overrides `format` and returns
+the selected provider format without WAV wrapping.
 
 > **BytePlus Seed Speech is a separate product from ModelArk** — it reads
 > **`BYTEPLUS_VOICE_API_KEY`**, not `ARK_API_KEY`, and an Ark key there fails
@@ -353,7 +359,10 @@ Adapters: `openaiSpeech` (tts-1, tts-1-hd, gpt-4o-audio-preview) and
 > drops `voice`. Voice ids ending `_uranus_bigtts` are TTS 2.0,
 > `_mars_bigtts` / `_moon_bigtts` are TTS 1.0, and `*_emo_v2_*` are the 1.0
 > voices that accept emotion tags. Formats: `wav`, `mp3`, `pcm`, `ogg_opus`;
-> `watermark` is also available on `modelOptions`.
+> `modelOptions.watermark` takes an object here, not a boolean:
+> `{ aigc_watermark }` for an audible marker and `{ aigc_metadata: { enable } }`
+> for header provenance. `watermark: true` is shorthand for
+> `{ aigc_watermark: true }`.
 
 ```typescript
 import { generateSpeech } from '@tanstack/ai'

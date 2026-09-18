@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-adapter-configuration"></a>
 
-Published skill · `@tanstack/ai@0.54.0`.
+Published skill · `@tanstack/ai@0.55.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 

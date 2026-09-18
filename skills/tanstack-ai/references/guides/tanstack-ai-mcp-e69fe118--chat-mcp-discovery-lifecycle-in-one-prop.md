@@ -1,6 +1,6 @@
 # Ai Mcp — `chat({ mcp })` — discovery + lifecycle in one prop
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.0`.
 
 ## `chat({ mcp })` — discovery + lifecycle in one prop
 

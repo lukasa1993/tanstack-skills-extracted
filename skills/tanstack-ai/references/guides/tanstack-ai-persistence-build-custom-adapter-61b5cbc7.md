@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-custom-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@0.5.7`.
+Published skill · `@tanstack/ai-persistence@0.6.0`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 

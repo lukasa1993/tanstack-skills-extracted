@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-stores"></a>
 
-Published skill · `@tanstack/ai-persistence@0.5.7`.
+Published skill · `@tanstack/ai-persistence@0.6.0`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 
@@ -12,12 +12,12 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-persistence-stores-e6061122--overview.md) — 1 KiB
 - [Choose a shape](./tanstack-ai-persistence-stores-e6061122--choose-a-shape.md) — 2 KiB
-- [Contracts and invariants: `MessageStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-messagestore.md) — 1 KiB
+- [Contracts and invariants: `MessageStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-messagestore.md) — 2 KiB
 - [Contracts and invariants: `RunStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-runstore.md) — 11 KiB
 - [Contracts and invariants: `InterruptStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-interruptstore.md) — 2 KiB
 - [Contracts and invariants: `MetadataStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-metadatastore.md) — 1 KiB
 - [Timestamp convention](./tanstack-ai-persistence-stores-e6061122--timestamp-convention.md) — 1 KiB
-- [Minimal message store example](./tanstack-ai-persistence-stores-e6061122--minimal-message-store-example.md) — 1 KiB
+- [Minimal message store example](./tanstack-ai-persistence-stores-e6061122--minimal-message-store-example.md) — 2 KiB
 - [Adopt part of it](./tanstack-ai-persistence-stores-e6061122--adopt-part-of-it.md) — 1 KiB
 - [Map onto an existing schema](./tanstack-ai-persistence-stores-e6061122--map-onto-an-existing-schema.md) — 1 KiB
 - [Authorization](./tanstack-ai-persistence-stores-e6061122--authorization.md) — 1 KiB

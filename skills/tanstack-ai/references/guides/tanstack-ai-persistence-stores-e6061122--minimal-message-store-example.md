@@ -1,6 +1,6 @@
 # Stores — Minimal message store example
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.5.7`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.0`.
 
 ## Minimal message store example
 
@@ -24,5 +24,8 @@ export const messages = defineMessageStore({
   },
 })
 ```
+
+This example ignores `limit` / `before` and returns the full array. That is
+valid. `reconstructChat` slices a full array after UI conversion.
 
 For durable DBs, preserve the same semantics with upserts / full-row replace.

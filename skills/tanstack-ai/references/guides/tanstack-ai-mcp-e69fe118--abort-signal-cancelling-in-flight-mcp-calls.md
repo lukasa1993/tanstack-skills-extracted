@@ -1,12 +1,16 @@
 # Ai Mcp — Abort signal — cancelling in-flight MCP calls
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.0`.
 
 ## Abort signal — cancelling in-flight MCP calls
 
-MCP tool calls are automatically cancelled when the chat run's `AbortController`
-fires (e.g. client disconnect, server abort). The `abortSignal` is threaded
-through `ToolExecutionContext` into every `callTool` call with no extra code.
+TanStack AI stops waiting for MCP tool calls when the chat run's
+`AbortController` fires (e.g. client disconnect, server abort). The
+`abortSignal` is threaded through `ToolExecutionContext` into every tool call
+with no extra code. For a task-required tool, aborting stops the local task
+stream and sends a best-effort `tasks/cancel` for a remote task the MCP
+server has already created. Cancel is best-effort: a server that ignores
+`tasks/cancel` may keep running until TTL.
 
 You can also read it in a hand-written server tool that wraps an MCP call:
 

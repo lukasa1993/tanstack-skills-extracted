@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 5. Video Generation (Experimental -- async polling)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.54.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.55.0`.
 
 ## Core Patterns: 5. Video Generation (Experimental -- async polling)
 

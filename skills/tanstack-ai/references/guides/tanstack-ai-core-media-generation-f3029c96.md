@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-media-generation"></a>
 
-Published skill · `@tanstack/ai@0.54.0`.
+Published skill · `@tanstack/ai@0.55.0`.
 
 [Topic index](../media.md) · [Source provenance](../SOURCES.md)
 
@@ -14,7 +14,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Setup -- Image Generation End-to-End](./tanstack-ai-core-media-generation-f3029c96--setup-image-generation-end-to-end.md) — 4 KiB
 - [Core Patterns: 1. Image Generation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md) — 12 KiB
 - [Core Patterns: 2. Audio Generation (Music, Sound Effects)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-2-audio-generation-music-sound-effects.md) — 2 KiB
-- [Core Patterns: 3. Text-to-Speech](./tanstack-ai-core-media-generation-f3029c96--core-patterns-3-text-to-speech.md) — 2 KiB
+- [Core Patterns: 3. Text-to-Speech](./tanstack-ai-core-media-generation-f3029c96--core-patterns-3-text-to-speech.md) — 3 KiB
 - [Core Patterns: 4. Audio Transcription](./tanstack-ai-core-media-generation-f3029c96--core-patterns-4-audio-transcription.md) — 4 KiB
 - [Core Patterns: 5. Video Generation (Experimental -- async polling)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-5-video-generation-experimental-async-polling.md) — 8 KiB
 - [Core Patterns: 6. Cost tracking (fal billable units)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-6-cost-tracking-fal-billable-units.md) — 2 KiB

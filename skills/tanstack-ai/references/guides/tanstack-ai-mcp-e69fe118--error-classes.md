@@ -1,6 +1,6 @@
 # Ai Mcp — Error classes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.3.10`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.0`.
 
 ## Error classes
 
@@ -8,11 +8,10 @@
   methods after `close()`.
 - `MCPToolNotFoundError` — thrown from `client.tools([defs])` when a definition's
   `name` is not exposed by the server.
-- `MCPTaskRequiredToolError` — thrown from `client.tools([defs])` when the named
-  tool declares `execution.taskSupport: 'required'` (experimental MCP tasks).
-  Such tools only run via the SDK's `tasks/callToolStream` flow, which
-  `@tanstack/ai-mcp` does not support yet; they are silently excluded from
-  `tools()` auto-discovery for the same reason.
+- `MCPTaskRequiredToolError` — thrown when a task-required tool is bound via
+  `tools([defs])` or called via `callTool()` and the server does not declare
+  the tasks capability for `tools/call`. Auto-discovery skips those tools
+  instead of throwing.
 - `DuplicateToolNameError` — thrown by a single pool's own `tools()` when two
   tools within that pool share the same name (same server or pool clients with no
   prefix). Exported from `@tanstack/ai-mcp`.
