@@ -3,7 +3,7 @@
   "requests": {
     "https://api.github.com/repos/TanStack/query/pulls/10879": {
       "status": 200,
-      "sha256": "e176a6d8f45eddcd78a03e363e84fab057f1201975d3bc0819a0573ae9d09651",
+      "sha256": "83cda1c0e757bcb8c640c94cc3ad94661f0e816e04219d4c7ff0c070adff2eef",
       "bytes": 17127
     },
     "https://api.github.com/repos/sxzz/userscripts": {
@@ -380,6 +380,11 @@
       "status": 200,
       "sha256": "86671491c627fbe7fc4e3b5bb4cea7d11a6ca500b448fe2f558f62de794978ae",
       "bytes": 2918
+    },
+    "https://registry.npmjs.org/%40tanstack%2Fai-typesafe/latest": {
+      "status": 200,
+      "sha256": "68a8a9d33d38f72fd36feedb2b80115a0fba55c94a18469d18dc3476187f53cd",
+      "bytes": 1183
     },
     "https://registry.npmjs.org/%40tanstack%2Fai-utils/latest": {
       "status": 200,
@@ -2008,8 +2013,8 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fstore@0.11.1": {
       "status": 200,
-      "sha256": "78a2e3ebca2bb0a21e8574015851bfb4680e50cfc07bbf7ebdf0211f19f54f96",
-      "bytes": 14199
+      "sha256": "110b7b2e0745fc97f2362d99837c59894778f53129162d588116d295153256b7",
+      "bytes": 14273
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsvelte-form@1.33.5": {
       "status": 200,
@@ -2043,8 +2048,8 @@
     },
     "https://registry.npmjs.org/-/org/tanstack/package?format=cli": {
       "status": 200,
-      "sha256": "4bc4d51e0149300ed890b0ef41b835f18c7a3e0856f2601aa4567838bb495c6a",
-      "bytes": 13348
+      "sha256": "3404996bc1af51e2b1678dd85102a8a5178e542f3b284e525a6f711a1bc8be6b",
+      "bytes": 13380
     },
     "https://registry.npmjs.org/@tanstack/actions/-/actions-0.0.1-beta.52.tgz": {
       "status": 200,
@@ -2345,6 +2350,11 @@
       "status": 200,
       "sha256": "776f54799538cd21a71569dbe276e31e8f37e1519914579960ed2358184268bf",
       "bytes": 40510
+    },
+    "https://registry.npmjs.org/@tanstack/ai-typesafe/-/ai-typesafe-0.0.0.tgz": {
+      "status": 200,
+      "sha256": "4efb09f6cbe1f3e1c0781d039fec8d6ecf932d313dc95ae76e20117f709888b2",
+      "bytes": 308
     },
     "https://registry.npmjs.org/@tanstack/ai-utils/-/ai-utils-0.4.0.tgz": {
       "status": 200,
