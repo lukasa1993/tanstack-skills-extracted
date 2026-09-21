@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — 1. Read the app before writing anything
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
 
 ## 1. Read the app before writing anything
 

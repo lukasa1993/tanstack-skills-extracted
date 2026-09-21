@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Setup — Receiving AG-UI RunAgentInput on the Server
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Setup — Receiving AG-UI RunAgentInput on the Server
 

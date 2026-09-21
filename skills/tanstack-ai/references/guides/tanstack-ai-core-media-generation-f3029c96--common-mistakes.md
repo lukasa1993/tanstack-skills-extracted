@@ -1,6 +1,6 @@
 # Media Generation — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Common Mistakes
 
@@ -192,7 +192,11 @@ generateAudio({
 
 ### g. MEDIUM: Gemini TTS multi-speaker with 0 or 3+ speakers
 
-`multiSpeakerVoiceConfig.speakerVoiceConfigs` is validated to be length 1 or 2. Passing an empty array or three+ entries throws at the adapter boundary
+Prefer `turns` for new code: it builds `multiSpeakerVoiceConfig` and the
+labelled prompt for you, and the two-speaker cap is enforced by the activity
+from `capabilities.maxSpeakers`.
+
+The hand-rolled form below still works. `multiSpeakerVoiceConfig.speakerVoiceConfigs` is validated to be length 1 or 2. Passing an empty array or three+ entries throws at the adapter boundary
 (not at Gemini's API) with a clear error. Don't try to work around it with
 `as any`.
 

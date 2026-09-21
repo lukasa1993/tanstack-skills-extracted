@@ -1,6 +1,6 @@
 # Stores — Minimal message store example
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
 
 ## Minimal message store example
 

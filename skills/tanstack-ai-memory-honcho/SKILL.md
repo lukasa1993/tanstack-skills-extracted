@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-memory"
-  tanstack-package-version: "0.2.0"
+  tanstack-package-version: "0.2.2"
   tanstack-source-skill: "tanstack-ai-memory-honcho"
 ---
 

@@ -1,6 +1,6 @@
 # Custom Backend Integration — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Common Mistakes
 

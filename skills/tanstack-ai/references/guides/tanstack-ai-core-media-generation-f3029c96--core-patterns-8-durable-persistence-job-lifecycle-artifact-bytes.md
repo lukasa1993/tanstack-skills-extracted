@@ -1,8 +1,8 @@
-# Media Generation — Core Patterns: 7. Durable persistence (job lifecycle + artifact bytes)
+# Media Generation — Core Patterns: 8. Durable persistence (job lifecycle + artifact bytes)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.57.0`.
 
-## Core Patterns: 7. Durable persistence (job lifecycle + artifact bytes)
+## Core Patterns: 8. Durable persistence (job lifecycle + artifact bytes)
 
 
 To make generations survive a server restart and be re-served later, add

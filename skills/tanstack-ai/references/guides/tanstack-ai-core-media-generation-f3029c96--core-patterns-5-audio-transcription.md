@@ -1,8 +1,8 @@
-# Media Generation — Core Patterns: 4. Audio Transcription
+# Media Generation — Core Patterns: 5. Audio Transcription
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.57.0`.
 
-## Core Patterns: 4. Audio Transcription
+## Core Patterns: 5. Audio Transcription
 
 
 Adapters: `openaiTranscription` (whisper-1, gpt-4o-transcribe,

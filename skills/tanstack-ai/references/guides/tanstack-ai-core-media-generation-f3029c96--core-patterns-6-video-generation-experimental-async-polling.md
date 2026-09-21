@@ -1,8 +1,8 @@
-# Media Generation — Core Patterns: 5. Video Generation (Experimental -- async polling)
+# Media Generation — Core Patterns: 6. Video Generation (Experimental -- async polling)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.57.0`.
 
-## Core Patterns: 5. Video Generation (Experimental -- async polling)
+## Core Patterns: 6. Video Generation (Experimental -- async polling)
 
 
 Video generation uses a jobs/polling architecture. The server creates a job,

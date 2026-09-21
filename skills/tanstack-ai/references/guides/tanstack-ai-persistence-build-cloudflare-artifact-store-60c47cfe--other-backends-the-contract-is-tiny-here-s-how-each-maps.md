@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — Other backends — the contract is tiny, here's how each maps
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.6.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
 
 ## Other backends — the contract is tiny, here's how each maps
 

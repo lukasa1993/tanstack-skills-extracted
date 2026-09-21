@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Cross-References
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Cross-References
 

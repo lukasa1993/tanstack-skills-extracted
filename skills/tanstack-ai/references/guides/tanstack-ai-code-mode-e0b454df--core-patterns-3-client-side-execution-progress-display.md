@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 3. Client-Side Execution Progress Display
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.10`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.12`.
 
 ## Core Patterns: 3. Client-Side Execution Progress Display
 

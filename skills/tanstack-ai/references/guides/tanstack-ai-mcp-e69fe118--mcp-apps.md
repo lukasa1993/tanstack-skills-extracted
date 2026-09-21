@@ -1,6 +1,6 @@
 # Ai Mcp — MCP Apps
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.2`.
 
 ## MCP Apps
 

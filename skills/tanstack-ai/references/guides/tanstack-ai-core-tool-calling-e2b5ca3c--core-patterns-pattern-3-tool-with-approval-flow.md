@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Pattern 3: Tool with Approval Flow
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Core Patterns: Pattern 3: Tool with Approval Flow
 

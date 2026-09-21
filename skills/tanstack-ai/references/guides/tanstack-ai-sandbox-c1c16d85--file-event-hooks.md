@@ -1,6 +1,6 @@
 # Ai Sandbox — File-event hooks
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.9`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.11`.
 
 ## File-event hooks
 

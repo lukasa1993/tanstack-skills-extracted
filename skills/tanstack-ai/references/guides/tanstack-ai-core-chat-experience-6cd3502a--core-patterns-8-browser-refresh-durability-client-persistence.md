@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 8. Browser-Refresh Durability (client persistence)
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Core Patterns: 8. Browser-Refresh Durability (client persistence)
 

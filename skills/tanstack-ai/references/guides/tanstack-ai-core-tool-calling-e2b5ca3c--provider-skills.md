@@ -1,6 +1,6 @@
 # Tool Calling — Provider Skills
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.55.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.57.0`.
 
 ## Provider Skills
 
