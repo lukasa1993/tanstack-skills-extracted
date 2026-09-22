@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Setup — Server Endpoint Producing AG-UI Events via SSE
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.57.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.58.0`.
 
 ## Setup — Server Endpoint Producing AG-UI Events via SSE
 

@@ -1,6 +1,6 @@
 # Build Custom Adapter — Adopt part of it
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
 
 ## Adopt part of it
 

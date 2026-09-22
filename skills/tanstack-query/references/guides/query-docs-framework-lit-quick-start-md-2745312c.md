@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.22`.
+Release-matched documentation · `@tanstack/lit-query@0.2.23`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -10,9 +10,9 @@ This snippet shows the three core Lit Query concepts:
 
 - [Queries](./query-docs-framework-lit-guides-queries-md-7bbefb64.md#source-query-docs-framework-lit-guides-queries-md)
 - [Mutations](./query-docs-framework-lit-guides-mutations-md-38f7fec7.md#source-query-docs-framework-lit-guides-mutations-md)
-- [Query Invalidation](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/docs/framework/lit/guides/query-invalidation.md)
+- [Query Invalidation](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/docs/framework/lit/guides/query-invalidation.md)
 
-For complete runnable examples, see [Basic](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/examples/lit/basic/README.md), [Pagination](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/examples/lit/pagination/README.md), and [SSR](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/examples/lit/ssr/README.md).
+For complete runnable examples, see [Basic](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/examples/lit/basic/README.md), [Pagination](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/examples/lit/pagination/README.md), and [SSR](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/examples/lit/ssr/README.md).
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -83,4 +83,4 @@ Mount the provider around your component:
 
 The controllers are created with `this` because a `LitElement` is a `ReactiveControllerHost`. Lit Query uses the host lifecycle to subscribe, request updates, and clean up when the element disconnects.
 
-Continue with [Reactive Controllers vs Hooks](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/docs/framework/lit/guides/reactive-controllers-vs-hooks.md) if you know React Query, or go straight to [Queries](./query-docs-framework-lit-guides-queries-md-7bbefb64.md#source-query-docs-framework-lit-guides-queries-md).
+Continue with [Reactive Controllers vs Hooks](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/docs/framework/lit/guides/reactive-controllers-vs-hooks.md) if you know React Query, or go straight to [Queries](./query-docs-framework-lit-guides-queries-md-7bbefb64.md#source-query-docs-framework-lit-guides-queries-md).

@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 2. Rendering Thinking/Reasoning Content
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.57.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.58.0`.
 
 ## Core Patterns: 2. Rendering Thinking/Reasoning Content
 

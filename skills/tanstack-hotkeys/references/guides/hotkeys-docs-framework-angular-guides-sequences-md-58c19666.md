@@ -2,13 +2,15 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
 TanStack Hotkeys supports multi-key sequences in Angular, where keys are pressed one after another rather than simultaneously.
 
-## Basic Usage
+Sequence steps use the same string syntax as single hotkeys. For example, `['[KeyG]', '[KeyG]']` follows a physical position, while `['G', 'G']` follows the logical letter. A sequence can mix forms, such as `['Mod+[KeyK]', 'C']`. Display steps with `sequence.map((step) => formatForDisplay(step)).join(' → ')`.
+
+## Basic usage
 
 ```ts
 import { Component } from '@angular/core'
@@ -51,9 +53,13 @@ export class AppComponent {
 }
 ```
 
-Options merge like `injectHotkeys`: `provideHotkeys` defaults, then `commonOptions`, then each definition’s `options`.
+Options merge like `injectHotkeys`: `provideHotkeys` defaults, then `commonOptions`, then each definition's `options`.
 
-## Sequence Options
+## Matching steps
+
+Both `SequenceManager` and `createSequenceMatcher` ignore modifier-only events, IME composition, and automatic keydown repeats. These events neither advance the sequence nor refresh its timeout: holding G does not complete a two-press G sequence. The manager prefers exact matches over weaker logical-key fallbacks while preserving equally strong matches.
+
+## Sequence options
 
 ```ts
 injectHotkeySequence(['G', 'G'], callback, {
@@ -64,7 +70,7 @@ injectHotkeySequence(['G', 'G'], callback, {
 
 ### Reactive `enabled`
 
-When disabled, the sequence **stays registered** (visible in devtools); only execution is suppressed.
+When disabled, the sequence stays registered (visible in devtools); only execution is suppressed.
 
 ```ts
 import { Component, signal } from '@angular/core'
@@ -82,7 +88,7 @@ export class VimModeComponent {
 }
 ```
 
-## Global Default Options via Provider
+## Global defaults via provider
 
 ```ts
 import { ApplicationConfig } from '@angular/core'
@@ -99,7 +105,7 @@ export const appConfig: ApplicationConfig = {
 
 ### `meta`
 
-Sequences support the same `meta` option as hotkeys, allowing you to attach a `name` and `description` for use in shortcut palettes and devtools.
+Sequences support the same `meta` option as hotkeys. Attach a `name` and `description` to surface in shortcut palettes and devtools.
 
 ```ts
 injectHotkeySequence(['G', 'G'], () => scrollToTop(), {
@@ -111,17 +117,19 @@ See the [Hotkeys Guide](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb1
 
 ## Chained modifier chords
 
+This example follows physical R and T positions. Brackets retain those positions even when the keys produce different letters. Other sequences can continue using logical characters.
+
 You can repeat the same modifier across consecutive steps:
 
 ```ts
-injectHotkeySequence(['Shift+R', 'Shift+T'], () => doNextAction())
+injectHotkeySequence(['Shift+[KeyR]', 'Shift+[KeyT]'], () => doNextAction())
 ```
 
-While a sequence is in progress, **modifier-only** keydown events (Shift, Control, Alt, or Meta pressed alone) are ignored: they do not advance the sequence and do not reset progress, so a user can press Shift alone between chords without breaking the sequence.
+While a sequence is in progress, the matcher ignores modifier-only keydown events (Shift, Control, Alt, or Meta pressed alone): they do not advance the sequence and do not reset progress, so a user can press Shift alone between chords without breaking the sequence.
 
-## Common Patterns
+## Common patterns
 
-### Vim-Style Navigation
+### Vim-style navigation
 
 ```ts
 injectHotkeySequence(['G', 'G'], () => scrollToTop())
@@ -141,7 +149,7 @@ injectHotkeySequence(
 )
 ```
 
-## Under the Hood
+## Under the hood
 
 `injectHotkeySequence` uses the singleton `SequenceManager`. You can also access it directly:
 
@@ -154,3 +162,7 @@ import {
 const manager = getSequenceManager()
 const matcher = createSequenceMatcher(['G', 'G'], { timeout: 1000 })
 ```
+
+### Conflicting registrations
+
+For the same target, duplicate detection compares resolved steps: modifier aliases, modifier order, and logical key casing do not create separate bindings. `conflictBehavior` applies to equivalent sequences without rewriting their stored strings. Physical and logical identities remain distinct, and a shared prefix alone is not a duplicate registration. Recorder conflict detection also checks prefixes and observed physical/logical overlap.

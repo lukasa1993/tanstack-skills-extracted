@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/ai-persistence@0.6.2
+Published package: @tanstack/ai-persistence@0.6.4
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

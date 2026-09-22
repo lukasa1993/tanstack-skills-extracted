@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 2: Complex nested schemas
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.57.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.58.0`.
 
 ## Core Patterns: Pattern 2: Complex nested schemas
 

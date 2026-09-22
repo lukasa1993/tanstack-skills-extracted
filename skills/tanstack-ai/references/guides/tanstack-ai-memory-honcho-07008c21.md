@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-memory-honcho"></a>
 
-Published skill · `@tanstack/ai-memory@0.2.2`.
+Published skill · `@tanstack/ai-memory@0.2.3`.
 
 [Topic index](../memory.md) · [Source provenance](../SOURCES.md)
 

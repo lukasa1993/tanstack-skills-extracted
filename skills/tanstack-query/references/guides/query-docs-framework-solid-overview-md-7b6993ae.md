@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-overview-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.103.1`.
+Release-matched documentation · `@tanstack/solid-query@5.103.2`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -60,7 +60,7 @@ Once you grasp the nature of server state in your application, **even more chall
 - Managing memory and garbage collection of server state
 - Memoizing query results with structural sharing
 
-This is where **Solid Query** comes in. The library wraps around `createResource` and provides a set of hooks and utilities to manage server state effectively. It works amazingly well **out-of-the-box, with zero-config, and can be customized** to your liking as your application grows.
+This is where **Solid Query** comes in. The library wraps around `createResource` and provides a set of primitives and utilities to manage server state effectively. It works amazingly well **out-of-the-box, with zero-config, and can be customized** to your liking as your application grows.
 
 On a more technical note, Solid Query will likely:
 

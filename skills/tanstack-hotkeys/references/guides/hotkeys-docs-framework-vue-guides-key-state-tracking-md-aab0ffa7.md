@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -46,9 +46,9 @@ const isShiftHeld = useKeyHold('Shift')
 </template>
 ```
 
-## Common Patterns
+## Common patterns
 
-### Hold-to-Reveal UI
+### Hold-to-reveal UI
 
 ```vue
 <script setup lang="ts">
@@ -63,7 +63,7 @@ const isShiftHeld = useKeyHold('Shift')
 </template>
 ```
 
-### Debugging Key Display
+### Debugging key display
 
 ```vue
 <script setup lang="ts">
@@ -88,7 +88,7 @@ const heldCodes = useHeldKeyCodes()
 </template>
 ```
 
-## Under the Hood
+## Under the hood
 
 All three composables subscribe to the singleton `KeyStateTracker`:
 
@@ -99,3 +99,15 @@ const tracker = getKeyStateTracker()
 tracker.getHeldKeys()
 tracker.isKeyHeld('Shift')
 ```
+
+## Modifier-held shortcut hints
+
+`useHotkeyHint` answers whether held modifiers are relevant to a binding. Keep formatting and badge styling in your component:
+
+```ts
+const visible = useHotkeyHint(() => binding.value) // computed ref: visible.value
+```
+
+For `Alt+Shift+[KeyK]`, holding Alt, Shift, or both reveals the hint. An extra Control hides it; releasing all modifiers or blurring the window hides it. Nonmodifier keys are ignored. AltGraph does not reveal hints. Pass `{ exact: true }` to require all binding modifiers, or `{ platform: 'mac' }` to resolve Mod explicitly. Supply the same platform used by the registration when overriding detection.
+
+Combine the boolean with the action's enabled state. The helper does not register a shortcut or determine whether its target is focused. The core equivalent is `matchesHeldModifiers(binding, heldKeys, options)`.

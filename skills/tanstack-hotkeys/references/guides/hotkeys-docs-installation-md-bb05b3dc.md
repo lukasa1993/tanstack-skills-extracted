@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
-TanStack Hotkeys is compatible with various front-end frameworks. Install the corresponding adapter for your framework using your preferred package manager:
+Install the adapter for your framework with your preferred package manager:
 
 <!-- ::start:tabs variant="package-managers" -->
 
@@ -15,18 +15,19 @@ lit: @tanstack/lit-hotkeys
 preact: @tanstack/preact-hotkeys
 react: @tanstack/react-hotkeys
 solid: @tanstack/solid-hotkeys
+svelte: @tanstack/svelte-hotkeys
 vue: @tanstack/vue-hotkeys
 
 <!-- ::end:tabs -->
 
-Each framework package re-exports everything from the core `@tanstack/hotkeys` package, so there is no need to install the core package separately.
+Each framework package re-exports everything from the core `@tanstack/hotkeys` package, so you don't need to install the core package separately.
 
 > [!NOTE]
 > If you are not using a framework, you can install the core `@tanstack/hotkeys` package directly for use with vanilla JavaScript.
 
 <!-- ::start:framework -->
 
-# React
+### React
 
 Start with the [Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md) guide. If you want the integrated devtools panel, also install:
 
@@ -34,23 +35,31 @@ Start with the [Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91
 
 <!-- ::start:framework -->
 
-# Preact
+### Preact
 
-Start with the [API reference](https://github.com/TanStack/hotkeys/blob/c73a3a167c979d500e1008341ecad096a6c4e635/docs/framework/preact/reference/index.md) and [guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). If you want the integrated devtools panel, also install:
-
-<!-- ::end:framework -->
-
-<!-- ::start:framework -->
-
-# Solid
-
-Start with the [API reference](https://github.com/TanStack/hotkeys/blob/c73a3a167c979d500e1008341ecad096a6c4e635/docs/framework/solid/reference/index.md) and [guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+Start with the [API reference](https://github.com/TanStack/hotkeys/blob/c2b1635449a22774299308b0b9bc5fd40b336bf7/docs/framework/preact/reference/index.md) and [guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). If you want the integrated devtools panel, also install:
 
 <!-- ::end:framework -->
 
 <!-- ::start:framework -->
 
-# Angular
+### Solid
+
+Start with the [API reference](https://github.com/TanStack/hotkeys/blob/c2b1635449a22774299308b0b9bc5fd40b336bf7/docs/framework/solid/reference/index.md) and [guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+
+<!-- ::end:framework -->
+
+<!-- ::start:framework -->
+
+### Svelte
+
+Start with the [Quick Start](./hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md#source-hotkeys-docs-framework-svelte-quick-start-md) guide and the Svelte-specific [guides](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md).
+
+<!-- ::end:framework -->
+
+<!-- ::start:framework -->
+
+### Angular
 
 Start with the [Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md) guide and the Angular-specific [guides](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md).
 
@@ -60,7 +69,7 @@ Angular currently ships the hotkeys adapter only, so no dedicated Angular devtoo
 
 <!-- ::start:framework -->
 
-# Vue
+### Vue
 
 Start with the [Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md) guide and the Vue-specific [guides](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md).
 
@@ -70,7 +79,7 @@ If you want the Vue devtools panel component, also install:
 
 <!-- ::start:framework -->
 
-# Lit
+### Lit
 
 Start with the [Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md) guide and the Lit-specific [guides](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md).
 
@@ -92,7 +101,7 @@ vue: @tanstack/vue-hotkeys-devtools
 
 <!-- ::start:framework -->
 
-# React
+### React
 
 See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
 
@@ -100,7 +109,7 @@ See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-de
 
 <!-- ::start:framework -->
 
-# Preact
+### Preact
 
 See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
 
@@ -108,7 +117,7 @@ See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-de
 
 <!-- ::start:framework -->
 
-# Solid
+### Solid
 
 See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
 
@@ -116,7 +125,7 @@ See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-de
 
 <!-- ::start:framework -->
 
-# Vue
+### Vue
 
 See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
 

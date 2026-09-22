@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
-TanStack Hotkeys provides three hooks for tracking the real-time state of keyboard keys. These are useful for building UIs that respond to modifier keys being held, displaying active key states, or implementing hold-to-activate features.
+TanStack Hotkeys includes three hooks for tracking the real-time state of keyboard keys. Use them to show modifier state in the UI or to build hold-to-activate features.
 
 ## `useHeldKeys`
 
@@ -77,9 +77,9 @@ function ModifierIndicators() {
 }
 ```
 
-## Common Patterns
+## Common patterns
 
-### Hold-to-Reveal UI
+### Hold-to-reveal UI
 
 Show additional options while a modifier is held:
 
@@ -107,7 +107,7 @@ function FileItem({ file }: { file: File }) {
 }
 ```
 
-### Keyboard Shortcut Hints
+### Keyboard shortcut hints
 
 Display different shortcut hints based on which modifiers are held:
 
@@ -130,7 +130,7 @@ function ShortcutHints() {
 }
 ```
 
-### Debugging Key Display
+### Debugging key display
 
 Combine hooks with formatting utilities for a rich debugging display:
 
@@ -163,19 +163,19 @@ function KeyDebugger() {
 }
 ```
 
-## Platform Quirks
+## Platform quirks
 
 The underlying `KeyStateTracker` handles several platform-specific issues:
 
-### macOS Modifier Key Behavior
+### macOS modifier key behavior
 
 On macOS, when a modifier key is held and a non-modifier key is pressed, the OS sometimes swallows the `keyup` event for the non-modifier key. TanStack Hotkeys detects and handles this automatically so held key state stays accurate.
 
-### Window Blur
+### Window blur
 
-When the browser window loses focus, all held keys are automatically cleared. This prevents "stuck" keys that would otherwise appear held even after the user tabs away and releases them.
+When the browser window loses focus, the tracker clears all held keys. This prevents "stuck" keys that would otherwise appear held even after the user tabs away and releases them.
 
-## Under the Hood
+## Under the hood
 
 All three hooks subscribe to the singleton `KeyStateTracker` via `@tanstack/preact-store`. The tracker manages its own event listeners on `document` and maintains state in a TanStack Store, which the hooks subscribe to reactively.
 
@@ -190,3 +190,15 @@ tracker.isKeyHeld('Shift')   // boolean
 tracker.isAnyKeyHeld(['Shift', 'Control']) // boolean
 tracker.areAllKeysHeld(['Shift', 'Control']) // boolean
 ```
+
+## Modifier-held shortcut hints
+
+`useHotkeyHint` answers whether held modifiers are relevant to a binding. Keep formatting and badge styling in your component:
+
+```ts
+const visible = useHotkeyHint('Alt+Shift+[KeyK]')
+```
+
+For `Alt+Shift+[KeyK]`, holding Alt, Shift, or both reveals the hint. An extra Control hides it; releasing all modifiers or blurring the window hides it. Nonmodifier keys are ignored. AltGraph does not reveal hints. Pass `{ exact: true }` to require all binding modifiers, or `{ platform: 'mac' }` to resolve Mod explicitly. Supply the same platform used by the registration when overriding detection.
+
+Combine the boolean with the action's enabled state. The helper does not register a shortcut or determine whether its target is focused. The core equivalent is `matchesHeldModifiers(binding, heldKeys, options)`.

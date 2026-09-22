@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — 2. Add the tables to their schema file
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
 
 ## 2. Add the tables to their schema file
 

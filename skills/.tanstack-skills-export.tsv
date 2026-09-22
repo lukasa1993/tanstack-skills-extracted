@@ -6,13 +6,13 @@
 # supplemental_query_pr_state=closed
 # supplemental_query_branch=taren/query-intent-skills
 package	version	license	published_skill_files	exported_skills	output_skills
-@tanstack/ai	0.57.0	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
-@tanstack/ai-code-mode	0.4.12	MIT	1	1	tanstack-ai-code-mode
-@tanstack/ai-mcp	0.4.2	MIT	1	1	tanstack-ai-mcp
-@tanstack/ai-memory	0.2.2	MIT	6	6	tanstack-ai-memory,tanstack-ai-memory-hindsight,tanstack-ai-memory-honcho,tanstack-ai-memory-in-memory,tanstack-ai-memory-mem0,tanstack-ai-memory-redis
-@tanstack/ai-persistence	0.6.2	MIT	8	8	tanstack-ai-persistence,tanstack-ai-persistence-build-cloudflare-adapter,tanstack-ai-persistence-build-cloudflare-artifact-store,tanstack-ai-persistence-build-custom-adapter,tanstack-ai-persistence-build-drizzle-adapter,tanstack-ai-persistence-build-prisma-adapter,tanstack-ai-persistence-server,tanstack-ai-persistence-stores
-@tanstack/ai-sandbox	0.5.11	MIT	1	1	tanstack-ai-sandbox
-@tanstack/ai-skills	0.1.6	MIT	1	1	tanstack-ai-skills
+@tanstack/ai	0.58.0	MIT	12	12	tanstack-ai-core,tanstack-ai-core-adapter-configuration,tanstack-ai-core-ag-ui-protocol,tanstack-ai-core-chat-experience,tanstack-ai-core-client-persistence,tanstack-ai-core-custom-backend-integration,tanstack-ai-core-debug-logging,tanstack-ai-core-locks,tanstack-ai-core-media-generation,tanstack-ai-core-middleware,tanstack-ai-core-structured-outputs,tanstack-ai-core-tool-calling
+@tanstack/ai-code-mode	0.4.13	MIT	1	1	tanstack-ai-code-mode
+@tanstack/ai-mcp	0.4.3	MIT	1	1	tanstack-ai-mcp
+@tanstack/ai-memory	0.2.3	MIT	6	6	tanstack-ai-memory,tanstack-ai-memory-hindsight,tanstack-ai-memory-honcho,tanstack-ai-memory-in-memory,tanstack-ai-memory-mem0,tanstack-ai-memory-redis
+@tanstack/ai-persistence	0.6.4	MIT	8	8	tanstack-ai-persistence,tanstack-ai-persistence-build-cloudflare-adapter,tanstack-ai-persistence-build-cloudflare-artifact-store,tanstack-ai-persistence-build-custom-adapter,tanstack-ai-persistence-build-drizzle-adapter,tanstack-ai-persistence-build-prisma-adapter,tanstack-ai-persistence-server,tanstack-ai-persistence-stores
+@tanstack/ai-sandbox	0.5.12	MIT	1	1	tanstack-ai-sandbox
+@tanstack/ai-skills	0.1.7	MIT	1	1	tanstack-ai-skills
 @tanstack/alpine-table	9.2.4	MIT	3	3	tanstack-alpine-table-create-table-hook,tanstack-alpine-table-getting-started,tanstack-alpine-table-table-state
 @tanstack/angular-db	0.1.91	MIT	1	1	tanstack-angular-db
 @tanstack/angular-table	9.2.4	MIT	6	6	tanstack-angular-table-create-table-hook,tanstack-angular-table-getting-started,tanstack-angular-table-migrate-v8-to-v9,tanstack-angular-table-table-state,tanstack-angular-table-with-tanstack-query,tanstack-angular-table-with-tanstack-virtual
@@ -36,14 +36,14 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/preact-table	9.2.4	MIT	6	6	tanstack-preact-table-create-table-hook,tanstack-preact-table-getting-started,tanstack-preact-table-migrate-v8-to-v9,tanstack-preact-table-table-state,tanstack-preact-table-with-tanstack-query,tanstack-preact-table-with-tanstack-virtual
 @tanstack/preact-table-devtools	9.2.0	MIT	1	1	tanstack-preact-table-devtools
 @tanstack/react-db	0.4.1	MIT	1	1	tanstack-react-db
-@tanstack/react-start	1.168.56	MIT	3	3	tanstack-react-start-lifecycle-migrate-from-nextjs,tanstack-react-start,tanstack-react-start-server-components
+@tanstack/react-start	1.168.57	MIT	3	3	tanstack-react-start-lifecycle-migrate-from-nextjs,tanstack-react-start,tanstack-react-start-server-components
 @tanstack/react-table	9.2.4	MIT	6	6	tanstack-react-table-create-table-hook,tanstack-react-table-getting-started,tanstack-react-table-migrate-v8-to-v9,tanstack-react-table-table-state,tanstack-react-table-with-tanstack-query,tanstack-react-table-with-tanstack-virtual
 @tanstack/react-table-devtools	9.2.0	MIT	1	1	tanstack-react-table-devtools
 @tanstack/router-core	1.171.32	MIT	10	10	tanstack-router-core,tanstack-router-core-auth-and-guards,tanstack-router-core-code-splitting,tanstack-router-core-data-loading,tanstack-router-core-navigation,tanstack-router-core-not-found-and-errors,tanstack-router-core-path-params,tanstack-router-core-search-params,tanstack-router-core-ssr,tanstack-router-core-type-safety
 @tanstack/router-plugin	1.168.40	MIT	1	1	tanstack-router-plugin
 @tanstack/solid-db	0.2.45	MIT	1	1	tanstack-solid-db
 @tanstack/solid-router	1.170.36	MIT	1	1	tanstack-solid-router
-@tanstack/solid-start	1.168.54	MIT	1	1	tanstack-solid-start
+@tanstack/solid-start	1.168.55	MIT	1	1	tanstack-solid-start
 @tanstack/solid-table	9.2.4	MIT	6	6	tanstack-solid-table-create-table-hook,tanstack-solid-table-getting-started,tanstack-solid-table-migrate-v8-to-v9,tanstack-solid-table-table-state,tanstack-solid-table-with-tanstack-query,tanstack-solid-table-with-tanstack-virtual
 @tanstack/solid-table-devtools	9.2.0	MIT	1	1	tanstack-solid-table-devtools
 @tanstack/start-client-core	1.170.32	MIT	7	7	tanstack-start-client-core-start-core,tanstack-start-client-core-start-core-auth-server-primitives,tanstack-start-client-core-start-core-deployment,tanstack-start-client-core-start-core-execution-model,tanstack-start-client-core-start-core-middleware,tanstack-start-client-core-start-core-server-functions,tanstack-start-client-core-start-core-server-routes
@@ -55,7 +55,7 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/virtual-file-routes	1.162.0	MIT	1	1	tanstack-virtual-file-routes
 @tanstack/vue-db	0.2.1	MIT	1	1	tanstack-vue-db
 @tanstack/vue-router	1.170.35	MIT	1	1	tanstack-vue-router
-@tanstack/vue-start	1.168.53	MIT	1	1	tanstack-vue-start
+@tanstack/vue-start	1.168.54	MIT	1	1	tanstack-vue-start
 @tanstack/vue-table	9.2.4	MIT	6	6	tanstack-vue-table-create-table-hook,tanstack-vue-table-getting-started,tanstack-vue-table-migrate-v8-to-v9,tanstack-vue-table-table-state,tanstack-vue-table-with-tanstack-query,tanstack-vue-table-with-tanstack-virtual
 @tanstack/vue-table-devtools	9.2.0	MIT	1	1	tanstack-vue-table-devtools
 @tanstack/query-intent	5.101.0	MIT	29	29	tanstack-query-intent-compositions-automatic-invalidati-a8e9b778,tanstack-query-intent-compositions-broadcast-realtime-a-6360b276,tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe,tanstack-query-intent-compositions-enforce-query-best-p-48bbbabb,tanstack-query-intent-compositions-persist-offline-and-ca66cce0,tanstack-query-intent-compositions-query-data-and-forms,tanstack-query-intent-core-build-query-abstractions,tanstack-query-intent-core-cancel-queries-and-consume-a-19e3bf0b,tanstack-query-intent-core-concurrent-optimistic-updates,tanstack-query-intent-core-coordinate-query-execution,tanstack-query-intent-core-design-query-keys-and-options,tanstack-query-intent-core-fetch-and-observe-queries,tanstack-query-intent-core-implement-optimistic-updates-20e8c58a,tanstack-query-intent-core-paginate-and-build-infinite-queries,tanstack-query-intent-core-seed-placeholder-select-and-5c98438e,tanstack-query-intent-core-selectors-and-derived-state,tanstack-query-intent-core-tune-defaults-freshness-retr-58e4e7c9,tanstack-query-intent-core-understand-query-internals-a-8ab976f4,tanstack-query-intent-core-write-mutations-and-invalida-1820d5b8,tanstack-query-intent-framework-debug-with-devtools,tanstack-query-intent-framework-handle-status-and-errors,tanstack-query-intent-framework-shape-data-and-render-e-feb144a6,tanstack-query-intent-framework-use-framework-adapter-reactivity,tanstack-query-intent-framework-use-suspense-and-error-0e96f8ec,tanstack-query-intent-lifecycle-migrate-major-versions-33ec74ce,tanstack-query-intent-lifecycle-prefetch-and-remove-req-289202f1,tanstack-query-intent-lifecycle-setup-query-client-and-providers,tanstack-query-intent-lifecycle-ssr-hydration-and-streaming,tanstack-query-intent-lifecycle-test-query-code

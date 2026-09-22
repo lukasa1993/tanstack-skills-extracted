@@ -71,9 +71,9 @@
       "kind": "atomic",
       "theme": "deployment-rendering",
       "package": "@tanstack/react-start",
-      "version": "1.168.56",
+      "version": "1.168.57",
       "sourcePath": "server-components",
-      "sha256": "74a5a570b86fbce5e994aba9b7127c80e04d5cf8fbc5297eeb4e41209bcb796d"
+      "sha256": "73e8bab398e8b36f8df0a431d0930d6ff207df1b2b502f77a87e653e95724164"
     },
     {
       "id": "tanstack-start-client-core-start-core-deployment",
@@ -89,36 +89,36 @@
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-start",
-      "version": "1.168.56",
+      "version": "1.168.57",
       "sourcePath": "react-start",
-      "sha256": "2beb923bc5b177e909bbce4103958539871f932a790020a3d6db22c307ecc5e9"
+      "sha256": "9c28c06384f6c357f7e50c55a8cd71dad0415e7dad64fd1320aedef8579338ca"
     },
     {
       "id": "tanstack-react-start-lifecycle-migrate-from-nextjs",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-start",
-      "version": "1.168.56",
+      "version": "1.168.57",
       "sourcePath": "migrate-from-nextjs",
-      "sha256": "c78ab9082da7ea0a2c663d291b3eecb1651ffb9aedb09fbeb2388e32f7a5a240"
+      "sha256": "f67146fe9c1a8d1368fa89b01896731bfefa3faaaeb24111a97b01dc8eea94e0"
     },
     {
       "id": "tanstack-solid-start",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-start",
-      "version": "1.168.54",
+      "version": "1.168.55",
       "sourcePath": "solid-start",
-      "sha256": "5886f874b73465233c735c0224cde367c3b89e985ae8d3310b087c5e32ebb831"
+      "sha256": "cd74b10d0b052467177f6292ed71d0545a850e3fcde43061dd192ec244c41f0f"
     },
     {
       "id": "tanstack-vue-start",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-start",
-      "version": "1.168.53",
+      "version": "1.168.54",
       "sourcePath": "vue-start",
-      "sha256": "6e7d02f7cb7859c562f72e0d3e060b3158c52f08971df0737f2c6682fdb22e6d"
+      "sha256": "3860128f1340ac1cd3939259be473dee1e245ff5dc2850a7f660329348078753"
     },
     {
       "id": "tanstack-router-core",

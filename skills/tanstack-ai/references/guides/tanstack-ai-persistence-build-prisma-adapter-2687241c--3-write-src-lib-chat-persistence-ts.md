@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 3. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
 
 ## 3. Write `src/lib/chat-persistence.ts`
 

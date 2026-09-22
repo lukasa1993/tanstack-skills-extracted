@@ -2,13 +2,15 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
-TanStack Hotkeys supports multi-key sequences -- shortcuts where you press keys one after another rather than simultaneously. This is commonly used for Vim-style navigation, cheat codes, or multi-step commands.
+TanStack Hotkeys supports multi-key sequences: shortcuts where you press keys one after another rather than simultaneously. Common uses are Vim-style navigation, cheat codes, and multi-step commands.
 
-## Basic Usage
+Sequence steps use the same string syntax as single hotkeys. For example, `['[KeyG]', '[KeyG]']` follows a physical position, while `['G', 'G']` follows the logical letter. A sequence can mix forms, such as `['Mod+[KeyK]', 'C']`. Display steps with `sequence.map((step) => formatForDisplay(step)).join(' → ')`.
+
+## Basic usage
 
 Use the `createHotkeySequence` primitive to register a key sequence:
 
@@ -27,7 +29,7 @@ The first argument is an array of `Hotkey` strings representing each step in the
 
 ## Many sequences at once
 
-For several sequences or a **dynamic** list, use `createHotkeySequences` instead of many `createHotkeySequence` calls. Pass a plain array or an accessor that returns definitions.
+For several sequences or a dynamic list, use `createHotkeySequences` instead of many `createHotkeySequence` calls. Pass a plain array or an accessor that returns definitions.
 
 ```tsx
 import { createHotkeySequences } from '@tanstack/solid-hotkeys'
@@ -38,11 +40,11 @@ createHotkeySequences([
 ])
 ```
 
-Options merge like `createHotkeys`: `HotkeysProvider` defaults, then `commonOptions`, then each definition’s `options`. For element-scoped multi-sequence registration, use `createHotkeySequencesAttachment`.
+Options merge like `createHotkeys`: `HotkeysProvider` defaults, then `commonOptions`, then each definition's `options`. For element-scoped multi-sequence registration, use `createHotkeySequencesAttachment`.
 
-## Reactive Options
+## Reactive options
 
-Solid's `createHotkeySequence` accepts **accessor functions** for reactive sequence and options:
+Solid's `createHotkeySequence` accepts accessor functions for reactive sequence and options:
 
 ```tsx
 const [isVimMode, setIsVimMode] = createSignal(true)
@@ -55,7 +57,7 @@ createHotkeySequence(
 )
 ```
 
-## Sequence Options
+## Sequence options
 
 The third argument is an options object (or accessor returning options):
 
@@ -80,7 +82,7 @@ createHotkeySequence(['Shift+Z', 'Shift+Z'], () => forceQuit(), { timeout: 2000 
 
 Controls whether the sequence is active. Defaults to `true`. Use an accessor for reactive control.
 
-Disabled sequences **remain registered** and stay visible in devtools; only execution is suppressed.
+Disabled sequences remain registered and stay visible in devtools; only execution is suppressed.
 
 ```tsx
 const [isVimMode, setIsVimMode] = createSignal(true)
@@ -94,7 +96,7 @@ createHotkeySequence(['G', 'G'], () => scrollToTop(), () => ({
 
 The DOM element to attach the sequence listener to. Defaults to `document`. Can be from an accessor when the target becomes available after mount.
 
-### Global Default Options via Provider
+### Global defaults via provider
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/solid-hotkeys'
@@ -110,7 +112,7 @@ import { HotkeysProvider } from '@tanstack/solid-hotkeys'
 
 ### `meta`
 
-Sequences support the same `meta` option as hotkeys, allowing you to attach a `name` and `description` for use in shortcut palettes and devtools.
+Sequences support the same `meta` option as hotkeys. Attach a `name` and `description` for use in shortcut palettes and devtools.
 
 ```tsx
 createHotkeySequence(['G', 'G'], () => scrollToTop(), {
@@ -120,7 +122,7 @@ createHotkeySequence(['G', 'G'], () => scrollToTop(), {
 
 See the [Hotkeys Guide](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md) for details on declaration merging and introspecting registrations.
 
-## Sequences with Modifiers
+## Sequences with modifiers
 
 Each step in a sequence can include modifiers:
 
@@ -131,21 +133,23 @@ createHotkeySequence(['G', 'Shift+G'], () => scrollToBottom())
 
 ## Chained modifier chords
 
-You can repeat the same modifier across consecutive steps—for example `Shift+R` then `Shift+T`:
+This example follows physical R and T positions. Brackets retain those positions even when the keys produce different letters. Other sequences can continue using logical characters.
+
+You can repeat the same modifier across consecutive steps, for example `Shift+R` then `Shift+T`:
 
 ```tsx
-createHotkeySequence(['Shift+R', 'Shift+T'], () => {
+createHotkeySequence(['Shift+[KeyR]', 'Shift+[KeyT]'], () => {
   doNextAction()
 })
 ```
 
 ### Modifier-only keys between steps
 
-While a sequence is in progress, **modifier-only** keydown events (Shift, Control, Alt, or Meta pressed alone, with no letter or other key) are ignored. They do not advance the sequence and they do **not** reset progress, so a user can tap or hold Shift between chords without breaking the sequence.
+While a sequence is in progress, modifier-only keydown events (Shift, Control, Alt, or Meta pressed alone, with no letter or other key) are ignored. They neither advance the sequence nor reset progress, so a user can tap or hold Shift between chords without breaking the sequence.
 
-## Common Sequence Patterns
+## Common sequence patterns
 
-### Vim-Style Navigation
+### Vim-style navigation
 
 ```tsx
 function VimNavigation() {
@@ -173,13 +177,15 @@ createHotkeySequence(
 )
 ```
 
-### Multi-Step Commands
+### Multi-step commands
 
 ```tsx
 createHotkeySequence(['H', 'E', 'L', 'P'], () => openHelp())
 ```
 
-## How Sequences Work
+## How sequences work
+
+Both `SequenceManager` and `createSequenceMatcher` ignore modifier-only events, IME composition, and automatic keydown repeats. These events neither advance the sequence nor refresh its timeout: holding G does not complete a two-press G sequence. The manager prefers exact matches over weaker logical-key fallbacks while preserving equally strong matches.
 
 The `SequenceManager` (singleton) handles all sequence registrations. When a key is pressed:
 
@@ -189,7 +195,7 @@ The `SequenceManager` (singleton) handles all sequence registrations. When a key
 4. When all steps are completed, the callback fires
 5. Modifier-only keydowns are ignored (they neither advance nor reset the sequence)
 
-### Overlapping Sequences
+### Overlapping sequences
 
 Multiple sequences can share the same prefix. The manager tracks progress for each sequence independently:
 
@@ -199,7 +205,11 @@ createHotkeySequence(['D', 'W'], () => deleteWord())
 createHotkeySequence(['D', 'I', 'W'], () => deleteInnerWord())
 ```
 
-## The Sequence Manager
+### Conflicting registrations
+
+For the same target, duplicate detection compares resolved steps: modifier aliases, modifier order, and logical key casing do not create separate bindings. `conflictBehavior` applies to equivalent sequences without rewriting their stored strings. Physical and logical identities remain distinct, and a shared prefix alone is not a duplicate registration. Recorder conflict detection also checks prefixes and observed physical/logical overlap.
+
+## The sequence manager
 
 Under the hood, `createHotkeySequence` uses the singleton `SequenceManager`. You can also use the core `createSequenceMatcher` function for standalone sequence matching:
 

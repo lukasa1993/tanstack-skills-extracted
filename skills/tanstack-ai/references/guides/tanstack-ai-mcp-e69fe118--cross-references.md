@@ -1,6 +1,6 @@
 # Ai Mcp — Cross-References
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.3`.
 
 ## Cross-References
 

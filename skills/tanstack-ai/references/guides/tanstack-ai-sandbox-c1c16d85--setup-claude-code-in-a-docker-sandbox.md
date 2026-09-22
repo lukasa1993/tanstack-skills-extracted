@@ -1,6 +1,6 @@
 # Ai Sandbox — Setup — Claude Code in a Docker sandbox
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.11`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.12`.
 
 ## Setup — Claude Code in a Docker sandbox
 

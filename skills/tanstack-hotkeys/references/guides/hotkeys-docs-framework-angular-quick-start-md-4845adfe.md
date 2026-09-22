@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
 
 Don't have TanStack Hotkeys installed yet? See the [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md) page for instructions.
 
-## Your First Hotkey
+## Your first hotkey
 
 The `injectHotkey` API is the primary way to register keyboard shortcuts in Angular:
 
@@ -34,9 +34,9 @@ export class AppComponent {
 
 The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Control` on Windows/Linux, so your shortcuts work across platforms without extra logic.
 
-## Common Patterns
+## Common patterns
 
-### Multiple Hotkeys
+### Multiple hotkeys
 
 ```ts
 constructor() {
@@ -48,7 +48,7 @@ constructor() {
 }
 ```
 
-### Scoped Hotkeys with `viewChild`
+### Scoped hotkeys with `viewChild`
 
 ```ts
 import { Component, ElementRef, viewChild } from '@angular/core'
@@ -73,7 +73,7 @@ export class PanelComponent {
 }
 ```
 
-### Conditional Hotkeys
+### Conditional hotkeys
 
 ```ts
 import { Component, signal } from '@angular/core'
@@ -91,7 +91,7 @@ export class ModalComponent {
 }
 ```
 
-### Multi-Key Sequences
+### Multi-key sequences
 
 ```ts
 import { injectHotkeySequence } from '@tanstack/angular-hotkeys'
@@ -102,7 +102,7 @@ constructor() {
 }
 ```
 
-### Tracking Held Keys
+### Tracking held keys
 
 ```ts
 import { Component } from '@angular/core'
@@ -127,7 +127,7 @@ export class StatusBarComponent {
 }
 ```
 
-### Displaying Hotkeys in the UI
+### Displaying hotkeys in the UI
 
 ```ts
 import { Component } from '@angular/core'
@@ -146,7 +146,7 @@ export class SaveButtonComponent {
 }
 ```
 
-## Default Options Provider
+## Default options provider
 
 Use `provideHotkeys` to configure default options for your Angular app:
 
@@ -165,7 +165,7 @@ export const appConfig: ApplicationConfig = {
 }
 ```
 
-## Next Steps
+## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md)
 - [Sequences Guide](./hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md#source-hotkeys-docs-framework-angular-guides-sequences-md)

@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-installation-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.103.1`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.103.2`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -34,4 +34,4 @@ or
 bun add @tanstack/angular-query-experimental
 ```
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/examples/angular/simple/README.md) or [basic](https://github.com/TanStack/query/blob/c08f5766ddb5dfd6f2e430eb7c235de866cd669e/examples/angular/basic/README.md) examples!
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/examples/angular/simple/README.md) or [basic](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/examples/angular/basic/README.md) examples!

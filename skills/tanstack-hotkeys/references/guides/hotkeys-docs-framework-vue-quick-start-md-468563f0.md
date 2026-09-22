@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
 
 Don't have TanStack Hotkeys installed yet? See the [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md) page for instructions.
 
-## Your First Hotkey
+## Your first hotkey
 
 The `useHotkey` composable is the primary way to register keyboard shortcuts in Vue:
 
@@ -30,9 +30,9 @@ useHotkey('Mod+S', () => {
 
 The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Control` on Windows/Linux, so your shortcuts work across platforms without extra logic.
 
-## Common Patterns
+## Common patterns
 
-### Multiple Hotkeys
+### Multiple hotkeys
 
 ```vue
 <script setup lang="ts">
@@ -46,7 +46,7 @@ useHotkey('Escape', () => closeDialog())
 </script>
 ```
 
-### Scoped Hotkeys with Template Refs
+### Scoped hotkeys with template refs
 
 ```vue
 <script setup lang="ts">
@@ -65,7 +65,7 @@ useHotkey('Escape', () => closePanel(), { target: panelRef })
 </template>
 ```
 
-### Conditional Hotkeys
+### Conditional hotkeys
 
 ```vue
 <script setup lang="ts">
@@ -80,7 +80,7 @@ useHotkey('Escape', () => {
 </script>
 ```
 
-### Multi-Key Sequences
+### Multi-key sequences
 
 ```vue
 <script setup lang="ts">
@@ -93,7 +93,7 @@ useHotkeySequence(['G', 'Shift+G'], () => scrollToBottom())
 
 For several sequences or a list that changes at runtime, prefer a single `useHotkeySequences([...])` call (see the [Sequences guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)).
 
-### Tracking Held Keys
+### Tracking held keys
 
 ```vue
 <script setup lang="ts">
@@ -111,7 +111,7 @@ const isShiftHeld = useKeyHold('Shift')
 </template>
 ```
 
-### Displaying Hotkeys in the UI
+### Displaying hotkeys in the UI
 
 ```vue
 <script setup lang="ts">
@@ -127,7 +127,7 @@ useHotkey('Mod+S', () => save())
 </template>
 ```
 
-## Default Options Provider
+## Default options provider
 
 Wrap part of your app with `HotkeysProvider` to set default options for all Vue composables in that subtree:
 
@@ -149,7 +149,7 @@ import { HotkeysProvider } from '@tanstack/vue-hotkeys'
 </template>
 ```
 
-## Next Steps
+## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md)
 - [Sequences Guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)

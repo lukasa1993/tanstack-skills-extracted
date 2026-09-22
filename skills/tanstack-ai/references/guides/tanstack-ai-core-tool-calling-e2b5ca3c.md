@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-tool-calling"></a>
 
-Published skill · `@tanstack/ai@0.57.0`.
+Published skill · `@tanstack/ai@0.58.0`.
 
 [Topic index](../tools-outputs-middleware.md) · [Source provenance](../SOURCES.md)
 

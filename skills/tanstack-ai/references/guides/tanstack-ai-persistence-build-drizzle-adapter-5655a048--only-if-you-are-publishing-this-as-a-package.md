@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — Only if you are publishing this as a package
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
 
 ## Only if you are publishing this as a package
 

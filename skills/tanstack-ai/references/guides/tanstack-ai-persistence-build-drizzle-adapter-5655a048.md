@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-drizzle-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@0.6.2`.
+Published skill · `@tanstack/ai-persistence@0.6.4`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 

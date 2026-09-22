@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.103.1`.
+Release-matched documentation · `@tanstack/react-query@5.103.2`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

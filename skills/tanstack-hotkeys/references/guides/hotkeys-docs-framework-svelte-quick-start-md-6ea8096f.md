@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
 
 Don't have TanStack Hotkeys installed yet? See the [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md) page for instructions.
 
-## Your First Hotkey
+## Your first hotkey
 
 Use `createHotkey` for global shortcuts and attachments for element-scoped shortcuts.
 
@@ -28,7 +28,7 @@ Use `createHotkey` for global shortcuts and attachments for element-scoped short
 
 The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Control` on Windows/Linux, so your shortcuts work across platforms without extra logic.
 
-## Common Patterns
+## Common patterns
 
 ### Multiple global hotkeys
 
@@ -164,7 +164,7 @@ Use `setHotkeysContext` when you want defaults for a subtree. This is an advance
 </script>
 ```
 
-## Next Steps
+## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md)
 - [Sequences Guide](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md)

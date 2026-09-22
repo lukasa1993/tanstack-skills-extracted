@@ -6,8 +6,8 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Client Persistence](./guides/tanstack-ai-core-client-persistence-9ee3012c.md) | Published skill | `@tanstack/ai@0.57.0` |
-| [Locks](./guides/tanstack-ai-core-locks-b6cb9694.md) | Published skill | `@tanstack/ai@0.57.0` |
-| [Ai Persistence](./guides/tanstack-ai-persistence-2fec28cd.md) | Published skill | `@tanstack/ai-persistence@0.6.2` |
-| [Server](./guides/tanstack-ai-persistence-server-3b558cfc.md) | Published skill | `@tanstack/ai-persistence@0.6.2` |
-| [Stores](./guides/tanstack-ai-persistence-stores-e6061122.md) | Published skill | `@tanstack/ai-persistence@0.6.2` |
+| [Client Persistence](./guides/tanstack-ai-core-client-persistence-9ee3012c.md) | Published skill | `@tanstack/ai@0.58.0` |
+| [Locks](./guides/tanstack-ai-core-locks-b6cb9694.md) | Published skill | `@tanstack/ai@0.58.0` |
+| [Ai Persistence](./guides/tanstack-ai-persistence-2fec28cd.md) | Published skill | `@tanstack/ai-persistence@0.6.4` |
+| [Server](./guides/tanstack-ai-persistence-server-3b558cfc.md) | Published skill | `@tanstack/ai-persistence@0.6.4` |
+| [Stores](./guides/tanstack-ai-persistence-stores-e6061122.md) | Published skill | `@tanstack/ai-persistence@0.6.4` |

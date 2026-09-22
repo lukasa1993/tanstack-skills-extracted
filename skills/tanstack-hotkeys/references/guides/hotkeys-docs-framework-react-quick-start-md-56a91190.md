@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/hotkeys@0.8.0`.
 
 Don't have TanStack Hotkeys installed yet? See the [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md) page for instructions.
 
-## Your First Hotkey
+## Your first hotkey
 
 The `useHotkey` hook is the primary way to register keyboard shortcuts in React:
 
@@ -28,9 +28,9 @@ function App() {
 
 The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Control` on Windows/Linux, so your shortcuts work across platforms without extra logic.
 
-## Common Patterns
+## Common patterns
 
-### Multiple Hotkeys
+### Multiple hotkeys
 
 Register as many hotkeys as you need. Each `useHotkey` call is independent:
 
@@ -46,7 +46,7 @@ function Editor() {
 }
 ```
 
-### Scoped Hotkeys with Refs
+### Scoped hotkeys with refs
 
 Attach hotkeys to specific elements instead of the entire document:
 
@@ -68,7 +68,7 @@ function Panel() {
 }
 ```
 
-### Conditional Hotkeys
+### Conditional hotkeys
 
 Enable or disable hotkeys based on application state:
 
@@ -86,7 +86,7 @@ function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 }
 ```
 
-### Multi-Key Sequences
+### Multi-key sequences
 
 Register Vim-style key sequences with `useHotkeySequence`:
 
@@ -101,7 +101,7 @@ function VimStyleApp() {
 }
 ```
 
-### Tracking Held Keys
+### Tracking held keys
 
 Display modifier key state for power-user UIs:
 
@@ -121,7 +121,7 @@ function StatusBar() {
 }
 ```
 
-### Displaying Hotkeys in the UI
+### Displaying hotkeys in the UI
 
 Format hotkeys for platform-aware display:
 
@@ -140,7 +140,7 @@ function SaveButton() {
 }
 ```
 
-## Setting Up Devtools
+## Setting up devtools
 
 Add the TanStack Devtools to your app to inspect registered hotkeys, view held keys, and test shortcuts:
 
@@ -158,9 +158,9 @@ function App() {
 }
 ```
 
-## Default Options Provider
+## Default options provider
 
-Wrap your app with `HotkeysProvider` to set default options for all hotkey hooks globally. Any options passed directly to a hook will override the provider defaults.
+Wrap your app with `HotkeysProvider` to set default options for all hotkey hooks globally. Options passed directly to a hook override the provider defaults.
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/react-hotkeys'
@@ -180,7 +180,7 @@ function Root() {
 }
 ```
 
-## Next Steps
+## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md) - Deep dive into `useHotkey` options and patterns
 - [Sequences Guide](./hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md#source-hotkeys-docs-framework-react-guides-sequences-md) - Multi-key sequence handling
