@@ -35,9 +35,9 @@
 | `query:docs/framework/solid/installation.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.103.2` |  |
 | `query:docs/framework/solid/overview.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.103.2` |  |
 | `query:docs/framework/solid/quick-start.md` | document | `framework-solid` | `@tanstack/solid-query` | `5.103.2` |  |
-| `query:docs/framework/svelte/installation.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.2.3` |  |
-| `query:docs/framework/svelte/overview.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.2.3` |  |
-| `query:docs/framework/svelte/quick-start.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.2.3` |  |
+| `query:docs/framework/svelte/installation.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.2.4` |  |
+| `query:docs/framework/svelte/overview.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.2.4` |  |
+| `query:docs/framework/svelte/quick-start.md` | document | `framework-svelte` | `@tanstack/svelte-query` | `6.2.4` |  |
 | `query:docs/framework/angular/guides/mutations.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.103.2` |  |
 | `query:docs/framework/angular/guides/optimistic-updates.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.103.2` |  |
 | `query:docs/framework/angular/guides/queries.md` | document | `framework-angular` | `@tanstack/angular-query-experimental` | `5.103.2` |  |

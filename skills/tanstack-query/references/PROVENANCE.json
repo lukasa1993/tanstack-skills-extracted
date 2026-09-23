@@ -509,14 +509,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.2.3",
+      "version": "6.2.4",
       "repository": "TanStack/query",
-      "commit": "413ba6e30b72a89ad71710c91633c3099638fd56",
+      "commit": "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7",
       "sourcePath": "docs/framework/svelte/installation.md",
-      "sha256": "352048e1b4a90bf77b829bd7b80f4abfc565903fcf9527f6f4d5dcdc184c09c5",
+      "sha256": "9eeb1bf0e50bb1b0866afee4d495f53805f627744c5ed125a8a2d2183c3cae02",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "413ba6e30b72a89ad71710c91633c3099638fd56"
+        "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7"
       ]
     },
     {
@@ -524,14 +524,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.2.3",
+      "version": "6.2.4",
       "repository": "TanStack/query",
-      "commit": "413ba6e30b72a89ad71710c91633c3099638fd56",
+      "commit": "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7",
       "sourcePath": "docs/framework/svelte/overview.md",
-      "sha256": "aec59767ce3e0b50a2475a290bfee58b3dc728360725f8dd667a506dbad69d9c",
+      "sha256": "f0c849461e3d6c2b96a21c5a12c900e90d8931e42ded6b0beb20cbc915abe473",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "413ba6e30b72a89ad71710c91633c3099638fd56"
+        "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7"
       ]
     },
     {
@@ -539,14 +539,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.2.3",
+      "version": "6.2.4",
       "repository": "TanStack/query",
-      "commit": "413ba6e30b72a89ad71710c91633c3099638fd56",
+      "commit": "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "sha256": "8968bd5318f2471061a334e1d8dafb063431bde50e4f3ca1e5b6a2d40354c1f5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "413ba6e30b72a89ad71710c91633c3099638fd56"
+        "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7"
       ]
     },
     {
@@ -1099,7 +1099,7 @@
     }
   ],
   "documentationVerification": {
-    "catalogSha256": "bcf1070faa925a29bb494c6bdeec8386156a4ee4da152325a0155a1e54e05335",
+    "catalogSha256": "da7e987b0ea9e8ce61b756f0753765ce834800cef3fd55ac0175cbd13d6ac40b",
     "verification": {
       "npmTarballs": "sha512 integrity verified against npm registry metadata",
       "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
@@ -1107,9 +1107,9 @@
     },
     "repositoryArchives": [
       {
-        "url": "https://codeload.github.com/TanStack/query/tar.gz/413ba6e30b72a89ad71710c91633c3099638fd56",
-        "commit": "413ba6e30b72a89ad71710c91633c3099638fd56",
-        "sha256": "1eaff3b37fa491cbafc751aa5048f570df08f266dc2f7b9bbded84c59ed11c89"
+        "url": "https://codeload.github.com/TanStack/query/tar.gz/8884f1a4d9ee53cb3cdba26ca28f870500ede3f7",
+        "commit": "8884f1a4d9ee53cb3cdba26ca28f870500ede3f7",
+        "sha256": "9ff451d7978c1c658882cf426d0225a3e97b624e1e9c602f6cef32e648496476"
       },
       {
         "url": "https://codeload.github.com/TanStack/query/tar.gz/e0f6c5542fc767f77a6cf1d5546591beae05f10f",
