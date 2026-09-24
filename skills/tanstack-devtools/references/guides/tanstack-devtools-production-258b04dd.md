@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-production"></a>
 
-Published skill · `@tanstack/devtools@0.14.2`.
+Published skill · `@tanstack/devtools@0.15.0`.
 
 [Topic index](../setup-production.md) · [Source provenance](../SOURCES.md)
 
@@ -17,6 +17,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [The Two Workflows](./tanstack-devtools-production-258b04dd--the-two-workflows.md) — 3 KiB
 - [Non-Vite Projects](./tanstack-devtools-production-258b04dd--non-vite-projects.md) — 2 KiB
 - [NoOp Plugin Variants for Tree-Shaking](./tanstack-devtools-production-258b04dd--noop-plugin-variants-for-tree-shaking.md) — 3 KiB
+- [@tanstack/devtools-webmcp root import](./tanstack-devtools-production-258b04dd--tanstack-devtools-webmcp-root-import.md) — 1 KiB
 - [Common Mistakes](./tanstack-devtools-production-258b04dd--common-mistakes.md) — 4 KiB
 - [Design Tension](./tanstack-devtools-production-258b04dd--design-tension.md) — 1 KiB
 - [Cross-References](./tanstack-devtools-production-258b04dd--cross-references.md) — 1 KiB
@@ -34,6 +35,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="strategy-a-conditional-dynamic-import"></a>
 <a id="strategy-b-bundler-specific-dead-code-elimination"></a>
 <a id="noop-plugin-variants-for-tree-shaking"></a>
+<a id="tanstackdevtools-webmcp-root-import"></a>
 <a id="common-mistakes"></a>
 <a id="high-keeping-devtools-in-production-without-disabling-stripping"></a>
 <a id="high-non-vite-projects-not-excluding-devtools-manually"></a>

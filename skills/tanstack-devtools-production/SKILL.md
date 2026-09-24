@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.14.2"
+  tanstack-package-version: "0.15.0"
   tanstack-requires: "[\"tanstack-devtools-app-setup\"]"
   tanstack-source-skill: "devtools-production"
   tanstack-sources: "[\"docs/production.md\",\"docs/vite-plugin.md\",\"packages/devtools-vite/src/plugin.ts\",\"packages/devtools-vite/src/remove-devtools.ts\",\"packages/devtools/package.json\",\"packages/devtools/tsup.config.ts\",\"packages/devtools-utils/src/react/plugin.tsx\",\"packages/devtools-utils/src/react/panel.tsx\"]"
@@ -322,6 +322,28 @@ The NoOp pattern exists for every framework adapter:
 All return `readonly [Plugin, NoOpPlugin]`. The `NoOpPlugin` always has the same metadata (`name`, `id`, `defaultOpen`) but its render function produces an empty fragment, so the bundler can tree-shake the real panel component and all its dependencies.
 
 See the **devtools-framework-adapters** skill for the full factory API details.
+
+## @tanstack/devtools-webmcp root import
+
+When `process.env.NODE_ENV` is `'development'`, the root import is the real helper.
+
+```ts
+import { registerDevtoolsTools } from '@tanstack/devtools-webmcp'
+```
+
+In every other environment, the root import is a no-op. An unset `NODE_ENV` is a no-op too.
+
+Bundlers remove the real helper. The tool objects stay in the library bundle. The no-op does not call the browser. The no-op does not keep the tools object.
+
+If the tools must stay registered in production, import `@tanstack/devtools-webmcp/production`.
+
+```ts
+import { registerDevtoolsTools } from '@tanstack/devtools-webmcp/production'
+```
+
+The import `@tanstack/devtools-webmcp/production` is always the real helper.
+
+The `registerDevtoolsTools` call stays the same. The call is in `docs/webmcp-tools.md`.
 
 ## Common Mistakes
 

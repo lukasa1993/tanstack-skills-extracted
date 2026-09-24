@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-app-setup"></a>
 
-Published skill · `@tanstack/devtools@0.14.2`.
+Published skill · `@tanstack/devtools@0.15.0`.
 
 [Topic index](../setup-production.md) · [Source provenance](../SOURCES.md)
 

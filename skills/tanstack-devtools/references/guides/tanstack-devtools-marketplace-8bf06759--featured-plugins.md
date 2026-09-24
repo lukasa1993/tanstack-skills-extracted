@@ -1,6 +1,6 @@
 # Devtools Marketplace — Featured Plugins
 
-[Guide and prerequisites](./tanstack-devtools-marketplace-8bf06759.md) · Published skill · `@tanstack/devtools@0.14.2`.
+[Guide and prerequisites](./tanstack-devtools-marketplace-8bf06759.md) · Published skill · `@tanstack/devtools@0.15.0`.
 
 ## Featured Plugins
 

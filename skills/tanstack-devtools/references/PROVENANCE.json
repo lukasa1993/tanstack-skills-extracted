@@ -8,18 +8,18 @@
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "sourcePath": "devtools-app-setup",
-      "sha256": "a717991f31bd8ddb08ee11acfd858c289c086366b638d6c7534bdff812c044e5"
+      "sha256": "9443bdda0cd9b5a145fcd46bde7f69f8053b94ff666a06f8f73ef57c5be3866b"
     },
     {
       "id": "tanstack-devtools-production",
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "sourcePath": "devtools-production",
-      "sha256": "a497b460c98750287114ef7907720683a8196fba6896eec49ff368617a782d5e"
+      "sha256": "d8822d2da35a6df12546bac9b182e16c08f94ebc9ef70217b681b598c0fd8f33"
     },
     {
       "id": "tanstack-devtools-vite-plugin",
@@ -35,18 +35,18 @@
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "sourcePath": "devtools-marketplace",
-      "sha256": "3a362cd27c0a854cd71479f1916ee9355229adafd4582d829ce889277856819e"
+      "sha256": "e12f9ddfab48cba52588d56ffd51be46aa536aeba58fe035f2db31d1e449d2f1"
     },
     {
       "id": "tanstack-devtools-plugin-panel",
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "sourcePath": "devtools-plugin-panel",
-      "sha256": "d59ab1d30129072f2149e712b586667ca8ceefc147c809943920289e1c2d4781"
+      "sha256": "bc4f2dda7cbf0f122cc3534fb38e0d460c848051e50aa8abcc430cbc8a29ef25"
     },
     {
       "id": "tanstack-devtools-utils-devtools-framework-adapters",

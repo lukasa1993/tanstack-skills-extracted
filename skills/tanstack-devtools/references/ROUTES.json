@@ -10,7 +10,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-devtools-app-setup-a09047cc.md",
       "sourcePath": "devtools-app-setup",
       "bytes": 9424,
@@ -32,10 +32,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-devtools-production-258b04dd.md",
       "sourcePath": "devtools-production",
-      "bytes": 2219,
+      "bytes": 2402,
       "prerequisites": [
         {
           "id": "tanstack-devtools-app-setup",
@@ -67,6 +67,11 @@
           "title": "NoOp Plugin Variants for Tree-Shaking",
           "file": "references/guides/tanstack-devtools-production-258b04dd--noop-plugin-variants-for-tree-shaking.md",
           "bytes": 2187
+        },
+        {
+          "title": "@tanstack/devtools-webmcp root import",
+          "file": "references/guides/tanstack-devtools-production-258b04dd--tanstack-devtools-webmcp-root-import.md",
+          "bytes": 993
         },
         {
           "title": "Common Mistakes",
@@ -161,7 +166,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-devtools-marketplace-8bf06759.md",
       "sourcePath": "devtools-marketplace",
       "bytes": 2215,
@@ -238,7 +243,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/devtools",
-      "version": "0.14.2",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-devtools-plugin-panel-b0545901.md",
       "sourcePath": "devtools-plugin-panel",
       "bytes": 11023,

@@ -1,6 +1,6 @@
 # Devtools Production — NoOp Plugin Variants for Tree-Shaking
 
-[Guide and prerequisites](./tanstack-devtools-production-258b04dd.md) · Published skill · `@tanstack/devtools@0.14.2`.
+[Guide and prerequisites](./tanstack-devtools-production-258b04dd.md) · Published skill · `@tanstack/devtools@0.15.0`.
 
 ## NoOp Plugin Variants for Tree-Shaking
 

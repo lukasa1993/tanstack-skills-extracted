@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-marketplace"></a>
 
-Published skill · `@tanstack/devtools@0.14.2`.
+Published skill · `@tanstack/devtools@0.15.0`.
 
 [Topic index](../plugins-marketplace.md) · [Source provenance](../SOURCES.md)
 

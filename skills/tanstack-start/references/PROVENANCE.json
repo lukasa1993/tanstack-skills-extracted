@@ -71,9 +71,9 @@
       "kind": "atomic",
       "theme": "deployment-rendering",
       "package": "@tanstack/react-start",
-      "version": "1.168.57",
+      "version": "1.168.58",
       "sourcePath": "server-components",
-      "sha256": "73e8bab398e8b36f8df0a431d0930d6ff207df1b2b502f77a87e653e95724164"
+      "sha256": "8a0e6ef95195919adba7c8550398a9651e99626522e4ce7a2605372b9b2a02dd"
     },
     {
       "id": "tanstack-start-client-core-start-core-deployment",
@@ -89,18 +89,18 @@
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-start",
-      "version": "1.168.57",
+      "version": "1.168.58",
       "sourcePath": "react-start",
-      "sha256": "9c28c06384f6c357f7e50c55a8cd71dad0415e7dad64fd1320aedef8579338ca"
+      "sha256": "72ad14f7c330f63b2bb5bf246866aeecf8342977ee9a4c7e98dbac713fefa4ac"
     },
     {
       "id": "tanstack-react-start-lifecycle-migrate-from-nextjs",
       "kind": "atomic",
       "theme": "framework-react",
       "package": "@tanstack/react-start",
-      "version": "1.168.57",
+      "version": "1.168.58",
       "sourcePath": "migrate-from-nextjs",
-      "sha256": "f67146fe9c1a8d1368fa89b01896731bfefa3faaaeb24111a97b01dc8eea94e0"
+      "sha256": "611441bb9103a6e4345eab106b64a58b9d71576abf54454278e7aa34fe8abe40"
     },
     {
       "id": "tanstack-solid-start",
