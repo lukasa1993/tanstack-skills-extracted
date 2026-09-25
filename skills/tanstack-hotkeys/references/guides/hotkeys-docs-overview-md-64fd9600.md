@@ -2,11 +2,19 @@
 
 <a id="source-hotkeys-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
 TanStack Hotkeys is a type-safe, headless library for keyboard shortcuts, sequences, recording, and key state tracking. Use its framework adapters for registration and cleanup, and build shortcut interfaces with your own components and application state.
+
+## Runtime and package requirements
+
+Hotkeys packages ship ES2022 JavaScript as ESM only and require Node.js 20 or newer when used in Node.js. Browser applications need an ES2022-compatible runtime or a build pipeline that transforms the library for their supported browsers.
+
+Use ESM imports, such as `import { parseHotkey } from '@tanstack/hotkeys'`. CommonJS builds and `require` export conditions are no longer provided. CommonJS applications can use dynamic `import()` or migrate their consuming modules to ESM.
+
+Published packages contain the runtime files and TypeScript declarations in `dist`, plus package metadata, README, and license files. The repository's `src` directory and source maps are no longer included. Inspect `dist/index.d.ts` and its referenced declarations for the installed API; consult the matching repository version when you need the original implementation.
 
 ## Choose what a shortcut follows
 
@@ -49,4 +57,4 @@ Key-state primitives expose held logical keys and physical codes. `matchesHeldMo
 
 `ParsedHotkey` preserves identity as a union: logical bindings have `key`, physical bindings have `code`. Narrow with `parsed.code !== undefined` before reading it. Shared resolved flags and the ordered modifier list live in `ParsedModifiers`. `parseKeyboardEvent` produces logical identity; code recording constructs physical identity explicitly.
 
-Start with the [React Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md), [Angular Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md), [Vue Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md), or [Lit Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md). Explore the [Router kitchen sink](https://github.com/TanStack/hotkeys/blob/c2b1635449a22774299308b0b9bc5fd40b336bf7/examples/react/kitchen-sink/README.md) for route lifetimes, recording, and hints, or the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/c2b1635449a22774299308b0b9bc5fd40b336bf7/examples/vanilla/formatForDisplay) for display options.
+Start with the [React Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md), [Angular Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md), [Vue Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md), or [Lit Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md). Explore the [Router kitchen sink](https://github.com/TanStack/hotkeys/blob/e06d82da83733a874e28c4144ad13e129e462491/examples/react/kitchen-sink/README.md) for route lifetimes, recording, and hints, or the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/e06d82da83733a874e28c4144ad13e129e462491/examples/vanilla/formatForDisplay) for display options.

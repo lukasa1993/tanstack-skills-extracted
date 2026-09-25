@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — 3. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 3. Write `src/lib/chat-persistence.ts`
 
@@ -55,6 +55,9 @@ function mapRun(row: typeof chatRuns.$inferSelect): RunRecord {
       ? { cancelRequested: row.cancelRequested }
       : {}),
     ...(row.driverEpoch != null ? { driverEpoch: row.driverEpoch } : {}),
+    ...(row.parentRunId != null ? { parentRunId: row.parentRunId } : {}),
+    ...(row.subagentRunId != null ? { subagentRunId: row.subagentRunId } : {}),
+    ...(row.name != null ? { name: row.name } : {}),
   }
 }
 
@@ -112,20 +115,45 @@ function createRunStore(db: Db): RunStore {
     get,
     // Idempotent: an existing runId is returned untouched so resume and
     // double-submit are safe.
-    async createOrResume({ runId, threadId, startedAt, status }) {
+    async createOrResume(input) {
+      const { runId, threadId, startedAt, status } = input
       const existing = await get(runId)
       if (existing) return existing
 
       await db
         .insert(chatRuns)
-        .values({ runId, threadId, status: status ?? 'running', startedAt })
+        .values({
+          runId,
+          threadId,
+          status: status ?? 'running',
+          startedAt,
+          ...(input.parentRunId !== undefined
+            ? { parentRunId: input.parentRunId }
+            : {}),
+          ...(input.subagentRunId !== undefined
+            ? { subagentRunId: input.subagentRunId }
+            : {}),
+          ...(input.name !== undefined ? { name: input.name } : {}),
+        })
         .onConflictDoNothing({ target: chatRuns.runId })
 
       // Re-read rather than trusting the insert: a concurrent createOrResume
       // may have won the race, and that row is the authoritative one.
       const stored = await get(runId)
       return (
-        stored ?? { runId, threadId, status: status ?? 'running', startedAt }
+        stored ?? {
+          runId,
+          threadId,
+          status: status ?? 'running',
+          startedAt,
+          ...(input.parentRunId !== undefined
+            ? { parentRunId: input.parentRunId }
+            : {}),
+          ...(input.subagentRunId !== undefined
+            ? { subagentRunId: input.subagentRunId }
+            : {}),
+          ...(input.name !== undefined ? { name: input.name } : {}),
+        }
       )
     },
     // Patching an unknown runId is a no-op: never throws, never inserts.
@@ -176,6 +204,16 @@ function createRunStore(db: Db): RunStore {
         .select()
         .from(chatRuns)
         .where(eq(chatRuns.threadId, threadId))
+        .orderBy(asc(chatRuns.startedAt))
+      return rows.map(mapRun)
+    },
+    // Optional. Child runs for one parent, oldest startedAt first.
+    // reconstructChat uses this list to put subagent cards back.
+    async listByParentRun(parentRunId) {
+      const rows = await db
+        .select()
+        .from(chatRuns)
+        .where(eq(chatRuns.parentRunId, parentRunId))
         .orderBy(asc(chatRuns.startedAt))
       return rows.map(mapRun)
     },
@@ -324,28 +362,3 @@ Annotate `ChatPersistence` — bare `AIPersistence` is the all-optional bag and
 `withPersistence` rejects it. There is no `locks` store: `stores` accepts only
 those four keys, and coordination is wired separately with `withLocks` (see
 **ai-core/locks**).
-
-### If `db` is per-request
-
-Workers/D1 and any request-scoped client cannot read a binding at module scope.
-Export a factory instead, and call it inside the handler:
-
-```ts ignore
-type Db = ReturnType<typeof getDb>
-
-export function chatPersistence(): ChatPersistence {
-  const db = getDb()
-  return defineAIPersistence({
-    stores: {
-      messages: createMessageStore(db),
-      runs: createRunStore(db),
-      interrupts: createInterruptStore(db),
-      metadata: createMetadataStore(db),
-    },
-  })
-}
-```
-
-The store factories are unchanged — only the export flips from a const to a
-function. For D1 specifically, see
-**ai-persistence/build-cloudflare-adapter**.

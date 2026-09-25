@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -110,4 +110,4 @@ Parsed modifiers are already resolved. To display a portable `Mod` binding on an
 
 Use `validateHotkey` when accepting strings from an external source. It returns `valid`, `errors`, and `warnings`; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md#source-hotkeys-docs-framework-svelte-guides-hotkey-recording-md).
 
-Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/c2b1635449a22774299308b0b9bc5fd40b336bf7/examples/vanilla/formatForDisplay).
+Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/e06d82da83733a874e28c4144ad13e129e462491/examples/vanilla/formatForDisplay).

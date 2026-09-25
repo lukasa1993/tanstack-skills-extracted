@@ -1,6 +1,6 @@
 # Ai Mcp — Abort signal — cancelling in-flight MCP calls
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.3`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.6`.
 
 ## Abort signal — cancelling in-flight MCP calls
 

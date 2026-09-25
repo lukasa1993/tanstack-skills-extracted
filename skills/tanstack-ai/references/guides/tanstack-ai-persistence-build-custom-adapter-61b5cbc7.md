@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-custom-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@0.6.4`.
+Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 
@@ -13,8 +13,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--overview.md) — 2 KiB
 - [1. Read the app before writing anything](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--1-read-the-app-before-writing-anything.md) — 2 KiB
 - [2. Shape the storage](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--2-shape-the-storage.md) — 3 KiB
-- [3. The invariants](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--3-the-invariants.md) — 3 KiB
-- [4. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--4-write-src-lib-chat-persistence-ts.md) — 4 KiB
+- [3. The invariants](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--3-the-invariants.md) — 4 KiB
+- [4. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--4-write-src-lib-chat-persistence-ts.md) — 5 KiB
 - [Engine notes](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--engine-notes.md) — 3 KiB
 - [Adopt part of it](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--adopt-part-of-it.md) — 1 KiB
 - [Wire it into the chat route](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7--wire-it-into-the-chat-route.md) — 2 KiB

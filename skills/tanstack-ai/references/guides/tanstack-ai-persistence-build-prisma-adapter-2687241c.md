@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-prisma-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@0.6.4`.
+Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 
@@ -12,8 +12,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-persistence-build-prisma-adapter-2687241c--overview.md) — 1 KiB
 - [1. Read the app before writing anything](./tanstack-ai-persistence-build-prisma-adapter-2687241c--1-read-the-app-before-writing-anything.md) — 2 KiB
-- [2. Add the models to their schema](./tanstack-ai-persistence-build-prisma-adapter-2687241c--2-add-the-models-to-their-schema.md) — 3 KiB
-- [3. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-prisma-adapter-2687241c--3-write-src-lib-chat-persistence-ts.md) — 12 KiB
+- [2. Add the models to their schema](./tanstack-ai-persistence-build-prisma-adapter-2687241c--2-add-the-models-to-their-schema.md) — 4 KiB
+- [3. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-prisma-adapter-2687241c--3-write-src-lib-chat-persistence-ts.md) — 13 KiB
 - [4. Wire it into the chat route](./tanstack-ai-persistence-build-prisma-adapter-2687241c--4-wire-it-into-the-chat-route.md) — 1 KiB
 - [5. Verify](./tanstack-ai-persistence-build-prisma-adapter-2687241c--5-verify.md) — 2 KiB
 - [Only if you are publishing this as a package](./tanstack-ai-persistence-build-prisma-adapter-2687241c--only-if-you-are-publishing-this-as-a-package.md) — 2 KiB

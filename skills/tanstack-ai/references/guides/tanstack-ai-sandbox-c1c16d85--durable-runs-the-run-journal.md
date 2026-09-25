@@ -1,6 +1,6 @@
 # Ai Sandbox — Durable runs (the run journal)
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.12`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.15`.
 
 ## Durable runs (the run journal)
 

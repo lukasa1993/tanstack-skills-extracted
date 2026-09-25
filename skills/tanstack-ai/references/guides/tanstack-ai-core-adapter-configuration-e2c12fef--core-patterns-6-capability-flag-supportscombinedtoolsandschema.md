@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`
 

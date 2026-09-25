@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 2. Add the models to their schema
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 2. Add the models to their schema
 
@@ -30,9 +30,14 @@ model ChatRun {
   detachedSince   BigInt? @map("detached_since")
   cancelRequested Boolean? @map("cancel_requested")
   driverEpoch     Int?     @map("driver_epoch")
+  parentRunId     String?  @map("parent_run_id")
+  subagentRunId   String?  @map("subagent_run_id")
+  name            String?
 
   @@index([threadId, status])
   @@index([threadId, startedAt])
+  // Powers listByParentRun: children of one parent, oldest startedAt first.
+  @@index([parentRunId, startedAt])
   // Powers listReclaimable: status = 'running' AND detachedSince <= cutoff.
   @@index([status, detachedSince])
   @@map("chat_runs")

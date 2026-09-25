@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-sandbox"></a>
 
-Published skill · `@tanstack/ai-sandbox@0.5.12`.
+Published skill · `@tanstack/ai-sandbox@0.5.15`.
 
 [Topic index](../code-execution.md) · [Source provenance](../SOURCES.md)
 

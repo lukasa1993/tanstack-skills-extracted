@@ -1,12 +1,12 @@
 # Middleware — Hooks Reference
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Hooks Reference
 
 Every hook receives a `ChatMiddlewareContext` as its first argument, which provides
 `requestId`, `streamId`, `phase`, `iteration`, `chunkIndex`, `model`, `provider`,
-`signal`, `abort()`, `defer()`, and more.
+`signal`, `abort()`, `defer()`, and more. `parentRunId` names the run this one continues. `subagentRunId` is set only inside a subagent and names its card.
 
 | Hook                       | When                                                                                                     | Second Argument                                     |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |

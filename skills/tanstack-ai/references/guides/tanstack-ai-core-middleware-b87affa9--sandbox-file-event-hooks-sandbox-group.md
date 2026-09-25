@@ -1,6 +1,6 @@
 # Middleware — Sandbox File-Event Hooks (`sandbox` group)
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Sandbox File-Event Hooks (`sandbox` group)
 

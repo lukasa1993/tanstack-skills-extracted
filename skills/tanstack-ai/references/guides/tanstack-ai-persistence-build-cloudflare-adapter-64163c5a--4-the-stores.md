@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — 4. The stores
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 4. The stores
 
@@ -24,21 +24,27 @@ The invariants are the whole game, whichever route you take:
 | `runs`       | `update` on an unknown id is a silent no-op — never throws, never inserts                                                                                                                          |
 | `runs`       | `findActiveRun` (required) returns the latest `'running'` run for the thread, else null                                                                                                            |
 | `runs`       | `listByThread` (optional) returns every run for the thread `ORDER BY started_at ASC`                                                                                                               |
+| `runs`       | `listByParentRun` (optional) returns child runs for one `parent_run_id`, `ORDER BY started_at ASC`. `reconstructChat` uses it to put subagent cards back                                           |
 | `runs`       | `listReclaimable` (optional) returns runs where `status = 'running' AND detached_since IS NOT NULL AND detached_since <= now - ttlMs` (inclusive cutoff); it is a query, not automatic reclamation |
 | `interrupts` | `create` is insert-if-absent; never clobber a resolved interrupt back to pending                                                                                                                   |
 | `interrupts` | every `list*` ends `ORDER BY requested_at ASC`                                                                                                                                                     |
 | `metadata`   | reject nullish `set` with a clear `TypeError`; tell callers to use `delete`                                                                                                                        |
 
-On `runs`, `findActiveRun` is required; `listByThread` and `listReclaimable` are
-optional, so implement those two only if the app needs them. `withPersistence`
-calls **none** of the three — the consumers are `reconstruct.ts`
-(`findActiveRun`, for rejoin-by-thread) and `@tanstack/ai-sandbox`'s `reapDetachedRuns`
-(`listReclaimable`, without which the store cannot be reaped); nothing in the
-framework calls `listByThread`. Consumers of the two OPTIONAL methods
-feature-detect with `store.method?.(...)` and degrade to "not supported" when one
-is absent. The conformance testkit does not: either of those you leave out must
-be listed in `skipMethods` or the suite fails, so declare them and it reports the
-omission as a skip.
+On `runs`, `findActiveRun` is required. `listByThread`, `listByParentRun`, and
+`listReclaimable` are optional, so implement those only if the app needs them.
+`withPersistence` calls `createOrResume`, `update`, and `get`. `reconstruct.ts` calls
+`findActiveRun` for rejoin-by-thread and `listByParentRun` to put subagent
+cards back. `@tanstack/ai-sandbox`'s `reapDetachedRuns` calls `listReclaimable`.
+`reconstruct.ts` also calls `listByThread` to find the parent runs of children
+that a tool call started. Consumers of the optional methods
+feature-detect with `store.method?.(...)` and degrade when one is absent. The
+conformance testkit does not: each optional method you leave out must be listed
+in `skipMethods` or the suite fails. `listByParentRun` is the exception. When it
+is absent, the subagent checks skip on their own.
+
+`createOrResume` copies `parentRunId`, `subagentRunId`, and `name` on the first
+insert. A later call for the same `runId` leaves them unchanged. If the caller
+omits a field, omit it on the mapped record.
 
 `RunRecord.error` is a structured `RunError` (`{ message: string, code?: string }`),
 so the table gets two columns rather than one JSON blob: `error` for the

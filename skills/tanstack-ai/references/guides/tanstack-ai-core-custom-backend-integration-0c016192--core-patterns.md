@@ -1,6 +1,6 @@
 # Custom Backend Integration — Core Patterns
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Core Patterns
 

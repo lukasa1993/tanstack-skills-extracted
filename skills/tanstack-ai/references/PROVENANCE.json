@@ -8,270 +8,270 @@
       "kind": "atomic",
       "theme": "chat-providers",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core",
-      "sha256": "0883f36527d0f5c76aea047c2d8b1c5877830e1a57d35bc82262d544280207e0"
+      "sha256": "01daad4461f7153cdb7c3f5e172b6aec0abb0d7141037863e9bfaf44e0dd366a"
     },
     {
       "id": "tanstack-ai-core-adapter-configuration",
       "kind": "atomic",
       "theme": "chat-providers",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/adapter-configuration",
-      "sha256": "fb5ea4d5b7f8a2fc1742510b2925c1f259b3e200799cf9bf809ebb92df64f9a2"
+      "sha256": "fb2ea76bf7a479fcff5109e912b3c2d7d81718112c4f4896cd99dae54377840d"
     },
     {
       "id": "tanstack-ai-core-ag-ui-protocol",
       "kind": "atomic",
       "theme": "chat-providers",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/ag-ui-protocol",
-      "sha256": "5cc1716ff68e3adc89b241dd936527e23a319fe5e17b718c63ba9c4e39876bd8"
+      "sha256": "dfd447d865584bd13ca51026be2a7ca1d5b5ec8412a7ad77a0f737f5ac7b57fd"
     },
     {
       "id": "tanstack-ai-core-chat-experience",
       "kind": "atomic",
       "theme": "chat-providers",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/chat-experience",
-      "sha256": "9a0cf03c25924026adfaab4e8acc5f6d29f8920844c86612927f8e64acc48add"
+      "sha256": "55eb9bf0b001a24d55eb1bf00becc2facd85c88fa37267a377648799ec430144"
     },
     {
       "id": "tanstack-ai-core-custom-backend-integration",
       "kind": "atomic",
       "theme": "chat-providers",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/custom-backend-integration",
-      "sha256": "8d27ac897221e9440149735913e80dc5542260d6ca4b6a850b9014b0e63d0a0c"
+      "sha256": "0c3eba835c7cf43739d3e8fa1346dc857a874bc54970079ec5d1af98a64adfc7"
     },
     {
       "id": "tanstack-ai-core-debug-logging",
       "kind": "atomic",
       "theme": "chat-providers",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/debug-logging",
-      "sha256": "55d934ebc0890e067a18e80fb9cf8135385d2ddcabc8c546b79b52f97998837f"
+      "sha256": "e3d6c4c92842eaf506fca4e7685914a0cc3d7477637af87fb54227ecb8df7639"
     },
     {
       "id": "tanstack-ai-core-middleware",
       "kind": "atomic",
       "theme": "tools-outputs-middleware",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/middleware",
-      "sha256": "bfd21a30b6ad099850bc67d1a698b1d5cc339673c939c3d98357bad095748b7e"
+      "sha256": "d3ce1929ecdac7a76c572f7b9741c50bb7de1626d676c661ae15f24c30374bc9"
     },
     {
       "id": "tanstack-ai-core-structured-outputs",
       "kind": "atomic",
       "theme": "tools-outputs-middleware",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/structured-outputs",
-      "sha256": "4bcd65b2bdbf57507c666685c75d446a6b8eaac3384c5d78a40160a71727bcd3"
+      "sha256": "c3a324e25ec4524f9b54c0d469e24ffb41d6b8cebba5f47386c0a05b721d1501"
     },
     {
       "id": "tanstack-ai-core-tool-calling",
       "kind": "atomic",
       "theme": "tools-outputs-middleware",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/tool-calling",
-      "sha256": "1107f3bc07fb1940c7349f28474e32327cc2478dcfd3b9ab722fddbd80524459"
+      "sha256": "3892d43b25fe944fc43e9b75fe9128e7be6cf71988277cb115aa6776e2701a24"
     },
     {
       "id": "tanstack-ai-core-media-generation",
       "kind": "atomic",
       "theme": "media",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/media-generation",
-      "sha256": "e4de5d1277a78e6e6602025f78f5d14b4d57e566ad7f26ff2d51aedc82c32cbd"
+      "sha256": "425a1685e2dc35b6a340123080a2a66c142bc2cab377c766186cfcc52fef26ae"
     },
     {
       "id": "tanstack-ai-core-client-persistence",
       "kind": "atomic",
       "theme": "persistence-coordination",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/client-persistence",
-      "sha256": "afa55725717b2b55a449bbbdd2fe82bb55739978217d76151543d1493960492a"
+      "sha256": "588bc7a8e2b2525e5ac5aa2d9c0ab1991db617ff3f0d5794a8d9a8f57763e171"
     },
     {
       "id": "tanstack-ai-core-locks",
       "kind": "atomic",
       "theme": "persistence-coordination",
       "package": "@tanstack/ai",
-      "version": "0.58.0",
+      "version": "0.61.0",
       "sourcePath": "ai-core/locks",
-      "sha256": "a61e8812299678661ffdea8db1409de3eb5ba59d9df421fa2347209b64184fcd"
+      "sha256": "0f4fc7d77d2c09364ce489d31f0a1ae24cdf7744a85a3cd1c4718c459c0f70a5"
     },
     {
       "id": "tanstack-ai-persistence",
       "kind": "atomic",
       "theme": "persistence-coordination",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence",
-      "sha256": "2a01521457ad37a042978ef1628eefefcae9946b1aa57d65c1a50a0da508f41e"
+      "sha256": "454ae24ab9da684bb167c49643cbc54f5750af822042aec00e4d0d7aa8700228"
     },
     {
       "id": "tanstack-ai-persistence-server",
       "kind": "atomic",
       "theme": "persistence-coordination",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/server",
-      "sha256": "f2a84ab979de1f34a8ff9fac3adf361ced43e97f0289d877ee26d366b98b6fe1"
+      "sha256": "4630f1c475fff92cc93c6e7b4060ab64055b197ce8f4b665568f84db8e0826ea"
     },
     {
       "id": "tanstack-ai-persistence-stores",
       "kind": "atomic",
       "theme": "persistence-coordination",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/stores",
-      "sha256": "0a60df320b304fa9578da3bc6cadf0de3bbcfb2af9c09053e25193a5f767e814"
+      "sha256": "849d6d3144d42193e3ccbab122709a295649a5503716268f5792f4235a78d9c8"
     },
     {
       "id": "tanstack-ai-persistence-build-custom-adapter",
       "kind": "atomic",
       "theme": "persistence-adapters",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/build-custom-adapter",
-      "sha256": "a32821f085238414906ec1a41ba266dff3b76b6bd65ff42453ad4c2d212200b6"
+      "sha256": "864e50949f0fca063f03b03a93c58a744a14c622f4120a9a17748f412b0da461"
     },
     {
       "id": "tanstack-ai-persistence-build-drizzle-adapter",
       "kind": "atomic",
       "theme": "persistence-adapters",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/build-drizzle-adapter",
-      "sha256": "8495cd06a9012479c2c79191e5c8115e8ab3b2725916fac71e2f288ea0d85eed"
+      "sha256": "4ff8d61d938d27a16d851577059196a1708b40781ce93311cc59ad610917fae3"
     },
     {
       "id": "tanstack-ai-persistence-build-prisma-adapter",
       "kind": "atomic",
       "theme": "persistence-adapters",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/build-prisma-adapter",
-      "sha256": "20cd79f816a1e1ebdc78314ffa523aab8e7598d6beafe23ce4e0bc0d01422431"
+      "sha256": "72f155081af4f618162a24bd2c6f196d2c1a29572551491fd3cdb6d65307ceb1"
     },
     {
       "id": "tanstack-ai-persistence-build-cloudflare-adapter",
       "kind": "atomic",
       "theme": "persistence-cloudflare",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/build-cloudflare-adapter",
-      "sha256": "7266bc8f14d5c1db8e31b05394e629fa96c4587607ecc8a413aada02a210dcc5"
+      "sha256": "f11d1e9b559d52be2dba29086de3667ec1a6c19261944f863c07140b1984adad"
     },
     {
       "id": "tanstack-ai-persistence-build-cloudflare-artifact-store",
       "kind": "atomic",
       "theme": "persistence-cloudflare",
       "package": "@tanstack/ai-persistence",
-      "version": "0.6.4",
+      "version": "0.6.7",
       "sourcePath": "ai-persistence/build-cloudflare-artifact-store",
-      "sha256": "0f0d3c97c2c6a618b14e26c10e5fa8aa39d5be81230fe908714040f5b0b7d16c"
+      "sha256": "7b18804cb9c9d590542e396ce485ab8cccb166a258ac834e1823983c2779456c"
     },
     {
       "id": "tanstack-ai-memory",
       "kind": "atomic",
       "theme": "memory",
       "package": "@tanstack/ai-memory",
-      "version": "0.2.3",
+      "version": "0.2.6",
       "sourcePath": "tanstack-ai-memory",
-      "sha256": "3fd3c01602e69d3415d836ca94eb945c307dd2c743eebe927713689e9faa72cb"
+      "sha256": "a9b41782adfd01e15e72f9cea23b8aa63407e6b674300fbaab7d37237b7cc828"
     },
     {
       "id": "tanstack-ai-memory-hindsight",
       "kind": "atomic",
       "theme": "memory",
       "package": "@tanstack/ai-memory",
-      "version": "0.2.3",
+      "version": "0.2.6",
       "sourcePath": "tanstack-ai-memory-hindsight",
-      "sha256": "247df5431776760779658fb3eaa4e4b5a60684cc485f7024b352e8ed2382a0bd"
+      "sha256": "53b8bef6a0c5ada96bfadaf8b057ca4b267b9344b2943a01e62812fc66fa91f0"
     },
     {
       "id": "tanstack-ai-memory-honcho",
       "kind": "atomic",
       "theme": "memory",
       "package": "@tanstack/ai-memory",
-      "version": "0.2.3",
+      "version": "0.2.6",
       "sourcePath": "tanstack-ai-memory-honcho",
-      "sha256": "7893229c5ae3a43e6033139eab94c2278ed5b2f6314a30bb74a6d64bb82c0e9a"
+      "sha256": "5a1576aa19237b6db831f2b99a326db301f2de0adda3d6374d81bf646b2a3087"
     },
     {
       "id": "tanstack-ai-memory-in-memory",
       "kind": "atomic",
       "theme": "memory",
       "package": "@tanstack/ai-memory",
-      "version": "0.2.3",
+      "version": "0.2.6",
       "sourcePath": "tanstack-ai-memory-in-memory",
-      "sha256": "49b48c351a4d4837ad9120701ae416a003f9217edd3aa128593f773d1e1dea8d"
+      "sha256": "0715212b1ccb7b09861c06c1d064f2fa0e45a68d41e8104ceec962249265faf5"
     },
     {
       "id": "tanstack-ai-memory-mem0",
       "kind": "atomic",
       "theme": "memory",
       "package": "@tanstack/ai-memory",
-      "version": "0.2.3",
+      "version": "0.2.6",
       "sourcePath": "tanstack-ai-memory-mem0",
-      "sha256": "ed13f4bb10f0e80cb9b148562859a027b84e4aae8820b6010368bad97c6a9931"
+      "sha256": "4d5d314cb23d4ab6c4225ab856a2ce4dd9ce60830767156255cd35a6d02fc78d"
     },
     {
       "id": "tanstack-ai-memory-redis",
       "kind": "atomic",
       "theme": "memory",
       "package": "@tanstack/ai-memory",
-      "version": "0.2.3",
+      "version": "0.2.6",
       "sourcePath": "tanstack-ai-memory-redis",
-      "sha256": "8fb662c9c6c5bb0eb8eab5ba442f51f0fde6642e84354b13ab5a25d47736692b"
+      "sha256": "30e83a99077d2b65d7505ff54ebea7b2b4040a9c4f22ffa7d86d60d5436873a4"
     },
     {
       "id": "tanstack-ai-mcp",
       "kind": "atomic",
       "theme": "agent-runtimes",
       "package": "@tanstack/ai-mcp",
-      "version": "0.4.3",
+      "version": "0.4.6",
       "sourcePath": "ai-mcp",
-      "sha256": "16afa3ecbbdd8f341e4ee48399af6fd8f9ce2523c0e62909b10d339ba010787b"
+      "sha256": "7ef32bdb85be5b65be05e64ee0631000d14aa61c7336bd335bb5f96db494f061"
     },
     {
       "id": "tanstack-ai-skills",
       "kind": "atomic",
       "theme": "agent-runtimes",
       "package": "@tanstack/ai-skills",
-      "version": "0.1.7",
+      "version": "0.1.11",
       "sourcePath": "ai-skills",
-      "sha256": "d2754bb465e8da3edb523a090f8e04a67f066eea91769ba7c0826d4b4955a173"
+      "sha256": "e4ccc64324dbee13ff9215d5cb00318dd182e81e214ecada80765be921cd4765"
     },
     {
       "id": "tanstack-ai-code-mode",
       "kind": "atomic",
       "theme": "code-execution",
       "package": "@tanstack/ai-code-mode",
-      "version": "0.4.13",
+      "version": "0.4.16",
       "sourcePath": "ai-code-mode",
-      "sha256": "5d029123088379ab42337f256c09c4122fb3ef85a6a05c0186d835f4b6a2a853"
+      "sha256": "4decadcef77e98db4230e07bf48ff6ff440bb0e4c979774f6b26ba16840a0497"
     },
     {
       "id": "tanstack-ai-sandbox",
       "kind": "atomic",
       "theme": "code-execution",
       "package": "@tanstack/ai-sandbox",
-      "version": "0.5.12",
+      "version": "0.5.15",
       "sourcePath": "ai-sandbox",
-      "sha256": "fbc00b44578dab6b8b6d1b8e00a287c5d5a2f1709c8b3eb2f2142a4d2fe91b73"
+      "sha256": "32e02d0be0a7539f0e484cdb276f6b70f2eada7230d45094297c305e3e8247ef"
     }
   ],
   "duplicateDocuments": [],

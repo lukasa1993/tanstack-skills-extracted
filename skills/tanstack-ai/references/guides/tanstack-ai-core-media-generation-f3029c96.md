@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-media-generation"></a>
 
-Published skill · `@tanstack/ai@0.58.0`.
+Published skill · `@tanstack/ai@0.61.0`.
 
 [Topic index](../media.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-core-media-generation-f3029c96--overview.md) — 1 KiB
 - [Setup -- Image Generation End-to-End](./tanstack-ai-core-media-generation-f3029c96--setup-image-generation-end-to-end.md) — 4 KiB
-- [Core Patterns: 1. Image Generation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md) — 12 KiB
+- [Core Patterns: 1. Image Generation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md) — 13 KiB
 - [Core Patterns: 2. Audio Generation (Music, Sound Effects)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-2-audio-generation-music-sound-effects.md) — 2 KiB
 - [Core Patterns: 3. Text-to-Speech](./tanstack-ai-core-media-generation-f3029c96--core-patterns-3-text-to-speech.md) — 5 KiB
 - [Core Patterns: 4. Voice Creation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-4-voice-creation.md) — 4 KiB

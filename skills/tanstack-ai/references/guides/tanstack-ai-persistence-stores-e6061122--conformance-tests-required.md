@@ -1,6 +1,6 @@
 # Stores — Conformance tests (required)
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## Conformance tests (required)
 
@@ -33,16 +33,16 @@ in `skip` fails loudly.
 pass `'locks'`** — it is not a state store and the suite does not cover it.
 
 **`skipMethods` (declare-or-fail for optional `RunStore` methods).** A backend
-that omits an OPTIONAL `RunStore` method (`listByThread`, `listReclaimable` —
-`findActiveRun` is required and cannot be declared away) must declare it in
-`skipMethods` as `'runs.<method>'`, e.g.
-`skipMethods: ['runs.listByThread', 'runs.listReclaimable']`. An omitted
-method that is NOT declared throws with an actionable message instead of
-silently reporting a pass; a declared one is reported as a SKIPPED vitest
-case, never as a pass. A case that did not run must never be
+that omits `listByThread` or `listReclaimable` must declare it. `findActiveRun`
+is required. Declare the omission as `'runs.<method>'`, for example
+`skipMethods: ['runs.listByThread', 'runs.listReclaimable']`. Subagent support is
+optional: when `listByParentRun` is absent, the subagent checks (the link fields
+and the child listing) skip on their own and need no entry.
+An omitted method that is NOT declared throws with an actionable message
+instead of silently reporting a pass. A declared one is reported as a SKIPPED
+vitest case, never as a pass. A case that did not run must never be
 indistinguishable from one that did. See
-`examples/ts-react-chat/src/lib/sqlite-persistence.test.ts` for a worked
-example: it declares `skipMethods: ['runs.listByThread']` only, keeping both
-`findActiveRun` and `listReclaimable` under test.
+`examples/ts-react-chat/src/lib/sqlite-persistence.test.ts`. It implements every
+run method, so it declares no `skipMethods`.
 
 Reference implementation: `memoryPersistence()` in `@tanstack/ai-persistence`.

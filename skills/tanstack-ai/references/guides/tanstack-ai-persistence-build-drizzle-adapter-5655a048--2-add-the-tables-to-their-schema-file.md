@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — 2. Add the tables to their schema file
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 2. Add the tables to their schema file
 
@@ -41,12 +41,17 @@ export const chatRuns = sqliteTable(
     detachedSince: integer('detached_since'),
     cancelRequested: integer('cancel_requested', { mode: 'boolean' }),
     driverEpoch: integer('driver_epoch'),
+    parentRunId: text('parent_run_id'),
+    subagentRunId: text('subagent_run_id'),
+    name: text('name'),
   },
   (table) => [
     // Powers listReclaimable: status = 'running' AND detachedSince <= cutoff.
     index('chat_runs_status_detached').on(table.status, table.detachedSince),
     // Powers listByThread and findActiveRun.
     index('chat_runs_thread_started').on(table.threadId, table.startedAt),
+    // Powers listByParentRun: children of one parent, oldest startedAt first.
+    index('chat_runs_parent_started').on(table.parentRunId, table.startedAt),
   ],
 )
 
@@ -96,4 +101,5 @@ behind.
 `boolean()` for `cancelRequested`, and `varchar(..., { length: 255 })` for the
 primary-key columns. The store bodies below are identical across all three,
 only `onConflictDoUpdate` becomes `onDuplicateKeyUpdate` on MySQL, and the
-`(status, detachedSince)` / `(threadId, startedAt)` indexes carry over as is.
+`(status, detachedSince)`, `(threadId, startedAt)`, and
+`(parentRunId, startedAt)` indexes carry over as is.

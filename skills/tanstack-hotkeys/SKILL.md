@@ -50,6 +50,6 @@ Use these separate product skills when the task crosses their boundary: `tanstac
 
 ## Source status
 
-Official documentation from `TanStack/hotkeys`, matched to these verified release inputs: @tanstack/hotkeys@0.9.0.
+Official documentation from `TanStack/hotkeys`, matched to these verified release inputs: @tanstack/hotkeys@0.10.0.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

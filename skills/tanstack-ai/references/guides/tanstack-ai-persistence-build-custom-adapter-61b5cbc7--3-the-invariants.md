@@ -1,6 +1,6 @@
 # Build Custom Adapter — 3. The invariants
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 3. The invariants
 
@@ -35,8 +35,12 @@ history. They are engine-independent:
    automatic reclamation: `reapDetachedRuns` from `@tanstack/ai-sandbox` is the
    sweep that consumes it, and the application schedules that sweep. A store
    without this method cannot be reaped. `runs.findActiveRun` is required;
-   `runs.listByThread` / `runs.listReclaimable` are optional: implement only
-   what the app needs and leave the rest off the object.
+   `runs.listByThread`, `runs.listByParentRun`, and `runs.listReclaimable` are
+   optional: implement only what the app needs and leave the rest off the object.
+   `listByParentRun` returns the child runs for one `parentRunId`, oldest
+   `startedAt` first. `reconstructChat` uses that list to put subagent cards
+   back. `createOrResume` copies `parentRunId`, `subagentRunId`, and `name` on
+   the first insert and leaves them unchanged on resume.
 
 Row mappers omit absent optionals
 (`...(row.sandbox_key != null ? { sandboxKey: row.sandbox_key } : {})`) so

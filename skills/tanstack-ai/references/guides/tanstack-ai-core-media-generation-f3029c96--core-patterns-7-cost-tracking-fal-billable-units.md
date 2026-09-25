@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 7. Cost tracking (fal billable units)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Core Patterns: 7. Cost tracking (fal billable units)
 

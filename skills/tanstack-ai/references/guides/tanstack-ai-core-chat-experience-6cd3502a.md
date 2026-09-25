@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-chat-experience"></a>
 
-Published skill · `@tanstack/ai@0.58.0`.
+Published skill · `@tanstack/ai@0.61.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -14,7 +14,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Setup — Minimal Chat App](./tanstack-ai-core-chat-experience-6cd3502a--setup-minimal-chat-app.md) — 3 KiB
 - [Core Patterns: 1. Streaming Chat with SSE](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-1-streaming-chat-with-sse.md) — 3 KiB
 - [Core Patterns: 2. Rendering Thinking/Reasoning Content](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-2-rendering-thinking-reasoning-content.md) — 2 KiB
-- [Core Patterns: 3. Sending Multimodal Content (Images)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-3-sending-multimodal-content-images.md) — 2 KiB
+- [Core Patterns: 3. Sending Multimodal Content (Images)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-3-sending-multimodal-content-images.md) — 3 KiB
 - [Core Patterns: 4. Sending Audio Messages (Browser Recording)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-4-sending-audio-messages-browser-recording.md) — 2 KiB
 - [Core Patterns: 5. HTTP Stream Format (Alternative to SSE)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-5-http-stream-format-alternative-to-sse.md) — 2 KiB
 - [Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-6-mcp-tool-discovery-via-chat-mcp.md) — 3 KiB

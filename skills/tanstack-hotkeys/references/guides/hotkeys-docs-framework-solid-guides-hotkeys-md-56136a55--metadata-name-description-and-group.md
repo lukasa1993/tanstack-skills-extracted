@@ -1,6 +1,6 @@
 # Hotkeys — Metadata (name, description, and group)
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
 
 ## Metadata (name, description, and group)
 

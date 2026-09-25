@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — Only if you are publishing this as a package
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## Only if you are publishing this as a package
 

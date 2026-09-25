@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-adapter-configuration"></a>
 
-Published skill · `@tanstack/ai@0.58.0`.
+Published skill · `@tanstack/ai@0.61.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -19,6 +19,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Core Patterns: 5. Configuring Sampling](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-5-configuring-sampling.md) — 4 KiB
 - [Core Patterns: 6. Capability Flag: `supportsCombinedToolsAndSchema`](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-capability-flag-supportscombinedtoolsandschema.md) — 4 KiB
 - [Core Patterns: 6. OpenAI-Compatible Providers](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-6-openai-compatible-providers.md) — 3 KiB
+- [Core Patterns: 7. Files Adapters (upload once, reference by handle)](./tanstack-ai-core-adapter-configuration-e2c12fef--core-patterns-7-files-adapters-upload-once-reference-by-handle.md) — 4 KiB
 - [Behind a proxy or gateway](./tanstack-ai-core-adapter-configuration-e2c12fef--behind-a-proxy-or-gateway.md) — 1 KiB
 - [Common Mistakes](./tanstack-ai-core-adapter-configuration-e2c12fef--common-mistakes.md) — 3 KiB
 - [References](./tanstack-ai-core-adapter-configuration-e2c12fef--references.md) — 1 KiB
@@ -36,6 +37,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="5-configuring-sampling"></a>
 <a id="6-capability-flag-supportscombinedtoolsandschema"></a>
 <a id="6-openai-compatible-providers"></a>
+<a id="7-files-adapters-upload-once-reference-by-handle"></a>
 <a id="behind-a-proxy-or-gateway"></a>
 <a id="common-mistakes"></a>
 <a id="a-high-confusing-legacy-monolithic-with-tree-shakeable-adapter"></a>

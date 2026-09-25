@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 3. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 3. Write `src/lib/chat-persistence.ts`
 
@@ -90,6 +90,9 @@ function mapRun(row: ChatRun): RunRecord {
       ? { cancelRequested: row.cancelRequested }
       : {}),
     ...(row.driverEpoch != null ? { driverEpoch: row.driverEpoch } : {}),
+    ...(row.parentRunId != null ? { parentRunId: row.parentRunId } : {}),
+    ...(row.subagentRunId != null ? { subagentRunId: row.subagentRunId } : {}),
+    ...(row.name != null ? { name: row.name } : {}),
   }
 }
 
@@ -136,7 +139,8 @@ function createRunStore(db: PrismaClient): RunStore {
     },
     // An empty `update` is Prisma's ON CONFLICT DO NOTHING: an existing runId
     // comes back untouched, so resume and double-submit are safe.
-    async createOrResume({ runId, threadId, startedAt, status }) {
+    async createOrResume(input) {
+      const { runId, threadId, startedAt, status } = input
       const row = await db.chatRun.upsert({
         where: { runId },
         create: {
@@ -144,6 +148,13 @@ function createRunStore(db: PrismaClient): RunStore {
           threadId,
           status: status ?? 'running',
           startedAt: BigInt(startedAt),
+          ...(input.parentRunId !== undefined
+            ? { parentRunId: input.parentRunId }
+            : {}),
+          ...(input.subagentRunId !== undefined
+            ? { subagentRunId: input.subagentRunId }
+            : {}),
+          ...(input.name !== undefined ? { name: input.name } : {}),
         },
         update: {},
       })
@@ -196,6 +207,15 @@ function createRunStore(db: PrismaClient): RunStore {
     async listByThread(threadId) {
       const rows = await db.chatRun.findMany({
         where: { threadId },
+        orderBy: { startedAt: 'asc' },
+      })
+      return rows.map(mapRun)
+    },
+    // Optional. Child runs for one parent, oldest startedAt first.
+    // reconstructChat uses this list to put subagent cards back.
+    async listByParentRun(parentRunId) {
+      const rows = await db.chatRun.findMany({
+        where: { parentRunId },
         orderBy: { startedAt: 'asc' },
       })
       return rows.map(mapRun)

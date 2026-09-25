@@ -1,6 +1,6 @@
 # Stores — Contracts and invariants: `MessageStore`
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## Contracts and invariants: `MessageStore`
 

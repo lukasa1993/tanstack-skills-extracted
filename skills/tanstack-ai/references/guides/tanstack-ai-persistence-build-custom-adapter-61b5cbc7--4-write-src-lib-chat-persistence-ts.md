@@ -1,6 +1,6 @@
 # Build Custom Adapter — 4. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 4. Write `src/lib/chat-persistence.ts`
 
@@ -53,21 +53,44 @@ function createRunStore(db: Pool): RunStore {
   return {
     get,
     // Idempotent: an existing runId is returned untouched.
-    async createOrResume({ runId, threadId, startedAt, status }) {
+    async createOrResume(input) {
+      const { runId, threadId, startedAt, status } = input
       const existing = await get(runId)
       if (existing) return existing
 
       await db.query(
-        `INSERT INTO chat_runs (run_id, thread_id, status, started_at)
-         VALUES ($1, $2, $3, $4)
+        `INSERT INTO chat_runs (
+           run_id, thread_id, status, started_at,
+           parent_run_id, subagent_run_id, name
+         ) VALUES ($1, $2, $3, $4, $5, $6, $7)
          ON CONFLICT (run_id) DO NOTHING`,
-        [runId, threadId, status ?? 'running', startedAt],
+        [
+          runId,
+          threadId,
+          status ?? 'running',
+          startedAt,
+          input.parentRunId ?? null,
+          input.subagentRunId ?? null,
+          input.name ?? null,
+        ],
       )
       // Re-read: a concurrent createOrResume may have won the race, and that
       // row is the authoritative one.
       const stored = await get(runId)
       return (
-        stored ?? { runId, threadId, status: status ?? 'running', startedAt }
+        stored ?? {
+          runId,
+          threadId,
+          status: status ?? 'running',
+          startedAt,
+          ...(input.parentRunId !== undefined
+            ? { parentRunId: input.parentRunId }
+            : {}),
+          ...(input.subagentRunId !== undefined
+            ? { subagentRunId: input.subagentRunId }
+            : {}),
+          ...(input.name !== undefined ? { name: input.name } : {}),
+        }
       )
     },
     // ... update (no-op on unknown id; sandboxKey/detachedSince/
@@ -79,8 +102,9 @@ function createRunStore(db: Pool): RunStore {
     // error = patch.error.message and error_code = patch.error.code ?? null,
     // together in the same call),
     // findActiveRun (latest 'running', required), listByThread (ascending
-    // by startedAt, optional), listReclaimable (status = 'running' AND
-    // detachedSince <= now - ttlMs, inclusive cutoff, optional)
+    // by startedAt, optional), listByParentRun (children of parentRunId,
+    // ascending by startedAt, optional), listReclaimable (status = 'running'
+    // AND detachedSince <= now - ttlMs, inclusive cutoff, optional)
   }
 }
 

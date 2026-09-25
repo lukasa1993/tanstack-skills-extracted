@@ -1,6 +1,6 @@
 # Stores — Contracts and invariants: `RunStore`
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## Contracts and invariants: `RunStore`
 
@@ -17,28 +17,30 @@ package name.
 resolve.
 
 Four methods are required (`createOrResume` / `update` / `get` /
-`findActiveRun`). Two are optional: implement only the ones your backend needs,
+`findActiveRun`). Three are optional: implement only the ones your backend needs,
 and leave the rest off the object entirely (not `undefined`, just absent). A
 four-method `RunStore` is a fully valid backend.
 
-`withPersistence` itself calls **none** of the three non-`createOrResume`/`update`
-query methods, so leaving both optional ones off costs nothing in the middleware.
-Their consumers are elsewhere, and each absence disables exactly one feature:
+`withPersistence` calls `createOrResume` and `update`. The query methods have
+other consumers. Each missing optional method disables one feature:
 
-| method            | consumer                                                  | absent ⇒                                                                 |
-| ----------------- | --------------------------------------------------------- | ------------------------------------------------------------------------ |
-| `findActiveRun`   | `reconstruct.ts` (`stores.runs?.findActiveRun(threadId)`) | required — cannot be absent; stubbing it to `null` silently kills rejoin |
-| `listReclaimable` | `reapDetachedRuns` in `@tanstack/ai-sandbox`              | the store cannot be reaped at all                                        |
-| `listByThread`    | application code — nothing in the framework calls it      | nothing framework-side breaks                                            |
+| method            | consumer                                                  | absent means                                               |
+| ----------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| `findActiveRun`   | `reconstruct.ts` (`stores.runs?.findActiveRun(threadId)`) | required. A `null` stub hides a live run                   |
+| `listReclaimable` | `reapDetachedRuns` in `@tanstack/ai-sandbox`              | the store cannot be reaped at all                          |
+| `listByThread`    | `reconstructChat`, when the transcript has tool calls     | the cards of children that a tool call started stay absent |
+| `listByParentRun` | `reconstructChat`                                         | a reload shows the saved text, and the cards stay absent   |
 
-Consumers of the two OPTIONAL methods feature-detect with `store.method?.(...)`
+Consumers of the optional methods feature-detect with `store.method?.(...)`
 and degrade rather than throwing. `findActiveRun` is required, so nothing
 feature-detects it.
 
 The conformance testkit does not feature-detect. An optional method that is
 missing and not declared in `skipMethods` fails the suite, so an omission is
 always a choice you made on purpose rather than a check that quietly did not
-run. Declare yours and the suite reports them as skipped with a reason:
+run. The one exception is `listByParentRun`: subagent support is optional, so
+those checks skip on their own. Declare yours and the suite reports them as
+skipped with a reason:
 
 ```ts
 import { runPersistenceConformance } from '@tanstack/ai-persistence/testkit'
@@ -59,6 +61,9 @@ interface RunStore {
   createOrResume: (
     input: Pick<RunRecord, 'runId' | 'threadId' | 'startedAt'> & {
       status?: RunStatus
+      parentRunId?: string
+      subagentRunId?: string
+      name?: string
     },
   ) => Promise<RunRecord>
   update: (
@@ -82,6 +87,7 @@ interface RunStore {
 
   // Optional
   listByThread?: (threadId: string) => Promise<Array<RunRecord>>
+  listByParentRun?: (parentRunId: string) => Promise<Array<RunRecord>>
   listReclaimable?: (opts: {
     now: number
     ttlMs: number
@@ -184,15 +190,20 @@ store through `update`/`get` — but `cancelRequested` must round-trip
 faithfully (previous section) for the durable path to work at all.
 
 - **`createOrResume`** (required): if `runId` exists, return it **unchanged**,
-  including its stored `usage`, and ignore the passed `threadId` / `startedAt` /
-  `status`. Resuming a run does not reset `startedAt` or overwrite its current
-  status. Idempotent retries and double-submit depend on this. `status` defaults
-  to `'running'` on first creation.
+  including its stored `usage`, and ignore the passed `threadId`, `startedAt`,
+  `status`, `parentRunId`, `subagentRunId`, and `name`. Resuming a run does not
+  reset `startedAt` or overwrite its current status. Idempotent retries and
+  double-submit depend on this. `status` defaults to `'running'` on first
+  creation. The three link fields are copied only on the first insert.
 - **`update`** (required): missing `runId` is a **no-op** (do not throw, do not
   insert).
 - **`get`** (required): current record, or `null` when unknown.
 - **`listByThread`** (optional): every run for `threadId`, ascending by
-  `startedAt`. Only needed to render a thread's past agent activity.
+  `startedAt`. `reconstructChat` calls it to find the parent runs of children
+  that a tool call started.
+- **`listByParentRun`** (optional): child runs for `parentRunId`, ascending by
+  `startedAt`. `reconstructChat` uses this list to put subagent cards back.
+  Omit the method and a reload shows the saved text. The cards stay absent.
 - **`listReclaimable`** (optional): runs where `status === 'running'` AND
   `detachedSince` is set AND `detachedSince <= now - ttlMs`. The cutoff is
   inclusive: a run detached exactly at the cutoff qualifies. This is a query, not
@@ -212,6 +223,12 @@ faithfully (previous section) for the durable path to work at all.
   one release cycle and cost precisely that, which is why it is required now.
 
 Capability tiers belong at the STORE level (omit `runs` entirely and declare
-`ChatTranscriptStores`), not the method level — never ship a `RunStore` with a
-stubbed method. The two list queries above are the only method-level options,
-and each must be declared via `skipMethods` when absent.
+`ChatTranscriptStores`), not the method level. Never ship a `RunStore` with a
+stubbed method. The list queries above are the only method-level options,
+and each must be declared via `skipMethods` when absent, except
+`listByParentRun`: without it the subagent checks skip on their own.
+
+A subagent child run also stores `parentRunId`, `subagentRunId`, and `name`.
+`createOrResume` writes them on the first insert. A later call for the same
+`runId` leaves them unchanged. If the caller omits a field, omit it on the
+record. Do not store `''` for a missing field.

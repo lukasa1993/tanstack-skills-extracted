@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Tuning the lazy catalog with `lazyToolsConfig`
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Core Patterns: Tuning the lazy catalog with `lazyToolsConfig`
 

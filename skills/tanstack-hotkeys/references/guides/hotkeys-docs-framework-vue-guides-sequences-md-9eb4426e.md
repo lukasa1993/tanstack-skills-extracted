@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

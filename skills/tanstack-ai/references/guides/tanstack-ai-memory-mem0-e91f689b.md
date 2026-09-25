@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-memory-mem0"></a>
 
-Published skill · `@tanstack/ai-memory@0.2.3`.
+Published skill · `@tanstack/ai-memory@0.2.6`.
 
 [Topic index](../memory.md) · [Source provenance](../SOURCES.md)
 

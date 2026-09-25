@@ -1,6 +1,6 @@
 # Media Generation — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Common Mistakes
 
@@ -230,7 +230,7 @@ generateSpeech({
 
 Not every model accepts image-conditioned prompts. The `prompt` type is
 narrowed per model, so passing an image part to a text-only model
-(dall-e-3, Imagen, grok-2-image) is a **compile-time error**; adapters
+(dall-e-3, Imagen) is a **compile-time error**; adapters
 also throw a clear runtime error as a backstop, so users learn at call
 time rather than getting silently wrong output.
 

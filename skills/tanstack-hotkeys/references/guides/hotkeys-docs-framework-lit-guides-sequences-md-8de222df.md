@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.9.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -38,7 +38,7 @@ class VimView extends LitElement {
 
 The first argument is an array of `Hotkey` strings representing each step in the sequence. The user must press them in order within the timeout window.
 
-The method receives the `KeyboardEvent` and [`HotkeyCallbackContext`](https://github.com/TanStack/hotkeys/blob/c2b1635449a22774299308b0b9bc5fd40b336bf7/docs/reference/interfaces/HotkeyCallbackContext.md) like `@hotkey`:
+The method receives the `KeyboardEvent` and [`HotkeyCallbackContext`](https://github.com/TanStack/hotkeys/blob/e06d82da83733a874e28c4144ad13e129e462491/docs/reference/interfaces/HotkeyCallbackContext.md) like `@hotkey`:
 
 ```ts
 import type { HotkeyCallbackContext } from '@tanstack/lit-hotkeys'
@@ -152,7 +152,7 @@ scrollToTop() {
 
 ### Default options
 
-When you omit options, the library uses the same defaults as the core [`SequenceOptions`](https://github.com/TanStack/hotkeys/blob/c2b1635449a22774299308b0b9bc5fd40b336bf7/docs/reference/interfaces/SequenceOptions.md): `timeout: 1000`, `preventDefault` / `stopPropagation` enabled, smart `ignoreInputs`, and platform auto-detection. If you omit `target`, the Lit adapter resolves it to `document` when the controller connects in the browser.
+When you omit options, the library uses the same defaults as the core [`SequenceOptions`](https://github.com/TanStack/hotkeys/blob/e06d82da83733a874e28c4144ad13e129e462491/docs/reference/interfaces/SequenceOptions.md): `timeout: 1000`, `preventDefault` / `stopPropagation` enabled, smart `ignoreInputs`, and platform auto-detection. If you omit `target`, the Lit adapter resolves it to `document` when the controller connects in the browser.
 
 ### `meta`
 

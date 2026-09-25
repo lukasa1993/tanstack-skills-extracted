@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 4. Lazy Tools
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.13`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.4.16`.
 
 ## Core Patterns: 4. Lazy Tools
 

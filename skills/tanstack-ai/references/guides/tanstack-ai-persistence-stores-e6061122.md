@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-stores"></a>
 
-Published skill · `@tanstack/ai-persistence@0.6.4`.
+Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./tanstack-ai-persistence-stores-e6061122--overview.md) — 1 KiB
 - [Choose a shape](./tanstack-ai-persistence-stores-e6061122--choose-a-shape.md) — 2 KiB
 - [Contracts and invariants: `MessageStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-messagestore.md) — 2 KiB
-- [Contracts and invariants: `RunStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-runstore.md) — 11 KiB
+- [Contracts and invariants: `RunStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-runstore.md) — 12 KiB
 - [Contracts and invariants: `InterruptStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-interruptstore.md) — 2 KiB
 - [Contracts and invariants: `MetadataStore`](./tanstack-ai-persistence-stores-e6061122--contracts-and-invariants-metadatastore.md) — 1 KiB
 - [Timestamp convention](./tanstack-ai-persistence-stores-e6061122--timestamp-convention.md) — 1 KiB

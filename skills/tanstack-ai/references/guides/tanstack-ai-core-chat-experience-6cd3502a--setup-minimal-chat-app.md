@@ -1,6 +1,6 @@
 # Chat Experience — Setup — Minimal Chat App
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.58.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.61.0`.
 
 ## Setup — Minimal Chat App
 

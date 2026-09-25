@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — 5. The migration
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## 5. The migration
 
@@ -24,10 +24,14 @@ CREATE TABLE IF NOT EXISTS chat_runs (
   sandbox_key text,
   detached_since integer,
   cancel_requested integer,
-  driver_epoch integer
+  driver_epoch integer,
+  parent_run_id text,
+  subagent_run_id text,
+  name text
 );
 CREATE INDEX IF NOT EXISTS chat_runs_thread_status ON chat_runs (thread_id, status);
 CREATE INDEX IF NOT EXISTS chat_runs_thread_started ON chat_runs (thread_id, started_at);
+CREATE INDEX IF NOT EXISTS chat_runs_parent_started ON chat_runs (parent_run_id, started_at);
 -- Powers listReclaimable: status = 'running' AND detached_since <= cutoff.
 CREATE INDEX IF NOT EXISTS chat_runs_status_detached ON chat_runs (status, detached_since);
 CREATE TABLE IF NOT EXISTS chat_interrupts (
@@ -53,3 +57,17 @@ Apply with `wrangler d1 migrations apply <database-name>` (`--local` first, then
 `--remote`). If the app also uses Drizzle, generate this file with
 `drizzle-kit generate` instead of hand-writing it — the SQL and the Drizzle
 table definitions must agree, so let one of them own the other.
+
+An existing `chat_runs` table does not get the three subagent columns from
+`CREATE TABLE IF NOT EXISTS`, and the `chat_runs_parent_started` index then
+fails. To add subagent support to an existing database, apply a separate
+migration first:
+
+```sql
+ALTER TABLE chat_runs ADD COLUMN parent_run_id text;
+ALTER TABLE chat_runs ADD COLUMN subagent_run_id text;
+ALTER TABLE chat_runs ADD COLUMN name text;
+CREATE INDEX IF NOT EXISTS chat_runs_parent_started ON chat_runs (parent_run_id, started_at);
+```
+
+A store without subagent support can skip the columns and the index.

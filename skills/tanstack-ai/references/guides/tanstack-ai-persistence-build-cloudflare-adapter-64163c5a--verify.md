@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — Verify
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## Verify
 
@@ -21,11 +21,12 @@ once you add the R2-backed set from
 **ai-persistence/build-cloudflare-artifact-store**). `skip` never accepts
 `'locks'`, which is not a store.
 
-If your recipe leaves an optional `runs` method
-(`listByThread`/`listReclaimable`) unimplemented, declare it
-with `skipMethods`, e.g. `{ skipMethods: ['runs.listByThread'] }`. An
-omitted method that is not declared fails the suite instead of silently
-passing.
+If your recipe leaves `listByThread` or `listReclaimable` unimplemented,
+declare it with `skipMethods`, for example
+`{ skipMethods: ['runs.listByThread'] }`. An omitted method that is not declared
+fails the suite instead of silently passing. Subagent support is optional: when
+`listByParentRun` is absent, the subagent checks skip on their own and need no
+entry.
 
 The lock store needs its **own** tests, because nothing in the conformance suite
 touches it. Cover at minimum: two concurrent `withLock` calls on the same key

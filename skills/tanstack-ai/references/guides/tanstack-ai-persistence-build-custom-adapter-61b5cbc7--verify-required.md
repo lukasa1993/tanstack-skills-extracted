@@ -1,6 +1,6 @@
 # Build Custom Adapter — Verify (required)
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.4`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.6.7`.
 
 ## Verify (required)
 
@@ -22,8 +22,9 @@ seven stores, so declare every intentional omission — a chat adapter skips the
 generation half above, and adds e.g. `'metadata'` if it drops that too. `skip`
 never accepts `'locks'`, which is not a store.
 
-If your recipe leaves an optional `runs` method (`listByThread`/
-`listReclaimable`) unimplemented, declare it separately with `skipMethods`, e.g.
+If your recipe leaves `listByThread` or `listReclaimable` unimplemented,
+declare it separately with `skipMethods`, for example
 `{ skipMethods: ['runs.listByThread'] }`. An omitted method that is not declared
-fails the suite instead of silently passing. `findActiveRun` is **not** in that
+fails the suite instead of silently passing. Subagent support is optional: when
+`listByParentRun` is absent, the subagent checks skip on their own. `findActiveRun` is **not** in that
 set — it is required, so there is nothing to declare.

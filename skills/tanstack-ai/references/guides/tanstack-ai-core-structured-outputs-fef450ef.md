@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-structured-outputs"></a>
 
-Published skill · `@tanstack/ai@0.58.0`.
+Published skill · `@tanstack/ai@0.61.0`.
 
 [Topic index](../tools-outputs-middleware.md) · [Source provenance](../SOURCES.md)
 
