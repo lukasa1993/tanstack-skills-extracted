@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-guides-query-keys-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.103.2`.
+Release-matched documentation · `@tanstack/react-query@5.104.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -94,13 +94,13 @@ function Todos({ todoId }) {
 
 [//]: # 'Example5'
 
-Note that query keys act as dependencies for your query functions. Adding dependent variables to your query key will ensure that queries are cached independently, and that any time a variable changes, _queries will be refetched automatically_ (depending on your `staleTime` settings). See the [exhaustive-deps](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/docs/eslint/exhaustive-deps.md) section for more information and examples.
+Note that query keys act as dependencies for your query functions. Adding dependent variables to your query key will ensure that queries are cached independently, and that any time a variable changes, _queries will be refetched automatically_ (depending on your `staleTime` settings). See the [exhaustive-deps](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/eslint/exhaustive-deps.md) section for more information and examples.
 
 [//]: # 'Materials'
 
 ## Further reading
 
 For tips on organizing Query Keys in larger applications, have a look at [Effective React Query Keys](https://tkdodo.eu/blog/effective-react-query-keys) and check the [Query Key Factory Package](https://github.com/lukemorales/query-key-factory) from
-the [Community Resources](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/docs/community-resources.md).
+the [Community Resources](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/community-resources.md).
 
 [//]: # 'Materials'

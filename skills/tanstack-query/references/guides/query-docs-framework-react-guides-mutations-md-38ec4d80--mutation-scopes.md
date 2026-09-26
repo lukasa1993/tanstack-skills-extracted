@@ -1,6 +1,6 @@
 # Mutations — Mutation Scopes
 
-[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.103.2`.
+[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.104.0`.
 
 ## Mutation Scopes
 

@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-guides-queries-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.103.2`.
+Release-matched documentation · `@tanstack/react-query@5.104.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -128,7 +128,7 @@ TypeScript will also narrow the type of `data` correctly if you've checked for `
 In addition to the `status` field, you will also get an additional `fetchStatus` property with the following options:
 
 - `fetchStatus === 'fetching'` - The query is currently fetching.
-- `fetchStatus === 'paused'` - The query wanted to fetch, but it is paused. Read more about this in the [Network Mode](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/docs/framework/react/guides/network-mode.md) guide.
+- `fetchStatus === 'paused'` - The query wanted to fetch, but it is paused. Read more about this in the [Network Mode](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/react/guides/network-mode.md) guide.
 - `fetchStatus === 'idle'` - The query is not doing anything at the moment.
 
 ### Why two different states?

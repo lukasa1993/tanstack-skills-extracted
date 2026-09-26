@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-svelte-installation-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-query@6.2.4`.
+Release-matched documentation · `@tanstack/svelte-query@6.3.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -32,4 +32,4 @@ or
 bun add @tanstack/svelte-query
 ```
 
-> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/8884f1a4d9ee53cb3cdba26ca28f870500ede3f7/examples/svelte/basic/README.md) example!
+> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/examples/svelte/basic/README.md) example!

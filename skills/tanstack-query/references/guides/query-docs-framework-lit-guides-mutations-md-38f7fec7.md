@@ -2,11 +2,11 @@
 
 <a id="source-query-docs-framework-lit-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.23`.
+Release-matched documentation · `@tanstack/lit-query@0.2.25`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-Unlike queries, mutations are used to create, update, delete, or otherwise perform server side effects. In Lit, use [`createMutationController`](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/docs/framework/lit/reference/functions/createMutationController.md).
+Unlike queries, mutations are used to create, update, delete, or otherwise perform server side effects. In Lit, use [`createMutationController`](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/lit/reference/functions/createMutationController.md).
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -113,9 +113,11 @@ The accessor includes `reset`:
 
 ```ts
 html`
-  ${mutation.isError
-    ? html`<button @click=${() => this.addTodo.reset()}>Clear error</button>`
-    : null}
+  ${
+    mutation.isError
+      ? html`<button @click=${() => this.addTodo.reset()}>Clear error</button>`
+      : null
+  }
 `
 ```
 
@@ -166,4 +168,4 @@ private readonly favoriteMutation = createMutationController(
 )
 ```
 
-For the exact runnable flow, see the [Pagination example](https://github.com/TanStack/query/blob/e0f6c5542fc767f77a6cf1d5546591beae05f10f/examples/lit/pagination/README.md).
+For the exact runnable flow, see the [Pagination example](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/examples/lit/pagination/README.md).
