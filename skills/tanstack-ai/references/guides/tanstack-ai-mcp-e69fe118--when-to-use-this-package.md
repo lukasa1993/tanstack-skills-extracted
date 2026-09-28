@@ -1,6 +1,6 @@
 # Ai Mcp — When to use this package
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.6`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.6.0`.
 
 ## When to use this package
 
@@ -13,6 +13,7 @@ Use `@tanstack/ai-mcp` when:
   signatures (via the bundled `generate` CLI).
 - You are running tool execution on the server side and want to connect to MCP
   servers with HTTP (Streamable HTTP or SSE) or stdio transports.
+- You want to expose your own tools as an MCP server over HTTP or stdio.
 
 Do NOT use this package for browser/client-side code — MCP connections are
 server-side only.

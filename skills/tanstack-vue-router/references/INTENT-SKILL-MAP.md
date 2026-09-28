@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/vue-router@1.170.35
+Published package: @tanstack/vue-router@1.170.36
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

@@ -1,6 +1,6 @@
 # Ai Mcp — Install
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.6`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.6.0`.
 
 ## Install
 
@@ -8,8 +8,13 @@
 pnpm add @tanstack/ai-mcp
 ```
 
-The package has two subpath exports:
+The package has these subpaths:
 
-- `.` — main client API (`createMCPClient`, `createMCPClients`, converters, types)
-- `./stdio` — Node-only stdio transport factory (`stdioTransport`); import it
-  separately so edge bundles stay clean
+- `.` exports `createMCPClient`, `createMCPClients`, converters, and types.
+- `./stdio` exports the Node-only client transport `stdioTransport`.
+- `./server` exports `createMCPServer`.
+- `./server/stdio` exports `serveMCPStdio`.
+- `./apps` exports `createMcpAppCallHandler`.
+
+Import `./stdio` and `./server/stdio` only from Node code.
+Those entries use Node I/O.

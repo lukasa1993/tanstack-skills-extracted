@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-start-client-core-start-core-deployment"></a>
 
-Published skill · `@tanstack/start-client-core@1.170.32`.
+Published skill · `@tanstack/start-client-core@1.170.33`.
 
 [Topic index](../deployment-rendering.md) · [Source provenance](../SOURCES.md)
 

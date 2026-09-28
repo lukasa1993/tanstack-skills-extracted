@@ -1,6 +1,6 @@
 # Ai Mcp — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.6`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.6.0`.
 
 ## Common Mistakes
 
@@ -101,3 +101,21 @@ Two different errors can arise depending on where the collision is detected:
 
 In both cases, the fix is the same: use `createMCPClients` (which auto-prefixes
 by config key) or set an explicit `prefix` on each `createMCPClient` call.
+
+### e. HIGH: importing `@modelcontextprotocol/sdk`
+
+Use `@modelcontextprotocol/client` for client transports.
+Use `@modelcontextprotocol/server` for server helpers.
+`@tanstack/ai-mcp` re-exports `InMemoryTransport` from the client package.
+
+Wrong:
+
+```typescript ignore
+import { InMemoryTransport } from '@modelcontextprotocol/sdk'
+```
+
+Correct:
+
+```typescript
+import { InMemoryTransport } from '@modelcontextprotocol/client'
+```

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -21,7 +21,7 @@ formatForDisplay('Mod+[Digit2]', { platform: 'windows' }) // 'Ctrl+2'
 
 The same label can represent different bindings. `Mod+S` follows a logical letter; `Mod+[KeyS]` follows a physical position. Physical labels shorten `KeyS` to `S` and `Digit2` to `2`, preserve readable numpad labels, and reuse punctuation and special-key symbols. This does not change the stored code or infer the user's layout.
 
-Omit `platform` to use detection. On macOS the default joins modifier symbols with spaces; Windows and Linux use labels joined with `+`.
+Omit `platform` to use detection. On macOS the default joins modifier symbols with spaces; Windows and Linux use labels joined with `+`. macOS display orders modifiers as Control, Option, Shift, Command: `Mod+Shift+S` displays as `⇧ ⌘ S`. The normalized binding remains `Mod+Shift+S`.
 
 ## Render individual keycaps
 
@@ -110,4 +110,4 @@ Parsed modifiers are already resolved. To display a portable `Mod` binding on an
 
 Use `validateHotkey` when accepting strings from an external source. It returns `valid`, `errors`, and `warnings`; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md#source-hotkeys-docs-framework-react-guides-hotkey-recording-md).
 
-Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/e06d82da83733a874e28c4144ad13e129e462491/examples/vanilla/formatForDisplay).
+Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/536da97c6a91080cdecf13d74103dcd4a3d3529f/examples/vanilla/formatForDisplay).

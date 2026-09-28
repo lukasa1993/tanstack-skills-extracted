@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -57,4 +57,4 @@ Key-state primitives expose held logical keys and physical codes. `matchesHeldMo
 
 `ParsedHotkey` preserves identity as a union: logical bindings have `key`, physical bindings have `code`. Narrow with `parsed.code !== undefined` before reading it. Shared resolved flags and the ordered modifier list live in `ParsedModifiers`. `parseKeyboardEvent` produces logical identity; code recording constructs physical identity explicitly.
 
-Start with the [React Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md), [Angular Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md), [Vue Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md), or [Lit Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md). Explore the [Router kitchen sink](https://github.com/TanStack/hotkeys/blob/e06d82da83733a874e28c4144ad13e129e462491/examples/react/kitchen-sink/README.md) for route lifetimes, recording, and hints, or the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/e06d82da83733a874e28c4144ad13e129e462491/examples/vanilla/formatForDisplay) for display options.
+Start with the [React Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md), [Angular Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md), [Vue Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md), or [Lit Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md). Explore the [Router kitchen sink](https://github.com/TanStack/hotkeys/blob/536da97c6a91080cdecf13d74103dcd4a3d3529f/examples/react/kitchen-sink/README.md) for route lifetimes, recording, and hints, or the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/536da97c6a91080cdecf13d74103dcd4a3d3529f/examples/vanilla/formatForDisplay) for display options.

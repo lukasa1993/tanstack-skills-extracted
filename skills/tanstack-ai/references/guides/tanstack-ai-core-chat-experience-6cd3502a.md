@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-chat-experience"></a>
 
-Published skill · `@tanstack/ai@0.61.0`.
+Published skill · `@tanstack/ai@0.63.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 
@@ -17,7 +17,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Core Patterns: 3. Sending Multimodal Content (Images)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-3-sending-multimodal-content-images.md) — 3 KiB
 - [Core Patterns: 4. Sending Audio Messages (Browser Recording)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-4-sending-audio-messages-browser-recording.md) — 2 KiB
 - [Core Patterns: 5. HTTP Stream Format (Alternative to SSE)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-5-http-stream-format-alternative-to-sse.md) — 2 KiB
-- [Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-6-mcp-tool-discovery-via-chat-mcp.md) — 3 KiB
+- [Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-6-mcp-tool-discovery-via-chat-mcp.md) — 7 KiB
 - [Core Patterns: 7. Queueing Messages Sent While Streaming](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-7-queueing-messages-sent-while-streaming.md) — 3 KiB
 - [Core Patterns: 8. Browser-Refresh Durability (client persistence)](./tanstack-ai-core-chat-experience-6cd3502a--core-patterns-8-browser-refresh-durability-client-persistence.md) — 4 KiB
 - [Common Mistakes](./tanstack-ai-core-chat-experience-6cd3502a--common-mistakes.md) — 9 KiB

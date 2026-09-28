@@ -10,16 +10,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
       "sourcePath": "docs/devtools.md",
-      "bytes": 2910,
+      "bytes": 3670,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Features; Installation; Setup; Production builds",
           "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
-          "bytes": 2910
+          "bytes": 3670
         }
       ],
       "examples": []
@@ -32,7 +32,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
       "sourcePath": "docs/installation.md",
       "bytes": 4724,
@@ -54,7 +54,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
       "sourcePath": "docs/overview.md",
       "bytes": 6284,
@@ -78,16 +78,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
       "sourcePath": "docs/framework/react/guides/formatting-display.md",
-      "bytes": 5693,
+      "bytes": 5845,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
-          "bytes": 5693
+          "bytes": 5845
         }
       ],
       "examples": []
@@ -102,7 +102,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md",
       "sourcePath": "docs/framework/react/guides/hotkey-recording.md",
       "bytes": 9062,
@@ -126,7 +126,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
       "sourcePath": "docs/framework/react/guides/hotkeys.md",
       "bytes": 2616,
@@ -200,16 +200,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md",
       "sourcePath": "docs/framework/react/guides/key-state-tracking.md",
-      "bytes": 5973,
+      "bytes": 7939,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common patterns; Platform quirks; Under the hood; Modifier-held shortcut hints",
           "file": "references/guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md",
-          "bytes": 5973
+          "bytes": 7939
         }
       ],
       "examples": []
@@ -224,7 +224,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequence-recording-md-d18571b6.md",
       "sourcePath": "docs/framework/react/guides/sequence-recording.md",
       "bytes": 5022,
@@ -248,7 +248,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
       "sourcePath": "docs/framework/react/guides/sequences.md",
       "bytes": 7904,
@@ -272,7 +272,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
       "sourcePath": "docs/framework/react/quick-start.md",
       "bytes": 5420,
@@ -296,16 +296,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
       "sourcePath": "docs/framework/preact/guides/formatting-display.md",
-      "bytes": 5700,
+      "bytes": 5852,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
-          "bytes": 5700
+          "bytes": 5852
         }
       ],
       "examples": []
@@ -320,7 +320,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-recording.md",
       "bytes": 9091,
@@ -344,7 +344,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys.md",
       "bytes": 2620,
@@ -418,16 +418,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-key-state-tracking-md-ba04b9a5.md",
       "sourcePath": "docs/framework/preact/guides/key-state-tracking.md",
-      "bytes": 6080,
+      "bytes": 8066,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common patterns; Platform quirks; Under the hood; Modifier-held shortcut hints",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-key-state-tracking-md-ba04b9a5.md",
-          "bytes": 6080
+          "bytes": 8066
         }
       ],
       "examples": []
@@ -442,7 +442,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequence-recording-md-f2ae56bf.md",
       "sourcePath": "docs/framework/preact/guides/sequence-recording.md",
       "bytes": 5063,
@@ -466,7 +466,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
       "sourcePath": "docs/framework/preact/guides/sequences.md",
       "bytes": 8221,
@@ -490,16 +490,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
       "sourcePath": "docs/framework/solid/guides/formatting-display.md",
-      "bytes": 5693,
+      "bytes": 5845,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
-          "bytes": 5693
+          "bytes": 5845
         }
       ],
       "examples": []
@@ -514,7 +514,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-recording.md",
       "bytes": 8948,
@@ -538,7 +538,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys.md",
       "bytes": 2763,
@@ -617,7 +617,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-key-state-tracking-md-92176d1e.md",
       "sourcePath": "docs/framework/solid/guides/key-state-tracking.md",
       "bytes": 6027,
@@ -641,7 +641,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequence-recording-md-e932b875.md",
       "sourcePath": "docs/framework/solid/guides/sequence-recording.md",
       "bytes": 3632,
@@ -665,7 +665,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
       "sourcePath": "docs/framework/solid/guides/sequences.md",
       "bytes": 7869,
@@ -689,16 +689,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
       "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
-      "bytes": 5700,
+      "bytes": 5852,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
-          "bytes": 5700
+          "bytes": 5852
         }
       ],
       "examples": []
@@ -713,7 +713,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-recording.md",
       "bytes": 5687,
@@ -737,7 +737,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
       "bytes": 8888,
@@ -761,7 +761,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md",
       "sourcePath": "docs/framework/svelte/guides/key-state-tracking.md",
       "bytes": 2952,
@@ -785,7 +785,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md",
       "sourcePath": "docs/framework/svelte/guides/sequence-recording.md",
       "bytes": 3531,
@@ -809,7 +809,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
       "sourcePath": "docs/framework/svelte/guides/sequences.md",
       "bytes": 5355,
@@ -833,7 +833,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "bytes": 4625,
@@ -857,16 +857,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
       "sourcePath": "docs/framework/vue/guides/formatting-display.md",
-      "bytes": 5679,
+      "bytes": 5831,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
-          "bytes": 5679
+          "bytes": 5831
         }
       ],
       "examples": []
@@ -881,7 +881,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-recording.md",
       "bytes": 5855,
@@ -905,7 +905,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys.md",
       "bytes": 8263,
@@ -929,7 +929,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md",
       "sourcePath": "docs/framework/vue/guides/key-state-tracking.md",
       "bytes": 2952,
@@ -953,7 +953,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequence-recording-md-d1fba53e.md",
       "sourcePath": "docs/framework/vue/guides/sequence-recording.md",
       "bytes": 5014,
@@ -977,7 +977,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
       "sourcePath": "docs/framework/vue/guides/sequences.md",
       "bytes": 5072,
@@ -1001,7 +1001,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
       "bytes": 4494,
@@ -1025,16 +1025,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
       "sourcePath": "docs/framework/angular/guides/formatting-display.md",
-      "bytes": 5707,
+      "bytes": 5859,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
-          "bytes": 5707
+          "bytes": 5859
         }
       ],
       "examples": []
@@ -1049,7 +1049,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-recording.md",
       "bytes": 6015,
@@ -1073,7 +1073,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
       "sourcePath": "docs/framework/angular/guides/hotkeys.md",
       "bytes": 9241,
@@ -1097,7 +1097,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md",
       "sourcePath": "docs/framework/angular/guides/key-state-tracking.md",
       "bytes": 3042,
@@ -1121,7 +1121,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md",
       "sourcePath": "docs/framework/angular/guides/sequence-recording.md",
       "bytes": 3683,
@@ -1145,7 +1145,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
       "sourcePath": "docs/framework/angular/guides/sequences.md",
       "bytes": 5547,
@@ -1169,7 +1169,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
       "bytes": 4920,
@@ -1193,16 +1193,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
       "sourcePath": "docs/framework/lit/guides/formatting-display.md",
-      "bytes": 5679,
+      "bytes": 5831,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
-          "bytes": 5679
+          "bytes": 5831
         }
       ],
       "examples": []
@@ -1217,7 +1217,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-recording.md",
       "bytes": 10444,
@@ -1241,7 +1241,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
       "sourcePath": "docs/framework/lit/guides/hotkeys.md",
       "bytes": 2534,
@@ -1315,7 +1315,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md",
       "sourcePath": "docs/framework/lit/guides/key-state-tracking.md",
       "bytes": 7772,
@@ -1339,7 +1339,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequence-recording-md-026a99f1.md",
       "sourcePath": "docs/framework/lit/guides/sequence-recording.md",
       "bytes": 6523,
@@ -1363,7 +1363,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
       "sourcePath": "docs/framework/lit/guides/sequences.md",
       "bytes": 10225,
@@ -1387,7 +1387,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
       "bytes": 8477,

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-plugin"></a>
 
-Published skill · `@tanstack/router-plugin@1.168.40`.
+Published skill · `@tanstack/router-plugin@1.168.41`.
 
 [Topic index](../router-ssr-tooling-adapters.md) · [Source provenance](../SOURCES.md)
 

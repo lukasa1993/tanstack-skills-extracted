@@ -1,6 +1,6 @@
 # Type Safety — Overview
 
-[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.32`.
+[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.33`.
 
 # Type Safety
 

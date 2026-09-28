@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

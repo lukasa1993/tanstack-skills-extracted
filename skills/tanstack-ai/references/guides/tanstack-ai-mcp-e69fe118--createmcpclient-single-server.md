@@ -1,6 +1,6 @@
 # Ai Mcp — `createMCPClient` — single server
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.4.6`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.6.0`.
 
 ## `createMCPClient` — single server
 
@@ -14,8 +14,11 @@ const client = await createMCPClient({
 })
 ```
 
-`createMCPClient` connects immediately and returns an `MCPClient`. Throws
-`MCPConnectionError` if the connection fails.
+`createMCPClient` connects immediately and returns an `MCPClient`.
+If the connection fails, `createMCPClient` throws `MCPConnectionError`.
+`createMCPClient` tries spec `2026-07-28` first.
+If the server does not support that spec, the client uses the 2025 initialize handshake.
+The client keeps negotiation mode `auto`.
 
 ### Transports
 
@@ -64,11 +67,11 @@ const client = await createMCPClient({
 
 #### Custom transport (escape hatch)
 
-Pass any SDK `Transport` instance directly:
+Pass any `Transport` from `@modelcontextprotocol/client`:
 
 ```typescript
-// InMemoryTransport (from @modelcontextprotocol/sdk) is re-exported for
-// in-process testing; any SDK Transport instance works the same way.
+// InMemoryTransport comes from @modelcontextprotocol/client.
+// @tanstack/ai-mcp re-exports it. Any Transport from that package works here.
 import { createMCPClient, InMemoryTransport } from '@tanstack/ai-mcp'
 
 const [clientTransport] = InMemoryTransport.createLinkedPair()
@@ -81,15 +84,15 @@ Two levels:
 
 - **Static tokens** — pass `headers` on the `http`/`sse` config (sent with
   every request): `headers: { Authorization: 'Bearer ...' }`.
-- **OAuth 2.1 (MCP authorization spec)** — pass `authProvider` on the
-  `http`/`sse` config. It accepts any `OAuthClientProvider` from
-  `@modelcontextprotocol/sdk/client/auth.js`; the SDK transport attaches
-  tokens, refreshes them, and retries on 401.
+- **OAuth 2.1 (MCP authorization spec).** Pass `authProvider` on the
+  `http` or `sse` config. The value is an `OAuthClientProvider` from
+  `@modelcontextprotocol/client`. The transport attaches tokens, refreshes
+  them, and retries on 401.
 
 ```typescript
 import { createMCPClient } from '@tanstack/ai-mcp'
-// An OAuthClientProvider (from @modelcontextprotocol/sdk/client/auth.js)
-// backed by tokens you persist server-side.
+// An OAuthClientProvider from @modelcontextprotocol/client.
+// You persist the tokens on the server.
 import { myOAuthProvider } from './oauth-provider'
 
 const client = await createMCPClient({
@@ -108,3 +111,4 @@ flows, construct the `StreamableHTTPClientTransport` yourself with the
 callback route, then pass the transport via the escape hatch above. For
 server-side providers backed by pre-provisioned/refreshable tokens, the
 config form is sufficient.
+Import `StreamableHTTPClientTransport` from `@modelcontextprotocol/client`.

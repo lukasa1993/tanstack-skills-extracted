@@ -1,6 +1,6 @@
 # Ssr — Non-Streaming SSR
 
-[Guide and prerequisites](./tanstack-router-core-ssr-e95e1bf1.md) · Published skill · `@tanstack/router-core@1.171.32`.
+[Guide and prerequisites](./tanstack-router-core-ssr-e95e1bf1.md) · Published skill · `@tanstack/router-core@1.171.33`.
 
 ## Non-Streaming SSR
 
