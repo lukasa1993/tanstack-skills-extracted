@@ -2,42 +2,18 @@
 
 <a id="source-pacer-docs-guides-async-rate-limiting-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../rate-limiting.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Async rate limiting combines time-window quotas with Promise results, error handling, retries, and abort support. Choose your framework for API-specific examples.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+## Choose your framework
 
-- [Overview](./pacer-docs-guides-async-rate-limiting-md-62bd8188--overview.md) — 1 KiB
-- [When to Use Async Rate Limiting](./pacer-docs-guides-async-rate-limiting-md-62bd8188--when-to-use-async-rate-limiting.md) — 1 KiB
-- [Async Rate Limiting in TanStack Pacer](./pacer-docs-guides-async-rate-limiting-md-62bd8188--async-rate-limiting-in-tanstack-pacer.md) — 2 KiB
-- [Key Differences from Synchronous Rate Limiting](./pacer-docs-guides-async-rate-limiting-md-62bd8188--key-differences-from-synchronous-rate-limiting.md) — 4 KiB
-- [Advanced Features: Retry and Abort Support](./pacer-docs-guides-async-rate-limiting-md-62bd8188--advanced-features-retry-and-abort-support.md) — 3 KiB
-- [Dynamic Options and Enabling/Disabling](./pacer-docs-guides-async-rate-limiting-md-62bd8188--dynamic-options-and-enabling-disabling.md) — 1 KiB
-- [State Management](./pacer-docs-guides-async-rate-limiting-md-62bd8188--state-management.md) — 6 KiB
-- [Framework Adapters](./pacer-docs-guides-async-rate-limiting-md-62bd8188--framework-adapters.md) — 1 KiB
+- [Vanilla](./pacer-docs-framework-vanilla-guides-async-rate-limiting-md-cf09d2e0.md#source-pacer-docs-framework-vanilla-guides-async-rate-limiting-md)
+- [React](./pacer-docs-framework-react-guides-async-rate-limiting-md-21bc1dc6.md#source-pacer-docs-framework-react-guides-async-rate-limiting-md)
+- [Preact](./pacer-docs-framework-preact-guides-async-rate-limiting-md-081cd186.md#source-pacer-docs-framework-preact-guides-async-rate-limiting-md)
+- [Solid](./pacer-docs-framework-solid-guides-async-rate-limiting-md-af3d3097.md#source-pacer-docs-framework-solid-guides-async-rate-limiting-md)
+- [Angular](./pacer-docs-framework-angular-guides-async-rate-limiting-md-47c4dd05.md#source-pacer-docs-framework-angular-guides-async-rate-limiting-md)
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="when-to-use-async-rate-limiting"></a>
-<a id="async-rate-limiting-in-tanstack-pacer"></a>
-<a id="basic-usage-example"></a>
-<a id="key-differences-from-synchronous-rate-limiting"></a>
-<a id="1-return-value-handling"></a>
-<a id="2-error-handling"></a>
-<a id="3-different-callbacks"></a>
-<a id="4-sequential-execution"></a>
-<a id="advanced-features-retry-and-abort-support"></a>
-<a id="retry-support"></a>
-<a id="abort-support"></a>
-<a id="sharing-options-between-instances"></a>
-<a id="dynamic-options-and-enablingdisabling"></a>
-<a id="customizing-unmount-behavior"></a>
-<a id="state-management"></a>
-<a id="state-selector-framework-adapters"></a>
-<a id="initial-state"></a>
-<a id="subscribing-to-state-changes"></a>
-<a id="available-state-properties"></a>
-<a id="helper-methods"></a>
-<a id="framework-adapters"></a>
+Not sure which operation fits your use case? Start with [Which Pacer Utility Should I Choose?](./pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md#source-pacer-docs-guides-which-pacer-utility-should-i-choose-md).

@@ -8,14 +8,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/devtools.md",
-      "sha256": "30303a17e9c71d916ee5ecc7ef6281b5a7ee63a9d47dfa8517bd647db495628b",
+      "sha256": "adfd560e5d24d3d25b5b589461306cb7a95997463b5feae95e31003b2457c96f",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -23,14 +23,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/which-pacer-utility-should-i-choose.md",
-      "sha256": "d5cd6dca6ed07fe5d2eb1393e5c9ebdc67de4670be1925aae17f20552a710c20",
+      "sha256": "430c9f2d8876d1974e6d0d7e0c0d85968f6a93ee9e8bf1f0e7c45f8e7e6ca3c4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -38,14 +38,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/installation.md",
-      "sha256": "4ec0f845db9ae0ccf38487d8ccfce1990a5e55a0413c59d0d0767c85b4e75922",
+      "sha256": "270df5f854c5aa0c712652339a7fa2cfe3ed5d3408c05c8705c4355b7d067f67",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -53,14 +53,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/overview.md",
-      "sha256": "be4c6fdce58fe753b2d4af04370aa09ada300df53a7ad1f414c7dac99815f909",
+      "sha256": "ff9d4fb0bb2aaa33124f3a5e39cc06c7fc8ab52fb8d36985a16eecd12c7eef94",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -68,14 +68,314 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/quick-start.md",
-      "sha256": "b0ee0ee20ab6309d920623c7afea132dc090f2fd7b015b6af25b8f5ddf198d2f",
+      "sha256": "564d540cabdbbc503b3db86cfe3593716145208f393c049feb696b7a6d2a1621",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/async-debouncing.md",
+      "sha256": "1064bfb3c989641e48a40e06d9751d2c3767358cfcda1f0cc7c1d417e6f7712a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/async-throttling.md",
+      "sha256": "4ad0b32e6f26228b0701438685d3f2d6fccaea7729b9ba270f851e4d0c4b393f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/debouncing.md",
+      "sha256": "579ae1056fe1643b4c069fb5ae89ca6fb1311a649fbbc77f11afbad275e4731c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/throttling.md",
+      "sha256": "4e0cc3d2cae3d853aaae19abfe25772abf21460af7962ba4630ec95579e1f563",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/async-debouncing.md",
+      "sha256": "9c7c560083356e94f31edd598c886c4d2c10cbe0a95740ff0387b0cb13c8c1ff",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/async-throttling.md",
+      "sha256": "80fdbb84a6791abd0bfa1cdf3754fd986a6aece5cb2255685c711d46ed0e27ec",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/debouncing.md",
+      "sha256": "e6af485b601434099a68edf0dd3fe1a8d662904db469ebb9c6774f9fd3710ad4",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/throttling.md",
+      "sha256": "c0e8000c1553bb48c240efaa6bc64f51b1a07902040e60be08614d7318ee7c88",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/async-debouncing.md",
+      "sha256": "f87a4bd0beb55ac5e9b2ac89d15d4203806b129e41e25f3ad2a7ed93e15bee93",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/async-throttling.md",
+      "sha256": "c22069fa5ccecb358ff1b71297e765b297596ab1bd6f9b3f3438608ac1965d6a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/debouncing.md",
+      "sha256": "f1ee783572e1494f72a7de0eaa159539d95f9c9dc7fbac28e2100ce984c82e74",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/throttling.md",
+      "sha256": "bfba97faba82f8b398f38c90eec897b1df4a30d21ba791c31dbe8e5b36d04d62",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/async-debouncing.md",
+      "sha256": "d63b071f34b0e121707c2a3c6429fc61b70a1ed3be66103f506222042cd2c0bb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/async-throttling.md",
+      "sha256": "946672f02679f3d031e923c077ea92c1f08e531ddfdbcd42ef0cc6ad286d7cf6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/debouncing.md",
+      "sha256": "8dcdd204e2855f9a149aa6db889db3cb5d087463f3d48143137adbf127a260a7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/throttling.md",
+      "sha256": "c9942cfb4fa5fed103066350b7784dfb592917f2df1b216e2230b4da9f6bd819",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/async-debouncing.md",
+      "sha256": "2bf2ee7cc5960cef3a09f703c637b01b5a2e6c0ab40304a04c4a5e691afc97cd",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/async-throttling.md",
+      "sha256": "2d97c5ee1b4e60cc2e47b86d2c32e1270f2b3c3c3d5dfef3090ddbd0760616b5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/debouncing.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/debouncing.md",
+      "sha256": "ef5205f896fbe8058c43bf40c4d31ef643723f4d5d954aed06a42f25912697a3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/throttling.md",
+      "kind": "document",
+      "theme": "debounce-throttle",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/throttling.md",
+      "sha256": "94f081af4e03321cfed3537c519e400e6e154e2f183f6c63510cfca8dad37cc5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -83,14 +383,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/async-debouncing.md",
-      "sha256": "ca1b57f31925bb185ba86769b3bee3b50f4ce1270999618fab4307f31594362c",
+      "sha256": "b02ddb0f09044143582dd82dddbc392dde15b0084e3d39fe2a86dc4fda1c275d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -98,14 +398,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/async-throttling.md",
-      "sha256": "f394aea442be4e5592b5fc980c89cadd9aed92f59e5dc04d1d694182a752056d",
+      "sha256": "1848be16168371891814033ddc81cf3bac82774b70a48f82486d8d1ad1c531c8",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -113,14 +413,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/debouncing.md",
-      "sha256": "85480dcc2d64202a473cb00d99859af5bb0049219e93c435c82cb2590c09de53",
+      "sha256": "bff24b8bc6bae78e60b0d6912592f02bb8c9c177b6c5acfa2d134b442bf1b895",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -128,14 +428,314 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/throttling.md",
-      "sha256": "098a1da0dc21580966f648066cd2bd7c9d2db1efdb9011719ea9459ac8f5d2c4",
+      "sha256": "b9500783907c982f27f6fcecef22f2766f9764b324bbac9a5016afea6332eb5d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/async-batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/async-batching.md",
+      "sha256": "281d78dc0a5214a94b1b103a2886af448964ba50849916c0b1b2031965c37cee",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/async-queuing.md",
+      "sha256": "9cafad540bc056af6cd78ea5b1726cb0e2243c2d818a0e6791a90397dcf798cb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/batching.md",
+      "sha256": "c654f885b3aca9405f03e4401d00055145a9da670546b8682590e74eca4cd321",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/queuing.md",
+      "sha256": "8a269949107d5e82fde8957c9b89c37f0f937c0b492e506a8d6cdaa1ed6361c2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/async-batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/async-batching.md",
+      "sha256": "ef136bb0860b340276ddf3d5050dbd657835caf4f6dc623677322c591b7ed86e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/async-queuing.md",
+      "sha256": "e979fea6c4bba941ecf502cf68c8e5a722d5bcd9c440862efd4d0b5b3afa095d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/batching.md",
+      "sha256": "7929c32307aaa64262902122a708abfee89fdfdcfdc7b3147b02bd35cdaaea66",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/queuing.md",
+      "sha256": "da6b3fec98523eb278016b37437d860c965267e4d917be66eef83887946328d0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/async-batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/async-batching.md",
+      "sha256": "bac794ede62004a4181b67f8d48d432040a14f771bc318397bb8b70059ade4cd",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/async-queuing.md",
+      "sha256": "53ccf33850e5e611a3cb414f29a0066bee6f656084dbf8d9675039efa9344790",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/batching.md",
+      "sha256": "d4cbde9a2d9baf28467e0b9ce0c2277e634d5cd38e4437e72af1c62284d0d89e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/queuing.md",
+      "sha256": "38088647f2dba1d257ec6ff4ca21bc9ff1b00a27281aa2e3098ca09b605f2081",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/async-batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/async-batching.md",
+      "sha256": "dc57e3086c04443f77f5c1a2057cb16bef2a07aa209ef6a653d83a8e669893aa",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/async-queuing.md",
+      "sha256": "6320e13ea2dac7ba8ed2e256179fbfc4fd296b036085d64c51db4f853a1ad488",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/batching.md",
+      "sha256": "e61a5cd736a1ad1004e43173039e5f9767fd69964397efe5008d3c5deb8bfe8b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/queuing.md",
+      "sha256": "f0103ca9cb19d367f59ec38aacfcf51233e012705f9b9c4c360609d367915afb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/async-batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/async-batching.md",
+      "sha256": "964b71b430bb67e954ad532d1eb0bcc4671568245b97bfca18cdf983cf03da27",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/async-queuing.md",
+      "sha256": "ef18cd4da9212ef649d52ca7b62c976115439805c4729012c058575ece9fddf9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/batching.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/batching.md",
+      "sha256": "1ce6db7114843c6ff1c5b389577fd3d9c75b3c016ea2523d89a0e22275a468cb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/queuing.md",
+      "kind": "document",
+      "theme": "queue-batch",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/queuing.md",
+      "sha256": "b95fa2954ccc672f316307a7fcce55fc2db164ff30b1615c55a6b5e8ef2f7218",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -143,14 +743,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/async-batching.md",
-      "sha256": "e26d5cfb0b1c119b5bcf5cdeb08faa8ab10c776b919f63dece9a6620ad9481c6",
+      "sha256": "3aa3d5d801150b3d2e5006fbcf3e61b9fe4d599f93ab9592d1b0b52c0df4e0b8",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -158,14 +758,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/async-queuing.md",
-      "sha256": "ca99fa557b4c3a1448897002d322089127b61565e20b51f277eacf02f5a633d7",
+      "sha256": "9cfacbcca6655fa948d755d4cd0f963e3d44f3e2390db32a85b5a21243190bc7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -173,14 +773,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/batching.md",
-      "sha256": "0900e9b69c772e772b87091693e82cdf3eae63b042a10bc8433632b64720609b",
+      "sha256": "c9a6c314aa2db95a6957f6196a20f499cde36b887f47c6bd97a17f755911aff0",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -188,14 +788,164 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/queuing.md",
-      "sha256": "28d3bcd3d72fafe6f6737d044ea37e54fe04e0832d8ad4a948655969f8c7bcfb",
+      "sha256": "9433fbb683a5a75b50a88f559aebf7876432fc53479b9e3567a6401a91c631bd",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/async-rate-limiting.md",
+      "sha256": "18b8b040d9daaa951c79d22dc4e845899f7f03ec2d52399b7959808e6abfd54c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/rate-limiting.md",
+      "sha256": "ed5f841e214c236578911a9b73cf172f11063eb84c558cdd6350a846be3d4053",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/async-rate-limiting.md",
+      "sha256": "db2aaf5228479367159367d0a0f403c65df4c172dd5c07d376edbf4432a3fda8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/rate-limiting.md",
+      "sha256": "86ee0e97315e93705d4c2ebe72fcb898fccd7a03f8ab1588d5bf7102cc367663",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/async-rate-limiting.md",
+      "sha256": "4ab3dcb26f9e77027cd3e158ac0e74ff602df082705e075155d7cb92975434f8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/rate-limiting.md",
+      "sha256": "f0f6c018b05554743de8356faf9c4e203596ca358a4044915d866edd723e7916",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/async-rate-limiting.md",
+      "sha256": "1e14b4a6d96d3e93bffd4ec053beb8259ca588948445d770d07a0ee3a9fb124e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/rate-limiting.md",
+      "sha256": "848ded5c43951d82efac82a318096a479ee6db85c84ddcc60b3f398debe9da1d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/async-rate-limiting.md",
+      "sha256": "4a4c365c74db9ec27c1e99a544beefa49f401296dd1721b7f36cf1162cb823fe",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "rate-limiting",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/rate-limiting.md",
+      "sha256": "ee5a5e83ce237cb96540cf6b38b7efdf0d07a1de50c11a7370db6fa7cc2c98f3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -203,14 +953,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/async-rate-limiting.md",
-      "sha256": "50ec6d7a32f4e0e3161a842e961d5d4c5464fdda2f7501fe62d56939ef78d41c",
+      "sha256": "0878601147b2cafd946d5d1eec4b795462d065db7bf0d3a0db8179c1677aa453",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -218,14 +968,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/rate-limiting.md",
-      "sha256": "d6ec1af21a6ea7964911081b5f5ea78cc3fe15894848ecee6ebb8ca7ff5cb78a",
+      "sha256": "e134755999ab4788b15219ae3b89682b0cb7928f7453bcc5bf1077029bba938d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -233,14 +983,89 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/server-rate-limiting.md",
       "sha256": "568347e7e8e1b2c52e74e7ff5b2147c206b2f8b4a5a51cbe22961a6a77d72622",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/angular/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "async-retry",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/angular/guides/async-retrying.md",
+      "sha256": "16c94cbc0eb6007e569670029c4f56a626fe2e9cf4f30de8d3fa812ef35c912c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/preact/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "async-retry",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/preact/guides/async-retrying.md",
+      "sha256": "29114c6a3c9a59b6ce8a41fa171b31ce3372bda538daa0371475e103e3c2443d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/react/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "async-retry",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/react/guides/async-retrying.md",
+      "sha256": "8513f3316d426d4d393a0f58d621a16d1229177f3c645074d103889730dd2122",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/solid/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "async-retry",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/solid/guides/async-retrying.md",
+      "sha256": "b7377920f4c2a00a2126bbd2b3d9db4dad884572eab17cbafc9770883ce4543b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vanilla/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "async-retry",
+      "package": "@tanstack/pacer",
+      "version": "0.23.0",
+      "repository": "TanStack/pacer",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "sourcePath": "docs/framework/vanilla/guides/async-retrying.md",
+      "sha256": "f974ec3cb9eee0c8b800fa35e2e8a51131db2280b59b79e7b9b0a621bdd1badc",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -248,14 +1073,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/guides/async-retrying.md",
-      "sha256": "7eca16c1d52cc82e09b157925c0a61d5406d5723e744eae32de700e6b3cca5c2",
+      "sha256": "8cbf759671c454d591964c1d26e3c23aeae7d61b55d4a8cf06a4f5dce8fc3753",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -263,14 +1088,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/framework/react/adapter.md",
-      "sha256": "a707efc572af35e64542343d949ec2ab4658bc4fd6198923213ce3a27d08ae45",
+      "sha256": "28f448e37016630c56de6d1bbd3c338ee20f3993a74933435d000426fb7a91cc",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -278,14 +1103,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/framework/preact/adapter.md",
-      "sha256": "00709d539d7d6c024defbbeafa4618a48bd0374191bb233a9fd995a03f934a38",
+      "sha256": "653d355862e819561ea66680fc16efc920accec801c79c47beb64bb1131a800b",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -293,14 +1118,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/framework/solid/adapter.md",
-      "sha256": "4dff3496342c73f8446b43e11fbf5f47c3fb18113de8666282d2a52dc1917198",
+      "sha256": "c8d8b47b5f40a55aef259dd49d48e2f131c83327b39554b1a1868e41834dbcec",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     },
     {
@@ -308,19 +1133,1424 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/pacer",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "repository": "TanStack/pacer",
-      "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
+      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
       "sourcePath": "docs/framework/angular/adapter.md",
-      "sha256": "059d4fbc349390ca0d3f4882c7a896f6ac6b8bb38f4f586237b3045d6397ee34",
+      "sha256": "74a10739640efda0f2458b416202b8de12aa68179862d5c8fc4782f0f2bb46ff",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "c75895520669b08dc8946b42e1a6d529ca977230"
+        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
       ]
     }
   ],
   "duplicateDocuments": [],
-  "duplicateSections": [],
+  "duplicateSections": [
+    {
+      "duplicate": "pacer:docs/framework/angular/guides/async-throttling.md#Angular lifecycle",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Angular lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "569f68d5266996a0e4df1c25351b62766797daa537a1e2102fdf613d01262e73"
+    },
+    {
+      "duplicate": "pacer:docs/framework/angular/guides/throttling.md#Angular lifecycle",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#Angular lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "93c9ec0c974e49d7acde2ddc49fb16f026745c2f71e52b74e86b39f0103fdc4f"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "f61498628b48615369e99270950d74d73e3c197aa6999326f7913ad8f3139988"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-debouncing.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "0e98cea8cdb9b54703bd8635b46f9a39c93f6b78d1c7c3b61d5304468bfc9419"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-debouncing.md#Leading and trailing execution",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Leading and trailing execution",
+      "theme": "debounce-throttle",
+      "sha256": "d394a2989776153cceb226dfa956828f6fbc559773407bbccb3d406f83593996"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-debouncing.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "8154f5b549aecf934cab390c16dfdbdfe958a3ae1ec5054b7cfba77527937253"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-debouncing.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Configuration",
+      "theme": "debounce-throttle",
+      "sha256": "878520cf6b76637fdbbbf27c932476636654e61f38a88b904ddf5c2dd4acfbb6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "1804aed8c3da889994cf58d21ddc958668dd764e627ca316bc6e6be33bf41d57"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-throttling.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "af11d32a0ccc923e4affddc828167a3751b0603c74e0843ebb5c928745e77245"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-throttling.md#Leading and trailing execution",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Leading and trailing execution",
+      "theme": "debounce-throttle",
+      "sha256": "f4ae7ecd0b16e67b23af751d41d14204db26e6e06a24ffd0914017e1f26a2196"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-throttling.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "5786e5c4170183a49c51bc76da1d7a6d54fb3f2e2dd6390920c1d537545b6e85"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-throttling.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Configuration",
+      "theme": "debounce-throttle",
+      "sha256": "aefd6efde6bb4191f6db181ce2d855b88c2f84f1576f0d660fb2905fd96a8b36"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-throttling.md#Preact lifecycle",
+      "canonical": "pacer:docs/framework/preact/guides/async-debouncing.md#Preact lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "1624078c57dca804e0c1404d95475816cb5bf50e10248f8317d1148369c01fa9"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "952833f811cdfd04b77248a12b5f4d85c52c2e1ff66528e77c46c898a80d5fbf"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/debouncing.md#How debouncing works",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#How debouncing works",
+      "theme": "debounce-throttle",
+      "sha256": "3babbaec43fed4b5287a19149478564e173dea8b59699766695cdb6df26c2d2a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/debouncing.md#When to use debouncing",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#When to use debouncing",
+      "theme": "debounce-throttle",
+      "sha256": "f25a1c3c814138aaac582eb3adc4cb52b8974bfe81c8b8ce664cd9488398ae3b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "9f9e3c39e49935d08d4f6d628fbfc02dd9ae371eddbd8643cfb02ed2c1da7ddd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/throttling.md#How throttling works",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#How throttling works",
+      "theme": "debounce-throttle",
+      "sha256": "fb2939a7e9d119435ae76aefacd381d4310a40a83fd488d458bcfb03106fe480"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/throttling.md#When to use throttling",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#When to use throttling",
+      "theme": "debounce-throttle",
+      "sha256": "b6a0390e42063de03a1ff43495e4e15c355b6b79addb234117bd1c6a3ca7b134"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/throttling.md#Controlling pending work",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Controlling pending work",
+      "theme": "debounce-throttle",
+      "sha256": "5fd7812e2790aad916677d9a91ffaefe75e8ef0cfe6187d1a4d843375e18d5e3"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/throttling.md#Preact lifecycle",
+      "canonical": "pacer:docs/framework/preact/guides/debouncing.md#Preact lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "1d9a7cfef8f0ee7e39034501f26d79378d8960940e068929d18be1b430e920bd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "f61498628b48615369e99270950d74d73e3c197aa6999326f7913ad8f3139988"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Choose an API",
+      "canonical": "pacer:docs/framework/preact/guides/async-debouncing.md#Choose an API",
+      "theme": "debounce-throttle",
+      "sha256": "3bc6d4ec9b4fffcd442f66d75688e2fa897bb2f2ff059e2e4ff74dae86a2ae7a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "0e98cea8cdb9b54703bd8635b46f9a39c93f6b78d1c7c3b61d5304468bfc9419"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Leading and trailing execution",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Leading and trailing execution",
+      "theme": "debounce-throttle",
+      "sha256": "d394a2989776153cceb226dfa956828f6fbc559773407bbccb3d406f83593996"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "8154f5b549aecf934cab390c16dfdbdfe958a3ae1ec5054b7cfba77527937253"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Retrying failed executions",
+      "canonical": "pacer:docs/framework/preact/guides/async-debouncing.md#Retrying failed executions",
+      "theme": "debounce-throttle",
+      "sha256": "9926463705b8b5f50f23c30c96d784fb4ddeac68179384abe2016b4fb8c4dd96"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Canceling pending work and aborting active work",
+      "canonical": "pacer:docs/framework/preact/guides/async-debouncing.md#Canceling pending work and aborting active work",
+      "theme": "debounce-throttle",
+      "sha256": "3908e76971d1e227920c50426c1e6718bc3148a26af8db16f9ba64348c2aa8dc"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-debouncing.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Configuration",
+      "theme": "debounce-throttle",
+      "sha256": "878520cf6b76637fdbbbf27c932476636654e61f38a88b904ddf5c2dd4acfbb6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "1804aed8c3da889994cf58d21ddc958668dd764e627ca316bc6e6be33bf41d57"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Choose an API",
+      "canonical": "pacer:docs/framework/preact/guides/async-throttling.md#Choose an API",
+      "theme": "debounce-throttle",
+      "sha256": "bd53ffb6913e2a40df1ebed0df74f8ecd099b4150bafa094f3dad3e1ae9f1fa6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "af11d32a0ccc923e4affddc828167a3751b0603c74e0843ebb5c928745e77245"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Leading and trailing execution",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Leading and trailing execution",
+      "theme": "debounce-throttle",
+      "sha256": "f4ae7ecd0b16e67b23af751d41d14204db26e6e06a24ffd0914017e1f26a2196"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "5786e5c4170183a49c51bc76da1d7a6d54fb3f2e2dd6390920c1d537545b6e85"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Retrying failed executions",
+      "canonical": "pacer:docs/framework/preact/guides/async-throttling.md#Retrying failed executions",
+      "theme": "debounce-throttle",
+      "sha256": "3a9aaa748defba6f1e4ec1c5d3871122d2601dc89c0f55130e08eb5d4f3cb265"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Canceling pending work and aborting active work",
+      "canonical": "pacer:docs/framework/preact/guides/async-throttling.md#Canceling pending work and aborting active work",
+      "theme": "debounce-throttle",
+      "sha256": "bef10ffdf654ad9e370cc417c3f47481e9a677ff1feb158146befea49746781d"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Configuration",
+      "theme": "debounce-throttle",
+      "sha256": "aefd6efde6bb4191f6db181ce2d855b88c2f84f1576f0d660fb2905fd96a8b36"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-throttling.md#React lifecycle",
+      "canonical": "pacer:docs/framework/react/guides/async-debouncing.md#React lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "c59eb69259e01763e40a9f91997ab6c9c6a889485c7d8261c9b318bd5565a01b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "952833f811cdfd04b77248a12b5f4d85c52c2e1ff66528e77c46c898a80d5fbf"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/debouncing.md#How debouncing works",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#How debouncing works",
+      "theme": "debounce-throttle",
+      "sha256": "3babbaec43fed4b5287a19149478564e173dea8b59699766695cdb6df26c2d2a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/debouncing.md#When to use debouncing",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#When to use debouncing",
+      "theme": "debounce-throttle",
+      "sha256": "f25a1c3c814138aaac582eb3adc4cb52b8974bfe81c8b8ce664cd9488398ae3b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/debouncing.md#Execution timing",
+      "canonical": "pacer:docs/framework/preact/guides/debouncing.md#Execution timing",
+      "theme": "debounce-throttle",
+      "sha256": "386d56e9b33110d83831443167d37da71f68a48ac26ccdd5dd2fed18db2a79cd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/debouncing.md#Controlling pending work",
+      "canonical": "pacer:docs/framework/preact/guides/debouncing.md#Controlling pending work",
+      "theme": "debounce-throttle",
+      "sha256": "1c30ba0c2b5603956b75bd199f56081f1193611691629d141c045b1b76732eeb"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/debouncing.md#Configuring behavior at runtime",
+      "canonical": "pacer:docs/framework/preact/guides/debouncing.md#Configuring behavior at runtime",
+      "theme": "debounce-throttle",
+      "sha256": "2e0f5e1fa2c159efced973e58618cb3eb8deba61e3a7ba3329333800ce947884"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "9f9e3c39e49935d08d4f6d628fbfc02dd9ae371eddbd8643cfb02ed2c1da7ddd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/throttling.md#How throttling works",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#How throttling works",
+      "theme": "debounce-throttle",
+      "sha256": "fb2939a7e9d119435ae76aefacd381d4310a40a83fd488d458bcfb03106fe480"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/throttling.md#When to use throttling",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#When to use throttling",
+      "theme": "debounce-throttle",
+      "sha256": "b6a0390e42063de03a1ff43495e4e15c355b6b79addb234117bd1c6a3ca7b134"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/throttling.md#Execution timing",
+      "canonical": "pacer:docs/framework/preact/guides/throttling.md#Execution timing",
+      "theme": "debounce-throttle",
+      "sha256": "fe4b03ae30feef90224bfc6d027cc3805ac69434758c64d3d4e694989d4690e4"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/throttling.md#Controlling pending work",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Controlling pending work",
+      "theme": "debounce-throttle",
+      "sha256": "5fd7812e2790aad916677d9a91ffaefe75e8ef0cfe6187d1a4d843375e18d5e3"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/throttling.md#Configuring behavior at runtime",
+      "canonical": "pacer:docs/framework/preact/guides/throttling.md#Configuring behavior at runtime",
+      "theme": "debounce-throttle",
+      "sha256": "d45a4404c7493cf421b425dd66a06a3245d547264401e4dace7f09e4d6137c01"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "f61498628b48615369e99270950d74d73e3c197aa6999326f7913ad8f3139988"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-debouncing.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "0e98cea8cdb9b54703bd8635b46f9a39c93f6b78d1c7c3b61d5304468bfc9419"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-debouncing.md#Leading and trailing execution",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Leading and trailing execution",
+      "theme": "debounce-throttle",
+      "sha256": "d394a2989776153cceb226dfa956828f6fbc559773407bbccb3d406f83593996"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-debouncing.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "8154f5b549aecf934cab390c16dfdbdfe958a3ae1ec5054b7cfba77527937253"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-debouncing.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Configuration",
+      "theme": "debounce-throttle",
+      "sha256": "878520cf6b76637fdbbbf27c932476636654e61f38a88b904ddf5c2dd4acfbb6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "1804aed8c3da889994cf58d21ddc958668dd764e627ca316bc6e6be33bf41d57"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-throttling.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "af11d32a0ccc923e4affddc828167a3751b0603c74e0843ebb5c928745e77245"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-throttling.md#Leading and trailing execution",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Leading and trailing execution",
+      "theme": "debounce-throttle",
+      "sha256": "f4ae7ecd0b16e67b23af751d41d14204db26e6e06a24ffd0914017e1f26a2196"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-throttling.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "5786e5c4170183a49c51bc76da1d7a6d54fb3f2e2dd6390920c1d537545b6e85"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-throttling.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Configuration",
+      "theme": "debounce-throttle",
+      "sha256": "aefd6efde6bb4191f6db181ce2d855b88c2f84f1576f0d660fb2905fd96a8b36"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-throttling.md#Solid lifecycle",
+      "canonical": "pacer:docs/framework/solid/guides/async-debouncing.md#Solid lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "3a713469469c7debc4faf018f541ec40095b3e8333e248765031c97a7c5a17cb"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "952833f811cdfd04b77248a12b5f4d85c52c2e1ff66528e77c46c898a80d5fbf"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/debouncing.md#How debouncing works",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#How debouncing works",
+      "theme": "debounce-throttle",
+      "sha256": "3babbaec43fed4b5287a19149478564e173dea8b59699766695cdb6df26c2d2a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/debouncing.md#When to use debouncing",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#When to use debouncing",
+      "theme": "debounce-throttle",
+      "sha256": "f25a1c3c814138aaac582eb3adc4cb52b8974bfe81c8b8ce664cd9488398ae3b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "9f9e3c39e49935d08d4f6d628fbfc02dd9ae371eddbd8643cfb02ed2c1da7ddd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/throttling.md#How throttling works",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#How throttling works",
+      "theme": "debounce-throttle",
+      "sha256": "fb2939a7e9d119435ae76aefacd381d4310a40a83fd488d458bcfb03106fe480"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/throttling.md#When to use throttling",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#When to use throttling",
+      "theme": "debounce-throttle",
+      "sha256": "b6a0390e42063de03a1ff43495e4e15c355b6b79addb234117bd1c6a3ca7b134"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/throttling.md#Controlling pending work",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Controlling pending work",
+      "theme": "debounce-throttle",
+      "sha256": "5fd7812e2790aad916677d9a91ffaefe75e8ef0cfe6187d1a4d843375e18d5e3"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/throttling.md#Solid lifecycle",
+      "canonical": "pacer:docs/framework/solid/guides/debouncing.md#Solid lifecycle",
+      "theme": "debounce-throttle",
+      "sha256": "644213aacda37b51f676d249fea90c9210780ac5dd66915c3da82b520d2fd756"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-debouncing.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "0e98cea8cdb9b54703bd8635b46f9a39c93f6b78d1c7c3b61d5304468bfc9419"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-debouncing.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "8154f5b549aecf934cab390c16dfdbdfe958a3ae1ec5054b7cfba77527937253"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-throttling.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Promise results",
+      "theme": "debounce-throttle",
+      "sha256": "af11d32a0ccc923e4affddc828167a3751b0603c74e0843ebb5c928745e77245"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-throttling.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-throttling.md#Errors and callbacks",
+      "theme": "debounce-throttle",
+      "sha256": "5786e5c4170183a49c51bc76da1d7a6d54fb3f2e2dd6390920c1d537545b6e85"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/debouncing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "952833f811cdfd04b77248a12b5f4d85c52c2e1ff66528e77c46c898a80d5fbf"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/debouncing.md#How debouncing works",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#How debouncing works",
+      "theme": "debounce-throttle",
+      "sha256": "3babbaec43fed4b5287a19149478564e173dea8b59699766695cdb6df26c2d2a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/debouncing.md#When to use debouncing",
+      "canonical": "pacer:docs/framework/angular/guides/debouncing.md#When to use debouncing",
+      "theme": "debounce-throttle",
+      "sha256": "f25a1c3c814138aaac582eb3adc4cb52b8974bfe81c8b8ce664cd9488398ae3b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/throttling.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Overview",
+      "theme": "debounce-throttle",
+      "sha256": "9f9e3c39e49935d08d4f6d628fbfc02dd9ae371eddbd8643cfb02ed2c1da7ddd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/throttling.md#How throttling works",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#How throttling works",
+      "theme": "debounce-throttle",
+      "sha256": "fb2939a7e9d119435ae76aefacd381d4310a40a83fd488d458bcfb03106fe480"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/throttling.md#When to use throttling",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#When to use throttling",
+      "theme": "debounce-throttle",
+      "sha256": "b6a0390e42063de03a1ff43495e4e15c355b6b79addb234117bd1c6a3ca7b134"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/throttling.md#Controlling pending work",
+      "canonical": "pacer:docs/framework/angular/guides/throttling.md#Controlling pending work",
+      "theme": "debounce-throttle",
+      "sha256": "5fd7812e2790aad916677d9a91ffaefe75e8ef0cfe6187d1a4d843375e18d5e3"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "4709ab0ae1c41fc657e516def1eb3b5d61a65c819cff54606e57417d24d4ef33"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-batching.md#How async batching works",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#How async batching works",
+      "theme": "queue-batch",
+      "sha256": "96242013efb03e1317db4fcdc8d9f3df42ead4331c88c6cc330dc31b2ad9af86"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-batching.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Promise results",
+      "theme": "queue-batch",
+      "sha256": "0fc10a600d6d9c88964242e5f28a55a3508430f13dc798695f08973b380488d6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-batching.md#Errors and failed items",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Errors and failed items",
+      "theme": "queue-batch",
+      "sha256": "76e19639bee5937bf36e9f76e5530ce9d204f27b841857aa862e1bd7707b3813"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-batching.md#Flushing, canceling, and clearing",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Flushing, canceling, and clearing",
+      "theme": "queue-batch",
+      "sha256": "1f81450456029680e37f1c476ce1ca91a1afe37c19ba1606bb49a78ec3e71cb8"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "273104794ecb29424acaa42e55e48eb2d0322104aa398cda543f5f7f680f3023"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-queuing.md#How async queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#How async queuing works",
+      "theme": "queue-batch",
+      "sha256": "4e3fbeefaede6d4eef9ee8b35ec7d25c8e56b378e3590876c02c1056d51304f7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-queuing.md#Capacity and rejection",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Capacity and rejection",
+      "theme": "queue-batch",
+      "sha256": "e1d3287b0a394b05a090adfd777544f736c4d1ab691e4a5d67cb7c5f24609796"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-queuing.md#Results and errors",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Results and errors",
+      "theme": "queue-batch",
+      "sha256": "6018b2ffd9e8fb79e8feb328bf7d90669b10e4330255f338c779e1667dfaa082"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-queuing.md#Starting, stopping, and flushing",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Starting, stopping, and flushing",
+      "theme": "queue-batch",
+      "sha256": "de09bedbb8e84700397c5d546937432e5d9b00843a0094cae6bf87a197e2b5bc"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-queuing.md#Expiration",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Expiration",
+      "theme": "queue-batch",
+      "sha256": "0b0166f793b283db2230e03b637f4cb7b12de4d757f2ea2fe1762e5db5c97110"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "f7e2bc6797484a91f35e092fc70b749e5ae4d6db5a1f0b7a3f5578548b351800"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/batching.md#How batching works",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#How batching works",
+      "theme": "queue-batch",
+      "sha256": "fdc90728fdef7d71fe92fc5b38453f7c6d86fa1443531ab9daec8cd6dc7a297a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/batching.md#When to use batching",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#When to use batching",
+      "theme": "queue-batch",
+      "sha256": "414ff230ac5a43ae4e232bd0b95ffc259a9a6ce6c7657ed68a08c47c650caeea"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/batching.md#Controlling collected items",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Controlling collected items",
+      "theme": "queue-batch",
+      "sha256": "1bdd9deab2c0db2a6f3597b34e5625895149a5c2de056b4bbb49be58b0e20d5b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "96632d8ac1472b9b517cb86bcd61ce419b6bb45f152f72c7b561ee65c4fe9acd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/queuing.md#How queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#How queuing works",
+      "theme": "queue-batch",
+      "sha256": "26422ead58d9ab0809a71d5640cf9e69810388aa09a957e007c79fd87a4a1e8d"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/queuing.md#When to use queuing",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#When to use queuing",
+      "theme": "queue-batch",
+      "sha256": "2e800737fd33147139d2333724f8f47255b030eaa3a40a057196f346dc609d68"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/queuing.md#Flushing, clearing, and resetting",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Flushing, clearing, and resetting",
+      "theme": "queue-batch",
+      "sha256": "4cf4e60ae5121023b163f0b14aae03a42949257d796222264395642d3417f9c9"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "4709ab0ae1c41fc657e516def1eb3b5d61a65c819cff54606e57417d24d4ef33"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#How async batching works",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#How async batching works",
+      "theme": "queue-batch",
+      "sha256": "96242013efb03e1317db4fcdc8d9f3df42ead4331c88c6cc330dc31b2ad9af86"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Choose an API",
+      "canonical": "pacer:docs/framework/preact/guides/async-batching.md#Choose an API",
+      "theme": "queue-batch",
+      "sha256": "e33d9353379234216f3e2baddb255ebff981dcb40fdb69f6c380959daf78b554"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Promise results",
+      "theme": "queue-batch",
+      "sha256": "0fc10a600d6d9c88964242e5f28a55a3508430f13dc798695f08973b380488d6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Batch boundaries and overlapping work",
+      "canonical": "pacer:docs/framework/preact/guides/async-batching.md#Batch boundaries and overlapping work",
+      "theme": "queue-batch",
+      "sha256": "00483d8404ba1ed1de6ca255928f00c3b4976e795f4a682c2ddbd826f61a988b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Errors and failed items",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Errors and failed items",
+      "theme": "queue-batch",
+      "sha256": "76e19639bee5937bf36e9f76e5530ce9d204f27b841857aa862e1bd7707b3813"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Retrying batches",
+      "canonical": "pacer:docs/framework/preact/guides/async-batching.md#Retrying batches",
+      "theme": "queue-batch",
+      "sha256": "b0993bede2c8eecde9aafd82156eedf8cdbcb560a81fb3a1240cf11156fa00c3"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Flushing, canceling, and clearing",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Flushing, canceling, and clearing",
+      "theme": "queue-batch",
+      "sha256": "1f81450456029680e37f1c476ce1ca91a1afe37c19ba1606bb49a78ec3e71cb8"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-batching.md#Aborting active work",
+      "canonical": "pacer:docs/framework/preact/guides/async-batching.md#Aborting active work",
+      "theme": "queue-batch",
+      "sha256": "9d5d0786ccadc36f49057ce5807a61624f44189208e220d2b2e3ff8bac7fcb16"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "273104794ecb29424acaa42e55e48eb2d0322104aa398cda543f5f7f680f3023"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#How async queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#How async queuing works",
+      "theme": "queue-batch",
+      "sha256": "4e3fbeefaede6d4eef9ee8b35ec7d25c8e56b378e3590876c02c1056d51304f7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Choose an API",
+      "canonical": "pacer:docs/framework/preact/guides/async-queuing.md#Choose an API",
+      "theme": "queue-batch",
+      "sha256": "02451f1736f54415345098a2353581846d4d730c34810ac6e3aac0731f5d536d"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Ordering pending items",
+      "canonical": "pacer:docs/framework/preact/guides/async-queuing.md#Ordering pending items",
+      "theme": "queue-batch",
+      "sha256": "36617153bbd2da7cc940365770709b66c83c26657c00e3b7b002e84de433276e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Capacity and rejection",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Capacity and rejection",
+      "theme": "queue-batch",
+      "sha256": "e1d3287b0a394b05a090adfd777544f736c4d1ab691e4a5d67cb7c5f24609796"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Results and errors",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Results and errors",
+      "theme": "queue-batch",
+      "sha256": "6018b2ffd9e8fb79e8feb328bf7d90669b10e4330255f338c779e1667dfaa082"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Retrying items",
+      "canonical": "pacer:docs/framework/preact/guides/async-queuing.md#Retrying items",
+      "theme": "queue-batch",
+      "sha256": "2e190e47ef49080ccb4563e9c8620244febbaa6b30cb28cf4d899a813330428e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Starting, stopping, and flushing",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Starting, stopping, and flushing",
+      "theme": "queue-batch",
+      "sha256": "de09bedbb8e84700397c5d546937432e5d9b00843a0094cae6bf87a197e2b5bc"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Expiration",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Expiration",
+      "theme": "queue-batch",
+      "sha256": "0b0166f793b283db2230e03b637f4cb7b12de4d757f2ea2fe1762e5db5c97110"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-queuing.md#Aborting active work",
+      "canonical": "pacer:docs/framework/preact/guides/async-queuing.md#Aborting active work",
+      "theme": "queue-batch",
+      "sha256": "f30259b855c243635ff040a0ceff9eef5763c5fd0d6c9cacd705583007273d4e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "f7e2bc6797484a91f35e092fc70b749e5ae4d6db5a1f0b7a3f5578548b351800"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#How batching works",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#How batching works",
+      "theme": "queue-batch",
+      "sha256": "fdc90728fdef7d71fe92fc5b38453f7c6d86fa1443531ab9daec8cd6dc7a297a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#When to use batching",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#When to use batching",
+      "theme": "queue-batch",
+      "sha256": "414ff230ac5a43ae4e232bd0b95ffc259a9a6ce6c7657ed68a08c47c650caeea"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#Choose an API",
+      "canonical": "pacer:docs/framework/preact/guides/batching.md#Choose an API",
+      "theme": "queue-batch",
+      "sha256": "37ca6cc54754bdd8014a8959d5daacc07b459cdc1dc549c06f044e8ac4e90bad"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#Choosing batch triggers",
+      "canonical": "pacer:docs/framework/preact/guides/batching.md#Choosing batch triggers",
+      "theme": "queue-batch",
+      "sha256": "c005a8a7b849c858d9c603161dbb82419a8f9b0519895f0cdf7c3c50cec92e3a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#Controlling collected items",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Controlling collected items",
+      "theme": "queue-batch",
+      "sha256": "1bdd9deab2c0db2a6f3597b34e5625895149a5c2de056b4bbb49be58b0e20d5b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/batching.md#Configuring and observing batches",
+      "canonical": "pacer:docs/framework/preact/guides/batching.md#Configuring and observing batches",
+      "theme": "queue-batch",
+      "sha256": "66ba2afb302edad26c5728f314ad0c49e5a2dd5cae1cc81150ab58b4ec129b76"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "96632d8ac1472b9b517cb86bcd61ce419b6bb45f152f72c7b561ee65c4fe9acd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#How queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#How queuing works",
+      "theme": "queue-batch",
+      "sha256": "26422ead58d9ab0809a71d5640cf9e69810388aa09a957e007c79fd87a4a1e8d"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#When to use queuing",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#When to use queuing",
+      "theme": "queue-batch",
+      "sha256": "2e800737fd33147139d2333724f8f47255b030eaa3a40a057196f346dc609d68"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Ordering items",
+      "canonical": "pacer:docs/framework/preact/guides/queuing.md#Ordering items",
+      "theme": "queue-batch",
+      "sha256": "d3b612311701e79e2a937696e866a8f7eb1a5390c1fc16173ef084c9665ad816"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Automatic and manual processing",
+      "canonical": "pacer:docs/framework/preact/guides/queuing.md#Automatic and manual processing",
+      "theme": "queue-batch",
+      "sha256": "4b1da0a6828bf35697cbbd0ee2cf7cd39a5988843fd0eed59d0ba78201acac51"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Capacity and rejection",
+      "canonical": "pacer:docs/framework/preact/guides/queuing.md#Capacity and rejection",
+      "theme": "queue-batch",
+      "sha256": "c77db01348c811861de54f35aa752bab5e680a9a57186b5cb2b1f655fa32fef5"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Expiring stale items",
+      "canonical": "pacer:docs/framework/preact/guides/queuing.md#Expiring stale items",
+      "theme": "queue-batch",
+      "sha256": "4be9e978257831c1fa75eb5cbab63fe62e0eaec1e5769aefb112bdd2ea346434"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Flushing, clearing, and resetting",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Flushing, clearing, and resetting",
+      "theme": "queue-batch",
+      "sha256": "4cf4e60ae5121023b163f0b14aae03a42949257d796222264395642d3417f9c9"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/queuing.md#Configuring and observing the queue",
+      "canonical": "pacer:docs/framework/preact/guides/queuing.md#Configuring and observing the queue",
+      "theme": "queue-batch",
+      "sha256": "04cab5c7c9761522ebc173ff4e4400b39bd5abb5f4908f05e1b65817fc21b279"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "4709ab0ae1c41fc657e516def1eb3b5d61a65c819cff54606e57417d24d4ef33"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-batching.md#How async batching works",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#How async batching works",
+      "theme": "queue-batch",
+      "sha256": "96242013efb03e1317db4fcdc8d9f3df42ead4331c88c6cc330dc31b2ad9af86"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-batching.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Promise results",
+      "theme": "queue-batch",
+      "sha256": "0fc10a600d6d9c88964242e5f28a55a3508430f13dc798695f08973b380488d6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-batching.md#Errors and failed items",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Errors and failed items",
+      "theme": "queue-batch",
+      "sha256": "76e19639bee5937bf36e9f76e5530ce9d204f27b841857aa862e1bd7707b3813"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-batching.md#Flushing, canceling, and clearing",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Flushing, canceling, and clearing",
+      "theme": "queue-batch",
+      "sha256": "1f81450456029680e37f1c476ce1ca91a1afe37c19ba1606bb49a78ec3e71cb8"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "273104794ecb29424acaa42e55e48eb2d0322104aa398cda543f5f7f680f3023"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-queuing.md#How async queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#How async queuing works",
+      "theme": "queue-batch",
+      "sha256": "4e3fbeefaede6d4eef9ee8b35ec7d25c8e56b378e3590876c02c1056d51304f7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-queuing.md#Capacity and rejection",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Capacity and rejection",
+      "theme": "queue-batch",
+      "sha256": "e1d3287b0a394b05a090adfd777544f736c4d1ab691e4a5d67cb7c5f24609796"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-queuing.md#Results and errors",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Results and errors",
+      "theme": "queue-batch",
+      "sha256": "6018b2ffd9e8fb79e8feb328bf7d90669b10e4330255f338c779e1667dfaa082"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-queuing.md#Starting, stopping, and flushing",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Starting, stopping, and flushing",
+      "theme": "queue-batch",
+      "sha256": "de09bedbb8e84700397c5d546937432e5d9b00843a0094cae6bf87a197e2b5bc"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-queuing.md#Expiration",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Expiration",
+      "theme": "queue-batch",
+      "sha256": "0b0166f793b283db2230e03b637f4cb7b12de4d757f2ea2fe1762e5db5c97110"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "f7e2bc6797484a91f35e092fc70b749e5ae4d6db5a1f0b7a3f5578548b351800"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/batching.md#How batching works",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#How batching works",
+      "theme": "queue-batch",
+      "sha256": "fdc90728fdef7d71fe92fc5b38453f7c6d86fa1443531ab9daec8cd6dc7a297a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/batching.md#When to use batching",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#When to use batching",
+      "theme": "queue-batch",
+      "sha256": "414ff230ac5a43ae4e232bd0b95ffc259a9a6ce6c7657ed68a08c47c650caeea"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/batching.md#Controlling collected items",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Controlling collected items",
+      "theme": "queue-batch",
+      "sha256": "1bdd9deab2c0db2a6f3597b34e5625895149a5c2de056b4bbb49be58b0e20d5b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "96632d8ac1472b9b517cb86bcd61ce419b6bb45f152f72c7b561ee65c4fe9acd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/queuing.md#How queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#How queuing works",
+      "theme": "queue-batch",
+      "sha256": "26422ead58d9ab0809a71d5640cf9e69810388aa09a957e007c79fd87a4a1e8d"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/queuing.md#When to use queuing",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#When to use queuing",
+      "theme": "queue-batch",
+      "sha256": "2e800737fd33147139d2333724f8f47255b030eaa3a40a057196f346dc609d68"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/queuing.md#Flushing, clearing, and resetting",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Flushing, clearing, and resetting",
+      "theme": "queue-batch",
+      "sha256": "4cf4e60ae5121023b163f0b14aae03a42949257d796222264395642d3417f9c9"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "4709ab0ae1c41fc657e516def1eb3b5d61a65c819cff54606e57417d24d4ef33"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-batching.md#How async batching works",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#How async batching works",
+      "theme": "queue-batch",
+      "sha256": "96242013efb03e1317db4fcdc8d9f3df42ead4331c88c6cc330dc31b2ad9af86"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-batching.md#Promise results",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Promise results",
+      "theme": "queue-batch",
+      "sha256": "0fc10a600d6d9c88964242e5f28a55a3508430f13dc798695f08973b380488d6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-batching.md#Errors and failed items",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Errors and failed items",
+      "theme": "queue-batch",
+      "sha256": "76e19639bee5937bf36e9f76e5530ce9d204f27b841857aa862e1bd7707b3813"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-batching.md#Flushing, canceling, and clearing",
+      "canonical": "pacer:docs/framework/angular/guides/async-batching.md#Flushing, canceling, and clearing",
+      "theme": "queue-batch",
+      "sha256": "1f81450456029680e37f1c476ce1ca91a1afe37c19ba1606bb49a78ec3e71cb8"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "273104794ecb29424acaa42e55e48eb2d0322104aa398cda543f5f7f680f3023"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-queuing.md#How async queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#How async queuing works",
+      "theme": "queue-batch",
+      "sha256": "4e3fbeefaede6d4eef9ee8b35ec7d25c8e56b378e3590876c02c1056d51304f7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-queuing.md#Capacity and rejection",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Capacity and rejection",
+      "theme": "queue-batch",
+      "sha256": "e1d3287b0a394b05a090adfd777544f736c4d1ab691e4a5d67cb7c5f24609796"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-queuing.md#Starting, stopping, and flushing",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Starting, stopping, and flushing",
+      "theme": "queue-batch",
+      "sha256": "de09bedbb8e84700397c5d546937432e5d9b00843a0094cae6bf87a197e2b5bc"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-queuing.md#Expiration",
+      "canonical": "pacer:docs/framework/angular/guides/async-queuing.md#Expiration",
+      "theme": "queue-batch",
+      "sha256": "0b0166f793b283db2230e03b637f4cb7b12de4d757f2ea2fe1762e5db5c97110"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/batching.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "f7e2bc6797484a91f35e092fc70b749e5ae4d6db5a1f0b7a3f5578548b351800"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/batching.md#How batching works",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#How batching works",
+      "theme": "queue-batch",
+      "sha256": "fdc90728fdef7d71fe92fc5b38453f7c6d86fa1443531ab9daec8cd6dc7a297a"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/batching.md#When to use batching",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#When to use batching",
+      "theme": "queue-batch",
+      "sha256": "414ff230ac5a43ae4e232bd0b95ffc259a9a6ce6c7657ed68a08c47c650caeea"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/batching.md#Controlling collected items",
+      "canonical": "pacer:docs/framework/angular/guides/batching.md#Controlling collected items",
+      "theme": "queue-batch",
+      "sha256": "1bdd9deab2c0db2a6f3597b34e5625895149a5c2de056b4bbb49be58b0e20d5b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/queuing.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Overview",
+      "theme": "queue-batch",
+      "sha256": "96632d8ac1472b9b517cb86bcd61ce419b6bb45f152f72c7b561ee65c4fe9acd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/queuing.md#How queuing works",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#How queuing works",
+      "theme": "queue-batch",
+      "sha256": "26422ead58d9ab0809a71d5640cf9e69810388aa09a957e007c79fd87a4a1e8d"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/queuing.md#When to use queuing",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#When to use queuing",
+      "theme": "queue-batch",
+      "sha256": "2e800737fd33147139d2333724f8f47255b030eaa3a40a057196f346dc609d68"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/queuing.md#Flushing, clearing, and resetting",
+      "canonical": "pacer:docs/framework/angular/guides/queuing.md#Flushing, clearing, and resetting",
+      "theme": "queue-batch",
+      "sha256": "4cf4e60ae5121023b163f0b14aae03a42949257d796222264395642d3417f9c9"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2682ccc81972eccab48c9fa45f26945511ce67485fb14311aae07ff80be3d667"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "theme": "rate-limiting",
+      "sha256": "7c819bfbfc6810523ea1469004d011a7d64ae89485fb704f038be8060f12aa4e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Window behavior",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Window behavior",
+      "theme": "rate-limiting",
+      "sha256": "37c93007892fd44f60572d06a019fff8ec2ecd6bff132507a4cc7909b23efe10"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Errors and callbacks",
+      "theme": "rate-limiting",
+      "sha256": "5d2d6576eba2310beaaf545c999e826b7aec92772a0e8403dc5c08f088af3dc0"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Configuration",
+      "theme": "rate-limiting",
+      "sha256": "daf39fab4b78380e8e5484cd181a30b4861f48cb55e402da88f5a5593caf37cd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2050826c17cde0a4fa2530c1c3101eaffc37b4fb5bdde52ee62905d7eb1c2079"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/rate-limiting.md#How rate limiting works",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#How rate limiting works",
+      "theme": "rate-limiting",
+      "sha256": "a974c69137a19e2527f4bf6c39bec8cea14ba494c94d630281ac3a4094ac0123"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/rate-limiting.md#When to use rate limiting",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#When to use rate limiting",
+      "theme": "rate-limiting",
+      "sha256": "6198e0904b0640dec488c0e3fe7528ff1f976143e3f75147b3b27377832371c7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/rate-limiting.md#Inspecting capacity",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Inspecting capacity",
+      "theme": "rate-limiting",
+      "sha256": "301df1eeb21d24058a6c248ab85f9ffc6a63178b7566f5c7ccffb5869c7a8564"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2682ccc81972eccab48c9fa45f26945511ce67485fb14311aae07ff80be3d667"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Choose an API",
+      "canonical": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Choose an API",
+      "theme": "rate-limiting",
+      "sha256": "650b2f3f5402b3cc2bbfca377b6597074c8c9467f77bc009cc95d211d85ff2af"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "theme": "rate-limiting",
+      "sha256": "7c819bfbfc6810523ea1469004d011a7d64ae89485fb704f038be8060f12aa4e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Window behavior",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Window behavior",
+      "theme": "rate-limiting",
+      "sha256": "37c93007892fd44f60572d06a019fff8ec2ecd6bff132507a4cc7909b23efe10"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Errors and callbacks",
+      "theme": "rate-limiting",
+      "sha256": "5d2d6576eba2310beaaf545c999e826b7aec92772a0e8403dc5c08f088af3dc0"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Retrying accepted executions",
+      "canonical": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Retrying accepted executions",
+      "theme": "rate-limiting",
+      "sha256": "b80e6ee5556f9951d3459f16a05eedbf45c76472e8a8157ad9e47f31e68d7336"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Aborting active work",
+      "canonical": "pacer:docs/framework/preact/guides/async-rate-limiting.md#Aborting active work",
+      "theme": "rate-limiting",
+      "sha256": "2a2d151d44b9448a05f34f3f209ef3292a0112b5bdeea5f1ef594e632593e6bb"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-rate-limiting.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Configuration",
+      "theme": "rate-limiting",
+      "sha256": "daf39fab4b78380e8e5484cd181a30b4861f48cb55e402da88f5a5593caf37cd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2050826c17cde0a4fa2530c1c3101eaffc37b4fb5bdde52ee62905d7eb1c2079"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#How rate limiting works",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#How rate limiting works",
+      "theme": "rate-limiting",
+      "sha256": "a974c69137a19e2527f4bf6c39bec8cea14ba494c94d630281ac3a4094ac0123"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#When to use rate limiting",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#When to use rate limiting",
+      "theme": "rate-limiting",
+      "sha256": "6198e0904b0640dec488c0e3fe7528ff1f976143e3f75147b3b27377832371c7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#Window types",
+      "canonical": "pacer:docs/framework/preact/guides/rate-limiting.md#Window types",
+      "theme": "rate-limiting",
+      "sha256": "b7a744bda12b55c78e231f30eff0c41d4f50ad2b061b9371a3eb1991f730fed2"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#Handling rejected calls",
+      "canonical": "pacer:docs/framework/preact/guides/rate-limiting.md#Handling rejected calls",
+      "theme": "rate-limiting",
+      "sha256": "76b466f67dbf3688e8bcdad51719803c72e2c9f95f488e230ed54f203ba5481e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#Inspecting capacity",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Inspecting capacity",
+      "theme": "rate-limiting",
+      "sha256": "301df1eeb21d24058a6c248ab85f9ffc6a63178b7566f5c7ccffb5869c7a8564"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/rate-limiting.md#Resetting and configuring the limiter",
+      "canonical": "pacer:docs/framework/preact/guides/rate-limiting.md#Resetting and configuring the limiter",
+      "theme": "rate-limiting",
+      "sha256": "cf507ce09cc4041501e342c1547bb8938e950cdcdfb04cb78e75dab0436f8d00"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2682ccc81972eccab48c9fa45f26945511ce67485fb14311aae07ff80be3d667"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "theme": "rate-limiting",
+      "sha256": "7c819bfbfc6810523ea1469004d011a7d64ae89485fb704f038be8060f12aa4e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-rate-limiting.md#Window behavior",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Window behavior",
+      "theme": "rate-limiting",
+      "sha256": "37c93007892fd44f60572d06a019fff8ec2ecd6bff132507a4cc7909b23efe10"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-rate-limiting.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Errors and callbacks",
+      "theme": "rate-limiting",
+      "sha256": "5d2d6576eba2310beaaf545c999e826b7aec92772a0e8403dc5c08f088af3dc0"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-rate-limiting.md#Configuration",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Configuration",
+      "theme": "rate-limiting",
+      "sha256": "daf39fab4b78380e8e5484cd181a30b4861f48cb55e402da88f5a5593caf37cd"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2050826c17cde0a4fa2530c1c3101eaffc37b4fb5bdde52ee62905d7eb1c2079"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/rate-limiting.md#How rate limiting works",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#How rate limiting works",
+      "theme": "rate-limiting",
+      "sha256": "a974c69137a19e2527f4bf6c39bec8cea14ba494c94d630281ac3a4094ac0123"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/rate-limiting.md#When to use rate limiting",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#When to use rate limiting",
+      "theme": "rate-limiting",
+      "sha256": "6198e0904b0640dec488c0e3fe7528ff1f976143e3f75147b3b27377832371c7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/rate-limiting.md#Inspecting capacity",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Inspecting capacity",
+      "theme": "rate-limiting",
+      "sha256": "301df1eeb21d24058a6c248ab85f9ffc6a63178b7566f5c7ccffb5869c7a8564"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2682ccc81972eccab48c9fa45f26945511ce67485fb14311aae07ff80be3d667"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Accepted and rejected calls",
+      "theme": "rate-limiting",
+      "sha256": "7c819bfbfc6810523ea1469004d011a7d64ae89485fb704f038be8060f12aa4e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-rate-limiting.md#Window behavior",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Window behavior",
+      "theme": "rate-limiting",
+      "sha256": "37c93007892fd44f60572d06a019fff8ec2ecd6bff132507a4cc7909b23efe10"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-rate-limiting.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-rate-limiting.md#Errors and callbacks",
+      "theme": "rate-limiting",
+      "sha256": "5d2d6576eba2310beaaf545c999e826b7aec92772a0e8403dc5c08f088af3dc0"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/rate-limiting.md#Overview",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#Overview",
+      "theme": "rate-limiting",
+      "sha256": "2050826c17cde0a4fa2530c1c3101eaffc37b4fb5bdde52ee62905d7eb1c2079"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/rate-limiting.md#How rate limiting works",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#How rate limiting works",
+      "theme": "rate-limiting",
+      "sha256": "a974c69137a19e2527f4bf6c39bec8cea14ba494c94d630281ac3a4094ac0123"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/rate-limiting.md#When to use rate limiting",
+      "canonical": "pacer:docs/framework/angular/guides/rate-limiting.md#When to use rate limiting",
+      "theme": "rate-limiting",
+      "sha256": "6198e0904b0640dec488c0e3fe7528ff1f976143e3f75147b3b27377832371c7"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-retrying.md#Decide whether retrying is safe",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Decide whether retrying is safe",
+      "theme": "async-retry",
+      "sha256": "cb951878a37ec1f27785ec0ec0bc6bd45d2138d5ddd68d95de663e40cc78540c"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-retrying.md#Attempts and backoff",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Attempts and backoff",
+      "theme": "async-retry",
+      "sha256": "ea6fc0f36d493e3eb6b1a7d1a1f488d1febad7a928961c1a358f4f550cd1caa1"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-retrying.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Errors and callbacks",
+      "theme": "async-retry",
+      "sha256": "7eddaa6b047e06038872d73db85ff8e6eaa65dc7f3409da40ed4fc9eed72a309"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-retrying.md#Timeouts",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Timeouts",
+      "theme": "async-retry",
+      "sha256": "64e58acf140cf6aa2c5e3a52ead01d55f84e26963c890bc4fb67de3863434ca6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-retrying.md#Aborting the underlying operation",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Aborting the underlying operation",
+      "theme": "async-retry",
+      "sha256": "07f50612a4d5a7ef0526b6373332ec123cc2416e5deaeeaf0aff96941b4199aa"
+    },
+    {
+      "duplicate": "pacer:docs/framework/preact/guides/async-retrying.md#Resetting and changing options",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Resetting and changing options",
+      "theme": "async-retry",
+      "sha256": "982f902fa03eeafe500d92ccbcec233b5b892a3d1d1d1e562049c38ee5b5a828"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-retrying.md#Decide whether retrying is safe",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Decide whether retrying is safe",
+      "theme": "async-retry",
+      "sha256": "cb951878a37ec1f27785ec0ec0bc6bd45d2138d5ddd68d95de663e40cc78540c"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-retrying.md#Attempts and backoff",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Attempts and backoff",
+      "theme": "async-retry",
+      "sha256": "ea6fc0f36d493e3eb6b1a7d1a1f488d1febad7a928961c1a358f4f550cd1caa1"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-retrying.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Errors and callbacks",
+      "theme": "async-retry",
+      "sha256": "7eddaa6b047e06038872d73db85ff8e6eaa65dc7f3409da40ed4fc9eed72a309"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-retrying.md#Timeouts",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Timeouts",
+      "theme": "async-retry",
+      "sha256": "64e58acf140cf6aa2c5e3a52ead01d55f84e26963c890bc4fb67de3863434ca6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-retrying.md#Aborting the underlying operation",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Aborting the underlying operation",
+      "theme": "async-retry",
+      "sha256": "07f50612a4d5a7ef0526b6373332ec123cc2416e5deaeeaf0aff96941b4199aa"
+    },
+    {
+      "duplicate": "pacer:docs/framework/react/guides/async-retrying.md#Resetting and changing options",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Resetting and changing options",
+      "theme": "async-retry",
+      "sha256": "982f902fa03eeafe500d92ccbcec233b5b892a3d1d1d1e562049c38ee5b5a828"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-retrying.md#Decide whether retrying is safe",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Decide whether retrying is safe",
+      "theme": "async-retry",
+      "sha256": "cb951878a37ec1f27785ec0ec0bc6bd45d2138d5ddd68d95de663e40cc78540c"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-retrying.md#Attempts and backoff",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Attempts and backoff",
+      "theme": "async-retry",
+      "sha256": "ea6fc0f36d493e3eb6b1a7d1a1f488d1febad7a928961c1a358f4f550cd1caa1"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-retrying.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Errors and callbacks",
+      "theme": "async-retry",
+      "sha256": "7eddaa6b047e06038872d73db85ff8e6eaa65dc7f3409da40ed4fc9eed72a309"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-retrying.md#Timeouts",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Timeouts",
+      "theme": "async-retry",
+      "sha256": "64e58acf140cf6aa2c5e3a52ead01d55f84e26963c890bc4fb67de3863434ca6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-retrying.md#Aborting the underlying operation",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Aborting the underlying operation",
+      "theme": "async-retry",
+      "sha256": "07f50612a4d5a7ef0526b6373332ec123cc2416e5deaeeaf0aff96941b4199aa"
+    },
+    {
+      "duplicate": "pacer:docs/framework/solid/guides/async-retrying.md#Resetting and changing options",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Resetting and changing options",
+      "theme": "async-retry",
+      "sha256": "982f902fa03eeafe500d92ccbcec233b5b892a3d1d1d1e562049c38ee5b5a828"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-retrying.md#Decide whether retrying is safe",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Decide whether retrying is safe",
+      "theme": "async-retry",
+      "sha256": "cb951878a37ec1f27785ec0ec0bc6bd45d2138d5ddd68d95de663e40cc78540c"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-retrying.md#Errors and callbacks",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Errors and callbacks",
+      "theme": "async-retry",
+      "sha256": "7eddaa6b047e06038872d73db85ff8e6eaa65dc7f3409da40ed4fc9eed72a309"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-retrying.md#Timeouts",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Timeouts",
+      "theme": "async-retry",
+      "sha256": "64e58acf140cf6aa2c5e3a52ead01d55f84e26963c890bc4fb67de3863434ca6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-retrying.md#Aborting the underlying operation",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Aborting the underlying operation",
+      "theme": "async-retry",
+      "sha256": "07f50612a4d5a7ef0526b6373332ec123cc2416e5deaeeaf0aff96941b4199aa"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vanilla/guides/async-retrying.md#Resetting and changing options",
+      "canonical": "pacer:docs/framework/angular/guides/async-retrying.md#Resetting and changing options",
+      "theme": "async-retry",
+      "sha256": "982f902fa03eeafe500d92ccbcec233b5b892a3d1d1d1e562049c38ee5b5a828"
+    }
+  ],
   "licenses": [
     {
       "sha256": "9fe9970f409e5b1d2067c0107ac0201761d5fddc53e9b20b66619fb0d2b4122f",
@@ -339,15 +2569,15 @@
     },
     "repositoryArchives": [
       {
-        "url": "https://codeload.github.com/TanStack/pacer/tar.gz/c75895520669b08dc8946b42e1a6d529ca977230",
-        "commit": "c75895520669b08dc8946b42e1a6d529ca977230",
-        "sha256": "8c07996891c261f286340831baa022d287316195e5b9f2021f72fa5cd04e722c"
+        "url": "https://codeload.github.com/TanStack/pacer/tar.gz/b58e0222da48550d4d39b6241f8ff5a4142449b6",
+        "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+        "sha256": "a43adeababcbd3d6d9bf5b661cc23469e9a5df8927c3ae2ebe7aacf768134721"
       }
     ],
     "linkValidation": {
-      "localDocuments": 74,
+      "localDocuments": 332,
       "localAssets": 0,
-      "pinnedRepository": 13,
+      "pinnedRepository": 70,
       "pinnedExternalRepository": 0,
       "externalRepositoryPins": [],
       "unavailableAssets": []

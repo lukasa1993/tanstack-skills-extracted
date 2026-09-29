@@ -2,37 +2,18 @@
 
 <a id="source-pacer-docs-guides-rate-limiting-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../rate-limiting.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Rate limiting accepts operations until a time-window quota is full, then rejects later calls until capacity returns. Choose your framework for API-specific examples.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+## Choose your framework
 
-- [Overview](./pacer-docs-guides-rate-limiting-md-9f0c5f8e--overview.md) — 1 KiB
-- [Rate Limiting Concept](./pacer-docs-guides-rate-limiting-md-9f0c5f8e--rate-limiting-concept.md) — 4 KiB
-- [Rate Limiting in TanStack Pacer](./pacer-docs-guides-rate-limiting-md-9f0c5f8e--rate-limiting-in-tanstack-pacer.md) — 7 KiB
-- [State Management](./pacer-docs-guides-rate-limiting-md-9f0c5f8e--state-management.md) — 5 KiB
-- [Framework Adapters](./pacer-docs-guides-rate-limiting-md-9f0c5f8e--framework-adapters.md) — 1 KiB
+- [Vanilla](./pacer-docs-framework-vanilla-guides-rate-limiting-md-8536d6c1.md#source-pacer-docs-framework-vanilla-guides-rate-limiting-md)
+- [React](./pacer-docs-framework-react-guides-rate-limiting-md-0c090509.md#source-pacer-docs-framework-react-guides-rate-limiting-md)
+- [Preact](./pacer-docs-framework-preact-guides-rate-limiting-md-2f30cd04.md#source-pacer-docs-framework-preact-guides-rate-limiting-md)
+- [Solid](./pacer-docs-framework-solid-guides-rate-limiting-md-8d1652bf.md#source-pacer-docs-framework-solid-guides-rate-limiting-md)
+- [Angular](./pacer-docs-framework-angular-guides-rate-limiting-md-3d0393c9.md#source-pacer-docs-framework-angular-guides-rate-limiting-md)
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="rate-limiting-concept"></a>
-<a id="rate-limiting-visualization"></a>
-<a id="window-types"></a>
-<a id="when-to-use-rate-limiting"></a>
-<a id="when-not-to-use-rate-limiting"></a>
-<a id="rate-limiting-in-tanstack-pacer"></a>
-<a id="basic-usage-with-ratelimit"></a>
-<a id="advanced-usage-with-ratelimiter-class"></a>
-<a id="sharing-options-between-instances"></a>
-<a id="enablingdisabling"></a>
-<a id="dynamic-options"></a>
-<a id="callback-options"></a>
-<a id="state-management"></a>
-<a id="state-selector-framework-adapters"></a>
-<a id="initial-state"></a>
-<a id="subscribing-to-state-changes"></a>
-<a id="available-state-properties"></a>
-<a id="helper-methods"></a>
-<a id="framework-adapters"></a>
+Not sure which operation fits your use case? Start with [Which Pacer Utility Should I Choose?](./pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md#source-pacer-docs-guides-which-pacer-utility-should-i-choose-md).

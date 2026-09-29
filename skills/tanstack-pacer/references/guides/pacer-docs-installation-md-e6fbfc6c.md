@@ -2,11 +2,13 @@
 
 <a id="source-pacer-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
-TanStack Pacer is compatible with various front-end frameworks. Install the corresponding adapter for your framework using your preferred package manager:
+Pacer packages are ESM-only, target ES2022, and require Node.js 20 or newer when running in Node.js. Use ESM imports or dynamic `import()` when consuming them.
+
+Install the adapter for your framework with your preferred package manager:
 
 <!-- ::start:tabs variant="package-managers" -->
 
@@ -16,10 +18,10 @@ angular: @tanstack/angular-pacer
 
 <!-- ::end:tabs -->
 
-Each framework package re-exports everything from the core `@tanstack/pacer` package, so there is no need to install the core package separately.
+Each framework package re-exports everything from the core `@tanstack/pacer` package, so you do not need to install the core package separately.
 
 > [!NOTE]
-> If you are not using a framework, you can install the core `@tanstack/pacer` package directly for use with vanilla JavaScript.
+> Not using a framework? Install the core `@tanstack/pacer` package directly for vanilla JavaScript.
 
 <!-- ::start:framework -->
 
@@ -27,13 +29,13 @@ Each framework package re-exports everything from the core `@tanstack/pacer` pac
 
 ## Devtools
 
-Developer tools are available using [TanStack Devtools](https://tanstack.com/devtools/latest). Install the devtools adapter and the Pacer devtools plugin as dev dependencies to inspect and monitor your pacers.
+Developer tools are available using [TanStack Devtools](https://tanstack.com/devtools/latest). Install the devtools adapter and the Pacer devtools plugin as dev dependencies to inspect your pacers at runtime.
 
 # Solid
 
 ## Devtools
 
-Developer tools are available using [TanStack Devtools](https://tanstack.com/devtools/latest). Install the devtools adapter and the Pacer devtools plugin as dev dependencies to inspect and monitor your pacers.
+Developer tools are available using [TanStack Devtools](https://tanstack.com/devtools/latest). Install the devtools adapter and the Pacer devtools plugin as dev dependencies to inspect your pacers at runtime.
 
 <!-- ::end:framework -->
 
@@ -50,10 +52,10 @@ solid: @tanstack/solid-pacer-devtools
 
 # React
 
-See the [devtools](./pacer-docs-devtools-md-2f4aa95a.md#source-pacer-docs-devtools-md) documentation for more information on how to set up and use the Pacer devtools.
+See the [devtools](./pacer-docs-devtools-md-2f4aa95a.md#source-pacer-docs-devtools-md) page for setup and usage.
 
 # Solid
 
-See the [devtools](./pacer-docs-devtools-md-2f4aa95a.md#source-pacer-docs-devtools-md) documentation for more information on how to set up and use the Pacer devtools.
+See the [devtools](./pacer-docs-devtools-md-2f4aa95a.md#source-pacer-docs-devtools-md) page for setup and usage.
 
 <!-- ::end:framework -->

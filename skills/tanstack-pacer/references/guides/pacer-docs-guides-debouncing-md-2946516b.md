@@ -2,39 +2,18 @@
 
 <a id="source-pacer-docs-guides-debouncing-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../debounce-throttle.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Debouncing waits until calls stop for a configured duration, then runs the latest call. Choose your framework to see lifecycle-aware examples and the most useful API for search, validation, autosave, and similar operations.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+## Choose your framework
 
-- [Overview](./pacer-docs-guides-debouncing-md-2946516b--overview.md) — 1 KiB
-- [Debouncing Concept](./pacer-docs-guides-debouncing-md-2946516b--debouncing-concept.md) — 3 KiB
-- [Debouncing in TanStack Pacer](./pacer-docs-guides-debouncing-md-2946516b--debouncing-in-tanstack-pacer.md) — 7 KiB
-- [State Management](./pacer-docs-guides-debouncing-md-2946516b--state-management.md) — 5 KiB
-- [Framework Adapters](./pacer-docs-guides-debouncing-md-2946516b--framework-adapters.md) — 1 KiB
+- [Vanilla](./pacer-docs-framework-vanilla-guides-debouncing-md-41782cae.md#source-pacer-docs-framework-vanilla-guides-debouncing-md)
+- [React](./pacer-docs-framework-react-guides-debouncing-md-76534b9b.md#source-pacer-docs-framework-react-guides-debouncing-md)
+- [Preact](./pacer-docs-framework-preact-guides-debouncing-md-8452f839.md#source-pacer-docs-framework-preact-guides-debouncing-md)
+- [Solid](./pacer-docs-framework-solid-guides-debouncing-md-cb70708c.md#source-pacer-docs-framework-solid-guides-debouncing-md)
+- [Angular](./pacer-docs-framework-angular-guides-debouncing-md-982e1c29.md#source-pacer-docs-framework-angular-guides-debouncing-md)
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="debouncing-concept"></a>
-<a id="debouncing-visualization"></a>
-<a id="when-to-use-debouncing"></a>
-<a id="when-not-to-use-debouncing"></a>
-<a id="debouncing-in-tanstack-pacer"></a>
-<a id="basic-usage-with-debounce"></a>
-<a id="advanced-usage-with-debouncer-class"></a>
-<a id="leading-and-trailing-executions"></a>
-<a id="max-wait-time"></a>
-<a id="sharing-options-between-instances"></a>
-<a id="enablingdisabling"></a>
-<a id="dynamic-options"></a>
-<a id="callback-options"></a>
-<a id="flushing-pending-executions"></a>
-<a id="customizing-unmount-behavior"></a>
-<a id="state-management"></a>
-<a id="state-selector-framework-adapters"></a>
-<a id="initial-state"></a>
-<a id="subscribing-to-state-changes"></a>
-<a id="available-state-properties"></a>
-<a id="framework-adapters"></a>
+Not sure which operation fits your use case? Start with [Which Pacer Utility Should I Choose?](./pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md#source-pacer-docs-guides-which-pacer-utility-should-i-choose-md).

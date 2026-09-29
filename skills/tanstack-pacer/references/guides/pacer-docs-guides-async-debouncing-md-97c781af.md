@@ -2,42 +2,18 @@
 
 <a id="source-pacer-docs-guides-async-debouncing-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../debounce-throttle.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Async debouncing adds Promise results, error handling, retries, and abort support to debounced operations. Choose your framework for lifecycle-aware examples.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+## Choose your framework
 
-- [Overview](./pacer-docs-guides-async-debouncing-md-97c781af--overview.md) — 1 KiB
-- [When to Use Async Debouncing](./pacer-docs-guides-async-debouncing-md-97c781af--when-to-use-async-debouncing.md) — 1 KiB
-- [Async Debouncing in TanStack Pacer](./pacer-docs-guides-async-debouncing-md-97c781af--async-debouncing-in-tanstack-pacer.md) — 2 KiB
-- [Key Differences from Synchronous Debouncing](./pacer-docs-guides-async-debouncing-md-97c781af--key-differences-from-synchronous-debouncing.md) — 4 KiB
-- [Advanced Features: Retry and Abort Support](./pacer-docs-guides-async-debouncing-md-97c781af--advanced-features-retry-and-abort-support.md) — 3 KiB
-- [Dynamic Options and Enabling/Disabling](./pacer-docs-guides-async-debouncing-md-97c781af--dynamic-options-and-enabling-disabling.md) — 2 KiB
-- [State Management](./pacer-docs-guides-async-debouncing-md-97c781af--state-management.md) — 5 KiB
-- [Framework Adapters](./pacer-docs-guides-async-debouncing-md-97c781af--framework-adapters.md) — 1 KiB
+- [Vanilla](./pacer-docs-framework-vanilla-guides-async-debouncing-md-ffb58780.md#source-pacer-docs-framework-vanilla-guides-async-debouncing-md)
+- [React](./pacer-docs-framework-react-guides-async-debouncing-md-110609a3.md#source-pacer-docs-framework-react-guides-async-debouncing-md)
+- [Preact](./pacer-docs-framework-preact-guides-async-debouncing-md-3002b7b1.md#source-pacer-docs-framework-preact-guides-async-debouncing-md)
+- [Solid](./pacer-docs-framework-solid-guides-async-debouncing-md-6af44c79.md#source-pacer-docs-framework-solid-guides-async-debouncing-md)
+- [Angular](./pacer-docs-framework-angular-guides-async-debouncing-md-d0499802.md#source-pacer-docs-framework-angular-guides-async-debouncing-md)
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="when-to-use-async-debouncing"></a>
-<a id="async-debouncing-in-tanstack-pacer"></a>
-<a id="basic-usage-example"></a>
-<a id="key-differences-from-synchronous-debouncing"></a>
-<a id="1-return-value-handling"></a>
-<a id="2-error-handling"></a>
-<a id="3-different-callbacks"></a>
-<a id="4-sequential-execution"></a>
-<a id="advanced-features-retry-and-abort-support"></a>
-<a id="retry-support"></a>
-<a id="abort-support"></a>
-<a id="sharing-options-between-instances"></a>
-<a id="dynamic-options-and-enablingdisabling"></a>
-<a id="flushing-pending-executions"></a>
-<a id="customizing-unmount-behavior"></a>
-<a id="state-management"></a>
-<a id="state-selector-framework-adapters"></a>
-<a id="initial-state"></a>
-<a id="subscribing-to-state-changes"></a>
-<a id="available-state-properties"></a>
-<a id="framework-adapters"></a>
+Not sure which operation fits your use case? Start with [Which Pacer Utility Should I Choose?](./pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md#source-pacer-docs-guides-which-pacer-utility-should-i-choose-md).

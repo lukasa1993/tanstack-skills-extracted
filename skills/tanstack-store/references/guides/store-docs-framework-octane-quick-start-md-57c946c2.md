@@ -2,7 +2,7 @@
 
 <a id="source-store-docs-framework-octane-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/store@0.11.1`.
+Release-matched documentation · `@tanstack/store@0.11.2`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 

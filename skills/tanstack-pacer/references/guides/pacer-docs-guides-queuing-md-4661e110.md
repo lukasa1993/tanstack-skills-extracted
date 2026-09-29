@@ -2,44 +2,18 @@
 
 <a id="source-pacer-docs-guides-queuing-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../queue-batch.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Queuing preserves accepted operations and processes them in a configured order. Choose your framework for queue state, ordering, lifecycle, and concurrency examples.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+## Choose your framework
 
-- [Overview](./pacer-docs-guides-queuing-md-4661e110--overview.md) — 1 KiB
-- [Queuing Concept](./pacer-docs-guides-queuing-md-4661e110--queuing-concept.md) — 3 KiB
-- [Queuing in TanStack Pacer](./pacer-docs-guides-queuing-md-4661e110--queuing-in-tanstack-pacer.md) — 11 KiB
-- [State Management](./pacer-docs-guides-queuing-md-4661e110--state-management.md) — 6 KiB
+- [Vanilla](./pacer-docs-framework-vanilla-guides-queuing-md-5b38c344.md#source-pacer-docs-framework-vanilla-guides-queuing-md)
+- [React](./pacer-docs-framework-react-guides-queuing-md-43a448cc.md#source-pacer-docs-framework-react-guides-queuing-md)
+- [Preact](./pacer-docs-framework-preact-guides-queuing-md-d8ef2df5.md#source-pacer-docs-framework-preact-guides-queuing-md)
+- [Solid](./pacer-docs-framework-solid-guides-queuing-md-e5e28330.md#source-pacer-docs-framework-solid-guides-queuing-md)
+- [Angular](./pacer-docs-framework-angular-guides-queuing-md-cfd6ce2e.md#source-pacer-docs-framework-angular-guides-queuing-md)
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="queuing-concept"></a>
-<a id="queuing-visualization"></a>
-<a id="when-to-use-queuing"></a>
-<a id="when-not-to-use-queuing"></a>
-<a id="queuing-in-tanstack-pacer"></a>
-<a id="basic-usage-with-queue"></a>
-<a id="advanced-usage-with-queuer-class"></a>
-<a id="queue-types-and-ordering"></a>
-<a id="fifo-queue-first-in-first-out"></a>
-<a id="lifo-stack-last-in-first-out"></a>
-<a id="priority-queue"></a>
-<a id="starting-and-stopping"></a>
-<a id="sharing-options-between-instances"></a>
-<a id="additional-features"></a>
-<a id="item-expiration"></a>
-<a id="rejection-handling"></a>
-<a id="initial-items"></a>
-<a id="dynamic-configuration"></a>
-<a id="dynamic-options"></a>
-<a id="flushing-queue-items"></a>
-<a id="customizing-unmount-behavior"></a>
-<a id="state-management"></a>
-<a id="state-selector-framework-adapters"></a>
-<a id="initial-state"></a>
-<a id="subscribing-to-state-changes"></a>
-<a id="available-state-properties"></a>
-<a id="framework-adapters"></a>
+Not sure which operation fits your use case? Start with [Which Pacer Utility Should I Choose?](./pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md#source-pacer-docs-guides-which-pacer-utility-should-i-choose-md).

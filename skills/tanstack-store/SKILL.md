@@ -47,6 +47,6 @@ Reactive store guidance for state, atoms, selectors, batching, async state, and 
 
 ## Source status
 
-Official documentation from `TanStack/store`, matched to these verified release inputs: @tanstack/store@0.11.1.
+Official documentation from `TanStack/store`, matched to these verified release inputs: @tanstack/store@0.11.2.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

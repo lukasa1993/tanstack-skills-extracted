@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-angular-adapter-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.22.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -16,9 +16,9 @@ npm install @tanstack/angular-pacer
 
 ## Angular inject API
 
-See the [Angular inject API Reference](https://github.com/TanStack/pacer/blob/c75895520669b08dc8946b42e1a6d529ca977230/docs/framework/angular/reference/index.md) for the full list of inject functions (injectDebouncer, injectThrottler, injectRateLimiter, injectQueuer, injectBatcher, and their async and callback variants).
+See the [Angular inject API Reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/angular/reference/index.md) for the full list of inject functions (injectDebouncer, injectThrottler, injectRateLimiter, injectQueuer, injectBatcher, and their async and callback variants).
 
-## Basic Usage
+## Basic usage
 
 Inject a Pacer utility in your component or service. Each inject function returns an object that exposes methods and a reactive `state()` signal when you pass a selector.
 
@@ -73,7 +73,7 @@ export const appConfig: ApplicationConfig = {
     providePacerOptions({
       debouncer: { wait: 300 },
       throttler: { wait: 100 },
-      queuer: { concurrency: 2 },
+      asyncQueuer: { concurrency: 2 },
       rateLimiter: { limit: 5, window: 60000 },
     }),
   ],
@@ -130,11 +130,11 @@ export class SearchComponent {
 }
 ```
 
-### Queuer
+### Async Queuer
 
 ```ts
 import { Component, signal } from '@angular/core'
-import { injectQueuer } from '@tanstack/angular-pacer'
+import { injectAsyncQueuer } from '@tanstack/angular-pacer'
 
 @Component({
   selector: 'app-upload',
@@ -144,7 +144,7 @@ import { injectQueuer } from '@tanstack/angular-pacer'
   `,
 })
 export class UploadComponent {
-  protected readonly queuer = injectQueuer<File, { size: number }>(
+  protected readonly queuer = injectAsyncQueuer<File, { size: number }>(
     async (file) => {
       await uploadFile(file)
     },
