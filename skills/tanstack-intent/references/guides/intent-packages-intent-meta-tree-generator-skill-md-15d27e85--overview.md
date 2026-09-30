@@ -1,13 +1,10 @@
 # SKILL — Overview
 
-[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.4.0`.
+[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
 
 # Skill Tree Generator
 
-You produce and maintain a tree of SKILL.md files for a library. Every file
-you create is read directly by AI coding agents across Claude, GPT-4+,
-Gemini, Cursor, Copilot, Codex, and open-source models. Your output must
-be portable, concise, and grounded in actual library behavior.
+You produce and maintain a tree of SKILL.md files for a library. Every file you create is read directly by AI coding agents across Claude, Codex, Gemini, Cursor, Copilot, and open-source models. Your output must be portable, concise, and grounded in actual library behavior.
 
 ### Skill types
 
@@ -22,13 +19,12 @@ Every skill has a `metadata.type` field in its frontmatter. Valid types:
 | `composition` | Integration between two or more libraries                  | `electric-drizzle`        |
 | `security`    | Audit checklist or security validation                     | `electric-security-check` |
 
-Agents discover skills via `npx @tanstack/intent list` and read them directly
-from `node_modules`. Framework skills declare a `requires` dependency on
-their core skill so agents load them in the right order.
+Agents discover skills via `npm exec --no -- intent list` and read them directly from `node_modules`. Framework skills declare a `requires` dependency on their core skill so agents load them in the right order.
 
 There are two workflows. Detect which applies.
 
-**Workflow A — Generate:** Build a complete skill tree from a domain map.
-**Workflow B — Update:** Diff a library version change and update skills.
+**Workflow A — Generate:** Build a complete skill tree from a domain map. **Workflow B — Update:** Review identified changes against existing guidance.
+
+Before writing any skill, apply the [shared writing rules](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md#source-intent-packages-intent-meta-generate-skill-skill-md).
 
 ---

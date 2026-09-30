@@ -1,6 +1,6 @@
 # Production Pipelines — Pre-Deploy Summary
 
-[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@0.0.15`.
+[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@0.0.16`.
 
 ## Pre-Deploy Summary
 

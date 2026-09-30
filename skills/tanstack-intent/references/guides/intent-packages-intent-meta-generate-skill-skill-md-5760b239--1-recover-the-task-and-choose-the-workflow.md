@@ -1,0 +1,17 @@
+# SKILL — 1. Recover the task and choose the workflow
+
+[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
+
+## 1. Recover the task and choose the workflow
+
+Use the current conversation, supplied diff, identified code/docs change, review report, or selected skill tree entry. Reuse the task, decisions, and evidence already established in this session; do not ask the maintainer to paste them again. Identify what developers need help doing and which package owns that task. If there is no usable task or review input, ask one question: “What do developers need help doing with this library?” Wait for the answer.
+
+Check repository instructions and Git status before edits; preserve unrelated changes. Read [maintainer commands](https://github.com/TanStack/intent/blob/3cf6c146aa36288fba6bc5b7190413d878706756/packages/intent/meta/generate-skill/references/maintainer-commands.md) when setting up the repository, adding a skill, or preparing a batch for review. Use those commands for registration, metadata synchronization, and completion checks. Discover the package name, version, repository, skill root, and vocabulary from the repository. Use an established custom root; otherwise use `skills/` inside the owning package, including in monorepos.
+
+Before choosing or changing repository exports, follow [repository distribution](https://github.com/TanStack/intent/blob/3cf6c146aa36288fba6bc5b7190413d878706756/packages/intent/meta/generate-skill/references/distribution.md). For an export-only change, complete that procedure against existing skill records; use the authoring steps below only if guidance must change.
+
+For an initial skill set or a request spanning several developer tasks, read [initial batches](https://github.com/TanStack/intent/blob/3cf6c146aa36288fba6bc5b7190413d878706756/packages/intent/meta/generate-skill/references/initial-batches.md). Reuse scope already approved in the conversation. For one concrete task, proceed directly below. During ordinary library work, keep the code change as the primary task. Read [source review](https://github.com/TanStack/intent/blob/3cf6c146aa36288fba6bc5b7190413d878706756/packages/intent/meta/generate-skill/references/source-review.md) to identify affected guidance from actual changes and record completed reviews before handing off any of these workflows.
+
+For every authoring batch or update, read [the planning record procedure](https://github.com/TanStack/intent/blob/3cf6c146aa36288fba6bc5b7190413d878706756/packages/intent/meta/generate-skill/references/planning-records.md) and create or incrementally maintain `domain_map.yaml`, `skill_spec.md`, and `skill_tree.yaml`. Read existing records first and preserve prior scope and decisions. These records grow with the batches; maintaining them does not require a full-library interview or generating every planned skill.
+
+When the input is an `intent stale` report or generated review PR, read [review-signals](https://github.com/TanStack/intent/blob/3cf6c146aa36288fba6bc5b7190413d878706756/packages/intent/meta/generate-skill/references/review-signals.md) before deciding what to edit. Investigate the supplied items in the requested scope, applying this procedure to each affected task. A review signal alone is not a task or proof of changed guidance; first use the reference to establish its meaning.

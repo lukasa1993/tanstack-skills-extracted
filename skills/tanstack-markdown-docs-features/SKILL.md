@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/markdown"
-  tanstack-library-version: "0.0.15"
+  tanstack-library-version: "0.0.16"
   tanstack-package: "@tanstack/markdown"
-  tanstack-package-version: "0.0.15"
+  tanstack-package-version: "0.0.16"
   tanstack-requires: "[\"tanstack-markdown-render-markdown\"]"
   tanstack-source-skill: "docs-features"
   tanstack-sources: "[\"TanStack/markdown:docs/guides/docs-preset.md\",\"TanStack/markdown:docs/reference/extensions.md\",\"TanStack/markdown:src/extensions/docs.ts\",\"TanStack/markdown:src/extensions/tabs.ts\",\"TanStack/markdown:src/extensions/framework.ts\",\"TanStack/markdown:src/extensions/headings.ts\",\"TanStack/markdown:src/extensions/comment-components.ts\"]"
@@ -118,7 +118,7 @@ main {
 <!-- ::end:tabs -->
 ````
 
-Package-manager tabs consume `framework: package...` lines and remove their source children after creating metadata:
+Package-manager tabs consume `framework: package...` lines and shared `package...` lines, then remove their source children after creating metadata:
 
 ```md
 <!-- ::start:tabs variant="package-manager" mode="dev-install" -->

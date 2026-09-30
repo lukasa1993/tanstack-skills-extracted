@@ -2,7 +2,7 @@
 
 <a id="source-intent-packages-intent-meta-tree-generator-skill-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.4.0`.
+Release-matched documentation · `@tanstack/intent@0.5.0`.
 
 [Topic index](../meta-tree-maintenance.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--overview.md) — 2 KiB
 - [Workflow A — Generate skill tree: Prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-prerequisites.md) — 2 KiB
-- [Workflow A — Generate skill tree: Scaffold flow output](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-scaffold-flow-output.md) — 2 KiB
+- [Workflow A — Generate skill tree: Scaffold flow output](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-scaffold-flow-output.md) — 3 KiB
 - [Workflow A — Generate skill tree: Minimal library fast path](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-minimal-library-fast-path.md) — 2 KiB
 - [Workflow A — Generate skill tree: Step 1 — Plan the file tree](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-step-1-plan-the-file-tree.md) — 6 KiB
 - [Workflow A — Generate skill tree: Steps 2–7 — Write skills](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85--workflow-a-generate-skill-tree-steps-2-7-write-skills.md) — 1 KiB

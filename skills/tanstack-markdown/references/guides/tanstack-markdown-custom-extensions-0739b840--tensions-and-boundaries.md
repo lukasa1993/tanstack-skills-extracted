@@ -1,6 +1,6 @@
 # Custom Extensions — Tensions and Boundaries
 
-[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@0.0.15`.
+[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@0.0.16`.
 
 ## Tensions and Boundaries
 

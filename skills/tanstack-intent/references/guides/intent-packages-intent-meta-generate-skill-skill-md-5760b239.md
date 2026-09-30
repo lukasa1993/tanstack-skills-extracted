@@ -2,7 +2,7 @@
 
 <a id="source-intent-packages-intent-meta-generate-skill-skill-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.4.0`.
+Release-matched documentation · `@tanstack/intent@0.5.0`.
 
 [Topic index](../meta-discovery-generation.md) · [Source provenance](../SOURCES.md)
 
@@ -11,30 +11,17 @@ Release-matched documentation · `@tanstack/intent@0.4.0`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--overview.md) — 1 KiB
-- [Inputs](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--inputs.md) — 2 KiB
-- [Step 1 — Determine skill type](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-1-determine-skill-type.md) — 2 KiB
-- [Step 2 — Extract content from sources](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-2-extract-content-from-sources.md) — 4 KiB
-- [Step 3 — Write the frontmatter](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-3-write-the-frontmatter.md) — 3 KiB
-- [Step 4 — Write the body](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--step-4-write-the-body.md) — 3 KiB
-- [Common Security Mistakes](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--common-security-mistakes.md) — 1 KiB
-- [Pre-Deploy Summary](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--pre-deploy-summary.md) — 5 KiB
+- [1. Recover the task and choose the workflow](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--1-recover-the-task-and-choose-the-workflow.md) — 4 KiB
+- [2. Read the evidence and choose the owner](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--2-read-the-evidence-and-choose-the-owner.md) — 2 KiB
+- [3. Resolve consequential unknowns](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--3-resolve-consequential-unknowns.md) — 1 KiB
+- [4. Write the bounded change](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--4-write-the-bounded-change.md) — 5 KiB
+- [5. Verify the developer task and hand off](./intent-packages-intent-meta-generate-skill-skill-md-5760b239--5-verify-the-developer-task-and-hand-off.md) — 4 KiB
 
 <!-- Original source anchors retained for inbound links. -->
-<a id="skill-generation"></a>
-<a id="inputs"></a>
-<a id="step-1-determine-skill-type"></a>
-<a id="subagent-guidance-for-batch-generation"></a>
-<a id="step-2-extract-content-from-sources"></a>
-<a id="what-to-extract"></a>
-<a id="2b-scan-github-issues-and-discussions"></a>
-<a id="what-not-to-extract"></a>
-<a id="step-3-write-the-frontmatter"></a>
-<a id="core-skill-frontmatter"></a>
-<a id="sub-skill-frontmatter"></a>
-<a id="framework-skill-frontmatter"></a>
-<a id="frontmatter-rules"></a>
-<a id="step-4-write-the-body"></a>
-<a id="standard-body-core-sub-skill-framework"></a>
-<a id="checklist-body-security-go-live-audit"></a>
-<a id="common-security-mistakes"></a>
-<a id="pre-deploy-summary"></a>
+<a id="author-and-maintain-library-skills"></a>
+<a id="1-recover-the-task-and-choose-the-workflow"></a>
+<a id="2-read-the-evidence-and-choose-the-owner"></a>
+<a id="3-resolve-consequential-unknowns"></a>
+<a id="4-write-the-bounded-change"></a>
+<a id="writing-rules"></a>
+<a id="5-verify-the-developer-task-and-hand-off"></a>

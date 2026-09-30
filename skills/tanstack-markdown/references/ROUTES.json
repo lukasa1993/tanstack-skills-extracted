@@ -10,7 +10,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.15",
+      "version": "0.0.16",
       "file": "references/guides/tanstack-markdown-custom-extensions-0739b840.md",
       "sourcePath": "custom-extensions",
       "bytes": 1786,
@@ -62,10 +62,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.15",
+      "version": "0.0.16",
       "file": "references/guides/tanstack-markdown-docs-features-62c13998.md",
       "sourcePath": "docs-features",
-      "bytes": 10018,
+      "bytes": 10050,
       "prerequisites": [
         {
           "id": "tanstack-markdown-render-markdown",
@@ -76,7 +76,7 @@
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; Boundaries; References",
           "file": "references/guides/tanstack-markdown-docs-features-62c13998.md",
-          "bytes": 10018
+          "bytes": 10050
         }
       ],
       "examples": []
@@ -89,7 +89,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.15",
+      "version": "0.0.16",
       "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md",
       "sourcePath": "render-markdown",
       "bytes": 8782,
@@ -111,7 +111,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.15",
+      "version": "0.0.16",
       "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc.md",
       "sourcePath": "production-pipelines",
       "bytes": 2896,
@@ -183,7 +183,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.15",
+      "version": "0.0.16",
       "file": "references/guides/tanstack-markdown-react-rendering-65b773b4.md",
       "sourcePath": "react-rendering",
       "bytes": 7657,
@@ -210,7 +210,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.15",
+      "version": "0.0.16",
       "file": "references/guides/tanstack-markdown-octane-rendering-821e3074.md",
       "sourcePath": "octane-rendering",
       "bytes": 8452,

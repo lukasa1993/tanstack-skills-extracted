@@ -1,6 +1,6 @@
 # SKILL — Output order
 
-[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.4.0`.
+[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
 
 ## Output order
 
@@ -17,8 +17,6 @@ When generating a complete skill tree:
 
 When updating:
 
-1. staleness_report.yaml
-2. Updated SKILL.md files (core then framework)
-3. CHANGELOG.md entry
+Return the evidence, focused diffs or justified no-ops, validation results, and unresolved uncertainty required by generate-skill.
 
 ---

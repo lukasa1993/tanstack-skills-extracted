@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-markdown-docs-features"></a>
 
-Published skill · `@tanstack/markdown@0.0.15`.
+Published skill · `@tanstack/markdown@0.0.16`.
 
 [Topic index](../parsing-extensions.md) · [Source provenance](../SOURCES.md)
 
@@ -112,7 +112,7 @@ main {
 <!-- ::end:tabs -->
 ````
 
-Package-manager tabs consume `framework: package...` lines and remove their source children after creating metadata:
+Package-manager tabs consume `framework: package...` lines and shared `package...` lines, then remove their source children after creating metadata:
 
 ```md
 <!-- ::start:tabs variant="package-manager" mode="dev-install" -->

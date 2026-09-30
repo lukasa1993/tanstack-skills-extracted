@@ -1,13 +1,11 @@
 # SKILL — Workflow A — Generate skill tree: Step 1 — Plan the file tree
 
-[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.4.0`.
+[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
 
 ## Workflow A — Generate skill tree: Step 1 — Plan the file tree
 
 
-From the domain map, each entry in the `skills` list becomes a SKILL.md
-file. The `type` field on each skill (`core`, `framework`, `lifecycle`,
-`composition`) determines where it goes. Determine the file tree:
+From the domain map, each entry in the `skills` list becomes a SKILL.md file. The `type` field on each skill (`core`, `framework`, `lifecycle`, `composition`) determines where it goes. Determine the file tree:
 
 **Core vs framework decision:**
 
@@ -23,22 +21,11 @@ file. The `type` field on each skill (`core`, `framework`, `lifecycle`,
 | SSR/hydration patterns specific to a framework | Framework  |
 | Framework-specific gotchas                     | Framework  |
 
-If a library has no framework adapters (e.g. Store, DB), produce only
-core skills.
+If a library has no framework adapters, produce only core skills.
 
-**Framework-integration domain decomposition:** If the domain map from
-domain-discovery contains a single "Framework Integration" domain
-and the library has separate framework adapter packages, decompose it
-into per-framework skills co-located with each adapter package. Do not
-produce a single monolithic framework-integration skill that covers
-React, Vue, Solid, etc. in one file.
+**Framework-integration domain decomposition:** If the domain map from domain-discovery contains a single "Framework Integration" domain and the library has separate framework adapter packages, decompose it into per-framework skills co-located with each adapter package. Do not produce a single monolithic framework-integration skill that covers React, Vue, Solid, etc. in one file.
 
-**Adapter-heavy domains:** When a domain covers multiple backends or
-adapters with distinct config interfaces (e.g. 5 sync adapters, 3
-database drivers), keep one SKILL.md for the shared patterns but
-produce one reference file per adapter with its specific config,
-setup, and gotchas. The SKILL.md covers what's common; each
-`references/[adapter].md` covers what's unique.
+**Adapter-heavy domains:** When a domain covers multiple backends or adapters with distinct config interfaces (e.g. 5 sync adapters, 3 database drivers), keep one SKILL.md for the shared patterns but produce one reference file per adapter with its specific config, setup, and gotchas. The SKILL.md covers what's common; each `references/[adapter].md` covers what's unique.
 
 **Flat vs nested structure:**
 
@@ -46,7 +33,7 @@ Choose the structure that matches how the domain map's skills are shaped.
 
 Use **nested** (`[lib]-core/[domain]/SKILL.md`) when:
 
-- Developer tasks cluster cleanly into 3–5 conceptual domains
+- Developer tasks cluster cleanly into conceptual domains
 - The library has a clear core + framework adapter split
 - Skills build on each other in a layered way
 
@@ -56,9 +43,7 @@ Use **flat** (`skills/[skill-name]/SKILL.md`) when:
 - The domain discovery process recommended task-focused skills
 - Skills map 1:1 to distinct developer intents with minimal overlap
 
-Both are valid. The domain map's `type` field and structure will signal
-which fits. When in doubt, prefer flat — it's simpler and each skill
-is independently discoverable.
+Both are valid. The domain map's `type` field and structure will signal which fits. When in doubt, prefer flat — it's simpler and each skill is independently discoverable.
 
 **Nested structure:**
 
@@ -103,19 +88,11 @@ skills/
 │   └── SKILL.md
 ```
 
-**Router skill:** A router skill (lightweight entry point with a decision
-table) is optional. If the intent CLI provides `list` and `show`
-commands, agents can discover skills directly without a router. Only
-create a router skill if the skill set is large enough (15+) that
-browsing the list is insufficient, or if the nested structure needs
-an entry point to guide agents to the right sub-skill. Libraries with
-fewer than 5 skills should never have a router skill.
+**Router skill:** Add a router only when its decision guidance helps agents choose between tasks that `intent list` and the skills' descriptions cannot adequately distinguish. Skill count alone does not justify a router.
 
 **Source repository layout for npm distribution:**
 
-Skills must ship with their respective packages so they're available in
-`node_modules` after install. In a monorepo, co-locate skills with the
-package they document:
+Skills must ship with their respective packages so they're available in `node_modules` after install. In a monorepo, co-locate skills with the package they document:
 
 ```
 packages/
@@ -135,6 +112,4 @@ packages/
 │   └── package.json             # Add "skills" to files array
 ```
 
-Run `npx @tanstack/intent@latest edit-package-json` to wire each package's `package.json`
-automatically (adds `"skills"`, `"bin"`, and `"!skills/_artifacts"` to the
-`files` array, and adds the `bin` entry if missing).
+Publishing configuration is separate from authoring. When the maintainer requests it, `npm exec --no -- intent edit-package-json` prepares the package; review its resulting diff.

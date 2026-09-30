@@ -2,7 +2,7 @@
 
 <a id="source-intent-packages-intent-meta-skill-staleness-check-skill-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.4.0`.
+Release-matched documentation · `@tanstack/intent@0.5.0`.
 
 [Topic index](../meta-tree-maintenance.md) · [Source provenance](../SOURCES.md)
 
