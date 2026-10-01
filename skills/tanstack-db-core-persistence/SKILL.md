@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.9.2"
+  tanstack-package-version: "0.11.0"
   tanstack-source-skill: "db-core/persistence"
   tanstack-sources: "[\"TanStack/db:packages/db-sqlite-persistence-core/src/persisted.ts\",\"TanStack/db:packages/browser-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/react-native-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/expo-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/electron-db-sqlite-persistence/src/index.ts\",\"TanStack/db:packages/node-db-sqlite-persistence/src/index.ts\",\"TanStack/db:examples/react/offline-transactions/src/db/persisted-todos.ts\",\"TanStack/db:examples/react-native/shopping-list/src/db/collections.ts\"]"
   tanstack-type: "sub-skill"
@@ -99,11 +99,24 @@ This works with any adapter: `electricCollectionOptions`, `queryCollectionOption
 
 Coordinators handle leader election and cross-instance communication so only one tab/process owns the database writer.
 
-| Platform                              | Coordinator                     | Mechanism                    |
-| ------------------------------------- | ------------------------------- | ---------------------------- |
-| Browser                               | `BrowserCollectionCoordinator`  | BroadcastChannel + Web Locks |
-| Electron                              | `ElectronCollectionCoordinator` | BroadcastChannel + Web Locks |
-| Single-process (RN, Expo, Node, etc.) | `SingleProcessCoordinator`      | No-op (always leader)        |
+| Platform                              | Coordinator                     | Mechanism                                            |
+| ------------------------------------- | ------------------------------- | ---------------------------------------------------- |
+| Browser                               | `BrowserCollectionCoordinator`  | BroadcastChannel + Web Locks                         |
+| Electron                              | `ElectronCollectionCoordinator` | BroadcastChannel + Web Locks                         |
+| Single-process (RN, Expo, Node, etc.) | `SingleProcessCoordinator`      | Always leader; direct per-collection adapter routing |
+
+Every coordinator must implement
+`requestApplyCommittedTx(collectionId, tx)`. The method routes a complete
+committed transaction to the collection's supported writer, including
+truncate, rows, row metadata, collection metadata, and stream position. This
+is a required contract, not an optional capability. Do not feature-detect it,
+fall back to row-only mutation routing, or bypass the coordinator after source
+publication. Untyped custom coordinators that omit the method fail during
+collection configuration.
+
+`SingleProcessCoordinator` has no election or cross-process communication, but
+it is not a no-op persistence owner. It registers the resolved adapter for each
+collection and applies complete committed transactions through that adapter.
 
 Browser persistence uses single-process semantics by default. That is correct
 when the app runs in one tab at a time or each tab has its own database. Pass a
@@ -152,7 +165,9 @@ const persistence = createElectronSQLitePersistence({
 
 Electron persistence calls cross the renderer/main boundary through IPC. The
 `ElectronCollectionCoordinator` separately coordinates renderer instances with
-`BroadcastChannel` and Web Locks.
+`BroadcastChannel` and Web Locks. It elects an owner per collection and routes
+the complete committed transaction through that collection's resolved renderer
+adapter to the main-process persistence owner.
 
 ## Schema Versioning
 

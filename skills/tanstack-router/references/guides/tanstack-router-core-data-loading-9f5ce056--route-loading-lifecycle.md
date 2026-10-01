@@ -1,6 +1,6 @@
 # Data Loading — Route Loading Lifecycle
 
-[Guide and prerequisites](./tanstack-router-core-data-loading-9f5ce056.md) · Published skill · `@tanstack/router-core@1.171.33`.
+[Guide and prerequisites](./tanstack-router-core-data-loading-9f5ce056.md) · Published skill · `@tanstack/router-core@1.171.34`.
 
 ## Route Loading Lifecycle
 

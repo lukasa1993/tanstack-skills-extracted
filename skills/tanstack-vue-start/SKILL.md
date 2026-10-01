@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/vue-start"
-  tanstack-package-version: "1.168.55"
+  tanstack-package-version: "1.168.56"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "vue-start"
   tanstack-sources: "[\"TanStack/router:packages/vue-start/src\"]"

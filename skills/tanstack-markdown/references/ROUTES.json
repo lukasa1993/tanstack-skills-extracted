@@ -10,10 +10,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.16",
+      "version": "1.0.0",
       "file": "references/guides/tanstack-markdown-custom-extensions-0739b840.md",
       "sourcePath": "custom-extensions",
-      "bytes": 1786,
+      "bytes": 1840,
       "prerequisites": [
         {
           "id": "tanstack-markdown-render-markdown",
@@ -24,32 +24,32 @@
         {
           "title": "Overview",
           "file": "references/guides/tanstack-markdown-custom-extensions-0739b840--overview.md",
-          "bytes": 299
+          "bytes": 298
         },
         {
           "title": "Setup",
           "file": "references/guides/tanstack-markdown-custom-extensions-0739b840--setup.md",
-          "bytes": 1676
+          "bytes": 1675
         },
         {
           "title": "Core Patterns",
           "file": "references/guides/tanstack-markdown-custom-extensions-0739b840--core-patterns.md",
-          "bytes": 4278
+          "bytes": 5529
         },
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-markdown-custom-extensions-0739b840--common-mistakes.md",
-          "bytes": 5736
+          "bytes": 5735
         },
         {
           "title": "Tensions and Boundaries",
           "file": "references/guides/tanstack-markdown-custom-extensions-0739b840--tensions-and-boundaries.md",
-          "bytes": 974
+          "bytes": 973
         },
         {
           "title": "Related Skills",
           "file": "references/guides/tanstack-markdown-custom-extensions-0739b840--related-skills.md",
-          "bytes": 539
+          "bytes": 538
         }
       ],
       "examples": []
@@ -62,10 +62,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.16",
+      "version": "1.0.0",
       "file": "references/guides/tanstack-markdown-docs-features-62c13998.md",
       "sourcePath": "docs-features",
-      "bytes": 10050,
+      "bytes": 10049,
       "prerequisites": [
         {
           "id": "tanstack-markdown-render-markdown",
@@ -76,7 +76,7 @@
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; Boundaries; References",
           "file": "references/guides/tanstack-markdown-docs-features-62c13998.md",
-          "bytes": 10050
+          "bytes": 10049
         }
       ],
       "examples": []
@@ -89,16 +89,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.16",
+      "version": "1.0.0",
       "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md",
       "sourcePath": "render-markdown",
-      "bytes": 8782,
+      "bytes": 8781,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Setup; Core Patterns; Behavioral Contracts; Compatibility and Option Timing; Common Mistakes; Related Skills; References",
           "file": "references/guides/tanstack-markdown-render-markdown-65ccbcde.md",
-          "bytes": 8782
+          "bytes": 8781
         }
       ],
       "examples": []
@@ -111,10 +111,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.16",
+      "version": "1.0.0",
       "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc.md",
       "sourcePath": "production-pipelines",
-      "bytes": 2896,
+      "bytes": 2895,
       "prerequisites": [
         {
           "id": "tanstack-markdown-render-markdown",
@@ -125,52 +125,52 @@
         {
           "title": "Overview",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--overview.md",
-          "bytes": 439
+          "bytes": 438
         },
         {
           "title": "Trust Boundary Checks",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--trust-boundary-checks.md",
-          "bytes": 794
+          "bytes": 793
         },
         {
           "title": "Highlighting Checks",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--highlighting-checks.md",
-          "bytes": 1072
+          "bytes": 1071
         },
         {
           "title": "Compatibility Checks",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--compatibility-checks.md",
-          "bytes": 1425
+          "bytes": 1424
         },
         {
           "title": "Performance and Cache Checks",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--performance-and-cache-checks.md",
-          "bytes": 1439
+          "bytes": 1437
         },
         {
           "title": "Release Checks",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--release-checks.md",
-          "bytes": 572
+          "bytes": 571
         },
         {
           "title": "Common Production Mistakes",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--common-production-mistakes.md",
-          "bytes": 6943
+          "bytes": 6942
         },
         {
           "title": "Tensions",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--tensions.md",
-          "bytes": 775
+          "bytes": 774
         },
         {
           "title": "Pre-Deploy Summary",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--pre-deploy-summary.md",
-          "bytes": 888
+          "bytes": 887
         },
         {
           "title": "Related Skills",
           "file": "references/guides/tanstack-markdown-production-pipelines-dc3fb9bc--related-skills.md",
-          "bytes": 516
+          "bytes": 515
         }
       ],
       "examples": []
@@ -183,10 +183,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.16",
+      "version": "1.0.0",
       "file": "references/guides/tanstack-markdown-react-rendering-65b773b4.md",
       "sourcePath": "react-rendering",
-      "bytes": 7657,
+      "bytes": 7656,
       "prerequisites": [
         {
           "id": "tanstack-markdown-render-markdown",
@@ -197,7 +197,7 @@
         {
           "title": "Overview; Setup; Hooks and Components; Common Mistakes; Cross-References",
           "file": "references/guides/tanstack-markdown-react-rendering-65b773b4.md",
-          "bytes": 7657
+          "bytes": 7656
         }
       ],
       "examples": []
@@ -210,10 +210,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/markdown",
-      "version": "0.0.16",
+      "version": "1.0.0",
       "file": "references/guides/tanstack-markdown-octane-rendering-821e3074.md",
       "sourcePath": "octane-rendering",
-      "bytes": 8452,
+      "bytes": 8451,
       "prerequisites": [
         {
           "id": "tanstack-markdown-render-markdown",
@@ -224,7 +224,7 @@
         {
           "title": "Overview; Setup; Hooks and Components; Common Mistakes; Cross-References",
           "file": "references/guides/tanstack-markdown-octane-rendering-821e3074.md",
-          "bytes": 8452
+          "bytes": 8451
         }
       ],
       "examples": []

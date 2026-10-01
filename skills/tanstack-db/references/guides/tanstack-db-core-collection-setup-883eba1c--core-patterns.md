@@ -1,6 +1,6 @@
 # Collection Setup — Core Patterns
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.9.2`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.11.0`.
 
 ## Core Patterns
 

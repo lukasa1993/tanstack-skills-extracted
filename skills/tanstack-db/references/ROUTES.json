@@ -10,16 +10,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-core-8cce251e.md",
       "sourcePath": "db-core",
-      "bytes": 3236,
+      "bytes": 3237,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Sub-Skills; Quick Decision Tree; Version",
           "file": "references/guides/tanstack-db-core-8cce251e.md",
-          "bytes": 3236
+          "bytes": 3237
         }
       ],
       "examples": []
@@ -32,10 +32,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-meta-framework-69f8ef80.md",
       "sourcePath": "meta-framework",
-      "bytes": 10407,
+      "bytes": 10408,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -50,7 +50,7 @@
         {
           "title": "Overview; Setup; TanStack Start; Next.js (App Router); Remix; Nuxt; SvelteKit; Core Patterns; Server-Side Integration; Common Mistakes",
           "file": "references/guides/tanstack-db-meta-framework-69f8ef80.md",
-          "bytes": 10407
+          "bytes": 10408
         }
       ],
       "examples": []
@@ -107,51 +107,51 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-core-collection-setup-883eba1c.md",
       "sourcePath": "db-core/collection-setup",
-      "bytes": 2092,
+      "bytes": 2093,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--overview.md",
-          "bytes": 256
+          "bytes": 257
         },
         {
           "title": "Setup",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--setup.md",
-          "bytes": 1317
+          "bytes": 1318
         },
         {
           "title": "Choosing an Adapter",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--choosing-an-adapter.md",
-          "bytes": 1429
+          "bytes": 1430
         },
         {
           "title": "Sync Modes",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--sync-modes.md",
-          "bytes": 1302
+          "bytes": 1303
         },
         {
           "title": "Indexing",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--indexing.md",
-          "bytes": 712
+          "bytes": 713
         },
         {
           "title": "Core Patterns",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--core-patterns.md",
-          "bytes": 1949
+          "bytes": 1950
         },
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--common-mistakes.md",
-          "bytes": 6301
+          "bytes": 6302
         },
         {
           "title": "References",
           "file": "references/guides/tanstack-db-core-collection-setup-883eba1c--references.md",
-          "bytes": 1186
+          "bytes": 1187
         }
       ],
       "examples": []
@@ -252,61 +252,61 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-core-live-queries-ec3edb95.md",
       "sourcePath": "db-core/live-queries",
-      "bytes": 2679,
+      "bytes": 2680,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--overview.md",
-          "bytes": 637
+          "bytes": 638
         },
         {
           "title": "Setup",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--setup.md",
-          "bytes": 1226
+          "bytes": 1227
         },
         {
           "title": "Core Patterns",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--core-patterns.md",
-          "bytes": 4457
+          "bytes": 4458
         },
         {
           "title": "Virtual Properties",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--virtual-properties.md",
-          "bytes": 777
+          "bytes": 778
         },
         {
           "title": "Includes (Subqueries in Select)",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--includes-subqueries-in-select.md",
-          "bytes": 3937
+          "bytes": 3938
         },
         {
           "title": "One-Shot Queries with queryOnce",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--one-shot-queries-with-queryonce.md",
-          "bytes": 951
+          "bytes": 952
         },
         {
           "title": "Reactive Effects (createEffect)",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--reactive-effects-createeffect.md",
-          "bytes": 1669
+          "bytes": 1670
         },
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--common-mistakes.md",
-          "bytes": 5041
+          "bytes": 5042
         },
         {
           "title": "Tension: Query expressiveness vs. IVM constraints",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--tension-query-expressiveness-vs-ivm-constraints.md",
-          "bytes": 996
+          "bytes": 997
         },
         {
           "title": "References",
           "file": "references/guides/tanstack-db-core-live-queries-ec3edb95--references.md",
-          "bytes": 335
+          "bytes": 336
         }
       ],
       "examples": []
@@ -363,16 +363,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-core-mutations-optimistic-9abd33bd.md",
       "sourcePath": "db-core/mutations-optimistic",
-      "bytes": 11317,
+      "bytes": 11318,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Setup -- Collection Write Operations; Core Patterns; Common Mistakes; Tension: Optimistic Speed vs. Data Consistency; References",
           "file": "references/guides/tanstack-db-core-mutations-optimistic-9abd33bd.md",
-          "bytes": 11317
+          "bytes": 11318
         }
       ],
       "examples": []
@@ -429,36 +429,36 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2.md",
       "sourcePath": "db-core/custom-adapter",
-      "bytes": 1543,
+      "bytes": 1544,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2--overview.md",
-          "bytes": 254
+          "bytes": 582
         },
         {
           "title": "Setup",
           "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2--setup.md",
-          "bytes": 3234
+          "bytes": 3235
         },
         {
           "title": "Core Patterns",
           "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2--core-patterns.md",
-          "bytes": 6137
+          "bytes": 6138
         },
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2--common-mistakes.md",
-          "bytes": 3348
+          "bytes": 3446
         },
         {
           "title": "Tension: Simplicity vs. Correctness in Sync",
           "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2--tension-simplicity-vs-correctness-in-sync.md",
-          "bytes": 635
+          "bytes": 636
         }
       ],
       "examples": []
@@ -471,16 +471,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.9.2",
+      "version": "0.11.0",
       "file": "references/guides/tanstack-db-core-persistence-2c18441d.md",
       "sourcePath": "db-core/persistence",
-      "bytes": 10056,
+      "bytes": 11097,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Choosing a Platform Package; Local-Only Persistence (No Server); Synced Persistence (Wrapping an Adapter); Multi-Tab / Multi-Process Coordination; Schema Versioning; Applied Transaction Log Pruning; Key Options; Common Mistakes",
           "file": "references/guides/tanstack-db-core-persistence-2c18441d.md",
-          "bytes": 10056
+          "bytes": 11097
         }
       ],
       "examples": []
@@ -493,7 +493,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/offline-transactions",
-      "version": "1.0.56",
+      "version": "1.0.58",
       "file": "references/guides/tanstack-offline-transactions-offline-6f208742.md",
       "sourcePath": "offline",
       "bytes": 9896,
@@ -568,7 +568,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/react-db",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "file": "references/guides/tanstack-react-db-ba0ab260.md",
       "sourcePath": "react-db",
       "bytes": 10849,
@@ -595,7 +595,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-db",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "file": "references/guides/tanstack-vue-db-8ef80718.md",
       "sourcePath": "vue-db",
       "bytes": 4972,
@@ -622,10 +622,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-db",
-      "version": "0.2.45",
+      "version": "0.3.0",
       "file": "references/guides/tanstack-solid-db-839f983b.md",
       "sourcePath": "solid-db",
-      "bytes": 6926,
+      "bytes": 6925,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -636,7 +636,7 @@
         {
           "title": "Overview; Setup; Hook; Solid-Specific Patterns; Includes (Hierarchical Data); Common Mistakes",
           "file": "references/guides/tanstack-solid-db-839f983b.md",
-          "bytes": 6926
+          "bytes": 6925
         }
       ],
       "examples": []
@@ -649,7 +649,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/svelte-db",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "file": "references/guides/tanstack-svelte-db-1541b4ae.md",
       "sourcePath": "svelte-db",
       "bytes": 5455,
@@ -676,10 +676,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/angular-db",
-      "version": "0.1.91",
+      "version": "0.2.0",
       "file": "references/guides/tanstack-angular-db-3647fe7a.md",
       "sourcePath": "angular-db",
-      "bytes": 8240,
+      "bytes": 8239,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -690,7 +690,7 @@
         {
           "title": "Overview; Setup; Inject Function; Angular-Specific Patterns; Includes (Hierarchical Data); Common Mistakes",
           "file": "references/guides/tanstack-angular-db-3647fe7a.md",
-          "bytes": 8240
+          "bytes": 8239
         }
       ],
       "examples": []

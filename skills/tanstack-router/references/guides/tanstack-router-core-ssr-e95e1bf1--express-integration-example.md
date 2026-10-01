@@ -1,6 +1,6 @@
 # Ssr — Express Integration Example
 
-[Guide and prerequisites](./tanstack-router-core-ssr-e95e1bf1.md) · Published skill · `@tanstack/router-core@1.171.33`.
+[Guide and prerequisites](./tanstack-router-core-ssr-e95e1bf1.md) · Published skill · `@tanstack/router-core@1.171.34`.
 
 ## Express Integration Example
 

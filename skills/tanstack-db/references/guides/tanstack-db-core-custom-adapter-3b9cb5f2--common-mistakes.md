@@ -1,6 +1,6 @@
 # Custom Adapter — Common Mistakes
 
-[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.9.2`.
+[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.11.0`.
 
 ## Common Mistakes
 
@@ -53,7 +53,9 @@ If initial sync fails before it produces a usable snapshot, call
 `markError(error)` instead. This rejects readiness waits with the supplied cause
 and moves dependent live queries to the error state. Calling `markError()`
 without a cause remains supported and rejects with a generic collection-state
-error. A later successful sync can call `markReady()` to recover.
+error. Later successful work in the same sync run can call `markReady()` to
+recover. Cleanup ends that run; a restart invokes `sync()` again and starts a
+new one.
 
 Source: docs/guides/collection-options-creator.md
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-ssr"></a>
 
-Published skill · `@tanstack/router-core@1.171.33`.
+Published skill · `@tanstack/router-core@1.171.34`.
 
 [Topic index](../router-ssr-tooling-adapters.md) · [Source provenance](../SOURCES.md)
 

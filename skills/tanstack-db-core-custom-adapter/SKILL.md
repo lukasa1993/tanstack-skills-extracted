@@ -1,13 +1,13 @@
 ---
 name: tanstack-db-core-custom-adapter
-description: "Building custom collection adapters for new backends. SyncConfig interface: sync function receiving begin, write, commit, markReady, markError, truncate, metadata primitives and returning cleanup, loadSubset, and optional unloadSubset handlers. ChangeMessage format (insert, update, delete). On-demand LoadSubsetOptions (where, orderBy, limit, offset, cursor). Expression parsing: parseWhereExpression, parseOrderByExpression, extractSimpleComparisons, parseLoadSubsetOptions. Collection options creator pattern. rowUpdateMode (partial vs full). Subscription lifecycle and cleanup functions. Persisted sync metadata API (metadata.row and metadata.collection) for storing per-row and per-collection adapter state."
+description: "Building custom collection adapters for new backends. SyncConfig interface: sync function receiving begin, write, commit, markReady, markError, truncate, metadata primitives and returning cleanup, loadSubset, and optional unloadSubset handlers. ChangeMessage format (insert, update, delete). On-demand LoadSubsetOptions (where, orderBy, limit, offset, cursor). Expression parsing: parseWhereExpression, parseOrderByExpression, extractSimpleComparisons, parseLoadSubsetOptions. Collection options creator pattern. rowUpdateMode (partial vs full). Sync run, subscription lifecycle, and cleanup functions. Persisted sync metadata API (metadata.row and metadata.collection) for storing per-row and per-collection adapter state."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.9.2"
+  tanstack-package-version: "0.11.0"
   tanstack-source-skill: "db-core/custom-adapter"
   tanstack-sources: "[\"TanStack/db:docs/guides/collection-options-creator.md\",\"TanStack/db:packages/db/src/collection/sync.ts\"]"
   tanstack-type: "sub-skill"
@@ -16,6 +16,12 @@ metadata:
 This skill builds on db-core and db-core/collection-setup. Read those first.
 
 # Custom Adapter Authoring
+
+Each call to an adapter's `sync()` function starts a **sync run**. The run owns
+the callbacks and resources installed by that call until its returned cleanup
+ends them. A sync run may make several backend requests or open a longer-lived
+provider session, so do not use “request” or “session” as a synonym for the
+run.
 
 ## Setup
 
@@ -337,7 +343,9 @@ If initial sync fails before it produces a usable snapshot, call
 `markError(error)` instead. This rejects readiness waits with the supplied cause
 and moves dependent live queries to the error state. Calling `markError()`
 without a cause remains supported and rejects with a generic collection-state
-error. A later successful sync can call `markReady()` to recover.
+error. Later successful work in the same sync run can call `markReady()` to
+recover. Cleanup ends that run; a restart invokes `sync()` again and starts a
+new one.
 
 Source: docs/guides/collection-options-creator.md
 

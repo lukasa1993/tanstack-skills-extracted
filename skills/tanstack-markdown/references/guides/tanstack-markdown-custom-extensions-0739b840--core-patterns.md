@@ -1,8 +1,16 @@
 # Custom Extensions — Core Patterns
 
-[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@0.0.16`.
+[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@1.0.0`.
 
 ## Core Patterns
+
+### Recognize inline source before formatting
+
+Use `inlineParser: { markers, parse(context) }` for syntax that needs original source characters. `markers` is a string of literal first characters. The context supplies `source`, UTF-16 `index`, `options`, `inLink`, and `parseInline(value)` sharing the current depth and scan budget. Return `{ node, length }` with one standard `InlineNode` and a positive in-bounds integer length, or `undefined` to decline. Invalid lengths throw `RangeError`.
+
+Escapes and code spans take precedence. Hooks do not run in code, image alt text, or link destinations; they do run in emphasis and link labels. Respect `inLink` when creating automatic links. Indices are local to the current inline container, and ranges cannot cross enclosing inline or block boundaries. Hook dispatch is budgeted, but callback work is trusted and must avoid repeated suffix scans. Returned AST nodes are trusted; validate URLs and component metadata yourself.
+
+Use `transformInline` for changes to already-parsed nodes. It cannot distinguish an escaped opener from an ordinary text opener or restore raw Markdown spelling. See the extension guide for a complete source-parser example.
 
 ### Transform parsed inline nodes
 
@@ -37,7 +45,7 @@ const html = renderHtml('IMPORTANT: Back up the database.', {
 console.log(html)
 ```
 
-Transforms receive built-in inline nodes and must return a deterministic replacement array.
+Transforms receive both built-in inline nodes and extension nodes returned by `inlineParser`, and must return a deterministic replacement array.
 
 For custom inline UI, return an `InlineComponentNode` with `type: 'inlineComponent'`,
 `name`, `attributes`, inline `children`, and optional `tagName` and string `properties`.

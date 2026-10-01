@@ -1,6 +1,6 @@
 # Production Pipelines — Overview
 
-[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@0.0.16`.
+[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@1.0.0`.
 
 This skill builds on `render-markdown`. Read it first for the supported syntax, AST, parser options, and renderer contracts.
 

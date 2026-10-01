@@ -1,6 +1,6 @@
 # Production Pipelines — Common Production Mistakes
 
-[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@0.0.16`.
+[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@1.0.0`.
 
 ## Common Production Mistakes
 
