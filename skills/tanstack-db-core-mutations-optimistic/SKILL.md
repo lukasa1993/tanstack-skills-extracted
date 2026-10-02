@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.11.0"
+  tanstack-package-version: "0.11.1"
   tanstack-source-skill: "db-core/mutations-optimistic"
   tanstack-sources: "[\"TanStack/db:docs/guides/mutations.md\",\"TanStack/db:packages/db/src/transactions.ts\",\"TanStack/db:packages/db/src/optimistic-action.ts\",\"TanStack/db:packages/db/src/paced-mutations.ts\"]"
   tanstack-type: "sub-skill"
@@ -84,7 +84,7 @@ todoCollection.delete([id1, id2])
 todoCollection.delete(todo.id, { metadata: { reason: 'completed' } })
 ```
 
-All three return a `Transaction` object. Use `tx.isPersisted.promise` to await
+All three return a `Transaction` object. Use `tx.when('settled')` to await
 settlement or catch rollback errors. For a non-empty transaction, this normally
 means its `mutationFn` returned; it proves upload, confirmation, or read-back
 only when that function waits for the backend observation before returning.
@@ -123,7 +123,7 @@ const likePost = createOptimisticAction<string>({
 
 // Returns a Transaction
 const tx = likePost(postId)
-await tx.isPersisted.promise
+await tx.when('settled')
 ```
 
 Multi-collection example:
@@ -380,7 +380,7 @@ which can discard user work the user thought was saved. Consider:
 - Showing pending/saving indicators so users know state is unconfirmed
 - Using `{ optimistic: false }` for destructive operations
 - Designing idempotent server endpoints so retries are safe
-- Handling `tx.isPersisted.promise` rejection to surface errors to the user
+- Handling `tx.when('settled')` rejection to surface errors to the user
 
 ---
 

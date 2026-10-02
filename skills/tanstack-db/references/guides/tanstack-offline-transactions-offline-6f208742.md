@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-offline-transactions-offline"></a>
 
-Published skill · `@tanstack/offline-transactions@1.0.58`.
+Published skill · `@tanstack/offline-transactions@1.0.59`.
 
 [Topic index](../sync-persistence.md) · [Source provenance](../SOURCES.md)
 

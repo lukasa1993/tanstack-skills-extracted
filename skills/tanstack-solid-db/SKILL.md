@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/solid-db"
-  tanstack-package-version: "0.3.0"
+  tanstack-package-version: "0.3.1"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "solid-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/solid/overview.md\",\"TanStack/db:packages/solid-db/src/useLiveQuery.ts\"]"

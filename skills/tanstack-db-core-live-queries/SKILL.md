@@ -1,13 +1,13 @@
 ---
 name: tanstack-db-core-live-queries
-description: "Query builder fluent API: from, where, join, leftJoin, rightJoin, innerJoin, fullJoin, select, fn.select, groupBy, having, orderBy, limit, offset, distinct, findOne. Operators: eq, gt, gte, lt, lte, like, ilike, inArray, isNull, isUndefined, and, or, not. Aggregates: count, sum, avg, min, max. String functions: upper, lower, length, concat. Utility: coalesce, caseWhen. Math: add, subtract, multiply, divide. $selected namespace. createLiveQueryCollection. Derived collections. Predicate push-down. Incremental view maintenance via differential dataflow (d2ts). Virtual properties ($synced, $origin, $key, $collectionId). Includes subqueries for hierarchical data. Collection, toArray, materialize, and concat(toArray(...)) include modes. queryOnce for one-shot queries. createEffect for reactive side effects (onEnter, onUpdate, onExit, onBatch)."
+description: "Query builder fluent API: from, where, join, leftJoin, rightJoin, innerJoin, fullJoin, select, fn.select, groupBy, having, orderBy, limit, offset, distinct, findOne. Operators: eq, gt, gte, lt, lte, like, ilike, inArray, isNull, isUndefined, and, or, not. Aggregates: count, sum, avg, min, max. String functions: upper, lower, length, concat. Utility: coalesce, caseWhen. Math: add, subtract, multiply, divide. $selected namespace. createLiveQueryCollection. Derived collections. Predicate push-down. Incremental view maintenance via differential dataflow (d2ts). Virtual properties ($hasPendingWrites, $origin, $key, $collectionId). Includes subqueries for hierarchical data. Collection, toArray, materialize, and concat(toArray(...)) include modes. queryOnce for one-shot queries. createEffect for reactive side effects (onEnter, onUpdate, onExit, onBatch)."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.11.0"
+  tanstack-package-version: "0.11.1"
   tanstack-source-skill: "db-core/live-queries"
   tanstack-sources: "[\"TanStack/db:docs/guides/live-queries.md\",\"TanStack/db:packages/db/src/query/builder/index.ts\",\"TanStack/db:packages/db/src/query/compiler/index.ts\"]"
   tanstack-type: "sub-skill"
@@ -208,14 +208,16 @@ period. Explicit `cleanup()` can still abort a pending preload.
 
 Live query results include computed, read-only virtual properties on every row:
 
-- `$synced`: `true` when no pending local optimistic write affects the row;
-  `false` while one does. This is local mutation status, not proof that a
+- `$hasPendingWrites`: `true` while a pending local optimistic write affects
+  the row; `false` otherwise. This is local mutation status, not proof that a
   backend uploaded, confirmed, or read back the row.
 - `$origin`: `"local"` if the last confirmed change came from this client, otherwise `"remote"`.
 - `$key`: the row key for the result.
 - `$collectionId`: the source collection ID.
 
 These props are added automatically and can be used in `where`, `select`, and `orderBy` clauses. Do not persist them back to storage.
+The deprecated `$synced` alias is the inverse of `$hasPendingWrites` and will
+be removed in the 1.0 RC.
 
 ## Includes (Subqueries in Select)
 
