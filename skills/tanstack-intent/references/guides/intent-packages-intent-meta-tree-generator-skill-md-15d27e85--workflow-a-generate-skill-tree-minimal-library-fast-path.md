@@ -1,6 +1,6 @@
 # SKILL — Workflow A — Generate skill tree: Minimal library fast path
 
-[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
+[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 ## Workflow A — Generate skill tree: Minimal library fast path
 

@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-installation-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.104.0`.
+Release-matched documentation · `@tanstack/vue-query@5.104.1`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -32,7 +32,7 @@ or
 bun add @tanstack/vue-query
 ```
 
-> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/examples/vue/basic/README.md) example!
+> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/examples/vue/basic/README.md) example!
 
 Vue Query is compatible with Vue 2.x and 3.x
 

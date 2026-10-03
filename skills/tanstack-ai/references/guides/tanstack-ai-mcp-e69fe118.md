@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-mcp"></a>
 
-Published skill · `@tanstack/ai-mcp@0.6.0`.
+Published skill · `@tanstack/ai-mcp@0.7.0`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./tanstack-ai-mcp-e69fe118--overview.md) — 1 KiB
 - [When to use this package](./tanstack-ai-mcp-e69fe118--when-to-use-this-package.md) — 1 KiB
 - [Install](./tanstack-ai-mcp-e69fe118--install.md) — 1 KiB
-- [Host an MCP server](./tanstack-ai-mcp-e69fe118--host-an-mcp-server.md) — 8 KiB
+- [Host an MCP server](./tanstack-ai-mcp-e69fe118--host-an-mcp-server.md) — 9 KiB
 - [`createMCPClient` — single server](./tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md) — 4 KiB
 - [Three type-safety modes](./tanstack-ai-mcp-e69fe118--three-type-safety-modes.md) — 3 KiB
 - [Tool policy: `toolFilter` and `needsApproval`](./tanstack-ai-mcp-e69fe118--tool-policy-toolfilter-and-needsapproval.md) — 2 KiB
@@ -39,7 +39,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="require-a-bearer-token"></a>
 <a id="use-the-auth-the-app-already-has"></a>
 <a id="describe-a-tool-to-the-host"></a>
-<a id="turn-spec-2025-sessions-off"></a>
+<a id="spec-2025-on-a-host-with-many-instances"></a>
 <a id="call-a-createmcpserver-server-with-its-types"></a>
 <a id="createmcpclient-single-server"></a>
 <a id="transports"></a>

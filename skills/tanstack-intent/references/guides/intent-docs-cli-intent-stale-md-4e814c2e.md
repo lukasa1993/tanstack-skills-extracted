@@ -2,19 +2,25 @@
 
 <a id="source-intent-docs-cli-intent-stale-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.0`.
+Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 [Topic index](../maintainer-workflow.md) · [Source provenance](../SOURCES.md)
 
 `intent stale` reports whether shipped skills may need review.
 
-```bash
-npx @tanstack/intent@latest stale [--json]
+<!-- ::start:tabs variant="package-manager" mode="local-install" -->
+
+```text
+@tanstack/intent@latest stale [dir] [--json] [--github-review] [--package-label <label>]
 ```
+
+<!-- ::end:tabs -->
 
 ## Options
 
 - `--json`: print JSON array of staleness reports
+- `--github-review`: write review-reminder files and GitHub Actions output for the generated setup workflow
+- `--package-label <label>`: set the fallback library label in generated reminder items
 
 ## Behavior
 
@@ -35,6 +41,7 @@ npx @tanstack/intent@latest stale [--json]
 ### Output and workflow state
 
 - Prints text output by default or JSON with `--json`
+- Text output lists flagged skills and review signals with their reasons; JSON contains only report data
 - Prints a non-failing workflow update reminder when `.github/workflows/check-skills.yml` is missing the current `intent-workflow-version` stamp
 - If no packages are found, prints `No intent-enabled packages found.`
 
@@ -88,7 +95,7 @@ Report fields:
 | Field | Meaning |
 | --- | --- |
 | `library` | Package name |
-| `currentVersion` | Latest version from npm registry, or `null` if unavailable |
+| `currentVersion` | Local package version when available; otherwise latest from npm, or `null` if unavailable |
 | `skillVersion` | `library_version` from skills, or `null` |
 | `versionDrift` | `major`, `minor`, `patch`, or `null` |
 | `skills` | Per-skill checks |
@@ -112,6 +119,19 @@ Reason generation:
 - When no skill reasons exist: `All skills up-to-date`
 - Otherwise: one warning line per stale skill or review signal (`⚠ <name>: <reason1>, <reason2>, ...`)
 
+## Generated review files
+
+The existing `--github-review` workflow mode writes `review-items.json` and, when there are items, `pr-body.md`. Its Agent Review instructions route to `generate-skill` and its conditional review-signals reference. The command itself does not create a remote PR or edit skills; the installed GitHub workflow handles the review reminder.
+
+Version drift and missing stored source SHAs do not prove that guidance is wrong. Review actual source changes before editing. Missing evidence stays unresolved, and an evidence-backed no-op may leave a signal flagged. Failed checks require logs; workflow advisories are separate maintenance items. Neither is a reason to rewrite skills.
+
+### `stale` and `review` serve different checks
+
+| Command | Evidence | Persistent result |
+| --- | --- | --- |
+| `intent stale` | Installed or registry package versions, stored source sync SHAs, artifacts, workflow version, and workspace package coverage. | Reports conservative signals; it does not record semantic review. |
+| `intent review` | Git changes plus recorded source, skill, and planning-record fingerprints. | Records evidence-backed outcomes in `.intent/review-state.json` and reopens them when tracked content changes. |
+
 ## Common errors
 
 - Package scan failure: prints a scanner error
@@ -123,4 +143,6 @@ Reason generation:
 
 ## Related
 
+- [Maintainer quick start](./intent-docs-getting-started-quick-start-maintainers-md-0ea73e8c.md#source-intent-docs-getting-started-quick-start-maintainers-md)
+- [intent review](./intent-docs-cli-intent-review-md-9cfadc0a.md#source-intent-docs-cli-intent-review-md)
 - [intent list](./intent-docs-cli-intent-list-md-4aea1d54.md#source-intent-docs-cli-intent-list-md)

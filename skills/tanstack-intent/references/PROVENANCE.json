@@ -8,14 +8,14 @@
       "kind": "document",
       "theme": "consumer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-exclude.md",
-      "sha256": "9df1cca580cffec86a33f1a46141a217e82ac00b58f7b6b8b5a60f0169995311",
+      "sha256": "e0a6b22ae18a4442748a71cac50799c25a3d66b296abaac043f3c14d57a21d09",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -23,14 +23,14 @@
       "kind": "document",
       "theme": "consumer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-install.md",
-      "sha256": "c4880bef9a64cead9013c62ff73a00720482a904ab0476baec252ba7314e3d8d",
+      "sha256": "fe02daee9e8f678f1cfae98ec7acfc6ad692ba2a22f891bc7b8be585d673f88d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -38,14 +38,14 @@
       "kind": "document",
       "theme": "consumer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-list.md",
-      "sha256": "560adc7107d9fe9789dfd4698dced1db29fb4b9fffee293a9c5be475f9be2535",
+      "sha256": "d0a177c1452d13210367e395e1fd5b996f0a59c3574ce1172ca8c816fa6e9560",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -53,14 +53,14 @@
       "kind": "document",
       "theme": "consumer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-load.md",
-      "sha256": "50868e27c469830056df8649b2875aaf4d9dfea61443adecac9807000996492f",
+      "sha256": "d874fbd60df11698ecfc4df3f56de711a3a1a6ab0a775377cf0388ca39c2d718",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -68,14 +68,14 @@
       "kind": "document",
       "theme": "consumer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/getting-started/quick-start-consumers.md",
-      "sha256": "153e573d4e42743e75e5d0c6de4a71580d3853d3c99419e7438c91ad0619f766",
+      "sha256": "5aea925530fba90fc2396c054c6ddb4c0e8f0d36371b92c6793ab70e6c361601",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -83,14 +83,14 @@
       "kind": "document",
       "theme": "maintainer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-hooks.md",
-      "sha256": "9918bbb6fbe8c48288732c11bba44e21628c082b103d3515f26a986b9c2237b8",
+      "sha256": "2ff83ef585d74796f0d92b3f8d147deb2178f6a5007cc6c5785e93e3b2c65dd8",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -98,29 +98,14 @@
       "kind": "document",
       "theme": "maintainer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-meta.md",
-      "sha256": "c6d09632ec59759b7bd36938e11f9ca06dba53367837e1da767eb9dc4260e592",
+      "sha256": "7e3b76738739b745b81aade02846dd9f09c756111b3d731ac79ba52276693273",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
-      ]
-    },
-    {
-      "id": "intent:docs/cli/intent-scaffold.md",
-      "kind": "document",
-      "theme": "maintainer-workflow",
-      "package": "@tanstack/intent",
-      "version": "0.5.0",
-      "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
-      "sourcePath": "docs/cli/intent-scaffold.md",
-      "sha256": "d4459133adfcc9d4a1b751bbf4728e594178b4622f397098fc463bba1eecedba",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -128,14 +113,14 @@
       "kind": "document",
       "theme": "maintainer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-setup.md",
-      "sha256": "75d7aa7c8905c9c03b5f6a5f28d53da121f12a3b43f9d7f207d6af703ebc65d6",
+      "sha256": "2d9b2344c39e5341ee0c65aeb4a01103f31e277da43a7bc74ee68f292753c071",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -143,14 +128,14 @@
       "kind": "document",
       "theme": "maintainer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-stale.md",
-      "sha256": "bacf5bb6482cce4010d41ea46c61f671357b8ce60c53cd1cad134e47b8da4409",
+      "sha256": "f1099ab02a438a2e7f41026dd9110583e66958ce328bc66a55902adcda4bbe17",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -158,14 +143,14 @@
       "kind": "document",
       "theme": "maintainer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/cli/intent-validate.md",
-      "sha256": "a25ff7975d7d34cd17ed8c4566c2e8f0a3c16bc91faead64e8ad8561bce60468",
+      "sha256": "c9b7597cb9f8fd8df18ce2117876cb911af61444a4fd6492b2215675e2018875",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -173,14 +158,14 @@
       "kind": "document",
       "theme": "maintainer-workflow",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/getting-started/quick-start-maintainers.md",
-      "sha256": "e0645204616e4321b0831984ede4c9247b672fa82cfa38baddb0c726a19bd8eb",
+      "sha256": "32cb59492ccd30424914762dece3d6b92ade8a0e3cd733fedc6dadf3abbd1083",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -188,14 +173,14 @@
       "kind": "document",
       "theme": "trust-configuration",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/concepts/configuration.md",
-      "sha256": "398801364bc2c876fe6b8eb8769d7add6fae9b8e1c5aa86a42c82c8e2d73068c",
+      "sha256": "c7ee216df5041a8e5eea0d19111c26ef21849f863da0944046cb9b2e007e7160",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -203,14 +188,14 @@
       "kind": "document",
       "theme": "trust-configuration",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/concepts/trust-model.md",
       "sha256": "5950f58fa17a761f289a988348e448d920038b105c6563bd8935b722baa31a1a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -218,14 +203,14 @@
       "kind": "document",
       "theme": "trust-configuration",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/overview.md",
-      "sha256": "ae9fe0c33c6b5035dc93bfc47a9981e670abf6bb5f932a7cf274e5e6345b99a6",
+      "sha256": "df81355d3690f19759fd148805a135dc89930befe08650f52de4401dd2781fbf",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -233,14 +218,14 @@
       "kind": "document",
       "theme": "trust-configuration",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "docs/registry.md",
-      "sha256": "2d03175a494b220f2b1a5835ab511c828d9ae51940111f64e76d152ee8e25410",
+      "sha256": "b40f01dae05d4607af8843f3891053df82f787621a9131e288faadf612d23363",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -248,14 +233,14 @@
       "kind": "document",
       "theme": "meta-discovery-generation",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "packages/intent/meta/domain-discovery/SKILL.md",
-      "sha256": "fcf1c03285cbc34a72bb74e88fdcf5fc1e4bbc5908ccb9dd98afbb1996fdf8c3",
+      "sha256": "168c6d3387506919fa99e7994c17e8e7e6e97a9ad8e12a131b261f73aa9b68ab",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -263,14 +248,14 @@
       "kind": "document",
       "theme": "meta-discovery-generation",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "packages/intent/meta/generate-skill/SKILL.md",
-      "sha256": "9df0ec1038cc9151df03e50383bf0f864831c429e1f4134fafb630ebac0c054f",
+      "sha256": "09ff9311eec80616795c7932a398f146f1469bb477e884c0ac5e234d429e4c04",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -278,14 +263,14 @@
       "kind": "document",
       "theme": "meta-tree-maintenance",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "packages/intent/meta/skill-staleness-check/SKILL.md",
       "sha256": "c80acbaa0ca43219b996f54be1a8e868ccbcf3c27e906b9f84649c5f1e7ff0c2",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     },
     {
@@ -293,14 +278,59 @@
       "kind": "document",
       "theme": "meta-tree-maintenance",
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "repository": "TanStack/intent",
-      "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
       "sourcePath": "packages/intent/meta/tree-generator/SKILL.md",
-      "sha256": "6fbe2cc6a24b596204e840c38949e172b8ca43e53cabbeec15c21473547c8f49",
+      "sha256": "cc11b3f284fe88a4e1ed465c3a59ba283000e69c674e26bf90c92a05922752ad",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "3cf6c146aa36288fba6bc5b7190413d878706756"
+        "796fd6a054846da260ca579e1d744679cc2512bf"
+      ]
+    },
+    {
+      "id": "intent:docs/cli/intent-maintainer.md",
+      "kind": "document",
+      "theme": "other-guides",
+      "package": "@tanstack/intent",
+      "version": "0.5.2",
+      "repository": "TanStack/intent",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
+      "sourcePath": "docs/cli/intent-maintainer.md",
+      "sha256": "b8e4d2757d9f0cb565f01d7eea8d6df9396d5034e5523234d62f5dd9048bee74",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "796fd6a054846da260ca579e1d744679cc2512bf"
+      ]
+    },
+    {
+      "id": "intent:docs/cli/intent-repair.md",
+      "kind": "document",
+      "theme": "other-guides",
+      "package": "@tanstack/intent",
+      "version": "0.5.2",
+      "repository": "TanStack/intent",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
+      "sourcePath": "docs/cli/intent-repair.md",
+      "sha256": "be8c162294832fa7ec5531b3b2e45aae8d023275446aa147750b8eaeb9e00e6c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "796fd6a054846da260ca579e1d744679cc2512bf"
+      ]
+    },
+    {
+      "id": "intent:docs/cli/intent-review.md",
+      "kind": "document",
+      "theme": "other-guides",
+      "package": "@tanstack/intent",
+      "version": "0.5.2",
+      "repository": "TanStack/intent",
+      "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
+      "sourcePath": "docs/cli/intent-review.md",
+      "sha256": "fa4b93586c3fabe19689c6432895b16ed7ec1d0959962c28bbca7caf0d988886",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "796fd6a054846da260ca579e1d744679cc2512bf"
       ]
     }
   ],
@@ -316,7 +346,7 @@
     }
   ],
   "documentationVerification": {
-    "catalogSha256": "da7e987b0ea9e8ce61b756f0753765ce834800cef3fd55ac0175cbd13d6ac40b",
+    "catalogSha256": "cd460031325603c351fcfe5e5e27166254f852170bd3181577e0b3f7f3159838",
     "verification": {
       "npmTarballs": "sha512 integrity verified against npm registry metadata",
       "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
@@ -324,15 +354,15 @@
     },
     "repositoryArchives": [
       {
-        "url": "https://codeload.github.com/TanStack/intent/tar.gz/3cf6c146aa36288fba6bc5b7190413d878706756",
-        "commit": "3cf6c146aa36288fba6bc5b7190413d878706756",
-        "sha256": "702d624ca09f3b60205d96dac0b3c8b57e61269cf3c8b20df5e9240dd2e6caef"
+        "url": "https://codeload.github.com/TanStack/intent/tar.gz/796fd6a054846da260ca579e1d744679cc2512bf",
+        "commit": "796fd6a054846da260ca579e1d744679cc2512bf",
+        "sha256": "988ee80ba65faf7693b3e4e8a87ce708631b2666b1e73b457ee98f883dfda433"
       }
     ],
     "linkValidation": {
-      "localDocuments": 47,
+      "localDocuments": 90,
       "localAssets": 0,
-      "pinnedRepository": 19,
+      "pinnedRepository": 20,
       "pinnedExternalRepository": 0,
       "externalRepositoryPins": [],
       "unavailableAssets": []

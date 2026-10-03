@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.63.0"
+  tanstack-package-version: "0.64.0"
   tanstack-source-skill: "ai-core/media-generation"
   tanstack-sources: "[\"TanStack/ai:docs/media/generations.md\",\"TanStack/ai:docs/media/generation-hooks.md\",\"TanStack/ai:docs/media/image-generation.md\",\"TanStack/ai:docs/media/audio-generation.md\",\"TanStack/ai:docs/media/video-generation.md\",\"TanStack/ai:docs/media/text-to-speech.md\",\"TanStack/ai:docs/adapters/elevenlabs.md\",\"TanStack/ai:docs/media/voice-creation.md\",\"TanStack/ai:docs/media/transcription.md\",\"TanStack/ai:docs/advanced/debug-logging.md\"]"
   tanstack-type: "sub-skill"
@@ -350,7 +350,7 @@ const { generate, result, isLoading } = useGenerateAudio({
 ### 3. Text-to-Speech
 
 Adapters include `openaiSpeech` (tts-1, tts-1-hd, gpt-4o-audio-preview),
-`byteplusSpeech` (`seed-audio-1.0`), and `elevenlabsSpeech` (`eleven_v3`).
+`byteplusSpeech` (`seed-audio-1.0`), and `elevenlabsSpeech` (`eleven_v4`).
 
 `elevenlabsSpeech` accepts `format: 'mp3' | 'pcm' | 'opus' | 'wav'`.
 WAV output contains 44.1 kHz, 16-bit mono PCM with a RIFF header.
@@ -477,7 +477,7 @@ if (!voice) throw new Error('The provider returned no voices.')
 // voice.status   -> 'ready' on every adapter today
 
 const speech = await generateSpeech({
-  adapter: elevenlabsSpeech('eleven_v3'),
+  adapter: elevenlabsSpeech('eleven_v4'),
   text: 'Once upon a time...',
   voice: voice.voiceId,
 })
@@ -498,7 +498,7 @@ import { listVoices } from '@tanstack/ai'
 import { elevenlabsSpeech } from '@tanstack/ai-elevenlabs'
 
 const { voices } = await listVoices({
-  adapter: elevenlabsSpeech('eleven_v3'),
+  adapter: elevenlabsSpeech('eleven_v4'),
   origins: ['generated', 'cloned'],
 })
 ```

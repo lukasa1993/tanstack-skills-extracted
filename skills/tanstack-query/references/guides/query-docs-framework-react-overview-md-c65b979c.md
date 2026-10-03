@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-overview-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.104.0`.
+Release-matched documentation · `@tanstack/react-query@5.104.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -49,7 +49,7 @@ On a more technical note, TanStack Query will likely:
 
 In the example below, you can see TanStack Query in its most basic and simple form being used to fetch the GitHub stats for the TanStack Query GitHub project itself:
 
-[Open in StackBlitz](https://stackblitz.com/github/TanStack/query/tree/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/examples/react/simple)
+[Open in StackBlitz](https://stackblitz.com/github/TanStack/query/tree/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/examples/react/simple)
 
 ```tsx
 import {
@@ -99,7 +99,7 @@ function Example() {
 ## You talked me into it, so what now?
 
 - Consider taking the official [TanStack Query Course](https://query.gg?s=tanstack) (or buying it for your whole team!)
-- Learn TanStack Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-react-installation-md-ff0427b6.md#source-query-docs-framework-react-installation-md) and [API Reference](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/react/reference/index.md)
+- Learn TanStack Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-react-installation-md-ff0427b6.md#source-query-docs-framework-react-installation-md) and [API Reference](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/docs/framework/react/reference/index.md)
 - See the Article [Why You Want React Query](https://tkdodo.eu/blog/why-you-want-react-query).
 
 [//]: # 'Materials'

@@ -1,6 +1,6 @@
 # Live Queries — Common Mistakes
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.11.1`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.11.3`.
 
 ## Common Mistakes
 

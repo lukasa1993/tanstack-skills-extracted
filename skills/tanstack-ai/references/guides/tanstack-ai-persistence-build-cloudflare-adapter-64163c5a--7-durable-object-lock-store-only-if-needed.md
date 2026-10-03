@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — 7. Durable Object lock store (only if needed)
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.7.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
 
 ## 7. Durable Object lock store (only if needed)
 

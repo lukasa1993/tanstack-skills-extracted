@@ -10,16 +10,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-exclude-md-0db9f5a4.md",
       "sourcePath": "docs/cli/intent-exclude.md",
-      "bytes": 1470,
+      "bytes": 1620,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Options; Actions; Examples; Behavior; Related",
           "file": "references/guides/intent-docs-cli-intent-exclude-md-0db9f5a4.md",
-          "bytes": 1470
+          "bytes": 1620
         }
       ],
       "examples": []
@@ -32,16 +32,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-install-md-9e9b9fd2.md",
       "sourcePath": "docs/cli/intent-install.md",
-      "bytes": 10528,
+      "bytes": 11896,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Options; Behavior; Default output; Mapping output; Status messages; Related",
           "file": "references/guides/intent-docs-cli-intent-install-md-9e9b9fd2.md",
-          "bytes": 10528
+          "bytes": 11896
         }
       ],
       "examples": []
@@ -54,16 +54,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-list-md-4aea1d54.md",
       "sourcePath": "docs/cli/intent-list.md",
-      "bytes": 9549,
+      "bytes": 10415,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Options; Behavior; Default output; JSON output; Status messages; Common errors; Related",
           "file": "references/guides/intent-docs-cli-intent-list-md-4aea1d54.md",
-          "bytes": 9549
+          "bytes": 10415
         }
       ],
       "examples": []
@@ -76,16 +76,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-load-md-40c79fd4.md",
       "sourcePath": "docs/cli/intent-load.md",
-      "bytes": 3924,
+      "bytes": 4074,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Options; What you get; JSON output; Common errors; Related",
           "file": "references/guides/intent-docs-cli-intent-load-md-40c79fd4.md",
-          "bytes": 3924
+          "bytes": 4074
         }
       ],
       "examples": []
@@ -98,16 +98,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-getting-started-quick-start-consumers-md-865fe368.md",
       "sourcePath": "docs/getting-started/quick-start-consumers.md",
-      "bytes": 6187,
+      "bytes": 7128,
       "prerequisites": [],
       "sections": [
         {
-          "title": "1. Run install; 2. Review the saved permissions; 3. Use skills in your workflow; 4. Keep skills up-to-date",
+          "title": "1. Install Intent and set up guidance; 2. Review the saved permissions; 3. Use skills in your workflow; 4. Keep skills up-to-date",
           "file": "references/guides/intent-docs-getting-started-quick-start-consumers-md-865fe368.md",
-          "bytes": 6187
+          "bytes": 7128
         }
       ],
       "examples": []
@@ -120,16 +120,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-hooks-md-387452b2.md",
       "sourcePath": "docs/cli/intent-hooks.md",
-      "bytes": 3993,
+      "bytes": 4557,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Options; Behavior; Hook support; Status messages; Related",
           "file": "references/guides/intent-docs-cli-intent-hooks-md-387452b2.md",
-          "bytes": 3993
+          "bytes": 4557
         }
       ],
       "examples": []
@@ -142,38 +142,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-meta-md-6ce60220.md",
       "sourcePath": "docs/cli/intent-meta.md",
-      "bytes": 1122,
+      "bytes": 1203,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Arguments; Output; Common errors",
           "file": "references/guides/intent-docs-cli-intent-meta-md-6ce60220.md",
-          "bytes": 1122
-        }
-      ],
-      "examples": []
-    },
-    {
-      "id": "intent:docs/cli/intent-scaffold.md",
-      "title": "Intent Scaffold",
-      "theme": "maintainer-workflow",
-      "kind": "document",
-      "status": "Release-matched documentation",
-      "frameworks": [],
-      "package": "@tanstack/intent",
-      "version": "0.5.0",
-      "file": "references/guides/intent-docs-cli-intent-scaffold-md-4d10a2a2.md",
-      "sourcePath": "docs/cli/intent-scaffold.md",
-      "bytes": 1159,
-      "prerequisites": [],
-      "sections": [
-        {
-          "title": "Overview; Behavior; Output; Related",
-          "file": "references/guides/intent-docs-cli-intent-scaffold-md-4d10a2a2.md",
-          "bytes": 1159
+          "bytes": 1203
         }
       ],
       "examples": []
@@ -186,16 +164,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-setup-md-7ed6e8de.md",
       "sourcePath": "docs/cli/intent-setup.md",
-      "bytes": 2311,
+      "bytes": 8374,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Commands; What each command changes; Required `files` entries; Common errors; Notes; Related",
+          "title": "Overview; Commands; What each command changes; Security and upgrades; Required `files` entries; Common errors; Notes; Related",
           "file": "references/guides/intent-docs-cli-intent-setup-md-7ed6e8de.md",
-          "bytes": 2311
+          "bytes": 8374
         }
       ],
       "examples": []
@@ -208,16 +186,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-stale-md-4e814c2e.md",
       "sourcePath": "docs/cli/intent-stale.md",
-      "bytes": 4021,
+      "bytes": 5997,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Options; Behavior; JSON report schema; Text output; Common errors; Notes; Related",
+          "title": "Overview; Options; Behavior; JSON report schema; Text output; Generated review files; Common errors; Notes; Related",
           "file": "references/guides/intent-docs-cli-intent-stale-md-4e814c2e.md",
-          "bytes": 4021
+          "bytes": 5997
         }
       ],
       "examples": []
@@ -230,16 +208,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-cli-intent-validate-md-f634a848.md",
       "sourcePath": "docs/cli/intent-validate.md",
-      "bytes": 3555,
+      "bytes": 7607,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Arguments; Options; Frontmatter migration fixes; Validation checks; Packaging warnings; Common errors; Related",
+          "title": "Overview; Arguments; Options; Set the library version; Frontmatter migration fixes; Validation checks; Packaging warnings; Common errors; Related",
           "file": "references/guides/intent-docs-cli-intent-validate-md-f634a848.md",
-          "bytes": 3555
+          "bytes": 7607
         }
       ],
       "examples": []
@@ -252,16 +230,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-getting-started-quick-start-maintainers-md-0ea73e8c.md",
       "sourcePath": "docs/getting-started/quick-start-maintainers.md",
-      "bytes": 7574,
+      "bytes": 12372,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Install; Initial Setup (With Agent); Publish Configuration; Ongoing Maintenance (Manual or Agent-Assisted)",
+          "title": "Overview; Install; Enable the maintainer workflow; Create the first useful batch; Choose how consumers install the skills; Keep guidance current during library work; Configure publishing; Check package and release signals",
           "file": "references/guides/intent-docs-getting-started-quick-start-maintainers-md-0ea73e8c.md",
-          "bytes": 7574
+          "bytes": 12372
         }
       ],
       "examples": []
@@ -274,16 +252,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-concepts-configuration-md-138c87c1.md",
       "sourcePath": "docs/concepts/configuration.md",
-      "bytes": 7670,
+      "bytes": 7820,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Configuration inheritance; `intent.skills`; `intent.exclude`",
           "file": "references/guides/intent-docs-concepts-configuration-md-138c87c1.md",
-          "bytes": 7670
+          "bytes": 7820
         }
       ],
       "examples": []
@@ -296,7 +274,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-concepts-trust-model-md-2527dceb.md",
       "sourcePath": "docs/concepts/trust-model.md",
       "bytes": 6970,
@@ -318,16 +296,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-overview-md-ccd169b3.md",
       "sourcePath": "docs/overview.md",
-      "bytes": 3942,
+      "bytes": 6367,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; What Intent does; How it works",
+          "title": "Overview; What Intent does; Keep the workflow boundaries clear; How it works",
           "file": "references/guides/intent-docs-overview-md-ccd169b3.md",
-          "bytes": 3942
+          "bytes": 6367
         }
       ],
       "examples": []
@@ -340,16 +318,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-docs-registry-md-01f43510.md",
       "sourcePath": "docs/registry.md",
-      "bytes": 2520,
+      "bytes": 6310,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; How discovery works; Ship skills in 4 steps; Keeping skills current; Requesting a library",
           "file": "references/guides/intent-docs-registry-md-01f43510.md",
-          "bytes": 2520
+          "bytes": 6310
         }
       ],
       "examples": []
@@ -362,7 +340,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md",
       "sourcePath": "packages/intent/meta/domain-discovery/SKILL.md",
       "bytes": 3044,
@@ -424,7 +402,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-packages-intent-meta-generate-skill-skill-md-5760b239.md",
       "sourcePath": "packages/intent/meta/generate-skill/SKILL.md",
       "bytes": 1614,
@@ -471,7 +449,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-packages-intent-meta-skill-staleness-check-skill-md-ad82bd49.md",
       "sourcePath": "packages/intent/meta/skill-staleness-check/SKILL.md",
       "bytes": 9159,
@@ -493,7 +471,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/intent",
-      "version": "0.5.0",
+      "version": "0.5.2",
       "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md",
       "sourcePath": "packages/intent/meta/tree-generator/SKILL.md",
       "bytes": 2729,
@@ -553,6 +531,152 @@
           "title": "Output order",
           "file": "references/guides/intent-packages-intent-meta-tree-generator-skill-md-15d27e85--output-order.md",
           "bytes": 705
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-maintainer.md",
+      "title": "Intent Maintainer",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.5.2",
+      "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff.md",
+      "sourcePath": "docs/cli/intent-maintainer.md",
+      "bytes": 1537,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--overview.md",
+          "bytes": 713
+        },
+        {
+          "title": "Commands",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--commands.md",
+          "bytes": 1208
+        },
+        {
+          "title": "Setup",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--setup.md",
+          "bytes": 2170
+        },
+        {
+          "title": "Add a skill",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--add-a-skill.md",
+          "bytes": 1628
+        },
+        {
+          "title": "Remove a skill",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--remove-a-skill.md",
+          "bytes": 958
+        },
+        {
+          "title": "Choose repository distribution",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--choose-repository-distribution.md",
+          "bytes": 5178
+        },
+        {
+          "title": "Maintain and check",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--maintain-and-check.md",
+          "bytes": 3732
+        },
+        {
+          "title": "Verify distribution",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--verify-distribution.md",
+          "bytes": 1393
+        },
+        {
+          "title": "Related",
+          "file": "references/guides/intent-docs-cli-intent-maintainer-md-00f7d3ff--related.md",
+          "bytes": 658
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-repair.md",
+      "title": "Intent Repair",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.5.2",
+      "file": "references/guides/intent-docs-cli-intent-repair-md-43097d42.md",
+      "sourcePath": "docs/cli/intent-repair.md",
+      "bytes": 5665,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Frontmatter repairs; Code-example suggestions; CI patches",
+          "file": "references/guides/intent-docs-cli-intent-repair-md-43097d42.md",
+          "bytes": 5665
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "intent:docs/cli/intent-review.md",
+      "title": "Intent Review",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [],
+      "package": "@tanstack/intent",
+      "version": "0.5.2",
+      "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a.md",
+      "sourcePath": "docs/cli/intent-review.md",
+      "bytes": 1859,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--overview.md",
+          "bytes": 1368
+        },
+        {
+          "title": "Quick start",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--quick-start.md",
+          "bytes": 671
+        },
+        {
+          "title": "Options",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--options.md",
+          "bytes": 1092
+        },
+        {
+          "title": "Behavior",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--behavior.md",
+          "bytes": 6841
+        },
+        {
+          "title": "Record a completed review",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--record-a-completed-review.md",
+          "bytes": 5733
+        },
+        {
+          "title": "Default and JSON output",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--default-and-json-output.md",
+          "bytes": 1168
+        },
+        {
+          "title": "Automated checks",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--automated-checks.md",
+          "bytes": 839
+        },
+        {
+          "title": "Status and errors",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--status-and-errors.md",
+          "bytes": 1401
+        },
+        {
+          "title": "Related",
+          "file": "references/guides/intent-docs-cli-intent-review-md-9cfadc0a--related.md",
+          "bytes": 661
         }
       ],
       "examples": []

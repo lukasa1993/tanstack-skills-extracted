@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 7. Files Adapters (upload once, reference by handle)
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.63.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.64.0`.
 
 ## Core Patterns: 7. Files Adapters (upload once, reference by handle)
 

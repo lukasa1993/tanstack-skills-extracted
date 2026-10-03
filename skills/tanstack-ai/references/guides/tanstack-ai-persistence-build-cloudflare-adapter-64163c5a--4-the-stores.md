@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — 4. The stores
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.7.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
 
 ## 4. The stores
 

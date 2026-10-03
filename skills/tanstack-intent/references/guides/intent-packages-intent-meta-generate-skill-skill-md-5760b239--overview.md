@@ -1,6 +1,6 @@
 # SKILL — Overview
 
-[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
+[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 # Author and maintain library skills
 

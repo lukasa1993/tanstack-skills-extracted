@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-guides-queries-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.25`.
+Release-matched documentation · `@tanstack/lit-query@0.2.26`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ New to Lit Query? Start with [Installation](./query-docs-framework-lit-installat
 
 A query is a declarative dependency on an asynchronous source of data tied to a unique key. Use queries for reading server state. If a function creates, updates, or deletes server data, use a [mutation](./query-docs-framework-lit-guides-mutations-md-38f7fec7.md#source-query-docs-framework-lit-guides-mutations-md) instead.
 
-In Lit, subscribe to a query with [`createQueryController`](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/lit/reference/functions/createQueryController.md):
+In Lit, subscribe to a query with [`createQueryController`](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/docs/framework/lit/reference/functions/createQueryController.md):
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -141,4 +141,4 @@ The accessor includes `refetch`:
 html`<button @click=${() => this.todos.refetch()}>Refetch</button>`
 ```
 
-For multiple queries that should run at the same time, see [Parallel Queries](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/lit/guides/parallel-queries.md).
+For multiple queries that should run at the same time, see [Parallel Queries](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/docs/framework/lit/guides/parallel-queries.md).

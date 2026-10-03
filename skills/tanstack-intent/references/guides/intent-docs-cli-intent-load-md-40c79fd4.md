@@ -2,15 +2,19 @@
 
 <a id="source-intent-docs-cli-intent-load-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.0`.
+Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 [Topic index](../consumer-workflow.md) · [Source provenance](../SOURCES.md)
 
 `intent load` loads a compact skill identity from the current install and prints the matching `SKILL.md` content.
 
-```bash
-npx @tanstack/intent@latest load <package>#<skill> [--path] [--json] [--debug] [--global] [--global-only]
+<!-- ::start:tabs variant="package-manager" mode="local-install" -->
+
+```text
+@tanstack/intent@latest load <package>#<skill> [--path] [--json] [--debug] [--global] [--global-only]
 ```
+
+<!-- ::end:tabs -->
 
 ## Options
 
@@ -47,12 +51,14 @@ The package can be scoped or unscoped. The skill can include slash-separated sub
 
 Examples:
 
-```bash
-npx @tanstack/intent@latest load @tanstack/query#fetching
-npx @tanstack/intent@latest load @tanstack/query#core/fetching
-npx @tanstack/intent@latest load @tanstack/router-core#auth-and-guards
-npx @tanstack/intent@latest load some-lib#core --path
-```
+<!-- ::start:tabs variant="package-manager" mode="local-install" -->
+
+@tanstack/intent@latest load @tanstack/query#fetching
+@tanstack/intent@latest load @tanstack/query#core/fetching
+@tanstack/intent@latest load @tanstack/router-core#auth-and-guards
+@tanstack/intent@latest load some-lib#core --path
+
+<!-- ::end:tabs -->
 
 ## JSON output
 

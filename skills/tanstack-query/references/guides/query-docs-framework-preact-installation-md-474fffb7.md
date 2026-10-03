@@ -2,13 +2,13 @@
 
 <a id="source-query-docs-framework-preact-installation-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.104.0`.
+Release-matched documentation · `@tanstack/preact-query@5.104.1`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
 [//]: # 'Compatibility'
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/examples/preact/simple/README.md) example
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/examples/preact/simple/README.md) example
 
 [//]: # 'Compatibility'
 [//]: # 'CDNExample'

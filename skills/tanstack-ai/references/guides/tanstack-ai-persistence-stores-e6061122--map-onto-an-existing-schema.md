@@ -1,6 +1,6 @@
 # Stores — Map onto an existing schema
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.7.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
 
 ## Map onto an existing schema
 

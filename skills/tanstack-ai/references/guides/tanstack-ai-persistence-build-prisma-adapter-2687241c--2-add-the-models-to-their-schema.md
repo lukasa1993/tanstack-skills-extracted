@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 2. Add the models to their schema
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.7.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
 
 ## 2. Add the models to their schema
 

@@ -2,7 +2,7 @@
 
 <a id="source-intent-packages-intent-meta-generate-skill-skill-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.0`.
+Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 [Topic index](../meta-discovery-generation.md) · [Source provenance](../SOURCES.md)
 

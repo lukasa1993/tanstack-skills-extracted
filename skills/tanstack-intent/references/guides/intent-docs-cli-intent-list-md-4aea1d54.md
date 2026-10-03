@@ -2,15 +2,17 @@
 
 <a id="source-intent-docs-cli-intent-list-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.0`.
+Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 [Topic index](../consumer-workflow.md) · [Source provenance](../SOURCES.md)
 
 `intent list` discovers skill-enabled packages and shows the skills available under the project's permissions and exclusions. It does not change permissions or write guidance.
 
-```bash
-npx @tanstack/intent@latest list [--json] [--debug] [--global] [--global-only] [--show-hidden] [--no-notices]
-```
+<!-- ::start:tabs variant="package-manager" mode="local-install" -->
+
+@tanstack/intent@latest list [--json] [--debug] [--global] [--global-only] [--show-hidden] [--no-notices]
+
+<!-- ::end:tabs -->
 
 ## Options
 
@@ -27,6 +29,9 @@ npx @tanstack/intent@latest list [--json] [--debug] [--global] [--global-only] [
 - `--global-only`: list global packages only
 
 ## Behavior
+
+> [!NOTE]
+> `list` is the consumer catalog for skills shipped by project and workspace dependencies. Library maintainers load Intent's packaged authoring procedures through `intent meta` or the installed maintainer block; `intent maintainer` handles setup, registration, synchronization, and checks.
 
 ### Default list
 
@@ -84,7 +89,7 @@ Text output includes:
 - A skill tree grouped by package, with descriptions and commands to load each skill.
 - Version conflicts and discovery warnings, when present.
 
-Load commands use the detected package manager and preserve the selected global scan scope. `SOURCE` distinguishes local discovery from explicit global scanning.
+Load commands use the detected package manager's `@tanstack/intent@latest` runner and preserve the selected global scan scope. `SOURCE` distinguishes local discovery from explicit global scanning.
 
 Text output and discovery warnings go to stdout. Policy notices and `--debug` details go to stderr.
 
@@ -102,7 +107,8 @@ Text output and discovery warnings go to stdout. Policy notices and `--debug` de
       "packageVersion": "5.0.0",
       "packageSource": "local",
       "skillName": "fetching",
-      "description": "Query data fetching patterns",
+      "description": "Use when fetching and caching server data with TanStack Query.",
+      "purpose": "Query data fetching patterns",
       "type": "core",
       "framework": "react"
     }
@@ -127,6 +133,8 @@ Text output and discovery warnings go to stdout. Policy notices and `--debug` de
 | Field | Meaning |
 | --- | --- |
 | `skills` | Available skills. `use` is the portable `<package>#<skill>` identity; `type` and `framework` are optional. |
+| Skill `description` | Standard agent-discovery text describing when to use the skill. Also used in the text listing. |
+| Skill `purpose` | Optional descriptive explanation from `metadata.purpose`, kept separate from activation guidance. Omitted from JSON when absent. |
 | `packages` | Selected packages, their source and location, and permitted skill counts. |
 | `hiddenSourceCount` | Number of packages hidden by the explicit allowlist. |
 | `hiddenSources` | Objects with `name` and `skillCount` in human sessions, even without `--show-hidden`. Always empty in agent sessions. |
@@ -159,6 +167,7 @@ JSON includes diagnostics in the object instead of printing separate warning or 
 
 - [intent install](./intent-docs-cli-intent-install-md-9e9b9fd2.md#source-intent-docs-cli-intent-install-md)
 - [intent load](./intent-docs-cli-intent-load-md-40c79fd4.md#source-intent-docs-cli-intent-load-md)
+- [intent meta](./intent-docs-cli-intent-meta-md-6ce60220.md#source-intent-docs-cli-intent-meta-md)
 - [intent exclude](./intent-docs-cli-intent-exclude-md-0db9f5a4.md#source-intent-docs-cli-intent-exclude-md)
 - [Configuration](./intent-docs-concepts-configuration-md-138c87c1.md#source-intent-docs-concepts-configuration-md)
 - [Trust model](./intent-docs-concepts-trust-model-md-2527dceb.md#source-intent-docs-concepts-trust-model-md)

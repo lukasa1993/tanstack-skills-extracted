@@ -1,6 +1,6 @@
 # Ai Mcp — `createMCPClients` — multiple servers
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.6.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.7.0`.
 
 ## `createMCPClients` — multiple servers
 

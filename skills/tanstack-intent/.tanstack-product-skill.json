@@ -2,15 +2,16 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-intent",
   "product": "intent",
-  "sourceCount": 20,
+  "sourceCount": 22,
   "themes": [
     "consumer-workflow",
     "maintainer-workflow",
     "trust-configuration",
     "meta-discovery-generation",
-    "meta-tree-maintenance"
+    "meta-tree-maintenance",
+    "other-guides"
   ],
-  "guideCount": 20,
-  "largestGuideEntryBytes": 10528,
-  "inputSha256": "f16430d056872f7ca09f51ff673711f3d983c4e4d409fe0cf35cdb6fb3ae1ca9"
+  "guideCount": 22,
+  "largestGuideEntryBytes": 12372,
+  "inputSha256": "62396c5588774d8a05e28e55ee363bbf70d8eee4b98fd205f1e79b397e84f635"
 }

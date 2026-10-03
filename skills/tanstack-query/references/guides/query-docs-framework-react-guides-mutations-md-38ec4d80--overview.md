@@ -1,6 +1,6 @@
 # Mutations — Overview
 
-[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.104.0`.
+[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.104.1`.
 
 Unlike queries, mutations are typically used to create/update/delete data or perform server side-effects. For this purpose, TanStack Query exports a `useMutation` hook.
 
@@ -58,7 +58,7 @@ Beyond those primary states, more information is available depending on the stat
 
 In the example above, you also saw that you can pass variables to your mutations function by calling the `mutate` function with a **single variable or object**.
 
-Even with just variables, mutations aren't all that special, but when used with the `onSuccess` option, the [Query Client's `invalidateQueries` method](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/react/reference/classes/QueryClient.md#invalidatequeries) and the [Query Client's `setQueryData` method](https://github.com/TanStack/query/blob/d4033eb1e5bdef3c8aa72a6cc614bcdd98b1ddca/docs/framework/react/reference/classes/QueryClient.md#setquerydata), mutations become a very powerful tool.
+Even with just variables, mutations aren't all that special, but when used with the `onSuccess` option, the [Query Client's `invalidateQueries` method](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/docs/framework/react/reference/classes/QueryClient.md#invalidatequeries) and the [Query Client's `setQueryData` method](https://github.com/TanStack/query/blob/29859ae60c8dca0a5cdbf8abccc775b655cf43e2/docs/framework/react/reference/classes/QueryClient.md#setquerydata), mutations become a very powerful tool.
 
 [//]: # 'Info1'
 

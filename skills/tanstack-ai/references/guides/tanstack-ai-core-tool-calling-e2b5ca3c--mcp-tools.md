@@ -1,6 +1,6 @@
 # Tool Calling — MCP Tools
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.63.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.64.0`.
 
 ## MCP Tools
 

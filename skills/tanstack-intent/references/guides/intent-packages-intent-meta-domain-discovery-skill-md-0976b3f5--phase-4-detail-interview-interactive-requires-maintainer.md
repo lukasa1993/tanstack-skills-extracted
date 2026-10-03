@@ -1,6 +1,6 @@
 # SKILL — Phase 4 — Detail interview (interactive — requires maintainer)
 
-[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.0`.
+[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.2`.
 
 ## Phase 4 — Detail interview (interactive — requires maintainer)
 
