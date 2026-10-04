@@ -20,7 +20,8 @@ export function withDocumentedFrameworkThemes(spec, sources) {
       description: `${framework}-specific setup and behavior from official release documentation.`,
       match: (_name, source) => (source.frameworks || []).includes(framework),
     }))
-  return { ...spec, themes: [...spec.themes, ...additions] }
+  // New adapter routes must precede broad catch-all topics such as other-guides.
+  return { ...spec, themes: [...additions, ...spec.themes] }
 }
 
 function productHintIds(productSpecs, libraryName) {
