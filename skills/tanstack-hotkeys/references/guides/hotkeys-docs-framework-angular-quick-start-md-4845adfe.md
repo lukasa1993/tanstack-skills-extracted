@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -173,3 +173,13 @@ export const appConfig: ApplicationConfig = {
 - [Sequence Recording Guide](./hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md#source-hotkeys-docs-framework-angular-guides-sequence-recording-md)
 - [Key State Tracking Guide](./hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md#source-hotkeys-docs-framework-angular-guides-key-state-tracking-md)
 - [Formatting & Display Guide](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md)
+
+## Devtools
+
+Install the optional devtools packages to inspect registrations, held keys, and trigger counts:
+
+```sh
+npm install @tanstack/angular-devtools @tanstack/angular-hotkeys-devtools
+```
+
+The Angular devtools integration requires Angular 21 or newer. Follow the [devtools setup guide](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) to add the dock to your application.

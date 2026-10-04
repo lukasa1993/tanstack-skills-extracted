@@ -1,6 +1,6 @@
 # Rendering And Export — Custom renderers
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Custom renderers
 
@@ -39,7 +39,9 @@ interface ChartSurface<
     focus: ChartFocusState<TDatum, TXValue, TYValue> | null,
     pointer?: ChartTooltipPosition | null,
     cursor?: ChartCursorPresentation<TXValue, TYValue> | null,
+    options?: { stateFocus: ChartFocusState<TDatum, TXValue, TYValue> | null },
   ) => ChartScene | void
+  readonly supportsStateFocus?: true
   destroy: () => void
 }
 
@@ -72,7 +74,11 @@ interface ChartRendererRenderContext<
 }
 ```
 
-`element` is the one accessible, interactive root. `layers`, when present,
+`element` is the one accessible, interactive root. `surface.destroy()` releases animation work,
+subscriptions, and renderer resources. The mounting host owns removal of the
+chart root and cleanup of its interaction listeners.
+
+`layers`, when present,
 lists child surfaces from back to front. `defaultElement` is the topmost
 surface element owned by the host's default renderer. SVG-oriented
 `ChartRenderContext` callbacks expose that element as `svg` and also include

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-rendering-and-export-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../rendering-composition-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -19,9 +19,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [`reconcileChartSvg`](./charts-docs-reference-rendering-and-export-md-ef854527--reconcilechartsvg.md) — 2 KiB
 - [Animation options](./charts-docs-reference-rendering-and-export-md-ef854527--animation-options.md) — 2 KiB
 - [SVG serialization](./charts-docs-reference-rendering-and-export-md-ef854527--svg-serialization.md) — 2 KiB
-- [Browser image export](./charts-docs-reference-rendering-and-export-md-ef854527--browser-image-export.md) — 2 KiB
+- [Browser image export](./charts-docs-reference-rendering-and-export-md-ef854527--browser-image-export.md) — 3 KiB
 - [Mark-level renderers](./charts-docs-reference-rendering-and-export-md-ef854527--mark-level-renderers.md) — 4 KiB
-- [Custom renderers](./charts-docs-reference-rendering-and-export-md-ef854527--custom-renderers.md) — 11 KiB
+- [Custom renderers](./charts-docs-reference-rendering-and-export-md-ef854527--custom-renderers.md) — 12 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="choose-a-renderer"></a>

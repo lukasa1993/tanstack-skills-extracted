@@ -1,6 +1,6 @@
 # Tooltips And Focus — Overview
 
-[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 The DOM host provides a small automatic path for the common case:
 

@@ -2,11 +2,17 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-sequence-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
 Use `createHotkeySequenceRecorder` to capture a series of shortcut chords. By default, each step records its physical code: pressing G twice produces `['[KeyG]', '[KeyG]']`. Set `recordBy: 'key'` to follow logical characters instead. Pass the resulting array directly to sequence registration and format each step for display.
+
+TanStack Hotkeys automatically suppresses registered hotkey and sequence callbacks while any recorder is active. You do not need to set `enabled` from `isRecording`. Registrations remain available for conflict detection, and recorded keys stay suppressed through repeats and key release.
+
+## Reactive options
+
+This section is an exact duplicate. Read [Reactive options in Hotkey Recording](./hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md).
 
 ## Record and display a sequence
 

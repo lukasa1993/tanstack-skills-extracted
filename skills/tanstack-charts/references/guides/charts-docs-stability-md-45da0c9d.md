@@ -2,11 +2,11 @@
 
 <a id="source-charts-docs-stability-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
-TanStack Charts is in Alpha. Packages use regular `0.x` versions on the normal
+TanStack Charts releases before 1.0 follow this Alpha policy. Packages use regular `0.x` versions on the normal
 `latest` npm tag, without an `-alpha` suffix or separate release channel.
 
 Alpha is ready for evaluation and early application integration. It is not a
@@ -21,7 +21,8 @@ All public TanStack Charts packages move together as one fixed release group.
   APIs. A fix may correct rendering or interaction that was observably wrong.
 - Minor releases may add features and may contain breaking API changes while
   the package major remains `0`.
-- The project will publish a stable-release compatibility policy before `1.0`.
+- The [stable compatibility contract](./charts-docs-compatibility-md-3e5072ae.md#source-charts-docs-compatibility-md) takes effect with
+  `1.0`; published `0.x` releases continue to follow this Alpha policy.
 
 ## Public surface
 

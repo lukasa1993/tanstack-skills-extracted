@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-marks-polar-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../marks-spatial.md) · [Source provenance](../SOURCES.md)
 
@@ -11,7 +11,7 @@ Release-matched documentation · `@tanstack/charts@0.18.0`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./charts-docs-reference-marks-polar-md-29a92849--overview.md) — 1 KiB
-- [`polar`](./charts-docs-reference-marks-polar-md-29a92849--polar.md) — 5 KiB
+- [`polar`](./charts-docs-reference-marks-polar-md-29a92849--polar.md) — 6 KiB
 - [`focusGroupAngle`](./charts-docs-reference-marks-polar-md-29a92849--focusgroupangle.md) — 1 KiB
 - [`pie`](./charts-docs-reference-marks-polar-md-29a92849--pie.md) — 3 KiB
 - [`radialArc`](./charts-docs-reference-marks-polar-md-29a92849--radialarc.md) — 4 KiB

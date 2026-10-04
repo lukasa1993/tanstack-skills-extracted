@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ember-table-create-table-hook"></a>
 
-Published skill · `@tanstack/ember-table@9.2.4`.
+Published skill · `@tanstack/ember-table@9.2.5`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-table-create-table-hook"></a>
 
-Published skill · `@tanstack/vue-table@9.2.4`.
+Published skill · `@tanstack/vue-table@9.2.5`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

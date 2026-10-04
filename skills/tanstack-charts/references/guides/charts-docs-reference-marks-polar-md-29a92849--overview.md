@@ -1,6 +1,6 @@
 # Polar — Overview
 
-[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 Polar marks are available only from the capability subpath:
 

@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-getting-started-quick-start-consumers-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.2`.
+Release-matched documentation · `@tanstack/intent@0.5.3`.
 
 [Topic index](../consumer-workflow.md) · [Source provenance](../SOURCES.md)
 

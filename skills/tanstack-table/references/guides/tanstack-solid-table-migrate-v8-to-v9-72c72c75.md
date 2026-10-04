@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/solid-table@9.2.4`.
+Published skill · `@tanstack/solid-table@9.2.5`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

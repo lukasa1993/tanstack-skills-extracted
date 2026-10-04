@@ -12,7 +12,7 @@ metadata:
 
 Markdown parsing, extensions, rendering, production pipeline, and framework-adapter guidance.
 
-> TanStack Markdown is alpha. Confirm parser and renderer versions.
+> Confirm parser and renderer versions.
 
 ## Workflow
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-table-with-tanstack-virtual"></a>
 
-Published skill · `@tanstack/angular-table@9.2.4`.
+Published skill · `@tanstack/angular-table@9.2.5`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

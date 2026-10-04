@@ -39,13 +39,13 @@ Type-safe form guidance for fields, validation, composition, submission, SSR, de
 
 ## Framework routing
 
-- **React** — detect `@tanstack/react-form`. Read [React adapter](references/framework-react.md).
-- **Preact** — detect `@tanstack/preact-form`. Read [Preact adapter](references/framework-preact.md).
-- **Vue** — detect `@tanstack/vue-form`. Read [Vue adapter](references/framework-vue.md).
 - **Angular** — detect `@tanstack/angular-form`. Read [Angular adapter](references/framework-angular.md).
-- **Solid** — detect `@tanstack/solid-form`. Read [Solid adapter](references/framework-solid.md).
 - **Lit** — detect `@tanstack/lit-form`. Read [Lit adapter](references/framework-lit.md).
+- **Preact** — detect `@tanstack/preact-form`. Read [Preact adapter](references/framework-preact.md).
+- **React** — detect `@tanstack/react-form`. Read [React adapter](references/framework-react.md).
+- **Solid** — detect `@tanstack/solid-form`. Read [Solid adapter](references/framework-solid.md).
 - **Svelte** — detect `@tanstack/svelte-form`. Read [Svelte adapter](references/framework-svelte.md).
+- **Vue** — detect `@tanstack/vue-form`. Read [Vue adapter](references/framework-vue.md).
 
 ## Product boundaries
 

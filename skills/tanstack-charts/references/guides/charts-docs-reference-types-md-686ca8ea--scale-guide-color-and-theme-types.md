@@ -1,6 +1,6 @@
 # Types — Scale, guide, color, and theme types
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Scale, guide, color, and theme types
 

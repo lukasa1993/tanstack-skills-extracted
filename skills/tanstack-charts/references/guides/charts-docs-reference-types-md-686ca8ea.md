@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-types-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../types.md) · [Source provenance](../SOURCES.md)
 
@@ -10,10 +10,10 @@ Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-- [Overview](./charts-docs-reference-types-md-686ca8ea--overview.md) — 1 KiB
+- [Overview](./charts-docs-reference-types-md-686ca8ea--overview.md) — 3 KiB
 - [Callback shape](./charts-docs-reference-types-md-686ca8ea--callback-shape.md) — 1 KiB
 - [Values and channels](./charts-docs-reference-types-md-686ca8ea--values-and-channels.md) — 2 KiB
-- [Inference path](./charts-docs-reference-types-md-686ca8ea--inference-path.md) — 3 KiB
+- [Inference path](./charts-docs-reference-types-md-686ca8ea--inference-path.md) — 4 KiB
 - [Definitions](./charts-docs-reference-types-md-686ca8ea--definitions.md) — 2 KiB
 - [Marks and scenes](./charts-docs-reference-types-md-686ca8ea--marks-and-scenes.md) — 5 KiB
 - [Scene-node types](./charts-docs-reference-types-md-686ca8ea--scene-node-types.md) — 1 KiB

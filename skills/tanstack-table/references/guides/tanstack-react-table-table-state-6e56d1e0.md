@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-table-table-state"></a>
 
-Published skill · `@tanstack/react-table@9.2.4`.
+Published skill · `@tanstack/react-table@9.2.5`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

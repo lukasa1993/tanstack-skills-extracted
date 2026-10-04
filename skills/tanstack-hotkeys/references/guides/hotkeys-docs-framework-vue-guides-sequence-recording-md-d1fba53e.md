@@ -2,13 +2,19 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-sequence-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
 TanStack Hotkeys provides the `useHotkeySequenceRecorder` composable for building UIs where users record multi-chord sequences (Vim-style shortcuts). The recorder captures each step like a single hotkey chord. Users finish with Enter by default, or you can use manual commit and an optional idle timeout.
 
 Sequence recording uses `recordBy: 'code'` by default, preserving every step as a physical string such as `['[KeyG]', 'Alt+[KeyS]']`. Set `recordBy: 'key'` for logical characters. The shared rejection and conflict options follow the [hotkey recording guide](./hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md#source-hotkeys-docs-framework-vue-guides-hotkey-recording-md).
+
+TanStack Hotkeys automatically suppresses registered hotkey and sequence callbacks while any recorder is active. You do not need to set `enabled` from `isRecording`. Registrations remain available for conflict detection, and recorded keys stay suppressed through repeats and key release.
+
+## Reactive options
+
+This section is an exact duplicate. Read [Reactive options in Hotkey Recording](./hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md).
 
 ## Basic usage
 

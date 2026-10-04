@@ -10,16 +10,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
       "sourcePath": "docs/devtools.md",
-      "bytes": 3670,
+      "bytes": 6621,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Features; Installation; Setup; Production builds",
           "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
-          "bytes": 3670
+          "bytes": 6621
         }
       ],
       "examples": []
@@ -32,16 +32,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
       "sourcePath": "docs/installation.md",
-      "bytes": 4724,
+      "bytes": 7207,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
-          "bytes": 4724
+          "bytes": 7207
         }
       ],
       "examples": []
@@ -54,16 +54,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
       "sourcePath": "docs/overview.md",
-      "bytes": 6284,
+      "bytes": 7633,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Runtime and package requirements; Choose what a shortcut follows; Register actions and sequences; Record a replacement binding; Display shortcuts and hints; Inspect a binding",
+          "title": "Overview; Runtime and package requirements; Choose what a shortcut follows; Register actions and sequences; Record a replacement binding; Display shortcuts and hints; Inspect a binding; Framework guides",
           "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
-          "bytes": 6284
+          "bytes": 7633
         }
       ],
       "examples": []
@@ -78,7 +78,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
       "sourcePath": "docs/framework/react/guides/formatting-display.md",
       "bytes": 5845,
@@ -102,16 +102,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md",
       "sourcePath": "docs/framework/react/guides/hotkey-recording.md",
-      "bytes": 9062,
+      "bytes": 9351,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md",
-          "bytes": 9062
+          "bytes": 9351
         }
       ],
       "examples": []
@@ -126,10 +126,10 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
       "sourcePath": "docs/framework/react/guides/hotkeys.md",
-      "bytes": 2616,
+      "bytes": 2757,
       "prerequisites": [],
       "sections": [
         {
@@ -146,6 +146,11 @@
           "title": "Basic usage",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--basic-usage.md",
           "bytes": 1587
+        },
+        {
+          "title": "Updating options",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--updating-options.md",
+          "bytes": 719
         },
         {
           "title": "Default options",
@@ -200,7 +205,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md",
       "sourcePath": "docs/framework/react/guides/key-state-tracking.md",
       "bytes": 7939,
@@ -224,16 +229,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequence-recording-md-d18571b6.md",
       "sourcePath": "docs/framework/react/guides/sequence-recording.md",
-      "bytes": 5022,
+      "bytes": 5311,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-react-guides-sequence-recording-md-d18571b6.md",
-          "bytes": 5022
+          "bytes": 5311
         }
       ],
       "examples": []
@@ -248,7 +253,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
       "sourcePath": "docs/framework/react/guides/sequences.md",
       "bytes": 7904,
@@ -272,7 +277,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
       "sourcePath": "docs/framework/react/quick-start.md",
       "bytes": 5420,
@@ -296,7 +301,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
       "sourcePath": "docs/framework/preact/guides/formatting-display.md",
       "bytes": 5852,
@@ -320,16 +325,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-recording.md",
-      "bytes": 9091,
+      "bytes": 9380,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md",
-          "bytes": 9091
+          "bytes": 9380
         }
       ],
       "examples": []
@@ -344,10 +349,10 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys.md",
-      "bytes": 2620,
+      "bytes": 2762,
       "prerequisites": [],
       "sections": [
         {
@@ -364,6 +369,11 @@
           "title": "Basic usage",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--basic-usage.md",
           "bytes": 1589
+        },
+        {
+          "title": "Updating options",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--updating-options.md",
+          "bytes": 720
         },
         {
           "title": "Default options",
@@ -418,7 +428,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-key-state-tracking-md-ba04b9a5.md",
       "sourcePath": "docs/framework/preact/guides/key-state-tracking.md",
       "bytes": 8066,
@@ -442,16 +452,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequence-recording-md-f2ae56bf.md",
       "sourcePath": "docs/framework/preact/guides/sequence-recording.md",
-      "bytes": 5063,
+      "bytes": 5352,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-sequence-recording-md-f2ae56bf.md",
-          "bytes": 5063
+          "bytes": 5352
         }
       ],
       "examples": []
@@ -466,7 +476,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
       "sourcePath": "docs/framework/preact/guides/sequences.md",
       "bytes": 8221,
@@ -490,7 +500,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
       "sourcePath": "docs/framework/solid/guides/formatting-display.md",
       "bytes": 5845,
@@ -514,16 +524,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-recording.md",
-      "bytes": 8948,
+      "bytes": 9639,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md",
-          "bytes": 8948
+          "bytes": 9639
         }
       ],
       "examples": []
@@ -538,10 +548,10 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys.md",
-      "bytes": 2763,
+      "bytes": 2904,
       "prerequisites": [],
       "sections": [
         {
@@ -562,7 +572,12 @@
         {
           "title": "Reactive options",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--reactive-options.md",
-          "bytes": 1275
+          "bytes": 1234
+        },
+        {
+          "title": "Property getters",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--property-getters.md",
+          "bytes": 1518
         },
         {
           "title": "Default options",
@@ -617,7 +632,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-key-state-tracking-md-92176d1e.md",
       "sourcePath": "docs/framework/solid/guides/key-state-tracking.md",
       "bytes": 6027,
@@ -641,16 +656,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequence-recording-md-e932b875.md",
       "sourcePath": "docs/framework/solid/guides/sequence-recording.md",
-      "bytes": 3632,
+      "bytes": 4095,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Record and display a sequence; State and controls; Options and keyboard behavior; Validation and conflicts",
+          "title": "Overview; Reactive options; Record and display a sequence; State and controls; Options and keyboard behavior; Validation and conflicts",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-sequence-recording-md-e932b875.md",
-          "bytes": 3632
+          "bytes": 4095
         }
       ],
       "examples": []
@@ -665,16 +680,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
       "sourcePath": "docs/framework/solid/guides/sequences.md",
-      "bytes": 7869,
+      "bytes": 8201,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Reactive options; Sequence options; Sequences with modifiers; Chained modifier chords; Common sequence patterns; How sequences work; The sequence manager",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
-          "bytes": 7869
+          "bytes": 8201
         }
       ],
       "examples": []
@@ -689,7 +704,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
       "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
       "bytes": 5852,
@@ -713,16 +728,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-recording.md",
-      "bytes": 5687,
+      "bytes": 6380,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Return value; Options; Recording behavior; Validation and conflicts",
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Recording behavior; Validation and conflicts",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md",
-          "bytes": 5687
+          "bytes": 6380
         }
       ],
       "examples": []
@@ -737,16 +752,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
-      "bytes": 8888,
+      "bytes": 10190,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Logical keys and physical positions; Global hotkeys; Scoped hotkeys; Reactive inputs; Default options; Common options; Automatic cleanup; Registering multiple hotkeys; Metadata (name, description, and group); Introspecting registrations; The hotkey manager",
+          "title": "Overview; Logical keys and physical positions; Global hotkeys; Scoped hotkeys; Reactive inputs; Property getters; Default options; Common options; Automatic cleanup; Registering multiple hotkeys; Metadata (name, description, and group); Introspecting registrations; The hotkey manager",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
-          "bytes": 8888
+          "bytes": 10190
         }
       ],
       "examples": []
@@ -761,7 +776,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md",
       "sourcePath": "docs/framework/svelte/guides/key-state-tracking.md",
       "bytes": 2952,
@@ -785,16 +800,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md",
       "sourcePath": "docs/framework/svelte/guides/sequence-recording.md",
-      "bytes": 3531,
+      "bytes": 3995,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Record and display a sequence; State and controls; Options and keyboard behavior; Validation and conflicts",
+          "title": "Overview; Reactive options; Record and display a sequence; State and controls; Options and keyboard behavior; Validation and conflicts",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md",
-          "bytes": 3531
+          "bytes": 3995
         }
       ],
       "examples": []
@@ -809,16 +824,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
       "sourcePath": "docs/framework/svelte/guides/sequences.md",
-      "bytes": 5355,
+      "bytes": 5710,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Global sequences; Many sequences at once; Scoped sequences; Matching steps; Sequence options; Default options; Chained modifier chords; Common patterns; Under the hood",
+          "title": "Overview; Reactive options; Global sequences; Many sequences at once; Scoped sequences; Matching steps; Sequence options; Default options; Chained modifier chords; Common patterns; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
-          "bytes": 5355
+          "bytes": 5710
         }
       ],
       "examples": []
@@ -833,16 +848,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
-      "bytes": 4625,
+      "bytes": 4962,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Installation; Your first hotkey; Common patterns; Default options; Next steps",
+          "title": "Installation; Your first hotkey; Common patterns; Default options; Next steps; Devtools",
           "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
-          "bytes": 4625
+          "bytes": 4962
         }
       ],
       "examples": []
@@ -857,7 +872,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
       "sourcePath": "docs/framework/vue/guides/formatting-display.md",
       "bytes": 5831,
@@ -881,16 +896,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-recording.md",
-      "bytes": 5855,
+      "bytes": 6542,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Return value; Options; Global defaults via provider; Recording behavior; Validation and conflicts",
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Global defaults via provider; Recording behavior; Validation and conflicts",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md",
-          "bytes": 5855
+          "bytes": 6542
         }
       ],
       "examples": []
@@ -905,16 +920,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys.md",
-      "bytes": 8263,
+      "bytes": 9640,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Logical keys and physical positions; Basic usage; Default options; Reactive options; Global defaults via provider; Common options; Automatic cleanup; Registering multiple hotkeys; Metadata (name, description, and group); Introspecting registrations; The hotkey manager",
+          "title": "Overview; Logical keys and physical positions; Basic usage; Property getters; Default options; Reactive options; Global defaults via provider; Common options; Automatic cleanup; Registering multiple hotkeys; Metadata (name, description, and group); Introspecting registrations; The hotkey manager",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
-          "bytes": 8263
+          "bytes": 9640
         }
       ],
       "examples": []
@@ -929,7 +944,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md",
       "sourcePath": "docs/framework/vue/guides/key-state-tracking.md",
       "bytes": 2952,
@@ -953,16 +968,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequence-recording-md-d1fba53e.md",
       "sourcePath": "docs/framework/vue/guides/sequence-recording.md",
-      "bytes": 5014,
+      "bytes": 5475,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-sequence-recording-md-d1fba53e.md",
-          "bytes": 5014
+          "bytes": 5475
         }
       ],
       "examples": []
@@ -977,16 +992,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
       "sourcePath": "docs/framework/vue/guides/sequences.md",
-      "bytes": 5072,
+      "bytes": 5421,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Many sequences at once; Matching steps; Sequence options; Global defaults via provider; Chained modifier chords; Common patterns; Under the hood",
+          "title": "Overview; Reactive options; Basic usage; Many sequences at once; Matching steps; Sequence options; Global defaults via provider; Chained modifier chords; Common patterns; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
-          "bytes": 5072
+          "bytes": 5421
         }
       ],
       "examples": []
@@ -1001,7 +1016,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
       "bytes": 4494,
@@ -1025,7 +1040,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
       "sourcePath": "docs/framework/angular/guides/formatting-display.md",
       "bytes": 5859,
@@ -1049,16 +1064,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-recording.md",
-      "bytes": 6015,
+      "bytes": 6710,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Return value; Options; Global defaults via provider; Recording behavior; Validation and conflicts",
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Global defaults via provider; Recording behavior; Validation and conflicts",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md",
-          "bytes": 6015
+          "bytes": 6710
         }
       ],
       "examples": []
@@ -1073,16 +1088,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
       "sourcePath": "docs/framework/angular/guides/hotkeys.md",
-      "bytes": 9241,
+      "bytes": 10674,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Logical keys and physical positions; Basic usage; Default options; Reactive options; Global defaults via provider; Common options; Automatic cleanup; Registering multiple hotkeys; Metadata (name, description, and group); Introspecting registrations; The hotkey manager",
+          "title": "Overview; Logical keys and physical positions; Basic usage; Property getters; Default options; Reactive options; Global defaults via provider; Common options; Automatic cleanup; Registering multiple hotkeys; Metadata (name, description, and group); Introspecting registrations; The hotkey manager",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
-          "bytes": 9241
+          "bytes": 10674
         }
       ],
       "examples": []
@@ -1097,7 +1112,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md",
       "sourcePath": "docs/framework/angular/guides/key-state-tracking.md",
       "bytes": 3042,
@@ -1121,16 +1136,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md",
       "sourcePath": "docs/framework/angular/guides/sequence-recording.md",
-      "bytes": 3683,
+      "bytes": 4148,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Record and display a sequence; State and controls; Options and keyboard behavior; Validation and conflicts",
+          "title": "Overview; Reactive options; Record and display a sequence; State and controls; Options and keyboard behavior; Validation and conflicts",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md",
-          "bytes": 3683
+          "bytes": 4148
         }
       ],
       "examples": []
@@ -1145,16 +1160,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
       "sourcePath": "docs/framework/angular/guides/sequences.md",
-      "bytes": 5547,
+      "bytes": 5904,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Many sequences at once; Matching steps; Sequence options; Global defaults via provider; Chained modifier chords; Common patterns; Under the hood",
+          "title": "Overview; Reactive options; Basic usage; Many sequences at once; Matching steps; Sequence options; Global defaults via provider; Chained modifier chords; Common patterns; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
-          "bytes": 5547
+          "bytes": 5904
         }
       ],
       "examples": []
@@ -1169,16 +1184,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
-      "bytes": 4920,
+      "bytes": 5322,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Installation; Your first hotkey; Common patterns; Default options provider; Next steps",
+          "title": "Installation; Your first hotkey; Common patterns; Default options provider; Next steps; Devtools",
           "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
-          "bytes": 4920
+          "bytes": 5322
         }
       ],
       "examples": []
@@ -1193,7 +1208,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
       "sourcePath": "docs/framework/lit/guides/formatting-display.md",
       "bytes": 5831,
@@ -1217,16 +1232,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-recording.md",
-      "bytes": 10444,
+      "bytes": 11207,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Controller API; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
+          "title": "Overview; Reactive options; Basic usage; Controller API; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md",
-          "bytes": 10444
+          "bytes": 11207
         }
       ],
       "examples": []
@@ -1241,10 +1256,10 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
       "sourcePath": "docs/framework/lit/guides/hotkeys.md",
-      "bytes": 2534,
+      "bytes": 2673,
       "prerequisites": [],
       "sections": [
         {
@@ -1261,6 +1276,11 @@
           "title": "Basic usage",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--basic-usage.md",
           "bytes": 1954
+        },
+        {
+          "title": "Property getters",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--property-getters.md",
+          "bytes": 1643
         },
         {
           "title": "Default options",
@@ -1315,7 +1335,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md",
       "sourcePath": "docs/framework/lit/guides/key-state-tracking.md",
       "bytes": 7772,
@@ -1339,16 +1359,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequence-recording-md-026a99f1.md",
       "sourcePath": "docs/framework/lit/guides/sequence-recording.md",
-      "bytes": 6523,
+      "bytes": 6984,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Controller API; Options; Recording behavior; Validation and conflicts; Under the hood",
+          "title": "Overview; Reactive options; Basic usage; Controller API; Options; Recording behavior; Validation and conflicts; Under the hood",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-sequence-recording-md-026a99f1.md",
-          "bytes": 6523
+          "bytes": 6984
         }
       ],
       "examples": []
@@ -1363,16 +1383,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
       "sourcePath": "docs/framework/lit/guides/sequences.md",
-      "bytes": 10225,
+      "bytes": 10651,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Basic usage; Many sequences at once; Sequence options; Sequences with modifiers; Chained modifier chords; Common sequence patterns; How sequences work; The sequence manager",
+          "title": "Overview; Reactive options; Basic usage; Many sequences at once; Sequence options; Sequences with modifiers; Chained modifier chords; Common sequence patterns; How sequences work; The sequence manager",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
-          "bytes": 10225
+          "bytes": 10651
         }
       ],
       "examples": []
@@ -1387,7 +1407,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.10.1",
+      "version": "0.11.0",
       "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
       "bytes": 8477,
@@ -1397,6 +1417,610 @@
           "title": "Installation; Your first hotkey; Common patterns; Decorators vs controllers; Next steps",
           "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
           "bytes": 8477
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md",
+      "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
+      "bytes": 5838,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md",
+          "bytes": 5838
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-recording-md-de504409.md",
+      "sourcePath": "docs/framework/alpine/guides/hotkey-recording.md",
+      "bytes": 9208,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-recording-md-de504409.md",
+          "bytes": 9208
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md",
+      "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
+      "bytes": 2450,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--overview.md",
+          "bytes": 908
+        },
+        {
+          "title": "Logical keys and physical positions",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--logical-keys-and-physical-positions.md",
+          "bytes": 1597
+        },
+        {
+          "title": "Basic usage",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--basic-usage.md",
+          "bytes": 1765
+        },
+        {
+          "title": "Property getters",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--property-getters.md",
+          "bytes": 1645
+        },
+        {
+          "title": "Default options",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--default-options.md",
+          "bytes": 1909
+        },
+        {
+          "title": "Hotkey options",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-options.md",
+          "bytes": 2525
+        },
+        {
+          "title": "Current callbacks and automatic cleanup",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--current-callbacks-and-automatic-cleanup.md",
+          "bytes": 914
+        },
+        {
+          "title": "Registering multiple hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--registering-multiple-hotkeys.md",
+          "bytes": 1291
+        },
+        {
+          "title": "Metadata",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--metadata.md",
+          "bytes": 555
+        },
+        {
+          "title": "Introspecting registrations",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--introspecting-registrations.md",
+          "bytes": 1128
+        },
+        {
+          "title": "The hotkey manager",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--the-hotkey-manager.md",
+          "bytes": 1110
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-key-state-tracking-md-18777433.md",
+      "sourcePath": "docs/framework/alpine/guides/key-state-tracking.md",
+      "bytes": 5612,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Read key state; `createHeldKeys`; `createHeldKeyCodes`; `createKeyHold`; Common patterns; Modifier-held shortcut hints; Platform quirks; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-key-state-tracking-md-18777433.md",
+          "bytes": 5612
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequence-recording-md-94046ff1.md",
+      "sourcePath": "docs/framework/alpine/guides/sequence-recording.md",
+      "bytes": 6565,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequence-recording-md-94046ff1.md",
+          "bytes": 6565
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
+      "sourcePath": "docs/framework/alpine/guides/sequences.md",
+      "bytes": 7953,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reactive options; Basic usage; Many sequences at once; Sequence options; Sequences with modifiers; Chained modifier chords; Common sequence patterns; How sequences work; The sequence manager",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
+          "bytes": 7953
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/quick-start.md",
+      "title": "Quick Start",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-quick-start-md-3845b066.md",
+      "sourcePath": "docs/framework/alpine/quick-start.md",
+      "bytes": 7575,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Your first hotkey; Registration and cleanup; Common patterns; Shared defaults; Optional Alpine magic; Examples and next steps",
+          "file": "references/guides/hotkeys-docs-framework-alpine-quick-start-md-3845b066.md",
+          "bytes": 7575
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md",
+      "sourcePath": "docs/framework/ember/guides/formatting-display.md",
+      "bytes": 4110,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md",
+          "bytes": 4110
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md",
+      "sourcePath": "docs/framework/ember/guides/hotkey-recording.md",
+      "bytes": 8079,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md",
+          "bytes": 8079
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md",
+      "sourcePath": "docs/framework/ember/guides/hotkeys.md",
+      "bytes": 2438,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--overview.md",
+          "bytes": 899
+        },
+        {
+          "title": "Logical keys and physical positions",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--logical-keys-and-physical-positions.md",
+          "bytes": 398
+        },
+        {
+          "title": "Basic usage",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--basic-usage.md",
+          "bytes": 1922
+        },
+        {
+          "title": "Property getters",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--property-getters.md",
+          "bytes": 1545
+        },
+        {
+          "title": "Default options",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--default-options.md",
+          "bytes": 2053
+        },
+        {
+          "title": "Hotkey options",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--hotkey-options.md",
+          "bytes": 2787
+        },
+        {
+          "title": "Current callbacks and automatic cleanup",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--current-callbacks-and-automatic-cleanup.md",
+          "bytes": 908
+        },
+        {
+          "title": "Registering multiple hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--registering-multiple-hotkeys.md",
+          "bytes": 1482
+        },
+        {
+          "title": "Metadata",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--metadata.md",
+          "bytes": 317
+        },
+        {
+          "title": "Introspecting registrations",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--introspecting-registrations.md",
+          "bytes": 1351
+        },
+        {
+          "title": "The hotkey manager",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--the-hotkey-manager.md",
+          "bytes": 1092
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md",
+      "sourcePath": "docs/framework/ember/guides/key-state-tracking.md",
+      "bytes": 5351,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Read key state; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common patterns; Modifier-held shortcut hints; Platform quirks; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md",
+          "bytes": 5351
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-sequence-recording-md-b9949ab9.md",
+      "sourcePath": "docs/framework/ember/guides/sequence-recording.md",
+      "bytes": 5045,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reactive options; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-sequence-recording-md-b9949ab9.md",
+          "bytes": 5045
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
+      "sourcePath": "docs/framework/ember/guides/sequences.md",
+      "bytes": 7949,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reactive options; Basic usage; Many sequences at once; Sequence options; Sequences with modifiers; Chained modifier chords; Common sequence patterns; How sequences work; The sequence manager",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
+          "bytes": 7949
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/quick-start.md",
+      "title": "Quick Start",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md",
+      "sourcePath": "docs/framework/ember/quick-start.md",
+      "bytes": 7134,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Your first hotkey; Registration and cleanup; Common patterns; Shared defaults; Examples and next steps",
+          "file": "references/guides/hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md",
+          "bytes": 7134
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/formatting-display.md",
+      "title": "Formatting Display",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md",
+      "sourcePath": "docs/framework/octane/guides/formatting-display.md",
+      "bytes": 4116,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format a binding; Render individual keycaps; Choose symbols and separators; Supply layout labels; Parse and store bindings",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md",
+          "bytes": 4116
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/hotkey-recording.md",
+      "title": "Hotkey Recording",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-recording-md-e248b1bd.md",
+      "sourcePath": "docs/framework/octane/guides/hotkey-recording.md",
+      "bytes": 6815,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic usage; Return value; Options; Recording behavior; Validation and conflicts; Building a shortcut settings UI; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-recording-md-e248b1bd.md",
+          "bytes": 6815
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/hotkeys.md",
+      "title": "Hotkeys",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md",
+      "sourcePath": "docs/framework/octane/guides/hotkeys.md",
+      "bytes": 10515,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Logical keys and physical positions; Basic usage; Updating options; Default options; Hotkey options; Current callbacks and automatic cleanup; Registering multiple hotkeys; Metadata; Introspecting registrations; The hotkey manager",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md",
+          "bytes": 10515
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/key-state-tracking.md",
+      "title": "Key State Tracking",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-key-state-tracking-md-2c543667.md",
+      "sourcePath": "docs/framework/octane/guides/key-state-tracking.md",
+      "bytes": 4834,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Read key state; `useHeldKeys`; `useHeldKeyCodes`; `useKeyHold`; Common patterns; Modifier-held shortcut hints; Platform quirks; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-key-state-tracking-md-2c543667.md",
+          "bytes": 4834
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/sequence-recording.md",
+      "title": "Sequence Recording",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-sequence-recording-md-4831c5ef.md",
+      "sourcePath": "docs/framework/octane/guides/sequence-recording.md",
+      "bytes": 4216,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic usage; Return value; Options; Validation and conflicts; Behavior; Under the hood",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-sequence-recording-md-4831c5ef.md",
+          "bytes": 4216
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/sequences.md",
+      "title": "Sequences",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
+      "sourcePath": "docs/framework/octane/guides/sequences.md",
+      "bytes": 6919,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Basic usage; Many sequences at once; Sequence options; Sequences with modifiers; Chained modifier chords; Common sequence patterns; How sequences work; The sequence manager",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
+          "bytes": 6919
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/quick-start.md",
+      "title": "Quick Start",
+      "theme": "other-guides",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md",
+      "sourcePath": "docs/framework/octane/quick-start.md",
+      "bytes": 5886,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Your first hotkey; Registration and cleanup; Common patterns; Default options provider; Examples and next steps",
+          "file": "references/guides/hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md",
+          "bytes": 5886
         }
       ],
       "examples": []

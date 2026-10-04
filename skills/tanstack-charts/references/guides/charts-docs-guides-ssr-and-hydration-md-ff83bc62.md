@@ -2,12 +2,12 @@
 
 <a id="source-charts-docs-guides-ssr-and-hydration-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../production.md) · [Source provenance](../SOURCES.md)
 
 TanStack Charts builds a platform-neutral scene before the selected renderer
-produces output. React, Preact, Vue, Solid, Svelte, and Octane use the same
+produces output. React, Preact, Vue, Solid, Svelte, Angular, and Octane use the same
 runtime and renderer on the server and in the browser.
 
 ## Adapter support
@@ -20,14 +20,15 @@ runtime and renderer on the server and in the browser.
 | [Solid](./charts-docs-framework-solid-adapter-md-cf732459.md#source-charts-docs-framework-solid-adapter-md)     | SVG or mixed shell                  | Hydrates before the shared host mounts              |
 | [Svelte](./charts-docs-framework-svelte-adapter-md-b9959b13.md#source-charts-docs-framework-svelte-adapter-md)   | SVG or mixed shell                  | Hydrates before the shared host mounts              |
 | [Octane](./charts-docs-framework-octane-adapter-md-84d0f010.md#source-charts-docs-framework-octane-adapter-md)   | SVG, Canvas, or mixed shell         | Hydrates and adopts the existing surface            |
-| [Angular](./charts-docs-framework-angular-adapter-md-314154ab.md#source-charts-docs-framework-angular-adapter-md) | Not yet a verified adapter contract | Browser mount, immutable update, and teardown       |
+| [Angular](./charts-docs-framework-angular-adapter-md-314154ab.md#source-charts-docs-framework-angular-adapter-md) | SVG                                 | Hydrates and adopts the existing surface            |
 | [Lit](./charts-docs-framework-lit-adapter-md-16871155.md#source-charts-docs-framework-lit-adapter-md)         | Not yet a verified adapter contract | Browser registration, update, disconnect, reconnect |
 | [Alpine](./charts-docs-framework-alpine-adapter-md-9404e3c3.md#source-charts-docs-framework-alpine-adapter-md)   | None                                | Browser-only directive                              |
 
 For adapters with server output, the browser must render the same definition,
-dimensions, formatters, and component tree. Angular and Lit may run
-inside applications with their own server infrastructure, but this library
-does not yet promise or test adapter hydration for them.
+dimensions, formatters, and component tree. Angular uses
+`provideClientHydration`; see its adapter page for the verified version scope.
+Lit may run inside applications with their own server infrastructure, but this
+library does not yet promise or test adapter hydration for Lit.
 
 ## Give the server a real size
 

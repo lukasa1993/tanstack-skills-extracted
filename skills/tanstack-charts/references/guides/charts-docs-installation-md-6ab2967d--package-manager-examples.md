@@ -1,6 +1,6 @@
 # Installation — Package-manager examples
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Package-manager examples
 

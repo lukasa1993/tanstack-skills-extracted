@@ -1,10 +1,10 @@
 # Hotkeys — Reactive options
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 ## Reactive options
 
-Unlike React/Preact hooks, Solid primitives accept accessor functions for reactive options. Pass a function that returns the options object, and the hotkey updates automatically when dependencies change:
+Solid primitives accept property getters and accessor functions for reactive options. With an accessor, the hotkey updates automatically when dependencies change:
 
 ```tsx
 function Modal(props) {

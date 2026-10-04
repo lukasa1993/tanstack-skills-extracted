@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ TanStack Hotkeys is a type-safe, headless library for keyboard shortcuts, sequen
 
 ## Runtime and package requirements
 
-Hotkeys packages ship ES2022 JavaScript as ESM only and require Node.js 20 or newer when used in Node.js. Browser applications need an ES2022-compatible runtime or a build pipeline that transforms the library for their supported browsers.
+Hotkeys packages ship ES2022 JavaScript as ESM only and require Node.js 20 or newer when used in Node.js, except the Octane adapter, which requires Node.js 22.22.2 or newer. Browser applications need an ES2022-compatible runtime or a build pipeline that transforms the library for their supported browsers.
 
 Use ESM imports, such as `import { parseHotkey } from '@tanstack/hotkeys'`. CommonJS builds and `require` export conditions are no longer provided. CommonJS applications can use dynamic `import()` or migrate their consuming modules to ESM.
 
@@ -57,4 +57,19 @@ Key-state primitives expose held logical keys and physical codes. `matchesHeldMo
 
 `ParsedHotkey` preserves identity as a union: logical bindings have `key`, physical bindings have `code`. Narrow with `parsed.code !== undefined` before reading it. Shared resolved flags and the ordered modifier list live in `ParsedModifiers`. `parseKeyboardEvent` produces logical identity; code recording constructs physical identity explicitly.
 
-Start with the [React Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md), [Angular Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md), [Vue Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md), or [Lit Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md). Explore the [Router kitchen sink](https://github.com/TanStack/hotkeys/blob/536da97c6a91080cdecf13d74103dcd4a3d3529f/examples/react/kitchen-sink/README.md) for route lifetimes, recording, and hints, or the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/536da97c6a91080cdecf13d74103dcd4a3d3529f/examples/vanilla/formatForDisplay) for display options.
+## Framework guides
+
+| Framework | Start here |
+| --- | --- |
+| Alpine | [Quick start](./hotkeys-docs-framework-alpine-quick-start-md-3845b066.md#source-hotkeys-docs-framework-alpine-quick-start-md) |
+| Angular | [Quick start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md) |
+| Ember | [Quick start](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#source-hotkeys-docs-framework-ember-quick-start-md) |
+| Lit | [Quick start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md) |
+| Octane | [Quick start](./hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md#source-hotkeys-docs-framework-octane-quick-start-md) |
+| Preact | [Hotkeys guide](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md) |
+| React | [Quick start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md) |
+| Solid | [Hotkeys guide](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md) |
+| Svelte | [Quick start](./hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md#source-hotkeys-docs-framework-svelte-quick-start-md) |
+| Vue | [Quick start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md) |
+
+Explore a kitchen sink for [Alpine](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/alpine/kitchen-sink), [Ember](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/ember/kitchen-sink), [Octane](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/octane/kitchen-sink), or [React](https://github.com/TanStack/hotkeys/blob/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/react/kitchen-sink/README.md) to see route lifetimes, recording, and hints. Try the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/vanilla/formatForDisplay) for display options.

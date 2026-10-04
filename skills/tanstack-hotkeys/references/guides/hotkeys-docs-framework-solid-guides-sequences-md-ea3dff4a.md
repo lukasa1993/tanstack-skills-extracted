@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -43,6 +43,8 @@ createHotkeySequences([
 Options merge like `createHotkeys`: `HotkeysProvider` defaults, then `commonOptions`, then each definition's `options`. For element-scoped multi-sequence registration, use `createHotkeySequencesAttachment`.
 
 ## Reactive options
+
+Sequence options support the same [property getter patterns](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md) as hotkey options, including `enabled`, `timeout`, and `target`. Updates preserve the registration when its sequence, target, and platform stay the same.
 
 Solid's `createHotkeySequence` accepts accessor functions for reactive sequence and options:
 

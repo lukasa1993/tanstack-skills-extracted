@@ -1,6 +1,6 @@
 # Scales Guides And Color — Axis options
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Axis options
 
@@ -57,7 +57,7 @@ interface ChartAxisOptions<TValue extends ChartValue> {
               opacity?:
                 | number
                 | ((
-                    context: ChartAxisTickLabelContext<TValue>,
+                    context: ChartAxisTickLabelOpacityContext<TValue>,
                   ) => number | undefined)
               anchor?:
                 | 'start'
@@ -221,6 +221,19 @@ side. The automatic value accounts for the host's inline direction. `dx` and
 weight, anchor, offset, opacity, and rotation all participate in collision
 thinning and automatic margins. Numeric typography follows tick-label motion;
 anchor changes snap.
+
+An opacity callback also receives `focus` and `pointer`, both `null` during
+initial layout. It runs again when focus changes, updating paint without
+rebuilding marks, measuring text, or changing tick placement and thinning.
+Clearing focus restores the initial opacity. Other tick-label callbacks remain
+layout-only. For example, hide the tick that matches the focused x value:
+
+```ts
+const tickLabels = {
+  opacity: ({ value, focus }) =>
+    focus && Object.is(value, focus.primary.xValue) ? 0 : 1,
+}
+```
 
 Axis titles keep the compact string form when only text is needed. Use the
 object form for title typography, paint, offset, or motion:

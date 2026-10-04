@@ -1,11 +1,11 @@
 # Comparison — Broader conformance
 
-[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Broader conformance
 
-The catalog corpus contains 117 TanStack/reference pairs: 79 sourced from
-Observable Plot, 27 from Recharts, and 11 from Apache ECharts. Twenty-two pairs
+The catalog corpus contains 188 TanStack/reference pairs: 79 sourced from
+Observable Plot, 98 from Recharts, and 11 from Apache ECharts. Twenty-two pairs
 carry executable interaction scenarios. Those counts describe selected
 reference coverage, not each library's feature ceiling or a list of built-in
 TanStack chart types. Chart.js participates in the standard and stress suites,

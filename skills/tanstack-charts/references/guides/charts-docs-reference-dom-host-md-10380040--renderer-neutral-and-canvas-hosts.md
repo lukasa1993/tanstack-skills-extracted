@@ -1,6 +1,6 @@
 # Dom Host — Renderer-neutral and Canvas hosts
 
-[Guide and prerequisites](./charts-docs-reference-dom-host-md-10380040.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-dom-host-md-10380040.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Renderer-neutral and Canvas hosts
 

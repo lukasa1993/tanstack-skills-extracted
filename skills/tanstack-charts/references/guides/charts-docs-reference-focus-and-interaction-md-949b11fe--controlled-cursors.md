@@ -1,6 +1,6 @@
 # Focus And Interaction — Controlled cursors
 
-[Guide and prerequisites](./charts-docs-reference-focus-and-interaction-md-949b11fe.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-focus-and-interaction-md-949b11fe.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Controlled cursors
 

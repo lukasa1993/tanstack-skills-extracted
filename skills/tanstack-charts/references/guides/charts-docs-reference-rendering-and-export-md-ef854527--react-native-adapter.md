@@ -1,8 +1,12 @@
 # Rendering And Export — React Native adapter
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## React Native adapter
+
+The React Native adapter is experimental. See
+[Installation](./charts-docs-installation-md-6ab2967d.md#source-charts-docs-installation-md) for supported versions,
+verified checks, and native-device validation limits.
 
 The React Native entry selects its native build through the package export
 conditions and renders the shared scene with `react-native-svg`.

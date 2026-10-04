@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-concepts-marks-and-layering-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../chart-grammar.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Interactions And Selections — Disable competing datum focus
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Disable competing datum focus
 

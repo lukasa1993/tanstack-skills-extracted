@@ -1,6 +1,6 @@
 # Migrate V8 To V9 — Common migration failures
 
-[Guide and prerequisites](./tanstack-preact-table-migrate-v8-to-v9-a66482cf.md) · Published skill · `@tanstack/preact-table@9.2.4`.
+[Guide and prerequisites](./tanstack-preact-table-migrate-v8-to-v9-a66482cf.md) · Published skill · `@tanstack/preact-table@9.2.5`.
 
 ## Common migration failures
 

@@ -2,13 +2,17 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
 TanStack Hotkeys supports multi-key sequences in Vue, where keys are pressed one after another rather than simultaneously.
 
 Sequence steps use the same string syntax as single hotkeys. For example, `['[KeyG]', '[KeyG]']` follows a physical position, while `['G', 'G']` follows the logical letter. A sequence can mix forms, such as `['Mod+[KeyK]', 'C']`. Display steps with `sequence.map((step) => formatForDisplay(step)).join(' → ')`.
+
+## Reactive options
+
+Sequence options support the same [property getter patterns](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md) as hotkey options, including `enabled`, `timeout`, and `target`. Updates preserve the registration when its sequence, target, and platform stay the same.
 
 ## Basic usage
 

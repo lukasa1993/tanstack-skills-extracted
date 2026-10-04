@@ -1,6 +1,6 @@
 # Intent Review — Overview
 
-[Guide and prerequisites](./intent-docs-cli-intent-review-md-9cfadc0a.md) · Release-matched documentation · `@tanstack/intent@0.5.2`.
+[Guide and prerequisites](./intent-docs-cli-intent-review-md-9cfadc0a.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
 
 `intent review` shows which library skills and planning records need review after source changes. Completed reviews are remembered until their source or guidance changes again.
 

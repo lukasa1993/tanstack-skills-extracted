@@ -1,6 +1,6 @@
 # Bar And Rect — Bar corner radii
 
-[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-bar-and-rect-md-ba5b9a5c.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Bar corner radii
 

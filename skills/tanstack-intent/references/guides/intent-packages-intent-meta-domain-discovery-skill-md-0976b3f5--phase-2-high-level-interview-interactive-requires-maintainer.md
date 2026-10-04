@@ -1,6 +1,6 @@
 # SKILL — Phase 2 — High-level interview (interactive — requires maintainer)
 
-[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.2`.
+[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
 
 ## Phase 2 — High-level interview (interactive — requires maintainer)
 

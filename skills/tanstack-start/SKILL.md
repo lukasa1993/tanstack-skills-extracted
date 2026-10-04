@@ -12,7 +12,7 @@ metadata:
 
 Full-stack application guidance for TanStack Start, including server functions, middleware, deployment, and framework adapters.
 
-> Release candidate. Confirm the installed package version before using an API.
+> Confirm the installed package version before using an API.
 
 ## Workflow
 

@@ -1,6 +1,6 @@
 # Migrate V8 To V9 — Complete shared breaking-change inventory: 9. Remove internal APIs and use public surfaces
 
-[Guide and prerequisites](./tanstack-table-core-migrate-v8-to-v9-654ca275.md) · Published skill · `@tanstack/table-core@9.2.4`.
+[Guide and prerequisites](./tanstack-table-core-migrate-v8-to-v9-654ca275.md) · Published skill · `@tanstack/table-core@9.2.5`.
 
 ## Complete shared breaking-change inventory: 9. Remove internal APIs and use public surfaces
 

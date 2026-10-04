@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../marks-composite.md) · [Source provenance](../SOURCES.md)
 

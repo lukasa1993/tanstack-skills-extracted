@@ -2,7 +2,7 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-hotkeys",
   "product": "hotkeys",
-  "sourceCount": 50,
+  "sourceCount": 71,
   "themes": [
     "foundations",
     "framework-react",
@@ -11,9 +11,10 @@
     "framework-svelte",
     "framework-vue",
     "framework-angular",
-    "framework-lit"
+    "framework-lit",
+    "other-guides"
   ],
-  "guideCount": 50,
-  "largestGuideEntryBytes": 10444,
-  "inputSha256": "74853a1d8ed61a09d26f27e5ff102be31dd1a3f94014f059deb5dcef47b97f47"
+  "guideCount": 71,
+  "largestGuideEntryBytes": 11207,
+  "inputSha256": "0a24b1e17b5bed4492152270035c4f6039329e97e82ca2ac373cff4d241716d4"
 }

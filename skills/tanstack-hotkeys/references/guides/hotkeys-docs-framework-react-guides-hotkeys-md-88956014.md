@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -13,6 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--overview.md) — 1 KiB
 - [Logical keys and physical positions](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--basic-usage.md) — 2 KiB
+- [Updating options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--updating-options.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--default-options.md) — 3 KiB
 - [Hotkey options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-options.md) — 4 KiB
 - [Stale closure prevention](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--stale-closure-prevention.md) — 1 KiB
@@ -26,6 +27,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="logical-keys-and-physical-positions"></a>
 <a id="basic-usage"></a>
 <a id="changing-a-binding"></a>
+<a id="updating-options"></a>
 <a id="default-options"></a>
 <a id="why-these-defaults"></a>
 <a id="smart-input-handling-with-ignoreinputs"></a>

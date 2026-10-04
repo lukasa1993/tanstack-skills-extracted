@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-framework-angular-adapter-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -45,7 +45,10 @@ when chart state changes; mutating the existing object does not produce an
 
 The verified package contract covers complete SVG server rendering through
 Angular's `renderApplication`, browser mount, immutable updates, and teardown.
-Angular hydration is not yet part of the adapter's tested public contract.
+With `provideClientHydration`, the adapter adopts the existing server-rendered
+SVG and mark nodes, preserves them through immutable updates, and cleans up
+on destruction. Installed-package checks cover Angular 19 and 22 AOT builds
+in Chromium, Firefox, and WebKit, not every version within the peer range.
 
 ## Presentation and rendering
 

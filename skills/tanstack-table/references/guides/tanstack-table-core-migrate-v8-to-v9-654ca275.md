@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-table-core-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/table-core@9.2.4`.
+Published skill · `@tanstack/table-core@9.2.5`.
 
 [Topic index](../advanced.md) · [Source provenance](../SOURCES.md)
 

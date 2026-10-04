@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-table-core-row-selection"></a>
 
-Published skill · `@tanstack/table-core@9.2.4`.
+Published skill · `@tanstack/table-core@9.2.5`.
 
 [Topic index](../layout-interaction.md) · [Source provenance](../SOURCES.md)
 

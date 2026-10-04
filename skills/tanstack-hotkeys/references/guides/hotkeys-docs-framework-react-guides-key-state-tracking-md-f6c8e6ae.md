@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

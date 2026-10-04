@@ -12,7 +12,7 @@ metadata:
 
 Devtools guidance for setup, framework adapters, plugins, event instrumentation, marketplace use, and production builds.
 
-> TanStack Devtools is alpha. Confirm core and plugin versions.
+> Confirm core and plugin versions.
 
 ## Workflow
 

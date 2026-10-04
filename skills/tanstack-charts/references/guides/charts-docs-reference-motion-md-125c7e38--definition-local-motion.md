@@ -1,6 +1,6 @@
 # Motion — Definition-local motion
 
-[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Definition-local motion
 

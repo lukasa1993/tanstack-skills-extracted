@@ -1,6 +1,6 @@
 # Dom Host — Overview
 
-[Guide and prerequisites](./charts-docs-reference-dom-host-md-10380040.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-dom-host-md-10380040.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 `mountChart` is the framework-neutral default SVG browser host. It owns
 responsive measurement, scene updates, keyed SVG reconciliation, animation,

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -172,3 +172,13 @@ Use `setHotkeysContext` when you want defaults for a subtree. This is an advance
 - [Sequence Recording Guide](./hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md#source-hotkeys-docs-framework-svelte-guides-sequence-recording-md)
 - [Key State Tracking Guide](./hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md#source-hotkeys-docs-framework-svelte-guides-key-state-tracking-md)
 - [Formatting & Display Guide](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md)
+
+## Devtools
+
+Install the optional devtools packages to inspect registrations, held keys, and trigger counts:
+
+```sh
+npm install @tanstack/svelte-devtools @tanstack/svelte-hotkeys-devtools
+```
+
+Follow the [devtools setup guide](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) to add the dock to your application.

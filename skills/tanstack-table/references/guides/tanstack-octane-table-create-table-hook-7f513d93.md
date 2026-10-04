@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-octane-table-create-table-hook"></a>
 
-Published skill · `@tanstack/octane-table@9.2.4`.
+Published skill · `@tanstack/octane-table@9.2.5`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 

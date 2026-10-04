@@ -2,13 +2,15 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-sequence-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
 The `useHotkeySequenceRecorder` hook is for building UIs where users record multi-chord sequences (Vim-style shortcuts). Each step is captured like a single hotkey chord. Users finish with Enter by default, or you can use manual commit and an optional idle timeout.
 
 Sequence recording uses `recordBy: 'code'` by default, preserving every step as a physical string such as `['[KeyG]', 'Alt+[KeyS]']`. Set `recordBy: 'key'` for logical characters. The shared rejection and conflict options follow the [hotkey recording guide](./hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md#source-hotkeys-docs-framework-react-guides-hotkey-recording-md).
+
+TanStack Hotkeys automatically suppresses registered hotkey and sequence callbacks while any recorder is active. You do not need to set `enabled` from `isRecording`. Registrations remain available for conflict detection, and recorded keys stay suppressed through repeats and key release.
 
 ## Basic usage
 

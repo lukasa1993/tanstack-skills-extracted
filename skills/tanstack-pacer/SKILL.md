@@ -12,7 +12,7 @@ metadata:
 
 Execution-control guidance for debounce, throttle, rate limit, queue, batch, async retry, and framework adapters.
 
-> TanStack Pacer is beta. Confirm utility and adapter versions.
+> Confirm utility and adapter versions.
 
 ## Workflow
 
@@ -36,11 +36,11 @@ Execution-control guidance for debounce, throttle, rate limit, queue, batch, asy
 
 ## Framework routing
 
-- **React** — detect `@tanstack/react-pacer`. Read [React adapter](references/framework-react.md).
-- **Preact** — detect `@tanstack/preact-pacer`. Read [Preact adapter](references/framework-preact.md).
-- **Solid** — detect `@tanstack/solid-pacer`. Read [Solid adapter](references/framework-solid.md).
-- **Angular** — detect `@tanstack/angular-pacer`. Read [Angular adapter](references/framework-angular.md).
 - **Vanilla** — detect `@tanstack/pacer`. Read [Foundations and selection](references/foundations.md). Shared guidance; check adapter-specific differences.
+- **Angular** — detect `@tanstack/angular-pacer`. Read [Angular adapter](references/framework-angular.md).
+- **Preact** — detect `@tanstack/preact-pacer`. Read [Preact adapter](references/framework-preact.md).
+- **React** — detect `@tanstack/react-pacer`. Read [React adapter](references/framework-react.md).
+- **Solid** — detect `@tanstack/solid-pacer`. Read [Solid adapter](references/framework-solid.md).
 
 ## Product boundaries
 

@@ -1,6 +1,6 @@
 # Polar And Radar — Numeric polar scatter
 
-[Guide and prerequisites](./charts-docs-examples-polar-and-radar-md-6fe0ac13.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-examples-polar-and-radar-md-6fe0ac13.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Numeric polar scatter
 

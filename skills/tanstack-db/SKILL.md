@@ -12,7 +12,7 @@ metadata:
 
 Reactive collection guidance for live queries, optimistic mutations, persistence, sync engines, and framework adapters.
 
-> TanStack DB is beta. Confirm package versions before using adapter or sync APIs.
+> Confirm package versions before using adapter or sync APIs.
 
 ## Workflow
 

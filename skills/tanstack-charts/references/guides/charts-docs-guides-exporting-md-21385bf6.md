@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-exporting-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../production.md) · [Source provenance](../SOURCES.md)
 
@@ -94,6 +94,10 @@ await downloadChartImage(chartContainer, 'quarterly-revenue.png', {
 `scale` controls raster density, not chart layout. A 1200 × 675 chart at scale
 2 produces a 2400 × 1350 canvas while retaining the 1200 × 675 visual
 coordinate system.
+
+JPEG and WebP encoding depend on browser support. A browser can return PNG
+when the requested encoder is unavailable. Check `blob.type` before choosing
+a file extension, the download helper keeps the filename you supply.
 
 ## Export a Canvas chart
 

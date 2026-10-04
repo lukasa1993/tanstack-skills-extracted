@@ -2,13 +2,19 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
 TanStack Hotkeys provides the `injectHotkeyRecorder` API for building shortcut customization UIs in Angular.
 
 Recorders default to physical codes: recording a shortcut stores a string such as `Mod+[KeyS]`. Pass it directly to your hotkey registration and use `formatForDisplay` for the label. Set `recordBy: 'key'` when you intentionally want the produced character instead.
+
+TanStack Hotkeys automatically suppresses registered hotkey and sequence callbacks while any recorder is active. You do not need to set `enabled` from `isRecording`. Registrations remain available for conflict detection, and recorded keys stay suppressed through repeats and key release.
+
+## Reactive options
+
+Recorder options support [property getters and functions returning options](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md). Updated callbacks, validation, and recording settings apply during an active session without restarting it. Allow the framework to run its effect or watcher before relying on the update.
 
 ## Basic usage
 

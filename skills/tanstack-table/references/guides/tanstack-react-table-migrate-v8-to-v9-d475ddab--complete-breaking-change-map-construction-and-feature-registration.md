@@ -1,6 +1,6 @@
 # Migrate V8 To V9 — Complete breaking-change map: Construction and feature registration
 
-[Guide and prerequisites](./tanstack-react-table-migrate-v8-to-v9-d475ddab.md) · Published skill · `@tanstack/react-table@9.2.4`.
+[Guide and prerequisites](./tanstack-react-table-migrate-v8-to-v9-d475ddab.md) · Published skill · `@tanstack/react-table@9.2.5`.
 
 ## Complete breaking-change map: Construction and feature registration
 

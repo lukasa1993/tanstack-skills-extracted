@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/vue-table@9.2.4`.
+Published skill · `@tanstack/vue-table@9.2.5`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

@@ -2,13 +2,19 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-sequence-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
 TanStack Hotkeys provides the `HotkeySequenceRecorderController` for building UIs where users record multi-chord sequences (Vim-style shortcuts). Each step is captured like a single hotkey chord; users finish with Enter by default, or you can use manual commit and optional idle timeout.
 
 Sequence recording uses `recordBy: 'code'` by default, preserving every step as a physical string such as `['[KeyG]', 'Alt+[KeyS]']`. Set `recordBy: 'key'` for logical characters. The shared rejection and conflict options follow the [hotkey recording guide](./hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md#source-hotkeys-docs-framework-lit-guides-hotkey-recording-md).
+
+TanStack Hotkeys automatically suppresses registered hotkey and sequence callbacks while any recorder is active. You do not need to set `enabled` from `isRecording`. Registrations remain available for conflict detection, and recorded keys stay suppressed through repeats and key release.
+
+## Reactive options
+
+This section is an exact duplicate. Read [Reactive options in Hotkey Recording](./hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md).
 
 ## Basic usage
 

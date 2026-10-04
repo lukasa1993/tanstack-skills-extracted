@@ -12,7 +12,7 @@ metadata:
 
 Project scaffolding and maintenance guidance for app creation, add-ons, ecosystem integration, custom development, and documentation queries.
 
-> TanStack CLI is alpha. Confirm the installed CLI version and command help.
+> Confirm the installed CLI version and command help.
 
 ## Workflow
 

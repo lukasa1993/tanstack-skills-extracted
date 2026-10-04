@@ -12,7 +12,7 @@ metadata:
 
 Reactive store guidance for state, atoms, selectors, batching, async state, and framework adapters.
 
-> TanStack Store is alpha. Confirm core and adapter versions.
+> Confirm core and adapter versions.
 
 ## Workflow
 
@@ -36,14 +36,14 @@ Reactive store guidance for state, atoms, selectors, batching, async state, and 
 
 ## Framework routing
 
-- **React** — detect `@tanstack/react-store`. Read [React adapter](references/framework-react.md).
-- **Preact** — detect `@tanstack/preact-store`. Read [Preact adapter](references/framework-preact.md).
-- **Solid** — detect `@tanstack/solid-store`. Read [Solid adapter](references/framework-solid.md).
-- **Svelte** — detect `@tanstack/svelte-store`. Read [Svelte adapter](references/framework-svelte.md).
-- **Vue** — detect `@tanstack/vue-store`. Read [Vue adapter](references/framework-vue.md).
 - **Angular** — detect `@tanstack/angular-store`. Read [Angular adapter](references/framework-angular.md).
 - **Lit** — detect `@tanstack/lit-store`. Read [Lit adapter](references/framework-lit.md).
 - **Octane** — detect `@tanstack/octane-store`. Read [Octane adapter](references/framework-octane.md).
+- **Preact** — detect `@tanstack/preact-store`. Read [Preact adapter](references/framework-preact.md).
+- **React** — detect `@tanstack/react-store`. Read [React adapter](references/framework-react.md).
+- **Solid** — detect `@tanstack/solid-store`. Read [Solid adapter](references/framework-solid.md).
+- **Svelte** — detect `@tanstack/svelte-store`. Read [Svelte adapter](references/framework-svelte.md).
+- **Vue** — detect `@tanstack/vue-store`. Read [Vue adapter](references/framework-vue.md).
 
 ## Source status
 

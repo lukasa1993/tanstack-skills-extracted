@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../getting-started.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/charts@0.18.0`.
 
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-- [Overview](./charts-docs-installation-md-6ab2967d--overview.md) — 3 KiB
+- [Overview](./charts-docs-installation-md-6ab2967d--overview.md) — 4 KiB
 - [Framework compatibility](./charts-docs-installation-md-6ab2967d--framework-compatibility.md) — 2 KiB
 - [React Native and Expo](./charts-docs-installation-md-6ab2967d--react-native-and-expo.md) — 2 KiB
 - [Choose scale capabilities](./charts-docs-installation-md-6ab2967d--choose-scale-capabilities.md) — 3 KiB

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-custom-extensions-md"></a>
 
-Release-matched documentation · `@tanstack/charts@0.18.0`.
+Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 [Topic index](../rendering-composition-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./charts-docs-reference-custom-extensions-md-9e8eefa0--overview.md) — 1 KiB
 - [Composite marks](./charts-docs-reference-custom-extensions-md-9e8eefa0--composite-marks.md) — 2 KiB
-- [Custom marks](./charts-docs-reference-custom-extensions-md-9e8eefa0--custom-marks.md) — 9 KiB
+- [Custom marks](./charts-docs-reference-custom-extensions-md-9e8eefa0--custom-marks.md) — 11 KiB
 - [Distinct point and scale values](./charts-docs-reference-custom-extensions-md-9e8eefa0--distinct-point-and-scale-values.md) — 2 KiB
 - [Curves](./charts-docs-reference-custom-extensions-md-9e8eefa0--curves.md) — 2 KiB
 - [Custom positional scales](./charts-docs-reference-custom-extensions-md-9e8eefa0--custom-positional-scales.md) — 1 KiB

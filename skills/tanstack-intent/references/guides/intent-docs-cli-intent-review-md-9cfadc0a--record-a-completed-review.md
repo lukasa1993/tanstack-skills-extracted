@@ -1,6 +1,6 @@
 # Intent Review — Record a completed review
 
-[Guide and prerequisites](./intent-docs-cli-intent-review-md-9cfadc0a.md) · Release-matched documentation · `@tanstack/intent@0.5.2`.
+[Guide and prerequisites](./intent-docs-cli-intent-review-md-9cfadc0a.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
 
 ## Record a completed review
 

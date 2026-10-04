@@ -1,6 +1,6 @@
 # Migrate V8 To V9 — API Discovery
 
-[Guide and prerequisites](./tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd.md) · Published skill · `@tanstack/lit-table@9.2.4`.
+[Guide and prerequisites](./tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd.md) · Published skill · `@tanstack/lit-table@9.2.5`.
 
 ## API Discovery
 

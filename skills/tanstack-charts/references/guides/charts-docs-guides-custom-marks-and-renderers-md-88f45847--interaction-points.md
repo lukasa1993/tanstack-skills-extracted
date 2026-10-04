@@ -1,6 +1,6 @@
 # Custom Marks And Renderers — Interaction points
 
-[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Interaction points
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -13,6 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--overview.md) — 1 KiB
 - [Logical keys and physical positions](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--basic-usage.md) — 2 KiB
+- [Updating options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--updating-options.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--default-options.md) — 3 KiB
 - [Hotkey options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--hotkey-options.md) — 4 KiB
 - [Stale closure prevention](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--stale-closure-prevention.md) — 1 KiB
@@ -26,6 +27,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="logical-keys-and-physical-positions"></a>
 <a id="basic-usage"></a>
 <a id="changing-a-binding"></a>
+<a id="updating-options"></a>
 <a id="default-options"></a>
 <a id="why-these-defaults"></a>
 <a id="smart-input-handling-ignoreinputs"></a>

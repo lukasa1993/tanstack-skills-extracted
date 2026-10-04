@@ -12,7 +12,7 @@ metadata:
 
 Guidance for discovering, installing, generating, validating, and maintaining package-owned Agent Skills.
 
-> TanStack Intent is alpha. Confirm the CLI version before using generated configuration.
+> Confirm the CLI version before using generated configuration.
 
 ## Workflow
 
@@ -37,6 +37,6 @@ Use these separate product skills when the task crosses their boundary: `tanstac
 
 ## Source status
 
-Official documentation from `TanStack/intent`, matched to these verified release inputs: @tanstack/intent@0.5.2.
+Official documentation from `TanStack/intent`, matched to these verified release inputs: @tanstack/intent@0.5.3.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

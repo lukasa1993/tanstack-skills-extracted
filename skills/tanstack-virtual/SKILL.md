@@ -34,13 +34,13 @@ Virtualization guidance for large lists, grids, dynamic measurement, reverse fee
 
 ## Framework routing
 
+- **Angular** — detect `@tanstack/angular-virtual`. Read [Angular adapter](references/framework-angular.md).
+- **Lit** — detect `@tanstack/lit-virtual`. Read [Lit adapter](references/framework-lit.md).
+- **Marko** — detect `@tanstack/marko-virtual`. Read [Marko adapter](references/framework-marko.md).
 - **React** — detect `@tanstack/react-virtual`. Read [React adapter](references/framework-react.md).
 - **Solid** — detect `@tanstack/solid-virtual`. Read [Solid adapter](references/framework-solid.md).
-- **Vue** — detect `@tanstack/vue-virtual`. Read [Vue adapter](references/framework-vue.md).
 - **Svelte** — detect `@tanstack/svelte-virtual`. Read [Svelte adapter](references/framework-svelte.md).
-- **Lit** — detect `@tanstack/lit-virtual`. Read [Lit adapter](references/framework-lit.md).
-- **Angular** — detect `@tanstack/angular-virtual`. Read [Angular adapter](references/framework-angular.md).
-- **Marko** — detect `@tanstack/marko-virtual`. Read [Marko adapter](references/framework-marko.md).
+- **Vue** — detect `@tanstack/vue-virtual`. Read [Vue adapter](references/framework-vue.md).
 
 ## Product boundaries
 

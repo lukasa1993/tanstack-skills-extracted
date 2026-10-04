@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-table-devtools"></a>
 
-Published skill · `@tanstack/vue-table-devtools@9.2.0`.
+Published skill · `@tanstack/vue-table-devtools@9.2.5`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Migrate V8 To V9 — Construction and Feature Registration
 
-[Guide and prerequisites](./tanstack-svelte-table-migrate-v8-to-v9-45336202.md) · Published skill · `@tanstack/svelte-table@9.2.4`.
+[Guide and prerequisites](./tanstack-svelte-table-migrate-v8-to-v9-45336202.md) · Published skill · `@tanstack/svelte-table@9.2.5`.
 
 ## Construction and Feature Registration
 

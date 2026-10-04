@@ -12,7 +12,7 @@ metadata:
 
 Provider-agnostic AI guidance for chat, tools, structured output, persistence, memory, runtime skills, MCP, code mode, and sandbox execution.
 
-> TanStack AI is beta. Confirm provider and adapter package versions.
+> Confirm provider and adapter package versions.
 
 ## Workflow
 

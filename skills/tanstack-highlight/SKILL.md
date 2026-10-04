@@ -12,7 +12,7 @@ metadata:
 
 Syntax-highlighting guidance for language support, selective loading, Markdown pipelines, themes, and annotations.
 
-> TanStack Highlight is alpha. Confirm the installed package version.
+> Confirm the installed package version.
 
 ## Workflow
 

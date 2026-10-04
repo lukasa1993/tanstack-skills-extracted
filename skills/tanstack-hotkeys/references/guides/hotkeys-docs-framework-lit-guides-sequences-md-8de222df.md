@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -11,6 +11,10 @@ TanStack Hotkeys supports multi-key sequences: shortcuts where you press keys on
 In Lit, registration is declarative via the `@hotkeySequence` decorator, or imperative via `HotkeySequenceController` when the sequence or options are built at runtime. Both use the same singleton `SequenceManager`.
 
 Sequence steps use the same string syntax as single hotkeys. For example, `['[KeyG]', '[KeyG]']` follows a physical position, while `['G', 'G']` follows the logical letter. A sequence can mix forms, such as `['Mod+[KeyK]', 'C']`. Display steps with `sequence.map((step) => formatForDisplay(step)).join(' → ')`.
+
+## Reactive options
+
+Sequence options support the same [property getter patterns](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md) as hotkey options, including `enabled`, `timeout`, and `target`. Updates preserve the registration when its sequence, target, and platform stay the same. Use `HotkeySequenceController` for options that depend on the host instance.
 
 ## Basic usage
 
@@ -38,7 +42,7 @@ class VimView extends LitElement {
 
 The first argument is an array of `Hotkey` strings representing each step in the sequence. The user must press them in order within the timeout window.
 
-The method receives the `KeyboardEvent` and [`HotkeyCallbackContext`](https://github.com/TanStack/hotkeys/blob/536da97c6a91080cdecf13d74103dcd4a3d3529f/docs/reference/interfaces/HotkeyCallbackContext.md) like `@hotkey`:
+The method receives the `KeyboardEvent` and [`HotkeyCallbackContext`](https://github.com/TanStack/hotkeys/blob/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/docs/reference/interfaces/HotkeyCallbackContext.md) like `@hotkey`:
 
 ```ts
 import type { HotkeyCallbackContext } from '@tanstack/lit-hotkeys'
@@ -152,7 +156,7 @@ scrollToTop() {
 
 ### Default options
 
-When you omit options, the library uses the same defaults as the core [`SequenceOptions`](https://github.com/TanStack/hotkeys/blob/536da97c6a91080cdecf13d74103dcd4a3d3529f/docs/reference/interfaces/SequenceOptions.md): `timeout: 1000`, `preventDefault` / `stopPropagation` enabled, smart `ignoreInputs`, and platform auto-detection. If you omit `target`, the Lit adapter resolves it to `document` when the controller connects in the browser.
+When you omit options, the library uses the same defaults as the core [`SequenceOptions`](https://github.com/TanStack/hotkeys/blob/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/docs/reference/interfaces/SequenceOptions.md): `timeout: 1000`, `preventDefault` / `stopPropagation` enabled, smart `ignoreInputs`, and platform auto-detection. If you omit `target`, the Lit adapter resolves it to `document` when the controller connects in the browser.
 
 ### `meta`
 

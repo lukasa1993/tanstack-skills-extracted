@@ -1,6 +1,6 @@
 # Transforms — Fold wide rows
 
-[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Fold wide rows
 

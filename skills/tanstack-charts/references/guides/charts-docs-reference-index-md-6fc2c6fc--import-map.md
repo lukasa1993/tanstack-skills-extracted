@@ -1,6 +1,6 @@
 # Index — Import map
 
-[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@0.18.0`.
+[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
 
 ## Import map
 
@@ -107,6 +107,7 @@ aggregate `/scales` export.
 | `@tanstack/charts/transform/fold`       | `fold`, `FoldField`, `FoldOutputNames`, `FoldOptions`, and `FoldDatum`                                                                                                                                                          |
 | `@tanstack/charts/transform/waterfall`  | `waterfall`, `WaterfallKind`, `WaterfallOptions`, `WaterfallDatum`, `WaterfallStepDatum`, and `WaterfallTotalDatum`                                                                                                             |
 | `@tanstack/charts/types`                | Universal definition, mark, scene, runtime, focus, and tooltip-model types                                                                                                                                                      |
+| `@tanstack/charts/types/core`           | Core type declarations used by inferred declaration emit                                                                                                                                                                        |
 | `@tanstack/charts/vector`               | `vector`                                                                                                                                                                                                                        |
 | `@tanstack/charts/view`                 | `composeViews`, `fill`, `grid`, `layer`, `inset`, scale-link helpers, `viewGrid`, and view composition types                                                                                                                    |
 | `@tanstack/charts/violin`               | `violinY`, `violinX`, `ViolinYOptions`, `ViolinXOptions`, `ViolinPosition`, `ViolinYCurve`, and `ViolinXCurve`                                                                                                                  |

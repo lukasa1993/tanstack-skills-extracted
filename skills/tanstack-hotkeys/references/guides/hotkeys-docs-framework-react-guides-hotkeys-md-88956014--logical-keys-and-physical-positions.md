@@ -1,6 +1,6 @@
 # Hotkeys — Logical keys and physical positions
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.10.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
 ## Logical keys and physical positions
 
