@@ -17,7 +17,7 @@ import { dirname, join, posix, relative, resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { categoryGroups, expectedCatalogIds } from './catalog-config.mjs'
-import { createThemeBuckets, resolveProduct, selectTheme } from './product-routing.mjs'
+import { createThemeBuckets, resolveProduct, selectTheme, withDocumentedFrameworkThemes } from './product-routing.mjs'
 import { guideId, planGuide, sourceStatus } from './guide-layout.mjs'
 
 const root = resolve(process.env.TANSTACK_BUILD_ROOT || resolve(dirname(fileURLToPath(import.meta.url)), '..'))
@@ -988,6 +988,7 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
     .sort((left, right) => sourcePriority(left) - sourcePriority(right) || ascii(left.id, right.id))
   if (!sources.length) throw new Error(`${spec.id} has no source material`)
 
+  spec = withDocumentedFrameworkThemes(spec, sources)
   const themed = createThemeBuckets(spec)
   for (const source of sources) {
     const selected = selectTheme(spec, source, (fallback) => {

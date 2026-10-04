@@ -9,6 +9,20 @@ export function packageSkillName(packageName) {
   return packageName?.replace(/^@tanstack\//, 'tanstack-') || ''
 }
 
+export function withDocumentedFrameworkThemes(spec, sources) {
+  const frameworks = [...new Set(sources.flatMap((source) => source.frameworks || []))].sort()
+  const additions = frameworks
+    .filter((framework) => framework !== 'vanilla' && !spec.themes.some((entry) =>
+      entry.key === `framework-${framework}` || entry.key.startsWith(`framework-${framework}-`)))
+    .map((framework) => ({
+      key: `framework-${framework}`,
+      title: `${framework} adapter`,
+      description: `${framework}-specific setup and behavior from official release documentation.`,
+      match: (_name, source) => (source.frameworks || []).includes(framework),
+    }))
+  return { ...spec, themes: [...spec.themes, ...additions] }
+}
+
 function productHintIds(productSpecs, libraryName) {
   const tokens = String(libraryName || '')
     .replace(/^@tanstack\//i, '')

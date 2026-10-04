@@ -7,6 +7,7 @@ import {
   packageSkillName,
   resolveProduct,
   selectTheme,
+  withDocumentedFrameworkThemes,
 } from './product-routing.mjs'
 
 const product = (id, match) => ({ id, atomicMatch: match })
@@ -15,6 +16,19 @@ const products = [
   product('db', (name) => /^tanstack-db(?:-|$)/.test(name)),
   product('form', () => false),
 ]
+
+test('new documented adapters get their own route while curated routes keep precedence', () => {
+  const react = { key: 'framework-react', match: (_name, source) => source.frameworks.includes('react') }
+  const original = { id: 'hotkeys', themes: [react] }
+  const sources = ['react', 'alpine', 'alpine', 'future-framework'].map((framework) => ({ name: 'quick-start', frameworks: [framework] }))
+  const spec = withDocumentedFrameworkThemes(original, sources)
+  assert.deepEqual(spec.themes.map((entry) => entry.key), ['framework-react', 'framework-alpine', 'framework-future-framework'])
+  assert.equal(selectTheme(spec, sources[0]), react)
+  assert.equal(selectTheme(spec, sources[1]).key, 'framework-alpine')
+  assert.equal(selectTheme(spec, sources[3]).key, 'framework-future-framework')
+  assert.equal(createThemeBuckets(spec).has('framework-alpine'), true)
+  assert.equal(original.themes.length, 1)
+})
 
 test('normalizes official package names into exported skill names', () => {
   assert.equal(packageSkillName('@tanstack/ai-skills'), 'tanstack-ai-skills')

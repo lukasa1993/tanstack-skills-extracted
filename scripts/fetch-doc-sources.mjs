@@ -138,7 +138,6 @@ export const products = [
     repository: 'TanStack/form',
     sourcePackage: '@tanstack/form-core',
     matchAdapterDocuments: true,
-    requireAdapterPackageCoverage: true,
     releasePackages: [
       {
         name: '@tanstack/form-core',
@@ -288,10 +287,6 @@ function fail(message) {
 
 function sha256(value) {
   return createHash('sha256').update(value).digest('hex')
-}
-
-function arraysEqual(left, right) {
-  return left.length === right.length && left.every((value, index) => value === right[index])
 }
 
 function normalizeReleasePackage(value) {
@@ -1203,7 +1198,7 @@ async function writeOutputFile(stageDir, relativePath, bytes) {
   await writeFile(destination, bytes, { flag: 'wx', mode: 0o644 })
 }
 
-function validateDocumentSet(product, documentDefinitions, catalogProduct) {
+export function validateDocumentSet(product, documentDefinitions) {
   const documentPaths = documentDefinitions.map((document) => document.sourcePath)
   if (!documentDefinitions.length) fail(`${product.name} has no selected documents`)
   if (documentPaths.some((path) => isGeneratedReference(product, path))) {
@@ -1214,25 +1209,8 @@ function validateDocumentSet(product, documentDefinitions, catalogProduct) {
       fail(`${product.name} release docs have no required ${label}`)
     }
   }
-  const allowedFrameworks = new Set([
-    ...catalogProduct.frameworks,
-    ...(product.experimentalFrameworks ?? []),
-  ])
-  for (const document of documentDefinitions) {
-    for (const framework of document.frameworks) {
-      if (!allowedFrameworks.has(framework)) {
-        fail(`${product.name} document uses framework ${framework}, which is absent from the public catalog`)
-      }
-    }
-  }
-  for (const framework of allowedFrameworks) {
-    if (
-      framework !== 'vanilla' &&
-      !documentDefinitions.some((document) => document.frameworks.includes(framework))
-    ) {
-      fail(`${product.name} has no selected ${framework} framework guide`)
-    }
-  }
+  // Release documents are authoritative; the public catalog can lag adapters.
+  return [...new Set(documentDefinitions.flatMap((document) => document.frameworks))].sort()
 }
 
 async function buildProduct(
@@ -1261,20 +1239,6 @@ async function buildProduct(
     const commits = new Set(releaseSources.map((release) => release.manifest.commit))
     if (versions.size !== 1 || commits.size !== 1) {
       fail(`${product.name} core and compatibility packages must have aligned releases`)
-    }
-  }
-  if (product.requireAdapterPackageCoverage) {
-    const adapterFrameworks = releaseSources
-      .filter((release) => release.manifest.role === 'adapter')
-      .flatMap((release) => release.manifest.frameworks)
-      .sort()
-    const catalogFrameworks = catalogProduct.frameworks
-      .filter((framework) => framework !== 'vanilla')
-      .sort()
-    if (!arraysEqual(adapterFrameworks, catalogFrameworks)) {
-      fail(
-        `${product.name} adapter packages [${adapterFrameworks.join(', ')}] do not match catalog frameworks [${catalogFrameworks.join(', ')}]`,
-      )
     }
   }
 
@@ -1351,7 +1315,7 @@ async function buildProduct(
   }
   documentDefinitions.sort((left, right) => left.sourcePath.localeCompare(right.sourcePath))
   if (documentDefinitions.length > 2_000) fail(`${product.name} selected too many documents`)
-  validateDocumentSet(product, documentDefinitions, catalogProduct)
+  const documentedFrameworks = validateDocumentSet(product, documentDefinitions)
 
   const usedSourcePaths = new Set()
   const usedOutputPaths = new Set()
@@ -1785,7 +1749,10 @@ async function buildProduct(
   return {
     id: product.id,
     name: product.name,
-    frameworks: [...catalogProduct.frameworks],
+    frameworks: [...new Set([
+      ...catalogProduct.frameworks.filter((framework) => framework === 'vanilla'),
+      ...documentedFrameworks,
+    ])],
     experimentalFrameworks: [...(product.experimentalFrameworks ?? [])],
     stability: product.stability ?? 'unspecified',
     repository: product.repository,
