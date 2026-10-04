@@ -13,7 +13,7 @@ import {
 } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { dirname, join, posix, resolve, sep } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 import { sources } from './source-client.mjs'
 import { expectedCatalogIds, inspectCatalogIds } from './catalog-config.mjs'
@@ -34,7 +34,7 @@ const externalGithubLinkSpecs = [
   },
 ]
 
-const products = [
+export const products = [
   {
     id: 'query',
     name: 'TanStack Query',
@@ -60,7 +60,6 @@ const products = [
     name: 'TanStack Charts',
     repository: 'TanStack/charts',
     sourcePackage: '@tanstack/charts',
-    stability: 'pre-alpha',
     experimentalFrameworks: ['react-native'],
     documentSource: 'npm-package',
     requireAlignedReleases: true,
@@ -68,14 +67,12 @@ const products = [
       {
         name: '@tanstack/charts',
         role: 'core',
-        expectedMajor: 0,
         repositoryDirectory: 'packages/charts-core',
       },
       {
         name: '@tanstack/react-native-charts',
         role: 'experimental-compatibility-adapter',
         frameworks: ['react-native'],
-        expectedMajor: 0,
         repositoryDirectory: 'packages/react-native-charts',
       },
     ],
@@ -108,19 +105,16 @@ const products = [
       {
         name: '@tanstack/eslint-config',
         role: 'tool',
-        expectedMajor: 0,
         repositoryDirectory: 'packages/eslint-config',
       },
       {
         name: '@tanstack/publish-config',
         role: 'tool',
-        expectedMajor: 0,
         repositoryDirectory: 'packages/publish-config',
       },
       {
         name: '@tanstack/vite-config',
         role: 'tool',
-        expectedMajor: 0,
         repositoryDirectory: 'packages/vite-config',
       },
     ],
@@ -149,56 +143,48 @@ const products = [
       {
         name: '@tanstack/form-core',
         role: 'core',
-        expectedMajor: 1,
         repositoryDirectory: 'packages/form-core',
       },
       {
         name: '@tanstack/angular-form',
         role: 'adapter',
         frameworks: ['angular'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/angular-form',
       },
       {
         name: '@tanstack/lit-form',
         role: 'adapter',
         frameworks: ['lit'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/lit-form',
       },
       {
         name: '@tanstack/preact-form',
         role: 'adapter',
         frameworks: ['preact'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/preact-form',
       },
       {
         name: '@tanstack/react-form',
         role: 'adapter',
         frameworks: ['react'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/react-form',
       },
       {
         name: '@tanstack/solid-form',
         role: 'adapter',
         frameworks: ['solid'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/solid-form',
       },
       {
         name: '@tanstack/svelte-form',
         role: 'adapter',
         frameworks: ['svelte'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/svelte-form',
       },
       {
         name: '@tanstack/vue-form',
         role: 'adapter',
         frameworks: ['vue'],
-        expectedMajor: 1,
         repositoryDirectory: 'packages/vue-form',
       },
     ],
@@ -326,17 +312,15 @@ function normalizeReleasePackage(value) {
     name: spec.name,
     role: spec.role ?? 'source',
     frameworks,
-    expectedMajor: spec.expectedMajor,
     repositoryDirectory: spec.repositoryDirectory,
   }
 }
 
-function parseSemverMajor(version, packageName) {
+export function validateReleaseVersion(version, packageName) {
   const match = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/.exec(
     version,
   )
-  if (!match) fail(`${packageName} has non-semver latest version ${version}`)
-  return Number(match[1])
+  if (!match || match[0] !== version) fail(`${packageName} has non-semver latest version ${version}`)
 }
 
 function packageArchiveName(productId, packageName) {
@@ -601,10 +585,7 @@ async function fetchReleasePackage(packageValue, expectedRepository, archiveDir,
   if (typeof version !== 'string') {
     fail(`${packageName} has no safe latest version`)
   }
-  const major = parseSemverMajor(version, packageName)
-  if (spec.expectedMajor !== undefined && major !== spec.expectedMajor) {
-    fail(`${packageName}@${version} must stay on major ${spec.expectedMajor}`)
-  }
+  validateReleaseVersion(version, packageName)
   if (metadata.name !== packageName || metadata.version !== version) {
     fail(`${packageName}@${version} registry identity does not match the request`)
   }
@@ -1962,7 +1943,9 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  process.stderr.write(`ERROR: ${error?.message ?? error}\n`)
-  process.exitCode = 1
-})
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch((error) => {
+    process.stderr.write(`ERROR: ${error?.message ?? error}\n`)
+    process.exitCode = 1
+  })
+}

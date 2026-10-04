@@ -67,7 +67,7 @@ const docFrameworks = {
 
 const productSpecs = [
   product('start', 'TanStack Start', 'Full-stack application guidance for TanStack Start, including server functions, middleware, deployment, and framework adapters.', {
-    maturity: 'Release candidate. Confirm the installed package version before using an API.',
+    maturity: 'Confirm the installed package version before using an API.',
     atomicMatch: (name) => /^tanstack-(?:start-(?:client|server)-core|(?:react|solid|vue)-start)(?:-|$)/.test(name),
     supplementalAtomicMatch: (name) => /^tanstack-(?:router-core|router-plugin|virtual-file-routes|solid-router|vue-router)(?:-|$)/.test(name),
     themes: [
@@ -158,7 +158,7 @@ const productSpecs = [
     related: ['tanstack-query', 'tanstack-virtual'],
   }),
   product('charts', 'TanStack Charts', 'Typed chart grammar guidance for marks, scales, layouts, interaction, accessibility, rendering, and framework adapters.', {
-    maturity: 'TanStack Charts 0.x is pre-alpha. Use only the API documented for the recorded release.',
+    maturity: 'Use only the API documented for the recorded release.',
     atomicMatch: () => false,
     docOnly: true,
     themes: docThemes('charts'),
@@ -172,7 +172,7 @@ const productSpecs = [
     related: ['tanstack-start', 'tanstack-devtools'],
   }),
   product('db', 'TanStack DB', 'Reactive collection guidance for live queries, optimistic mutations, persistence, sync engines, and framework adapters.', {
-    maturity: 'TanStack DB is beta. Confirm package versions before using adapter or sync APIs.',
+    maturity: 'Confirm package versions before using adapter or sync APIs.',
     atomicMatch: (name) =>
       /^tanstack-db-(?:core|meta-framework|playbook|skills)(?:-|$)/.test(name) ||
       /^tanstack-(?:react|vue|solid|svelte|angular)-db$/.test(name) ||
@@ -190,7 +190,7 @@ const productSpecs = [
     related: ['tanstack-query', 'tanstack-start'],
   }),
   product('ai', 'TanStack AI', 'Provider-agnostic AI guidance for chat, tools, structured output, persistence, memory, runtime skills, MCP, code mode, and sandbox execution.', {
-    maturity: 'TanStack AI is beta. Confirm provider and adapter package versions.',
+    maturity: 'Confirm provider and adapter package versions.',
     atomicMatch: (name) => /^tanstack-ai(?:-|$)/.test(name),
     themes: [
       theme('chat-providers', 'Chat, providers, and streaming', 'Core chat, providers, AG-UI, custom backends, and debugging.', (name) =>
@@ -218,7 +218,7 @@ const productSpecs = [
     related: [],
   }),
   product('intent', 'TanStack Intent', 'Guidance for discovering, installing, generating, validating, and maintaining package-owned Agent Skills.', {
-    maturity: 'TanStack Intent is alpha. Confirm the CLI version before using generated configuration.',
+    maturity: 'Confirm the CLI version before using generated configuration.',
     atomicMatch: () => false,
     docOnly: true,
     themes: docThemes('intent'),
@@ -231,21 +231,21 @@ const productSpecs = [
     related: ['tanstack-table'],
   }),
   product('pacer', 'TanStack Pacer', 'Execution-control guidance for debounce, throttle, rate limit, queue, batch, async retry, and framework adapters.', {
-    maturity: 'TanStack Pacer is beta. Confirm utility and adapter versions.',
+    maturity: 'Confirm utility and adapter versions.',
     atomicMatch: () => false,
     docOnly: true,
     themes: docThemes('pacer'),
     related: ['tanstack-devtools'],
   }),
   product('hotkeys', 'TanStack Hotkeys', 'Type-safe keyboard shortcut guidance for registration, sequences, scopes, recording, key state, display, and adapters.', {
-    maturity: 'TanStack Hotkeys is alpha. Confirm behavior across target keyboard layouts and operating systems.',
+    maturity: 'Confirm behavior across target keyboard layouts and operating systems.',
     atomicMatch: () => false,
     docOnly: true,
     themes: docThemes('hotkeys'),
     related: ['tanstack-devtools'],
   }),
   product('markdown', 'TanStack Markdown', 'Markdown parsing, extensions, rendering, production pipeline, and framework-adapter guidance.', {
-    maturity: 'TanStack Markdown is alpha. Confirm parser and renderer versions.',
+    maturity: 'Confirm parser and renderer versions.',
     atomicMatch: (name) => /^tanstack-markdown(?:-|$)/.test(name),
     themes: [
       theme('parsing-extensions', 'Parsing and extensions', 'Markdown parsing, documentation features, and extensions.', contains('render-markdown', 'docs-features', 'custom-extensions')),
@@ -257,7 +257,7 @@ const productSpecs = [
     related: ['tanstack-highlight'],
   }),
   product('highlight', 'TanStack Highlight', 'Syntax-highlighting guidance for language support, selective loading, Markdown pipelines, themes, and annotations.', {
-    maturity: 'TanStack Highlight is alpha. Confirm the installed package version.',
+    maturity: 'Confirm the installed package version.',
     atomicMatch: (name) => /^tanstack-highlight(?:-|$)/.test(name),
     themes: [
       theme('languages-configuration', 'Languages and configuration', 'Selective highlighting and language extension.', contains('selective-highlighting', 'language-support')),
@@ -269,7 +269,7 @@ const productSpecs = [
     related: ['tanstack-markdown'],
   }),
   product('store', 'TanStack Store', 'Reactive store guidance for state, atoms, selectors, batching, async state, and framework adapters.', {
-    maturity: 'TanStack Store is alpha. Confirm core and adapter versions.',
+    maturity: 'Confirm core and adapter versions.',
     atomicMatch: () => false,
     docOnly: true,
     themes: docThemes('store'),
@@ -282,7 +282,7 @@ const productSpecs = [
     related: [],
   }),
   product('devtools', 'TanStack Devtools', 'Devtools guidance for setup, framework adapters, plugins, event instrumentation, marketplace use, and production builds.', {
-    maturity: 'TanStack Devtools is alpha. Confirm core and plugin versions.',
+    maturity: 'Confirm core and plugin versions.',
     atomicMatch: (name) => /^tanstack-devtools(?:-|$)/.test(name),
     themes: [
       theme('setup-production', 'Setup and production', 'App setup, Vite integration, and production behavior.', contains('app-setup', 'vite-plugin', 'production')),
@@ -302,7 +302,7 @@ const productSpecs = [
     related: [],
   }),
   product('cli', 'TanStack CLI', 'Project scaffolding and maintenance guidance for app creation, add-ons, ecosystem integration, custom development, and documentation queries.', {
-    maturity: 'TanStack CLI is alpha. Confirm the installed CLI version and command help.',
+    maturity: 'Confirm the installed CLI version and command help.',
     atomicMatch: (name) => /^tanstack-cli(?:-|$)/.test(name),
     themes: [
       theme('projects-addons', 'Projects and add-ons', 'Create applications and add add-ons.', contains('create-app-scaffold', 'add-addons')),
