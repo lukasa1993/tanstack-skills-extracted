@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
 `useHotkey` registers a shortcut with the shared `HotkeyManager`. Write hook calls in compiler-enabled `.tsrx` components. The Octane compiler supplies hook identity, so call hooks at stable component call sites. Use the plural hooks for lists that change length. Do not supply the compiler's internal slot argument yourself.
 
@@ -12,7 +12,20 @@ Registration callbacks and options refresh after each commit. Registrations and 
 
 ## Logical keys and physical positions
 
-This section is an exact duplicate. Read [Logical keys and physical positions in Hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md).
+Use a logical binding when the shortcut should follow the character on the active layout. Use a physical binding when it should follow a keyboard position:
+
+| Binding | Identity checked |
+| --- | --- |
+| `Mod+S` or `{ key: 'S', mod: true }` | Logical `event.key`, with conservative code fallback |
+| `Mod+[KeyS]` or `{ code: 'KeyS', mod: true }` | Exact `event.code` |
+| `Enter` | Logical Enter, including numpad Enter |
+| `[Enter]` / `[NumpadEnter]` | Separate physical Enter positions |
+
+Every physical code uses brackets in strings, including names shared with logical keys such as `[Enter]` and `[F13]`. Supported codes are type-safe and available in autocomplete. Do not put a bracketed code in an object's `key` field; use `code`. A binding has either `key` or `code`, never both.
+
+On a layout where the `KeyQ` position produces `a`, `A` follows that character and `[KeyQ]` follows the position. Logical ASCII letters remain layout-aware; conservative physical fallback helps with transformed output such as macOS Option keys. Exact matches take priority over weaker fallbacks among eligible registrations on the same target.
+
+Callbacks expose the same distinction in `context.parsedHotkey`: check `parsed.code !== undefined` before reading its physical identity. Use `formatForDisplay` for labels; stored physical strings retain their brackets.
 
 ## Basic usage
 
@@ -184,7 +197,17 @@ The adapter identifies entries by array index, normalized binding, and target. C
 
 ## Metadata
 
-This section is an exact duplicate. Read [Metadata in Hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md).
+Attach `meta.name`, `meta.description`, and `meta.group` for a shortcut palette or help panel. Metadata does not change matching, enabled state, or target scope. Extend `HotkeyMeta` through declaration merging for application-specific fields.
+
+```ts
+import '@tanstack/hotkeys'
+
+declare module '@tanstack/hotkeys' {
+	interface HotkeyMeta {
+		icon?: string
+	}
+}
+```
 
 ## Introspecting registrations
 

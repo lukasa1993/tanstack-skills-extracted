@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
 Use `formatForDisplay` whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the original binding and format it at render time: the display label is not a registration string.
 

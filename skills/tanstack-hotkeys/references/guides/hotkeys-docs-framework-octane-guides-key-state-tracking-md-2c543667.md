@@ -4,9 +4,9 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
-This section is an exact duplicate. Read [Overview in Key State Tracking](./hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md).
+Use `useHeldKeys`, `useHeldKeyCodes`, and `useKeyHold` to render the current keyboard state. Use `useHotkeyHint` to reveal shortcut labels while their modifiers are held.
 
 ## Read key state
 
@@ -96,7 +96,13 @@ Pass `{ exact: true }` to require every binding modifier, or `{ platform: 'mac' 
 
 ## Platform quirks
 
-This section is an exact duplicate. Read [Platform quirks in Key State Tracking](./hotkeys-docs-framework-alpine-guides-key-state-tracking-md-18777433.md).
+### macOS modifier key behavior
+
+macOS can swallow the keyup event for a non-modifier while a modifier is held. The tracker handles this to keep held state accurate.
+
+### Window blur
+
+The tracker clears held keys when the browser window loses focus. Keys released while another window is active therefore do not remain stuck in the UI.
 
 ## Under the hood
 

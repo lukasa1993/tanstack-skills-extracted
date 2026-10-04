@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
 ## Choose a section
 

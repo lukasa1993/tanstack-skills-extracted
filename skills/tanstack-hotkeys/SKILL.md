@@ -24,6 +24,9 @@ Type-safe keyboard shortcut guidance for registration, sequences, scopes, record
 
 ## Task routing
 
+- [alpine adapter](references/framework-alpine.md) — alpine-specific setup and behavior from official release documentation.
+- [ember adapter](references/framework-ember.md) — ember-specific setup and behavior from official release documentation.
+- [octane adapter](references/framework-octane.md) — octane-specific setup and behavior from official release documentation.
 - [Foundations](references/foundations.md) — Overview, installation, and devtools.
 - [React adapter](references/framework-react.md) — React-specific setup and behavior.
 - [Preact adapter](references/framework-preact.md) — Preact-specific setup and behavior.
@@ -32,16 +35,15 @@ Type-safe keyboard shortcut guidance for registration, sequences, scopes, record
 - [Vue adapter](references/framework-vue.md) — Vue-specific setup and behavior.
 - [Angular adapter](references/framework-angular.md) — Angular-specific setup and behavior.
 - [Lit adapter](references/framework-lit.md) — Lit-specific setup and behavior.
-- [Other official guides](references/other-guides.md) — Other official Hotkeys guidance.
 
 ## Framework routing
 
 - **Vanilla** — detect `@tanstack/hotkeys`. Read [Foundations](references/foundations.md). Shared guidance; check adapter-specific differences.
-- **Alpine** — detect `@tanstack/alpine-hotkeys`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Alpine** — detect `@tanstack/alpine-hotkeys`. Read [alpine adapter](references/framework-alpine.md).
 - **Angular** — detect `@tanstack/angular-hotkeys`. Read [Angular adapter](references/framework-angular.md).
-- **Ember** — detect `@tanstack/ember-hotkeys`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Ember** — detect `@tanstack/ember-hotkeys`. Read [ember adapter](references/framework-ember.md).
 - **Lit** — detect `@tanstack/lit-hotkeys`. Read [Lit adapter](references/framework-lit.md).
-- **Octane** — detect `@tanstack/octane-hotkeys`. No dedicated adapter guide is bundled; consult the installed package documentation.
+- **Octane** — detect `@tanstack/octane-hotkeys`. Read [octane adapter](references/framework-octane.md).
 - **Preact** — detect `@tanstack/preact-hotkeys`. Read [Preact adapter](references/framework-preact.md).
 - **React** — detect `@tanstack/react-hotkeys`. Read [React adapter](references/framework-react.md).
 - **Solid** — detect `@tanstack/solid-hotkeys`. Read [Solid adapter](references/framework-solid.md).

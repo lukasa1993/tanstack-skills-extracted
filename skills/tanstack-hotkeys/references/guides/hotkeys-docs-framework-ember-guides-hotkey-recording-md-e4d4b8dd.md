@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
 Use `useHotkeyRecorder` to build a shortcut customization UI. Recording defaults to physical codes, producing values such as `Mod+[KeyS]`. Store that value directly and pass it to `useHotkey`. Use `formatForDisplay` for the label.
 
@@ -48,7 +48,15 @@ This example stores the replacement binding in application state and restores `M
 
 ## Return value
 
-This section is an exact duplicate. Read [Return value in Hotkey Recording](./hotkeys-docs-framework-alpine-guides-hotkey-recording-md-de504409.md).
+| Property | Type | Meaning |
+| --- | --- | --- |
+| `isRecording` | `boolean` | Whether a session is active. |
+| `recordedHotkey` | `Hotkey \| null` | The recorded binding, or `null` after starting, stopping, or cancelling. |
+| `startRecording` | `() => void` | Start a new session. |
+| `stopRecording` | `() => void` | Stop and clear recorder state without calling `onRecord` or `onCancel`. |
+| `cancelRecording` | `() => void` | Stop, clear recorder state, and call `onCancel`. |
+
+The state fields are reactive getters. Read `recorder.isRecording` and `recorder.recordedHotkey` where the framework tracks dependencies; destructuring them once captures a snapshot.
 
 ## Options
 
@@ -78,7 +86,24 @@ Pass an options getter when configuration changes: `useHotkeyRecorder(this, () =
 
 ## Recording behavior
 
-This section is an exact duplicate. Read [Recording behavior in Hotkey Recording](./hotkeys-docs-framework-alpine-guides-hotkey-recording-md-de504409.md).
+| Input | Behavior |
+| --- | --- |
+| Modifier alone | Wait for a non-modifier key. |
+| Modifier plus a non-modifier key | Record the chord and finish. |
+| Single non-modifier key, such as F1 | Record the key and finish. |
+| Escape | Cancel. |
+| Unmodified Backspace or Delete | Clear and call `onClear`. |
+| Automatic key repeat or IME composition | Do not record a new chord. |
+
+Recording events, repeats, and their key releases do not trigger registered hotkeys or sequences.
+
+### `ignoreInputs`
+
+This defaults to `true`. Normal typing in inputs, textareas, selects, and contentEditable elements passes through. Escape still cancels while an input is focused. Set `ignoreInputs: false` to capture shortcuts from a focused input.
+
+### Mod auto-conversion
+
+On macOS, Command+S becomes `Mod+[KeyS]`. Reusing that binding on Windows resolves `Mod` to Control while preserving the physical key position. Pass a `platform` option when detection must be overridden.
 
 ## Validation and conflicts
 

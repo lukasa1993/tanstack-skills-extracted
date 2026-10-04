@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
 Use `createHotkeySequenceRecorder` to record an ordered sequence of chords. Recording defaults to physical codes, such as `['[KeyG]', 'Alt+[KeyS]']`. Use `recordBy: 'key'` for logical characters. Pass the saved array directly to `createHotkeySequence`.
 

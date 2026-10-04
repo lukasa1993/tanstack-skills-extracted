@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
 Use `useHotkeySequenceRecorder` to record an ordered sequence of chords. Recording defaults to physical codes, such as `['[KeyG]', 'Alt+[KeyS]']`. Use `recordBy: 'key'` for logical characters. Pass the saved array directly to `useHotkeySequence`.
 
@@ -47,7 +47,17 @@ Press and release each chord, then press Enter or click Save. Cancellation leave
 
 ## Return value
 
-This section is an exact duplicate. Read [Return value in Sequence Recording](./hotkeys-docs-framework-alpine-guides-sequence-recording-md-94046ff1.md).
+| Property | Type | Meaning |
+| --- | --- | --- |
+| `isRecording` | `boolean` | Whether a session is active. |
+| `steps` | `HotkeySequence` | Chords captured in the current session. |
+| `recordedSequence` | `HotkeySequence \| null` | The last committed sequence. |
+| `startRecording` | `() => void` | Start a new session. |
+| `stopRecording` | `() => void` | Stop without calling `onRecord` or `onCancel`. |
+| `cancelRecording` | `() => void` | Discard the session and call `onCancel`. |
+| `commitRecording` | `() => void` | Commit current steps; do nothing if empty. |
+
+Read state through the recorder object. Destructuring its reactive getters once captures a snapshot.
 
 ## Options
 
@@ -69,11 +79,22 @@ The default is `true`, so normal typing in inputs, textareas, selects, and conte
 
 ## Validation and conflicts
 
-This section is an exact duplicate. Read [Validation and conflicts in Sequence Recording](./hotkeys-docs-framework-alpine-guides-sequence-recording-md-94046ff1.md).
+`validate(sequence, { events, parsedSequence })` runs when committing and returns `true`, `false`, or a rejection message. `detectConflicts` checks single bindings and sequence prefixes. A rejected commit keeps the session active and the steps intact, so the user can edit them with Backspace.
+
+The recorder supports the same `detectConflicts`, `validate`, and `onReject` options as the [single-hotkey recorder](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md#source-hotkeys-docs-framework-ember-guides-hotkey-recording-md). Use live registration IDs to exclude the binding being edited. Physical/logical overlap is based on the captured events, not a guessed keyboard layout.
 
 ## Behavior
 
-This section is an exact duplicate. Read [Behavior in Sequence Recording](./hotkeys-docs-framework-alpine-guides-sequence-recording-md-94046ff1.md).
+| Input | Behavior |
+| --- | --- |
+| Valid chord | Append to `steps` and continue listening. |
+| Unmodified Enter with default commit settings and nonempty steps | Commit and call `onRecord`. |
+| Escape | Cancel and call `onCancel`. |
+| Unmodified Backspace or Delete with nonempty steps | Remove the last step without committing. |
+| Unmodified Backspace or Delete with empty steps | Stop and call only `onClear`. |
+| Modifier-only press, repeat, or IME composition | Do not append a step. |
+
+Recorded chords use portable `Mod`. Recording events, commit keys, and their releases are isolated from application hotkeys and sequences. Code mode rejects AltGraph character entry; key mode preserves the produced character without synthetic Control/Alt.
 
 ## Under the hood
 

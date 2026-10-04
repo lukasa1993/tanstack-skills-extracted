@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
 Use `createHotkeyRecorder` to build a shortcut customization UI. Recording defaults to physical codes, producing values such as `Mod+[KeyS]`. Store that value directly and pass it to `createHotkey`. Use `formatForDisplay` for the label.
 

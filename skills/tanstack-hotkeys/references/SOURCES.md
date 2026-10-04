@@ -2,6 +2,27 @@
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
+| `hotkeys:docs/framework/alpine/guides/formatting-display.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/alpine/guides/hotkey-recording.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/alpine/guides/hotkeys.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/alpine/guides/key-state-tracking.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/alpine/guides/sequence-recording.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/alpine/guides/sequences.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/alpine/quick-start.md` | document | `framework-alpine` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/guides/formatting-display.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/guides/hotkey-recording.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/guides/hotkeys.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/guides/key-state-tracking.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/guides/sequence-recording.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/guides/sequences.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/ember/quick-start.md` | document | `framework-ember` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/guides/formatting-display.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/guides/hotkey-recording.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/guides/hotkeys.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/guides/key-state-tracking.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/guides/sequence-recording.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/guides/sequences.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
+| `hotkeys:docs/framework/octane/quick-start.md` | document | `framework-octane` | `@tanstack/hotkeys` | `0.11.0` |  |
 | `hotkeys:docs/devtools.md` | document | `foundations` | `@tanstack/hotkeys` | `0.11.0` |  |
 | `hotkeys:docs/installation.md` | document | `foundations` | `@tanstack/hotkeys` | `0.11.0` |  |
 | `hotkeys:docs/overview.md` | document | `foundations` | `@tanstack/hotkeys` | `0.11.0` |  |
@@ -52,26 +73,5 @@
 | `hotkeys:docs/framework/lit/guides/sequence-recording.md` | document | `framework-lit` | `@tanstack/hotkeys` | `0.11.0` |  |
 | `hotkeys:docs/framework/lit/guides/sequences.md` | document | `framework-lit` | `@tanstack/hotkeys` | `0.11.0` |  |
 | `hotkeys:docs/framework/lit/quick-start.md` | document | `framework-lit` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/guides/formatting-display.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/guides/hotkey-recording.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/guides/hotkeys.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/guides/key-state-tracking.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/guides/sequence-recording.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/guides/sequences.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/alpine/quick-start.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/guides/formatting-display.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/guides/hotkey-recording.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/guides/hotkeys.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/guides/key-state-tracking.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/guides/sequence-recording.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/guides/sequences.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/ember/quick-start.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/guides/formatting-display.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/guides/hotkey-recording.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/guides/hotkeys.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/guides/key-state-tracking.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/guides/sequence-recording.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/guides/sequences.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
-| `hotkeys:docs/framework/octane/quick-start.md` | document | `other-guides` | `@tanstack/hotkeys` | `0.11.0` |  |
 
-Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 32. No fuzzy deduplication is used.
+Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 7. No fuzzy deduplication is used.

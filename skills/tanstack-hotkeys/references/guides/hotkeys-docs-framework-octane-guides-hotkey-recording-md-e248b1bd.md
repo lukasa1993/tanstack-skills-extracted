@@ -4,9 +4,11 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
-This section is an exact duplicate. Read [Overview in Hotkey Recording](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md).
+Use `useHotkeyRecorder` to build a shortcut customization UI. Recording defaults to physical codes, producing values such as `Mod+[KeyS]`. Store that value directly and pass it to `useHotkey`. Use `formatForDisplay` for the label.
+
+TanStack Hotkeys automatically suppresses registered hotkey and sequence callbacks while any recorder is active. You do not need to set `enabled` from `isRecording`. Registrations remain available for conflict detection, and recorded keys stay suppressed through repeats and key release.
 
 ## Basic usage
 
@@ -78,7 +80,24 @@ Options and callbacks refresh after every commit, so callbacks see current compo
 
 ## Recording behavior
 
-This section is an exact duplicate. Read [Recording behavior in Hotkey Recording](./hotkeys-docs-framework-alpine-guides-hotkey-recording-md-de504409.md).
+| Input | Behavior |
+| --- | --- |
+| Modifier alone | Wait for a non-modifier key. |
+| Modifier plus a non-modifier key | Record the chord and finish. |
+| Single non-modifier key, such as F1 | Record the key and finish. |
+| Escape | Cancel. |
+| Unmodified Backspace or Delete | Clear and call `onClear`. |
+| Automatic key repeat or IME composition | Do not record a new chord. |
+
+Recording events, repeats, and their key releases do not trigger registered hotkeys or sequences.
+
+### `ignoreInputs`
+
+This defaults to `true`. Normal typing in inputs, textareas, selects, and contentEditable elements passes through. Escape still cancels while an input is focused. Set `ignoreInputs: false` to capture shortcuts from a focused input.
+
+### Mod auto-conversion
+
+On macOS, Command+S becomes `Mod+[KeyS]`. Reusing that binding on Windows resolves `Mod` to Control while preserving the physical key position. Pass a `platform` option when detection must be overridden.
 
 ## Validation and conflicts
 

@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
 Use `createHeldKeys`, `createHeldKeyCodes`, and `createKeyHold` to render the current keyboard state. Use `createHotkeyHint` to reveal shortcut labels while their modifiers are held.
 

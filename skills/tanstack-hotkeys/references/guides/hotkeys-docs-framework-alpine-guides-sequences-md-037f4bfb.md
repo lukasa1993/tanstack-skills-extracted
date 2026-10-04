@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
 A sequence is an ordered list of chords. Use `createHotkeySequence` for one sequence and `createHotkeySequences` for a changing list. A chord can be a logical binding such as `G`, a physical position such as `[KeyG]`, or a modifier combination such as `Mod+[KeyK]`.
 

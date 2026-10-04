@@ -4,14 +4,14 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
 ## Choose a section
 
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--overview.md) — 1 KiB
-- [Logical keys and physical positions](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--logical-keys-and-physical-positions.md) — 1 KiB
+- [Logical keys and physical positions](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--basic-usage.md) — 2 KiB
 - [Property getters](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--property-getters.md) — 2 KiB
 - [Default options](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--default-options.md) — 3 KiB

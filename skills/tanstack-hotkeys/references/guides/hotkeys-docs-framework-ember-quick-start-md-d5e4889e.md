@@ -4,7 +4,7 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
 Install `@tanstack/ember-hotkeys` with the [installation instructions](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md). This guide builds a save shortcut and shows the component lifecycle used by the other APIs.
 

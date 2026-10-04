@@ -4,6 +4,9 @@
   "product": "hotkeys",
   "sourceCount": 71,
   "themes": [
+    "framework-alpine",
+    "framework-ember",
+    "framework-octane",
     "foundations",
     "framework-react",
     "framework-preact",
@@ -11,10 +14,9 @@
     "framework-svelte",
     "framework-vue",
     "framework-angular",
-    "framework-lit",
-    "other-guides"
+    "framework-lit"
   ],
   "guideCount": 71,
-  "largestGuideEntryBytes": 11207,
-  "inputSha256": "0a24b1e17b5bed4492152270035c4f6039329e97e82ca2ac373cff4d241716d4"
+  "largestGuideEntryBytes": 11954,
+  "inputSha256": "6f5f20f18643896720ce3c83df192d1f99930d6c187219114f80c464181d93e6"
 }

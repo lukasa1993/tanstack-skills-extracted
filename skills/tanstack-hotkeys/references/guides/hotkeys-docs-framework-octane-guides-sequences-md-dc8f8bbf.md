@@ -4,9 +4,9 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
-This section is an exact duplicate. Read [Overview in Sequences](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md).
+A sequence is an ordered list of chords. Use `useHotkeySequence` for one sequence and `useHotkeySequences` for a changing list. A chord can be a logical binding such as `G`, a physical position such as `[KeyG]`, or a modifier combination such as `Mod+[KeyK]`.
 
 ## Basic usage
 

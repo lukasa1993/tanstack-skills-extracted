@@ -4,6 +4,321 @@
   "product": "hotkeys",
   "sources": [
     {
+      "id": "hotkeys:docs/framework/alpine/guides/formatting-display.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
+      "sha256": "e14f11e083fb0ac162112440d208039720f101ce9072ae552eee0ac77ee1820a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/guides/hotkey-recording.md",
+      "sha256": "ee535fbf974aba0f3dc76806e42830c4385689cfac155eef712a5637d9016f8b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/hotkeys.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
+      "sha256": "d33b893b11fd48eb900ce29c25626cbb742cbe45273ab57d386a86c3ab8d93e7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/key-state-tracking.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/guides/key-state-tracking.md",
+      "sha256": "3c1cb0b83d581bf6a7ac6e245b8638adadfe7c32e46e947e1cd587f8af30331c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/sequence-recording.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/guides/sequence-recording.md",
+      "sha256": "2dc8beb8b02e7c0d47892156adfaf962e144f9db432a698ce43fa48fd23558f3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/sequences.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/guides/sequences.md",
+      "sha256": "6a0c5eb24dfd57a8691811f86d0c969ba3f31997d1fc9498e0840400ac518494",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/quick-start.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/alpine/quick-start.md",
+      "sha256": "b73c7bc6c325fd97bc527c5160588f5301bf7347bfe39d936f68568c1935ed53",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/formatting-display.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/guides/formatting-display.md",
+      "sha256": "1eb1c3a4f6c9857bc3e7888e66a74782cfb540d2584fc5dd830b6c36effa08c9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/hotkey-recording.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/guides/hotkey-recording.md",
+      "sha256": "62beb9a803c2b04c72c249b66228c91ac8745f22105c475ad904c10773a2b7ea",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/hotkeys.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/guides/hotkeys.md",
+      "sha256": "d9161bdbb9945b135f1ac402bc8e7d5b6d361ced58878ee4f194cc8985dd0928",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/key-state-tracking.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/guides/key-state-tracking.md",
+      "sha256": "e6c43290228275bdb874981f685f99644430bc948a53b9453350e2e84af77503",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/sequence-recording.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/guides/sequence-recording.md",
+      "sha256": "5dd7563d78ac8b3413303497264a786f5d8622f44ed57586a65dd914560330bc",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/sequences.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/guides/sequences.md",
+      "sha256": "377f7532b6c75a8634bc3689e99d3a74754b2b7d9a6872a933a968d813db819d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/quick-start.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/ember/quick-start.md",
+      "sha256": "f2331986ec7cc2b724fc18f1364e68194ec54ecf1988dc7b2ffc05a7a04aded0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/formatting-display.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/guides/formatting-display.md",
+      "sha256": "d1e11251738f25ead3851e07ca17dd76ab8a6cf72a8c3c924426eaf47ae2d5f7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/hotkey-recording.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/guides/hotkey-recording.md",
+      "sha256": "3eb73b2e4a607ce0493112f1f962451fac3f512264297c0612dea246be6281a5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/hotkeys.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/guides/hotkeys.md",
+      "sha256": "82d46a18671f3b2a677e1cdae0f7a367ebc01ef6ec68b233ef5c4d2661655f17",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/key-state-tracking.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/guides/key-state-tracking.md",
+      "sha256": "839f8d42c3cd6123589b1c68d0c98784d23ddb8252c1d515cf7943f9f5235485",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/sequence-recording.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/guides/sequence-recording.md",
+      "sha256": "ba04fecba3c3bbc96d79958489083cdcd80efb253784e70c8e6f79f68e7c0a1a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/sequences.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/guides/sequences.md",
+      "sha256": "15dcb924827165da7b4b37fe27f8901fb557d4e2b8635b4968b57ac78859af2f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/quick-start.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.11.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "sourcePath": "docs/framework/octane/quick-start.md",
+      "sha256": "97e1dbd74e0a0ec5c3f1994ca7d1e7a5f1a826fa9dc3e3483967ef3b75fc9a89",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+      ]
+    },
+    {
       "id": "hotkeys:docs/devtools.md",
       "kind": "document",
       "theme": "foundations",
@@ -752,325 +1067,22 @@
       "verifiedCommits": [
         "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
       ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/formatting-display.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
-      "sha256": "e14f11e083fb0ac162112440d208039720f101ce9072ae552eee0ac77ee1820a",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/hotkey-recording.md",
-      "sha256": "ee535fbf974aba0f3dc76806e42830c4385689cfac155eef712a5637d9016f8b",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/hotkeys.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
-      "sha256": "d33b893b11fd48eb900ce29c25626cbb742cbe45273ab57d386a86c3ab8d93e7",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/key-state-tracking.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/key-state-tracking.md",
-      "sha256": "3c1cb0b83d581bf6a7ac6e245b8638adadfe7c32e46e947e1cd587f8af30331c",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/sequence-recording.md",
-      "sha256": "2dc8beb8b02e7c0d47892156adfaf962e144f9db432a698ce43fa48fd23558f3",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/sequences.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/sequences.md",
-      "sha256": "6a0c5eb24dfd57a8691811f86d0c969ba3f31997d1fc9498e0840400ac518494",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/quick-start.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/quick-start.md",
-      "sha256": "b73c7bc6c325fd97bc527c5160588f5301bf7347bfe39d936f68568c1935ed53",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/formatting-display.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/formatting-display.md",
-      "sha256": "1eb1c3a4f6c9857bc3e7888e66a74782cfb540d2584fc5dd830b6c36effa08c9",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/hotkey-recording.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/hotkey-recording.md",
-      "sha256": "62beb9a803c2b04c72c249b66228c91ac8745f22105c475ad904c10773a2b7ea",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/hotkeys.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/hotkeys.md",
-      "sha256": "d9161bdbb9945b135f1ac402bc8e7d5b6d361ced58878ee4f194cc8985dd0928",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/key-state-tracking.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/key-state-tracking.md",
-      "sha256": "e6c43290228275bdb874981f685f99644430bc948a53b9453350e2e84af77503",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/sequence-recording.md",
-      "sha256": "5dd7563d78ac8b3413303497264a786f5d8622f44ed57586a65dd914560330bc",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/sequences.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/sequences.md",
-      "sha256": "377f7532b6c75a8634bc3689e99d3a74754b2b7d9a6872a933a968d813db819d",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/quick-start.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/quick-start.md",
-      "sha256": "f2331986ec7cc2b724fc18f1364e68194ec54ecf1988dc7b2ffc05a7a04aded0",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/formatting-display.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/formatting-display.md",
-      "sha256": "d1e11251738f25ead3851e07ca17dd76ab8a6cf72a8c3c924426eaf47ae2d5f7",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/hotkey-recording.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/hotkey-recording.md",
-      "sha256": "3eb73b2e4a607ce0493112f1f962451fac3f512264297c0612dea246be6281a5",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/hotkeys.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/hotkeys.md",
-      "sha256": "82d46a18671f3b2a677e1cdae0f7a367ebc01ef6ec68b233ef5c4d2661655f17",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/key-state-tracking.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/key-state-tracking.md",
-      "sha256": "839f8d42c3cd6123589b1c68d0c98784d23ddb8252c1d515cf7943f9f5235485",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/sequence-recording.md",
-      "sha256": "ba04fecba3c3bbc96d79958489083cdcd80efb253784e70c8e6f79f68e7c0a1a",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/sequences.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/sequences.md",
-      "sha256": "15dcb924827165da7b4b37fe27f8901fb557d4e2b8635b4968b57ac78859af2f",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/quick-start.md",
-      "kind": "document",
-      "theme": "other-guides",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/quick-start.md",
-      "sha256": "97e1dbd74e0a0ec5c3f1994ca7d1e7a5f1a826fa9dc3e3483967ef3b75fc9a89",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
     }
   ],
   "duplicateDocuments": [],
   "duplicateSections": [
+    {
+      "duplicate": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Reactive options",
+      "canonical": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md#Reactive options",
+      "theme": "framework-alpine",
+      "sha256": "5c7341fa79566b1734ee4d4feb382f996f13d34675ce2cfcfdfceecf235beee9"
+    },
+    {
+      "duplicate": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Reactive options",
+      "canonical": "hotkeys:docs/framework/ember/guides/hotkey-recording.md#Reactive options",
+      "theme": "framework-ember",
+      "sha256": "6edf9e53459e1891fdab2b044c15d186e56b447abaea4f7c6455c043203156bc"
+    },
     {
       "duplicate": "hotkeys:docs/framework/solid/guides/sequence-recording.md#Reactive options",
       "canonical": "hotkeys:docs/framework/solid/guides/hotkey-recording.md#Reactive options",
@@ -1100,168 +1112,6 @@
       "canonical": "hotkeys:docs/framework/lit/guides/hotkey-recording.md#Reactive options",
       "theme": "framework-lit",
       "sha256": "1a1669f9927beb7a2ca4eebed595708cfe72271a06e15d88d563bb7c14e24ceb"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md#Reactive options",
-      "theme": "other-guides",
-      "sha256": "5c7341fa79566b1734ee4d4feb382f996f13d34675ce2cfcfdfceecf235beee9"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/formatting-display.md#Overview",
-      "canonical": "hotkeys:docs/framework/alpine/guides/formatting-display.md#Overview",
-      "theme": "other-guides",
-      "sha256": "07e2349bc33f3c2327273b62e5276a960426563cbe4784c13f3f9eac719b654c"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/formatting-display.md#Choose symbols and separators",
-      "canonical": "hotkeys:docs/framework/alpine/guides/formatting-display.md#Choose symbols and separators",
-      "theme": "other-guides",
-      "sha256": "83e5caaa5f3be9fe3a2115176660e2d9730edd741c07108581662e39f3413f04"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/formatting-display.md#Supply layout labels",
-      "canonical": "hotkeys:docs/framework/alpine/guides/formatting-display.md#Supply layout labels",
-      "theme": "other-guides",
-      "sha256": "9d8cc016dec5b77640b7ac5a7ec8ee6a22e0068fa9db6259f4ed66a25be6f7b9"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/hotkey-recording.md#Return value",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md#Return value",
-      "theme": "other-guides",
-      "sha256": "341283874abb15753fe9f616f6eefb8a80d59ace2b52e01abc59376ec4473e8a"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/hotkey-recording.md#Recording behavior",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md#Recording behavior",
-      "theme": "other-guides",
-      "sha256": "154394d2906ab33f1e117ae074c95b9d3b23db4fa126d795f8069856b1425653"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/hotkeys.md#Logical keys and physical positions",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkeys.md#Logical keys and physical positions",
-      "theme": "other-guides",
-      "sha256": "2b19c95ad0b85d17f2e71e224caf6bf59e30433f746aa98a5abca7b58ef70939"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/hotkeys.md#Metadata",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkeys.md#Metadata",
-      "theme": "other-guides",
-      "sha256": "b4c6be6a100a237316b696eea00d61b1fdca44d26261187f65ebaff050a8c643"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/key-state-tracking.md#Platform quirks",
-      "canonical": "hotkeys:docs/framework/alpine/guides/key-state-tracking.md#Platform quirks",
-      "theme": "other-guides",
-      "sha256": "eb191f05996877c669b25d15445567061628adb3013f65f8c334c4ea622575af"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/ember/guides/hotkey-recording.md#Reactive options",
-      "theme": "other-guides",
-      "sha256": "6edf9e53459e1891fdab2b044c15d186e56b447abaea4f7c6455c043203156bc"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Return value",
-      "canonical": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Return value",
-      "theme": "other-guides",
-      "sha256": "7c3c4bf696eef196c8a6874237a5f73d68850a77341b7a4ba364bd41be25547f"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Validation and conflicts",
-      "canonical": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Validation and conflicts",
-      "theme": "other-guides",
-      "sha256": "219ec117b84615d460d2cea6e77947082e9ec78c5561a3d093b46b08ee3da305"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Behavior",
-      "canonical": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Behavior",
-      "theme": "other-guides",
-      "sha256": "1847d5e7e0532876f64c41fae0ff30ba711a426d240af4dc3ba32b491d884602"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/sequences.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/alpine/guides/sequences.md#Reactive options",
-      "theme": "other-guides",
-      "sha256": "dfcd92f3c56ee2a886353aeabfcded9d0255888a6fa8c175ddc706d39bbd9631"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/formatting-display.md#Overview",
-      "canonical": "hotkeys:docs/framework/alpine/guides/formatting-display.md#Overview",
-      "theme": "other-guides",
-      "sha256": "07e2349bc33f3c2327273b62e5276a960426563cbe4784c13f3f9eac719b654c"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/formatting-display.md#Choose symbols and separators",
-      "canonical": "hotkeys:docs/framework/alpine/guides/formatting-display.md#Choose symbols and separators",
-      "theme": "other-guides",
-      "sha256": "83e5caaa5f3be9fe3a2115176660e2d9730edd741c07108581662e39f3413f04"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/formatting-display.md#Supply layout labels",
-      "canonical": "hotkeys:docs/framework/alpine/guides/formatting-display.md#Supply layout labels",
-      "theme": "other-guides",
-      "sha256": "9d8cc016dec5b77640b7ac5a7ec8ee6a22e0068fa9db6259f4ed66a25be6f7b9"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/hotkey-recording.md#Overview",
-      "canonical": "hotkeys:docs/framework/ember/guides/hotkey-recording.md#Overview",
-      "theme": "other-guides",
-      "sha256": "9e0183f19bd50c795f4e8811035a4249ebe4cd69c7cfef0436ebb8d10617d209"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/hotkey-recording.md#Recording behavior",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md#Recording behavior",
-      "theme": "other-guides",
-      "sha256": "154394d2906ab33f1e117ae074c95b9d3b23db4fa126d795f8069856b1425653"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/hotkeys.md#Logical keys and physical positions",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkeys.md#Logical keys and physical positions",
-      "theme": "other-guides",
-      "sha256": "2b19c95ad0b85d17f2e71e224caf6bf59e30433f746aa98a5abca7b58ef70939"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/hotkeys.md#Metadata",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkeys.md#Metadata",
-      "theme": "other-guides",
-      "sha256": "b4c6be6a100a237316b696eea00d61b1fdca44d26261187f65ebaff050a8c643"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/key-state-tracking.md#Overview",
-      "canonical": "hotkeys:docs/framework/ember/guides/key-state-tracking.md#Overview",
-      "theme": "other-guides",
-      "sha256": "6d67988da784c44c32300a4f51ea70f6ce900555a3947b265c979ad5907a2f8f"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/key-state-tracking.md#Platform quirks",
-      "canonical": "hotkeys:docs/framework/alpine/guides/key-state-tracking.md#Platform quirks",
-      "theme": "other-guides",
-      "sha256": "eb191f05996877c669b25d15445567061628adb3013f65f8c334c4ea622575af"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/sequence-recording.md#Overview",
-      "canonical": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Overview",
-      "theme": "other-guides",
-      "sha256": "a553db9375a5890e068c902a33d529aff7b9e1479fe327dab653b835ccdb88fd"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/sequence-recording.md#Validation and conflicts",
-      "canonical": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Validation and conflicts",
-      "theme": "other-guides",
-      "sha256": "219ec117b84615d460d2cea6e77947082e9ec78c5561a3d093b46b08ee3da305"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/sequence-recording.md#Behavior",
-      "canonical": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Behavior",
-      "theme": "other-guides",
-      "sha256": "1847d5e7e0532876f64c41fae0ff30ba711a426d240af4dc3ba32b491d884602"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/octane/guides/sequences.md#Overview",
-      "canonical": "hotkeys:docs/framework/ember/guides/sequences.md#Overview",
-      "theme": "other-guides",
-      "sha256": "d9330b8dd0b9e0fb569d36c366a12904ccb4af2bd967fa3ffdf1fd9baad05bcb"
     }
   ],
   "licenses": [

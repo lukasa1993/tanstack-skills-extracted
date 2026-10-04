@@ -4,13 +4,13 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
 A sequence is an ordered list of chords. Use `useHotkeySequence` for one sequence and `useHotkeySequences` for a changing list. A chord can be a logical binding such as `G`, a physical position such as `[KeyG]`, or a modifier combination such as `Mod+[KeyK]`.
 
 ## Reactive options
 
-This section is an exact duplicate. Read [Reactive options in Sequences](./hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md).
+Sequence options support the same [property getter patterns](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md) as hotkey options, including `enabled`, `timeout`, and `target`. Updates preserve the registration when its sequence, target, and platform stay the same.
 
 ## Basic usage
 

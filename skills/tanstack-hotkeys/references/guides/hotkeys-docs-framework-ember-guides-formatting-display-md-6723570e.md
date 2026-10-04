@@ -4,9 +4,9 @@
 
 Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 
-[Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
+[Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
-This section is an exact duplicate. Read [Overview in Formatting Display](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md).
+Use `formatForDisplay` whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the original binding and format it at render time: the display label is not a registration string.
 
 ## Format a binding
 
@@ -48,11 +48,48 @@ const label = sequence.map((step) => formatForDisplay(step)).join(' → ')
 
 ## Choose symbols and separators
 
-This section is an exact duplicate. Read [Choose symbols and separators in Formatting Display](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md).
+`useSymbols` accepts a boolean or independent `modifiers` and `keys` settings. Omitted fields default to true. Modifier symbols apply on macOS; Windows and Linux retain modifier labels.
+
+```ts
+formatForDisplay('Shift+[ArrowUp]', {
+	platform: 'mac',
+	useSymbols: { modifiers: false, keys: true },
+	parts: true,
+}) // ['Shift', '↑']
+
+formatForDisplay('Mod+[KeyS]', {
+	platform: 'mac', useSymbols: false,
+}) // 'Cmd+S'
+
+formatForDisplay('Control++', {
+	platform: 'windows', separatorToken: ' · ',
+}) // 'Ctrl · +'
+```
+
+An empty separator joins labels directly. `undefined` or `null` uses the platform default. `formatWithLabels(binding, options)` is the shorthand for `formatForDisplay` with `useSymbols: false`.
 
 ## Supply layout labels
 
-This section is an exact duplicate. Read [Supply layout labels in Formatting Display](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md).
+Physical codes describe positions, so their fallback labels may differ from the characters printed on a user's keyboard. Pass an already-resolved `layoutMap` to label those positions for a known layout:
+
+```ts
+const layoutMap = new Map([['KeyQ', 'a']])
+
+formatForDisplay('Mod+[KeyQ]', { platform: 'mac', layoutMap }) // '⌘ A'
+formatForDisplay('Mod+Q', { platform: 'mac', layoutMap }) // '⌘ Q'
+```
+
+Any object with `get(code): string | undefined` works, including a browser `KeyboardLayoutMap`. Formatting stays synchronous. Your app owns loading, errors, and refreshing the map: render fallback labels while loading, then pass the resolved map on the next render. The library never requests it. Logical bindings ignore `layoutMap`.
+
+Use `keyLabels` for explicit labels keyed by physical code or normalized logical key:
+
+```ts
+formatForDisplay('Mod+[KeyQ]', {
+	platform: 'mac', layoutMap, keyLabels: { KeyQ: 'Action' },
+}) // '⌘ Action'
+```
+
+The precedence is `keyLabels`, then a layout entry, then the fallback label. Layout entries receive normal letter casing and key symbols; missing or empty entries fall back. Explicit labels are final. All of these options affect display only.
 
 ## Parse and store bindings
 
