@@ -14,7 +14,7 @@ import {
   writeFile,
 } from 'node:fs/promises'
 import { dirname, join, posix, relative, resolve, sep } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 import { categoryGroups, expectedCatalogIds } from './catalog-config.mjs'
 import { createThemeBuckets, resolveProduct, selectTheme, withDocumentedFrameworkThemes } from './product-routing.mjs'
@@ -727,6 +727,7 @@ function rewriteLinks(text, context) {
     let target = parts[1]
     const suffix = parts[2] || ''
     if (!target && suffix.startsWith('#')) {
+      if (context.inputFile) return match
       const output = context.sourceOutputMap.get(context.source.id)
       return `](${relativeLink(context.outputFile, output.file)}${suffix})`
     }
@@ -741,13 +742,13 @@ function rewriteLinks(text, context) {
     }
 
     if (context.source.kind === 'atomic') {
-      const absolute = resolve(dirname(context.source.skillPath), target)
+      const absolute = resolve(dirname(context.inputFile || context.source.skillPath), target)
       const localAsset = context.atomicAssetMap.get(absolute)
       if (localAsset) return `](${relativeLink(context.outputFile, join(context.productDir, ...localAsset.split('/')))}${suffix})`
       const targetSource = resolveAtomicTarget(target, context)
       if (targetSource) return `](${atomicTargetDestination(targetSource, context)}${suffix.startsWith('#') ? '' : suffix})`
       if (/SKILL\.md$/i.test(target)) {
-        const origin = context.atomicOriginById.get(context.source.id)
+        const origin = atomicInputOrigin(context)
         const resolvedOrigin = origin && posix.normalize(posix.join(posix.dirname(origin), target))
         throw new Error(`unresolved atomic skill link in ${context.source.id}: ${target} (resolved ${resolvedOrigin || 'unknown'})`)
       }
@@ -789,10 +790,10 @@ function isInsideInlineCode(line, index) {
 }
 
 function resolveAtomicTarget(target, context) {
-  const absolute = resolve(dirname(context.source.skillPath), target)
+  const absolute = resolve(dirname(context.inputFile || context.source.skillPath), target)
   const direct = context.atomicFileMap.get(absolute)
   if (direct) return direct
-  const origin = context.atomicOriginById.get(context.source.id)
+  const origin = atomicInputOrigin(context)
   const resolvedOrigin = origin && posix.normalize(posix.join(posix.dirname(origin), target))
   const candidates = [
     resolvedOrigin,
@@ -804,6 +805,25 @@ function resolveAtomicTarget(target, context) {
     if (source) return source
   }
   return undefined
+}
+
+function atomicInputOrigin(context) {
+  const origin = context.atomicOriginById.get(context.source.id)
+  if (!origin || !context.inputFile) return origin
+  const inputPath = relative(context.source.directory, context.inputFile).split(sep).join('/')
+  return posix.join(posix.dirname(origin), inputPath)
+}
+
+export async function rewriteAtomicAssets(sources, context) {
+  for (const [inputFile, targetRel] of context.atomicAssetMap) {
+    if (!/\.(?:md|mdx)$/i.test(inputFile)) continue
+    const source = sources.find((entry) => entry.kind === 'atomic' &&
+      inputFile.startsWith(`${resolve(entry.directory)}${sep}`))
+    if (!source) throw new Error(`copied asset has no owning source: ${inputFile}`)
+    const outputFile = join(context.productDir, ...targetRel.split('/'))
+    const text = await readFile(inputFile, 'utf8')
+    await writeFile(outputFile, normalizeText(rewriteLinks(text, { ...context, source, inputFile, outputFile })))
+  }
 }
 
 function atomicTargetDestination(targetSource, context) {
@@ -1051,6 +1071,9 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
   for (const entry of usedThemes) {
     for (const source of entry.sources) sourceOutputMap.set(source.id, { file: join(productDir, 'references', 'guides', `${guideId(source.id)}.md`), anchor: anchorFor(source), theme: entry.key })
   }
+
+  await rewriteAtomicAssets(sources, { productDir, atomicAssetMap, docAssetMap,
+    atomicFileMap, atomicOriginById, atomicOriginMap, docPathMap, sourceOutputMap })
 
   const provenanceSources = []
   const duplicateDocuments = []
@@ -1498,7 +1521,9 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  process.stderr.write(`ERROR: ${error?.stack || error}\n`)
-  process.exitCode = 1
-})
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch((error) => {
+    process.stderr.write(`ERROR: ${error?.stack || error}\n`)
+    process.exitCode = 1
+  })
+}
