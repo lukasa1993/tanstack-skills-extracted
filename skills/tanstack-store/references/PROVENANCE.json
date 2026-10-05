@@ -181,7 +181,7 @@
     }
   ],
   "documentationVerification": {
-    "catalogSha256": "cd460031325603c351fcfe5e5e27166254f852170bd3181577e0b3f7f3159838",
+    "catalogSha256": "ca59ba9d229897b0fb813962807fa6eb9ebdd83a8a724eca69cff7857ec6d3d6",
     "verification": {
       "npmTarballs": "sha512 integrity verified against npm registry metadata",
       "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",

@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-cli-intent-maintainer-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.3`.
+Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -14,7 +14,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Commands](./intent-docs-cli-intent-maintainer-md-00f7d3ff--commands.md) — 2 KiB
 - [Setup](./intent-docs-cli-intent-maintainer-md-00f7d3ff--setup.md) — 3 KiB
 - [Add a skill](./intent-docs-cli-intent-maintainer-md-00f7d3ff--add-a-skill.md) — 2 KiB
-- [Remove a skill](./intent-docs-cli-intent-maintainer-md-00f7d3ff--remove-a-skill.md) — 1 KiB
+- [Remove a skill](./intent-docs-cli-intent-maintainer-md-00f7d3ff--remove-a-skill.md) — 2 KiB
 - [Choose repository distribution](./intent-docs-cli-intent-maintainer-md-00f7d3ff--choose-repository-distribution.md) — 6 KiB
 - [Maintain and check](./intent-docs-cli-intent-maintainer-md-00f7d3ff--maintain-and-check.md) — 4 KiB
 - [Verify distribution](./intent-docs-cli-intent-maintainer-md-00f7d3ff--verify-distribution.md) — 2 KiB

@@ -1,26 +1,28 @@
 ---
 name: tanstack-react-table-getting-started
-description: "Create and render a TanStack React Table v9 table with useTable, tableFeatures, stable data and columns, row/header models, and table.FlexRender. Load for a first React table, headless rendering, or when v8 useReactTable examples are producing the wrong setup."
+description: "Create and render Table v9 with the react adapter. Route reusable createTableHook components, Query and Virtual integration, and framework setup; use table-state for reactive ownership."
 license: "MIT"
 metadata:
   internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
-  tanstack-library-version: "9.2.5"
+  tanstack-library-version: "9.2.6"
   tanstack-package: "@tanstack/react-table"
-  tanstack-package-version: "9.2.5"
-  tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-core-table-features\"]"
+  tanstack-package-version: "9.2.6"
+  tanstack-requires: "[\"tanstack-table-core\"]"
   tanstack-source-skill: "getting-started"
-  tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/migrating.md\",\"TanStack/table:examples/react/basic-use-table\",\"TanStack/table:packages/react-table/src/index.ts\"]"
+  tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/migrating.md\",\"TanStack/table:examples/react/basic-use-table\",\"TanStack/table:packages/react-table/src/index.ts\",\"TanStack/table:docs/framework/react/guide/composable-tables.md\",\"TanStack/table:docs/framework/react/guide/table-context.md\",\"TanStack/table:examples/react/composable-tables\",\"TanStack/table:packages/react-table/src/createTableHook.tsx\",\"TanStack/table:packages/react-table/src/createTableHookContexts.tsx\",\"TanStack/table:examples/react/with-tanstack-query\",\"TanStack/table:examples/react/virtualized-infinite-scrolling\",\"TanStack/table:docs/framework/react/guide/pagination.md\",\"TanStack/table:docs/framework/react/guide/virtualization.md\",\"TanStack/table:examples/react/virtualized-rows\",\"TanStack/table:examples/react/virtualized-columns\"]"
   tanstack-type: "framework"
 ---
 
-This skill builds on `@tanstack/table-core#core` and `@tanstack/table-core#table-features`. Read them first for the headless model and explicit feature registration.
+# React Table setup and integration
+
+Before starting, run `intent load @tanstack/table-core#core` for the shared headless model and stable-input rules.
 
 ## Setup
 
 ```tsx
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import {
   createColumnHelper,
   tableFeatures,
@@ -72,99 +74,21 @@ export function PeopleTable() {
 
 Table produces models and state; React owns the semantic markup, styles, event affordances, and accessibility.
 
-## Core Patterns
+## Essential constraints
 
-### Add only the feature the table uses
+Use `useTable` for v9. Keep `features`, `columns`, and fallback data at module scope or in stable state/memos. A new `response.data ?? []` fallback invalidates row models on every render. The default selector subscribes the owner to all registered state.
 
-```tsx
-import {
-  createSortedRowModel,
-  rowSortingFeature,
-  tableFeatures,
-} from '@tanstack/react-table'
+Table owns models and state. The application owns markup, CSS, interactions, and accessibility. Core-only tables use `row.getAllCells()`; visibility-aware methods need `columnVisibilityFeature`. Optional state and APIs require their features. Put row-model slots after their prerequisite features in `tableFeatures()`.
 
-const sortableFeatures = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
+## Load by task
 
-Row-model slots belong inside `tableFeatures`, after their prerequisite feature.
+- For repeated features, defaults, typed contexts, or component registries, read [reusable app hooks](./references/create-table-hook.md).
+- For Query-backed data, server pages, sorting, filtering, or request keys, read [TanStack Query integration](./references/with-tanstack-query.md).
+- For virtual rows, columns, dynamic measurement, or infinite scrolling, read [TanStack Virtual integration](./references/with-tanstack-virtual.md).
+- For controlled state, tracked reads, or render subscriptions, read [table state](../tanstack-react-table-table-state/SKILL.md).
+- For feature registration, missing feature APIs, or processing ownership, run `intent load @tanstack/table-core#table-features` and read only references needed by the task.
+- For v8 code, read the [migration checklist](../tanstack-react-table-migrate-v8-to-v9/SKILL.md).
 
-### Keep static inputs outside render
+## API discovery
 
-```tsx
-const features = tableFeatures({})
-const data: Person[] = [{ name: 'Ada', age: 36 }]
-```
-
-Use state, memoization, or query results for changing data; avoid a new fallback array every render.
-
-## Common Mistakes
-
-### HIGH Copying the v8 table constructor
-
-Wrong:
-
-```tsx
-const table = useReactTable({
-  data,
-  columns,
-  getCoreRowModel: getCoreRowModel(),
-})
-```
-
-Correct:
-
-```tsx
-const table = useTable({ data, columns, features })
-```
-
-V9 uses `useTable`; optional row models are registered as feature slots rather than table options.
-
-Source: `docs/framework/react/guide/migrating.md`
-
-### HIGH Assuming feature APIs are global
-
-Wrong:
-
-```tsx
-const features = tableFeatures({})
-```
-
-Correct:
-
-```tsx
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
-
-Sorting state and methods do not exist until the sorting feature is registered.
-
-Source: `packages/table-core/src/TableFeatures.ts`
-
-### MEDIUM Recreating fallback data each render
-
-Wrong:
-
-```tsx
-const table = useTable({ features, columns, data: response.data ?? [] })
-```
-
-Correct:
-
-```tsx
-// module scope
-const EMPTY_DATA: Person[] = []
-const table = useTable({ features, columns, data: response.data ?? EMPTY_DATA })
-```
-
-A fresh fallback invalidates data-dependent models on every render.
-
-Source: `docs/framework/react/guide/data.md`
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/react-table/dist/index.d.ts` first, then the exported `useTable.d.ts`, `FlexRender.d.ts`, or core feature source. Use installed declarations so names match the consumer's exact v9 version.
+Inspect `node_modules/@tanstack/react-table/dist/index.d.ts`, then the exported adapter declarations for the installed version. Inspect optional core APIs under `node_modules/@tanstack/table-core/dist/features/`.

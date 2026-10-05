@@ -2,14 +2,15 @@
 
 <a id="source-tanstack-preact-table-getting-started"></a>
 
-Published skill · `@tanstack/preact-table@9.2.5`.
+Published skill · `@tanstack/preact-table@9.2.6`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Core](./tanstack-table-core-e5f4d128.md).
-Prerequisite: [Table Features](./tanstack-table-core-table-features-d2215548.md).
 
-This skill builds on `@tanstack/table-core#core` and `@tanstack/table-core#table-features`. Use the native Preact adapter, not React through compat.
+# Preact Table setup and integration
+
+Before starting, run `intent load @tanstack/table-core#core` for the shared headless model and stable-input rules.
 
 ## Setup
 
@@ -58,93 +59,21 @@ export function PeopleTable() {
 }
 ```
 
-## Core Patterns
+## Essential constraints
 
-### Register only required plugins
+Use native `@tanstack/preact-table` and `preact/hooks`. V8 React-through-compat setup and `useReactTable` are not the native v9 API. Keep features, columns, and fallback arrays stable across renders.
 
-```tsx
-import {
-  createSortedRowModel,
-  rowSortingFeature,
-  tableFeatures,
-} from '@tanstack/preact-table'
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
+Table owns models and state. The application owns markup, CSS, interactions, and accessibility. Core-only tables use `row.getAllCells()`; visibility-aware methods need `columnVisibilityFeature`. Optional state and APIs require their features. Put row-model slots after their prerequisite features in `tableFeatures()`.
 
-### Keep features and columns module-stable
+## Load by task
 
-```tsx
-const features = tableFeatures({})
-const columns = helper.columns([helper.accessor('name', { header: 'Name' })])
-```
+- For repeated features, defaults, typed contexts, or component registries, read [reusable app hooks](../assets/tanstack-preact-table-getting-started/references/create-table-hook.md).
+- For Query-backed data, server pages, sorting, filtering, or request keys, read [TanStack Query integration](../assets/tanstack-preact-table-getting-started/references/with-tanstack-query.md).
+- For virtual rows, columns, dynamic measurement, or infinite scrolling, read [TanStack Virtual integration](../assets/tanstack-preact-table-getting-started/references/with-tanstack-virtual.md).
+- For controlled state, tracked reads, or render subscriptions, read [table state](./tanstack-preact-table-table-state-dc1496a8.md#source-tanstack-preact-table-table-state).
+- For feature registration, missing feature APIs, or processing ownership, run `intent load @tanstack/table-core#table-features` and read only references needed by the task.
+- For v8 code, read the [migration checklist](./tanstack-preact-table-migrate-v8-to-v9-a66482cf.md#source-tanstack-preact-table-migrate-v8-to-v9).
 
-## Common Mistakes
+## API discovery
 
-### HIGH Importing the React adapter through compat
-
-Wrong:
-
-```tsx
-import { useTable } from '@tanstack/react-table'
-```
-
-Correct:
-
-```tsx
-import { useTable } from '@tanstack/preact-table'
-```
-
-The native adapter uses Preact hooks, stores, JSX types, and subscriptions directly.
-
-Source: `docs/framework/preact/guide/migrating.md`
-
-### HIGH Copying the v8 constructor
-
-Wrong:
-
-```tsx
-const table = useReactTable({
-  data,
-  columns,
-  getCoreRowModel: getCoreRowModel(),
-})
-```
-
-Correct:
-
-```tsx
-const table = useTable({ data, columns, features })
-```
-
-V9 uses explicit feature slots rather than v8 row-model table options.
-
-Source: `docs/framework/preact/guide/migrating.md`
-
-### MEDIUM Recreating static inputs in render
-
-Wrong:
-
-```tsx
-const table = useTable({
-  features: tableFeatures({}),
-  columns: [{ accessorKey: 'name' }],
-  data,
-})
-```
-
-Correct:
-
-```tsx
-const table = useTable({ features, columns, data })
-```
-
-New feature and column identities cause needless option and model work.
-
-Source: `examples/preact/basic-use-table`
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/preact-table/dist/index.d.ts`, then `useTable.d.ts`, `Subscribe.d.ts`, or `FlexRender.d.ts`; follow core exports into installed `@tanstack/table-core/dist/`.
+Inspect `node_modules/@tanstack/preact-table/dist/index.d.ts`, then the exported adapter declarations for the installed version. Inspect optional core APIs under `node_modules/@tanstack/table-core/dist/features/`.

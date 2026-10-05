@@ -2,46 +2,41 @@
 
 <a id="source-tanstack-svelte-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/svelte-table@9.2.5`.
+Published skill · `@tanstack/svelte-table@9.2.6`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Migrate V8 To V9](./tanstack-table-core-migrate-v8-to-v9-654ca275.md).
-Prerequisite: [Getting Started](./tanstack-svelte-table-getting-started-0192405f.md).
-Prerequisite: [Table State](./tanstack-svelte-table-table-state-fe47e547.md).
 
-## Choose a section
+# Svelte v8-to-v9 migration checklist
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+Before starting, run `intent load @tanstack/table-core#migrate-v8-to-v9`. Audit its entire shared checklist and read the detailed core mappings for APIs present in the application. This checklist adds the Svelte-specific changes.
 
-- [Overview](./tanstack-svelte-table-migrate-v8-to-v9-45336202--overview.md) — 1 KiB
-- [Recommended Migration Order](./tanstack-svelte-table-migrate-v8-to-v9-45336202--recommended-migration-order.md) — 1 KiB
-- [Construction and Feature Registration](./tanstack-svelte-table-migrate-v8-to-v9-45336202--construction-and-feature-registration.md) — 4 KiB
-- [Svelte State Migration](./tanstack-svelte-table-migrate-v8-to-v9-45336202--svelte-state-migration.md) — 2 KiB
-- [Rendering and Composition](./tanstack-svelte-table-migrate-v8-to-v9-45336202--rendering-and-composition.md) — 2 KiB
-- [Complete Shared Breaking-Change Map](./tanstack-svelte-table-migrate-v8-to-v9-45336202--complete-shared-breaking-change-map.md) — 5 KiB
-- [TypeScript Migration](./tanstack-svelte-table-migrate-v8-to-v9-45336202--typescript-migration.md) — 2 KiB
-- [Common Migration Failures](./tanstack-svelte-table-migrate-v8-to-v9-45336202--common-migration-failures.md) — 2 KiB
-- [Final Checklist](./tanstack-svelte-table-migrate-v8-to-v9-45336202--final-checklist.md) — 2 KiB
-- [API Discovery](./tanstack-svelte-table-migrate-v8-to-v9-45336202--api-discovery.md) — 1 KiB
+Framework prerequisite: Svelte 5 (`svelte ^5.0.0`); migrate Svelte 3/4 components before Table.
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="recommended-migration-order"></a>
-<a id="construction-and-feature-registration"></a>
-<a id="row-model-mapping"></a>
-<a id="svelte-state-migration"></a>
-<a id="rendering-and-composition"></a>
-<a id="complete-shared-breaking-change-map"></a>
-<a id="instance-methods"></a>
-<a id="logical-column-pinning"></a>
-<a id="feature-and-state-splits"></a>
-<a id="sorting-rows-and-selection"></a>
-<a id="typescript-migration"></a>
-<a id="common-migration-failures"></a>
-<a id="critical-running-v9-on-svelte-34"></a>
-<a id="high-moving-the-feature-but-not-its-row-model"></a>
-<a id="high-snapshotting-a-rune-value"></a>
-<a id="high-keeping-removed-svelte-selectors"></a>
-<a id="high-destructuring-instance-methods"></a>
-<a id="final-checklist"></a>
-<a id="api-discovery"></a>
+## Adapter audit
+
+- [ ] Upgrade to Svelte 5 and replace old writable-store table setup with runes/getters.
+- [ ] Replace `createSvelteTable` with `createTable`; preserve changing data and controlled slices through getters.
+- [ ] Configure explicit features/row-model slots and complete the shared core checklist.
+- [ ] Remove creation selectors, selected `table.state`, `subscribeTable`, and `SubscribeSource` from earlier v9 code.
+- [ ] Update `SvelteTable` to two generic parameters and `AppSvelteTable` to five; remove selected-state generics from `useTableContext`.
+- [ ] Read atoms/store in templates or tracked runes. Use per-slice updater callbacks, `createTableState`, or external Svelte Store atoms instead of global `onStateChange`.
+- [ ] Render with `FlexRender`, `renderComponent`, or `renderSnippet`. Use the shipped rune-aware `createTableHook` only for repeated conventions.
+
+## Load the affected details
+
+When the audit finds old Svelte construction, state, rendering, or app-hook code, read [adapter migration details](../assets/tanstack-svelte-table-migrate-v8-to-v9/references/adapter-migration.md) before editing it. For a replacement render scaffold, read [getting started](./tanstack-svelte-table-getting-started-0192405f.md#source-tanstack-svelte-table-getting-started). For controlled or stale state after migration, read [table state](./tanstack-svelte-table-table-state-fe47e547.md#source-tanstack-svelte-table-table-state).
+
+Shared pinning, sizing, sorting, selection, prototype-method, type, and registry changes stay in the core migration references. Renaming `createSvelteTable` alone does not complete the migration.
+
+## Verify the migration
+
+- [ ] Type-check against the installed v9 adapter and exercise every enabled client/manual feature flow.
+- [ ] Verify external state writes, reactive data replacement, and the framework rendering paths changed above.
+- [ ] Complete the core checklist, including layout and selection behavior when those features are used.
+- [ ] Replace temporary `stockFeatures` when the target is explicit feature tree-shaking.
+
+## API discovery
+
+Inspect `node_modules/@tanstack/svelte-table/dist/index.d.ts` and the exported adapter declarations. Use `node_modules/@tanstack/table-core/dist/index.d.ts` for shared APIs.

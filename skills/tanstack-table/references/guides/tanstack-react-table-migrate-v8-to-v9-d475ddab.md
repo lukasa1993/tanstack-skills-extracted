@@ -2,39 +2,41 @@
 
 <a id="source-tanstack-react-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/react-table@9.2.5`.
+Published skill · `@tanstack/react-table@9.2.6`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Migrate V8 To V9](./tanstack-table-core-migrate-v8-to-v9-654ca275.md).
-Prerequisite: [Getting Started](./tanstack-react-table-getting-started-d10c472e.md).
-Prerequisite: [Table State](./tanstack-react-table-table-state-6e56d1e0.md).
 
-## Choose a section
+# React v8-to-v9 migration checklist
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+Before starting, run `intent load @tanstack/table-core#migrate-v8-to-v9`. Audit its entire shared checklist and read the detailed core mappings for APIs present in the application. This checklist adds the React-specific changes.
 
-- [Overview](./tanstack-react-table-migrate-v8-to-v9-d475ddab--overview.md) — 1 KiB
-- [Target architecture](./tanstack-react-table-migrate-v8-to-v9-d475ddab--target-architecture.md) — 2 KiB
-- [Complete breaking-change map: Construction and feature registration](./tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-construction-and-feature-registration.md) — 4 KiB
-- [Complete breaking-change map: State and React subscriptions](./tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-state-and-react-subscriptions.md) — 3 KiB
-- [Complete breaking-change map: Rendering and composition](./tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-rendering-and-composition.md) — 2 KiB
-- [Complete breaking-change map: TypeScript and helper changes](./tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-typescript-and-helper-changes.md) — 3 KiB
-- [Complete breaking-change map: Shared API and behavior changes](./tanstack-react-table-migrate-v8-to-v9-d475ddab--complete-breaking-change-map-shared-api-and-behavior-changes.md) — 5 KiB
-- [Migration procedure](./tanstack-react-table-migrate-v8-to-v9-d475ddab--migration-procedure.md) — 2 KiB
-- [Final migration checklist](./tanstack-react-table-migrate-v8-to-v9-d475ddab--final-migration-checklist.md) — 2 KiB
-- [Common migration failures](./tanstack-react-table-migrate-v8-to-v9-d475ddab--common-migration-failures.md) — 1 KiB
-- [API discovery](./tanstack-react-table-migrate-v8-to-v9-d475ddab--api-discovery.md) — 1 KiB
+Framework prerequisite: React 18 or newer (`react >=18`).
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="target-architecture"></a>
-<a id="complete-breaking-change-map"></a>
-<a id="construction-and-feature-registration"></a>
-<a id="state-and-react-subscriptions"></a>
-<a id="rendering-and-composition"></a>
-<a id="typescript-and-helper-changes"></a>
-<a id="shared-api-and-behavior-changes"></a>
-<a id="migration-procedure"></a>
-<a id="final-migration-checklist"></a>
-<a id="common-migration-failures"></a>
-<a id="api-discovery"></a>
+## Adapter audit
+
+- [ ] Replace `useReactTable` with `useTable`; remove any temporary `useLegacyTable` from `@tanstack/react-table/legacy`.
+- [ ] Keep model inputs stable and use explicit `tableFeatures` plus its row-model slots. Audit every shared change through the core checklist.
+- [ ] Replace render reads with selected `table.state`, `table.Subscribe`, or `useSelector`. Atom/store snapshots alone do not subscribe React.
+- [ ] Pair each controlled `state` slice with its updater callback, or supply a stable React Store atom. Remove the global `onStateChange` option.
+- [ ] Check compiler-memoized children hiding builder-method reads; subscribe inside the child or pass the selected value to it.
+- [ ] Use `table.FlexRender` or standalone `FlexRender` where appropriate; `flexRender` remains supported.
+- [ ] Introduce `tableOptions` or `createTableHook` only for repeated conventions; preserve app wrapper and typed-context boundaries.
+
+## Load the affected details
+
+When the audit finds old React construction, state, rendering, or app-hook code, read [adapter migration details](../assets/tanstack-react-table-migrate-v8-to-v9/references/adapter-migration.md) before editing it. For a replacement render scaffold, read [getting started](./tanstack-react-table-getting-started-d10c472e.md#source-tanstack-react-table-getting-started). For controlled or stale state after migration, read [table state](./tanstack-react-table-table-state-6e56d1e0.md#source-tanstack-react-table-table-state).
+
+Shared pinning, sizing, sorting, selection, prototype-method, type, and registry changes stay in the core migration references. Renaming `useReactTable` alone does not complete the migration.
+
+## Verify the migration
+
+- [ ] Type-check against the installed v9 adapter and exercise every enabled client/manual feature flow.
+- [ ] Verify external state writes, reactive data replacement, and the framework rendering paths changed above.
+- [ ] Complete the core checklist, including layout and selection behavior when those features are used.
+- [ ] Replace temporary `stockFeatures` when the target is explicit feature tree-shaking and remove `useLegacyTable`.
+
+## API discovery
+
+Inspect `node_modules/@tanstack/react-table/dist/index.d.ts` and the exported adapter declarations. Use `node_modules/@tanstack/table-core/dist/index.d.ts` for shared APIs.

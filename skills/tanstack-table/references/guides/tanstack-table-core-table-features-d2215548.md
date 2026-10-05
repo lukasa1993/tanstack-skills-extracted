@@ -2,152 +2,75 @@
 
 <a id="source-tanstack-table-core-table-features"></a>
 
-Published skill · `@tanstack/table-core@9.2.5`.
+Published skill · `@tanstack/table-core@9.2.6`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Core](./tanstack-table-core-e5f4d128.md).
 
-This skill builds on `core`. Read it first for the headless model and stable inputs.
+# Feature architecture
 
-## Setup
+Read [core](./tanstack-table-core-e5f4d128.md#source-tanstack-table-core) first for the headless model and stable inputs.
+
+## Register the behavior the table uses
 
 <!-- skill-snippet:check -->
 
 ```ts
 import {
-  rowAggregationFeature,
-  aggregationFn_sum,
-  columnGroupingFeature,
-  createFilteredRowModel,
   createSortedRowModel,
-  columnFilteringFeature,
-  filterFn_includesString,
   rowSortingFeature,
   sortFn_alphanumeric,
   tableFeatures,
 } from '@tanstack/table-core'
 
 export const features = tableFeatures({
-  columnFilteringFeature,
-  filteredRowModel: createFilteredRowModel(),
-  filterFns: { includesString: filterFn_includesString },
-  rowAggregationFeature,
-  columnGroupingFeature,
-  aggregationFns: { sum: aggregationFn_sum },
   rowSortingFeature,
   sortedRowModel: createSortedRowModel(),
   sortFns: { alphanumeric: sortFn_alphanumeric },
 })
 ```
 
-## Core Patterns
+Pass the stable `features` object to the installed adapter constructor. The concrete registry determines optional APIs, options, state slices, and their types. The core row model is automatic; a custom core model uses `coreRowModel`.
 
-### Register feature before its dependent slot
+## Registration rules
 
-```ts
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
+- Register each prerequisite feature before its dependent slot in the same `tableFeatures` call. A processing factory alone cannot install that feature's APIs or state.
+- Row-model factories use `create*RowModel()` feature slots. Their names and prerequisites are in the feature reference. They take no function-registry arguments.
+- `filterFns`, `sortFns`, and `aggregationFns` are feature slots, not table options. They require `columnFilteringFeature`, `rowSortingFeature`, and `rowAggregationFeature`, respectively.
+- Import individual built-ins such as `sortFn_alphanumeric` and register their conventional keys. Those keys become typed string names; `'auto'` can resolve only registered functions. Pass a function directly when a column needs no named registry entry. Full registry exports bundle every built-in.
+- `columnResizingFeature` requires `columnSizingFeature`; `globalFilteringFeature` requires `columnFilteringFeature`. Check installed `FeatureSlotPrereqs` for other dependencies.
+- Use explicit features for normal construction. `stockFeatures` is a deliberate all-features convenience or temporary migration aid, with the corresponding bundle cost.
 
-`tableFeatures` checks slot prerequisites and its inferred type gates APIs throughout the table.
+A missing API can mean missing registration. Check the concrete feature object before casting, recreating an API, or assuming v9 removed it.
 
-### Register named function slots with their features
+## Select references by the requested change
 
-```ts
-const features = tableFeatures({
-  columnFilteringFeature,
-  filterFns: { includesString: filterFn_includesString },
-  rowSortingFeature,
-  sortFns: { alphanumeric: sortFn_alphanumeric },
-  rowAggregationFeature,
-  columnGroupingFeature,
-  aggregationFns: { sum: aggregationFn_sum },
-})
-```
+Read only references needed for the requested behavior and its dependencies, including features being added. An unrelated feature already registered on the table does not make its reference necessary.
 
-`filterFns`, `sortFns`, and `aggregationFns` are feature slots, not table
-options. They respectively require `columnFilteringFeature`,
-`rowSortingFeature`, and `rowAggregationFeature`. Import individual built-ins
-(`filterFn_*`, `sortFn_*`, `aggregationFn_*`) and register them under their
-conventional keys; the full registry objects (`filterFns`, `sortFns`,
-`aggregationFns` exports) still work but bundle every built-in. A registered
-key can be used as a typed string name, and `'auto'` resolves only registered
-functions; pass a function directly when no registry name is needed.
+| Task involves                                                                            | Read                                                      |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Manual modes, server data, mixed row-processing stages, or dataset scope                 | [Client/server ownership](../assets/tanstack-table-core-table-features/references/client-vs-server.md) |
+| Totals, multiple aggregations, grouped aggregate values, or custom aggregate definitions | [Aggregation](../assets/tanstack-table-core-table-features/references/aggregation.md)                  |
+| Facet option counts, numeric ranges, or incomplete server facets                         | [Column faceting](../assets/tanstack-table-core-table-features/references/column-faceting.md)          |
+| Per-column filters, filter functions, metadata, or nested-row filtering                  | [Column filtering](../assets/tanstack-table-core-table-features/references/column-filtering.md)        |
+| Group rows, placeholders, or grouping with expansion/pagination                          | [Grouping](../assets/tanstack-table-core-table-features/references/grouping.md)                        |
+| Drag ordering or leaf-column order differing from state                                  | [Column ordering](../assets/tanstack-table-core-table-features/references/column-ordering.md)          |
+| Sticky column regions, logical start/end, or pinning gaps                                | [Column pinning](../assets/tanstack-table-core-table-features/references/column-pinning.md)            |
+| Drag resize handles, gesture events, or resize performance                               | [Column resizing](../assets/tanstack-table-core-table-features/references/column-resizing.md)          |
+| Numeric widths, min/max limits, or model/CSS size mismatch                               | [Column sizing](../assets/tanstack-table-core-table-features/references/column-sizing.md)              |
+| Hidden columns, visibility-aware rendering, or hiding controls                           | [Column visibility](../assets/tanstack-table-core-table-features/references/column-visibility.md)      |
+| A search across columns or global-filter eligibility                                     | [Global filtering](../assets/tanstack-table-core-table-features/references/global-filtering.md)        |
+| Hierarchical subrows, detail panels, or expansion/page interaction                       | [Expanding](../assets/tanstack-table-core-table-features/references/expanding.md)                      |
+| Page slicing, counts, navigation, or page-index resets                                   | [Pagination](../assets/tanstack-table-core-table-features/references/pagination.md)                    |
+| Top/bottom pinned rows or their visibility outside the current page                      | [Row pinning](../assets/tanstack-table-core-table-features/references/row-pinning.md)                  |
+| Rectangular cell selection, include/exclude ranges, or drag outlines                     | [Cell selection](../assets/tanstack-table-core-table-features/references/cell-selection.md)            |
+| Merged body cells, covered cells, or spans changing with row order                       | [Cell spanning](../assets/tanstack-table-core-table-features/references/cell-spanning.md)              |
+| Row checkboxes, select-all, Shift ranges, or IDs across pages                            | [Row selection](../assets/tanstack-table-core-table-features/references/row-selection.md)              |
+| Sorting, comparators, undefined values, or sort interaction cycles                       | [Sorting](../assets/tanstack-table-core-table-features/references/sorting.md)                          |
 
-### Prefer explicit features
+For controlled state or reset behavior, read [shared state](./tanstack-table-core-table-state-2001cb1f.md#source-tanstack-table-core-table-state) and load the installed adapter's state skill for reactive wiring.
 
-```ts
-const features = tableFeatures({ columnFilteringFeature })
-```
+## Installed API discovery
 
-Use `stockFeatures` only for deliberate kitchen-sink or temporary migration behavior.
-
-## Common Mistakes
-
-### [CRITICAL] Calling an unregistered feature API
-
-Wrong:
-
-```ts
-const features = tableFeatures({})
-table.setSorting([{ id: 'name', desc: false }])
-```
-
-Correct:
-
-```ts
-const features = tableFeatures({ rowSortingFeature })
-```
-
-Optional feature state and APIs are installed only when their feature is registered.
-
-Source: `packages/table-core/src/core/table/constructTable.ts`
-
-### [HIGH] Omitting a slot prerequisite
-
-Wrong:
-
-```ts
-const features = tableFeatures({ sortedRowModel: createSortedRowModel() })
-```
-
-Correct:
-
-```ts
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
-
-The sorted model slot requires `rowSortingFeature`; the same rule applies to every mapped slot.
-
-Source: `packages/table-core/src/types/TableFeatures.ts#FeatureSlotPrereqs`
-
-### [MEDIUM] Shipping all features by default
-
-Wrong:
-
-```ts
-const features = stockFeatures
-```
-
-Correct:
-
-```ts
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
-
-`stockFeatures` registers every stock plugin and processing slot, defeating v9's normal tree-shaking strategy.
-
-Source: `packages/table-core/src/features/stockFeatures.ts`
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/table-core/dist/types/TableFeatures.d.ts` for current slots and `FeatureSlotPrereqs`, and `dist/features/stockFeatures.d.ts` for the stock inventory.
+Inspect `node_modules/@tanstack/table-core/dist/types/TableFeatures.d.ts` for slots and `FeatureSlotPrereqs`. Follow `dist/features/<feature>/` for exact state, option, and instance declarations. Each reference names its feature directory.

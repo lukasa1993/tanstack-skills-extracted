@@ -2,7 +2,7 @@
 
 <a id="source-intent-packages-intent-meta-tree-generator-skill-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.3`.
+Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 [Topic index](../meta-tree-maintenance.md) · [Source provenance](../SOURCES.md)
 

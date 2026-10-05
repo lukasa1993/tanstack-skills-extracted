@@ -1,6 +1,6 @@
 # SKILL — Phase 5 — Finalize artifacts
 
-[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
+[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 ## Phase 5 — Finalize artifacts
 

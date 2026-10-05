@@ -2,14 +2,13 @@
 
 <a id="source-tanstack-octane-table-getting-started"></a>
 
-Published skill · `@tanstack/octane-table@9.2.5`.
+Published skill · `@tanstack/octane-table@9.2.6`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Core](./tanstack-table-core-e5f4d128.md).
-Prerequisite: [Table Features](./tanstack-table-core-table-features-d2215548.md).
 
-This skill builds on `@tanstack/table-core#core` and `@tanstack/table-core#table-features`. The adapter publishes authored TypeScript and TSRX, so the consuming app must compile it with Octane's integration.
+Load `intent load @tanstack/table-core#core` first for the headless model, stable inputs, and column inference.
 
 ## Setup
 
@@ -57,106 +56,20 @@ if (!rootElement) throw new Error('Root element not found')
 createRoot(rootElement).render(PeopleTable)
 ```
 
-Configure the app with `octane()` in `vite.config.ts` and set the TSRX compiler's JSX import source to `octane`.
+## Construction and rendering
 
-## Core Patterns
+This adapter distributes authored TypeScript and TSRX. Configure the consumer with `octane()` in `vite.config.ts` and the TSRX JSX import source `octane`. Author component bodies with `@{ ... }` and keyed `@for` loops for rows, headers, and cells.
 
-### Register only required plugins
+Import from `@tanstack/octane-table`. Render `table.FlexRender` as a component so it gets its own Octane scope. It preserves numbers including `0`, render descriptors, and component functions.
 
-```tsrx
-import {
-  createSortedRowModel,
-  rowSortingFeature,
-  tableFeatures,
-} from '@tanstack/octane-table'
+Keep features and column definitions at module scope. For inputs that depend on component state, use `useMemo`; pass the current stable data array to `useTable`. Convert non-renderable values with `String(value)` when displaying them as text.
 
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
+## Read for the task
 
-### Keep features and column definitions module-stable
+- When adding or configuring optional features, load `intent load @tanstack/table-core#table-features` and read only references for the requested behavior.
+- For state ownership or reactive reads, read [table-state](./tanstack-octane-table-table-state-5b321686.md#source-tanstack-octane-table-table-state).
+- When tables share features, defaults, or reusable UI, read [create-table-hook](../assets/tanstack-octane-table-getting-started/references/create-table-hook.md).
 
-```tsrx
-const features = tableFeatures({})
-const columns = helper.columns([helper.accessor('name', { header: 'Name' })])
-```
+## API discovery
 
-Use `useMemo` when a definition genuinely depends on component state. Use `String(value)` for text interpolation when the value is not already a renderable string or number.
-
-### Render adapter helpers as components
-
-```tsrx
-<table.FlexRender cell={cell} />
-```
-
-`FlexRender` preserves numbers including `0`, descriptors, and Octane component functions. Rendering it as a component lets Octane create the correct component scope.
-
-## Common Mistakes
-
-### HIGH Importing a different framework adapter
-
-Wrong:
-
-```tsrx
-import { useTable } from '@tanstack/react-table'
-```
-
-Correct:
-
-```tsrx
-import { useTable } from '@tanstack/octane-table'
-```
-
-The Octane adapter uses Octane hooks, TSRX component scopes, and the matching Octane Store binding.
-
-Source: `packages/octane-table/src/useTable.tsrx`
-
-### HIGH Treating TSRX as React JSX
-
-Wrong:
-
-```tsrx
-function PeopleTable() {
-  return <table />
-}
-```
-
-Correct:
-
-```tsrx
-function PeopleTable() @{
-  <table />
-}
-```
-
-Author Octane components with TSRX component bodies. Prefer keyed `@for` loops for table rows, headers, and cells so identity survives updates.
-
-Source: `examples/octane/basic-use-table`
-
-### MEDIUM Recreating static inputs in render
-
-Wrong:
-
-```tsrx
-const table = useTable({
-  features: tableFeatures({}),
-  columns: [{ accessorKey: 'name' }],
-  data,
-})
-```
-
-Correct:
-
-```tsrx
-const table = useTable({ features, columns, data })
-```
-
-New feature and column identities cause needless option and row-model work.
-
-Source: `examples/octane/basic-use-table`
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/octane-table/src/index.d.ts`, then the specific `*.tsrx.d.ts` sidecars and `types.ts`. This package intentionally ships authored source; follow core exports into installed `@tanstack/table-core/dist/`.
+Inspect `node_modules/@tanstack/octane-table/src/index.d.ts`, the matching `*.tsrx.d.ts` sidecar, and `src/types.ts`. This package publishes authored source; core APIs are in installed `@tanstack/table-core/dist/`.

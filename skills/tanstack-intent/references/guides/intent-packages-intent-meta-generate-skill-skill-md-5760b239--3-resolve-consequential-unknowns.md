@@ -1,6 +1,6 @@
 # SKILL — 3. Resolve consequential unknowns
 
-[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
+[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 ## 3. Resolve consequential unknowns
 

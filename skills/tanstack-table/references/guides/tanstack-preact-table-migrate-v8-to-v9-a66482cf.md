@@ -2,35 +2,40 @@
 
 <a id="source-tanstack-preact-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/preact-table@9.2.5`.
+Published skill · `@tanstack/preact-table@9.2.6`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Migrate V8 To V9](./tanstack-table-core-migrate-v8-to-v9-654ca275.md).
-Prerequisite: [Getting Started](./tanstack-preact-table-getting-started-c2713634.md).
-Prerequisite: [Table State](./tanstack-preact-table-table-state-dc1496a8.md).
 
-## Choose a section
+# Preact v8-to-v9 migration checklist
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+Before starting, run `intent load @tanstack/table-core#migrate-v8-to-v9`. Audit its entire shared checklist and read the detailed core mappings for APIs present in the application. This checklist adds the Preact-specific changes.
 
-- [Overview](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--overview.md) — 1 KiB
-- [Target architecture](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--target-architecture.md) — 1 KiB
-- [Complete breaking-change map](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--complete-breaking-change-map.md) — 12 KiB
-- [Migration procedure](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--migration-procedure.md) — 2 KiB
-- [Final migration checklist](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--final-migration-checklist.md) — 2 KiB
-- [Common migration failures](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--common-migration-failures.md) — 1 KiB
-- [API discovery](./tanstack-preact-table-migrate-v8-to-v9-a66482cf--api-discovery.md) — 1 KiB
+Framework prerequisite: Preact 10 or newer (`preact >=10`).
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="target-architecture"></a>
-<a id="complete-breaking-change-map"></a>
-<a id="adapter-construction-and-features"></a>
-<a id="preact-state-and-subscriptions"></a>
-<a id="rendering-and-composition"></a>
-<a id="typescript-and-helpers"></a>
-<a id="shared-api-and-semantic-changes"></a>
-<a id="migration-procedure"></a>
-<a id="final-migration-checklist"></a>
-<a id="common-migration-failures"></a>
-<a id="api-discovery"></a>
+## Adapter audit
+
+- [ ] Replace React-adapter imports and `useReactTable` with native `@tanstack/preact-table` and `useTable`.
+- [ ] Remove compat aliases that existed only for Table. Preserve aliases still required by other libraries, including a React Virtual integration.
+- [ ] Keep model inputs stable and configure explicit features/row-model slots; complete the shared core checklist.
+- [ ] Use selected `table.state`, `table.Subscribe`, or Preact Store subscriptions; snapshots alone do not rerender consumers.
+- [ ] Pair controlled slices with callbacks, or supply stable atoms from `@tanstack/preact-store`; remove global `onStateChange`.
+- [ ] Use native Preact FlexRender components. Adopt `tableOptions` or `createTableHook` only for repeated app conventions.
+
+## Load the affected details
+
+When the audit finds old Preact construction, state, rendering, or app-hook code, read [adapter migration details](../assets/tanstack-preact-table-migrate-v8-to-v9/references/adapter-migration.md) before editing it. For a replacement render scaffold, read [getting started](./tanstack-preact-table-getting-started-c2713634.md#source-tanstack-preact-table-getting-started). For controlled or stale state after migration, read [table state](./tanstack-preact-table-table-state-dc1496a8.md#source-tanstack-preact-table-table-state).
+
+Shared pinning, sizing, sorting, selection, prototype-method, type, and registry changes stay in the core migration references. Renaming `useReactTable` alone does not complete the migration.
+
+## Verify the migration
+
+- [ ] Type-check against the installed v9 adapter and exercise every enabled client/manual feature flow.
+- [ ] Verify external state writes, reactive data replacement, and the framework rendering paths changed above.
+- [ ] Complete the core checklist, including layout and selection behavior when those features are used.
+- [ ] Replace temporary `stockFeatures` when the target is explicit feature tree-shaking.
+
+## API discovery
+
+Inspect `node_modules/@tanstack/preact-table/dist/index.d.ts` and the exported adapter declarations. Use `node_modules/@tanstack/table-core/dist/index.d.ts` for shared APIs.

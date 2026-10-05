@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-table-devtools"></a>
 
-Published skill · `@tanstack/angular-table-devtools@9.2.5`.
+Published skill · `@tanstack/angular-table-devtools@9.2.6`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

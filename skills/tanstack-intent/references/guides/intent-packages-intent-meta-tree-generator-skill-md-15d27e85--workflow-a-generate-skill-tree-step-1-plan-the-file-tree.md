@@ -1,6 +1,6 @@
 # SKILL — Workflow A — Generate skill tree: Step 1 — Plan the file tree
 
-[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
+[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 ## Workflow A — Generate skill tree: Step 1 — Plan the file tree
 

@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-concepts-configuration-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.3`.
+Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 [Topic index](../trust-configuration.md) · [Source provenance](../SOURCES.md)
 
@@ -83,6 +83,7 @@ All policy notices go to stderr. Exclusions still apply to these forms.
 | --- | --- |
 | Discovered package is not permitted | Human output names omitted packages in one notice. Agent sessions receive only hidden package and skill counts. |
 | Configured package was not discovered | Reports that the package was not discovered. |
+| Configured exact skill is not in its discovered package | Reports that the entry was not discovered. |
 | Package was explicitly excluded | No unlisted-source notice. |
 
 ### Existing projects

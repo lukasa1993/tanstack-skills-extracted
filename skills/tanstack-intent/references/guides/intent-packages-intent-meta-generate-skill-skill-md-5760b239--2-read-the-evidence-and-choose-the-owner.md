@@ -1,6 +1,6 @@
 # SKILL — 2. Read the evidence and choose the owner
 
-[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.3`.
+[Guide and prerequisites](./intent-packages-intent-meta-generate-skill-skill-md-5760b239.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
 
 ## 2. Read the evidence and choose the owner
 

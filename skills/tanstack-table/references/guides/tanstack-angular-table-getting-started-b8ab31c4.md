@@ -2,14 +2,13 @@
 
 <a id="source-tanstack-angular-table-getting-started"></a>
 
-Published skill · `@tanstack/angular-table@9.2.5`.
+Published skill · `@tanstack/angular-table@9.2.6`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Core](./tanstack-table-core-e5f4d128.md).
-Prerequisite: [Table Features](./tanstack-table-core-table-features-d2215548.md).
 
-This skill builds on `@tanstack/table-core#core` and `@tanstack/table-core#table-features`. Read them first for the headless model and explicit features.
+Load `intent load @tanstack/table-core#core` first for the headless model, stable inputs, and column inference.
 
 ## Setup
 
@@ -49,82 +48,23 @@ export class TableComponent {
 }
 ```
 
-## Core Patterns
+## Construction and rendering
 
-### Keep static inputs outside the initializer
+Call `injectTable` in a component, directive, or service field initializer, or another valid Angular injection context. The adapter binds its cleanup to that context.
 
-`injectTable` reruns its options initializer when a signal read changes. Define features, row-model factories, and columns at module or stable class scope; read only changing values inside.
+Signals read in the options initializer rerun it and call `setOptions`. Keep features, factories, and columns outside the initializer; return stable data references and derive transformed data with `computed` outside it.
 
-### Render each content kind correctly
+Import `FlexRender` for `*flexRender`, `*flexRenderCell`, `*flexRenderHeader`, and `*flexRenderFooter`. Render values can be primitives, `TemplateRef`, component types, or `flexRenderComponent(...)`. Use `flexRenderComponent` for Angular component types; ordinary render functions are already supported directly.
 
-Import `FlexRender` for `*flexRender`, `*flexRenderCell`, `*flexRenderHeader`, and `*flexRenderFooter`. Definitions may yield primitives, `TemplateRef`, component types, or `flexRenderComponent(...)`; Table does not supply markup or CSS.
+## Read for the task
 
-## Common Mistakes
+- When adding or configuring optional features, load `intent load @tanstack/table-core#table-features` and read only references for the requested behavior.
+- For state ownership or reactive reads, read [table-state](./tanstack-angular-table-table-state-d17d401d.md#source-tanstack-angular-table-table-state).
+- When tables share features, defaults, or reusable UI, read [create-table-hook](../assets/tanstack-angular-table-getting-started/references/create-table-hook.md).
+- When Query supplies data or server processing, read [with-tanstack-query](../assets/tanstack-angular-table-getting-started/references/with-tanstack-query.md).
+- When virtualizing rows or columns, read [with-tanstack-virtual](../assets/tanstack-angular-table-getting-started/references/with-tanstack-virtual.md).
+- When upgrading v8 code, read [migrate-v8-to-v9](./tanstack-angular-table-migrate-v8-to-v9-0face369.md#source-tanstack-angular-table-migrate-v8-to-v9).
 
-### CRITICAL Calling injectTable outside DI
+## API discovery
 
-Wrong:
-
-```ts
-export function makeTable() {
-  return injectTable(() => ({ features, columns, data }))
-}
-```
-
-Correct:
-
-```ts
-export class TableComponent {
-  readonly table = injectTable(() => ({ features, columns, data: this.data() }))
-}
-```
-
-`injectTable` asserts an Angular injection context and registers lifecycle cleanup there.
-
-Source: `packages/angular-table/src/injectTable.ts`
-
-### HIGH Reallocating static options reactively
-
-Wrong:
-
-```ts
-injectTable(() => ({
-  features: tableFeatures({}),
-  columns: makeColumns(),
-  data: this.data(),
-}))
-```
-
-Correct:
-
-```ts
-const features = tableFeatures({})
-const columns = makeColumns()
-injectTable(() => ({ features, columns, data: this.data() }))
-```
-
-Every signal change reruns the initializer; rebuilding static inputs invalidates memoized Table work.
-
-Source: `packages/angular-table/src/injectTable.ts`
-
-### HIGH Treating a render function as a component
-
-Wrong:
-
-```ts
-cell: () => flexRenderComponent(() => 'value')
-```
-
-Correct:
-
-```ts
-cell: () => 'value'
-```
-
-`flexRenderComponent` wraps an Angular component type; ordinary functions and primitives are handled directly by FlexRender.
-
-Source: `docs/framework/angular/guide/rendering.md`
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/angular-table/dist/types/` for the bundled public API; inspect optional feature APIs in installed `@tanstack/table-core/dist/features/`.
+Inspect `node_modules/@tanstack/angular-table/dist/types/` for the bundled public declarations. Inspect feature APIs under `node_modules/@tanstack/table-core/dist/features/`.

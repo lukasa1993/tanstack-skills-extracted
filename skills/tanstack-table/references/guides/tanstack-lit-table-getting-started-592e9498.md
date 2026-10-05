@@ -2,14 +2,13 @@
 
 <a id="source-tanstack-lit-table-getting-started"></a>
 
-Published skill · `@tanstack/lit-table@9.2.5`.
+Published skill · `@tanstack/lit-table@9.2.6`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Core](./tanstack-table-core-e5f4d128.md).
-Prerequisite: [Table Features](./tanstack-table-core-table-features-d2215548.md).
 
-This skill builds on @tanstack/table-core#core and @tanstack/table-core#table-features. Read them first for the headless and feature-plugin model.
+Load `intent load @tanstack/table-core#core` first for the headless model, stable inputs, and column inference.
 
 ## Setup
 
@@ -82,66 +81,22 @@ export class PeopleTable extends LitElement {
 }
 ```
 
-## Core Patterns
+## Construction and rendering
 
-### Keep static table infrastructure outside render
+Keep one `TableController` as a host field. V9 takes only the host in its constructor; pass current options to `controller.table(...)` during every render. Recreating the controller repeats lifecycle and subscription work.
 
-Create `features`, column helpers, and static columns at module scope. Keep one `TableController` as a host field; call its `table` method during each render with current options.
+Keep features, columns, and data stable across host updates. Use `FlexRender({ cell })`, `FlexRender({ header })`, or `FlexRender({ footer })` in Lit templates. The application owns semantic markup, accessibility, widths, and sticky positioning.
 
-### Select only state the host renders
+The controller selects all registered state by default. Narrow selected state only when host update cost requires it; use [table-state](./tanstack-lit-table-table-state-2569e6f4.md#source-tanstack-lit-table-table-state) for selectors and template subscriptions.
 
-```ts
-const table = this.tableController.table(
-  { features, columns, data: this.people },
-  (state) => ({ pagination: state.pagination }),
-)
-```
+## Read for the task
 
-Use the default selector for simple tables. Narrow it only when host updates are measurably expensive.
+- When adding or configuring optional features, load `intent load @tanstack/table-core#table-features` and read only references for the requested behavior.
+- For state ownership or reactive reads, read [table-state](./tanstack-lit-table-table-state-2569e6f4.md#source-tanstack-lit-table-table-state).
+- When tables share features, defaults, or reusable UI, read [create-table-hook](../assets/tanstack-lit-table-getting-started/references/create-table-hook.md).
+- When virtualizing rows or columns, read [with-tanstack-virtual](../assets/tanstack-lit-table-getting-started/references/with-tanstack-virtual.md).
+- When upgrading v8 code, read [migrate-v8-to-v9](./tanstack-lit-table-migrate-v8-to-v9-f7e7e2fd.md#source-tanstack-lit-table-migrate-v8-to-v9).
 
-### Treat markup and CSS as application code
+## API discovery
 
-Table supplies models and render values. Use semantic elements, accessibility behavior, widths, sticky positioning, and design-system components in the Lit template.
-
-## Common Mistakes
-
-### HIGH Recreating the controller during render
-
-Wrong:
-
-```ts
-protected render() {
-  const controller = new TableController<typeof features, Person>(this)
-  return html`${controller.table({ features, columns, data: this.people }).getRowModel().rows.length}`
-}
-```
-
-Correct: keep `private tableController = new TableController(this)` as a class field and reuse it.
-
-Each controller registers with the host and owns subscriptions; recreating it leaks lifecycle work and loses stable table state.
-
-Source: TanStack/table:packages/lit-table/src/TableController.ts
-
-### HIGH Passing v8 options to the constructor
-
-Wrong: `new TableController(this, () => ({ data, columns }))`.
-
-Correct: construct with the host only, then call `this.tableController.table({ features, data, columns })` during render.
-
-The v9 controller receives current options through `table`, not a constructor thunk.
-
-Source: TanStack/table:docs/framework/lit/guide/migrating.md
-
-### HIGH Expecting feature state to render UI
-
-Wrong: enable column pinning and assume cells become sticky.
-
-Correct: render the appropriate start/center/end collections and apply sticky offsets and CSS in the template.
-
-TanStack Table is headless; state and models never inject markup or styles.
-
-Source: TanStack/table:docs/overview.md
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/lit-table/dist/index.d.ts` and the exported implementation. Core table and feature APIs are in `node_modules/@tanstack/table-core/dist/`.
+Inspect `node_modules/@tanstack/lit-table/dist/index.d.ts`, then `TableController.d.ts`, `flexRender.d.ts`, or the relevant exported declaration. Core feature APIs are in `node_modules/@tanstack/table-core/dist/features/`.

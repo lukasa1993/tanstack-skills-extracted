@@ -2,19 +2,20 @@
 
 <a id="source-tanstack-react-table-getting-started"></a>
 
-Published skill · `@tanstack/react-table@9.2.5`.
+Published skill · `@tanstack/react-table@9.2.6`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Core](./tanstack-table-core-e5f4d128.md).
-Prerequisite: [Table Features](./tanstack-table-core-table-features-d2215548.md).
 
-This skill builds on `@tanstack/table-core#core` and `@tanstack/table-core#table-features`. Read them first for the headless model and explicit feature registration.
+# React Table setup and integration
+
+Before starting, run `intent load @tanstack/table-core#core` for the shared headless model and stable-input rules.
 
 ## Setup
 
 ```tsx
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import {
   createColumnHelper,
   tableFeatures,
@@ -66,99 +67,21 @@ export function PeopleTable() {
 
 Table produces models and state; React owns the semantic markup, styles, event affordances, and accessibility.
 
-## Core Patterns
+## Essential constraints
 
-### Add only the feature the table uses
+Use `useTable` for v9. Keep `features`, `columns`, and fallback data at module scope or in stable state/memos. A new `response.data ?? []` fallback invalidates row models on every render. The default selector subscribes the owner to all registered state.
 
-```tsx
-import {
-  createSortedRowModel,
-  rowSortingFeature,
-  tableFeatures,
-} from '@tanstack/react-table'
+Table owns models and state. The application owns markup, CSS, interactions, and accessibility. Core-only tables use `row.getAllCells()`; visibility-aware methods need `columnVisibilityFeature`. Optional state and APIs require their features. Put row-model slots after their prerequisite features in `tableFeatures()`.
 
-const sortableFeatures = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
+## Load by task
 
-Row-model slots belong inside `tableFeatures`, after their prerequisite feature.
+- For repeated features, defaults, typed contexts, or component registries, read [reusable app hooks](../assets/tanstack-react-table-getting-started/references/create-table-hook.md).
+- For Query-backed data, server pages, sorting, filtering, or request keys, read [TanStack Query integration](../assets/tanstack-react-table-getting-started/references/with-tanstack-query.md).
+- For virtual rows, columns, dynamic measurement, or infinite scrolling, read [TanStack Virtual integration](../assets/tanstack-react-table-getting-started/references/with-tanstack-virtual.md).
+- For controlled state, tracked reads, or render subscriptions, read [table state](./tanstack-react-table-table-state-6e56d1e0.md#source-tanstack-react-table-table-state).
+- For feature registration, missing feature APIs, or processing ownership, run `intent load @tanstack/table-core#table-features` and read only references needed by the task.
+- For v8 code, read the [migration checklist](./tanstack-react-table-migrate-v8-to-v9-d475ddab.md#source-tanstack-react-table-migrate-v8-to-v9).
 
-### Keep static inputs outside render
+## API discovery
 
-```tsx
-const features = tableFeatures({})
-const data: Person[] = [{ name: 'Ada', age: 36 }]
-```
-
-Use state, memoization, or query results for changing data; avoid a new fallback array every render.
-
-## Common Mistakes
-
-### HIGH Copying the v8 table constructor
-
-Wrong:
-
-```tsx
-const table = useReactTable({
-  data,
-  columns,
-  getCoreRowModel: getCoreRowModel(),
-})
-```
-
-Correct:
-
-```tsx
-const table = useTable({ data, columns, features })
-```
-
-V9 uses `useTable`; optional row models are registered as feature slots rather than table options.
-
-Source: `docs/framework/react/guide/migrating.md`
-
-### HIGH Assuming feature APIs are global
-
-Wrong:
-
-```tsx
-const features = tableFeatures({})
-```
-
-Correct:
-
-```tsx
-const features = tableFeatures({
-  rowSortingFeature,
-  sortedRowModel: createSortedRowModel(),
-})
-```
-
-Sorting state and methods do not exist until the sorting feature is registered.
-
-Source: `packages/table-core/src/TableFeatures.ts`
-
-### MEDIUM Recreating fallback data each render
-
-Wrong:
-
-```tsx
-const table = useTable({ features, columns, data: response.data ?? [] })
-```
-
-Correct:
-
-```tsx
-// module scope
-const EMPTY_DATA: Person[] = []
-const table = useTable({ features, columns, data: response.data ?? EMPTY_DATA })
-```
-
-A fresh fallback invalidates data-dependent models on every render.
-
-Source: `docs/framework/react/guide/data.md`
-
-## API Discovery
-
-Inspect `node_modules/@tanstack/react-table/dist/index.d.ts` first, then the exported `useTable.d.ts`, `FlexRender.d.ts`, or core feature source. Use installed declarations so names match the consumer's exact v9 version.
+Inspect `node_modules/@tanstack/react-table/dist/index.d.ts`, then the exported adapter declarations for the installed version. Inspect optional core APIs under `node_modules/@tanstack/table-core/dist/features/`.

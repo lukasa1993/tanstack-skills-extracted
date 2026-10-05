@@ -2,11 +2,9 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-table",
   "product": "table",
-  "sourceCount": 81,
+  "sourceCount": 39,
   "themes": [
     "foundations",
-    "data-processing",
-    "layout-interaction",
     "integrations",
     "advanced",
     "framework-react",
@@ -18,9 +16,10 @@
     "framework-lit",
     "framework-alpine",
     "framework-ember",
-    "framework-octane"
+    "framework-octane",
+    "additional-guidance"
   ],
-  "guideCount": 81,
-  "largestGuideEntryBytes": 12721,
-  "inputSha256": "9b883bad1b592290450f1b6614180795b80a8b05bcfbd078ce90fc775f506826"
+  "guideCount": 39,
+  "largestGuideEntryBytes": 6933,
+  "inputSha256": "a49d642ecf590ff3ba90e5ffda884796625c13666fc135c81569ea5584427a64"
 }
