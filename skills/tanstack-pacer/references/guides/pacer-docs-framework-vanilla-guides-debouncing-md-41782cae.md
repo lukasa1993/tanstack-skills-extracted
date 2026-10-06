@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-vanilla-guides-debouncing-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../debounce-throttle.md) · [Source provenance](../SOURCES.md)
 
@@ -215,4 +215,4 @@ const unsubscribe = debouncer.store.subscribe((state) => {
 unsubscribe()
 ```
 
-See the [`Debouncer` API reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/classes/Debouncer.md) for the complete state and option types.
+See the [`Debouncer` API reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/classes/Debouncer.md) for the complete state and option types.

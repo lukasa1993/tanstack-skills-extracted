@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-react-adapter-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -16,7 +16,7 @@ npm install @tanstack/react-pacer
 
 ## React hooks
 
-See the [React Functions Reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/react/reference/index.md) for the full list of hooks in the React Adapter.
+See the [React Functions Reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/framework/react/reference/index.md) for the full list of hooks in the React Adapter.
 
 ## Basic usage
 
@@ -187,7 +187,7 @@ function SearchComponent() {
 }
 ```
 
-For more details on state management and available state properties, see the individual guide pages for each utility (e.g., [Rate Limiting Guide](./pacer-docs-guides-rate-limiting-md-9f0c5f8e.md#source-pacer-docs-guides-rate-limiting-md), [Debouncing Guide](./pacer-docs-guides-debouncing-md-2946516b.md#source-pacer-docs-guides-debouncing-md)).
+For more details on state management and available state properties, see the individual guide pages for each utility (e.g., [Rate Limiting Guide](./pacer-docs-framework-react-guides-rate-limiting-md-0c090509.md#source-pacer-docs-framework-react-guides-rate-limiting-md), [Debouncing Guide](./pacer-docs-framework-react-guides-debouncing-md-76534b9b.md#source-pacer-docs-framework-react-guides-debouncing-md)).
 
 ## Examples
 

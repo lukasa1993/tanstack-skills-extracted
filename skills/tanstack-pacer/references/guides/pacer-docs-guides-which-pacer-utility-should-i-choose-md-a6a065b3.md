@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-guides-which-pacer-utility-should-i-choose-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

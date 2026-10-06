@@ -1,6 +1,6 @@
 # Media Generation — Cross-References
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.64.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.64.1`.
 
 ## Cross-References
 

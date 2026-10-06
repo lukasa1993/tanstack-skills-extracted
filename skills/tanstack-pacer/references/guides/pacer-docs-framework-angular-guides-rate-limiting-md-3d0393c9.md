@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-angular-guides-rate-limiting-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../rate-limiting.md) · [Source provenance](../SOURCES.md)
 
@@ -84,22 +84,18 @@ Use a sliding window when capacity should return gradually rather than all at on
 
 ## Choose an API
 
-- `injectRateLimitedCallback` for a quota-controlled handler
 - `injectRateLimitedSignal` or `injectRateLimitedValue` for signals
 - `injectRateLimiter` for capacity helpers and selected state
 
-Use the callback API for operations, the state or value API for quota-controlled UI updates, and the instance API when you need capacity helpers or rejection state.
+Call `maybeExecute()` for quota-controlled operations. Use state or value helpers for UI updates, and the instance for capacity helpers and rejection state.
 
 ## Angular example
 
 ```ts
-import {
-  injectRateLimitedCallback,
-  injectRateLimiter,
-} from '@tanstack/angular-pacer'
+import { injectRateLimiter } from '@tanstack/angular-pacer'
 
 export class SendComponent {
-  readonly send = injectRateLimitedCallback(sendEvent, {
+  readonly send = injectRateLimiter(sendEvent, {
     limit: 3,
     window: 10_000,
   })
@@ -224,4 +220,4 @@ Commonly useful state includes:
 - `rejectionCount`: Calls rejected because the window was full.
 - `status`: `'disabled'`, `'exceeded'`, or `'idle'`.
 
-See the [Angular API reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.
+See the [Angular API reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.

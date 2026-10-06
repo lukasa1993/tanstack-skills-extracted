@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-angular-guides-batching-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../queue-batch.md) · [Source provenance](../SOURCES.md)
 
@@ -44,18 +44,17 @@ Choose another utility when:
 
 ## Choose an API
 
-- `injectBatchedCallback` for an item-adder
 - `injectBatcher` for flush, cancel, collected items, and selected state
 
-Use the callback API when adding items is all the component needs. Use the instance API for `flush()`, `cancel()`, collected items, selected state, and dynamic options.
+Use the batcher's bound `addItem` method as an event handler. Keep the instance for `flush()`, `cancel()`, collected items, selected state, and dynamic options.
 
 ## Angular example
 
 ```ts
-import { injectBatchedCallback, injectBatcher } from '@tanstack/angular-pacer'
+import { injectBatcher } from '@tanstack/angular-pacer'
 
 export class AnalyticsComponent {
-  readonly addEvent = injectBatchedCallback(sendEvents, {
+  readonly addEvent = injectBatcher(sendEvents, {
     maxSize: 20,
     wait: 1000,
   })
@@ -223,4 +222,4 @@ Commonly useful state includes:
 - `totalItemsProcessed`: Items passed to completed batch executions.
 - `status`: `'idle'` or `'pending'`.
 
-See the [Angular API reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.
+See the [Angular API reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.

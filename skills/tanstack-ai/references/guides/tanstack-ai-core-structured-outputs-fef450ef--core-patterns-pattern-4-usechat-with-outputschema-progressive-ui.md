@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 4: useChat with outputSchema (progressive UI)
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.64.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.64.1`.
 
 ## Core Patterns: Pattern 4: useChat with outputSchema (progressive UI)
 

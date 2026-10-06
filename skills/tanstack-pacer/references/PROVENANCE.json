@@ -4,18 +4,1098 @@
   "product": "pacer",
   "sources": [
     {
+      "id": "pacer:docs/framework/alpine/adapter.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/adapter.md",
+      "sha256": "cdef321d999f3cb87d397a6d8fbeb143469802f9dce097793fd06d5e225d02c7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/async-batching.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/async-batching.md",
+      "sha256": "c62b53c256088335bec8d449569291610d2a323cb4923aeda2ce7726d9c5763b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/async-debouncing.md",
+      "sha256": "f54a69f2775e2423a4c843fabc47a7d4c39404b9fe050270bab7574d0fcd42a7",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/async-queuing.md",
+      "sha256": "8e2b5a9ddb0a6e9cee96db7972de0ce4bc8fa2af783b73eea2df6b9b5d8ee77b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/async-rate-limiting.md",
+      "sha256": "782d1130c48ff110061f1412e476b725aafec7a843b120e5c40b0f4760920543",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/async-retrying.md",
+      "sha256": "e1332ad798da429f7c3ff001fd1ef33bf2d54258ab99dab7a1270bc6da190f14",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/async-throttling.md",
+      "sha256": "6cf8c1703602186b0362b3620b075ff57c47a1d18a43c0cffe6ae7bee9310f75",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/batching.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/batching.md",
+      "sha256": "d84822f17505636b09a0be3973330ee94076ba75783ae3c1543956e6783bee51",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/debouncing.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/debouncing.md",
+      "sha256": "bcb0b3d10f68c59b4b3b88cef26cc9a4571133df15a38ecc13151ba0ebdd9a62",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/queuing.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/queuing.md",
+      "sha256": "08697e42cc1b3d2f1213ace4a6c831af549d18f71f170aee8ebcb59f11eca130",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/rate-limiting.md",
+      "sha256": "f2b48b8ec50decbfdb4dcd18e43940e01be68c70beebc1b4b825f1c006185687",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/alpine/guides/throttling.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/alpine/guides/throttling.md",
+      "sha256": "f9b8e1a47a41b996aefa5941f844dce38604e65dd39f37225987421aac54e649",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/adapter.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/adapter.md",
+      "sha256": "a39e669cc0f6744a662ca49c1ed34a7f54787689ac34ccb6820f812cf319c712",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/async-batching.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/async-batching.md",
+      "sha256": "db604f40a90850421d6005b076d6c56cb5bed7359646ddb317f71ad3173f3425",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/async-debouncing.md",
+      "sha256": "5d907766005397d710e6ff1fdd61855351c893bb6677cbe4fffec37f035df673",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/async-queuing.md",
+      "sha256": "d93c480030464e00bd14b84d845a1489e34299a28fceb2e0a28056f65ccc9e89",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/async-rate-limiting.md",
+      "sha256": "0d26d811fef578df3faac4da265adb4fffe9a77e970c94e7e15b35e76759226a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/async-retrying.md",
+      "sha256": "516b289fd9e892f6a98a05521ccd99b6fc1f854ee166453eab0630cddec11390",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/async-throttling.md",
+      "sha256": "5806d4d45d7bf671457ad201cd5a5aa8f476caf21f164883a24b53d7919b1da8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/batching.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/batching.md",
+      "sha256": "3939e7ebb1fc9a358f2be63e9cb811b5593633b7c0e1fac7faef33d0202e675e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/debouncing.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/debouncing.md",
+      "sha256": "36930d66cdd80654426657d204ac00d4e486b962648eef1b0f12632769f2354d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/queuing.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/queuing.md",
+      "sha256": "0770597ffb3b38dab65347b9d67677a39d8edf913a6291d8e27f58c7da5acd6d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/rate-limiting.md",
+      "sha256": "6cf57575947639161b26645e6219bf5e88dcaf27ec13434fbf60861372fd19a6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/ember/guides/throttling.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/ember/guides/throttling.md",
+      "sha256": "1ace6197538fd09a5d3dca02e887a09c15a0bd942e2ec4356591591dfacb48ed",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/adapter.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/adapter.md",
+      "sha256": "bd703c03f8c4af109f92ca4a55a6ebb8de513571f1eeee7562fcf568de0c1586",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/async-batching.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/async-batching.md",
+      "sha256": "3864bae1c01540aa3619354431424cbf78bdde096473d6609b8c44561cdab077",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/async-debouncing.md",
+      "sha256": "6c2e3af44b471104c632162135293b14f271ba0eebe4aeacddfae17f3a8176aa",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/async-queuing.md",
+      "sha256": "039c76a6c7fd9e8ec441afb3435d5da17851f96b5c7e88627958f868de07328b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/async-rate-limiting.md",
+      "sha256": "b6652ce387ea27c36df2c96d6c736c1803aaf60634091f205c97743f652e46d5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/async-retrying.md",
+      "sha256": "1ae035d53ca9ebb86929d5b7fa5ccc9c4d4ae0235b95aa7c0b2beb2b94e01002",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/async-throttling.md",
+      "sha256": "6184e557f75470d518bcebb18080e6ab116b7bfbc318207b896d0fa47ea5af58",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/batching.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/batching.md",
+      "sha256": "781a0b2013deb658c9fef8f4635ce2de2e4dd5e83178730e355a0e86369cfc78",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/debouncing.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/debouncing.md",
+      "sha256": "551cb30ac56bf3d123285993c6160b3a88bb68efcc8935ed907c7be69481fbf0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/queuing.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/queuing.md",
+      "sha256": "ebe7ab31291db3f96b284790842aa4ef6a3170a53c840c43bf0cd805c30ab500",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/rate-limiting.md",
+      "sha256": "1289cd37db02f5dad41d7b0facf4a577e2f27b965fc89789cef97664d3028841",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/lit/guides/throttling.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/lit/guides/throttling.md",
+      "sha256": "2a278e09a09ac956cd64ae8e49b5a7ba14b9b873cc1c3facd911b6d4ce94a7d4",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/adapter.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/adapter.md",
+      "sha256": "d3e30802e6fdfd4777042e9b2e97342700cc043a696b64b15ce7d2d43b740bf2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/async-batching.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/async-batching.md",
+      "sha256": "894775850345aaaf0f8e2962e5197c435f57888b235938db026c529d21ce98dc",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/async-debouncing.md",
+      "sha256": "b55df7237b7eb1d91e3cc7b0ce2c4b3da162391b06a26871af43b891f5b6e566",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/async-queuing.md",
+      "sha256": "fa7ee7ad232d2c64bcc69ffc6aede7616f4d9fd467063504e5046a4d6e2db0f8",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/async-rate-limiting.md",
+      "sha256": "319992cb23c97459fc856438d952803c655b2fa8612f03b67d330ed3b3de7b5c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/async-retrying.md",
+      "sha256": "d2505c4c261998485c060e5655b352bfcfbb4f9267029c1e60c022be6914b4c3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/async-throttling.md",
+      "sha256": "a0bafd69460d5024d6ae0458bbf62e0d24540db302e3868a0cfb6cb62b05d43a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/batching.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/batching.md",
+      "sha256": "c3d3edb12f48c4dbbda15b8a3da3f83c95125a8a21626a80f0265f9fa0cd4820",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/debouncing.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/debouncing.md",
+      "sha256": "c6dda0eaaaa60a6df03634fece06bfad696bbe641d96bc186d3ca2fc93e627da",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/queuing.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/queuing.md",
+      "sha256": "3b859b0a11135957313bcc26e54423aa43f4795004c53150310e5eb57d1c94e6",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/rate-limiting.md",
+      "sha256": "e7688a8edcbd66eeba50037087e6242642c626bfbbdc161f65bd27dc2c43abb9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/octane/guides/throttling.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/octane/guides/throttling.md",
+      "sha256": "e55140da7e13cfa6247a29bebde73124a345276d59c68adaa6c000549dc5f0ea",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/adapter.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/adapter.md",
+      "sha256": "4e87995569cea980d47673c156bc98286bb03b85b78382ff0b2313e8fe0c3b02",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/async-batching.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/async-batching.md",
+      "sha256": "0ba53611086946e3a4caabdef11499272f3d40bc9066020b216c949a3eedb866",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/async-debouncing.md",
+      "sha256": "1988ee5fd155f49e414027773a4e75245aa8cb8b5f94a39673604f3d6f27ed48",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/async-queuing.md",
+      "sha256": "59613b05b36e36a5517aae16c3365d816299b4b79ad26a335026907c41ff513b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/async-rate-limiting.md",
+      "sha256": "392a6b723f4e2672a420383d60a9edb6a3c011915b97ef25cbaa3d876bb13193",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/async-retrying.md",
+      "sha256": "b3a5707de4bff37df911ac38d76f1ad0da94f8db2fb5d5cb682aac78937653eb",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/async-throttling.md",
+      "sha256": "282d18fa15f4397367c2a884b73d1da3daf10b1431f047a23632e872ea224d89",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/batching.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/batching.md",
+      "sha256": "f7e0bc406e659ab4eb8d3483c1906f4003c465affa1df54be72993269c46a3d9",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/debouncing.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/debouncing.md",
+      "sha256": "032afdc2fb8c98a2a48773ba1408f6c099c813d7252fe13bd4056367dd6b6a96",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/queuing.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/queuing.md",
+      "sha256": "9ebf2a61f3a783be28e223a92fad41aa0069ab6f0e4c9ff2b05ec2c70891ff3e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/rate-limiting.md",
+      "sha256": "ab04174a5190686962946ed505340389c2cd06e75179028a3b1efa35dc3a1430",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/svelte/guides/throttling.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/svelte/guides/throttling.md",
+      "sha256": "b8e182e9bea5b823f976fa3de02f912ba049a5399f59e2724f5fd8f2557b665f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/adapter.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/adapter.md",
+      "sha256": "d93427be270586928f0dee5384e1ad4a34f3aec64020e3d7b53b8a29e81e2b81",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/async-batching.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/async-batching.md",
+      "sha256": "b6d7dbf0ffde49fe33537b940ebbca1b1c656641b3b2652af2df3fe92351b216",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/async-debouncing.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/async-debouncing.md",
+      "sha256": "0c18cb581456afcc7d2e207c871fa7ee486d442a87168cd5210752ccbd2ab36b",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/async-queuing.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/async-queuing.md",
+      "sha256": "06f43545d7d647f93498691e4d9a1898c6d245c3056f8656660629b3b8a2cd57",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/async-rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/async-rate-limiting.md",
+      "sha256": "a0a9814194c685d3103123366455d969f2a51bd92284631ef2602ed22c18bf3e",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/async-retrying.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/async-retrying.md",
+      "sha256": "6e904d200a779a45de2ea67f17b5626033ee4f765373999aa73879bc5aaba376",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/async-throttling.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/async-throttling.md",
+      "sha256": "c6dbd7decad0bc13513b429936ea299cf6fb387014fbf0f885bfd5d4faee74c0",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/batching.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/batching.md",
+      "sha256": "16fd5f1d304072a352ebf48ad73886bb68ecbb91f2235aaf4a39af067f7b7b46",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/debouncing.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/debouncing.md",
+      "sha256": "c036578da69441f6e58b2e895b1d48e41995ff29bd1d2df58aab172d32e1b0ea",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/queuing.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/queuing.md",
+      "sha256": "455dad71a8b41f786b6ded8c7e62f3c547347c3311e54c19fb4699490ac6f9b4",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/rate-limiting.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/rate-limiting.md",
+      "sha256": "3f683785b8c907365cfb7a37739db5ef0851c120237b68254202629724313b8c",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
+      "id": "pacer:docs/framework/vue/guides/throttling.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/pacer",
+      "version": "0.23.1",
+      "repository": "TanStack/pacer",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "sourcePath": "docs/framework/vue/guides/throttling.md",
+      "sha256": "91b76ae7996d2bfbc36498411aad4a0111d25742dfaf22a3b50b2827d4dacd3d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
+      ]
+    },
+    {
       "id": "pacer:docs/devtools.md",
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/devtools.md",
-      "sha256": "adfd560e5d24d3d25b5b589461306cb7a95997463b5feae95e31003b2457c96f",
+      "sha256": "9d1ef339a4b99c3d21713cb9797c51e35292955cd08c3f95485ba8b3fede5939",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -23,14 +1103,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/which-pacer-utility-should-i-choose.md",
       "sha256": "430c9f2d8876d1974e6d0d7e0c0d85968f6a93ee9e8bf1f0e7c45f8e7e6ca3c4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -38,14 +1118,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/installation.md",
-      "sha256": "270df5f854c5aa0c712652339a7fa2cfe3ed5d3408c05c8705c4355b7d067f67",
+      "sha256": "0e4a3a40dd14abc4d69be63d181d21ba2e2a69a1d146a5845e75ecadf123e4b5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -53,14 +1133,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/overview.md",
-      "sha256": "ff9d4fb0bb2aaa33124f3a5e39cc06c7fc8ab52fb8d36985a16eecd12c7eef94",
+      "sha256": "d0e4d13fcace2d10983823c096b74e51587fcc43ba454539eb774c1a8bffd3b5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -68,14 +1148,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/quick-start.md",
-      "sha256": "564d540cabdbbc503b3db86cfe3593716145208f393c049feb696b7a6d2a1621",
+      "sha256": "63a3c9fc2d6b76f88977c2e37aa0bac417d79415be5c92b21c656ac34dcc0455",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -83,14 +1163,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/async-debouncing.md",
-      "sha256": "1064bfb3c989641e48a40e06d9751d2c3767358cfcda1f0cc7c1d417e6f7712a",
+      "sha256": "bb95e8fff6ce224151b692de65989cbd17c5eddea8cbf4d23d0706573075ee08",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -98,14 +1178,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/async-throttling.md",
-      "sha256": "4ad0b32e6f26228b0701438685d3f2d6fccaea7729b9ba270f851e4d0c4b393f",
+      "sha256": "351657ff56752178a8fdeb6bb2ba3709a01ab4562d8fcf8cd57d2ba8932a0210",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -113,14 +1193,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/debouncing.md",
-      "sha256": "579ae1056fe1643b4c069fb5ae89ca6fb1311a649fbbc77f11afbad275e4731c",
+      "sha256": "5c220ed5fa964745613b8b407647224aa3d0d5e89070573b5ffbf3bccea8284b",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -128,14 +1208,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/throttling.md",
-      "sha256": "4e0cc3d2cae3d853aaae19abfe25772abf21460af7962ba4630ec95579e1f563",
+      "sha256": "570ef965fcf524069e33646d51c09eb61f3a9a3045bfb1741548ebf879544b93",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -143,14 +1223,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/async-debouncing.md",
-      "sha256": "9c7c560083356e94f31edd598c886c4d2c10cbe0a95740ff0387b0cb13c8c1ff",
+      "sha256": "de48f7cb8a96e05e7f96dfe83c597205ec66bfc006348c702833c06adac2155a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -158,14 +1238,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/async-throttling.md",
-      "sha256": "80fdbb84a6791abd0bfa1cdf3754fd986a6aece5cb2255685c711d46ed0e27ec",
+      "sha256": "a6c53e588ae442bcf41db68b510af9a887e52d6b0e9013e842eee849e7ecb69d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -173,14 +1253,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/debouncing.md",
-      "sha256": "e6af485b601434099a68edf0dd3fe1a8d662904db469ebb9c6774f9fd3710ad4",
+      "sha256": "b27a0e7532e8ce56c63524097bc3c1c2270abf03dee52073f45e101994cd58f1",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -188,14 +1268,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/throttling.md",
-      "sha256": "c0e8000c1553bb48c240efaa6bc64f51b1a07902040e60be08614d7318ee7c88",
+      "sha256": "79efbf9721490996d11ed5f392439edb53d4a697decbc427f97044b28e4471e3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -203,14 +1283,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/async-debouncing.md",
-      "sha256": "f87a4bd0beb55ac5e9b2ac89d15d4203806b129e41e25f3ad2a7ed93e15bee93",
+      "sha256": "15f59f45614c88ffa431d042a53b52b82ce6677dc491e21de7fd99d40bdd3201",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -218,14 +1298,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/async-throttling.md",
-      "sha256": "c22069fa5ccecb358ff1b71297e765b297596ab1bd6f9b3f3438608ac1965d6a",
+      "sha256": "b2993042d582129f76801d8cc71de23b5f0fa61cdc6feb94da242feb13258bcc",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -233,14 +1313,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/debouncing.md",
-      "sha256": "f1ee783572e1494f72a7de0eaa159539d95f9c9dc7fbac28e2100ce984c82e74",
+      "sha256": "b15b63221f55453db370e89f537acdd04913347cb785b28ce21fb5e963bfea04",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -248,14 +1328,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/throttling.md",
-      "sha256": "bfba97faba82f8b398f38c90eec897b1df4a30d21ba791c31dbe8e5b36d04d62",
+      "sha256": "9c9b6514de4a99b59b84d1546f4b78863cccc881634db8e5eef7aa32569862a9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -263,14 +1343,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/async-debouncing.md",
-      "sha256": "d63b071f34b0e121707c2a3c6429fc61b70a1ed3be66103f506222042cd2c0bb",
+      "sha256": "d5602b31987abf32cc6d99b1edf2a6ecca8878f825cc850f7fcf50cde359954a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -278,14 +1358,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/async-throttling.md",
-      "sha256": "946672f02679f3d031e923c077ea92c1f08e531ddfdbcd42ef0cc6ad286d7cf6",
+      "sha256": "ea662e1fde16dd32b29bade4981967a6b6475a138177271ca514d31f20ec265a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -293,14 +1373,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/debouncing.md",
-      "sha256": "8dcdd204e2855f9a149aa6db889db3cb5d087463f3d48143137adbf127a260a7",
+      "sha256": "d25d1c7bf9cdcb86e64cc3a90e8f1880528becb82e8d816bc98792480752ae4a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -308,14 +1388,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/throttling.md",
-      "sha256": "c9942cfb4fa5fed103066350b7784dfb592917f2df1b216e2230b4da9f6bd819",
+      "sha256": "6bdec81b93bde9289e08703ccf7a47a89ff6db30ca5241022b56fe131f7faa3d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -323,14 +1403,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/async-debouncing.md",
-      "sha256": "2bf2ee7cc5960cef3a09f703c637b01b5a2e6c0ab40304a04c4a5e691afc97cd",
+      "sha256": "617173060f2bf3a7f525328c7a98deaf2980b5d5188fcfe409f657c7a2ca0cda",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -338,14 +1418,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/async-throttling.md",
-      "sha256": "2d97c5ee1b4e60cc2e47b86d2c32e1270f2b3c3c3d5dfef3090ddbd0760616b5",
+      "sha256": "c79b7192179cfbae109aa4b41f1d22de4b625c2ff33c4105830e28daff8cd663",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -353,14 +1433,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/debouncing.md",
-      "sha256": "ef5205f896fbe8058c43bf40c4d31ef643723f4d5d954aed06a42f25912697a3",
+      "sha256": "a6770db7263e4ce324aa6620dfc7a7b36f7818917bcf6e0c76de0b667653fd04",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -368,14 +1448,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/throttling.md",
-      "sha256": "94f081af4e03321cfed3537c519e400e6e154e2f183f6c63510cfca8dad37cc5",
+      "sha256": "327d55a98bb91a862ccf680ca05edd2646af577c5d47ca23fb0eef1eb1b2b25e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -383,14 +1463,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/async-debouncing.md",
-      "sha256": "b02ddb0f09044143582dd82dddbc392dde15b0084e3d39fe2a86dc4fda1c275d",
+      "sha256": "60b02ac7f4db8f14c060d829eaf9152cb26335e1c53e9f1ff5bd406ba8ab9ff3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -398,14 +1478,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/async-throttling.md",
-      "sha256": "1848be16168371891814033ddc81cf3bac82774b70a48f82486d8d1ad1c531c8",
+      "sha256": "cf7e088a3c8388f14709f69b40e7bbbc37394f53e1de38775c5c00bc97d94226",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -413,14 +1493,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/debouncing.md",
-      "sha256": "bff24b8bc6bae78e60b0d6912592f02bb8c9c177b6c5acfa2d134b442bf1b895",
+      "sha256": "4d653b4b7a16ead11f128c5700b5c850cf783873f9adc8ea04061569f4c43a4c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -428,14 +1508,14 @@
       "kind": "document",
       "theme": "debounce-throttle",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/throttling.md",
-      "sha256": "b9500783907c982f27f6fcecef22f2766f9764b324bbac9a5016afea6332eb5d",
+      "sha256": "52ae46939b9ebcd4fe1512783a6be5b5ad53a2bc6c3357557c7ea45c0e9eb69f",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -443,14 +1523,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/async-batching.md",
-      "sha256": "281d78dc0a5214a94b1b103a2886af448964ba50849916c0b1b2031965c37cee",
+      "sha256": "eeae0b698337f5ca6977f628ccce87ee1414b1acae58ba5978f74515cfeb9e15",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -458,14 +1538,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/async-queuing.md",
-      "sha256": "9cafad540bc056af6cd78ea5b1726cb0e2243c2d818a0e6791a90397dcf798cb",
+      "sha256": "975c9b87ed2c9413bc3524a29a81034776b24a8a9874073eab495a3dc344dcd9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -473,14 +1553,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/batching.md",
-      "sha256": "c654f885b3aca9405f03e4401d00055145a9da670546b8682590e74eca4cd321",
+      "sha256": "636c0466c9a90440e664777acafa1e553c7e9d7db5cdbb152376e9156dbdf52c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -488,14 +1568,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/queuing.md",
-      "sha256": "8a269949107d5e82fde8957c9b89c37f0f937c0b492e506a8d6cdaa1ed6361c2",
+      "sha256": "44e2241aaf6a2b5d7ec277ddde12f8ac0d6c22daf2ba4c5d9fd378660fb8aeae",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -503,14 +1583,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/async-batching.md",
-      "sha256": "ef136bb0860b340276ddf3d5050dbd657835caf4f6dc623677322c591b7ed86e",
+      "sha256": "0147a7b71a7e6c2bae343e55ba354f64b3e5084aa0da9a52563e1383267a61e9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -518,14 +1598,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/async-queuing.md",
-      "sha256": "e979fea6c4bba941ecf502cf68c8e5a722d5bcd9c440862efd4d0b5b3afa095d",
+      "sha256": "9d44910c081beb9af7acf335fa710cda5b9d74480ab5842a3adc3ec83d36d9ae",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -533,14 +1613,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/batching.md",
-      "sha256": "7929c32307aaa64262902122a708abfee89fdfdcfdc7b3147b02bd35cdaaea66",
+      "sha256": "716448af132a0f91efa54a19c097a8d88a7f9e23701bb76758f14ece10098ac9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -548,14 +1628,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/queuing.md",
-      "sha256": "da6b3fec98523eb278016b37437d860c965267e4d917be66eef83887946328d0",
+      "sha256": "8ca9fba5484a150964d0f26e4ee4bc35e14528c33493d6515ea7b0f3b5ac4ecf",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -563,14 +1643,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/async-batching.md",
-      "sha256": "bac794ede62004a4181b67f8d48d432040a14f771bc318397bb8b70059ade4cd",
+      "sha256": "02ee69d09d08c45e3b58299202d691c85230290fdb7026d6e240268fd734ed01",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -578,14 +1658,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/async-queuing.md",
-      "sha256": "53ccf33850e5e611a3cb414f29a0066bee6f656084dbf8d9675039efa9344790",
+      "sha256": "b910e415341740d1d81fa7f21db0c0a4fccc5ab2232670b93da1bceab518b870",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -593,14 +1673,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/batching.md",
-      "sha256": "d4cbde9a2d9baf28467e0b9ce0c2277e634d5cd38e4437e72af1c62284d0d89e",
+      "sha256": "ff0fd8c51cae8069b12f36e33e597e9f378f0483cb64a7079193b9b6bbb11cae",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -608,14 +1688,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/queuing.md",
-      "sha256": "38088647f2dba1d257ec6ff4ca21bc9ff1b00a27281aa2e3098ca09b605f2081",
+      "sha256": "43f92337f60780915d895c68d20f750cc6301dacf0a17e7c0b408dc4258ac6af",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -623,14 +1703,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/async-batching.md",
-      "sha256": "dc57e3086c04443f77f5c1a2057cb16bef2a07aa209ef6a653d83a8e669893aa",
+      "sha256": "93847b3fa1cfa5610cb7a6b4bb8f201ee3c5bfa205df0a7a148c82925dfa3f3e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -638,14 +1718,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/async-queuing.md",
-      "sha256": "6320e13ea2dac7ba8ed2e256179fbfc4fd296b036085d64c51db4f853a1ad488",
+      "sha256": "510beb09982eb72833c7bb7de52e50752a298cb2fff53e18c5b5b6138d105eeb",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -653,14 +1733,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/batching.md",
-      "sha256": "e61a5cd736a1ad1004e43173039e5f9767fd69964397efe5008d3c5deb8bfe8b",
+      "sha256": "211d1c1a1fa7877c585f656d019a11babd0acc6346ea0e697d18b4493a7580ca",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -668,14 +1748,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/queuing.md",
-      "sha256": "f0103ca9cb19d367f59ec38aacfcf51233e012705f9b9c4c360609d367915afb",
+      "sha256": "0aad670e51aded9e70c1fea3d1f6dfd66f41ee3631a733c153e98f853b023221",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -683,14 +1763,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/async-batching.md",
-      "sha256": "964b71b430bb67e954ad532d1eb0bcc4671568245b97bfca18cdf983cf03da27",
+      "sha256": "9ddc957199a69c4a0fcf1a9a2082593d02758a5072c3e5c47460753d84aa2be8",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -698,14 +1778,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/async-queuing.md",
-      "sha256": "ef18cd4da9212ef649d52ca7b62c976115439805c4729012c058575ece9fddf9",
+      "sha256": "ca5cfa3d0812d5ad2ab4d0e10d30326887e71dbc653627d6fc21e9f567859934",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -713,14 +1793,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/batching.md",
-      "sha256": "1ce6db7114843c6ff1c5b389577fd3d9c75b3c016ea2523d89a0e22275a468cb",
+      "sha256": "9cfad0a7c91495f071f3018fb365d2590741120be083dfcfdd4b7d1fc929bd4b",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -728,14 +1808,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/queuing.md",
-      "sha256": "b95fa2954ccc672f316307a7fcce55fc2db164ff30b1615c55a6b5e8ef2f7218",
+      "sha256": "4da59fad67775eb097677f46076ada44947ea251d8bd38d960993159ede4c276",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -743,14 +1823,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/async-batching.md",
-      "sha256": "3aa3d5d801150b3d2e5006fbcf3e61b9fe4d599f93ab9592d1b0b52c0df4e0b8",
+      "sha256": "d7f2908f8c5e6326477ef450124d1065840555c9f36113279f46bd3d9d80677d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -758,14 +1838,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/async-queuing.md",
-      "sha256": "9cfacbcca6655fa948d755d4cd0f963e3d44f3e2390db32a85b5a21243190bc7",
+      "sha256": "fc177627e920f82ee8526b9f70820aefff99b3d5235ae9e79e8fe22fc109f4c6",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -773,14 +1853,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/batching.md",
-      "sha256": "c9a6c314aa2db95a6957f6196a20f499cde36b887f47c6bd97a17f755911aff0",
+      "sha256": "f2297c8bae5ee8d9b7fca292a463b525ebaf90f2b8d52cf5e68a79a7506a2755",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -788,14 +1868,14 @@
       "kind": "document",
       "theme": "queue-batch",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/queuing.md",
-      "sha256": "9433fbb683a5a75b50a88f559aebf7876432fc53479b9e3567a6401a91c631bd",
+      "sha256": "5cb35d6df0f8994d29a8eba14147538caa6df5fb688757c8d2c9af700218b3d3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -803,14 +1883,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/async-rate-limiting.md",
-      "sha256": "18b8b040d9daaa951c79d22dc4e845899f7f03ec2d52399b7959808e6abfd54c",
+      "sha256": "1a95beaf86d409b1653d7b84f8777d85b26775fcd3becc89b80ad26ae561ae46",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -818,14 +1898,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/rate-limiting.md",
-      "sha256": "ed5f841e214c236578911a9b73cf172f11063eb84c558cdd6350a846be3d4053",
+      "sha256": "b199801554d3d08c82c4c456295533f6da9a368f98327227f1cb2fc852dbd413",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -833,14 +1913,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/async-rate-limiting.md",
-      "sha256": "db2aaf5228479367159367d0a0f403c65df4c172dd5c07d376edbf4432a3fda8",
+      "sha256": "01cacf2dfe2b9fc9f8f40e422ba600cc1f99a8c6413e2a54033fa712da2c37e1",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -848,14 +1928,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/rate-limiting.md",
-      "sha256": "86ee0e97315e93705d4c2ebe72fcb898fccd7a03f8ab1588d5bf7102cc367663",
+      "sha256": "5b6936f79e5aed8c481ea5c1261ed88f103cf22d0fbf641cba4c28505e85e13a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -863,14 +1943,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/async-rate-limiting.md",
-      "sha256": "4ab3dcb26f9e77027cd3e158ac0e74ff602df082705e075155d7cb92975434f8",
+      "sha256": "10668c209cd89843bb1340e031466c13c4450ed13470158fffaf006a5c87a143",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -878,14 +1958,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/rate-limiting.md",
-      "sha256": "f0f6c018b05554743de8356faf9c4e203596ca358a4044915d866edd723e7916",
+      "sha256": "99ec16e118acb831468057855344dba24c62161392aba47050503ca8c4031649",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -893,14 +1973,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/async-rate-limiting.md",
-      "sha256": "1e14b4a6d96d3e93bffd4ec053beb8259ca588948445d770d07a0ee3a9fb124e",
+      "sha256": "721eff2138846bb5152801abd284af426e4ffd5c5df5e6a2b3e5d922b6d7e597",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -908,14 +1988,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/rate-limiting.md",
-      "sha256": "848ded5c43951d82efac82a318096a479ee6db85c84ddcc60b3f398debe9da1d",
+      "sha256": "9a67d4d6b5df153208ffb6d5cc936bcebe4bac3c2629c986aba576ba9e572a14",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -923,14 +2003,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/async-rate-limiting.md",
-      "sha256": "4a4c365c74db9ec27c1e99a544beefa49f401296dd1721b7f36cf1162cb823fe",
+      "sha256": "a3266a5307055489397e2a280659b375e45d86d1c82110186af2e5de10f76333",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -938,14 +2018,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/rate-limiting.md",
-      "sha256": "ee5a5e83ce237cb96540cf6b38b7efdf0d07a1de50c11a7370db6fa7cc2c98f3",
+      "sha256": "8804a9ae8ae2a13243427b670b5e678097dac3cd79d2037571aec5a2d630acf4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -953,14 +2033,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/async-rate-limiting.md",
-      "sha256": "0878601147b2cafd946d5d1eec4b795462d065db7bf0d3a0db8179c1677aa453",
+      "sha256": "5d0fb78d6bb001348ad778ce207b5e518a5189bd3ea9f2ea639f926d869b8e7b",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -968,14 +2048,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/rate-limiting.md",
-      "sha256": "e134755999ab4788b15219ae3b89682b0cb7928f7453bcc5bf1077029bba938d",
+      "sha256": "b51d84c70041c6d1b05709dde3b9dd726ba7f5861b57550a30993e05f9a1f96e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -983,14 +2063,14 @@
       "kind": "document",
       "theme": "rate-limiting",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/server-rate-limiting.md",
       "sha256": "568347e7e8e1b2c52e74e7ff5b2147c206b2f8b4a5a51cbe22961a6a77d72622",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -998,14 +2078,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/guides/async-retrying.md",
-      "sha256": "16c94cbc0eb6007e569670029c4f56a626fe2e9cf4f30de8d3fa812ef35c912c",
+      "sha256": "39bcd9a876526421d44889e2ef62e393cdc491388ec3d4e64ee5e201322cddc8",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1013,14 +2093,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/guides/async-retrying.md",
-      "sha256": "29114c6a3c9a59b6ce8a41fa171b31ce3372bda538daa0371475e103e3c2443d",
+      "sha256": "eb66f2396eef11d1240d7cedd10ecb6cc014401ede106ec0c570b9fd42e88948",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1028,14 +2108,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/guides/async-retrying.md",
-      "sha256": "8513f3316d426d4d393a0f58d621a16d1229177f3c645074d103889730dd2122",
+      "sha256": "855ead5290e144f046c920bf900b2adb345a4da57290b5810b83ca83979c381d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1043,14 +2123,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/guides/async-retrying.md",
-      "sha256": "b7377920f4c2a00a2126bbd2b3d9db4dad884572eab17cbafc9770883ce4543b",
+      "sha256": "213f822aa1a8e2b9ee78ae8512052d57ca10a4f0588d2a0ddbe114956bffb573",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1058,14 +2138,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/vanilla/guides/async-retrying.md",
-      "sha256": "f974ec3cb9eee0c8b800fa35e2e8a51131db2280b59b79e7b9b0a621bdd1badc",
+      "sha256": "514c8bba7c40937508a833cb0e0366583122b46ce916b47b2e0d918ee7a4d5d3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1073,14 +2153,14 @@
       "kind": "document",
       "theme": "async-retry",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/guides/async-retrying.md",
-      "sha256": "8cbf759671c454d591964c1d26e3c23aeae7d61b55d4a8cf06a4f5dce8fc3753",
+      "sha256": "e7fe3d42db28b4d915386a49c4eecfb824aa427ac223fb53a0146e9e4d1b2329",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1088,14 +2168,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/react/adapter.md",
-      "sha256": "28f448e37016630c56de6d1bbd3c338ee20f3993a74933435d000426fb7a91cc",
+      "sha256": "9cd1ad1879cf6bf15006308d188e57fda70d8b1a59c17a156fd5714668648dd5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1103,14 +2183,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/preact/adapter.md",
-      "sha256": "653d355862e819561ea66680fc16efc920accec801c79c47beb64bb1131a800b",
+      "sha256": "ae5da2b39ae9603e3f6572c781c6e04fe09af89ce2851d2615b65e525794ec36",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1118,14 +2198,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/solid/adapter.md",
-      "sha256": "c8d8b47b5f40a55aef259dd49d48e2f131c83327b39554b1a1868e41834dbcec",
+      "sha256": "a04f51ff2ea51cafa46b9b1c2552428b46086b4fed3260851f0cc18682ebf065",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     },
     {
@@ -1133,19 +2213,55 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/pacer",
-      "version": "0.23.0",
+      "version": "0.23.1",
       "repository": "TanStack/pacer",
-      "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/framework/angular/adapter.md",
-      "sha256": "74a10739640efda0f2458b416202b8de12aa68179862d5c8fc4782f0f2bb46ff",
+      "sha256": "91f35afce1b86304d58441d73ecd4182809245a6b3384831e1f0693f1e27da31",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "b58e0222da48550d4d39b6241f8ff5a4142449b6"
+        "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
       ]
     }
   ],
   "duplicateDocuments": [],
   "duplicateSections": [
+    {
+      "duplicate": "pacer:docs/framework/alpine/guides/async-throttling.md#Alpine lifecycle",
+      "canonical": "pacer:docs/framework/alpine/guides/async-debouncing.md#Alpine lifecycle",
+      "theme": "framework-alpine",
+      "sha256": "e6592da19be52140243611a0563ae69173affa0c6e5476965d74ab36403adae6"
+    },
+    {
+      "duplicate": "pacer:docs/framework/ember/guides/async-throttling.md#Ember lifecycle",
+      "canonical": "pacer:docs/framework/ember/guides/async-debouncing.md#Ember lifecycle",
+      "theme": "framework-ember",
+      "sha256": "fb5a8d55d295f65799c4d26e2d126bf4053cc8022765b5a6eb8204a464ba315e"
+    },
+    {
+      "duplicate": "pacer:docs/framework/lit/guides/async-throttling.md#Lit lifecycle",
+      "canonical": "pacer:docs/framework/lit/guides/async-debouncing.md#Lit lifecycle",
+      "theme": "framework-lit",
+      "sha256": "825842299ad5a6630d8e9a6b0ddce68afd8c4a79d3c6dde64646ea36add4c1f1"
+    },
+    {
+      "duplicate": "pacer:docs/framework/octane/guides/async-throttling.md#Octane lifecycle",
+      "canonical": "pacer:docs/framework/octane/guides/async-debouncing.md#Octane lifecycle",
+      "theme": "framework-octane",
+      "sha256": "9896eb7bc9ddf1555e5f61a0cc511d87268f5ac466292e6422b12638fa92c17c"
+    },
+    {
+      "duplicate": "pacer:docs/framework/svelte/guides/async-throttling.md#Svelte lifecycle",
+      "canonical": "pacer:docs/framework/svelte/guides/async-debouncing.md#Svelte lifecycle",
+      "theme": "framework-svelte",
+      "sha256": "f822144c1a93100feef8fa42798e62334cc1132f17bde086c425b4f7639d260b"
+    },
+    {
+      "duplicate": "pacer:docs/framework/vue/guides/async-throttling.md#Vue lifecycle",
+      "canonical": "pacer:docs/framework/vue/guides/async-debouncing.md#Vue lifecycle",
+      "theme": "framework-vue",
+      "sha256": "fb04f1b64f39a5928f5be3f018ae147d8a5661045c6291452724fd9f719b7d81"
+    },
     {
       "duplicate": "pacer:docs/framework/angular/guides/async-throttling.md#Angular lifecycle",
       "canonical": "pacer:docs/framework/angular/guides/async-debouncing.md#Angular lifecycle",
@@ -2561,7 +3677,7 @@
     }
   ],
   "documentationVerification": {
-    "catalogSha256": "ca59ba9d229897b0fb813962807fa6eb9ebdd83a8a724eca69cff7857ec6d3d6",
+    "catalogSha256": "02a23b0099845696cce6afae1b56be1c552aee0fbd79ec68640e336b5a4ce952",
     "verification": {
       "npmTarballs": "sha512 integrity verified against npm registry metadata",
       "provenancePayloads": "SLSA subject digest, package identity, repository, and Git commit validated",
@@ -2569,15 +3685,15 @@
     },
     "repositoryArchives": [
       {
-        "url": "https://codeload.github.com/TanStack/pacer/tar.gz/b58e0222da48550d4d39b6241f8ff5a4142449b6",
-        "commit": "b58e0222da48550d4d39b6241f8ff5a4142449b6",
-        "sha256": "a43adeababcbd3d6d9bf5b661cc23469e9a5df8927c3ae2ebe7aacf768134721"
+        "url": "https://codeload.github.com/TanStack/pacer/tar.gz/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+        "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+        "sha256": "295fe256633ff13aa7e3441a3189ff878662bfcf020cc64fc47a7df057291d58"
       }
     ],
     "linkValidation": {
-      "localDocuments": 332,
+      "localDocuments": 757,
       "localAssets": 0,
-      "pinnedRepository": 70,
+      "pinnedRepository": 155,
       "pinnedExternalRepository": 0,
       "externalRepositoryPins": [],
       "unavailableAssets": []

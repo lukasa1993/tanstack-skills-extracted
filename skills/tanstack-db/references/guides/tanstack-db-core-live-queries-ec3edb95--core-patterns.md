@@ -1,6 +1,6 @@
 # Live Queries — Core Patterns
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.11.3`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.12.0`.
 
 ## Core Patterns
 
@@ -39,7 +39,7 @@ non-null value.
 
 ### 2. Joining two collections
 
-Join conditions **must** use `eq()` (equality only -- IVM constraint). Default join type is `left`. Convenience methods: `leftJoin`, `rightJoin`, `innerJoin`, `fullJoin`.
+Join conditions accept `eq()` or a nonempty, possibly nested `and()` of equalities (equality only -- IVM constraint). Default join type is `left`. Convenience methods: `leftJoin`, `rightJoin`, `innerJoin`, `fullJoin`.
 
 ```ts
 import { eq } from '@tanstack/db'

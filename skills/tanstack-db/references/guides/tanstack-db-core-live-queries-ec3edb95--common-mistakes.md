@@ -1,6 +1,6 @@
 # Live Queries — Common Mistakes
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.11.3`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.12.0`.
 
 ## Common Mistakes
 
@@ -123,6 +123,27 @@ q.from({ order: ordersCollection })
   .having(({ order }) => gt(count(order.id), 5))
 ```
 
+### Compound joins and acquisition
+
+```ts
+import { and, eq } from '@tanstack/db'
+
+q.from({ product: productsCollection }).leftJoin(
+  { stock: stockCollection },
+  ({ product, stock }) =>
+    and(eq(product.sku, stock.sku), eq(product.region, stock.region)),
+)
+```
+
+All equalities must match. A nullish component never matches, and outer joins
+retain unmatched rows. For on-demand sources, the first equality supplies
+candidate loading and index selection. Put a selective plain-field equality
+first when creating the live-query Collection. Reordered equalities keep the
+same semantic query identity; a React hook can reuse the existing Collection
+and its original loading plan. Reordering during a rerender does not replan that
+Collection. A computed joined-side operand can disable lazy loading, and a broad
+first field can fetch extra candidates. Later equalities still control matches.
+
 ### HIGH: .limit() / .offset() without .orderBy()
 
 Without deterministic ordering, limit/offset results are non-deterministic and cannot be incrementally maintained. Throws `LimitOffsetRequireOrderByError`.
@@ -137,9 +158,9 @@ q.from({ user: usersCollection })
   .limit(10)
 ```
 
-### HIGH: Join condition using non-eq() operator
+### HIGH: Join condition using OR or a non-equality comparison
 
-The differential dataflow join operator only supports equality joins. Using `gt()`, `like()`, etc. throws `JoinConditionMustBeEqualityError`.
+The differential dataflow join operator supports a single equality or nested `and()` equalities. Using `or()`, `gt()`, `like()`, or empty `and()` throws `JoinConditionMustBeEqualityError`. Each equality must bind the joined source to an available source. Put field-to-literal filters in `.where()`; invalid source bindings fail at compilation.
 
 ```ts
 // WRONG

@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -16,7 +16,7 @@ Not sure whether you want a debouncer, throttler, rate limiter, queuer, or batch
 
 ## API references
 
-See the [API References](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/index.md) page for the full API of each utility.
+See the [API References](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/index.md) page for the full API of each utility.
 
 ## Basic usage
 
@@ -90,3 +90,14 @@ import { PacerProvider } from '@tanstack/react-pacer'
 ### Devtools
 
 Each framework adapter has an official TanStack Devtools integration. See the [Devtools](./pacer-docs-devtools-md-2f4aa95a.md#source-pacer-docs-devtools-md) page for setup instructions.
+
+## More framework adapters
+
+Each adapter owns cleanup through its framework lifecycle. See its guide for the native API and selected-state access:
+
+- [Vue](./pacer-docs-framework-vue-adapter-md-bab32561.md#source-pacer-docs-framework-vue-adapter-md)
+- [Svelte](./pacer-docs-framework-svelte-adapter-md-8ae23e6a.md#source-pacer-docs-framework-svelte-adapter-md)
+- [Lit](./pacer-docs-framework-lit-adapter-md-038d141c.md#source-pacer-docs-framework-lit-adapter-md)
+- [Alpine](./pacer-docs-framework-alpine-adapter-md-7e9fefec.md#source-pacer-docs-framework-alpine-adapter-md)
+- [Ember](./pacer-docs-framework-ember-adapter-md-add887bb.md#source-pacer-docs-framework-ember-adapter-md)
+- [Octane](./pacer-docs-framework-octane-adapter-md-38d4d4cc.md#source-pacer-docs-framework-octane-adapter-md)

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-live-queries"></a>
 
-Published skill · `@tanstack/db@0.11.3`.
+Published skill · `@tanstack/db@0.12.0`.
 
 [Topic index](../live-queries.md) · [Source provenance](../SOURCES.md)
 
@@ -17,8 +17,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Includes (Subqueries in Select)](./tanstack-db-core-live-queries-ec3edb95--includes-subqueries-in-select.md) — 4 KiB
 - [One-Shot Queries with queryOnce](./tanstack-db-core-live-queries-ec3edb95--one-shot-queries-with-queryonce.md) — 1 KiB
 - [Reactive Effects (createEffect)](./tanstack-db-core-live-queries-ec3edb95--reactive-effects-createeffect.md) — 2 KiB
-- [Common Mistakes](./tanstack-db-core-live-queries-ec3edb95--common-mistakes.md) — 5 KiB
-- [Tension: Query expressiveness vs. IVM constraints](./tanstack-db-core-live-queries-ec3edb95--tension-query-expressiveness-vs-ivm-constraints.md) — 1 KiB
+- [Common Mistakes](./tanstack-db-core-live-queries-ec3edb95--common-mistakes.md) — 7 KiB
+- [Tension: Query expressiveness vs. IVM constraints](./tanstack-db-core-live-queries-ec3edb95--tension-query-expressiveness-vs-ivm-constraints.md) — 2 KiB
 - [References](./tanstack-db-core-live-queries-ec3edb95--references.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->
@@ -45,8 +45,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="high-missing-conditional-expression-helpers"></a>
 <a id="high-distinct-without-select"></a>
 <a id="high-having-without-groupby"></a>
+<a id="compound-joins-and-acquisition"></a>
 <a id="high-limit-offset-without-orderby"></a>
-<a id="high-join-condition-using-non-eq-operator"></a>
+<a id="high-join-condition-using-or-or-a-non-equality-comparison"></a>
 <a id="medium-passing-source-directly-instead-of-alias-collection"></a>
 <a id="medium-using-unsafe-select-alias-paths"></a>
 <a id="tension-query-expressiveness-vs-ivm-constraints"></a>

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.11.3"
+  tanstack-package-version: "0.12.0"
   tanstack-source-skill: "db-core/mutations-optimistic"
   tanstack-sources: "[\"TanStack/db:docs/guides/mutations.md\",\"TanStack/db:packages/db/src/transactions.ts\",\"TanStack/db:packages/db/src/optimistic-action.ts\",\"TanStack/db:packages/db/src/paced-mutations.ts\"]"
   tanstack-type: "sub-skill"

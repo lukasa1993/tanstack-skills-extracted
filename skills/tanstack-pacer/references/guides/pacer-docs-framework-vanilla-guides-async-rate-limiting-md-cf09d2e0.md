@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-vanilla-guides-async-rate-limiting-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../rate-limiting.md) · [Source provenance](../SOURCES.md)
 
@@ -137,4 +137,4 @@ Commonly useful properties include:
 - `lastResult`: The most recent successful result.
 - `successCount`, `errorCount`, and `settleCount`: Execution outcome counts.
 
-See the [`AsyncRateLimiter` API reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/classes/AsyncRateLimiter.md) for complete option and state types.
+See the [`AsyncRateLimiter` API reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/classes/AsyncRateLimiter.md) for complete option and state types.

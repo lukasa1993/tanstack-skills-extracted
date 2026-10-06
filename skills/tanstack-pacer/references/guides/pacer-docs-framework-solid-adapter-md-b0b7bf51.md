@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-solid-adapter-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -16,7 +16,7 @@ npm install @tanstack/solid-pacer
 
 ## Solid hooks
 
-See the [Solid Functions Reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/solid/reference/index.md) for the full list of hooks in the Solid Adapter.
+See the [Solid Functions Reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/framework/solid/reference/index.md) for the full list of hooks in the Solid Adapter.
 
 ## Basic usage
 
@@ -192,7 +192,7 @@ function SearchComponent() {
 }
 ```
 
-For more details on state management and available state properties, see the individual guide pages for each utility (e.g., [Rate Limiting Guide](./pacer-docs-guides-rate-limiting-md-9f0c5f8e.md#source-pacer-docs-guides-rate-limiting-md), [Debouncing Guide](./pacer-docs-guides-debouncing-md-2946516b.md#source-pacer-docs-guides-debouncing-md)).
+For more details on state management and available state properties, see the individual guide pages for each utility (e.g., [Rate Limiting Guide](./pacer-docs-framework-solid-guides-rate-limiting-md-8d1652bf.md#source-pacer-docs-framework-solid-guides-rate-limiting-md), [Debouncing Guide](./pacer-docs-framework-solid-guides-debouncing-md-cb70708c.md#source-pacer-docs-framework-solid-guides-debouncing-md)).
 
 ## Examples
 
@@ -285,3 +285,32 @@ function ApiComponent() {
   return <button onClick={handleSubmit}>Submit</button>
 }
 ```
+
+## Reactive options
+
+Use property getters to read Solid signals or props in an options object:
+
+```tsx
+const [wait, setWait] = createSignal(300)
+const debouncer = createDebouncer(save, {
+  get wait() {
+    return wait()
+  },
+})
+
+setWait(600)
+```
+
+An options accessor supports the same behavior:
+
+```tsx
+const debouncer = createDebouncer(save, () => ({ wait: wait() }))
+```
+
+The adapter reads getters and accessors in a reactive computation. It initializes the utility immediately, then updates the same utility through `setOptions` when a dependency changes. This applies to all synchronous and asynchronous create functions and their signal and value helpers. Provider defaults are read in the same computation, and local options override them.
+
+Reading a signal before passing the options, such as `{ wait: wait() }`, produces a snapshot. Assigning to an ordinary object property does not trigger an update. Use a getter or accessor for reactive values. Option reads are shallow: to track a nested configuration, build that configuration inside a getter or accessor. Callbacks and function-valued core options remain functions and are not invoked when options are resolved.
+
+Updates preserve the utility, store, pending work, and queued items. Changing `wait` does not reschedule an existing timer. Setting `enabled` to `false` still applies the utility's normal cancellation behavior. Construction options such as `key`, `initialState`, and `initialItems` apply only when the utility is created. Use `start()` and `stop()` to change running queues.
+
+Updates follow `setOptions` merge semantics. If an accessor omits a previously supplied field, the provider default replaces it when one exists; otherwise, its previous value remains. Return `undefined` explicitly to clear an optional field. For example, `onUnmount: undefined` restores default cleanup. Disposal uses the latest `onUnmount` callback. The utility's `options` property exposes its current core options, including manual `setOptions` updates.

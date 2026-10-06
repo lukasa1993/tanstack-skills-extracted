@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-solid-guides-async-retrying-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../async-retry.md) · [Source provenance](../SOURCES.md)
 
@@ -120,7 +120,7 @@ Commonly useful properties include:
 
 `AsyncRetryer` does not expose a Solid state selector. Use its callbacks to copy the fields needed by the view into Solid signals. If you subscribe to `retryer.store` directly, register the unsubscribe function with the same component or owner cleanup that aborts the retryer.
 
-For exact signatures, see the [`asyncRetry` function reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/functions/asyncRetry.md), [`AsyncRetryer` class reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/classes/AsyncRetryer.md), and [`AsyncRetryerOptions` reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/interfaces/AsyncRetryerOptions.md).
+For exact signatures, see the [`asyncRetry` function reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/functions/asyncRetry.md), [`AsyncRetryer` class reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/classes/AsyncRetryer.md), and [`AsyncRetryerOptions` reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/interfaces/AsyncRetryerOptions.md).
 
 ## Related docs
 

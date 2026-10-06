@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-vanilla-guides-async-retrying-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../async-retry.md) · [Source provenance](../SOURCES.md)
 
@@ -141,4 +141,4 @@ Commonly useful properties include:
 
 `AsyncRetryer` is a core API and does not have framework-specific hooks. Subscribe through `retryer.store` or the appropriate TanStack Store adapter when reactive state is needed.
 
-For exact signatures, see the [`asyncRetry` function reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/functions/asyncRetry.md), [`AsyncRetryer` class reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/classes/AsyncRetryer.md), and [`AsyncRetryerOptions` reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/reference/interfaces/AsyncRetryerOptions.md).
+For exact signatures, see the [`asyncRetry` function reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/functions/asyncRetry.md), [`AsyncRetryer` class reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/classes/AsyncRetryer.md), and [`AsyncRetryerOptions` reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/reference/interfaces/AsyncRetryerOptions.md).

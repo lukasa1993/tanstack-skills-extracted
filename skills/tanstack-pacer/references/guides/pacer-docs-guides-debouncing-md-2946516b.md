@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-guides-debouncing-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../debounce-throttle.md) · [Source provenance](../SOURCES.md)
 
@@ -15,5 +15,11 @@ Debouncing waits until calls stop for a configured duration, then runs the lates
 - [Preact](./pacer-docs-framework-preact-guides-debouncing-md-8452f839.md#source-pacer-docs-framework-preact-guides-debouncing-md)
 - [Solid](./pacer-docs-framework-solid-guides-debouncing-md-cb70708c.md#source-pacer-docs-framework-solid-guides-debouncing-md)
 - [Angular](./pacer-docs-framework-angular-guides-debouncing-md-982e1c29.md#source-pacer-docs-framework-angular-guides-debouncing-md)
+- [Vue](./pacer-docs-framework-vue-guides-debouncing-md-e67a058c.md#source-pacer-docs-framework-vue-guides-debouncing-md)
+- [Svelte](./pacer-docs-framework-svelte-guides-debouncing-md-746170f2.md#source-pacer-docs-framework-svelte-guides-debouncing-md)
+- [Lit](./pacer-docs-framework-lit-guides-debouncing-md-6a5aac66.md#source-pacer-docs-framework-lit-guides-debouncing-md)
+- [Alpine](./pacer-docs-framework-alpine-guides-debouncing-md-97f88f23.md#source-pacer-docs-framework-alpine-guides-debouncing-md)
+- [Ember](./pacer-docs-framework-ember-guides-debouncing-md-df58f17e.md#source-pacer-docs-framework-ember-guides-debouncing-md)
+- [Octane](./pacer-docs-framework-octane-guides-debouncing-md-fb6b0927.md#source-pacer-docs-framework-octane-guides-debouncing-md)
 
 Not sure which operation fits your use case? Start with [Which Pacer Utility Should I Choose?](./pacer-docs-guides-which-pacer-utility-should-i-choose-md-a6a065b3.md#source-pacer-docs-guides-which-pacer-utility-should-i-choose-md).

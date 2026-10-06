@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-angular-guides-throttling-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../debounce-throttle.md) · [Source provenance](../SOURCES.md)
 
@@ -47,27 +47,23 @@ Choose another utility when:
 
 ## Choose an API
 
-- `injectThrottledCallback` for a throttled handler
 - `injectThrottledSignal` or `injectThrottledValue` for throttled signals
 - `injectThrottler` for lifecycle methods and selected state
 
-Use the callback API for event handlers, the state or value API for rate-controlled UI state, and the instance API for lifecycle methods and timing state.
+Use instance methods for event handlers, and state or value helpers for rate-controlled UI state.
 
 ## Angular example
 
 ```ts
-import {
-  injectThrottledCallback,
-  injectThrottledSignal,
-} from '@tanstack/angular-pacer'
+import { injectThrottler, injectThrottledSignal } from '@tanstack/angular-pacer'
 
 export class ScrollComponent {
-  readonly report = injectThrottledCallback(sendPosition, { wait: 250 })
+  readonly report = injectThrottler(sendPosition, { wait: 250 })
   readonly displayedPosition = injectThrottledSignal(0, { wait: 100 })
 
   update(position: number) {
     this.displayedPosition.set(position)
-    this.report(position)
+    this.report.maybeExecute(position)
   }
 }
 ```
@@ -195,4 +191,4 @@ To restore selected state that your app has persisted, pass a partial snapshot t
 - `executionCount`: How many times the wrapped function has executed.
 - `status`: `'disabled'`, `'idle'`, or `'pending'`.
 
-See the [Angular API reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.
+See the [Angular API reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.

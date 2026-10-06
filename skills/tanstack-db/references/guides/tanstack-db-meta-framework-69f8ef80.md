@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-meta-framework"></a>
 
-Published skill · `@tanstack/db@0.11.3`.
+Published skill · `@tanstack/db@0.12.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

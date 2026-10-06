@@ -1,6 +1,6 @@
 # Live Queries — One-Shot Queries with queryOnce
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.11.3`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.12.0`.
 
 ## One-Shot Queries with queryOnce
 

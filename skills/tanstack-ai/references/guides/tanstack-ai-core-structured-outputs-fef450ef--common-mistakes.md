@@ -1,6 +1,6 @@
 # Structured Outputs — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.64.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.64.1`.
 
 ## Common Mistakes
 

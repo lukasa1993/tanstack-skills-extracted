@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-framework-angular-guides-debouncing-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../debounce-throttle.md) · [Source provenance](../SOURCES.md)
 
@@ -50,22 +50,18 @@ Choose another utility when:
 
 ## Choose an API
 
-- `injectDebouncedCallback` for a debounced handler
 - `injectDebouncedSignal` or `injectDebouncedValue` for delayed signals
 - `injectDebouncer` for lifecycle methods and selected state
 
-Use the callback API for event handlers, the state or value API for delayed UI state, and the instance API when you need `cancel()`, `flush()`, selected state, or dynamic options.
+Use the instance's `maybeExecute` method for event handlers, and state or value helpers for delayed UI state. Keep the instance for cancellation, flushing, selected state, and dynamic options.
 
 ## Angular example
 
 ```ts
-import {
-  injectDebouncedCallback,
-  injectDebouncer,
-} from '@tanstack/angular-pacer'
+import { injectDebouncer } from '@tanstack/angular-pacer'
 
 export class SearchComponent {
-  readonly search = injectDebouncedCallback(runSearch, { wait: 300 })
+  readonly search = injectDebouncer(runSearch, { wait: 300 })
   readonly saver = injectDebouncer(saveDraft, { wait: 500 }, (state) => ({
     isPending: state.isPending,
   }))
@@ -218,4 +214,4 @@ To restore selected state that your app has persisted, pass a partial snapshot t
 - `lastArgs`: The arguments recorded by the most recent trailing-enabled call. Check `isPending` before treating them as pending work.
 - `status`: `'disabled'`, `'idle'`, or `'pending'`.
 
-See the [Angular API reference](https://github.com/TanStack/pacer/blob/b58e0222da48550d4d39b6241f8ff5a4142449b6/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.
+See the [Angular API reference](https://github.com/TanStack/pacer/blob/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/docs/framework/angular/reference/index.md) for adapter signatures and the public core reference for complete option and state types.

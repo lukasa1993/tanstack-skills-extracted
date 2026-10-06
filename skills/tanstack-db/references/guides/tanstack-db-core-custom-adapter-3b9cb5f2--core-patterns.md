@@ -1,6 +1,6 @@
 # Custom Adapter — Core Patterns
 
-[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.11.3`.
+[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.12.0`.
 
 ## Core Patterns
 

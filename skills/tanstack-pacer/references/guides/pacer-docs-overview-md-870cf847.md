@@ -2,7 +2,7 @@
 
 <a id="source-pacer-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/pacer@0.23.0`.
+Release-matched documentation · `@tanstack/pacer@0.23.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -51,13 +51,13 @@ Many of the ideas (and code) for TanStack Pacer are not new. In fact, many of th
   - Works alongside whatever state management you already use
   - Some utilities, like rate limiting and queuing, can persist state to local or session storage
 - **Convenient Hooks**
-  - Pre-built hooks like `useDebouncedCallback`, `useThrottledValue`, and `useQueuedState` cut down on boilerplate
+  - Framework adapters provide lifecycle-owned utilities and state/value helpers. React, Preact, and Octane also provide callback-only hooks.
   - Several layers of abstraction, from a bare callback to a full instance API
 - **Type Safety**
   - Your functions are always called with the correct argument types
   - Generic utilities that adapt to your own types
 - **Framework Adapters**
-  - React, Preact, Solid, and Angular
+  - React, Preact, Solid, Angular, Vue, Svelte, Lit, Alpine, Ember, and Octane
 - **Tree Shaking**
   - Tree-shaking works by default, and each utility also has its own deep import, so a library can pull in one utility without inflating its bundle-phobia report
 
@@ -65,7 +65,7 @@ Many of the ideas (and code) for TanStack Pacer are not new. In fact, many of th
 
 The fastest way to understand the five utilities is to watch them handle the same input. Move the range slider and compare how debouncing, throttling, rate limiting, queuing, and batching each respond:
 
-<iframe src="https://stackblitz.com/github/TanStack/pacer/tree/b58e0222da48550d4d39b6241f8ff5a4142449b6/examples/react/util-comparison?embed=1&view=preview&hideNavigation=1" width="100%" height="1200px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+<iframe src="https://stackblitz.com/github/TanStack/pacer/tree/32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2/examples/react/util-comparison?embed=1&view=preview&hideNavigation=1" width="100%" height="1200px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
 
 ## Pacer Lite
 

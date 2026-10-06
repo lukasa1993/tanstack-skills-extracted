@@ -1,6 +1,6 @@
 # Middleware — Server State Persistence: withPersistence
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.64.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.64.1`.
 
 ## Server State Persistence: withPersistence
 

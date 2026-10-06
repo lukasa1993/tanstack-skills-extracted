@@ -2,8 +2,14 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-pacer",
   "product": "pacer",
-  "sourceCount": 76,
+  "sourceCount": 148,
   "themes": [
+    "framework-alpine",
+    "framework-ember",
+    "framework-lit",
+    "framework-octane",
+    "framework-svelte",
+    "framework-vue",
     "foundations",
     "debounce-throttle",
     "queue-batch",
@@ -14,7 +20,7 @@
     "framework-solid",
     "framework-angular"
   ],
-  "guideCount": 76,
-  "largestGuideEntryBytes": 11019,
-  "inputSha256": "f0875733c31393634b7a28bc9132e5b84277c0fbbb6473a85fccfbf4a856930f"
+  "guideCount": 148,
+  "largestGuideEntryBytes": 12276,
+  "inputSha256": "0f157ad98119c790a2b8799779bf765d296c0d26f28a86ed15aef6cd19b53186"
 }

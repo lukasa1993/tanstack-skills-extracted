@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Overview
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.64.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.64.1`.
 
 # AG-UI Protocol
 
