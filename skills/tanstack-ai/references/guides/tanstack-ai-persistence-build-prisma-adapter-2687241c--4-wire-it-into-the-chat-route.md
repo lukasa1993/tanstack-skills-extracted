@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 4. Wire it into the chat route
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
 
 ## 4. Wire it into the chat route
 

@@ -1,6 +1,6 @@
 # Structured Outputs — Cross-References
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.64.1`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.65.0`.
 
 ## Cross-References
 

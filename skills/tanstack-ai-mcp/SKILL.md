@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.5"
   tanstack-package: "@tanstack/ai-mcp"
-  tanstack-package-version: "0.7.0"
+  tanstack-package-version: "0.8.0"
   tanstack-source-skill: "ai-mcp"
   tanstack-sources: "[\"TanStack/ai:docs/tools/mcp.md\",\"TanStack/ai:packages/ai-mcp/src/client.ts\",\"TanStack/ai:packages/ai-mcp/src/pool.ts\",\"TanStack/ai:packages/ai-mcp/src/resources.ts\",\"TanStack/ai:packages/ai-mcp/src/transport.ts\",\"TanStack/ai:packages/ai-mcp/src/server/create-server.ts\",\"TanStack/ai:packages/ai-mcp/src/server/stdio.ts\"]"
   tanstack-type: "sub-skill"
@@ -88,6 +88,8 @@ export function handleMcp(request: Request) {
 
 `createMCPServer` speaks spec `2026-07-28`.
 `createMCPServer` also speaks spec 2025. By default it keeps no spec 2025 session.
+Its tools, resources, and prompts are static. It advertises no list-change
+capability and rejects `subscriptions/listen` with JSON-RPC `-32601`.
 
 `stdioTransport` from `@tanstack/ai-mcp/stdio` connects your client to a command.
 `serveMCPStdio` from `@tanstack/ai-mcp/server/stdio` serves your server on stdin and stdout.
@@ -287,6 +289,8 @@ If the connection fails, `createMCPClient` throws `MCPConnectionError`.
 `createMCPClient` tries spec `2026-07-28` first.
 If the server does not support that spec, the client uses the 2025 initialize handshake.
 The client keeps negotiation mode `auto`.
+`client.instructions` holds the server's instructions from the handshake, or `undefined` when the server sends none.
+Put them in the system prompt: `systemPrompts: client.instructions ? [client.instructions] : []`.
 
 ### Transports
 

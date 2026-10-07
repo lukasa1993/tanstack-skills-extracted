@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — 3. Compose and wire
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
 
 ## 3. Compose and wire
 

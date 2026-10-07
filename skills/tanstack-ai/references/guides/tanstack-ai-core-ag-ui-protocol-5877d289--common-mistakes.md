@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.64.1`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.65.0`.
 
 ## Common Mistakes
 

@@ -1,6 +1,6 @@
 # Ai Mcp — Host an MCP server
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.7.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.0`.
 
 ## Host an MCP server
 
@@ -38,6 +38,8 @@ export function handleMcp(request: Request) {
 
 `createMCPServer` speaks spec `2026-07-28`.
 `createMCPServer` also speaks spec 2025. By default it keeps no spec 2025 session.
+Its tools, resources, and prompts are static. It advertises no list-change
+capability and rejects `subscriptions/listen` with JSON-RPC `-32601`.
 
 `stdioTransport` from `@tanstack/ai-mcp/stdio` connects your client to a command.
 `serveMCPStdio` from `@tanstack/ai-mcp/server/stdio` serves your server on stdin and stdout.

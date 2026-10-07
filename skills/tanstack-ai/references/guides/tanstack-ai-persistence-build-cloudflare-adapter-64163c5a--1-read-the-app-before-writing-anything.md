@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — 1. Read the app before writing anything
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
 
 ## 1. Read the app before writing anything
 

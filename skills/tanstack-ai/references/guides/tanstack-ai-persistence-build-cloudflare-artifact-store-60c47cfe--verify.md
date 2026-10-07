@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — Verify
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
 
 ## Verify
 
@@ -27,7 +27,7 @@ between runs (see **ai-persistence/build-cloudflare-adapter** for the
   a missing key; `delete` is a silent no-op on an absent key.
 - `put` accepts a `ReadableStream` body with no declared length (a
   `TransformStream`-wrapped stream) and records the real drained size — the
-  shape every URL-fetched artifact arrives in.
+  shape a capped URL-fetched artifact and a provider video stream arrive in.
 - `get` with a `range` returns just that slice, reports it as `range`, and
   still reports the whole object's `size` — what a `206` / `Content-Range`
   response is built from.

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-media-generation"></a>
 
-Published skill · `@tanstack/ai@0.64.1`.
+Published skill · `@tanstack/ai@0.65.0`.
 
 [Topic index](../media.md) · [Source provenance](../SOURCES.md)
 
@@ -17,7 +17,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Core Patterns: 3. Text-to-Speech](./tanstack-ai-core-media-generation-f3029c96--core-patterns-3-text-to-speech.md) — 5 KiB
 - [Core Patterns: 4. Voice Creation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-4-voice-creation.md) — 4 KiB
 - [Core Patterns: 5. Audio Transcription](./tanstack-ai-core-media-generation-f3029c96--core-patterns-5-audio-transcription.md) — 4 KiB
-- [Core Patterns: 6. Video Generation (Experimental -- async polling)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-6-video-generation-experimental-async-polling.md) — 8 KiB
+- [Core Patterns: 6. Video Generation (Experimental -- async polling)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-6-video-generation-experimental-async-polling.md) — 10 KiB
 - [Core Patterns: 7. Cost tracking (fal billable units)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-7-cost-tracking-fal-billable-units.md) — 2 KiB
 - [Core Patterns: 8. Durable persistence (job lifecycle + artifact bytes)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-8-durable-persistence-job-lifecycle-artifact-bytes.md) — 5 KiB
 - [Common Hook API](./tanstack-ai-core-media-generation-f3029c96--common-hook-api.md) — 3 KiB

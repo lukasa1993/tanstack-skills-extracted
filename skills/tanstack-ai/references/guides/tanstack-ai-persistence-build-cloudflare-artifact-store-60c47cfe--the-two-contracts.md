@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — The two contracts
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
 
 ## The two contracts
 
@@ -67,6 +67,13 @@ nothing else bounds the transfer:
 | `content-length`, no `content-encoding` | untouched, declared length intact | `bucket.put` direct |
 | chunked (no declared length)            | wrapped, length-less              | multipart           |
 | `content-encoding: gzip`                | wrapped, length-less              | multipart           |
+
+A second source of length-less streams needs no URL fetch at all. A video
+provider with no public URL for the finished video (OpenRouter, Lovable, Sora
+jobs without `url`) returns the download as a `ReadableStream`, and the
+middleware passes that stream to `put` as it is, with no `expectedLength`.
+An SDK stream such as OpenRouter's carries no declared length, so it always
+takes the multipart path.
 
 A provider CDN normally sends `content-length`, so the first row is the common
 case and `bucket.put(key, body)` just works. The recipe below is what makes the

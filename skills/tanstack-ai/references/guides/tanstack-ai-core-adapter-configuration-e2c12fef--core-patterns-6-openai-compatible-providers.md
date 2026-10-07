@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 6. OpenAI-Compatible Providers
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.64.1`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.65.0`.
 
 ## Core Patterns: 6. OpenAI-Compatible Providers
 

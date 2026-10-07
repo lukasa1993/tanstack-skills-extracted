@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.7.2"
+  tanstack-package-version: "0.8.0"
   tanstack-source-skill: "ai-persistence/build-cloudflare-artifact-store"
 ---
 
@@ -92,6 +92,13 @@ nothing else bounds the transfer:
 | `content-length`, no `content-encoding` | untouched, declared length intact | `bucket.put` direct |
 | chunked (no declared length)            | wrapped, length-less              | multipart           |
 | `content-encoding: gzip`                | wrapped, length-less              | multipart           |
+
+A second source of length-less streams needs no URL fetch at all. A video
+provider with no public URL for the finished video (OpenRouter, Lovable, Sora
+jobs without `url`) returns the download as a `ReadableStream`, and the
+middleware passes that stream to `put` as it is, with no `expectedLength`.
+An SDK stream such as OpenRouter's carries no declared length, so it always
+takes the multipart path.
 
 A provider CDN normally sends `content-length`, so the first row is the common
 case and `bucket.put(key, body)` just works. The recipe below is what makes the
@@ -369,7 +376,8 @@ Invariants that matter (asserted by the conformance testkit):
 - `get` / `head` return `null` for a missing key; `delete` is a silent no-op.
 - `put` **overwrites** an existing key.
 - `put` accepts a `ReadableStream` body with **no declared length** — the
-  middleware streams URL-fetched artifacts as exactly that. This is where the
+  middleware streams URL-fetched artifacts, and a provider's video download
+  stream, as exactly that. This is where the
   naive "pass the body straight to `bucket.put`" recipe fails at runtime
   (workerd requires a known length), which is what `putStream` above handles.
 - `get` honours `options.range`: it returns **only** that slice, reports it as
@@ -711,7 +719,7 @@ between runs (see **ai-persistence/build-cloudflare-adapter** for the
   a missing key; `delete` is a silent no-op on an absent key.
 - `put` accepts a `ReadableStream` body with no declared length (a
   `TransformStream`-wrapped stream) and records the real drained size — the
-  shape every URL-fetched artifact arrives in.
+  shape a capped URL-fetched artifact and a provider video stream arrive in.
 - `get` with a `range` returns just that slice, reports it as `range`, and
   still reports the whole object's `size` — what a `206` / `Content-Range`
   response is built from.

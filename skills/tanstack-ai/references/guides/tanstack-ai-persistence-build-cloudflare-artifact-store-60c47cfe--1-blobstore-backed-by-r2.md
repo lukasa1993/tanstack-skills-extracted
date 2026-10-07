@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — 1. BlobStore backed by R2
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.7.2`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
 
 ## 1. BlobStore backed by R2
 
@@ -256,7 +256,8 @@ Invariants that matter (asserted by the conformance testkit):
 - `get` / `head` return `null` for a missing key; `delete` is a silent no-op.
 - `put` **overwrites** an existing key.
 - `put` accepts a `ReadableStream` body with **no declared length** — the
-  middleware streams URL-fetched artifacts as exactly that. This is where the
+  middleware streams URL-fetched artifacts, and a provider's video download
+  stream, as exactly that. This is where the
   naive "pass the body straight to `bucket.put`" recipe fails at runtime
   (workerd requires a known length), which is what `putStream` above handles.
 - `get` honours `options.range`: it returns **only** that slice, reports it as

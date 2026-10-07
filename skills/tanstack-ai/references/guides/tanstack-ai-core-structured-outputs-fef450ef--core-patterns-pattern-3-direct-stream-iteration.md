@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 3: Direct stream iteration
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.64.1`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.65.0`.
 
 ## Core Patterns: Pattern 3: Direct stream iteration
 
