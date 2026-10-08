@@ -1,13 +1,13 @@
 # SKILL — Workflow A — Generate skill tree: Scaffold flow output
 
-[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
+[Guide and prerequisites](./intent-packages-intent-meta-tree-generator-skill-md-15d27e85.md) · Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 ## Workflow A — Generate skill tree: Scaffold flow output
 
 
 If the maintainer uses a custom skills root, replace `skills/` in the paths below with their chosen directory.
 
-Focused batches use the format below through generate-skill’s [planning record procedure](https://github.com/TanStack/intent/blob/08865b781ae153cac61a2cb789044255768c944e/packages/intent/meta/generate-skill/references/planning-records.md), extending the existing tree with the batch. Reading this format does not start full-library discovery.
+Focused batches use the format below through generate-skill’s [planning record procedure](https://github.com/TanStack/intent/blob/683c701dbdc0ee4985c0b09b44fe7c8cad9b7d10/packages/intent/meta/generate-skill/references/planning-records.md), extending the existing tree with the batch. Reading this format does not start full-library discovery.
 
 For the full-library scaffold workflow, produce a single artifact before writing any SKILL.md files:
 

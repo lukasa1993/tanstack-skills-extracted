@@ -421,7 +421,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "file": "references/guides/tanstack-vue-table-getting-started-66211b16.md",
       "sourcePath": "getting-started",
       "bytes": 3239,
@@ -448,10 +448,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "file": "references/guides/tanstack-vue-table-migrate-v8-to-v9-1c6bee18.md",
       "sourcePath": "migrate-v8-to-v9",
-      "bytes": 2812,
+      "bytes": 2896,
       "prerequisites": [
         {
           "id": "tanstack-table-core-migrate-v8-to-v9",
@@ -462,7 +462,7 @@
         {
           "title": "Overview; Adapter audit; Load the affected details; Verify the migration; API discovery",
           "file": "references/guides/tanstack-vue-table-migrate-v8-to-v9-1c6bee18.md",
-          "bytes": 2812
+          "bytes": 2896
         }
       ],
       "examples": []
@@ -475,10 +475,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "file": "references/guides/tanstack-vue-table-table-state-31f07562.md",
       "sourcePath": "table-state",
-      "bytes": 2490,
+      "bytes": 2501,
       "prerequisites": [
         {
           "id": "tanstack-table-core-table-state",
@@ -489,7 +489,7 @@
         {
           "title": "Overview; Read reactive state; Control a slice; API discovery",
           "file": "references/guides/tanstack-vue-table-table-state-31f07562.md",
-          "bytes": 2490
+          "bytes": 2501
         }
       ],
       "examples": []
@@ -533,7 +533,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "file": "references/guides/tanstack-solid-table-getting-started-c05fd401.md",
       "sourcePath": "getting-started",
       "bytes": 3644,
@@ -560,10 +560,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75.md",
       "sourcePath": "migrate-v8-to-v9",
-      "bytes": 2804,
+      "bytes": 2842,
       "prerequisites": [
         {
           "id": "tanstack-table-core-migrate-v8-to-v9",
@@ -574,7 +574,7 @@
         {
           "title": "Overview; Adapter audit; Load the affected details; Verify the migration; API discovery",
           "file": "references/guides/tanstack-solid-table-migrate-v8-to-v9-72c72c75.md",
-          "bytes": 2804
+          "bytes": 2842
         }
       ],
       "examples": []
@@ -587,10 +587,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "file": "references/guides/tanstack-solid-table-table-state-6d957041.md",
       "sourcePath": "table-state",
-      "bytes": 2693,
+      "bytes": 2750,
       "prerequisites": [
         {
           "id": "tanstack-table-core-table-state",
@@ -601,7 +601,7 @@
         {
           "title": "Overview; Read reactive state; Control a slice; API discovery",
           "file": "references/guides/tanstack-solid-table-table-state-6d957041.md",
-          "bytes": 2693
+          "bytes": 2750
         }
       ],
       "examples": []

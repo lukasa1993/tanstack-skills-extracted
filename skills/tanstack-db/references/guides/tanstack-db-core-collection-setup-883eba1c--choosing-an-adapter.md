@@ -1,6 +1,6 @@
 # Collection Setup — Choosing an Adapter
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.12.1`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.12.3`.
 
 ## Choosing an Adapter
 

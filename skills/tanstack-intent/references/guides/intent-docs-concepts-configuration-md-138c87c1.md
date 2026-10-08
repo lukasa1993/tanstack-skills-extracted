@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-concepts-configuration-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.4`.
+Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 [Topic index](../trust-configuration.md) · [Source provenance](../SOURCES.md)
 

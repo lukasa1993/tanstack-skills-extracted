@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-cli-intent-review-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.4`.
+Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./intent-docs-cli-intent-review-md-9cfadc0a--overview.md) — 2 KiB
 - [Quick start](./intent-docs-cli-intent-review-md-9cfadc0a--quick-start.md) — 1 KiB
 - [Options](./intent-docs-cli-intent-review-md-9cfadc0a--options.md) — 2 KiB
-- [Behavior](./intent-docs-cli-intent-review-md-9cfadc0a--behavior.md) — 7 KiB
+- [Behavior](./intent-docs-cli-intent-review-md-9cfadc0a--behavior.md) — 8 KiB
 - [Record a completed review](./intent-docs-cli-intent-review-md-9cfadc0a--record-a-completed-review.md) — 6 KiB
 - [Default and JSON output](./intent-docs-cli-intent-review-md-9cfadc0a--default-and-json-output.md) — 2 KiB
 - [Automated checks](./intent-docs-cli-intent-review-md-9cfadc0a--automated-checks.md) — 1 KiB

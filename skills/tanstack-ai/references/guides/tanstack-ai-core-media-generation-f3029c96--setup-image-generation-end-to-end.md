@@ -1,6 +1,6 @@
 # Media Generation — Setup -- Image Generation End-to-End
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.65.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.65.1`.
 
 ## Setup -- Image Generation End-to-End
 

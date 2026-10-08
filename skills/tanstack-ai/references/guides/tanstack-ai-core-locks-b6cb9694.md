@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-locks"></a>
 
-Published skill · `@tanstack/ai@0.65.0`.
+Published skill · `@tanstack/ai@0.65.1`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # SKILL — Constraints
 
-[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
+[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 ## Constraints
 
@@ -31,6 +31,6 @@
 | Dense surfaces flagged                | Topics with >10 patterns noted as reference_candidates                                                                               |
 | Lifecycle skills considered           | Suggest journey skills when docs have the material                                                                                   |
 | Cross-references mapped               | Skills that illuminate each other get "See also" pointers                                                                            |
-| **Documentation coverage**            | Read all local narrative files; document external sampling under the [Phase 3 reading policy](https://github.com/TanStack/intent/blob/08865b781ae153cac61a2cb789044255768c944e/packages/intent/meta/domain-discovery/references/deep-read.md#reading-order) |
+| **Documentation coverage**            | Read all local narrative files; document external sampling under the [Phase 3 reading policy](https://github.com/TanStack/intent/blob/683c701dbdc0ee4985c0b09b44fe7c8cad9b7d10/packages/intent/meta/domain-discovery/references/deep-read.md#reading-order) |
 
 ---

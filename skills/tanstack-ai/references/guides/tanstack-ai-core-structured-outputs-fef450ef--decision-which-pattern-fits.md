@@ -1,6 +1,6 @@
 # Structured Outputs — Decision: which pattern fits
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.65.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.65.1`.
 
 ## Decision: which pattern fits
 

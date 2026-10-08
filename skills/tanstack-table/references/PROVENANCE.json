@@ -143,27 +143,27 @@
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "sourcePath": "getting-started",
-      "sha256": "85a7dcf2f0b3f5633b97d4bf7180e386e6a2a0fd443c5841c43d9194008451c4"
+      "sha256": "beef6d2a6ddf1fe7cdf83754da0b45dd1b3273bac3b44cacd92b953e97d7b058"
     },
     {
       "id": "tanstack-vue-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "0a388e36d563ed2e0952e574b8209ce0929d81036bdb29741439e3fcb6672f6d"
+      "sha256": "20e852070ebd5f7eef3ba88780f343e730f1ed4d6f6f0f9cacbd7beb79f5b22f"
     },
     {
       "id": "tanstack-vue-table-table-state",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "sourcePath": "table-state",
-      "sha256": "d5ad84a69cd0cb65c48df170e4cd91f63c76020cc363425213683eb38b345291"
+      "sha256": "aeb006489cb90660888fe0f12b179dcca6a629fefa05a8ddec7342d4344f3169"
     },
     {
       "id": "tanstack-solid-table-devtools",
@@ -179,27 +179,27 @@
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "sourcePath": "getting-started",
-      "sha256": "bef9638da347f30fb919cf8b1bc51a567261d5a38cf266be41d690a4f2d1c04c"
+      "sha256": "bc9bc39ee1c328874f9026712e4ffb9ba0d712ea32a72165031819eeca13d221"
     },
     {
       "id": "tanstack-solid-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "e0ce4312e876bb52bb933995b9bc52e282b223e3b27189c0138abf30c9c57ded"
+      "sha256": "4c9f7093847ee30930b1efeb35301328bc972eb7fbc36591f938c073f7026803"
     },
     {
       "id": "tanstack-solid-table-table-state",
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-table",
-      "version": "9.2.6",
+      "version": "9.2.7",
       "sourcePath": "table-state",
-      "sha256": "9d37bc8b728fa24b7777bc7484a5c5e50229b7b02288fce765fa1a091cf24688"
+      "sha256": "7ccb430492a4cc0545eb7957b77b3c725159463946c39219b839f09c0e3eaa90"
     },
     {
       "id": "tanstack-svelte-table-getting-started",

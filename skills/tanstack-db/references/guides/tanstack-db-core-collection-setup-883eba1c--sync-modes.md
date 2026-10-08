@@ -1,6 +1,6 @@
 # Collection Setup — Sync Modes
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.12.1`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.12.3`.
 
 ## Sync Modes
 

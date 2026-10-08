@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "solid"
   tanstack-library: "@tanstack/solid-table"
-  tanstack-library-version: "9.2.6"
+  tanstack-library-version: "9.2.7"
   tanstack-package: "@tanstack/solid-table"
-  tanstack-package-version: "9.2.6"
+  tanstack-package-version: "9.2.7"
   tanstack-requires: "[\"tanstack-table-core-migrate-v8-to-v9\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/solid/guide/migrating.md\",\"TanStack/table:packages/solid-table/src/index.tsx\",\"TanStack/table:examples/solid/basic-use-table\"]"
@@ -28,7 +28,7 @@ Framework prerequisite: Solid 1.3 or newer (`solid-js >=1.3`).
 - [ ] Configure explicit features/row-model slots and complete the shared core checklist.
 - [ ] Replace `getState()` with narrow tracked atom reads, or intentional whole-store reads. Remove global `onStateChange`.
 - [ ] Pair a controlled getter with its Solid setter, or supply a Solid Store atom. Handle both value and functional updater forms.
-- [ ] Keep atom reads inside JSX, memos, or effects. A `Subscribe` child receives atoms, and its component body is untracked.
+- [ ] Keep atom reads inside JSX, memos, or effects. Replace deprecated `table.Subscribe` wrappers with direct `table.atoms` reads. Component bodies are untracked.
 - [ ] Replace function rendering with `FlexRender` components; adopt `tableOptions` and `createTableHook` only for repeated conventions.
 
 ## Load the affected details

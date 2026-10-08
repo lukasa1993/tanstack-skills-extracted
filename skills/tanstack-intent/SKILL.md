@@ -37,6 +37,6 @@ Use these separate product skills when the task crosses their boundary: `tanstac
 
 ## Source status
 
-Official documentation from `TanStack/intent`, matched to these verified release inputs: @tanstack/intent@0.5.4.
+Official documentation from `TanStack/intent`, matched to these verified release inputs: @tanstack/intent@0.5.5.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

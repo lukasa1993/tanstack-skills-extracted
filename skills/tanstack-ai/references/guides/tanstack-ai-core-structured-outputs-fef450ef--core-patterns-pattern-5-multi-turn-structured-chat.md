@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 5: Multi-turn structured chat
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.65.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.65.1`.
 
 ## Core Patterns: Pattern 5: Multi-turn structured chat
 

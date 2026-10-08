@@ -1,6 +1,6 @@
 # Intent Maintainer — Choose repository distribution
 
-[Guide and prerequisites](./intent-docs-cli-intent-maintainer-md-00f7d3ff.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
+[Guide and prerequisites](./intent-docs-cli-intent-maintainer-md-00f7d3ff.md) · Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 ## Choose repository distribution
 

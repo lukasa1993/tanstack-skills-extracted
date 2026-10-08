@@ -1,6 +1,6 @@
 # SKILL — Cross-model compatibility notes
 
-[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
+[Guide and prerequisites](./intent-packages-intent-meta-domain-discovery-skill-md-0976b3f5.md) · Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 ## Cross-model compatibility notes
 

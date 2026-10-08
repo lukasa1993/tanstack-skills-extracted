@@ -1,6 +1,6 @@
 # Intent Review — Behavior
 
-[Guide and prerequisites](./intent-docs-cli-intent-review-md-9cfadc0a.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
+[Guide and prerequisites](./intent-docs-cli-intent-review-md-9cfadc0a.md) · Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 ## Behavior
 
@@ -57,7 +57,7 @@ When the previous stored baseline is unavailable, recording this fully resolved 
 
 ### Source mappings
 
-Discovery covers first-party `skills/**/SKILL.md` files in the repository and its packages, custom roots containing `_artifacts/`, exact paths declared in the skill tree, and previously reviewed skill paths. An unrelated `SKILL.md` elsewhere does not automatically become a library skill. Review excludes `node_modules`, even without a Git ignore rule.
+Discovery covers first-party `skills/**/SKILL.md` files in the repository and its packages that [`review.ignore`](./intent-docs-cli-intent-review-md-9cfadc0a.md#ignored-paths) does not match, custom roots containing `_artifacts/`, exact paths declared in the skill tree, and previously reviewed skill paths. An unrelated `SKILL.md` elsewhere does not automatically become a library skill. Review excludes `node_modules`, even without a Git ignore rule.
 
 | Source entry | Resolution |
 | --- | --- |
@@ -83,6 +83,8 @@ review:
 ```
 
 Entries use the same Git glob syntax as source mappings. An entry that is not a non-empty string fails review with the path of the tree file.
+
+A `skills/**/SKILL.md` that matches `review.ignore` is not a library skill: `maintainer setup` does not register it, and review skips it unless the skill tree declares its path or the review state already records it. Use this for agent skills kept beside the library, such as the skills of a Claude Code plugin.
 
 ### Required planning documents
 

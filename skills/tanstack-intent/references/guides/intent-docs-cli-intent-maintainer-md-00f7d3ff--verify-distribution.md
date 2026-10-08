@@ -1,6 +1,6 @@
 # Intent Maintainer — Verify distribution
 
-[Guide and prerequisites](./intent-docs-cli-intent-maintainer-md-00f7d3ff.md) · Release-matched documentation · `@tanstack/intent@0.5.4`.
+[Guide and prerequisites](./intent-docs-cli-intent-maintainer-md-00f7d3ff.md) · Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 ## Verify distribution
 
@@ -8,6 +8,6 @@ Before releasing a library's exports, install the selected skills in disposable 
 
 Use each host's native plugin flow, including [Cursor](https://cursor.com/docs/reference/plugins). Inspect all loaded components: the repository root becomes the plugin root, so preserved or automatically discovered commands, agents, hooks, and MCP configuration are not limited by the skill selection. Run a real consumer task; valid metadata does not establish correct guidance.
 
-When changing Intent's distribution implementation, run the [contributor compatibility gate](https://github.com/TanStack/intent/blob/08865b781ae153cac61a2cb789044255768c944e/CONTRIBUTING.md#distribution-compatibility). That guide owns the required tools, verified versions, and automated checks.
+When changing Intent's distribution implementation, run the [contributor compatibility gate](https://github.com/TanStack/intent/blob/683c701dbdc0ee4985c0b09b44fe7c8cad9b7d10/CONTRIBUTING.md#distribution-compatibility). That guide owns the required tools, verified versions, and automated checks.
 
 Cursor acceptance and agent task quality remain separate checks. Record an unavailable host or missing task evidence as incomplete, even when the automated gate passes.

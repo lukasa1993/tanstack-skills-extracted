@@ -1,6 +1,6 @@
 # Adapter Configuration — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.65.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.65.1`.
 
 ## Common Mistakes
 

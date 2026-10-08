@@ -1,6 +1,6 @@
 # Custom Backend Integration — Cross-References
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.65.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.65.1`.
 
 ## Cross-References
 

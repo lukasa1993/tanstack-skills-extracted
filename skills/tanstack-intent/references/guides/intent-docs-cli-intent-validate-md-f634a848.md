@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-cli-intent-validate-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.4`.
+Release-matched documentation · `@tanstack/intent@0.5.5`.
 
 [Topic index](../maintainer-workflow.md) · [Source provenance](../SOURCES.md)
 
