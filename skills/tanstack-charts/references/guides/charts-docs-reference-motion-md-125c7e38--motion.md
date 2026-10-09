@@ -1,6 +1,6 @@
 # Motion — `motion`
 
-[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## `motion`
 
@@ -55,6 +55,28 @@ through their exit transition.
 Data-less `crosshair` marks use the same keyed focus-motion path. Rapid pointer
 or keyboard retargeting preserves the guide elements and incoming spring
 velocity; labels remain aligned to their moving rules.
+
+Inline mark `states` wait while entrance or data motion is active. The latest
+state is applied when that motion settles. Applying another geometry
+transition to the same marks would interrupt the running data transition.
+This includes radius changes such as growing a focused dot. A continuously
+updating chart can keep these states deferred.
+
+Use a separate `whenFocused` mark for a focus indicator that must appear
+during entrance motion. The focus layer has its own visibility and does not
+replace the animated mark's geometry:
+
+```ts
+import { dot, lineY, whenFocused } from '@tanstack/charts'
+
+const marks = [
+  lineY(rows, { x: 'x', y: 'y' }),
+  dot(rows, { x: 'x', y: 'y', r: 2 }),
+  whenFocused(dot(rows, { id: 'focus-dots', x: 'x', y: 'y', r: 6 }), {
+    match: 'x',
+  }),
+]
+```
 
 The built-in HTML tooltip also consumes this renderer's transition. Entry,
 movement, retargeting, and exit therefore use the same spring without copying

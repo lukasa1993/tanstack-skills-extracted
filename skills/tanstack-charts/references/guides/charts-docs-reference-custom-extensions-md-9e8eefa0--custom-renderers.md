@@ -1,6 +1,6 @@
 # Custom Extensions — Custom renderers
 
-[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Custom renderers
 

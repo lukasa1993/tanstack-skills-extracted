@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-table-devtools"></a>
 
-Published skill · `@tanstack/react-table-devtools@9.2.5`.
+Published skill · `@tanstack/react-table-devtools@9.2.8`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

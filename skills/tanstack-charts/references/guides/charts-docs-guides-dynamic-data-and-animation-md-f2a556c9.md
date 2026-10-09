@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-dynamic-data-and-animation-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../composition.md) · [Source provenance](../SOURCES.md)
 

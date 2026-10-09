@@ -7,9 +7,9 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.65.1"
+  tanstack-package-version: "0.66.0"
   tanstack-source-skill: "ai-core/custom-backend-integration"
-  tanstack-sources: "[\"TanStack/ai:docs/chat/connection-adapters.md\"]"
+  tanstack-sources: "[\"TanStack/ai:docs/transports/sse.md\",\"TanStack/ai:docs/transports/http-stream.md\",\"TanStack/ai:docs/transports/request-options.md\",\"TanStack/ai:docs/transports/custom.md\"]"
   tanstack-type: "composition"
 ---
 
@@ -411,7 +411,7 @@ Mitigations:
 - Use a single persistent WebSocket via `SubscribeConnectionAdapter` instead of
   per-request SSE connections
 
-Source: `docs/chat/connection-adapters.md`
+Source: `docs/transports/custom.md`
 
 ### c. MEDIUM: HTTP stream without implementing reconnection
 

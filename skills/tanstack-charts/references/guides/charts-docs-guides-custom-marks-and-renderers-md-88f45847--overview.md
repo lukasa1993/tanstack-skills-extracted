@@ -1,6 +1,6 @@
 # Custom Marks And Renderers — Overview
 
-[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-guides-custom-marks-and-renderers-md-88f45847.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 Use a custom mark when a visualization fits the shared scene model but is not
 expressible as a useful composition of built-in Cartesian, polar, or

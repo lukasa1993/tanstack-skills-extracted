@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — 4. Wire it into the chat route
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.8.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.8.1`.
 
 ## 4. Wire it into the chat route
 

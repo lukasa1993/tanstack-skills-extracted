@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "1.0.0"
+  tanstack-library-version: "1.1.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.1.0"
   tanstack-source-skill: "build-chart-interactions"
   tanstack-sources: "[\"TanStack/charts:docs/guides/tooltips-and-focus.md\",\"TanStack/charts:docs/guides/interactions-and-selections.md\",\"TanStack/charts:docs/reference/focus-and-interaction.md\",\"TanStack/charts:docs/reference/marks/focus-guide.md\"]"
   tanstack-type: "core"

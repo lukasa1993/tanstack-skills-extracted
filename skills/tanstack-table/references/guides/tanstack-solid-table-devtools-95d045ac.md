@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-table-devtools"></a>
 
-Published skill · `@tanstack/solid-table-devtools@9.2.5`.
+Published skill · `@tanstack/solid-table-devtools@9.2.8`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

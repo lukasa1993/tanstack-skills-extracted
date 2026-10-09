@@ -1,6 +1,6 @@
 # Scales Guides And Color — Automatic guide layout
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Automatic guide layout
 

@@ -1,6 +1,6 @@
 # Installation — React Native and Expo
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## React Native and Expo
 

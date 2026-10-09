@@ -1,6 +1,6 @@
 # Middleware — Built-in: toolCacheMiddleware
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.65.1`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.66.0`.
 
 ## Built-in: toolCacheMiddleware
 

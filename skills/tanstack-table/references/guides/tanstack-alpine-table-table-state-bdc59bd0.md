@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-alpine-table-table-state"></a>
 
-Published skill · `@tanstack/alpine-table@9.2.6`.
+Published skill · `@tanstack/alpine-table@9.2.8`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 

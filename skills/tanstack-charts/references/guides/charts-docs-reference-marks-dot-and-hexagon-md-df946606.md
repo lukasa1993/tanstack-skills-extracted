@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-marks-dot-and-hexagon-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../marks-cartesian-statistical.md) · [Source provenance](../SOURCES.md)
 
@@ -52,6 +52,10 @@ function dot<TDatum>(
 | `strokeOpacity` | `number`                             | SVG default          | Stroke opacity                        |
 | `strokeWidth`   | `number`                             | SVG default          | Stroke width                          |
 | `states`        | `readonly ChartMarkState[]`          | None                 | Focus-driven presentation overrides   |
+
+With the motion renderer, inline `states` wait for active entrance or data
+motion to settle. For a dot that appears immediately on focus during motion,
+use a separate [`whenFocused` mark](./charts-docs-reference-motion-md-125c7e38.md#source-charts-docs-reference-motion-md).
 
 `rScale` is called only for finite, nonnegative raw radii. The mapped result
 must also be finite and nonnegative or the row is skipped.

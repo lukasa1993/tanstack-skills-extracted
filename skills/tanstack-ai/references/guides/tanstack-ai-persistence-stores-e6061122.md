@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-stores"></a>
 
-Published skill · `@tanstack/ai-persistence@0.8.0`.
+Published skill · `@tanstack/ai-persistence@0.8.1`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 

@@ -1,10 +1,10 @@
 # Comparison — Bundle snapshot
 
-[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Bundle snapshot
 
-Baseline date: `2026-10-03`.
+Baseline date: `2026-10-08`.
 
 Controlled ranges cover 12 independently built, minified browser consumers:
 line, bar, area, and scatter at basic, interactive, and advanced tiers. Only
@@ -20,7 +20,7 @@ Vega-Lite, AG Charts, and uPlot main exports were read from Bundlephobia on July
 
 | Library            | Bundle size                            |   React externalized | Evidence                                                   |
 | ------------------ | -------------------------------------- | -------------------: | ---------------------------------------------------------- |
-| TanStack Charts    | 42.90–49.18 kB gzip                    |       Not applicable | Controlled suite                                           |
+| TanStack Charts    | 43.21–49.50 kB gzip                    |       Not applicable | Controlled suite                                           |
 | D3                 | 90 KB gzip                             |                    — | External main export                                       |
 | Chart.js           | 45.78–59.61 kB gzip                    |                    — | Controlled suite                                           |
 | Apache ECharts     | 156.77–177.34 kB gzip                  |                    — | Controlled suite                                           |

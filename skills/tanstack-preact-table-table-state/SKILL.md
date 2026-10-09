@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "preact"
   tanstack-library: "@tanstack/preact-table"
-  tanstack-library-version: "9.2.6"
+  tanstack-library-version: "9.2.8"
   tanstack-package: "@tanstack/preact-table"
-  tanstack-package-version: "9.2.6"
+  tanstack-package-version: "9.2.8"
   tanstack-requires: "[\"tanstack-table-core-table-state\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/preact/guide/table-state.md\",\"TanStack/table:examples/preact/basic-subscribe\",\"TanStack/table:packages/preact-table/src/useTable.ts\"]"

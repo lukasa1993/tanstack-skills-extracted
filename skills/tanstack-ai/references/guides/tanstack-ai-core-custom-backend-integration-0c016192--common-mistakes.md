@@ -1,6 +1,6 @@
 # Custom Backend Integration — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.65.1`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.66.0`.
 
 ## Common Mistakes
 
@@ -69,7 +69,7 @@ Mitigations:
 - Use a single persistent WebSocket via `SubscribeConnectionAdapter` instead of
   per-request SSE connections
 
-Source: `docs/chat/connection-adapters.md`
+Source: `docs/transports/custom.md`
 
 ### c. MEDIUM: HTTP stream without implementing reconnection
 

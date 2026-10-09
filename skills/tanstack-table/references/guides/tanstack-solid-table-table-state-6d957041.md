@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-table-table-state"></a>
 
-Published skill · `@tanstack/solid-table@9.2.7`.
+Published skill · `@tanstack/solid-table@9.2.8`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

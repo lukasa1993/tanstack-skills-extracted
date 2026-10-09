@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-prisma-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@0.8.0`.
+Published skill · `@tanstack/ai-persistence@0.8.1`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../getting-started.md) · [Source provenance](../SOURCES.md)
 

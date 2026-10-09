@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-charts-prepare-chart-data"></a>
 
-Published skill · `@tanstack/charts@1.0.0`.
+Published skill · `@tanstack/charts@1.1.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 

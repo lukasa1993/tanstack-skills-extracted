@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/solid-table-devtools@9.2.5
+Published package: @tanstack/solid-table-devtools@9.2.8
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

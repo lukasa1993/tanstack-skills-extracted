@@ -1,6 +1,6 @@
 # Tooltips And Focus — Rich and nested tooltips
 
-[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Rich and nested tooltips
 

@@ -1,6 +1,6 @@
 # Types — Capability-specific types
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Capability-specific types
 
@@ -63,8 +63,8 @@ their behavior:
   and
   [Interactive categorical legend](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md#source-charts-docs-reference-scales-guides-and-color-md).
 - `@tanstack/charts/interaction/brush`: `BrushRange`, `BrushXChange`,
-  `BrushXSource`, `BrushXTarget`, `BrushXValuesOptions`, and
-  `BrushXContinuousOptions`. See
+  `BrushXFormatContext`, `BrushXSource`, `BrushXTarget`,
+  `BrushXValuesOptions`, and `BrushXContinuousOptions`. See
   [Horizontal brush](./charts-docs-reference-focus-and-interaction-md-949b11fe.md#source-charts-docs-reference-focus-and-interaction-md).
 - `@tanstack/charts/interaction/cursor`: `ContinuousCursorValue`,
   `ContinuousCursorPosition`, `ContinuousCursorPointerSource`,

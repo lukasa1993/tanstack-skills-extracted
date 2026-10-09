@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
-  tanstack-library-version: "9.2.7"
+  tanstack-library-version: "9.2.8"
   tanstack-package: "@tanstack/vue-table"
-  tanstack-package-version: "9.2.7"
+  tanstack-package-version: "9.2.8"
   tanstack-requires: "[\"tanstack-table-core\"]"
   tanstack-source-skill: "getting-started"
   tanstack-sources: "[\"TanStack/table:docs/framework/vue/guide/migrating.md\",\"TanStack/table:examples/vue/basic-use-table\",\"TanStack/table:packages/vue-table/src/index.ts\",\"TanStack/table:docs/framework/vue/guide/composable-tables.md\",\"TanStack/table:examples/vue/composable-tables\",\"TanStack/table:packages/vue-table/src/createTableHook.ts\",\"TanStack/table:examples/vue/with-tanstack-query\",\"TanStack/table:docs/framework/vue/guide/pagination.md\",\"TanStack/table:docs/framework/vue/guide/virtualization.md\",\"TanStack/table:examples/vue/virtualized-rows\",\"TanStack/table:examples/vue/virtualized-columns\",\"TanStack/table:examples/vue/virtualized-infinite-scrolling\"]"

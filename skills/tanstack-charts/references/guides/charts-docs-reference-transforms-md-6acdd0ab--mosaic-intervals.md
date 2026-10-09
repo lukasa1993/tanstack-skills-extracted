@@ -1,6 +1,6 @@
 # Transforms — Mosaic intervals
 
-[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Mosaic intervals
 

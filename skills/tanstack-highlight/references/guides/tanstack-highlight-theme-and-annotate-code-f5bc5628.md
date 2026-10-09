@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-highlight-theme-and-annotate-code"></a>
 
-Published skill · `@tanstack/highlight@1.0.0`.
+Published skill · `@tanstack/highlight@1.1.0`.
 
 [Topic index](../themes-annotations.md) · [Source provenance](../SOURCES.md)
 

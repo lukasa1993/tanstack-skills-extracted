@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Pattern 1: Server-Only Tool
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.65.1`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.66.0`.
 
 ## Core Patterns: Pattern 1: Server-Only Tool
 

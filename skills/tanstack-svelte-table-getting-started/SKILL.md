@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "svelte"
   tanstack-library: "@tanstack/svelte-table"
-  tanstack-library-version: "9.2.6"
+  tanstack-library-version: "9.2.8"
   tanstack-package: "@tanstack/svelte-table"
-  tanstack-package-version: "9.2.6"
+  tanstack-package-version: "9.2.8"
   tanstack-requires: "[\"tanstack-table-core\"]"
   tanstack-source-skill: "getting-started"
   tanstack-sources: "[\"TanStack/table:docs/framework/svelte/guide/migrating.md\",\"TanStack/table:examples/svelte/basic-create-table\",\"TanStack/table:packages/svelte-table/src/index.ts\",\"TanStack/table:docs/framework/svelte/guide/composable-tables.md\",\"TanStack/table:examples/svelte/composable-tables\",\"TanStack/table:packages/svelte-table/src/createTableHook.svelte.ts\",\"TanStack/table:examples/svelte/with-tanstack-query\",\"TanStack/table:docs/framework/svelte/guide/pagination.md\",\"TanStack/table:docs/framework/svelte/guide/virtualization.md\",\"TanStack/table:examples/svelte/virtualized-rows\",\"TanStack/table:examples/svelte/virtualized-columns\",\"TanStack/table:examples/svelte/virtualized-infinite-scrolling\"]"

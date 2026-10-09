@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/table-core"
-  tanstack-library-version: "9.2.6"
+  tanstack-library-version: "9.2.8"
   tanstack-package: "@tanstack/table-core"
-  tanstack-package-version: "9.2.6"
+  tanstack-package-version: "9.2.8"
   tanstack-requires: "[\"tanstack-table-core\"]"
   tanstack-source-skill: "table-state"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/table-state.md\",\"TanStack/table:packages/table-core/src/core/table/coreTablesFeature.types.ts\",\"TanStack/table:packages/table-core/src/core/table/coreTablesFeature.utils.ts\",\"TanStack/table:packages/table-core/src/core/reactivity/coreReactivityFeature.utils.ts\"]"

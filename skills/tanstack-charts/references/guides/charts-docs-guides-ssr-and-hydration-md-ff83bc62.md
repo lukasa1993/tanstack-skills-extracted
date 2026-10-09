@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-ssr-and-hydration-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../production.md) · [Source provenance](../SOURCES.md)
 
@@ -88,6 +88,43 @@ receives the already created browser runtime.
 Do not conditionally replace a chart with a different component only because
 the code is executing on the server. That creates a different tree and gives
 up the shared render path.
+
+## Client-only React charts
+
+To skip chart compilation and SVG output on the server, let the application
+mount the chart after hydration. Reserve its space with an ordinary wrapper:
+
+```tsx
+'use client'
+
+import { useEffect, useState, type ReactNode } from 'react'
+
+export function ClientOnlyChart({ children }: { children: ReactNode }) {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
+  return (
+    <div style={{ width: '100%', height: 260 }}>
+      {mounted ? children : null}
+    </div>
+  )
+}
+```
+
+Wrap a `<Chart height={260} ... />` in this component. The server and first
+browser render both contain the empty wrapper, then the effect mounts the
+chart. Match the wrapper height to the chart, or give both the same aspect
+ratio. The wrapper is application-owned, there is no `prerender` prop on
+`Chart`.
+
+This skips the child's rendering, not work done by its parent to prepare data
+or construct definitions. Put browser-only setup inside the mounted child.
+In Next.js, keep this wrapper and chart definitions within a client component
+as described in the [React adapter](./charts-docs-framework-react-adapter-md-173a5842.md#source-charts-docs-framework-react-adapter-md).
+
+Do not switch based on `typeof window` during render, the server and first
+browser trees would differ. This pattern also gives up visible chart geometry
+before JavaScript loads, so keep normal SVG SSR when that matters.
 
 ## Canvas server shell
 

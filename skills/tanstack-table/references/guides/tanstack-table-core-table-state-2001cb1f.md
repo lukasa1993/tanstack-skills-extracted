@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-table-core-table-state"></a>
 
-Published skill · `@tanstack/table-core@9.2.6`.
+Published skill · `@tanstack/table-core@9.2.8`.
 
 [Topic index](../additional-guidance.md) · [Source provenance](../SOURCES.md)
 

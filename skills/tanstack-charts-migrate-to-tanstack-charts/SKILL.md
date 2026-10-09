@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "1.0.0"
+  tanstack-library-version: "1.1.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.1.0"
   tanstack-requires: "[\"tanstack-charts-design-a-chart\",\"tanstack-charts-debug-and-verify-charts\"]"
   tanstack-source-skill: "migrate-to-tanstack-charts"
   tanstack-sources: "[\"TanStack/charts:docs/guides/migrating.md\",\"TanStack/charts:packages/charts-core-d3/docs/observable-plot-migration.md\",\"TanStack/charts:packages/charts-core-d3/docs/tanstack-stats-migration.md\"]"

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-lit-table-table-state"></a>
 
-Published skill · `@tanstack/lit-table@9.2.6`.
+Published skill · `@tanstack/lit-table@9.2.8`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 

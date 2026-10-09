@@ -10,7 +10,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-d384359d.md",
       "sourcePath": "ai-core",
       "bytes": 7618,
@@ -32,7 +32,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-adapter-configuration-e2c12fef.md",
       "sourcePath": "ai-core/adapter-configuration",
       "bytes": 3130,
@@ -124,7 +124,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-ag-ui-protocol-5877d289.md",
       "sourcePath": "ai-core/ag-ui-protocol",
       "bytes": 1784,
@@ -176,7 +176,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-chat-experience-6cd3502a.md",
       "sourcePath": "ai-core/chat-experience",
       "bytes": 3593,
@@ -253,7 +253,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192.md",
       "sourcePath": "ai-core/custom-backend-integration",
       "bytes": 1397,
@@ -277,7 +277,7 @@
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-ai-core-custom-backend-integration-0c016192--common-mistakes.md",
-          "bytes": 4594
+          "bytes": 4587
         },
         {
           "title": "Cross-References",
@@ -295,7 +295,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-debug-logging-12e2d18d.md",
       "sourcePath": "ai-core/debug-logging",
       "bytes": 10348,
@@ -317,7 +317,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-middleware-b87affa9.md",
       "sourcePath": "ai-core/middleware",
       "bytes": 2638,
@@ -389,7 +389,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-structured-outputs-fef450ef.md",
       "sourcePath": "ai-core/structured-outputs",
       "bytes": 3028,
@@ -466,7 +466,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-tool-calling-e2b5ca3c.md",
       "sourcePath": "ai-core/tool-calling",
       "bytes": 2861,
@@ -543,7 +543,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-media-generation-f3029c96.md",
       "sourcePath": "ai-core/media-generation",
       "bytes": 3624,
@@ -562,7 +562,7 @@
         {
           "title": "Core Patterns: 1. Image Generation",
           "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md",
-          "bytes": 12608
+          "bytes": 13780
         },
         {
           "title": "Core Patterns: 2. Audio Generation (Music, Sound Effects)",
@@ -587,7 +587,7 @@
         {
           "title": "Core Patterns: 6. Video Generation (Experimental -- async polling)",
           "file": "references/guides/tanstack-ai-core-media-generation-f3029c96--core-patterns-6-video-generation-experimental-async-polling.md",
-          "bytes": 9641
+          "bytes": 9551
         },
         {
           "title": "Core Patterns: 7. Cost tracking (fal billable units)",
@@ -625,7 +625,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-client-persistence-9ee3012c.md",
       "sourcePath": "ai-core/client-persistence",
       "bytes": 10409,
@@ -647,7 +647,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai",
-      "version": "0.65.1",
+      "version": "0.66.0",
       "file": "references/guides/tanstack-ai-core-locks-b6cb9694.md",
       "sourcePath": "ai-core/locks",
       "bytes": 5032,
@@ -669,7 +669,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-2fec28cd.md",
       "sourcePath": "ai-persistence",
       "bytes": 12981,
@@ -691,7 +691,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-server-3b558cfc.md",
       "sourcePath": "ai-persistence/server",
       "bytes": 9545,
@@ -713,7 +713,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-stores-e6061122.md",
       "sourcePath": "ai-persistence/stores",
       "bytes": 2992,
@@ -800,7 +800,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md",
       "sourcePath": "ai-persistence/build-custom-adapter",
       "bytes": 1798,
@@ -862,7 +862,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-build-drizzle-adapter-5655a048.md",
       "sourcePath": "ai-persistence/build-drizzle-adapter",
       "bytes": 1895,
@@ -919,7 +919,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-build-prisma-adapter-2687241c.md",
       "sourcePath": "ai-persistence/build-prisma-adapter",
       "bytes": 1640,
@@ -971,7 +971,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md",
       "sourcePath": "ai-persistence/build-cloudflare-adapter",
       "bytes": 2267,
@@ -1043,7 +1043,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-persistence",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md",
       "sourcePath": "ai-persistence/build-cloudflare-artifact-store",
       "bytes": 1809,
@@ -1100,7 +1100,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-memory",
-      "version": "0.2.10",
+      "version": "0.2.11",
       "file": "references/guides/tanstack-ai-memory-7f80961d.md",
       "sourcePath": "tanstack-ai-memory",
       "bytes": 4483,
@@ -1122,7 +1122,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-memory",
-      "version": "0.2.10",
+      "version": "0.2.11",
       "file": "references/guides/tanstack-ai-memory-hindsight-9ec344e6.md",
       "sourcePath": "tanstack-ai-memory-hindsight",
       "bytes": 1827,
@@ -1144,7 +1144,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-memory",
-      "version": "0.2.10",
+      "version": "0.2.11",
       "file": "references/guides/tanstack-ai-memory-honcho-07008c21.md",
       "sourcePath": "tanstack-ai-memory-honcho",
       "bytes": 1764,
@@ -1166,7 +1166,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-memory",
-      "version": "0.2.10",
+      "version": "0.2.11",
       "file": "references/guides/tanstack-ai-memory-in-memory-4965b7c3.md",
       "sourcePath": "tanstack-ai-memory-in-memory",
       "bytes": 1712,
@@ -1188,7 +1188,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-memory",
-      "version": "0.2.10",
+      "version": "0.2.11",
       "file": "references/guides/tanstack-ai-memory-mem0-e91f689b.md",
       "sourcePath": "tanstack-ai-memory-mem0",
       "bytes": 1656,
@@ -1210,7 +1210,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-memory",
-      "version": "0.2.10",
+      "version": "0.2.11",
       "file": "references/guides/tanstack-ai-memory-redis-d13f2626.md",
       "sourcePath": "tanstack-ai-memory-redis",
       "bytes": 3303,
@@ -1232,7 +1232,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-mcp",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "file": "references/guides/tanstack-ai-mcp-e69fe118.md",
       "sourcePath": "ai-mcp",
       "bytes": 3939,
@@ -1349,7 +1349,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-skills",
-      "version": "0.1.15",
+      "version": "0.1.16",
       "file": "references/guides/tanstack-ai-skills-f9e7226a.md",
       "sourcePath": "ai-skills",
       "bytes": 5464,
@@ -1371,51 +1371,51 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-code-mode",
-      "version": "0.4.21",
+      "version": "0.5.0",
       "file": "references/guides/tanstack-ai-code-mode-e0b454df.md",
       "sourcePath": "ai-code-mode",
-      "bytes": 1862,
+      "bytes": 1861,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--overview.md",
-          "bytes": 288
+          "bytes": 287
         },
         {
           "title": "Setup",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--setup.md",
-          "bytes": 2749
+          "bytes": 2748
         },
         {
           "title": "Core Patterns: 1. Choosing an Isolate Driver",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-1-choosing-an-isolate-driver.md",
-          "bytes": 3088
+          "bytes": 3087
         },
         {
           "title": "Core Patterns: 2. Adding Persistent Snippets with codeModeWithSnippets()",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-2-adding-persistent-snippets-with-codemodewithsnippets.md",
-          "bytes": 3605
+          "bytes": 3604
         },
         {
           "title": "Core Patterns: 3. Client-Side Execution Progress Display",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-3-client-side-execution-progress-display.md",
-          "bytes": 4158
+          "bytes": 4157
         },
         {
           "title": "Core Patterns: 4. Lazy Tools",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--core-patterns-4-lazy-tools.md",
-          "bytes": 4524
+          "bytes": 4523
         },
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--common-mistakes.md",
-          "bytes": 4272
+          "bytes": 4271
         },
         {
           "title": "Cross-References",
           "file": "references/guides/tanstack-ai-code-mode-e0b454df--cross-references.md",
-          "bytes": 515
+          "bytes": 514
         }
       ],
       "examples": []
@@ -1428,7 +1428,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ai-sandbox",
-      "version": "0.5.19",
+      "version": "0.5.20",
       "file": "references/guides/tanstack-ai-sandbox-c1c16d85.md",
       "sourcePath": "ai-sandbox",
       "bytes": 4723,

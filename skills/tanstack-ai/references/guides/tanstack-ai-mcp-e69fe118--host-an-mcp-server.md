@@ -1,6 +1,6 @@
 # Ai Mcp — Host an MCP server
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.1`.
 
 ## Host an MCP server
 

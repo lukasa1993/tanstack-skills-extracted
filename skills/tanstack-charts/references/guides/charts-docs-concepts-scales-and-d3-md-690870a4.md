@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-concepts-scales-and-d3-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../chart-grammar.md) · [Source provenance](../SOURCES.md)
 

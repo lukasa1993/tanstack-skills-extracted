@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-svelte-table-table-state"></a>
 
-Published skill · `@tanstack/svelte-table@9.2.6`.
+Published skill · `@tanstack/svelte-table@9.2.8`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 

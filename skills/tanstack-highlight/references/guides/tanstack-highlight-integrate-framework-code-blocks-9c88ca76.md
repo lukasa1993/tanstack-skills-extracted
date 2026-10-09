@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-highlight-integrate-framework-code-blocks"></a>
 
-Published skill · `@tanstack/highlight@1.0.0`.
+Published skill · `@tanstack/highlight@1.1.0`.
 
 [Topic index](../integrations.md) · [Source provenance](../SOURCES.md)
 

@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table"
-  tanstack-library-version: "9.2.7"
+  tanstack-library-version: "9.2.8"
   tanstack-package: "@tanstack/vue-table"
-  tanstack-package-version: "9.2.7"
+  tanstack-package-version: "9.2.8"
   tanstack-requires: "[\"tanstack-table-core-migrate-v8-to-v9\"]"
   tanstack-source-skill: "migrate-v8-to-v9"
   tanstack-sources: "[\"TanStack/table:docs/framework/vue/guide/migrating.md\",\"TanStack/table:packages/vue-table/src/index.ts\",\"TanStack/table:examples/vue/basic-use-table\"]"

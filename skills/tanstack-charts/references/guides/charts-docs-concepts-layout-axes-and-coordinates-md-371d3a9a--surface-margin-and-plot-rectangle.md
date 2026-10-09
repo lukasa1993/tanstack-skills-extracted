@@ -1,6 +1,6 @@
 # Layout Axes And Coordinates — Surface, margin, and plot rectangle
 
-[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Surface, margin, and plot rectangle
 

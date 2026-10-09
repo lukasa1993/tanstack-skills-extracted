@@ -2,7 +2,7 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-charts",
   "product": "charts",
-  "sourceCount": 116,
+  "sourceCount": 118,
   "themes": [
     "getting-started",
     "chart-grammar",
@@ -31,7 +31,7 @@
     "framework-react-native",
     "other-guides"
   ],
-  "guideCount": 116,
+  "guideCount": 118,
   "largestGuideEntryBytes": 12487,
-  "inputSha256": "6c92bf4da53550705dbbf718ced331b603afc47076f262c079877a647ee403e3"
+  "inputSha256": "a2435c99129c26c19eba8f6c14fbb3cdcff2b9bbb5189abbd28e61d40b2817b3"
 }

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ember-table-table-state"></a>
 
-Published skill · `@tanstack/ember-table@9.2.6`.
+Published skill · `@tanstack/ember-table@9.2.8`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 

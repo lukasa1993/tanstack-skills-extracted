@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "react"
   tanstack-library: "@tanstack/react-table"
-  tanstack-library-version: "9.2.6"
+  tanstack-library-version: "9.2.8"
   tanstack-package: "@tanstack/react-table"
-  tanstack-package-version: "9.2.6"
+  tanstack-package-version: "9.2.8"
   tanstack-requires: "[\"tanstack-table-core\"]"
   tanstack-source-skill: "getting-started"
   tanstack-sources: "[\"TanStack/table:docs/framework/react/guide/migrating.md\",\"TanStack/table:examples/react/basic-use-table\",\"TanStack/table:packages/react-table/src/index.ts\",\"TanStack/table:docs/framework/react/guide/composable-tables.md\",\"TanStack/table:docs/framework/react/guide/table-context.md\",\"TanStack/table:examples/react/composable-tables\",\"TanStack/table:packages/react-table/src/createTableHook.tsx\",\"TanStack/table:packages/react-table/src/createTableHookContexts.tsx\",\"TanStack/table:examples/react/with-tanstack-query\",\"TanStack/table:examples/react/virtualized-infinite-scrolling\",\"TanStack/table:docs/framework/react/guide/pagination.md\",\"TanStack/table:docs/framework/react/guide/virtualization.md\",\"TanStack/table:examples/react/virtualized-rows\",\"TanStack/table:examples/react/virtualized-columns\"]"

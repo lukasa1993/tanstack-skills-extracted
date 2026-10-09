@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-motion-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../interaction-motion-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -11,7 +11,7 @@ Release-matched documentation · `@tanstack/charts@1.0.0`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./charts-docs-reference-motion-md-125c7e38--overview.md) — 1 KiB
-- [`motion`](./charts-docs-reference-motion-md-125c7e38--motion.md) — 4 KiB
+- [`motion`](./charts-docs-reference-motion-md-125c7e38--motion.md) — 5 KiB
 - [Definition-local motion](./charts-docs-reference-motion-md-125c7e38--definition-local-motion.md) — 4 KiB
 - [Spreading timing utilities](./charts-docs-reference-motion-md-125c7e38--spreading-timing-utilities.md) — 2 KiB
 - [Timing types](./charts-docs-reference-motion-md-125c7e38--timing-types.md) — 2 KiB

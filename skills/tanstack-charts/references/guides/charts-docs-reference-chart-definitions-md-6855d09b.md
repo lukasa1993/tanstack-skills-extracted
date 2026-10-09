@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-chart-definitions-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../specifications.md) · [Source provenance](../SOURCES.md)
 

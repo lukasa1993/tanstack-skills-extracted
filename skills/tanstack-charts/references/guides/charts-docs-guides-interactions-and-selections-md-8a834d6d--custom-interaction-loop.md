@@ -1,6 +1,6 @@
 # Interactions And Selections — Custom interaction loop
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Custom interaction loop
 

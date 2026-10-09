@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-table-table-state"></a>
 
-Published skill · `@tanstack/vue-table@9.2.7`.
+Published skill · `@tanstack/vue-table@9.2.8`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

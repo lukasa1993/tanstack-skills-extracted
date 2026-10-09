@@ -1,10 +1,10 @@
 # Installation — Overview
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 These docs follow unreleased `main`. The latest
-published release is TanStack Charts `1.0.0`; use its
-[release-source docs](https://github.com/TanStack/charts/tree/e6a51a836e0bf9ea5288822a4247a995f43a768c/docs)
+published release is TanStack Charts `1.1.0`; use its
+[release-source docs](https://github.com/TanStack/charts/tree/57774e14a1a86081eddb3a23523724a40da05640/docs)
 for the exact surface. Releases before 1.0 follow the [Alpha policy](./charts-docs-stability-md-45da0c9d.md#source-charts-docs-stability-md)
 and may break APIs between minor releases. The
 [stable compatibility contract](./charts-docs-compatibility-md-3e5072ae.md#source-charts-docs-compatibility-md) applies starting with 1.0.

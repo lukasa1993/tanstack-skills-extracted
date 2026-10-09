@@ -1,6 +1,6 @@
 # Types — Overview
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 TanStack Charts is inference-first. A mark's source data and channel selectors
 flow through its definition into scales, axis formatters, host and adapter

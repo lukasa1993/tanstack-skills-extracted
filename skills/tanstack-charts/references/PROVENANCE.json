@@ -8,14 +8,14 @@
       "kind": "document",
       "theme": "getting-started",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/comparison.md",
-      "sha256": "d1f56fa5db3684e84092baefa492b76e8ed8203dd7bf7a1bddcb7621feaefbeb",
+      "sha256": "6cd2b7ac43ceeafef062f8507c2bdbee0b20d7fe36ede7c7b171c5a35e6ff66a",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -23,14 +23,14 @@
       "kind": "document",
       "theme": "getting-started",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/installation.md",
-      "sha256": "a8d2d03aeabb1b3ba24a5032271f01c51c7c21983b710f8a99f1646c721597d3",
+      "sha256": "d9d8b94b2350c8620d876ee85a20410e514d80fb9623a778ba079a37a4d58c92",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -38,14 +38,14 @@
       "kind": "document",
       "theme": "getting-started",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/overview.md",
-      "sha256": "9da2d165b775dd1271c4ba7b912e71bd673ac8e7b59dfdbd4f7665e1bd19767a",
+      "sha256": "f2661c21e852bc16d94ef949d60bca529e80f5e292b12786a9baaf5d60d0e473",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -53,14 +53,14 @@
       "kind": "document",
       "theme": "getting-started",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/quick-start.md",
       "sha256": "3f0862e87ffba93b268d2d28b3bfc2907111b7cb37d425085ce1cbec68dc2a2e",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -68,14 +68,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/concepts/chart-definitions.md",
       "sha256": "4325bcf5eada87d13976e2821adab1d24d9ee2ca2c82980b1de7a6748b367f12",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -83,14 +83,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/concepts/data-and-channels.md",
       "sha256": "facf36c852af2a5584812f6bb55494d5a744d3db50f1370ed2eaa651e44115ea",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -98,14 +98,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/concepts/grammar-of-graphics.md",
       "sha256": "7aadd3866f0187a4d6b42d375d0bd7891f02e736d78c10ecd0e4377841d79809",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -113,14 +113,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/concepts/layout-axes-and-coordinates.md",
       "sha256": "7503e45c0191e5fb9935d0760b72e0927f50623e5ea08c316305d9afcb8e6278",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -128,14 +128,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/concepts/marks-and-layering.md",
       "sha256": "fb0c959c523400212de074e83806c4bd9352723bc769d7923b6e2a94f0a7b656",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -143,14 +143,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/concepts/scales-and-d3.md",
       "sha256": "9cc247182fd1591029437f5ab4e2abf4534468ab469790bf3a8bcca72cde612c",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -158,14 +158,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/choosing-a-chart.md",
       "sha256": "611b921ff2c87a3b2b709318ab5baf482bf679886bc34d305eb74c23762994f7",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -173,14 +173,14 @@
       "kind": "document",
       "theme": "chart-grammar",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/typescript.md",
       "sha256": "c394d01d9bbb2cfbd48d8f5ac076e72efaba6db4218dfd7f5d35f3d31401b5d9",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -188,14 +188,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/annotations-and-overlays.md",
       "sha256": "85b6f2b42d8a65a4e2704069aeeed3be0879845a02ad6602b58f90b91a8e74ef",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -203,14 +203,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/bars-and-rankings.md",
       "sha256": "8c15d614bc2d64bd8e8078c156ad2a1c0b37c44cd205c7951c384d6d3bdb88ba",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -218,14 +218,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/distributions.md",
       "sha256": "4dd20fc28740fe3132e39baeb46550efa584dd1ead8dabafd0c1d07aa3be037c",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -233,14 +233,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/heatmaps-and-densities.md",
       "sha256": "e36b13c2f9370635993f8bde769069814dee3e81ed5a4f75a222312e3eb79630",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -248,14 +248,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/index.md",
       "sha256": "24c0050375a08d8f5869e20e9d31db7e70cbc20e405f87ee62990e3c82cf8595",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -263,14 +263,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/intervals-and-financial.md",
       "sha256": "4e01b5269e2ea7681409a258382c95bf919a71ce115bcc52428b82405e05833a",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -278,14 +278,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/lines-and-areas.md",
       "sha256": "e888cfade900ca3b5b26d80ef21169336eccdff12a62ef226497832c7df96dcd",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -293,14 +293,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/scatterplots-and-relationships.md",
       "sha256": "5ba03f82407455b5ab105caca2bc2cf71e358051c34cc38dfa66d50f04fad0ab",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -308,14 +308,14 @@
       "kind": "document",
       "theme": "examples-core",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/stacked-and-composition.md",
       "sha256": "07ac899eea10fdc7f1672ac91f0823680f294a758002898e4df0d5fb640e871c",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -323,14 +323,14 @@
       "kind": "document",
       "theme": "examples-advanced",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/facets-and-multiple-views.md",
       "sha256": "c94699b876b00aedab2156b7c37c3abcb7b6eacb7e05cd6d23d0bc6f10bf3cb9",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -338,14 +338,14 @@
       "kind": "document",
       "theme": "examples-advanced",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/interactive-charts.md",
       "sha256": "e6d9d2979a3a84c9587ae2a1fb5611173044b693009e81ee2d178004bdaac987",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -353,14 +353,14 @@
       "kind": "document",
       "theme": "examples-advanced",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/maps-and-spatial.md",
       "sha256": "e9351a7de3a75bcb2d8262043ac7495d5dff6f6324bcda5882c76798773dfe78",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -368,14 +368,14 @@
       "kind": "document",
       "theme": "examples-advanced",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/networks-and-hierarchies.md",
       "sha256": "7e48a4bab6acd5ced1cf31472e4b7e74fbfae6e0a9bc2fb7aac6754d8f28bc4e",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -383,14 +383,14 @@
       "kind": "document",
       "theme": "examples-advanced",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/polar-and-radar.md",
       "sha256": "0791cfe6b515e8f30de2c93969bdb8d973502d85f63aedd09d8a4dc9d720b671",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -398,14 +398,14 @@
       "kind": "document",
       "theme": "examples-advanced",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/examples/themes-and-motion.md",
       "sha256": "4b35c872ed58f44e5532a452628c724cac9a1ef796cbcdff0ee203d1d7773444",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -413,14 +413,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/bar-and-rect.md",
       "sha256": "051ff02798b58442d11e37eccc11096afcf73cc1de31c988c97199caf3ab9ee7",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -428,14 +428,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/box.md",
       "sha256": "9bb2c4788d2c544d163d7693eafb9034665882996a339d033a834a418bd4ce11",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -443,14 +443,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/contour.md",
       "sha256": "d0aa727e48446c24648014aa456a1fbea929844978134d361963acd3c8c73aa2",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -458,14 +458,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/density.md",
       "sha256": "30a1981cf2ccf8d689d61c488cc9717946b49e0245a2accf88b9d1fb276e86c3",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -473,14 +473,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/difference.md",
       "sha256": "ba89180c01a43d44272eb9e1b9b6a95d8235a5da68d5b88bf7ccc463c77a5cf9",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -488,14 +488,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/dodge.md",
-      "sha256": "b5cbeea6c1d9ff341aacffe1bcfe30455896f57ba4e08a7c7cfa718c43a642da",
+      "sha256": "aa82b913077c0059198c9d5d13086ae03c105ca14e47f55edf997a203522f260",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -503,14 +503,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/dot-and-hexagon.md",
-      "sha256": "8487906c07649a47f4208f2658702c3db4e49f5aa6777eeacd79954407145721",
+      "sha256": "bbbb44f82976bd609c63720e3756eababb415857853ebf8aa13a42d54b09ea95",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -518,14 +518,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/hexbin.md",
       "sha256": "15d7b1138468bad968d0ce9b8dad19c7454566ac43ac86be12990771f6e1fb70",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -533,14 +533,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/line-and-area.md",
       "sha256": "c0239c2088254053ba58d9aeb0845051c5d914118ef686454a1445fd16e431cb",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -548,14 +548,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/regression.md",
       "sha256": "32a1f8aa6f9a7a18132b9d95cd15eb7496c05cab3e6e321205a68e874cc88f4d",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -563,14 +563,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/ridgeline.md",
       "sha256": "c70f2305831e25b8d7d6bcc61e0599d9f61854db057cb6388432294eb8d56786",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -578,14 +578,14 @@
       "kind": "document",
       "theme": "marks-cartesian-statistical",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/violin.md",
       "sha256": "ab97c0b78ede29a6e7a2feb44d789723995d4b12ebb82c9b546a25cb4734f414",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -593,14 +593,14 @@
       "kind": "document",
       "theme": "marks-spatial",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/delaunay.md",
       "sha256": "1591490f71df40da33a86a877dffb3f054234d31c3592b407245e1e9cc9d3b6d",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -608,14 +608,14 @@
       "kind": "document",
       "theme": "marks-spatial",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/focus-guide.md",
       "sha256": "7fc396245f445dbd71b3fa6638ea29cf7ac3e467b1039aa5c7e1898b6d3da80d",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -623,14 +623,14 @@
       "kind": "document",
       "theme": "marks-spatial",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/geo.md",
       "sha256": "368443bb7eb82e181233087ec8b92beb3bfae361c7304fa148eb45bf86743c4f",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -638,14 +638,14 @@
       "kind": "document",
       "theme": "marks-spatial",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/polar.md",
       "sha256": "8978344d2de3eba3edacccdac864df12edf4f709eaf31c8bdabfa8801739fa65",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -653,14 +653,14 @@
       "kind": "document",
       "theme": "marks-spatial",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/voronoi.md",
       "sha256": "b0e5d24ef2ee0544e8c5dd2b5ba537f168ebdfb73942ef1c290313cc3e917c91",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -668,14 +668,14 @@
       "kind": "document",
       "theme": "marks-composite",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/rules-links-arrows-vectors-and-ticks.md",
       "sha256": "1f27284760db63b23d2f06280f3f62a9fbe4d1b074a960922f5faca3e900b71b",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -683,14 +683,14 @@
       "kind": "document",
       "theme": "marks-composite",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/sankey.md",
       "sha256": "b8f428456f03da4f2e6479f5ed91ff63199e7ef0b424abbe04e77a0ed1196842",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -698,14 +698,14 @@
       "kind": "document",
       "theme": "marks-composite",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/sunburst.md",
       "sha256": "1013b2b4effa04a0b9d6301250f875c6540d012146854a661814ed1f3d91076d",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -713,14 +713,14 @@
       "kind": "document",
       "theme": "marks-composite",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/text-frame-and-facet.md",
       "sha256": "bc81e2ecd165784882fddce25d11a50415a62582c7d10dd67d04c2c9f804a6f7",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -728,14 +728,14 @@
       "kind": "document",
       "theme": "marks-composite",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/treemap.md",
       "sha256": "0664d4fcf849aedc8d6981ac2f75dee099fc782bd3ed9df8524f2d33f8eceff6",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -743,14 +743,14 @@
       "kind": "document",
       "theme": "marks-composite",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/marks/waffle.md",
       "sha256": "f5fe6be0993c9e4118027f3171a3bb8d76ff4868ab873b966d36d6e6e1ae2752",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -758,14 +758,14 @@
       "kind": "document",
       "theme": "specifications",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/chart-definitions.md",
       "sha256": "72ab5b1384af857968da464440f85235ced4f76c87a6de4c77c65844fbe70860",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -773,14 +773,14 @@
       "kind": "document",
       "theme": "specifications",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/chart-spec.md",
       "sha256": "58d6357298378c0ef7b759a5a78d2692eadd2bcac49789abf8d6eff078ae0fb9",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -788,14 +788,14 @@
       "kind": "document",
       "theme": "specifications",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/index.md",
       "sha256": "5e1f8d0eef1944c83d47de11eff39209dbf19fe0ddbca62d7e4e6a0793c75b2f",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -803,14 +803,14 @@
       "kind": "document",
       "theme": "types",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/types.md",
-      "sha256": "02811404c7faa8bf19df6a9deec2a2889ef196f1e331d585ffa8761b169985eb",
+      "sha256": "b8ceff9d194accb96c8692717c2efd3856a38931b24c084bf5cfd184e197cbb4",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -818,14 +818,14 @@
       "kind": "document",
       "theme": "interaction-motion-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/focus-and-interaction.md",
-      "sha256": "281a0e76b20b312fca94e09eaff57ceb1973c7340316e8e5bf936723020980cf",
+      "sha256": "cb443868f2fe37bcba967cb4b8b5844409e6632cd718b22a64b7afaa5b25389c",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -833,14 +833,14 @@
       "kind": "document",
       "theme": "interaction-motion-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/motion.md",
-      "sha256": "d473b9888c9b53b883fbcd078818d163c37a2964fee59c09afed568d5ec40a7c",
+      "sha256": "cdc0d9456194b2301fa7f9f3f426d8b3f68ed26c9eea987dddec2a6bcc811369",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -848,14 +848,14 @@
       "kind": "document",
       "theme": "runtime-scales-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/runtime-and-scene.md",
       "sha256": "5da8e9e97ff1078b55c4ee7c2ac6fa8b64390c76641c300d8769ca13d00ece02",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -863,14 +863,14 @@
       "kind": "document",
       "theme": "runtime-scales-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/scales-guides-and-color.md",
-      "sha256": "e7e41cf471901155a67913cee26e52c5352bfed78875d58c6b56decd82603af4",
+      "sha256": "15749f49478761902a91f1fe601950574b84084ff6db98f6717a9a6306338f63",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -878,14 +878,14 @@
       "kind": "document",
       "theme": "rendering-composition-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/adapter-controller.md",
       "sha256": "2b14f0121e4f52a73fd353884ca76947312ecf8cbf504abc6ad8ffad9c18a272",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -893,14 +893,14 @@
       "kind": "document",
       "theme": "rendering-composition-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/custom-extensions.md",
       "sha256": "364b1577b1d9de1b9b7225762bce43af80467878c5676720e75a478e7b585532",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -908,14 +908,14 @@
       "kind": "document",
       "theme": "rendering-composition-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/dom-host.md",
       "sha256": "e2352ff453432ff43273505e9d10d45c698ccddb1169dd3d957a720171bc2c06",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -923,14 +923,14 @@
       "kind": "document",
       "theme": "rendering-composition-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/rendering-and-export.md",
       "sha256": "aca02ced5a503fdefda3f43585bbbd322cd07b465f73829785780c0cbf16df86",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -938,14 +938,14 @@
       "kind": "document",
       "theme": "rendering-composition-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/transforms.md",
       "sha256": "92805debe79484ba95fade1fb904e2cfffe9b21f3db5bb595377ab937c8b747f",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -953,14 +953,14 @@
       "kind": "document",
       "theme": "rendering-composition-reference",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/reference/view-composition.md",
       "sha256": "d148a570c4716def9efca7452ce7203f2fdec731e0c8c7e52f9bed09f4beab39",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -968,14 +968,14 @@
       "kind": "document",
       "theme": "composition",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/custom-marks-and-renderers.md",
       "sha256": "427a8ee7ab8bfef1a9fac240c154d43ecc6716df16afabbebe03859d7cef166f",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -983,14 +983,14 @@
       "kind": "document",
       "theme": "composition",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/dynamic-data-and-animation.md",
       "sha256": "2f07c545e62d9ac1bb69661a6a325c7d52f46c70bcec7ea960a8636847948322",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -998,14 +998,14 @@
       "kind": "document",
       "theme": "composition",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/faceting-and-composition.md",
       "sha256": "059a66e73d2e90ad1ede92ec59879b6d7d7d0fd740212786a24c434bf28aac21",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1013,14 +1013,14 @@
       "kind": "document",
       "theme": "composition",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/legends-and-color.md",
       "sha256": "af71abcbadeda1135ecbd3a5014f248a161ca3763617f81cc95cdc0821a810a0",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1028,14 +1028,14 @@
       "kind": "document",
       "theme": "composition",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/themes-and-styling.md",
       "sha256": "2694e78910d68ade91392cfcb5dcd6dc4c505a1097799fab0a82a4b986a51717",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1043,14 +1043,14 @@
       "kind": "document",
       "theme": "composition",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/transforms-and-reactivity.md",
       "sha256": "180688a505719f50662828e715a8d28723332ae97a4b3a6a9cf7d04b201eb1bc",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1058,14 +1058,14 @@
       "kind": "document",
       "theme": "interaction-accessibility",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/accessibility.md",
       "sha256": "df11d45663f17efa5060d046d9fc2087405d82ff648f4418b4883221e5e71225",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1073,14 +1073,14 @@
       "kind": "document",
       "theme": "interaction-accessibility",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/interactions-and-selections.md",
       "sha256": "d110c64a7a0ec867ffaf0bc5362386c4cb4f36f41e9f61570a121c96b3afabed",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1088,14 +1088,14 @@
       "kind": "document",
       "theme": "interaction-accessibility",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/tooltips-and-focus.md",
-      "sha256": "3edd588ab0b42dc02358198b924c948e5c63a99ebbb3a16af8025762975571d0",
+      "sha256": "a173e34ac54e7a4f26459810a039b41bdaeff1a13d0f00e4d97eeb1511ad92f9",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1103,14 +1103,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/ai-authoring.md",
       "sha256": "4e785aa86025fc2031125e9badfa2441c72d59f341f4ca398209e47442486b76",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1118,14 +1118,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/bundle-size-and-performance.md",
       "sha256": "33e19c74e284730bda05ef8c50bc37eb9de80c39ec51d4eaa182a8788de5eeee",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1133,14 +1133,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/exporting.md",
       "sha256": "269e03c269069ecaf3f7feeac0287c3dd1d8627dafec34369e7e7e5a52d6314d",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1148,14 +1148,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/large-data.md",
       "sha256": "6cb0a8bddb85e3411fe5424b8072dad2ea710c596b965eea85b28eec476a9c4f",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1163,14 +1163,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/migrating.md",
       "sha256": "3c12766ced532bd4a5eb01a549895a0972a43e3d862ba64a4f7c64b259488620",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1178,14 +1178,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/responsive-charts.md",
       "sha256": "b154a3ed7ae5e3c37e7c7f1bb5e0a755501581b15881b3f672991bbc6c74f7b8",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1193,14 +1193,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/ssr-and-hydration.md",
-      "sha256": "438dc58f354da7a6da60993e01068045b3dd3463deb872eba5fde0dfb3eff44e",
+      "sha256": "8906b4bead2c39bad8d35000973fd83608fe47fff3fad041b5083983f6683026",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1208,14 +1208,14 @@
       "kind": "document",
       "theme": "production",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/guides/testing-and-debugging.md",
       "sha256": "0a86c36add62968b0695d8615769b57e94d5aaad715b21e9b95f52f6bc3a2b12",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1223,14 +1223,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/react/adapter.md",
-      "sha256": "d1b1437a221f4f3fc1d6edfb787b5533192337eac0a04dc6077869d2db64901e",
+      "sha256": "4b0f60c7a4609387849f61792526fc0ebca7cc4e592a812d63c6f8578058faa4",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1238,14 +1238,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/react/quick-start.md",
       "sha256": "fc3e2f696bae8dfb1aa0b7008efc0f1d56b486757bcb7580e34eb62a9d18ed52",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1253,14 +1253,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/react/reference/chart.md",
       "sha256": "b252be06a841dc632c402c3bc75408786cc47b9e16596fc0829dacb2a9b249c8",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1268,14 +1268,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/preact/adapter.md",
       "sha256": "92c5892f81fade84d2f25afd701160b56d31678dd2dc1fed93b39cade111ce50",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1283,14 +1283,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/preact/reference/chart.md",
       "sha256": "5fa57dd96c7a976ad988a8c1003251267dbe86ebf55cc037e140d1cb7247cf5b",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1298,14 +1298,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/vue/adapter.md",
       "sha256": "88886c1f813490351a9d6854af5ef1f97583e639ad5089438d62e2e86bae5bb2",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1313,14 +1313,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/vue/reference/chart.md",
       "sha256": "4e5d05f3d66867a54af873bded932f52005113a68133dde5ee9e75516e5584b0",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1328,14 +1328,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/solid/adapter.md",
       "sha256": "5fd32a1dd2fd7903af37ad00d5e4cdacb05bdfceef6f43a2f3ed5d4bc7ea6ea3",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1343,14 +1343,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/solid/reference/chart.md",
       "sha256": "26388fd9ddb43967e877863094fd7c200b5928713101c4d707a1af46a0b7e2f8",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1358,14 +1358,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/svelte/adapter.md",
       "sha256": "a2991978871c402eabf1aae9aaa10c3714462aa6f99130ae0241155e7f3d08e3",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1373,14 +1373,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/svelte/reference/chart.md",
       "sha256": "ab066e16c1badc50d36853802e436453739ae6605c565bf60c805dcae53fa660",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1388,14 +1388,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/angular/adapter.md",
       "sha256": "04e22219f41a547b8abb9ba3a3a1167209b06e4819779c3c7b01c89b7d1d4560",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1403,14 +1403,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/angular/reference/chart.md",
       "sha256": "5a44dcfa7f8f6e26cc79ebf99a7dd0bfe6d8db4daa4197dfa3f5bb6118aefc7c",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1418,14 +1418,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/lit/adapter.md",
       "sha256": "9f6e87616a127c5a1472dfaec640930d3bc60454c57f6449791787a7d3031b55",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1433,14 +1433,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/lit/reference/chart.md",
       "sha256": "ce709baf8ea7a10b7ef477ca4800a25de905e9a1265172dd75b34a7f256be65f",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1448,14 +1448,14 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/alpine/adapter.md",
       "sha256": "12318e81cb9313fbb04b67d0223cbb9b252870fab7da1e7c0c04b69b5d46f9fa",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1463,14 +1463,14 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/alpine/reference/chart.md",
       "sha256": "a345eb19b6f638051a450863ce19ad0e37748542c49ab9d2830d45e26bcbe6fd",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1478,14 +1478,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/octane/adapter.md",
       "sha256": "699c5636b4f317c70d7ee7b158e5c4cfed7b5e156d2553f1fbef8efa67742419",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1493,14 +1493,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/octane/quick-start.md",
       "sha256": "2c559110bbd0257d2654d8a84776ef865b3473f554e0207cd548ea55746c3153",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1508,14 +1508,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/framework/octane/reference/chart.md",
       "sha256": "e5dce507b3a8f9a73e13559cd524b88e81ec8430f7d8201f6ca3d8e4d237fd02",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1523,14 +1523,14 @@
       "kind": "document",
       "theme": "framework-react-native",
       "package": "@tanstack/react-native-charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "packages/react-native-charts/README.md",
       "sha256": "6bab59e1d954adb6854117084973beed51a041dd40b3d6fe49771706fbf64a05",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1538,122 +1538,152 @@
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "build-chart-interactions",
-      "sha256": "6580adf52ae98d8861c0bd71824018875649a91913cfa6432c6223acf2c750ce"
+      "sha256": "26f8b2a6b14c29fc422b5b9747b24fb96289f315facfca668fb957b5274a5868"
     },
     {
       "id": "tanstack-charts-compose-marks-and-views",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "compose-marks-and-views",
-      "sha256": "77e6362034e055671f8066ad298631c427b3275fc4e04dc19430f046a995add0"
+      "sha256": "25f2ea46936248b0d5f526a1cfe7fb91fe1b04fa926d67ad778c9856c3e73309"
     },
     {
       "id": "tanstack-charts-configure-scales-guides-color",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "configure-scales-guides-color",
-      "sha256": "becd1bb9642d227b15baa842a3aad7d28f4040a20e3ee461b8120c5f5335d184"
+      "sha256": "41c3c6ce8bcdb71027254339533e2c350f5d496152e60f24a2abb63e34dea6ad"
     },
     {
       "id": "tanstack-charts-coordinate-charts-with-tanstack",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "coordinate-charts-with-tanstack",
-      "sha256": "b80cda0ca3b946ddb75abbc14cba979b668a7bf0ae842462ef425665dbebc842"
+      "sha256": "ee8cc74ab61f2d4f0142b92c45f253efb005d53c1c77f281b2e5b3e5d108c4e9"
     },
     {
       "id": "tanstack-charts-debug-and-verify-charts",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "debug-and-verify-charts",
-      "sha256": "32bb862d8afaf5f23a795985d6dfff74b820e6ae6260c7de7a83978245a681f2"
+      "sha256": "34e961283cc0f581adf05082b74db607b2de3cd495fc1e882f28c5c9e092c243"
     },
     {
       "id": "tanstack-charts-design-a-chart",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "design-a-chart",
-      "sha256": "8032ba74a9800a04c27a4d6b1986bcc48e50cc259934ff841d92d02e2c1076ab"
+      "sha256": "79cc1c5cb16c8ad0e223bd882ecbe5aab2750350a0ead5a4a2ed0b376baaa1f0"
     },
     {
       "id": "tanstack-charts-design-responsive-charts",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "design-responsive-charts",
-      "sha256": "9c851e8bb03bcb0d9a69e2e28f712e86b685bed4715fb444da123bb251dfa459"
+      "sha256": "9340fecf9991d886b2f1d17cd0f85ef3cfbd6e2b09ed001d8fdaa0554d8b1f30"
     },
     {
       "id": "tanstack-charts-extend-tanstack-charts",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "extend-tanstack-charts",
-      "sha256": "c5d3cc3d9e9e4c57196c2f5196d7eb1134cd721b6f27b833b146aa426916ada5"
+      "sha256": "4ceeb80e37ea1111512d0693714c8bd259d38471e138567196b2a5f5fc773919"
     },
     {
       "id": "tanstack-charts-migrate-to-tanstack-charts",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "migrate-to-tanstack-charts",
-      "sha256": "7bbd8731d86291a7dc66513cee9511a17e5f2be56e986e94c3961f4c7136d729"
+      "sha256": "03c0a5fd7fe9b8357084d5b4b3b184b0725b15ad0275b597eaf11aa07342ed01"
     },
     {
       "id": "tanstack-charts-prepare-chart-data",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "prepare-chart-data",
-      "sha256": "9a8ce750b7d8b953ef9b1231937a50b036c59638764ddb67081371aef21f73c3"
+      "sha256": "ab8a6b246450485edf337dedee1efa0273b7db8e9638c81d243acea0c5d07d83"
     },
     {
       "id": "tanstack-charts-ship-accessible-charts",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "ship-accessible-charts",
-      "sha256": "64dc0af96682568f3044d57afff760eb7609a23bd398c9ba1464c4da572a0bbe"
+      "sha256": "e8f8a1e2a2c1f3a7c4729292f8b4d07569d65ef390af4817bb83d94779fed122"
     },
     {
       "id": "tanstack-charts-update-and-animate-charts",
       "kind": "atomic",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sourcePath": "update-and-animate-charts",
-      "sha256": "25b55393e80f45a26ca09ed576e6a6af89a1bf0982ec9ef5fada2cdfc1227852"
+      "sha256": "8eabc592d5f20fb54af8d73c2a5886266d0ae2a2866b57dc26f3d6d178b65d15"
     },
     {
       "id": "charts:docs/compatibility.md",
       "kind": "document",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/compatibility.md",
       "sha256": "ef1c4eaebb88df1cdbb2b9fa6f04073f67aa2994f5d1bab558d278e055c11fc5",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
+      ]
+    },
+    {
+      "id": "charts:docs/guides/coming-from-recharts.md",
+      "kind": "document",
+      "theme": "other-guides",
+      "package": "@tanstack/charts",
+      "version": "1.1.0",
+      "repository": "TanStack/charts",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
+      "sourcePath": "docs/guides/coming-from-recharts.md",
+      "sha256": "4ebb8b9df8dcf64b01cafdf6aca169e8cbd86eb6362de3ffd77428410dd67748",
+      "sourceKind": "npm-package",
+      "verifiedCommits": [
+        "57774e14a1a86081eddb3a23523724a40da05640"
+      ]
+    },
+    {
+      "id": "charts:docs/guides/framework-tick-labels.md",
+      "kind": "document",
+      "theme": "other-guides",
+      "package": "@tanstack/charts",
+      "version": "1.1.0",
+      "repository": "TanStack/charts",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
+      "sourcePath": "docs/guides/framework-tick-labels.md",
+      "sha256": "aa76d677ce5fb46396ac6f62beff522cb83e52993a526bad1eb8534483abd3db",
+      "sourceKind": "npm-package",
+      "verifiedCommits": [
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     },
     {
@@ -1661,14 +1691,14 @@
       "kind": "document",
       "theme": "other-guides",
       "package": "@tanstack/charts",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "repository": "TanStack/charts",
-      "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
       "sourcePath": "docs/stability.md",
       "sha256": "68a891cf153f108cb2a684f3ceec4dd6ee7972e8fe00c43918fb2b3fdd7bed93",
       "sourceKind": "npm-package",
       "verifiedCommits": [
-        "e6a51a836e0bf9ea5288822a4247a995f43a768c"
+        "57774e14a1a86081eddb3a23523724a40da05640"
       ]
     }
   ],
@@ -1711,13 +1741,13 @@
     },
     "repositoryArchives": [
       {
-        "url": "https://codeload.github.com/TanStack/charts/tar.gz/e6a51a836e0bf9ea5288822a4247a995f43a768c",
-        "commit": "e6a51a836e0bf9ea5288822a4247a995f43a768c",
-        "sha256": "0655d0de3428d8904689f09fbaaa876b592bcf92a3b2c36ce893a27df861308b"
+        "url": "https://codeload.github.com/TanStack/charts/tar.gz/57774e14a1a86081eddb3a23523724a40da05640",
+        "commit": "57774e14a1a86081eddb3a23523724a40da05640",
+        "sha256": "5a6d7e3c8241b59a6e6e88bc5a4bb367c86147763bb328ac44df35320d4cfca1"
       }
     ],
     "linkValidation": {
-      "localDocuments": 476,
+      "localDocuments": 486,
       "localAssets": 0,
       "pinnedRepository": 6,
       "pinnedExternalRepository": 0,

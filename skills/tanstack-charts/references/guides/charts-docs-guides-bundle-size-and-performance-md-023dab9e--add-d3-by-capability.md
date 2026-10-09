@@ -1,6 +1,6 @@
 # Bundle Size And Performance — Add D3 by capability
 
-[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@1.0.0`.
+[Guide and prerequisites](./charts-docs-guides-bundle-size-and-performance-md-023dab9e.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 ## Add D3 by capability
 

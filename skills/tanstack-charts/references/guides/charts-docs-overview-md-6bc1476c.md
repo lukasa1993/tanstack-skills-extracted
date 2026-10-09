@@ -2,12 +2,12 @@
 
 <a id="source-charts-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.0.0`.
+Release-matched documentation · `@tanstack/charts@1.1.0`.
 
 [Topic index](../getting-started.md) · [Source provenance](../SOURCES.md)
 
 These docs follow unreleased `main`. The latest published TanStack Charts
-release is `1.0.0`. Releases before 1.0 follow the [Alpha policy](./charts-docs-stability-md-45da0c9d.md#source-charts-docs-stability-md)
+release is `1.1.0`. Releases before 1.0 follow the [Alpha policy](./charts-docs-stability-md-45da0c9d.md#source-charts-docs-stability-md)
 and may break APIs between minor releases. The
 [stable compatibility contract](./charts-docs-compatibility-md-3e5072ae.md#source-charts-docs-compatibility-md) applies starting with 1.0.
 
