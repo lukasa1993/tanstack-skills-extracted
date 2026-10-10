@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-start-client-core-start-core-auth-server-primitives"></a>
 
-Published skill · `@tanstack/start-client-core@1.170.34`.
+Published skill · `@tanstack/start-client-core@1.170.35`.
 
 [Topic index](../middleware-auth.md) · [Source provenance](../SOURCES.md)
 

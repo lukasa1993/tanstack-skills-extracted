@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-octane-table-table-state"></a>
 
-Published skill · `@tanstack/octane-table@9.2.8`.
+Published skill · `@tanstack/octane-table@9.3.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 

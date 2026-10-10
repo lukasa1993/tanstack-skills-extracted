@@ -1,6 +1,6 @@
 # Marko Virtual — Tag variable reference
 
-[Guide and prerequisites](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md) · Release-matched documentation · `@tanstack/virtual-core@3.17.11`.
+[Guide and prerequisites](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md) · Release-matched documentation · `@tanstack/virtual-core@3.18.0`.
 
 ## Tag variable reference
 
@@ -18,5 +18,6 @@ Both tags are self-closing and expose the same tag-variable shape. Capture it wi
 | `measure` | `() => void` | Drop all measured sizes and re-measure everything (after a width/font change) |
 | `resizeItem` | `(index: number, size: number) => void` | Set one item's size directly, without a DOM measure |
 | `scrollToEnd` | `(options?: { behavior?: ScrollBehavior }) => void` | Scroll to the very end of the list |
+| `cancelScroll` | `() => void` | Stop an in-flight `scrollToIndex` / `scrollToOffset` / `scrollToEnd` from correcting toward its target, so a user scroll can take over |
 | `isAtEnd` | `(threshold?: number) => boolean` | Whether the scroll position is at (or within `threshold` px of) the end. `false` before mount |
 | `getDistanceFromEnd` | `() => number` | Pixels between the current scroll position and the end. `Infinity` before mount |

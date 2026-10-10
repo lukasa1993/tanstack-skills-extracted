@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-start-server-components"></a>
 
-Published skill · `@tanstack/react-start@1.168.60`.
+Published skill · `@tanstack/react-start@1.168.61`.
 
 [Topic index](../deployment-rendering.md) · [Source provenance](../SOURCES.md)
 
@@ -57,10 +57,10 @@ Treat TanStack Start RSCs as fetchable React Flight payloads, not as a framework
 
 - Simple server fragment in a route loader -> `renderServerComponent`
 - Interactive slot inside server markup -> `createCompositeComponent`
-- Route component needs browser APIs but loader can still prefetch on the server -> `ssr: 'data-only'`
+- Route component needs browser APIs but loader can still query on the server -> `ssr: 'data-only'`
 - Loader itself needs browser APIs -> `ssr: false`
 - Route cache key must include search params -> `loaderDeps`
-- Query-managed RSC -> `useSuspenseQuery` + SSR `ensureQueryData`
+- Query-managed RSC -> `useSuspenseQuery` + SSR `query` with `staleTime: 'static'`
 - Multiple independent RSCs -> separate server functions + `Promise.all`
 - Multiple RSCs sharing data or invalidating together -> one server function returning many renderables or sources
 - Need isolated widget failures or staggered reveal -> return promises from the loader and resolve with `use()` inside Suspense

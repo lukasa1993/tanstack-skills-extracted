@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-api-virtualizer-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.11`.
+Release-matched documentation · `@tanstack/virtual-core@3.18.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -89,6 +89,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="scrolltoindex"></a>
 <a id="scrollby"></a>
 <a id="scrolltoend"></a>
+<a id="cancelscroll"></a>
 <a id="getdistancefromend"></a>
 <a id="isatend"></a>
 <a id="gettotalsize"></a>

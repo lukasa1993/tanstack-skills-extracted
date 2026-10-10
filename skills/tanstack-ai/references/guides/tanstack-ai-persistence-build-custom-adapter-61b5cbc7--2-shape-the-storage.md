@@ -1,6 +1,6 @@
 # Build Custom Adapter — 2. Shape the storage
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.8.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.8.3`.
 
 ## 2. Shape the storage
 

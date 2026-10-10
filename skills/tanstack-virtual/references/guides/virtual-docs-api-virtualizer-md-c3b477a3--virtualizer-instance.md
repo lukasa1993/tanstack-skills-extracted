@@ -1,6 +1,6 @@
 # Virtualizer — Virtualizer Instance
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.17.11`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.18.0`.
 
 ## Virtualizer Instance
 
@@ -96,6 +96,16 @@ scrollToEnd: (
 Scrolls the virtualizer to the end of the content. For vertical lists this is the bottom; for horizontal lists this is the right edge.
 
 This is useful for "Jump to latest" controls in chat and log views.
+
+### `cancelScroll`
+
+```tsx
+cancelScroll: () => void
+```
+
+Cancels an in-flight `scrollToIndex`, `scrollToOffset`, `scrollBy` or `scrollToEnd`. After those calls, the virtualizer keeps correcting toward the target for a short time while items are measured. Call `cancelScroll` when the user starts their own scroll (for example from `wheel`, `touchstart` or `keydown` handlers) so the viewport stays where the user takes it.
+
+The current scroll position is not changed. It does nothing when no scroll is in flight.
 
 ### `getDistanceFromEnd`
 

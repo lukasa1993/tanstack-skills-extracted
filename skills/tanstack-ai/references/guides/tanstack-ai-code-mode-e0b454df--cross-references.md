@@ -1,6 +1,6 @@
 # Ai Code Mode — Cross-References
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.0`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.2`.
 
 ## Cross-References
 

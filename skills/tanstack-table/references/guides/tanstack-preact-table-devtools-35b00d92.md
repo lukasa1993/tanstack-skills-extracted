@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-preact-table-devtools"></a>
 
-Published skill · `@tanstack/preact-table-devtools@9.2.8`.
+Published skill · `@tanstack/preact-table-devtools@9.3.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-preact-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/preact-table@9.2.8`.
+Published skill · `@tanstack/preact-table@9.3.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 

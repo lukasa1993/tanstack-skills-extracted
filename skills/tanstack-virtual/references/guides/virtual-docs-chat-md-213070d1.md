@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-chat-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.17.11`.
+Release-matched documentation · `@tanstack/virtual-core@3.18.0`.
 
 [Topic index](../measurement-feeds.md) · [Source provenance](../SOURCES.md)
 
@@ -23,7 +23,7 @@ const virtualizer = useVirtualizer({
 })
 ```
 
-See the full [React chat example](https://github.com/TanStack/virtual/blob/78371e851e90fd74e984deeb0c3fd8098e2cd4f3/examples/react/chat/README.md).
+See the full [React chat example](https://github.com/TanStack/virtual/blob/259fc1aefa0653e22cb01c2050011ee785124c6d/examples/react/chat/README.md).
 
 ## Behaviors
 
@@ -145,5 +145,6 @@ Use a normal scroll container and normal item order. You do not need `flex-direc
 - [`followOnAppend`](./virtual-docs-api-virtualizer-md-c3b477a3.md#source-virtual-docs-api-virtualizer-md)
 - [`scrollEndThreshold`](./virtual-docs-api-virtualizer-md-c3b477a3.md#source-virtual-docs-api-virtualizer-md)
 - [`scrollToEnd`](./virtual-docs-api-virtualizer-md-c3b477a3.md#source-virtual-docs-api-virtualizer-md)
+- [`cancelScroll`](./virtual-docs-api-virtualizer-md-c3b477a3.md#source-virtual-docs-api-virtualizer-md)
 - [`getDistanceFromEnd`](./virtual-docs-api-virtualizer-md-c3b477a3.md#source-virtual-docs-api-virtualizer-md)
 - [`isAtEnd`](./virtual-docs-api-virtualizer-md-c3b477a3.md#source-virtual-docs-api-virtualizer-md)

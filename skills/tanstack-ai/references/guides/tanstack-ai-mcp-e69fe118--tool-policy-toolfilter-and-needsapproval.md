@@ -1,6 +1,6 @@
 # Ai Mcp — Tool policy: `toolFilter` and `needsApproval`
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.1`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.3`.
 
 ## Tool policy: `toolFilter` and `needsApproval`
 

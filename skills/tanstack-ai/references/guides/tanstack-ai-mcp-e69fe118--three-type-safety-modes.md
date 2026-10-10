@@ -1,6 +1,6 @@
 # Ai Mcp — Three type-safety modes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.1`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.3`.
 
 ## Three type-safety modes
 

@@ -98,36 +98,36 @@
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table-devtools",
-      "version": "9.2.8",
+      "version": "9.3.0",
       "sourcePath": "devtools",
-      "sha256": "2b30eb5566cc187229024cb2bc313de8aa23aade427f6f1eab5be9ea6f602c7e"
+      "sha256": "3283cf88faa2c4cec1bfd87d53af232f2c3fa94d4cdcb1bad94ea3a0e828b268"
     },
     {
       "id": "tanstack-preact-table-getting-started",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.2.8",
+      "version": "9.3.0",
       "sourcePath": "getting-started",
-      "sha256": "c300eaa25aec445f5ab3bf9d46f37c40da5b8522b0bb9f658453404515ce1053"
+      "sha256": "4d78b3430e65216bc0cfeec97c3205ac6d8058800e422cb8fbe52dc3743919ef"
     },
     {
       "id": "tanstack-preact-table-migrate-v8-to-v9",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.2.8",
+      "version": "9.3.0",
       "sourcePath": "migrate-v8-to-v9",
-      "sha256": "36a73f2198f01e8c3fe6b1cdaa1c747fe801871cf34e31a3efbd08bb8eec3d12"
+      "sha256": "846c80f1a3671048f4eb851133e1b33c2ef2b652f10b68e785b5a54bb850b12e"
     },
     {
       "id": "tanstack-preact-table-table-state",
       "kind": "atomic",
       "theme": "framework-preact",
       "package": "@tanstack/preact-table",
-      "version": "9.2.8",
+      "version": "9.3.0",
       "sourcePath": "table-state",
-      "sha256": "9e96fb1027ac8fe35285873137cef91434b1a577eb6a86072192874bec62b575"
+      "sha256": "357bfbde4a4f36105cc6f0466029fad7c2f4bf8b8662e348e012d148068bc71c"
     },
     {
       "id": "tanstack-vue-table-devtools",
@@ -332,18 +332,18 @@
       "kind": "atomic",
       "theme": "framework-octane",
       "package": "@tanstack/octane-table",
-      "version": "9.2.8",
+      "version": "9.3.0",
       "sourcePath": "getting-started",
-      "sha256": "464a4b92e873243535d6bb84d1aa6f46306d1c9ac2466242eb8faad746ad98f2"
+      "sha256": "82e475f0607d3af9ec448b9bf1fcf0b67bea065a83d6e55399f4a80f79b373d5"
     },
     {
       "id": "tanstack-octane-table-table-state",
       "kind": "atomic",
       "theme": "framework-octane",
       "package": "@tanstack/octane-table",
-      "version": "9.2.8",
+      "version": "9.3.0",
       "sourcePath": "table-state",
-      "sha256": "3b903676ac2fea65b55b63733787d90154ab44b51535394bd1c532322ddb47a5"
+      "sha256": "c4d9ff255228dd2d6dbeef9b854a0fd6859e6dd7cd98cb3d45fc941d5d746fa7"
     },
     {
       "id": "tanstack-table-core-table-state",

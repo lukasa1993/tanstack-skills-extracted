@@ -12,10 +12,10 @@
 | `tanstack-react-table-getting-started` | atomic | `framework-react` | `@tanstack/react-table` | `9.2.8` |  |
 | `tanstack-react-table-migrate-v8-to-v9` | atomic | `framework-react` | `@tanstack/react-table` | `9.2.8` |  |
 | `tanstack-react-table-table-state` | atomic | `framework-react` | `@tanstack/react-table` | `9.2.8` |  |
-| `tanstack-preact-table-devtools` | atomic | `framework-preact` | `@tanstack/preact-table-devtools` | `9.2.8` |  |
-| `tanstack-preact-table-getting-started` | atomic | `framework-preact` | `@tanstack/preact-table` | `9.2.8` |  |
-| `tanstack-preact-table-migrate-v8-to-v9` | atomic | `framework-preact` | `@tanstack/preact-table` | `9.2.8` |  |
-| `tanstack-preact-table-table-state` | atomic | `framework-preact` | `@tanstack/preact-table` | `9.2.8` |  |
+| `tanstack-preact-table-devtools` | atomic | `framework-preact` | `@tanstack/preact-table-devtools` | `9.3.0` |  |
+| `tanstack-preact-table-getting-started` | atomic | `framework-preact` | `@tanstack/preact-table` | `9.3.0` |  |
+| `tanstack-preact-table-migrate-v8-to-v9` | atomic | `framework-preact` | `@tanstack/preact-table` | `9.3.0` |  |
+| `tanstack-preact-table-table-state` | atomic | `framework-preact` | `@tanstack/preact-table` | `9.3.0` |  |
 | `tanstack-vue-table-devtools` | atomic | `framework-vue` | `@tanstack/vue-table-devtools` | `9.2.8` |  |
 | `tanstack-vue-table-getting-started` | atomic | `framework-vue` | `@tanstack/vue-table` | `9.2.8` |  |
 | `tanstack-vue-table-migrate-v8-to-v9` | atomic | `framework-vue` | `@tanstack/vue-table` | `9.2.8` |  |
@@ -38,8 +38,8 @@
 | `tanstack-alpine-table-table-state` | atomic | `framework-alpine` | `@tanstack/alpine-table` | `9.2.8` |  |
 | `tanstack-ember-table-getting-started` | atomic | `framework-ember` | `@tanstack/ember-table` | `9.2.8` |  |
 | `tanstack-ember-table-table-state` | atomic | `framework-ember` | `@tanstack/ember-table` | `9.2.8` |  |
-| `tanstack-octane-table-getting-started` | atomic | `framework-octane` | `@tanstack/octane-table` | `9.2.8` |  |
-| `tanstack-octane-table-table-state` | atomic | `framework-octane` | `@tanstack/octane-table` | `9.2.8` |  |
+| `tanstack-octane-table-getting-started` | atomic | `framework-octane` | `@tanstack/octane-table` | `9.3.0` |  |
+| `tanstack-octane-table-table-state` | atomic | `framework-octane` | `@tanstack/octane-table` | `9.3.0` |  |
 | `tanstack-table-core-table-state` | atomic | `additional-guidance` | `@tanstack/table-core` | `9.2.8` |  |
 
 Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 7. No fuzzy deduplication is used.

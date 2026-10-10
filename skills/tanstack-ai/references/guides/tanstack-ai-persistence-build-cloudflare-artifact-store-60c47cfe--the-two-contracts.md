@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — The two contracts
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.8.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.8.3`.
 
 ## The two contracts
 

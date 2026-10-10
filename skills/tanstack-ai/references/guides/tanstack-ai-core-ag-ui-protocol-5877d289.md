@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-ag-ui-protocol"></a>
 
-Published skill · `@tanstack/ai@0.66.0`.
+Published skill · `@tanstack/ai@0.68.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Structured Outputs — Overview
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.66.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.68.0`.
 
 # Structured Outputs
 

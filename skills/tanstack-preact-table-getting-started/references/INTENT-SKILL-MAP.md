@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/preact-table@9.2.8
+Published package: @tanstack/preact-table@9.3.0
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

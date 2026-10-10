@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — 3. Write `src/lib/chat-persistence.ts`: If `db` is per-request
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.8.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@0.8.3`.
 
 ## 3. Write `src/lib/chat-persistence.ts`: If `db` is per-request
 

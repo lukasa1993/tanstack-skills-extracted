@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-router"></a>
 
-Published skill · `@tanstack/solid-router@1.170.38`.
+Published skill · `@tanstack/solid-router@1.170.39`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
