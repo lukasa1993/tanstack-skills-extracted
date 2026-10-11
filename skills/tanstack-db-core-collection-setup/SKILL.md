@@ -1,15 +1,15 @@
 ---
 name: tanstack-db-core-collection-setup
-description: "Creating typed collections with createCollection. Adapter selection: queryCollectionOptions (REST/TanStack Query), electricCollectionOptions (ElectricSQL real-time sync), powerSyncCollectionOptions (PowerSync SQLite), rxdbCollectionOptions (RxDB), trailBaseCollectionOptions (TrailBase), localOnlyCollectionOptions, localStorageCollectionOptions. CollectionConfig options: getKey, schema, sync, gcTime, autoIndex (default off), defaultIndexType, syncMode (eager/on-demand, plus progressive for Electric). StandardSchema validation with Zod/Valibot/ArkType. Collection lifecycle (idle/loading/ready/error). Adapter-specific sync patterns including Electric txid tracking, Query direct writes, Query initial data and scoped factories, and PowerSync query-driven sync with onLoad/onLoadSubset hooks."
+description: "Creating typed collections with createCollection. Adapter selection: queryCollectionOptions (REST/TanStack Query), electricCollectionOptions (ElectricSQL real-time sync), powerSyncCollectionOptions (PowerSync SQLite), rxdbCollectionOptions (RxDB), trailBaseCollectionOptions (TrailBase), localOnlyCollectionOptions, localStorageCollectionOptions, indexedDBCollectionOptions. CollectionConfig options: getKey, schema, sync, gcTime, autoIndex (default off), defaultIndexType, syncMode (eager/on-demand, plus progressive for Electric). StandardSchema validation with Zod/Valibot/ArkType. Collection lifecycle (idle/loading/ready/error). Adapter-specific sync patterns including Electric txid tracking, Query direct writes, Query initial data and scoped factories, and PowerSync query-driven sync with onLoad/onLoadSubset hooks."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.12.3"
+  tanstack-package-version: "0.13.0"
   tanstack-source-skill: "db-core/collection-setup"
-  tanstack-sources: "[\"TanStack/db:docs/overview.md\",\"TanStack/db:docs/guides/schemas.md\",\"TanStack/db:docs/collections/query-collection.md\",\"TanStack/db:docs/collections/electric-collection.md\",\"TanStack/db:docs/collections/powersync-collection.md\",\"TanStack/db:docs/collections/rxdb-collection.md\",\"TanStack/db:docs/collections/trailbase-collection.md\",\"TanStack/db:packages/db/src/collection/index.ts\"]"
+  tanstack-sources: "[\"TanStack/db:docs/overview.md\",\"TanStack/db:docs/guides/schemas.md\",\"TanStack/db:docs/collections/query-collection.md\",\"TanStack/db:docs/collections/electric-collection.md\",\"TanStack/db:docs/collections/powersync-collection.md\",\"TanStack/db:docs/collections/rxdb-collection.md\",\"TanStack/db:docs/collections/trailbase-collection.md\",\"TanStack/db:docs/collections/indexed-db-collection.md\",\"TanStack/db:packages/db/src/collection/index.ts\"]"
   tanstack-type: "sub-skill"
 ---
 
@@ -71,6 +71,7 @@ const todoCollection = createCollection(
 | TrailBase (event streaming)      | `trailBaseCollectionOptions`    | `@tanstack/trailbase-db-collection` |
 | No backend (UI state)            | `localOnlyCollectionOptions`    | `@tanstack/db`                      |
 | Browser localStorage             | `localStorageCollectionOptions` | `@tanstack/db`                      |
+| Browser IndexedDB                | `indexedDBCollectionOptions`    | `@tanstack/db`                      |
 
 If the user specifies a backend (e.g. Electric, PowerSync), use that adapter directly. Only use `localOnlyCollectionOptions` when there is no backend yet — the collection API is uniform, so swapping to a real adapter later only changes the options creator.
 

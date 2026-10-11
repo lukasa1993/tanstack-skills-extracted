@@ -1,6 +1,6 @@
 # Collection Setup — Choosing an Adapter
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.12.3`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.13.0`.
 
 ## Choosing an Adapter
 
@@ -13,5 +13,6 @@
 | TrailBase (event streaming)      | `trailBaseCollectionOptions`    | `@tanstack/trailbase-db-collection` |
 | No backend (UI state)            | `localOnlyCollectionOptions`    | `@tanstack/db`                      |
 | Browser localStorage             | `localStorageCollectionOptions` | `@tanstack/db`                      |
+| Browser IndexedDB                | `indexedDBCollectionOptions`    | `@tanstack/db`                      |
 
 If the user specifies a backend (e.g. Electric, PowerSync), use that adapter directly. Only use `localOnlyCollectionOptions` when there is no backend yet — the collection API is uniform, so swapping to a real adapter later only changes the options creator.
