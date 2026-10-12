@@ -1,6 +1,6 @@
 # Virtualizer — Optional Options: `overscan`
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.18.0`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.0`.
 
 ## Optional Options: `overscan`
 
@@ -9,4 +9,4 @@
 overscan?: number
 ```
 
-The number of items to render above and below the visible area. Increasing this number will increase the amount of time it takes to render the virtualizer, but might decrease the likelihood of seeing slow-rendering blank items at the top and bottom of the virtualizer when scrolling. The default value is `1`.
+The number of items to render above and below the visible area. Increasing this number will increase the amount of time it takes to render the virtualizer, but might decrease the likelihood of seeing slow-rendering blank items at the top and bottom of the virtualizer when scrolling. The default value is `1`. When `lanes` is greater than `1`, overscan counts whole rows of `lanes` items, so every lane renders the same number of extra items.

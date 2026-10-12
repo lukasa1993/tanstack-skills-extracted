@@ -7,9 +7,10 @@
 | `tanstack-devtools-vite-plugin` | atomic | `setup-production` | `@tanstack/devtools-vite` | `0.8.5` |  |
 | `tanstack-devtools-marketplace` | atomic | `plugins-marketplace` | `@tanstack/devtools` | `0.15.0` |  |
 | `tanstack-devtools-plugin-panel` | atomic | `plugins-marketplace` | `@tanstack/devtools` | `0.15.0` |  |
-| `tanstack-devtools-utils-devtools-framework-adapters` | atomic | `plugins-marketplace` | `@tanstack/devtools-utils` | `0.7.0` |  |
+| `tanstack-devtools-utils-devtools-framework-adapters` | atomic | `plugins-marketplace` | `@tanstack/devtools-utils` | `0.7.1` |  |
 | `tanstack-devtools-event-client` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |
 | `tanstack-devtools-event-client-devtools-bidirectional` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |
 | `tanstack-devtools-event-client-devtools-instrumentation` | atomic | `events-instrumentation` | `@tanstack/devtools-event-client` | `0.5.0` |  |
+| `tanstack-devtools-webmcp` | atomic | `additional-guidance` | `@tanstack/devtools-webmcp` | `0.0.2` |  |
 
 Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

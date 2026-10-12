@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-guides-optimistic-updates-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.104.1`.
+Release-matched documentation · `@tanstack/react-query@5.104.2`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

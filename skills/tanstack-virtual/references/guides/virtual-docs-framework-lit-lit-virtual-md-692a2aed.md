@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-framework-lit-lit-virtual-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.18.0`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 

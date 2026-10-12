@@ -270,7 +270,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/devtools-utils",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "file": "references/guides/tanstack-devtools-utils-devtools-framework-adapters-dfa9d9d5.md",
       "sourcePath": "devtools-framework-adapters",
       "bytes": 8373,
@@ -386,6 +386,28 @@
           "title": "Overview; Key Insight; Where to Instrument; Core Patterns; Instrumentation Checklist; Common Mistakes",
           "file": "references/guides/tanstack-devtools-event-client-devtools-instrumentation-6363dc09.md",
           "bytes": 11283
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-devtools-webmcp",
+      "title": "Devtools Webmcp",
+      "theme": "additional-guidance",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/devtools-webmcp",
+      "version": "0.0.2",
+      "file": "references/guides/tanstack-devtools-webmcp-1d1e942f.md",
+      "sourcePath": "devtools-webmcp",
+      "bytes": 6537,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Register; Names; Tool fields; Cleanup and replace; Errors; Root import and `/production`; Browser lookup; Common mistakes; Result",
+          "file": "references/guides/tanstack-devtools-webmcp-1d1e942f.md",
+          "bytes": 6537
         }
       ],
       "examples": []

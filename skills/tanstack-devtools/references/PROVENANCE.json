@@ -53,9 +53,9 @@
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools-utils",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "sourcePath": "devtools-framework-adapters",
-      "sha256": "ce4e658d74077cdf725ad0f7155b2c8f466ca12c19b74e91ff1f42ff211a2e7f"
+      "sha256": "a6d5320be84eb047701342cb33e77b6a9b0aef64a69743c32935af551a78dbcb"
     },
     {
       "id": "tanstack-devtools-event-client",
@@ -83,6 +83,15 @@
       "version": "0.5.0",
       "sourcePath": "devtools-instrumentation",
       "sha256": "5fd41289f9a56cb4b731af95c105e6143ecfccaa34cb3fa1cbc531921933b40d"
+    },
+    {
+      "id": "tanstack-devtools-webmcp",
+      "kind": "atomic",
+      "theme": "additional-guidance",
+      "package": "@tanstack/devtools-webmcp",
+      "version": "0.0.2",
+      "sourcePath": "devtools-webmcp",
+      "sha256": "2df2369c573cf0c85687c52fdbc9dbce7b20106e848490b11d35986573c7416d"
     }
   ],
   "duplicateDocuments": [],
@@ -100,7 +109,8 @@
         "tanstack-devtools-plugin-panel",
         "tanstack-devtools-production",
         "tanstack-devtools-utils-devtools-framework-adapters",
-        "tanstack-devtools-vite-plugin"
+        "tanstack-devtools-vite-plugin",
+        "tanstack-devtools-webmcp"
       ]
     }
   ]

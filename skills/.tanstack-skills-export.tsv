@@ -24,8 +24,9 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/db-skills	0.0.1	MIT	6	6	tanstack-db-skills-tanstack-db,tanstack-db-skills-tanstack-db-collections,tanstack-db-skills-tanstack-db-electric,tanstack-db-skills-tanstack-db-live-queries,tanstack-db-skills-tanstack-db-mutations,tanstack-db-skills-tanstack-db-schemas
 @tanstack/devtools	0.15.0	MIT	4	4	tanstack-devtools-app-setup,tanstack-devtools-marketplace,tanstack-devtools-plugin-panel,tanstack-devtools-production
 @tanstack/devtools-event-client	0.5.0	MIT	3	3	tanstack-devtools-event-client-devtools-bidirectional,tanstack-devtools-event-client,tanstack-devtools-event-client-devtools-instrumentation
-@tanstack/devtools-utils	0.7.0	MIT	1	1	tanstack-devtools-utils-devtools-framework-adapters
+@tanstack/devtools-utils	0.7.1	MIT	1	1	tanstack-devtools-utils-devtools-framework-adapters
 @tanstack/devtools-vite	0.8.5	MIT	1	1	tanstack-devtools-vite-plugin
+@tanstack/devtools-webmcp	0.0.2	MIT	1	1	tanstack-devtools-webmcp
 @tanstack/ember-table	9.2.8	MIT	2	2	tanstack-ember-table-getting-started,tanstack-ember-table-table-state
 @tanstack/highlight	1.1.0	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
 @tanstack/lit-table	9.2.8	MIT	3	3	tanstack-lit-table-getting-started,tanstack-lit-table-migrate-v8-to-v9,tanstack-lit-table-table-state
