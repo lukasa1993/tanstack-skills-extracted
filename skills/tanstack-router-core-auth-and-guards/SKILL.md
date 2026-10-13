@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.35"
+  tanstack-package-version: "1.171.37"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "auth-and-guards"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/authenticated-routes.md\",\"TanStack/router:docs/router/how-to/setup-authentication.md\",\"TanStack/router:docs/router/how-to/setup-auth-providers.md\",\"TanStack/router:docs/router/how-to/setup-rbac.md\"]"
@@ -16,7 +16,7 @@ metadata:
 
 # Auth and Guards
 
-> **This skill covers the routing side of auth.** Route guards are UX and navigation control; the data/API boundary still belongs in the server function, server route, or API endpoint that reads or mutates private data. For the **server-side primitives** — session cookies (`HttpOnly`/`Secure`/`SameSite`), `useSession`-style helpers, OAuth `state` + PKCE, password-reset enumeration defense, CSRF, rate limiting — see [start-core/auth-server-primitives](../../../../start-client-core/skills/start-core/auth-server-primitives/SKILL.md).
+> **This skill covers the routing side of auth.** Route guards are UX and navigation control; the data/API boundary still belongs in the server function, server route, or API endpoint that reads or mutates private data. For the **server-side primitives** — session cookies (`HttpOnly`/`Secure`/`SameSite`), external session helpers, OAuth `state` + PKCE, password-reset enumeration defense, CSRF, rate limiting — see [start-core/auth-server-primitives](../../../../start-client-core/skills/start-core/auth-server-primitives/SKILL.md).
 >
 > **CRITICAL**: A route guard (`beforeLoad`) does NOT protect a `createServerFn` declared on that route. Server functions are API endpoints reachable independently of the route that calls them. See "Route guards do not protect server functions" below.
 

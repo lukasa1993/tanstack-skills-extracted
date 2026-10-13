@@ -8,99 +8,99 @@
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "router-core",
-      "sha256": "c16a68512f6cc6760913b56b0bd2bf26a0fa79d79f660bd37fd5c0b2d70d4d66"
+      "sha256": "fdc9444b81be8a2ddbb37b6d9aef23977eba19de8d54388133663e508cd465af"
     },
     {
       "id": "tanstack-router-core-type-safety",
       "kind": "atomic",
       "theme": "foundations",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "type-safety",
-      "sha256": "ed03fd656d5731eb143353db38088a6e6444ee649402ca495135342076f3f6f2"
+      "sha256": "a80bd26cfe9c27e28ba93f2f03bb85f30985c4cc97dba69b10940e6dd6aecebe"
     },
     {
       "id": "tanstack-router-core-navigation",
       "kind": "atomic",
       "theme": "urls-navigation",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "navigation",
-      "sha256": "7ba8dc948ad6f6ca438ae5b9d2059192e4955904e5d2864558cbfd51fbd172f1"
+      "sha256": "47d2cb0f60c51bb7ab2ed9d2b47b7ff6ea438879f90bd6933a14aca84aa01c77"
     },
     {
       "id": "tanstack-router-core-path-params",
       "kind": "atomic",
       "theme": "urls-navigation",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "path-params",
-      "sha256": "014f6d72162abeb1fe781f3dc41e5940d7a015f5f721eeb8229a27e21e91fed0"
+      "sha256": "d1f541a7948fee3e4a96756843144fb469749012640747b7865a318f829a569f"
     },
     {
       "id": "tanstack-router-core-search-params",
       "kind": "atomic",
       "theme": "urls-navigation",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "search-params",
-      "sha256": "b1de094aa842b1a30b3b972e6ca7886063a60326c7e231be942fe2798d97385f"
+      "sha256": "cc3ae089651ba1deb0a02f95d2f74cf317f97f5a2e496a81d8ebb3f928087655"
     },
     {
       "id": "tanstack-router-core-auth-and-guards",
       "kind": "atomic",
       "theme": "data-auth-errors",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "auth-and-guards",
-      "sha256": "20bb9748abaf78e44442b2e56decde5805c6e2a59fc207670fbc9328e5378784"
+      "sha256": "34c9c1121ca023b784feae9a6fc599d21109523fed751aae22130e387e8ae47a"
     },
     {
       "id": "tanstack-router-core-data-loading",
       "kind": "atomic",
       "theme": "data-auth-errors",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "data-loading",
-      "sha256": "d6bdb83fba8ea4fde0c686e31a7a9228721bd481b8d366a7c0c1d0f709343993"
+      "sha256": "5dcd71fd8d947ea74eec3b8943e083bf83de8b2370b98a299a5c2caa470dcd0a"
     },
     {
       "id": "tanstack-router-core-not-found-and-errors",
       "kind": "atomic",
       "theme": "data-auth-errors",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "not-found-and-errors",
-      "sha256": "03e624daf4a30fffa39ad48c99c970f0622fc49d55ceb670d0cfdced3cb402ab"
+      "sha256": "7c21e91c1f19d613527712e5fcc601462cec12b9200742ceb22a122c3fe06e80"
     },
     {
       "id": "tanstack-router-core-code-splitting",
       "kind": "atomic",
       "theme": "ssr-build-tooling",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "code-splitting",
-      "sha256": "e794cc71ad58e9e7a5f8a94353b9d267da644bb9a35aa828ed62871ca393bb5a"
+      "sha256": "df9079784770e58bffb5edbecf3ab942d7963fb0e757e5eaa718bf4e82ae8fb6"
     },
     {
       "id": "tanstack-router-core-ssr",
       "kind": "atomic",
       "theme": "ssr-build-tooling",
       "package": "@tanstack/router-core",
-      "version": "1.171.35",
+      "version": "1.171.37",
       "sourcePath": "ssr",
-      "sha256": "a2a47e5389e8ee8db4e2f0bb52c3ec387d10d80c4b5b30bca5ad16a0732afa08"
+      "sha256": "8154d5301e80eee672f173b770f56f51b3e66475627353ba90279731ac83ae8a"
     },
     {
       "id": "tanstack-router-plugin",
       "kind": "atomic",
       "theme": "ssr-build-tooling",
       "package": "@tanstack/router-plugin",
-      "version": "1.168.43",
+      "version": "1.168.45",
       "sourcePath": "router-plugin",
-      "sha256": "eb7b207a25626fa8b4c9019b15829c6b50e3f3c3bfccba2ef08b5fea649a074e"
+      "sha256": "c594d57dc2f7b194b02a191ce2f5f883ad0a78ccc3f01df54d9f4027bfb8b1fe"
     },
     {
       "id": "tanstack-virtual-file-routes",
@@ -116,18 +116,18 @@
       "kind": "atomic",
       "theme": "framework-solid",
       "package": "@tanstack/solid-router",
-      "version": "1.170.39",
+      "version": "1.170.41",
       "sourcePath": "solid-router",
-      "sha256": "fca2dad1dc8a13fc07eb32e30dda70d93657092fe8630d4ee202cd14cec52144"
+      "sha256": "eb10b6bfffddbf4e104d9c4f560f8773ba825d5a294798e1b8eead79b4eb6caf"
     },
     {
       "id": "tanstack-vue-router",
       "kind": "atomic",
       "theme": "framework-vue",
       "package": "@tanstack/vue-router",
-      "version": "1.170.38",
+      "version": "1.170.40",
       "sourcePath": "vue-router",
-      "sha256": "75189d2abdb8bb475a4feb2c69497b6d9700772adbe117c3e7f1614384322d10"
+      "sha256": "b915f92d55244a47520c92d01dad934516532fba351c53a676be43f85dd9541d"
     }
   ],
   "duplicateDocuments": [],

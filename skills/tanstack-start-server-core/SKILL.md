@@ -1,13 +1,13 @@
 ---
 name: tanstack-start-server-core
-description: "Server-side runtime for TanStack Start: createStartHandler, request/response utilities (getRequest, setResponseHeader, setCookie, getCookie, useSession), three-phase request handling, AsyncLocalStorage context."
+description: "Server-side runtime for TanStack Start: createStartHandler, request/response utilities (getRequest, setResponseHeader, setCookie, getCookie, appendResponseHeader), three-phase request handling, AsyncLocalStorage context."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.169.17"
   tanstack-package: "@tanstack/start-server-core"
-  tanstack-package-version: "1.169.40"
+  tanstack-package-version: "1.169.42"
   tanstack-source-skill: "start-server-core"
   tanstack-sources: "[\"TanStack/router:packages/start-server-core/src\",\"TanStack/router:docs/start/framework/react/guide/server-entry-point.md\"]"
   tanstack-type: "core"
@@ -15,7 +15,7 @@ metadata:
 
 # Start Server Core (`@tanstack/start-server-core`)
 
-Server-side runtime for TanStack Start. Provides the request handler, request/response utilities, cookie management, and session management. All utilities are available anywhere in the call stack during a request via AsyncLocalStorage.
+Server-side runtime for TanStack Start. Provides the request handler, request/response utilities, cookie management, and integration primitives for external session libraries. All utilities are available anywhere in the call stack during a request via AsyncLocalStorage.
 
 > **CRITICAL**: These utilities are SERVER-ONLY. Import them from `@tanstack/<framework>-start/server`, not from the main entry point. They throw if called outside a server request context.
 >
@@ -91,6 +91,7 @@ import {
   getResponseHeaders,
   getResponseHeader,
   getResponseStatus,
+  appendResponseHeader,
   removeResponseHeader,
   clearResponseHeaders,
 } from '@tanstack/react-start/server'
@@ -102,6 +103,14 @@ const serverFn = createServerFn({ method: 'POST' }).handler(async () => {
 
   return { created: true }
 })
+```
+
+`getResponseHeader` and `getResponseHeaders` are read helpers. Treat the `Headers` returned by `getResponseHeaders()` as a snapshot; mutating it does not change the outgoing response. Use the setter/removal helpers for writes.
+
+`appendResponseHeader(name, value)` appends without replacing existing values. For `set-cookie` it accepts fully serialized cookie strings and merges them by cookie identity (name + domain + path; a value `cookie-es` cannot parse is identified by its exact string) — the primitive for bridging external session/auth libraries:
+
+```ts
+appendResponseHeader('set-cookie', await externalSessionLib.commit())
 ```
 
 ## Cookie Management
@@ -132,152 +141,62 @@ const serverFn = createServerFn({ method: 'POST' }).handler(async () => {
 })
 ```
 
-## Session Management
+## External Session Libraries
 
-Encrypted sessions stored in cookies. Requires a password for encryption.
+Start has no built-in session API. Use an external library and connect it to the active request using the cookie helpers, serialized headers, or a Fetch handler.
+
+For a cookie adapter, iron-session 9 accepts Start's cookie functions directly:
 
 ```ts
-// Use @tanstack/<framework>-start for your framework (react, solid, vue)
-import { createServerFn } from '@tanstack/react-start'
-import {
-  useSession,
-  getSession,
-  updateSession,
-  clearSession,
-} from '@tanstack/react-start/server'
+import { getIronSession } from 'iron-session'
+import { getCookie, setCookie } from '@tanstack/react-start/server'
 
-type SessionData = {
-  userId?: string
-}
-
-function getSessionConfig() {
+// This is an application helper, not a Start export.
+export function getAppSession() {
   const password = process.env.SESSION_SECRET
   if (!password || password.length < 32) {
     throw new Error('SESSION_SECRET must be at least 32 characters')
   }
 
-  return {
-    password,
-    name: 'my-app-session',
-    maxAge: 60 * 60 * 24 * 7,
-    cookie: {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax' as const,
-      path: '/',
+  return getIronSession<{ userId: string }>(
+    { read: getCookie, write: setCookie },
+    {
+      cookieName: 'app-session',
+      password,
+      ttl: 7 * 24 * 60 * 60,
+      cookieOptions: {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        path: '/',
+      },
     },
-  }
+  )
 }
 
-function getDummyPasswordHash() {
-  // Precompute this with the same algorithm and cost as real password hashes.
-  const hash = process.env.DUMMY_PASSWORD_HASH
-  if (!hash) {
-    throw new Error('DUMMY_PASSWORD_HASH is required')
-  }
-  return hash
-}
+// After validating credentials in a server function:
+const session = await getAppSession()
+session.userId = user.id
+await session.save()
 
-// Full session manager
-const getUser = createServerFn({ method: 'GET' }).handler(async () => {
-  const session = await useSession<SessionData>(getSessionConfig())
-  if (!session.data.userId) {
-    return null
-  }
-  return db.users.findById(session.data.userId)
-})
-
-// Update session
-const login = createServerFn({ method: 'POST' })
-  .validator((data: unknown) => {
-    if (
-      typeof data !== 'object' ||
-      data === null ||
-      !('email' in data) ||
-      typeof data.email !== 'string' ||
-      data.email.trim().length === 0 ||
-      !('password' in data) ||
-      typeof data.password !== 'string' ||
-      data.password.length === 0
-    ) {
-      throw new Error('Invalid credentials')
-    }
-    return {
-      email: data.email.trim().toLowerCase(),
-      password: data.password,
-    }
-  })
-  .handler(async ({ data }) => {
-    const user = await db.users.findByEmail(data.email)
-    const passwordHash = user?.passwordHash ?? getDummyPasswordHash()
-    const passwordMatches = await verifyPassword(data.password, passwordHash)
-    if (!user || !passwordMatches) {
-      throw new Error('Invalid credentials')
-    }
-
-    await updateSession<SessionData>(getSessionConfig(), {
-      userId: user.id,
-    })
-    return { success: true }
-  })
-
-// Clear session
-const logout = createServerFn({ method: 'POST' }).handler(async () => {
-  await clearSession(getSessionConfig())
-  return { success: true }
-})
+// In a logout handler:
+const logoutSession = await getAppSession()
+logoutSession.destroy()
 ```
 
-### Session Config
+Use `session.userId`, with an absent-user check, when reading. Keep one session object per operation, or pass it from middleware through request context. The adapter reads the incoming cookie; calling it again does not read pending response cookies. Await writes before returning or redirecting. Do not put a session object or request-derived configuration in module scope.
 
-| Option     | Type                     | Default     | Description       |
-| ---------- | ------------------------ | ----------- | ----------------- |
-| `password` | `string`                 | required    | Encryption key    |
-| `name`     | `string`                 | `'start'`   | Cookie name       |
-| `maxAge`   | `number`                 | `undefined` | Expiry in seconds |
-| `cookie`   | `false \| CookieOptions` | `undefined` | Cookie settings   |
+iron-session checks `ttl` when unsealing, and each save renews that lifetime. Choose and test expiration, rotation, and storage behavior explicitly.
 
-### Session Manager Methods
-
-```ts
-const session = await useSession<{ userId: string }>(config)
-
-session.id // Session ID (string | undefined)
-session.data // Session data (typed)
-await session.update({ userId: '123' }) // Persist session data
-await session.clear() // Clear session data
-```
+For libraries that accept a Fetch `Request` and return a `Response`, pass the current request and return the library's response from a server route. For cookie-only transfer, append each value from `response.headers.getSetCookie()` separately; commas can occur inside an `Expires` attribute. Do not use `setResponseHeader('set-cookie', ...)` to append alongside unrelated cookies.
 
 ### Production Session Rules
 
-- Keep cookie session data small and non-sensitive. Store a stable session or user ID, then load current permissions and account state from the authoritative store on each protected request.
-- Use a server-side session record when you need revocation, device tracking, large data, or immediate role changes. Put only its opaque ID in the cookie.
-- Rotate the session after login, privilege changes, password changes, and logout.
-- Use `HttpOnly`, `SameSite`, `Path=/`, and `Secure` in production. Use a `__Host-` cookie name in production only when `Secure`, no `Domain`, and `Path=/` are all enforced.
-- Use the same cookie name and path when clearing a session. Test login, authenticated refresh, expiry, logout, and a replay of the old cookie.
-
-## Query Validation
-
-Validate query string parameters using a Standard Schema:
-
-```ts
-// Use @tanstack/<framework>-start for your framework (react, solid, vue)
-import { getValidatedQuery } from '@tanstack/react-start/server'
-import { z } from 'zod'
-
-const serverFn = createServerFn({ method: 'GET' }).handler(async () => {
-  const query = await getValidatedQuery(
-    z.object({
-      page: z.coerce.number().default(1),
-      limit: z.coerce.number().default(20),
-    }),
-  )
-
-  return { page: query.page }
-})
-```
-
-> Note: `getValidatedQuery` accepts a Standard Schema validator, not a callback function.
+- Keep credentials and session objects in server code; use a new object for each request.
+- Load current account permissions from the authoritative store. A client route guard does not authorize a server function.
+- Use server-side session records for immediate revocation, device tracking, or large data. Deleting a cookie does not invalidate copies of stateless credentials.
+- Use `HttpOnly`, an appropriate `SameSite`, `Path=/`, and `Secure` on HTTPS deployments. Cookie flags complement CSRF protection.
+- Test login, authenticated SSR and navigation, persistence before redirects, expiry, logout, and concurrent requests. Start handles request/response plumbing; the application and its session library own session semantics.
 
 ## How Request Handling Works
 
@@ -313,9 +232,9 @@ const getAuth = createServerFn({ method: 'GET' }).handler(async () => {
 })
 ```
 
-### 2. HIGH: Forgetting session password for most session operations
+### 2. HIGH: Forgetting to persist an external session
 
-`useSession`, `getSession`, `updateSession`, and `sealSession` all require a `password` field for encryption. Missing it throws at runtime. `clearSession` accepts `Partial<SessionConfig>`, so password is optional for clearing.
+Mutating a session object does not necessarily write a cookie. Follow the library's explicit save or commit API and await it before returning or redirecting. Append serialized `Set-Cookie` values individually, preserving cookies from other middleware.
 
 ### 3. MEDIUM: Using session without HTTPS in production
 

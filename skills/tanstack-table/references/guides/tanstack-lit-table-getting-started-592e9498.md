@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-lit-table-getting-started"></a>
 
-Published skill · `@tanstack/lit-table@9.2.8`.
+Published skill · `@tanstack/lit-table@9.3.1`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 

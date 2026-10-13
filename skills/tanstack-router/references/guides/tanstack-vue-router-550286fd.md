@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-router"></a>
 
-Published skill · `@tanstack/vue-router@1.170.38`.
+Published skill · `@tanstack/vue-router@1.170.40`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-table-getting-started"></a>
 
-Published skill · `@tanstack/vue-table@9.2.8`.
+Published skill · `@tanstack/vue-table@9.3.1`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/solid-start"
-  tanstack-package-version: "1.168.58"
+  tanstack-package-version: "1.169.1"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "solid-start"
   tanstack-sources: "[\"TanStack/router:packages/solid-start/src\",\"TanStack/router:docs/start/framework/solid/build-from-scratch.md\"]"
@@ -35,7 +35,7 @@ This skill covers the Solid-specific bindings, setup, and patterns for TanStack 
 
 All core APIs (`createServerFn`, `createMiddleware`, `createStart`, `createIsomorphicFn`, `createServerOnlyFn`, `createClientOnlyFn`) are available from `@tanstack/solid-start`.
 
-Server utilities (`getRequest`, `getRequestHeader`, `setResponseHeader`, `setCookie`, `getCookie`, `useSession`) are imported from `@tanstack/solid-start/server`.
+Server utilities (`getRequest`, `getRequestHeader`, `setResponseHeader`, `setCookie`, `getCookie`) are imported from `@tanstack/solid-start/server`.
 
 ## Full Project Setup
 

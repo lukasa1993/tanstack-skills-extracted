@@ -6,9 +6,9 @@ metadata:
   internal: true
   tanstack-framework: "vue"
   tanstack-library: "@tanstack/vue-table-devtools"
-  tanstack-library-version: "9.2.8"
+  tanstack-library-version: "9.3.1"
   tanstack-package: "@tanstack/vue-table-devtools"
-  tanstack-package-version: "9.2.8"
+  tanstack-package-version: "9.3.1"
   tanstack-requires: "[\"tanstack-table-core\",\"tanstack-table-devtools\"]"
   tanstack-source-skill: "devtools"
   tanstack-sources: "[\"TanStack/table:docs/devtools.md\",\"TanStack/table:packages/vue-table-devtools/src/index.ts\",\"TanStack/table:packages/vue-table-devtools/src/useTanStackTableDevtools.ts\"]"

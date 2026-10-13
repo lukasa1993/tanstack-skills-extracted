@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/angular-table@9.2.8`.
+Published skill · `@tanstack/angular-table@9.3.1`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

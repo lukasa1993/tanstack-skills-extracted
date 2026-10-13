@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-table-migrate-v8-to-v9"></a>
 
-Published skill · `@tanstack/react-table@9.2.8`.
+Published skill · `@tanstack/react-table@9.3.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

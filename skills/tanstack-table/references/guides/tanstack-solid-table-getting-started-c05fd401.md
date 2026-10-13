@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-table-getting-started"></a>
 
-Published skill · `@tanstack/solid-table@9.2.8`.
+Published skill · `@tanstack/solid-table@9.3.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

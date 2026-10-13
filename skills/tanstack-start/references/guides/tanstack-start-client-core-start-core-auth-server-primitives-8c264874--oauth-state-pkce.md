@@ -1,6 +1,6 @@
 # Auth Server Primitives — OAuth: state + PKCE
 
-[Guide and prerequisites](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md) · Published skill · `@tanstack/start-client-core@1.170.35`.
+[Guide and prerequisites](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md) · Published skill · `@tanstack/start-client-core@1.170.37`.
 
 ## OAuth: state + PKCE
 
@@ -10,10 +10,7 @@ For OAuth authorization-code flow, generate a one-time `state` (CSRF defense) an
 // src/server/oauth.functions.ts
 import { createServerFn } from '@tanstack/react-start'
 import { redirect } from '@tanstack/react-router'
-import {
-  getRequestHeader,
-  setResponseHeader,
-} from '@tanstack/react-start/server'
+import { setCookie } from '@tanstack/react-start/server'
 import crypto from 'node:crypto'
 
 const OAUTH_STATE_COOKIE = '__Host-oauth' // expires fast; one-shot
@@ -34,10 +31,13 @@ export const startOAuth = createServerFn({ method: 'GET' }).handler(
       crypto.createHash('sha256').update(verifier).digest(),
     )
 
-    setResponseHeader(
-      'Set-Cookie',
-      `${OAUTH_STATE_COOKIE}=${signed({ state, verifier })}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`,
-    )
+    setCookie(OAUTH_STATE_COOKIE, signed({ state, verifier }), {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 600,
+    })
 
     throw redirect({
       href:

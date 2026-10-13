@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/vue-start"
-  tanstack-package-version: "1.168.57"
+  tanstack-package-version: "1.169.1"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "vue-start"
   tanstack-sources: "[\"TanStack/router:packages/vue-start/src\"]"
@@ -35,7 +35,7 @@ This skill covers the Vue-specific bindings, setup, and patterns for TanStack St
 
 All core APIs (`createServerFn`, `createMiddleware`, `createStart`, `createIsomorphicFn`, `createServerOnlyFn`, `createClientOnlyFn`) are available from `@tanstack/vue-start`.
 
-Server utilities (`getRequest`, `getRequestHeader`, `setResponseHeader`, `setCookie`, `getCookie`, `useSession`) are imported from `@tanstack/vue-start/server`.
+Server utilities (`getRequest`, `getRequestHeader`, `setResponseHeader`, `setCookie`, `getCookie`) are imported from `@tanstack/vue-start/server`.
 
 ## Full Project Setup
 

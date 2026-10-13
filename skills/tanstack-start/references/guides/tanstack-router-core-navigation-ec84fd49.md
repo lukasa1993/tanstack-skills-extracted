@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-navigation"></a>
 
-Published skill · `@tanstack/router-core@1.171.35`.
+Published skill · `@tanstack/router-core@1.171.37`.
 
 [Topic index](../router-essentials.md) · [Source provenance](../SOURCES.md)
 

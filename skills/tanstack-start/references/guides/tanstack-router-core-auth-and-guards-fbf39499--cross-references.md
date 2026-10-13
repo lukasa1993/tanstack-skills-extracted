@@ -1,6 +1,6 @@
 # Auth And Guards — Cross-References
 
-[Guide and prerequisites](./tanstack-router-core-auth-and-guards-fbf39499.md) · Published skill · `@tanstack/router-core@1.171.35`.
+[Guide and prerequisites](./tanstack-router-core-auth-and-guards-fbf39499.md) · Published skill · `@tanstack/router-core@1.171.37`.
 
 ## Cross-References
 

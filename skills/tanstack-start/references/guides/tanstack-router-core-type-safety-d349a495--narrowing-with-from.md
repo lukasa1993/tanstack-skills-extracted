@@ -1,6 +1,6 @@
 # Type Safety — Narrowing with `from`
 
-[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.35`.
+[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.37`.
 
 ## Narrowing with `from`
 
