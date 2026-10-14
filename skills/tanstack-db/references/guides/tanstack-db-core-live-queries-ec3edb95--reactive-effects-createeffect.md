@@ -1,6 +1,6 @@
 # Live Queries — Reactive Effects (createEffect)
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.13.0`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.14.0`.
 
 ## Reactive Effects (createEffect)
 

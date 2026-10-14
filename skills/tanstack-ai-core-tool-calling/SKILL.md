@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.68.0"
+  tanstack-package-version: "0.69.0"
   tanstack-source-skill: "ai-core/tool-calling"
   tanstack-sources: "[\"TanStack/ai:docs/tools/tools.md\",\"TanStack/ai:docs/tools/server-tools.md\",\"TanStack/ai:docs/tools/client-tools.md\",\"TanStack/ai:docs/tools/tool-approval.md\",\"TanStack/ai:docs/tools/lazy-tool-discovery.md\"]"
   tanstack-type: "sub-skill"
@@ -785,7 +785,8 @@ The `@tanstack/ai-mcp` skill shows `ctx.context.requestInput` and `ctx.context.s
 When `chat()` receives an MCP input request, the run outcome is an interrupt.
 The stream ends with `RUN_FINISHED`.
 The outcome type is `interrupt`.
-Read each interrupt whose `reason` is `mcp_input`.
+Read each interrupt whose `id` starts with `mcp_input_`.
+`reason` is display text. The default is `mcp_input`.
 The payload key is `tanstack:interruptPayload`.
 
 `form` means the server asks the user for input.
@@ -811,7 +812,7 @@ for await (const chunk of stream) {
   if (chunk.outcome?.type !== 'interrupt') continue
 
   for (const item of chunk.outcome.interrupts) {
-    if (item.reason !== 'mcp_input') continue
+    if (!item.id.startsWith('mcp_input_')) continue
     const payload = item.metadata?.[INTERRUPT_PAYLOAD_METADATA_KEY]
     if (typeof payload !== 'object' || payload === null) continue
     if (!('kind' in payload)) continue

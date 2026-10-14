@@ -1,6 +1,6 @@
 # Virtualizer — Optional Options: `measureElement`
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.3`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.4`.
 
 ## Optional Options: `measureElement`
 

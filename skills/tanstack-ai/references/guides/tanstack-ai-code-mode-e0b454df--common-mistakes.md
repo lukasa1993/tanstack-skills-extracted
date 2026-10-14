@@ -1,6 +1,6 @@
 # Ai Code Mode — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.2`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.3`.
 
 ## Common Mistakes
 

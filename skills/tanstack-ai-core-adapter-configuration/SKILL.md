@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.68.0"
+  tanstack-package-version: "0.69.0"
   tanstack-source-skill: "ai-core/adapter-configuration"
   tanstack-sources: "[\"TanStack/ai:docs/adapters/openai.md\",\"TanStack/ai:docs/adapters/anthropic.md\",\"TanStack/ai:docs/adapters/gemini.md\",\"TanStack/ai:docs/adapters/ollama.md\",\"TanStack/ai:docs/advanced/per-model-type-safety.md\",\"TanStack/ai:docs/advanced/runtime-adapter-switching.md\",\"TanStack/ai:docs/advanced/extend-adapter.md\"]"
   tanstack-type: "sub-skill"
@@ -162,7 +162,7 @@ export function handleChat(
 
 ### 3. Configuring Reasoning / Thinking
 
-Different providers expose reasoning/thinking through their `modelOptions`:
+Set reasoning/thinking with the `reasoning` option on `chat()`. It is the same on every provider, and the types take only the levels of the selected model:
 
 ```typescript
 import { chat } from '@tanstack/ai'
@@ -174,56 +174,35 @@ const messages = [
   { role: 'user' as const, content: 'Plan a database migration.' },
 ]
 
-// OpenAI: reasoning with effort and summary
+// OpenAI: the level goes out as reasoning.effort, with a summary
 const openaiStream = chat({
   adapter: openaiText('gpt-5.2'),
   messages,
-  modelOptions: {
-    reasoning: {
-      effort: 'high',
-      summary: 'auto',
-    },
-  },
+  reasoning: { level: 'high', summary: true },
 })
 
-// Anthropic: extended thinking with budget_tokens
+// Anthropic: extended thinking with a token budget
 const anthropicStream = chat({
   adapter: anthropicText('claude-sonnet-4-6'),
   messages,
-  modelOptions: {
-    max_tokens: 16000,
-    thinking: {
-      type: 'enabled',
-      budget_tokens: 8000, // must be >= 1024 and < max_tokens
-    },
-  },
+  modelOptions: { max_tokens: 16000 },
+  reasoning: { level: 'high', budgetTokens: 8000 },
 })
 
-// Anthropic: adaptive thinking (Sonnet 5, Fable 5, Opus 4.7+) — depth is
-// tuned with output_config.effort instead of a token budget
+// Anthropic: adaptive thinking (Sonnet 5, Fable 5, Opus 4.7+) — the level
+// goes out as output_config.effort
 const adaptiveStream = chat({
   adapter: anthropicText('claude-sonnet-5'),
   messages,
-  modelOptions: {
-    max_tokens: 16000,
-    thinking: {
-      type: 'adaptive',
-      display: 'summarized', // stream the reasoning text (default 'omitted')
-    },
-    output_config: { effort: 'high' }, // 'low' | 'medium' | 'high' | 'xhigh' | 'max'
-  },
+  modelOptions: { max_tokens: 16000 },
+  reasoning: 'high', // 'low' | 'medium' | 'high' | 'xhigh' | 'max'
 })
 
-// Gemini: thinking config with budget or level
+// Gemini: a thinking budget on Gemini 2.5, a thinking level on Gemini 3
 const geminiStream = chat({
   adapter: geminiText('gemini-2.5-pro'),
   messages,
-  modelOptions: {
-    thinkingConfig: {
-      includeThoughts: true,
-      thinkingBudget: 4096,
-    },
-  },
+  reasoning: { level: 'high', budgetTokens: 4096 },
 })
 ```
 

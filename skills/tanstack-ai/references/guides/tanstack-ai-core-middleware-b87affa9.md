@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-middleware"></a>
 
-Published skill · `@tanstack/ai@0.68.0`.
+Published skill · `@tanstack/ai@0.69.0`.
 
 [Topic index](../tools-outputs-middleware.md) · [Source provenance](../SOURCES.md)
 

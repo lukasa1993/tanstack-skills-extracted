@@ -1,6 +1,6 @@
 # Ai Mcp — `createMCPClient` — single server
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.3`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.0`.
 
 ## `createMCPClient` — single server
 
@@ -21,6 +21,29 @@ If the server does not support that spec, the client uses the 2025 initialize ha
 The client keeps negotiation mode `auto`.
 `client.instructions` holds the server's instructions from the handshake, or `undefined` when the server sends none.
 Put them in the system prompt: `systemPrompts: client.instructions ? [client.instructions] : []`.
+
+Two more client options:
+
+- `toolName: (tool) => string` sets the name the model sees. It wins over
+  `prefix`. `metadata.mcp.serverToolName` keeps the server's name, so
+  `callTool()` and MCP Apps widget calls still reach the tool. Two tools with
+  the same final name throw `DuplicateToolNameError`.
+- `requestOptions: { timeout, resetTimeoutOnProgress }` is sent with the
+  connect handshake, tool lists, tool calls, resource requests, and prompt
+  requests. The `subscriptions/listen` stream and task status polls keep
+  the SDK defaults. `timeout` is in milliseconds (SDK default 60,000). A
+  spec 2026 `tools/call` gets no progress notifications, so there only
+  `timeout` applies.
+
+```typescript
+import { createMCPClient } from '@tanstack/ai-mcp'
+
+const client = await createMCPClient({
+  transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  toolName: (tool) => `mcp__weather__${tool.name}`,
+  requestOptions: { timeout: 120_000, resetTimeoutOnProgress: true },
+})
+```
 
 ### Transports
 

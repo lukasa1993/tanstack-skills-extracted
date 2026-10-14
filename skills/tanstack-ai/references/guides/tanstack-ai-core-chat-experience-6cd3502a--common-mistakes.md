@@ -1,6 +1,6 @@
 # Chat Experience — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.68.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.69.0`.
 
 ## Common Mistakes
 
@@ -294,3 +294,8 @@ for await (const chunk of stream) {
 ```
 
 If not handled, the UI appears to hang with no feedback.
+
+`chunk.code === CONTEXT_OVERFLOW_CODE` (`'context_overflow'`, exported from
+`@tanstack/ai`) means the input did not fit in the model's context window.
+Text adapters set the same code for every provider. Shorten the messages, then
+call `chat()` again. Do not match on the provider's message text.

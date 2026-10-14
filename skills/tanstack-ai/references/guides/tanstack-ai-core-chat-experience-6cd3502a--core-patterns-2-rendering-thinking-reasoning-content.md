@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 2. Rendering Thinking/Reasoning Content
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.68.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.69.0`.
 
 ## Core Patterns: 2. Rendering Thinking/Reasoning Content
 
@@ -47,7 +47,7 @@ function MessageRenderer({ message }: { message: UIMessage }) {
 }
 ```
 
-Server-side, enable thinking via `modelOptions` on the adapter:
+Server-side, turn thinking on with the `reasoning` option on `chat()`:
 
 ```typescript
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
@@ -59,12 +59,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: geminiText('gemini-3.8-flash'),
     messages,
-    modelOptions: {
-      thinkingConfig: {
-        includeThoughts: true,
-        thinkingLevel: 'HIGH', // Gemini 3.x; Gemini 2.x uses thinkingBudget
-      },
-    },
+    reasoning: 'high', // Gemini 3.x: thinkingLevel; Gemini 2.x: thinkingBudget
   })
 
   return toServerSentEventsResponse(stream)

@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.8.3"
+  tanstack-package-version: "0.9.0"
   tanstack-source-skill: "ai-persistence/build-cloudflare-artifact-store"
 ---
 

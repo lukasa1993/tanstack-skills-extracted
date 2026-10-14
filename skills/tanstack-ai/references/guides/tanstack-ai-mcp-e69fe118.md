@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-mcp"></a>
 
-Published skill · `@tanstack/ai-mcp@0.8.3`.
+Published skill · `@tanstack/ai-mcp@0.9.0`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 
@@ -14,9 +14,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [When to use this package](./tanstack-ai-mcp-e69fe118--when-to-use-this-package.md) — 1 KiB
 - [Install](./tanstack-ai-mcp-e69fe118--install.md) — 1 KiB
 - [Host an MCP server](./tanstack-ai-mcp-e69fe118--host-an-mcp-server.md) — 9 KiB
-- [`createMCPClient` — single server](./tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md) — 4 KiB
+- [`createMCPClient` — single server](./tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md) — 5 KiB
 - [Three type-safety modes](./tanstack-ai-mcp-e69fe118--three-type-safety-modes.md) — 3 KiB
-- [Tool policy: `toolFilter` and `needsApproval`](./tanstack-ai-mcp-e69fe118--tool-policy-toolfilter-and-needsapproval.md) — 2 KiB
+- [Tool policy: `toolFilter` and `needsApproval`](./tanstack-ai-mcp-e69fe118--tool-policy-toolfilter-and-needsapproval.md) — 3 KiB
 - [Lifecycle](./tanstack-ai-mcp-e69fe118--lifecycle.md) — 3 KiB
 - [`chat({ mcp })` — discovery + lifecycle in one prop](./tanstack-ai-mcp-e69fe118--chat-mcp-discovery-lifecycle-in-one-prop.md) — 4 KiB
 - [MCP input request](./tanstack-ai-mcp-e69fe118--mcp-input-request.md) — 3 KiB

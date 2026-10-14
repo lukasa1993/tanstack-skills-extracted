@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.68.0"
+  tanstack-package-version: "0.69.0"
   tanstack-source-skill: "ai-core/chat-experience"
   tanstack-sources: "[\"TanStack/ai:docs/getting-started/quick-start.md\",\"TanStack/ai:docs/chat/streaming.md\",\"TanStack/ai:docs/transports/overview.md\",\"TanStack/ai:docs/transports/sse.md\",\"TanStack/ai:docs/chat/thinking-content.md\",\"TanStack/ai:docs/advanced/multimodal-content.md\",\"TanStack/ai:docs/resumable-streams/overview.md\",\"TanStack/ai:docs/persistence/client-persistence.md\"]"
   tanstack-type: "sub-skill"
@@ -224,7 +224,7 @@ function MessageRenderer({ message }: { message: UIMessage }) {
 }
 ```
 
-Server-side, enable thinking via `modelOptions` on the adapter:
+Server-side, turn thinking on with the `reasoning` option on `chat()`:
 
 ```typescript
 import { chat, toServerSentEventsResponse } from '@tanstack/ai'
@@ -236,12 +236,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: geminiText('gemini-3.8-flash'),
     messages,
-    modelOptions: {
-      thinkingConfig: {
-        includeThoughts: true,
-        thinkingLevel: 'HIGH', // Gemini 3.x; Gemini 2.x uses thinkingBudget
-      },
-    },
+    reasoning: 'high', // Gemini 3.x: thinkingLevel; Gemini 2.x: thinkingBudget
   })
 
   return toServerSentEventsResponse(stream)
@@ -514,7 +509,8 @@ serveMCPStdio(server)
 **MCP input interrupt.** When `chat()` receives an MCP input request, the run outcome is an interrupt.
 The stream ends with `RUN_FINISHED`.
 The outcome type is `interrupt`.
-Read each interrupt whose `reason` is `mcp_input`.
+Read each interrupt whose `id` starts with `mcp_input_`.
+`reason` is display text. The default is `mcp_input`.
 The payload key is `tanstack:interruptPayload`.
 
 `form` means the server asks the user for input.
@@ -541,7 +537,7 @@ try {
     if (chunk.outcome?.type !== 'interrupt') continue
 
     for (const item of chunk.outcome.interrupts) {
-      if (item.reason !== 'mcp_input') continue
+      if (!item.id.startsWith('mcp_input_')) continue
       const payload = item.metadata?.[INTERRUPT_PAYLOAD_METADATA_KEY]
       if (typeof payload !== 'object' || payload === null) continue
       if (!('kind' in payload)) continue
@@ -563,7 +559,7 @@ To continue, answer the interrupt:
 
 ```tsx ignore
 // `interrupt` is one item from `useChat().interrupts`.
-if (interrupt.reason === 'mcp_input' && interrupt.kind === 'generic') {
+if (interrupt.id.startsWith('mcp_input_') && interrupt.kind === 'generic') {
   interrupt.resolveInterrupt({ value: 'Paris' })
 }
 ```
@@ -1005,6 +1001,11 @@ for await (const chunk of stream) {
 ```
 
 If not handled, the UI appears to hang with no feedback.
+
+`chunk.code === CONTEXT_OVERFLOW_CODE` (`'context_overflow'`, exported from
+`@tanstack/ai`) means the input did not fit in the model's context window.
+Text adapters set the same code for every provider. Shorten the messages, then
+call `chat()` again. Do not match on the provider's message text.
 
 ## Cross-References
 

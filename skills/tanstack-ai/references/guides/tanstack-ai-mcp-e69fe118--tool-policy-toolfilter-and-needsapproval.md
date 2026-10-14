@@ -1,13 +1,14 @@
 # Ai Mcp — Tool policy: `toolFilter` and `needsApproval`
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.3`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.0`.
 
 ## Tool policy: `toolFilter` and `needsApproval`
 
 By default every server tool reaches the model and runs without approval.
 Set a policy on the client. It applies in `tools()`, in `chat({ mcp })`, and
-per server in `createMCPClients`. Both callbacks receive the raw MCP tool
-definition (native unprefixed `name`, `title`, `annotations`).
+per server in `createMCPClients`. A `toolFilter` function and `needsApproval`
+receive the raw MCP tool definition (native unprefixed `name`, `title`,
+`annotations`).
 
 ```typescript
 import { createMCPClient } from '@tanstack/ai-mcp'
@@ -21,6 +22,26 @@ const mcp = await createMCPClient({
 })
 ```
 
+`toolFilter` also takes a list of server tool names. The list is strict:
+
+```typescript
+import { createMCPClient } from '@tanstack/ai-mcp'
+
+const mcp = await createMCPClient({
+  transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
+  // Exactly these tools, in this order.
+  toolFilter: ['search_issues', 'get_issue'],
+})
+```
+
+- A name the server does not have, or a repeated name, throws
+  `MCPToolFilterError` (`missing`, `repeated`, `available`).
+- A listed task-required tool on a server without task support throws
+  `MCPTaskRequiredToolError`.
+- An empty list keeps no tools.
+
+These rules apply to both `toolFilter` forms and to `needsApproval`:
+
 - `toolFilter` also applies to `tools([defs])`: a hidden definition throws
   `MCPToolNotFoundError`. MCP Apps widget calls also honor it. It does not
   apply to `callTool()`.
@@ -28,5 +49,5 @@ const mcp = await createMCPClient({
   its own `needsApproval`.
 - MCP Apps widget calls have no approval step, so the call handler refuses a
   tool that `needsApproval` marks (`{ ok: false, error: 'Tool needs approval: <name>' }`).
-- Annotations are server-declared hints. For an untrusted server, filter by
-  `tool.name` instead.
+- Annotations are server-declared hints. For an untrusted server, use a
+  `toolFilter` list of names instead.

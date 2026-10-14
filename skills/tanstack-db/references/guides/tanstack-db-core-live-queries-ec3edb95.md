@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-live-queries"></a>
 
-Published skill · `@tanstack/db@0.13.0`.
+Published skill · `@tanstack/db@0.14.0`.
 
 [Topic index](../live-queries.md) · [Source provenance](../SOURCES.md)
 

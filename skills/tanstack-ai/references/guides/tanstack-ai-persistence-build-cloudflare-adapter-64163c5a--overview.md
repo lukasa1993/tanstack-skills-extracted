@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — Overview
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.8.3`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.9.0`.
 
 # Cloudflare Chat Persistence
 

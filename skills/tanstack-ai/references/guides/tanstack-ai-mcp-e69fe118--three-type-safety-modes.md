@@ -1,13 +1,16 @@
 # Ai Mcp — Three type-safety modes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.8.3`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.0`.
 
 ## Three type-safety modes
 
 ### Mode 1 — Auto-discovery (no types needed)
 
 `client.tools()` lists every tool the server exposes. Args are typed `unknown`
-at compile time but the tool's JSON Schema is forwarded to the LLM.
+at compile time but the tool's JSON Schema is forwarded to the LLM. A schema
+without `properties` gets `properties: {}`, and a schema without `type` gets
+`type: 'object'`. `tool.metadata.mcp.annotations` is a frozen copy of the
+server's annotations.
 
 ```typescript
 import { chat } from '@tanstack/ai'

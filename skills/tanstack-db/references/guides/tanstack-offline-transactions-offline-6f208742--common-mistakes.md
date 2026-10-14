@@ -1,6 +1,6 @@
 # Offline — Common Mistakes
 
-[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.1.0`.
+[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.1.1`.
 
 ## Common Mistakes
 

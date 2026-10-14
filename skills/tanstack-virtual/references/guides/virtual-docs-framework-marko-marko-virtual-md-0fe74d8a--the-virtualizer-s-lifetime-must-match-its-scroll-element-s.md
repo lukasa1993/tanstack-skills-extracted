@@ -1,6 +1,6 @@
 # Marko Virtual — The virtualizer's lifetime must match its scroll element's
 
-[Guide and prerequisites](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.3`.
+[Guide and prerequisites](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.4`.
 
 ## The virtualizer's lifetime must match its scroll element's
 
