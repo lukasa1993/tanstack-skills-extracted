@@ -1,10 +1,10 @@
 # Hotkeys — Property getters
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Property getters
 
-`HotkeyController` and `HotkeySequenceController` accept property getters or functions returning options. Controllers read options when the host connects and after each host update, so scoped targets can become available during rendering.
+`HotkeyController` accepts property getters or functions returning options. Controllers read options when the host connects and after each host update, so scoped targets can become available during rendering.
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -32,5 +32,7 @@ export class Editor extends LitElement {
 ```
 
 You can also pass `() => ({ enabled: this.enabled })`. Use Lit reactive properties, or call `requestUpdate()` after changing plain state. A getter alone does not schedule a host update. Ordinary option changes preserve registration identity. Changing the target moves listeners, and disconnecting releases registrations. For options that depend on the element instance, use a controller rather than decorator configuration created at class definition time.
+
+The hotkey can be a getter too, such as `() => this.binding` for a binding the user records. Changing the value it returns registers the new hotkey after the next host update.
 
 Recorder controllers accept the same two forms and read them during recording, including active sessions. Callback values remain functions and are not invoked to resolve options.

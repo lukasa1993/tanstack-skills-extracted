@@ -1,6 +1,6 @@
 # Hotkeys — Registering multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Registering multiple hotkeys
 
@@ -13,14 +13,17 @@ function Editor() {
   useHotkeys([
     { hotkey: 'Mod+S', callback: () => save() },
     { hotkey: 'Mod+Z', callback: () => undo() },
+    { hotkey: ['G', 'G'], callback: () => scrollToTop(), options: { timeout: 500 } },
     { hotkey: 'Escape', callback: () => close() },
   ])
 }
 ```
 
+Each definition's `options` are typed by its `hotkey`, just like `useHotkey`.
+
 ### Common options with per-hotkey overrides
 
-Pass shared options as the second argument. Per-definition options override the common ones:
+Pass shared options as the second argument. Per-definition options override the common ones. Options merge in this order: `HotkeysProvider` defaults, then the common options, then each definition's options. A common `timeout` or `requireReset` applies only to the definitions of the matching kind.
 
 ```tsx
 useHotkeys(
@@ -48,4 +51,4 @@ function MenuShortcuts({ items }) {
 }
 ```
 
-The hook diffs the array between renders by array index plus the normalized hotkey string, registering new hotkeys and unregistering removed ones automatically. Reordering the array changes that identity, so reordered entries are unregistered and re-registered even if their callback references stay the same.
+The hook diffs the array between renders by array index plus the normalized hotkey, registering new hotkeys and unregistering removed ones automatically. Reordering the array changes that identity, so reordered entries are unregistered and re-registered even if their callback references stay the same.

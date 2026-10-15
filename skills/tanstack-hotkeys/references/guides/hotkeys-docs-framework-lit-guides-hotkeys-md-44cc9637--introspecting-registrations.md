@@ -1,10 +1,10 @@
 # Hotkeys — Introspecting registrations
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Introspecting registrations
 
-Use `HotkeyRegistrationsController` to get a live view of all hotkey and sequence registrations. Use it to build shortcut palettes, help dialogs, or devtools.
+Use the `HotkeyRegistrationsController` controller to get a live view of every registration, chords and sequences together. It's the building block for shortcut palettes and help dialogs.
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -16,39 +16,23 @@ class ShortcutPalette extends LitElement {
   private registrations = new HotkeyRegistrationsController(this)
 
   render() {
-    const { hotkeys, sequences } = this.registrations
-
-    return html`
-      <h2>Keyboard Shortcuts</h2>
-      <ul>
-        ${hotkeys.map(
-          (reg) => html`
-            <li>
-              <kbd>${formatForDisplay(reg.hotkey)}</kbd>
-              ${reg.options.meta?.name ? html`<span> — ${reg.options.meta.name}</span>` : ''}
-              ${reg.options.meta?.description ? html`<p>${reg.options.meta.description}</p>` : ''}
-            </li>
-          `,
-        )}
-      </ul>
-      ${sequences.length > 0
-        ? html`
-            <h2>Sequences</h2>
-            <ul>
-              ${sequences.map(
-                (reg) => html`
-                  <li>
-                    <kbd>${reg.sequence.map((step) => formatForDisplay(step)).join(' → ')}</kbd>
-                    ${reg.options.meta?.name ? html`<span> — ${reg.options.meta.name}</span>` : ''}
-                  </li>
-                `,
-              )}
-            </ul>
-          `
-        : ''}
-    `
+    return html`<ul>
+      ${this.registrations.hotkeys.map(
+        (reg) => html`
+          <li>
+            <kbd>${formatForDisplay(reg.hotkey)}</kbd>
+            ${reg.options.meta?.name ? html`<span> — ${reg.options.meta.name}</span>` : ''}
+            ${reg.kind === 'sequence'
+              ? html`<small>${reg.matchedStepCount}/${reg.hotkey.length} steps</small>`
+              : ''}
+          </li>
+        `,
+      )}
+    </ul>`
   }
 }
 ```
 
-The controller exposes `hotkeys` and `sequences` arrays. The `hotkeys` array contains registration objects with the hotkey string, options (including `meta`), and enabled state. The `sequences` array contains sequence registrations with the same structure.
+The controller's `hotkeys` getter holds one array of registration views. Each view has an `id`, the `hotkey`, its `options` (including `meta`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedHotkey`; sequence views add `parsedSequence` and `matchedStepCount`, the steps matched so far in the current attempt. Disabled entries stay listed; unmounted registrations disappear. Format any hotkey with `formatForDisplay`, and group entries by `options.meta?.group` when building a help panel.
+
+Registrations only exist while their components are mounted. To list hotkeys from routes that have not rendered, declare them with [app hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md).

@@ -12,7 +12,7 @@
 | `tanstack-router-core-not-found-and-errors` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.37` |  |
 | `tanstack-router-core-code-splitting` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.37` |  |
 | `tanstack-router-core-ssr` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.37` |  |
-| `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.168.45` |  |
+| `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.168.46` |  |
 | `tanstack-virtual-file-routes` | atomic | `ssr-build-tooling` | `@tanstack/virtual-file-routes` | `1.162.0` |  |
 | `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.41` |  |
 | `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.40` |  |

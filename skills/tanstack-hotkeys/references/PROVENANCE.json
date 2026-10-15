@@ -4,18 +4,33 @@
   "product": "hotkeys",
   "sources": [
     {
+      "id": "hotkeys:docs/framework/alpine/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-alpine",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/alpine/guides/app-hotkeys.md",
+      "sha256": "95f326e2b2441ab1faf44b6f056e0489aa865aa8fedeaa36ab293b10b76e260d",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
       "id": "hotkeys:docs/framework/alpine/guides/formatting-display.md",
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
-      "sha256": "e14f11e083fb0ac162112440d208039720f101ce9072ae552eee0ac77ee1820a",
+      "sha256": "fcc24990210005058b93d8cf29f216c0669ec7729870f8147477bd1a2dc89de5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -23,14 +38,14 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/alpine/guides/hotkey-recording.md",
-      "sha256": "ee535fbf974aba0f3dc76806e42830c4385689cfac155eef712a5637d9016f8b",
+      "sha256": "312713f22cdf4a4c10c8d9cb7dbd3936a38e9964f57427d9554fbf282680addf",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -38,14 +53,14 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
-      "sha256": "d33b893b11fd48eb900ce29c25626cbb742cbe45273ab57d386a86c3ab8d93e7",
+      "sha256": "621e518b1f760a566370d4db9507fdcf7a15a9ac98627e15090aa24dc8ccb192",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -53,29 +68,14 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/alpine/guides/key-state-tracking.md",
-      "sha256": "3c1cb0b83d581bf6a7ac6e245b8638adadfe7c32e46e947e1cd587f8af30331c",
+      "sha256": "05e571f2f66602be0ab8d5fc4a2bbe9d667c190f0a73d4662c95ab5c08ea0f03",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/alpine/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-alpine",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/alpine/guides/sequence-recording.md",
-      "sha256": "2dc8beb8b02e7c0d47892156adfaf962e144f9db432a698ce43fa48fd23558f3",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -83,14 +83,14 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/alpine/guides/sequences.md",
-      "sha256": "6a0c5eb24dfd57a8691811f86d0c969ba3f31997d1fc9498e0840400ac518494",
+      "sha256": "5f4a5f9b9f8c43a3538bedd834308507754f3459b89c1e8f465d4044002c37fe",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -98,14 +98,29 @@
       "kind": "document",
       "theme": "framework-alpine",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/alpine/quick-start.md",
-      "sha256": "b73c7bc6c325fd97bc527c5160588f5301bf7347bfe39d936f68568c1935ed53",
+      "sha256": "7f7b1de807151b86683a0ea388f24e129a76725001feecd6f719ec152bae99d9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-ember",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/ember/guides/app-hotkeys.md",
+      "sha256": "de769e3611f8013a1624aa86c0699433fd0d8a5defec3c0d1c477a6315d01132",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -113,14 +128,14 @@
       "kind": "document",
       "theme": "framework-ember",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/ember/guides/formatting-display.md",
-      "sha256": "1eb1c3a4f6c9857bc3e7888e66a74782cfb540d2584fc5dd830b6c36effa08c9",
+      "sha256": "197a05179ab6581e497d5051bb285c32ff2b00e781f86753b3387b13ccb5c426",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -128,14 +143,14 @@
       "kind": "document",
       "theme": "framework-ember",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/ember/guides/hotkey-recording.md",
-      "sha256": "62beb9a803c2b04c72c249b66228c91ac8745f22105c475ad904c10773a2b7ea",
+      "sha256": "57f184a2603b2df88214ed98d5a1fc98b9e944204847931a01f9e37e45669ec9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -143,14 +158,14 @@
       "kind": "document",
       "theme": "framework-ember",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/ember/guides/hotkeys.md",
-      "sha256": "d9161bdbb9945b135f1ac402bc8e7d5b6d361ced58878ee4f194cc8985dd0928",
+      "sha256": "612a7e8a701d55ba7425365a28c5a0c7cfba204489677c70b7e984a8370b5f2d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -158,29 +173,14 @@
       "kind": "document",
       "theme": "framework-ember",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/ember/guides/key-state-tracking.md",
-      "sha256": "e6c43290228275bdb874981f685f99644430bc948a53b9453350e2e84af77503",
+      "sha256": "cf1a867f81e54191983525c16d3c316d4433350a846eaf5ab6ca935c8f04356e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/ember/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-ember",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/ember/guides/sequence-recording.md",
-      "sha256": "5dd7563d78ac8b3413303497264a786f5d8622f44ed57586a65dd914560330bc",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -188,14 +188,14 @@
       "kind": "document",
       "theme": "framework-ember",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/ember/guides/sequences.md",
-      "sha256": "377f7532b6c75a8634bc3689e99d3a74754b2b7d9a6872a933a968d813db819d",
+      "sha256": "3b8ba4a04b3a4c5a23b816f9b79f5576449df008d64f5909f39e6acd8f8a77db",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -203,14 +203,29 @@
       "kind": "document",
       "theme": "framework-ember",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/ember/quick-start.md",
-      "sha256": "f2331986ec7cc2b724fc18f1364e68194ec54ecf1988dc7b2ffc05a7a04aded0",
+      "sha256": "43098665adb0489a6bdbf159e10a436f018b7cdd732a7427a62c9b08ae4d3d7e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-octane",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/octane/guides/app-hotkeys.md",
+      "sha256": "e8057bdccdd4ce792f47052e66b8223f4722a9b98e40c75c51554efe32926c3a",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -218,14 +233,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/octane/guides/formatting-display.md",
-      "sha256": "d1e11251738f25ead3851e07ca17dd76ab8a6cf72a8c3c924426eaf47ae2d5f7",
+      "sha256": "63961f4783b5ceae21e077e340cf1a058331ca014a83feb7b86b36953e4d4e6d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -233,14 +248,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/octane/guides/hotkey-recording.md",
-      "sha256": "3eb73b2e4a607ce0493112f1f962451fac3f512264297c0612dea246be6281a5",
+      "sha256": "d574ee7f04479a002316cd5b27efaddfa80cea49c8ad3d463bbed59029047f9d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -248,14 +263,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/octane/guides/hotkeys.md",
-      "sha256": "82d46a18671f3b2a677e1cdae0f7a367ebc01ef6ec68b233ef5c4d2661655f17",
+      "sha256": "36ce9de75b037f57b223475d7c2e9c0c069646081494a584769b2fc9771ae913",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -263,29 +278,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/octane/guides/key-state-tracking.md",
-      "sha256": "839f8d42c3cd6123589b1c68d0c98784d23ddb8252c1d515cf7943f9f5235485",
+      "sha256": "ae90a26802a4867c28f3a405bccb3f48dc507626f5a602477e2e1450d29d5782",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/octane/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-octane",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/octane/guides/sequence-recording.md",
-      "sha256": "ba04fecba3c3bbc96d79958489083cdcd80efb253784e70c8e6f79f68e7c0a1a",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -293,14 +293,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/octane/guides/sequences.md",
-      "sha256": "15dcb924827165da7b4b37fe27f8901fb557d4e2b8635b4968b57ac78859af2f",
+      "sha256": "267b6e60488c262c3bbb87504e36f16976413234c80e8aefaa80e4ec0dba3018",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -308,14 +308,14 @@
       "kind": "document",
       "theme": "framework-octane",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/octane/quick-start.md",
-      "sha256": "97e1dbd74e0a0ec5c3f1994ca7d1e7a5f1a826fa9dc3e3483967ef3b75fc9a89",
+      "sha256": "1f8acc20b53313f987abe8f6d6047df1f4222a347168d813ae2b77d6be8043be",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -323,14 +323,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/devtools.md",
-      "sha256": "4ae55d9817f0683d780f1460665f5c23de944b2911084a18b18ea66a77c7a133",
+      "sha256": "73f8c9054f0c31ae9bdc51e36cb87d5071acb9ac53fdbe203bf5c94302db7e62",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -338,14 +338,14 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/installation.md",
-      "sha256": "53473147264539e134821f09d26c80e39e6bff9ed1585d38a3b9eb78c6ff206c",
+      "sha256": "eaa2ee1015463e30fcb2a4399d6cf155979ae3cbdca3e5862b5d6751a245b108",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -353,14 +353,29 @@
       "kind": "document",
       "theme": "foundations",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/overview.md",
-      "sha256": "15cc830ee3bbda29c1b7cf97285038edda3912f17dd65a25e1899277b7b8e78f",
+      "sha256": "c552f400b6591409c79636786f95c79a0b8b7b9b96c4522f28b29a954bf5bc4c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-react",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/react/guides/app-hotkeys.md",
+      "sha256": "f04f7e7394b6b953a0e2b40fb85f3df4fe4967118c4a8debc061841e0c4f0ddf",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -368,14 +383,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/react/guides/formatting-display.md",
-      "sha256": "8602b1d750f2ed858519fc29e4712e43754dbbdb388fabcb7d5fc45b40dc3b9f",
+      "sha256": "140e50f525e0978cadb985798c86ddf7b23623ca4eae28233b5fd74feb101ed1",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -383,14 +398,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/react/guides/hotkey-recording.md",
-      "sha256": "1384c0c68f54be776ea753ca4f8535de469239e7c9614323b99e2f36061fcdb7",
+      "sha256": "820ba71280062afb035c48394edc9fa4786d5819d7aa737fa7e826a0c56f7ac0",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -398,14 +413,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/react/guides/hotkeys.md",
-      "sha256": "e000f6b900ec7430273bb297bba7e2fc0f9e5b2f26ddb6896083df2e41f31069",
+      "sha256": "037dbe4ab8122afd26db4d506794142d5ab65f42fb957c96500fc89cc3b712c9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -413,29 +428,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/react/guides/key-state-tracking.md",
-      "sha256": "f66ed082b3d6d5f41d242f627a0560c83314a7f72aef63e8af1e98d9c754254d",
+      "sha256": "0b2c9e1fd24ee932cc369dd81acb5031c2e50f836214bf7de8ddc50c723595a1",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/react/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-react",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/react/guides/sequence-recording.md",
-      "sha256": "c48befd0dbea2892006d4e3ae06592dee34a01f7c407469608a9cc7b62d4fb5d",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -443,14 +443,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/react/guides/sequences.md",
-      "sha256": "6c17264f2fcf4f3c3886c5f744b1843c3a91369926742be595288f141f6e0916",
+      "sha256": "33e0bb4573b6c2a21ad4d1bedcd53b00813bd62add95bbcc0e8fb6d661a6104c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -458,14 +458,29 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/react/quick-start.md",
-      "sha256": "f8084074ed0279da711dc101d1dd55a002b31d6e5aa800ba07b1521c562b7d3b",
+      "sha256": "0aed0e2b07821e868e6460f7487e739097f1ad88678f26472058e6f7f8b76986",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/preact/guides/app-hotkeys.md",
+      "sha256": "43156fbf5be772281af7f37312c6f139d9863d21dc7a76c07670fab7ffd2e17f",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -473,14 +488,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/preact/guides/formatting-display.md",
-      "sha256": "c9660b8382df9377b0b12286acc76b1487bde955371cb535f7d3f751afd33bef",
+      "sha256": "e6fecde98b44e73e6b223304306c19c034f12ee95004aa4fd57ad79d4319a9ee",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -488,14 +503,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/preact/guides/hotkey-recording.md",
-      "sha256": "69a7416daadbccb93844e2d7a99a826711a6f3366b3b9e37ce01a38df0dbdec1",
+      "sha256": "58be7003a89c4898149185425e87fad7dc68e6752ab6a6eb2381b586d7bef83d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -503,14 +518,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/preact/guides/hotkeys.md",
-      "sha256": "ceeea28908ecd82bd79c46da3d34c1def095016187bfa2a495a0900fdbcfff75",
+      "sha256": "f973a37e53565e09b612821f6c2d77fe16b0055869bc52b516f464714530e499",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -518,29 +533,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/preact/guides/key-state-tracking.md",
-      "sha256": "ca53ecb8b0f181adc5b7b16b02062e35c4186c6dd31cd9277570427a871b522b",
+      "sha256": "ef17b907ff7461c49f67d4dbe923eb233bbd27926847a8571c6b500daddc99b6",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/preact/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-preact",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/preact/guides/sequence-recording.md",
-      "sha256": "2dd5be81e87e29c24d64926ec0352d4a877f3aeb9650163103be77ba0de70398",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -548,14 +548,44 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/preact/guides/sequences.md",
-      "sha256": "bea2c52bf510ea9310d77bf3f80cd1e4fdaca7f92734f04e07b6a3378a25c281",
+      "sha256": "e841c48c17122c9a836ffbe9b55913f26126fd0fefd3c8a053acc519f7a1a8d4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/quick-start.md",
+      "kind": "document",
+      "theme": "framework-preact",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/preact/quick-start.md",
+      "sha256": "4ad17c0f144be6c2ae85cb15534c27b14d906725019cba774e36af76140987f3",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/solid/guides/app-hotkeys.md",
+      "sha256": "57f83aac69d6a11be0c98938a49ee0d05547985af5729ce14a344256ddfac364",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -563,14 +593,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/solid/guides/formatting-display.md",
-      "sha256": "86c5961031c10c69091b28d9c773d25d57e9c593b69c5298739c97cd71afb704",
+      "sha256": "c277414bef2d07203ebe0f96a68539c1f6feff3741608e4077d289b1b72785c9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -578,14 +608,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/solid/guides/hotkey-recording.md",
-      "sha256": "8d0631f1fc83a5f6e30902f784a525003659a6a29901da31b567fc8a60075956",
+      "sha256": "a58556594cc68dc9dc05a10e945771a21d54c0fcdfc85d0a8e6e974b13ef22c4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -593,14 +623,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/solid/guides/hotkeys.md",
-      "sha256": "f3b253c6955cdcb0d30913fa70721ea570fa68dd6d81d2d615286cd08938fb16",
+      "sha256": "3a51a1bd2798d45f47e5973f3839a7e6c5043b0d4bdb4e30ac5a86cc9d6d3ae7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -608,29 +638,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/solid/guides/key-state-tracking.md",
-      "sha256": "e82a68e2873a0b7c51ec204e57ebda0ee7f6ca748571596c4ece0b56fcbed814",
+      "sha256": "5fccad0cf6c35e6e4c7116db16cc9db64eda7c23e193444a1f4ab661f2583d85",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/solid/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-solid",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/solid/guides/sequence-recording.md",
-      "sha256": "6ad60e8405cef918d17301473a830f9f08fc8b222792692ecd4cddc9c7413928",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -638,14 +653,44 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/solid/guides/sequences.md",
-      "sha256": "0ed52b13b098d6b6f2bb8c705c4ba82aaacb96029fd2cc0eb3e1399feee556e5",
+      "sha256": "353b82c92f9e80f10e13fa138289a6cedc3d08414a5209d1d1e02d0466fc0fba",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/quick-start.md",
+      "kind": "document",
+      "theme": "framework-solid",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/solid/quick-start.md",
+      "sha256": "3481bb205451f72c2ed23416cb61a46facb2a56ef5aa4d01d7ce2eba30ce81f2",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-svelte",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/svelte/guides/app-hotkeys.md",
+      "sha256": "ec53d8c6c8316d12be317427b8a11d8c761a5511d7e10c9e42357c45a8834631",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -653,14 +698,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
-      "sha256": "82be8d700562f251c3d448d6d4e20faebfc9165a7621973df553aec8c2ef5586",
+      "sha256": "11538c16bde3d6610efc9498214a80dfdb52f2fe56802f714d5e73113d6621b5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -668,14 +713,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/svelte/guides/hotkey-recording.md",
-      "sha256": "61642457b68d90d83b1e39bbce3b1acd3f04e5593f18244eb4f906a95c32f66b",
+      "sha256": "977238d6db253288d67ffe1ce56fb87b7a9429aaf9d68780014202adabbf6e9c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -683,14 +728,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
-      "sha256": "ad286fc611e127e78b468aee25639579d5bf87f3706cfcf0cd94f5f4e24f4619",
+      "sha256": "bc46dd25d2bcba0359009b97c9dec24567ee7106a0e8b0951cdcbbd8293b0753",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -698,29 +743,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/svelte/guides/key-state-tracking.md",
-      "sha256": "cea470b2bbf253b8e4e5980345b40f0607f65cbd6ad1a8bfaf39df823a5dd550",
+      "sha256": "42547bffb55896235f2a7388ba64098392d90f7a646a6bc451d69db2b4a3e190",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/svelte/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-svelte",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/svelte/guides/sequence-recording.md",
-      "sha256": "1dd8c797f29bc72ae286c681f6abc0d04f8273cedac1f261b6e5fc843b793a6a",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -728,14 +758,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/svelte/guides/sequences.md",
-      "sha256": "a74d63ce5feb0122f749be8135ee1e645afe2ce1a970b461635ea75099f7e36b",
+      "sha256": "4ac641c2f2bda025d8b84c4622632aa6e5a0024ebaa9bff836772c219ab51007",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -743,14 +773,29 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/svelte/quick-start.md",
-      "sha256": "1f5645f9033e2efdb4c66614c70c7a35016ed437caec02fecb8e23ca27b52568",
+      "sha256": "ac76f03d5c314d404ef9f86f57c1d65b61dd316d43f12c0b37da17a1aa28b5c4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-vue",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/vue/guides/app-hotkeys.md",
+      "sha256": "076fc8c402dc726385d548078266a2636af0ad4cb34f920b8adccfc6d2718f67",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -758,14 +803,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/vue/guides/formatting-display.md",
-      "sha256": "d45c8d474b695da4afd9668ddc5fe6390ff5d74b70b75cebfaf83e87cc9c2a94",
+      "sha256": "3568fb7f13d9c43d818c34a934be32812300136fdd851733fd41b03cc87dd0d6",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -773,14 +818,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/vue/guides/hotkey-recording.md",
-      "sha256": "09ea9cfb826ff3bc3949fc747a7bd732dc3f11686d544e78f2018f477c4f467d",
+      "sha256": "40238a7d75dbabe41e9a23afbff68979fad8aa7db5fd1283b4608a646399b5ef",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -788,14 +833,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/vue/guides/hotkeys.md",
-      "sha256": "d961bc0e3b64317eb69aca0a47f49c9f9affdbc3fa856a2eb1dcaa4263ddf359",
+      "sha256": "5c41fc536507b33c7176f452fcf3fc7e4363666b9261ca9227ec667380af2669",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -803,29 +848,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/vue/guides/key-state-tracking.md",
-      "sha256": "9f8a8a102b52be98480d8e8950be0df046cfa19efec75b708475a68e45492bb9",
+      "sha256": "f1faae8a9098329487ee7982f458c678ace803149642739f17b44889a1588d30",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/vue/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-vue",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/vue/guides/sequence-recording.md",
-      "sha256": "7d2cbd3a67a6f1b9db709e85ebb6ff5d46ea1d245b62569e770ac3481b3396f2",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -833,14 +863,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/vue/guides/sequences.md",
-      "sha256": "3732c55dda9107ef8692a18d3be902245ca29281a8f0d55d4b5a6f4fd105e9ef",
+      "sha256": "24be5624ee329e47ec7a81765c752defdcd581c54c2dc463a43ce526a430ef43",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -848,14 +878,29 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/vue/quick-start.md",
-      "sha256": "6736d168634b0bbca63fa081c4e88379e8db2b52255e869d13622ac4a5790e81",
+      "sha256": "a04b4c4d553e0b7870c615978fedbd0f42c1cf9d9be913852cc3ca0a66d29d8b",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-angular",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/angular/guides/app-hotkeys.md",
+      "sha256": "21060300dac5c62ab88014660710bc30059f859d79265271cfcc33cd6a108355",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -863,14 +908,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/angular/guides/formatting-display.md",
-      "sha256": "81b1e11f4a2e92253902585c50af48aca0b46378e14d05f5fcd14a05123c8de3",
+      "sha256": "fd596b62619a5b9c189a8003d0c5e8af66f6dd4c941b819f8785b4de208fc82f",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -878,14 +923,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/angular/guides/hotkey-recording.md",
-      "sha256": "0ad863598fe83bd9f4bfff55611d3f1d1ace1c26143b325267efde98873ee4a4",
+      "sha256": "e8c0a4a6b24ddb7fab87fee622a0d294a5e13d85163865494fc9310fc4e2626c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -893,14 +938,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/angular/guides/hotkeys.md",
-      "sha256": "aa4aff1f43ae1af5fd51e359f8b1cf13ea7631391f1fc64864ee0576cee6619d",
+      "sha256": "0e7cf1d37ec9fe07af71694836a3a1677ba4da0d5668b8874cfa2687e5209017",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -908,29 +953,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/angular/guides/key-state-tracking.md",
-      "sha256": "70449bbbfa9ba52f890e15f78a5ae0b204902ed08034911217e9209e72a9da8c",
+      "sha256": "a89d7857118305dde3d2d0b6e2b552224b370a5b9e6c0859e5e7f8ca44376cc7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/angular/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-angular",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/angular/guides/sequence-recording.md",
-      "sha256": "87195fe34866ee33863bcb027ea916efa929284cbc9e0e498b74762bd4b6b2d1",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -938,14 +968,14 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/angular/guides/sequences.md",
-      "sha256": "49eeab87c346c1afc1b72132c9007c8f8b40c3f726c2d9580acfa78c751d6e86",
+      "sha256": "fc3bbb5a0897e06b9b64ad7f0312a69d4b9b2e06c9b3ff19dde67829c6d2d876",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -953,14 +983,29 @@
       "kind": "document",
       "theme": "framework-angular",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/angular/quick-start.md",
-      "sha256": "b91441b0454bc6443a5e19bf5033ee2154e0f7fc6d07131e27ba13f6ec2fd174",
+      "sha256": "5c833f4d65bc520204a7c60924cef5aa2a3ef85c0aa0b79d1a709eded484179e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
+      ]
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/app-hotkeys.md",
+      "kind": "document",
+      "theme": "framework-lit",
+      "package": "@tanstack/hotkeys",
+      "version": "0.12.0",
+      "repository": "TanStack/hotkeys",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+      "sourcePath": "docs/framework/lit/guides/app-hotkeys.md",
+      "sha256": "b319ea01e72bb523008aa540dfd053de127d0706898fcc02240b9c952531f1d5",
+      "sourceKind": "github-release-archive",
+      "verifiedCommits": [
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -968,14 +1013,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/lit/guides/formatting-display.md",
-      "sha256": "2bd633e10b442a475cdf723684c9cd6434a9f75e1266a5f2b75cd63386ee0ed4",
+      "sha256": "fc13493ea710230be391299190e25c1229f6d88979dec13e4c0f5c726d5be242",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -983,14 +1028,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/lit/guides/hotkey-recording.md",
-      "sha256": "f58cfb8df9bcd38837cc7f806fd904767bbf909b579bbd381979948abfe5f0f1",
+      "sha256": "639c17b0578f1661987d646f5471a3bbc8293eb97ce064453988a554b6ccc6f4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -998,14 +1043,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/lit/guides/hotkeys.md",
-      "sha256": "6b7bf253fc0ac84c9c8b99eb8a8b20b881058f808ff6527d180d84b43b82ff20",
+      "sha256": "e2ab543b7ff796a659fe5c2efa887d1becf257899f57ce47d5c2cc43a36df031",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -1013,29 +1058,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/lit/guides/key-state-tracking.md",
-      "sha256": "d42f4f9dfb0ff054f0e45b994caf90ed6e5e310949c7384047b019dd98576aca",
+      "sha256": "acb58765b9923da9f3c0459d2755dd2db433efb6d4c95efa0c6f1bf9d765bdf9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
-      ]
-    },
-    {
-      "id": "hotkeys:docs/framework/lit/guides/sequence-recording.md",
-      "kind": "document",
-      "theme": "framework-lit",
-      "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
-      "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-      "sourcePath": "docs/framework/lit/guides/sequence-recording.md",
-      "sha256": "93c13056d54b19776d06842d5af2df7ed7d444b6b5a3416b1edbee8215b27b59",
-      "sourceKind": "github-release-archive",
-      "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -1043,14 +1073,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/lit/guides/sequences.md",
-      "sha256": "571e47907289fe45e695db5dda19c7674f8518e3a643380962860aafe52f24fa",
+      "sha256": "b925146f7c44be2377bf94140bc3a51a3ccaa37353f0a10ad0c34416e90dd1c9",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     },
     {
@@ -1058,62 +1088,19 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/hotkeys",
-      "version": "0.11.0",
+      "version": "0.12.0",
       "repository": "TanStack/hotkeys",
-      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
       "sourcePath": "docs/framework/lit/quick-start.md",
-      "sha256": "d99b0c007e20761b59a338a3706f9488c92adee40a9a35de65d427d3877a54f0",
+      "sha256": "d46f092643403b4a74eef3713d14f9481acb89a0f3b2eb7e8a89f7112f1a6230",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f"
+        "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393"
       ]
     }
   ],
   "duplicateDocuments": [],
-  "duplicateSections": [
-    {
-      "duplicate": "hotkeys:docs/framework/alpine/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/alpine/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-alpine",
-      "sha256": "5c7341fa79566b1734ee4d4feb382f996f13d34675ce2cfcfdfceecf235beee9"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/ember/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/ember/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-ember",
-      "sha256": "6edf9e53459e1891fdab2b044c15d186e56b447abaea4f7c6455c043203156bc"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/solid/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/solid/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-solid",
-      "sha256": "5ad9c8e06b60f1b3fec1773fe3fd7275bbb62e0c5240c30b15df1055dce48194"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/svelte/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/svelte/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-svelte",
-      "sha256": "5ad9c8e06b60f1b3fec1773fe3fd7275bbb62e0c5240c30b15df1055dce48194"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/vue/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/vue/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-vue",
-      "sha256": "5ad9c8e06b60f1b3fec1773fe3fd7275bbb62e0c5240c30b15df1055dce48194"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/angular/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/angular/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-angular",
-      "sha256": "5ad9c8e06b60f1b3fec1773fe3fd7275bbb62e0c5240c30b15df1055dce48194"
-    },
-    {
-      "duplicate": "hotkeys:docs/framework/lit/guides/sequence-recording.md#Reactive options",
-      "canonical": "hotkeys:docs/framework/lit/guides/hotkey-recording.md#Reactive options",
-      "theme": "framework-lit",
-      "sha256": "1a1669f9927beb7a2ca4eebed595708cfe72271a06e15d88d563bb7c14e24ceb"
-    }
-  ],
+  "duplicateSections": [],
   "licenses": [
     {
       "sha256": "a7434fcc02922f5e616e66431ba665a90dc3765197451459307f06e272fc17e2",
@@ -1132,15 +1119,15 @@
     },
     "repositoryArchives": [
       {
-        "url": "https://codeload.github.com/TanStack/hotkeys/tar.gz/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-        "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
-        "sha256": "e64d964210946a224825d3f0707cfb769bd9b008ebb9396d386bd2ef755dfa9e"
+        "url": "https://codeload.github.com/TanStack/hotkeys/tar.gz/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+        "commit": "72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393",
+        "sha256": "27b768edc1f32a20be783f2a8fc7c2991911fa01468fea6495b2a08ebebbc6af"
       }
     ],
     "linkValidation": {
-      "localDocuments": 163,
+      "localDocuments": 210,
       "localAssets": 0,
-      "pinnedRepository": 70,
+      "pinnedRepository": 42,
       "pinnedExternalRepository": 0,
       "externalRepositoryPins": [],
       "unavailableAssets": []

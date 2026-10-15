@@ -1,6 +1,6 @@
 # Hotkeys — Automatic cleanup
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Automatic cleanup
 

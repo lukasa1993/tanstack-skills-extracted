@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -157,21 +157,21 @@ class MyModal extends LitElement {
 
 ### Multi-key sequences
 
-Register Vim-style key sequences with the `@hotkeySequence` decorator or `HotkeySequenceController`:
+Pass an array of chords to the `@hotkey` decorator or `HotkeyController` to register a Vim-style sequence:
 
 ```ts
 import { LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { hotkeySequence } from '@tanstack/lit-hotkeys'
+import { hotkey } from '@tanstack/lit-hotkeys'
 
 @customElement('vim-editor')
 class VimEditor extends LitElement {
-  @hotkeySequence(['G', 'G'])
+  @hotkey(['G', 'G'])
   scrollToTop() {
     window.scrollTo({ top: 0 })
   }
 
-  @hotkeySequence(['G', 'Shift+G'])
+  @hotkey(['G', 'Shift+G'])
   scrollToBottom() {
     window.scrollTo({ top: document.body.scrollHeight })
   }
@@ -275,7 +275,7 @@ class SaveButton extends LitElement {
 
 The Lit adapter gives you two complementary approaches:
 
-| | Decorators (`@hotkey`, `@hotkeySequence`) | Controllers (`HotkeyController`, etc.) |
+| | Decorator (`@hotkey`) | Controllers (`HotkeyController`, etc.) |
 |---|---|---|
 | **Best for** | Declarative method binding | Reactive state, dynamic hotkeys |
 | **Registration** | Automatic on connect/disconnect | Automatic via `hostConnected`/`hostDisconnected` |
@@ -284,11 +284,14 @@ The Lit adapter gives you two complementary approaches:
 
 Use decorators when you simply want a method to fire on a key combo. Use controllers when you need reactive state (held keys, recording) or dynamic hotkey registration.
 
+## Declaring app hotkeys
+
+To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `provideAppHotkeys`. See the [App Hotkeys Guide](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md).
+
 ## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md) - Deep dive into `@hotkey` decorator and `HotkeyController` options
 - [Sequences Guide](./hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md#source-hotkeys-docs-framework-lit-guides-sequences-md) - Multi-key sequence handling
 - [Hotkey Recording Guide](./hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md#source-hotkeys-docs-framework-lit-guides-hotkey-recording-md) - Building shortcut customization UIs
-- [Sequence Recording Guide](./hotkeys-docs-framework-lit-guides-sequence-recording-md-026a99f1.md#source-hotkeys-docs-framework-lit-guides-sequence-recording-md) - Capture multi-step shortcuts
 - [Key State Tracking Guide](./hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md#source-hotkeys-docs-framework-lit-guides-key-state-tracking-md) - Real-time key state monitoring
 - [Formatting & Display Guide](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md) - Platform-aware hotkey formatting

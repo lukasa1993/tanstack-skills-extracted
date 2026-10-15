@@ -2,11 +2,23 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
 Use `createHotkey` for global shortcuts and `createHotkeyAttachment` for element-scoped shortcuts. The common global case stays simple, and scoped behavior feels native to Svelte 5.
+
+## Chords and sequences
+
+A hotkey is either a **chord**, keys pressed together such as `'Mod+S'`, or a **sequence**, chords pressed one after another such as `['G', 'G']`. Every API in this guide accepts both, and a one-step array such as `['Mod+S']` is the chord `'Mod+S'`.
+
+```ts
+createHotkey('Mod+S', () => save()) // chord
+createHotkey(['G', 'G'], () => scrollToTop(), { timeout: 500 }) // sequence
+createHotkey('Escape', () => close(), { requireReset: true }) // chord-only option
+```
+
+Most options apply to both kinds. `requireReset` applies only to chords and `timeout` only to sequences, and TypeScript rejects options that don't match the hotkey. When the kind isn't known statically, such as a `Hotkey` loaded from settings, only the shared options are accepted. Defaults apply only to the kinds that support them. See the [Sequences Guide](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md) for timing and matching, and the [App Hotkeys Guide](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md) to declare hotkeys up front and let users customize them.
 
 ## Logical keys and physical positions
 
@@ -268,7 +280,7 @@ Group is descriptive metadata, not an execution scope. A shortcuts panel can gro
 
 ## Introspecting registrations
 
-Use the `getHotkeyRegistrations` function to get a live view of all hotkey and sequence registrations. This is useful for building shortcut palettes, help dialogs, or devtools.
+Use the `getHotkeyRegistrations` function to get a live view of every registration, chords and sequences together. It's the building block for shortcut palettes and help dialogs.
 
 ```svelte
 <script lang="ts">
@@ -277,38 +289,22 @@ Use the `getHotkeyRegistrations` function to get a live view of all hotkey and s
   const registrations = getHotkeyRegistrations()
 </script>
 
-<div>
-  <h2>Keyboard Shortcuts</h2>
-  <ul>
-    {#each registrations.hotkeys as reg (reg.hotkey)}
-      <li>
-        <kbd>{formatForDisplay(reg.hotkey)}</kbd>
-        {#if reg.options.meta?.name}
-          <span> — {reg.options.meta.name}</span>
-        {/if}
-        {#if reg.options.meta?.description}
-          <p>{reg.options.meta.description}</p>
-        {/if}
-      </li>
-    {/each}
-  </ul>
-  {#if registrations.sequences.length > 0}
-    <h2>Sequences</h2>
-    <ul>
-      {#each registrations.sequences as reg (reg.sequence.join(' '))}
-        <li>
-          <kbd>{reg.sequence.map((step) => formatForDisplay(step)).join(' → ')}</kbd>
-          {#if reg.options.meta?.name}
-            <span> — {reg.options.meta.name}</span>
-          {/if}
-        </li>
-      {/each}
-    </ul>
-  {/if}
-</div>
+<ul>
+  {#each registrations.hotkeys as reg (reg.id)}
+    <li>
+      <kbd>{formatForDisplay(reg.hotkey)}</kbd>
+      {#if reg.options.meta?.name}<span> — {reg.options.meta.name}</span>{/if}
+      {#if reg.kind === 'sequence'}
+        <small>{reg.matchedStepCount}/{reg.hotkey.length} steps</small>
+      {/if}
+    </li>
+  {/each}
+</ul>
 ```
 
-The returned object contains a `hotkeys` array with registration objects including the hotkey string, options (including `meta`), and enabled state, and a `sequences` array containing sequence registrations with the same structure.
+The returned object's reactive `hotkeys` getter holds one array of registration views. Each view has an `id`, the `hotkey`, its `options` (including `meta`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedHotkey`; sequence views add `parsedSequence` and `matchedStepCount`, the steps matched so far in the current attempt. Disabled entries stay listed; unmounted registrations disappear. Format any hotkey with `formatForDisplay`, and group entries by `options.meta?.group` when building a help panel.
+
+Registrations only exist while their components are mounted. To list hotkeys from routes that have not rendered, declare them with [app hotkeys](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md).
 
 ## The hotkey manager
 

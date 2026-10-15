@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -11,10 +11,11 @@ Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--overview.md) — 1 KiB
+- [Chords and sequences](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--chords-and-sequences.md) — 2 KiB
 - [Logical keys and physical positions](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--basic-usage.md) — 2 KiB
 - [Property getters](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--property-getters.md) — 2 KiB
-- [Default options](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--default-options.md) — 3 KiB
+- [Default options](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--default-options.md) — 2 KiB
 - [Hotkey options](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--hotkey-options.md) — 3 KiB
 - [Current callbacks and automatic cleanup](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--current-callbacks-and-automatic-cleanup.md) — 1 KiB
 - [Registering multiple hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--registering-multiple-hotkeys.md) — 2 KiB
@@ -23,6 +24,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [The hotkey manager](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--the-hotkey-manager.md) — 2 KiB
 
 <!-- Original source anchors retained for inbound links. -->
+<a id="chords-and-sequences"></a>
 <a id="logical-keys-and-physical-positions"></a>
 <a id="basic-usage"></a>
 <a id="callback-context"></a>

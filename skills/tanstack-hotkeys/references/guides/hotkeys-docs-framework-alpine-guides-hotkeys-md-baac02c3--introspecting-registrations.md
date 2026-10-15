@@ -1,10 +1,10 @@
 # Hotkeys — Introspecting registrations
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Introspecting registrations
 
-Read `hotkeys` and `sequences` from `createHotkeyRegistrations()`. Disabled entries stay listed; destroyed registrations disappear. Both arrays include options and metadata. Hotkey views include enabled state and trigger counts; sequence views include sequence steps and progress.
+Use the `createHotkeyRegistrations` scope method to get a live view of every registration, chords and sequences together. It's the building block for shortcut palettes and help dialogs.
 
 ```ts
 // Inside init():
@@ -16,8 +16,10 @@ this.scope.createHotkey('Mod+S', () => this.save(), {
 
 ```html
 <template x-for="registration in registrations.hotkeys" :key="registration.id">
-	<p x-text="registration.options.meta?.name + ': ' + registration.hotkey"></p>
+	<p x-text="registration.options.meta?.name + ': ' + formatForDisplay(registration.hotkey)"></p>
 </template>
 ```
 
-Read `registrations.sequences` in the same way. Format each sequence step with `formatForDisplay` and join the labels with an arrow. Group entries by `registration.options.meta?.group` when building a help panel.
+Read the reactive `hotkeys` array in templates or effects. Each view has an `id`, the `hotkey`, its `options` (including `meta`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedHotkey`; sequence views add `parsedSequence` and `matchedStepCount`, the steps matched so far in the current attempt. Disabled entries stay listed; unmounted registrations disappear. Format any hotkey with `formatForDisplay`, and group entries by `options.meta?.group` when building a help panel.
+
+Registrations only exist while their components are mounted. To list hotkeys from routes that have not rendered, declare them with [app hotkeys](./hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md#source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md).

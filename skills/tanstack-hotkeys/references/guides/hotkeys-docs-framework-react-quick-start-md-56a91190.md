@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -88,14 +88,14 @@ function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 
 ### Multi-key sequences
 
-Register Vim-style key sequences with `useHotkeySequence`:
+Pass an array of chords to register a Vim-style sequence:
 
 ```tsx
-import { useHotkeySequence } from '@tanstack/react-hotkeys'
+import { useHotkey } from '@tanstack/react-hotkeys'
 
 function VimStyleApp() {
-  useHotkeySequence(['G', 'G'], () => scrollToTop())
-  useHotkeySequence(['G', 'Shift+G'], () => scrollToBottom())
+  useHotkey(['G', 'G'], () => scrollToTop())
+  useHotkey(['G', 'Shift+G'], () => scrollToBottom())
 
   return <div>Use gg to go to top, gG to go to bottom</div>
 }
@@ -134,7 +134,7 @@ function SaveButton() {
   return (
     <button>
       Save <kbd>{formatForDisplay('Mod+S')}</kbd>
-      {/* Mac: "⌘S"  |  Windows: "Ctrl+S" */}
+      {/* Mac: "⌘ S"  |  Windows: "Ctrl+S" */}
     </button>
   )
 }
@@ -158,9 +158,43 @@ function App() {
 }
 ```
 
+## Declaring app hotkeys
+
+To list every hotkey in a cheat sheet, including those on routes that have not rendered, and to let users customize them, declare them once and pass them to `HotkeysProvider`:
+
+```tsx
+import {
+  HotkeysProvider,
+  defineAppHotkeys,
+  useAppHotkeys,
+  useHotkey,
+} from '@tanstack/react-hotkeys'
+
+const appHotkeys = defineAppHotkeys({
+  'doc.save': { hotkey: 'Mod+S', meta: { name: 'Save' } },
+  'nav.home': { hotkey: ['G', 'H'], meta: { name: 'Go home' } },
+})
+
+function Root() {
+  return (
+    <HotkeysProvider appHotkeys={appHotkeys}>
+      <Editor />
+    </HotkeysProvider>
+  )
+}
+
+function Editor() {
+  const hotkeys = useAppHotkeys()
+  useHotkey(hotkeys['doc.save'], () => save())
+  return <div>Editor</div>
+}
+```
+
+See the [App Hotkeys Guide](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md) for cheat sheets and saving custom hotkeys.
+
 ## Default options provider
 
-Wrap your app with `HotkeysProvider` to set default options for all hotkey hooks globally. Options passed directly to a hook override the provider defaults.
+`HotkeysProvider` also sets default options for every hotkey hook. Options passed directly to a hook override the provider defaults.
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/react-hotkeys'
@@ -169,8 +203,7 @@ function Root() {
   return (
     <HotkeysProvider
       defaultOptions={{
-        hotkey: { preventDefault: true },
-        hotkeySequence: { timeout: 1500 },
+        hotkey: { preventDefault: true, timeout: 1500 },
         hotkeyRecorder: { onCancel: () => console.log('Recording cancelled') },
       }}
     >
@@ -184,7 +217,7 @@ function Root() {
 
 - [Hotkeys Guide](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md) - Deep dive into `useHotkey` options and patterns
 - [Sequences Guide](./hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md#source-hotkeys-docs-framework-react-guides-sequences-md) - Multi-key sequence handling
-- [Hotkey Recording Guide](./hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md#source-hotkeys-docs-framework-react-guides-hotkey-recording-md) - Building shortcut customization UIs
-- [Sequence Recording Guide](./hotkeys-docs-framework-react-guides-sequence-recording-md-d18571b6.md#source-hotkeys-docs-framework-react-guides-sequence-recording-md)
+- [App Hotkeys Guide](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md) - Declaring, listing, and customizing every hotkey
+- [Hotkey Recording Guide](./hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md#source-hotkeys-docs-framework-react-guides-hotkey-recording-md) - Recording chords and sequences in settings UIs
 - [Key State Tracking Guide](./hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md#source-hotkeys-docs-framework-react-guides-key-state-tracking-md) - Real-time key state monitoring
 - [Formatting & Display Guide](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md) - Platform-aware hotkey formatting

@@ -1,6 +1,6 @@
 # Custom Adapter — Setup
 
-[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.14.0`.
+[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.15.0`.
 
 ## Setup
 

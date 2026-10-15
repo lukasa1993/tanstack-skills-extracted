@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -94,11 +94,12 @@ export class ModalComponent {
 ### Multi-key sequences
 
 ```ts
-import { injectHotkeySequence } from '@tanstack/angular-hotkeys'
+import { injectHotkey } from '@tanstack/angular-hotkeys'
 
 constructor() {
-  injectHotkeySequence(['G', 'G'], () => scrollToTop())
-  injectHotkeySequence(['G', 'Shift+G'], () => scrollToBottom())
+  // An array of chords registers a sequence
+  injectHotkey(['G', 'G'], () => scrollToTop())
+  injectHotkey(['G', 'Shift+G'], () => scrollToBottom())
 }
 ```
 
@@ -157,20 +158,25 @@ import { provideHotkeys } from '@tanstack/angular-hotkeys'
 export const appConfig: ApplicationConfig = {
   providers: [
     provideHotkeys({
-      hotkey: { preventDefault: true },
-      hotkeySequence: { timeout: 1500 },
-      hotkeyRecorder: { onCancel: () => console.log('Recording cancelled') },
+      defaultOptions: {
+        hotkey: { preventDefault: true, timeout: 1500 },
+        hotkeyRecorder: { onCancel: () => console.log('Recording cancelled') },
+      },
     }),
   ],
 }
 ```
+
+## Declaring app hotkeys
+
+To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `provideHotkeys`. See the [App Hotkeys Guide](./hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md#source-hotkeys-docs-framework-angular-guides-app-hotkeys-md).
 
 ## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md)
 - [Sequences Guide](./hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md#source-hotkeys-docs-framework-angular-guides-sequences-md)
 - [Hotkey Recording Guide](./hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md#source-hotkeys-docs-framework-angular-guides-hotkey-recording-md)
-- [Sequence Recording Guide](./hotkeys-docs-framework-angular-guides-sequence-recording-md-44bcfe75.md#source-hotkeys-docs-framework-angular-guides-sequence-recording-md)
+- [App Hotkeys Guide](./hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md#source-hotkeys-docs-framework-angular-guides-app-hotkeys-md)
 - [Key State Tracking Guide](./hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md#source-hotkeys-docs-framework-angular-guides-key-state-tracking-md)
 - [Formatting & Display Guide](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md)
 

@@ -1,6 +1,6 @@
 # Hotkeys — Basic usage
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Basic usage
 
@@ -24,6 +24,15 @@ useHotkey('Mod+S', (event, context) => {
   console.log(context.parsedHotkey) // { key: 'S', ctrl: false, shift: false, alt: false, meta: true, modifiers: ['Meta'] }
 })
 ```
+
+Pass an array of chords to register a sequence with the same hook:
+
+```tsx
+useHotkey(['G', 'G'], () => scrollToTop())
+useHotkey(['Mod+K', 'Mod+C'], () => commentSelection())
+```
+
+A one-step array such as `['Mod+S']` registers the chord `'Mod+S'`.
 
 You can pass a hotkey as a string or as a `RawHotkey` object (modifier booleans optional). Use `mod` for cross-platform shortcuts (Command on Mac, Control elsewhere):
 

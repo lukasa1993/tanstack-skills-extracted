@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -82,9 +82,10 @@ The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Cont
 
 ```svelte
 <script lang="ts">
-  import { createHotkeySequenceAttachment } from '@tanstack/svelte-hotkeys'
+  import { createHotkeyAttachment } from '@tanstack/svelte-hotkeys'
 
-  const vimKeys = createHotkeySequenceAttachment(['G', 'G'], () => {
+  // An array of chords registers a sequence
+  const vimKeys = createHotkeyAttachment(['G', 'G'], () => {
     scrollToTop()
   })
 </script>
@@ -158,18 +159,21 @@ Use `setHotkeysContext` when you want defaults for a subtree. This is an advance
   import { setHotkeysContext } from '@tanstack/svelte-hotkeys'
 
   setHotkeysContext({
-    hotkey: { preventDefault: true },
-    hotkeySequence: { timeout: 1500 },
+    defaultOptions: { hotkey: { preventDefault: true, timeout: 1500 } },
   })
 </script>
 ```
+
+## Declaring app hotkeys
+
+To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `HotkeysProvider` or `setHotkeysContext`. See the [App Hotkeys Guide](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md).
 
 ## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md)
 - [Sequences Guide](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md)
 - [Hotkey Recording Guide](./hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md#source-hotkeys-docs-framework-svelte-guides-hotkey-recording-md)
-- [Sequence Recording Guide](./hotkeys-docs-framework-svelte-guides-sequence-recording-md-57123674.md#source-hotkeys-docs-framework-svelte-guides-sequence-recording-md)
+- [App Hotkeys Guide](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md)
 - [Key State Tracking Guide](./hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md#source-hotkeys-docs-framework-svelte-guides-key-state-tracking-md)
 - [Formatting & Display Guide](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md)
 

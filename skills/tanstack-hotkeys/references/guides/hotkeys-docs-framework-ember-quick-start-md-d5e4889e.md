@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -39,7 +39,7 @@ Press Command+S on macOS or Control+S on Windows and Linux. The count increases 
 
 ## Registration and cleanup
 
-`useHotkey`, `useHotkeys`, `useHotkeySequence`, and `useHotkeySequences` are template helpers. Invoke them with `{{...}}`, not as JavaScript hooks. Tracked arguments update registrations after rendering. Removing a helper from the template unregisters its bindings.
+`useHotkey` and `useHotkeys` are template helpers. Invoke them with `{{...}}`, not as JavaScript hooks. Tracked arguments update registrations after rendering. Removing a helper from the template unregisters its bindings.
 
 State readers and recorders are JavaScript functions. Pass the containing component as their first argument, usually `this`. The adapter releases subscriptions and recorders when that owner is destroyed. State readers expose `.value`; recorder fields and registration arrays are reactive getters. Read those properties in templates or getters instead of destructuring an initial snapshot.
 
@@ -81,10 +81,10 @@ Use Ember tracked state for the enabled flag.
 
 
 ```hbs
-{{useHotkeySequence (array 'G' 'G') this.goToTop}}
+{{useHotkey (array 'G' 'G') this.goToTop}}
 ```
 
-Import `array` from `@ember/helper` and `useHotkeySequence` from `@tanstack/ember-hotkeys`.
+An array of chords registers a sequence. Import `array` from `@ember/helper` and `useHotkey` from `@tanstack/ember-hotkeys`.
 
 Release G between presses. Automatic key repeats do not advance sequences.
 
@@ -117,7 +117,7 @@ Use `formatForDisplay(binding)` for platform-specific labels. Keep the original 
 
 ## Shared defaults
 
-Pass defaults to `createHotkeysScope`. The scope accepts `hotkey`, `hotkeySequence`, `hotkeyRecorder`, and `hotkeySequenceRecorder` options. Use the returned contextual helpers, modifiers, and recorder factories. Pass the scope through component arguments to share it with descendants; helpers and recorders still clean up with their own owners. Pass a getter for tracked defaults. Call-specific options override scope defaults, and per-definition options override common options. Omitted options use the core defaults.
+Pass defaults to `createHotkeysScope`. The scope accepts `hotkey` and `hotkeyRecorder` options. `requireReset` applies to chords and `timeout` to sequences. Use the returned contextual helpers, modifiers, and recorder factories. Pass the scope through component arguments to share it with descendants; helpers and recorders still clean up with their own owners. Pass a getter for tracked defaults. Call-specific options override scope defaults, and per-definition options override common options. Omitted options use the core defaults.
 
 ```gts
 import Component from '@glimmer/component'
@@ -128,9 +128,7 @@ export default class Editor extends Component {
   @tracked enabled = true
   hotkeys = createHotkeysScope(() => ({
     hotkey: { enabled: this.enabled, requireReset: true },
-    hotkeySequence: { timeout: 1500 },
-    hotkeyRecorder: { ignoreInputs: false },
-    hotkeySequenceRecorder: { idleTimeoutMs: 2000 },
+    hotkeyRecorder: { ignoreInputs: false, idleTimeoutMs: 2000 },
   }))
   save = () => console.log('Saved')
   next = () => console.log('Next')
@@ -142,15 +140,19 @@ export default class Editor extends Component {
 }
 ```
 
-A child can receive this scope as `@hotkeys={{this.hotkeys}}` and call `{{@hotkeys.useHotkey ...}}`. To use recorder defaults, call `this.hotkeys.useHotkeyRecorder(this, options)` or `this.hotkeys.useHotkeySequenceRecorder(this, options)`. The standalone imports use core defaults. The scope itself owns no registrations and needs no `destroy()` call.
+A child can receive this scope as `@hotkeys={{this.hotkeys}}` and call `{{@hotkeys.useHotkey ...}}`. To use recorder defaults, call `this.hotkeys.useHotkeyRecorder(this, options)`. The standalone imports use core defaults. The scope itself owns no registrations and needs no `destroy()` call.
+
+## Declaring app hotkeys
+
+To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `provideAppHotkeys`. See the [App Hotkeys Guide](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md).
 
 ## Examples and next steps
 
 - [Hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md)
 - [Sequences](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md)
+- [App hotkeys](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md)
 - [Hotkey recording](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md#source-hotkeys-docs-framework-ember-guides-hotkey-recording-md)
-- [Sequence recording](./hotkeys-docs-framework-ember-guides-sequence-recording-md-b9949ab9.md#source-hotkeys-docs-framework-ember-guides-sequence-recording-md)
 - [Key state tracking](./hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md#source-hotkeys-docs-framework-ember-guides-key-state-tracking-md)
 - [Formatting and display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md)
-- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/ember/kitchen-sink)
-- [API reference](https://github.com/TanStack/hotkeys/blob/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/docs/framework/ember/reference/index.md)
+- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/ember/kitchen-sink)
+- [API reference](https://github.com/TanStack/hotkeys/blob/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/docs/framework/ember/reference/index.md)

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-svelte-db"></a>
 
-Published skill · `@tanstack/svelte-db@0.5.9`.
+Published skill · `@tanstack/svelte-db@0.5.10`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 

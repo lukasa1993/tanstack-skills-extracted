@@ -2,11 +2,23 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
 The `useHotkey` composable is the primary way to register keyboard shortcuts in Vue applications. It wraps the singleton `HotkeyManager` with automatic cleanup, support for template refs, and reactive option syncing.
+
+## Chords and sequences
+
+A hotkey is either a **chord**, keys pressed together such as `'Mod+S'`, or a **sequence**, chords pressed one after another such as `['G', 'G']`. Every API in this guide accepts both, and a one-step array such as `['Mod+S']` is the chord `'Mod+S'`.
+
+```ts
+useHotkey('Mod+S', () => save()) // chord
+useHotkey(['G', 'G'], () => scrollToTop(), { timeout: 500 }) // sequence
+useHotkey('Escape', () => close(), { requireReset: true }) // chord-only option
+```
+
+Most options apply to both kinds. `requireReset` applies only to chords and `timeout` only to sequences, and TypeScript rejects options that don't match the hotkey. When the kind isn't known statically, such as a `Hotkey` loaded from settings, only the shared options are accepted. Defaults apply only to the kinds that support them. See the [Sequences Guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md) for timing and matching, and the [App Hotkeys Guide](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md) to declare hotkeys up front and let users customize them.
 
 ## Logical keys and physical positions
 
@@ -255,39 +267,31 @@ Group is descriptive metadata, not an execution scope. A shortcuts panel can gro
 
 ## Introspecting registrations
 
-Use the `useHotkeyRegistrations` composable to get a live view of all hotkey and sequence registrations. It works well for shortcut palettes, help dialogs, and devtools.
+Use the `useHotkeyRegistrations` composable to get a live view of every registration, chords and sequences together. It's the building block for shortcut palettes and help dialogs.
 
 ```vue
 <script setup lang="ts">
 import { useHotkeyRegistrations, formatForDisplay } from '@tanstack/vue-hotkeys'
 
-const { hotkeys, sequences } = useHotkeyRegistrations()
+const registrations = useHotkeyRegistrations()
 </script>
 
 <template>
-  <div>
-    <h2>Keyboard Shortcuts</h2>
-    <ul>
-      <li v-for="reg in hotkeys" :key="reg.id">
-        <kbd>{{ formatForDisplay(reg.hotkey) }}</kbd>
-        <span v-if="reg.options.meta?.name"> — {{ reg.options.meta.name }}</span>
-        <p v-if="reg.options.meta?.description">{{ reg.options.meta.description }}</p>
-      </li>
-    </ul>
-    <template v-if="sequences.length > 0">
-      <h2>Sequences</h2>
-      <ul>
-        <li v-for="reg in sequences" :key="reg.id">
-          <kbd>{{ reg.sequence.map((step) => formatForDisplay(step)).join(' → ') }}</kbd>
-          <span v-if="reg.options.meta?.name"> — {{ reg.options.meta.name }}</span>
-        </li>
-      </ul>
-    </template>
-  </div>
+  <ul>
+    <li v-for="reg in registrations" :key="reg.id">
+      <kbd>{{ formatForDisplay(reg.hotkey) }}</kbd>
+      <span v-if="reg.options.meta?.name"> — {{ reg.options.meta.name }}</span>
+      <small v-if="reg.kind === 'sequence'">
+        {{ reg.matchedStepCount }}/{{ reg.hotkey.length }} steps
+      </small>
+    </li>
+  </ul>
 </template>
 ```
 
-The returned `hotkeys` array contains registration objects with the hotkey string, options (including `meta`), and enabled state. The `sequences` array contains sequence registrations with the same structure.
+The returned ref holds one array of registration views. Each view has an `id`, the `hotkey`, its `options` (including `meta`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedHotkey`; sequence views add `parsedSequence` and `matchedStepCount`, the steps matched so far in the current attempt. Disabled entries stay listed; unmounted registrations disappear. Format any hotkey with `formatForDisplay`, and group entries by `options.meta?.group` when building a help panel.
+
+Registrations only exist while their components are mounted. To list hotkeys from routes that have not rendered, declare them with [app hotkeys](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md).
 
 ## The hotkey manager
 

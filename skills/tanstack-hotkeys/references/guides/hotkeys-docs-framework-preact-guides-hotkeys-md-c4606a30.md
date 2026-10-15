@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -18,7 +18,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Hotkey options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--hotkey-options.md) — 4 KiB
 - [Stale closure prevention](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--stale-closure-prevention.md) — 1 KiB
 - [Automatic cleanup](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--automatic-cleanup.md) — 1 KiB
-- [Registering multiple hotkeys](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--registering-multiple-hotkeys.md) — 2 KiB
+- [Registering multiple hotkeys](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--registering-multiple-hotkeys.md) — 3 KiB
 - [Metadata (name, description, and group)](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--metadata-name-description-and-group.md) — 2 KiB
 - [Introspecting registrations](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--introspecting-registrations.md) — 2 KiB
 - [The hotkey manager](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--the-hotkey-manager.md) — 1 KiB
@@ -30,8 +30,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="updating-options"></a>
 <a id="default-options"></a>
 <a id="why-these-defaults"></a>
-<a id="smart-input-handling-ignoreinputs"></a>
-<a id="hotkey-conflicts-conflictbehavior"></a>
+<a id="smart-input-handling-with-ignoreinputs"></a>
+<a id="hotkey-conflicts-and-conflictbehavior"></a>
+<a id="chord-and-sequence-options"></a>
 <a id="global-defaults-via-provider"></a>
 <a id="hotkey-options"></a>
 <a id="enabled"></a>

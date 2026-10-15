@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
-Use `formatForDisplay` whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the original binding and format it at render time: the display label is not a registration string.
+Use `formatForDisplay` whenever a hotkey appears in a menu, button, hint, cheat sheet, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, parsed bindings, and sequences. Store the original binding and format it at render time: the display label is not a registration string.
 
 ## Format a binding
 
@@ -30,21 +30,23 @@ Set `parts: true` to get one label per key instead of a joined string:
 ```ts
 const binding = 'Mod+[KeyS]'
 const parts = formatForDisplay(binding, { platform: 'mac', parts: true })
-// ['⌘', 'S']; render each part in its own <kbd>
+// ['⌘', 'S'] — render each part in its own <kbd>
 ```
 
 With `parts` omitted or false, the result is a string. A runtime boolean returns `string | string[]`. Parts preserve literal plus keys and ignore `separatorToken`.
 
-Sequences are arrays of bindings. Format their steps individually:
+## Format sequences
+
+Pass a sequence to format each step and join the steps with `sequenceSeparator`, a space by default:
 
 ```ts
-import type { HotkeySequence } from '@tanstack/ember-hotkeys'
-
-const sequence: HotkeySequence = ['Mod+[KeyK]', 'C']
-const label = sequence.map((step) => formatForDisplay(step)).join(' → ')
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac' }) // '⌘ K C'
+formatForDisplay(['G', 'G'], { sequenceSeparator: ' → ' }) // 'G → G'
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac', parts: true })
+// [['⌘', 'K'], ['C']] — one array of keycaps per step
 ```
 
-`formatHotkeySequence` only joins stored strings with spaces. It intentionally retains brackets and code names, so use the code above for user-facing labels.
+With `parts: true`, a sequence returns one array per step, so you can render each step as a group of keycaps.
 
 ## Choose symbols and separators
 
@@ -52,21 +54,21 @@ const label = sequence.map((step) => formatForDisplay(step)).join(' → ')
 
 ```ts
 formatForDisplay('Shift+[ArrowUp]', {
-	platform: 'mac',
-	useSymbols: { modifiers: false, keys: true },
-	parts: true,
+  platform: 'mac',
+  useSymbols: { modifiers: false, keys: true },
+  parts: true,
 }) // ['Shift', '↑']
 
 formatForDisplay('Mod+[KeyS]', {
-	platform: 'mac', useSymbols: false,
+  platform: 'mac', useSymbols: false,
 }) // 'Cmd+S'
 
 formatForDisplay('Control++', {
-	platform: 'windows', separatorToken: ' · ',
+  platform: 'windows', separatorToken: ' · ',
 }) // 'Ctrl · +'
 ```
 
-An empty separator joins labels directly. `undefined` or `null` uses the platform default. `formatWithLabels(binding, options)` is the shorthand for `formatForDisplay` with `useSymbols: false`.
+An empty separator joins labels directly. `undefined` or `null` uses the platform default. `separatorToken` applies within a chord; `sequenceSeparator` applies between steps.
 
 ## Supply layout labels
 
@@ -85,11 +87,15 @@ Use `keyLabels` for explicit labels keyed by physical code or normalized logical
 
 ```ts
 formatForDisplay('Mod+[KeyQ]', {
-	platform: 'mac', layoutMap, keyLabels: { KeyQ: 'Action' },
+  platform: 'mac', layoutMap, keyLabels: { KeyQ: 'Action' },
 }) // '⌘ Action'
 ```
 
 The precedence is `keyLabels`, then a layout entry, then the fallback label. Layout entries receive normal letter casing and key symbols; missing or empty entries fall back. Explicit labels are final. All of these options affect display only.
+
+## Compare hotkeys
+
+`areHotkeysEqual(a, b)` compares chords or sequences after resolving modifiers, so `Mod+S` equals `Meta+S` on macOS. Sequences compare step by step. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` turns a one-step sequence into its chord.
 
 ## Parse and store bindings
 
@@ -100,7 +106,7 @@ import { parseHotkey, normalizeHotkeyFromParsed } from '@tanstack/ember-hotkeys'
 
 const parsed = parseHotkey('Mod+[KeyS]', 'mac')
 if (parsed.code !== undefined) {
-	console.log(parsed.code) // 'KeyS'; parsed.key is undefined
+  console.log(parsed.code) // 'KeyS'; parsed.key is undefined
 }
 const stored = normalizeHotkeyFromParsed(parsed, 'mac') // 'Mod+[KeyS]'
 formatForDisplay(stored, { platform: 'windows' }) // 'Ctrl+S'
@@ -108,6 +114,6 @@ formatForDisplay(stored, { platform: 'windows' }) // 'Ctrl+S'
 
 Parsed modifiers are already resolved. To display a portable `Mod` binding on another platform, serialize with the original platform first, as above. `normalizeRegisterableHotkey` accepts strings or raw objects and preserves the logical/physical distinction. Do not store display labels or put a bracketed code in a logical `key` field.
 
-Use `validateHotkey` when accepting strings from an external source. It returns `valid`, `errors`, and `warnings`; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md#source-hotkeys-docs-framework-ember-guides-hotkey-recording-md).
+Use `validateHotkey` when accepting a chord or sequence from an external source. It returns `valid`, `errors`, and `warnings`, and names the failing step of a sequence; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md#source-hotkeys-docs-framework-ember-guides-hotkey-recording-md).
 
-Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/vanilla/formatForDisplay).
+Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/vanilla/formatForDisplay).

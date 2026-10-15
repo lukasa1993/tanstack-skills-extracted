@@ -1,10 +1,10 @@
 # Hotkeys — Default options
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Default options
 
-When you register a hotkey without passing options, or when you omit specific options, the following defaults apply:
+When you register a hotkey without options, or omit specific ones, these defaults apply:
 
 ```tsx
 useHotkey('Mod+S', callback, {
@@ -12,7 +12,8 @@ useHotkey('Mod+S', callback, {
   preventDefault: true,
   stopPropagation: true,
   eventType: 'keydown',
-  requireReset: false,
+  requireReset: false, // chords only
+  timeout: 1000, // sequences only
   ignoreInputs: undefined, // smart default: false for Mod+S, true for single keys
   target: document,
   platform: undefined, // auto-detected
@@ -22,26 +23,38 @@ useHotkey('Mod+S', callback, {
 
 ### Why these defaults?
 
-Most hotkey registrations are meant to override default browser behavior. `Mod+S` should save your document, not open the browser's "Save Page" dialog. So `preventDefault` and `stopPropagation` are `true` by default, and you opt out per hotkey when you actually want the browser behavior.
+Most hotkey registrations exist to override the browser. When you bind `Mod+S` to save a document, you don't want the browser's "Save Page" dialog too. So `preventDefault` and `stopPropagation` are `true` by default, and you opt out per hotkey when you actually want the browser behavior.
 
-#### Smart input handling: `ignoreInputs`
+#### Smart input handling with `ignoreInputs`
 
-By default, hotkeys with `Ctrl`/`Meta` modifiers (like `Mod+S`) and the `Escape` key fire even when focus is inside input elements (such as text fields or text areas), and when focus is on button-type inputs (`type="button"`, `"submit"`, or `"reset"`). Shortcuts like save or close keep working wherever the user is focused. Single key shortcuts, and those using only `Shift`/`Alt`, are ignored within non-button inputs so they don't interfere with normal typing.
+By default, `Ctrl`/`Meta` shortcuts (like `Mod+S`) and `Escape` fire even while focus is inside a text field or textarea, so save and close work wherever the user happens to be. Single keys and `Shift`/`Alt` combos are ignored inside non-button inputs, because those are just typing. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) don't block any hotkeys.
 
-#### Hotkey conflicts: `conflictBehavior`
+#### Hotkey conflicts and `conflictBehavior`
 
-When you attempt to register a hotkey that is already registered (possibly in another part of your app), the library logs a warning by default using the `conflictBehavior: 'warn'` setting. This helps you catch accidental duplicate bindings during development so they can be resolved before reaching production.
+If you register a hotkey that's already registered somewhere else in your app, the library logs a warning by default (`conflictBehavior: 'warn'`). That surfaces accidental duplicate bindings during development, before they reach production.
+
+### Chord and sequence options
+
+Most options apply to both kinds. `requireReset` applies only to chords and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects `timeout` on a chord and `requireReset` on a sequence:
+
+```tsx
+useHotkey('Escape', close, { requireReset: true }) // OK
+useHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
+useHotkey('Escape', close, { timeout: 500 }) // Type error
+```
+
+When the kind is not known statically, such as a `Hotkey` loaded from settings, only the shared options are accepted.
 
 ### Global defaults via provider
 
-You can change the default options for all `useHotkey` calls in your app by wrapping your component tree with `HotkeysProvider`. Per-hook options override the provider defaults.
+You can change the default options for all `useHotkey` and `useHotkeys` calls in your app by wrapping your component tree with `HotkeysProvider`. Per-hook options will override the provider defaults. Defaults apply only to the kinds that support them, so a default `timeout` affects sequences and a default `requireReset` affects chords.
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/preact-hotkeys'
 
 <HotkeysProvider
   defaultOptions={{
-    hotkey: { preventDefault: false, ignoreInputs: false },
+    hotkey: { preventDefault: false, ignoreInputs: false, timeout: 1500 },
   }}
 >
   <App />

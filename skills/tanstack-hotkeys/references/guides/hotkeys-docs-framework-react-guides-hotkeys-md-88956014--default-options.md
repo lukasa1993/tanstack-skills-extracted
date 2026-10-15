@@ -1,6 +1,6 @@
 # Hotkeys — Default options
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Default options
 
@@ -12,7 +12,8 @@ useHotkey('Mod+S', callback, {
   preventDefault: true,
   stopPropagation: true,
   eventType: 'keydown',
-  requireReset: false,
+  requireReset: false, // chords only
+  timeout: 1000, // sequences only
   ignoreInputs: undefined, // smart default: false for Mod+S, true for single keys
   target: document,
   platform: undefined, // auto-detected
@@ -32,16 +33,28 @@ By default, `Ctrl`/`Meta` shortcuts (like `Mod+S`) and `Escape` fire even while 
 
 If you register a hotkey that's already registered somewhere else in your app, the library logs a warning by default (`conflictBehavior: 'warn'`). That surfaces accidental duplicate bindings during development, before they reach production.
 
+### Chord and sequence options
+
+Most options apply to both kinds. `requireReset` applies only to chords and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects `timeout` on a chord and `requireReset` on a sequence:
+
+```tsx
+useHotkey('Escape', close, { requireReset: true }) // OK
+useHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
+useHotkey('Escape', close, { timeout: 500 }) // Type error
+```
+
+When the kind is not known statically, such as a `Hotkey` loaded from settings, only the shared options are accepted.
+
 ### Global defaults via provider
 
-You can change the default options for all `useHotkey` calls in your app by wrapping your component tree with `HotkeysProvider`. Per-hook options will override the provider defaults.
+You can change the default options for all `useHotkey` and `useHotkeys` calls in your app by wrapping your component tree with `HotkeysProvider`. Per-hook options will override the provider defaults. Defaults apply only to the kinds that support them, so a default `timeout` affects sequences and a default `requireReset` affects chords.
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/react-hotkeys'
 
 <HotkeysProvider
   defaultOptions={{
-    hotkey: { preventDefault: false, ignoreInputs: false },
+    hotkey: { preventDefault: false, ignoreInputs: false, timeout: 1500 },
   }}
 >
   <App />

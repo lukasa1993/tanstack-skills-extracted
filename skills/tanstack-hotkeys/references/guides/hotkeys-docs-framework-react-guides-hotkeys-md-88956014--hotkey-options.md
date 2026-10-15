@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Hotkey options
 
@@ -52,7 +52,7 @@ useHotkey('Shift', () => deactivateMode(), { eventType: 'keyup' })
 
 ### `requireReset`
 
-When `true`, the hotkey will only fire once per key press. The key must be released and pressed again to fire again. Defaults to `false`.
+When `true`, a chord fires only once per key press. The key must be released and pressed again to fire again. Defaults to `false`. Sequences ignore automatic repeats already, so this option applies only to chords.
 
 ```tsx
 // Only fires once per Escape press, not on key repeat
@@ -113,6 +113,8 @@ Controls what happens when you register a hotkey that's already registered. Opti
 ```tsx
 useHotkey('Mod+S', () => save(), { conflictBehavior: 'replace' })
 ```
+
+Duplicate detection compares resolved hotkeys on the same target, so `Mod+S` and `Meta+S` conflict on macOS. Two sequences conflict when their steps are equal; a shared prefix alone is not a duplicate.
 
 ### `platform`
 

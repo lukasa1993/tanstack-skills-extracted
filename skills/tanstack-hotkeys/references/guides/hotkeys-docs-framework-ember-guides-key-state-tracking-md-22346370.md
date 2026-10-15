@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -93,7 +93,7 @@ hint = useHotkeyHint(this, 'Alt+Shift+[KeyK]')
 // Read this.hint.value in a template or getter.
 ```
 
-Holding Alt, Shift, or both reveals this hint. Extra Control hides it, as does releasing all modifiers or blurring the window. Nonmodifier keys are ignored. AltGraph never reveals hints.
+Holding Alt, Shift, or both reveals this hint. Extra Control hides it, as does releasing all modifiers or blurring the window. Nonmodifier keys are ignored. AltGraph never reveals hints. A sequence reveals its hint from its first step, and an app hotkey uses its effective hotkey (no hint while unbound).
 
 Pass `{ exact: true }` to require every binding modifier, or `{ platform: 'mac' }` to resolve `Mod` explicitly. Supply the same platform used for registration. Combine the result with the action's enabled state. The core equivalent is `matchesHeldModifiers(binding, heldKeys, options)`.
 
@@ -120,4 +120,4 @@ tracker.isAnyKeyHeld(['Shift', 'Control'])
 tracker.areAllKeysHeld(['Shift', 'Control'])
 ```
 
-Try [useHeldKeys](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/ember/useHeldKeys), [useKeyHold](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/ember/useKeyHold), and the [kitchen sink](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/ember/kitchen-sink).
+Try [useHeldKeys](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/ember/useHeldKeys), [useKeyHold](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/ember/useKeyHold), and the [kitchen sink](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/ember/kitchen-sink).

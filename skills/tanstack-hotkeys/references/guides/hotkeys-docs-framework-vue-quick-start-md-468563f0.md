@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -84,14 +84,15 @@ useHotkey('Escape', () => {
 
 ```vue
 <script setup lang="ts">
-import { useHotkeySequence } from '@tanstack/vue-hotkeys'
+import { useHotkey } from '@tanstack/vue-hotkeys'
 
-useHotkeySequence(['G', 'G'], () => scrollToTop())
-useHotkeySequence(['G', 'Shift+G'], () => scrollToBottom())
+// An array of chords registers a sequence
+useHotkey(['G', 'G'], () => scrollToTop())
+useHotkey(['G', 'Shift+G'], () => scrollToBottom())
 </script>
 ```
 
-For several sequences or a list that changes at runtime, prefer a single `useHotkeySequences([...])` call (see the [Sequences guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)).
+For several sequences or a list that changes at runtime, prefer a single `useHotkeys([...])` call (see the [Sequences guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)).
 
 ### Tracking held keys
 
@@ -139,8 +140,7 @@ import { HotkeysProvider } from '@tanstack/vue-hotkeys'
 <template>
   <HotkeysProvider
     :default-options="{
-      hotkey: { preventDefault: true },
-      hotkeySequence: { timeout: 1500 },
+      hotkey: { preventDefault: true, timeout: 1500 },
       hotkeyRecorder: { onCancel: () => console.log('Recording cancelled') },
     }"
   >
@@ -149,11 +149,15 @@ import { HotkeysProvider } from '@tanstack/vue-hotkeys'
 </template>
 ```
 
+## Declaring app hotkeys
+
+To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `HotkeysProvider`. See the [App Hotkeys Guide](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md).
+
 ## Next steps
 
 - [Hotkeys Guide](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md)
 - [Sequences Guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)
 - [Hotkey Recording Guide](./hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md#source-hotkeys-docs-framework-vue-guides-hotkey-recording-md)
-- [Sequence Recording Guide](./hotkeys-docs-framework-vue-guides-sequence-recording-md-d1fba53e.md#source-hotkeys-docs-framework-vue-guides-sequence-recording-md)
+- [App Hotkeys Guide](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md)
 - [Key State Tracking Guide](./hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md#source-hotkeys-docs-framework-vue-guides-key-state-tracking-md)
 - [Formatting & Display Guide](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md)

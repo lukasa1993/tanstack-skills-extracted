@@ -1,45 +1,35 @@
 # Hotkeys — Introspecting registrations
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Introspecting registrations
 
-Use the `useHotkeyRegistrations` hook to get a live view of all hotkey and sequence registrations. It's the building block for shortcut palettes and help dialogs.
+Use the `useHotkeyRegistrations` hook to get a live view of every registration, chords and sequences together. It's the building block for shortcut palettes and help dialogs.
 
 ```tsx
 import { useHotkeyRegistrations, formatForDisplay } from '@tanstack/react-hotkeys'
 
 function ShortcutPalette() {
-  const { hotkeys, sequences } = useHotkeyRegistrations()
+  const registrations = useHotkeyRegistrations()
 
   return (
-    <div>
-      <h2>Keyboard Shortcuts</h2>
-      <ul>
-        {hotkeys.map((reg) => (
-          <li key={reg.id}>
-            <kbd>{formatForDisplay(reg.hotkey)}</kbd>
-            {reg.options.meta?.name && <span> — {reg.options.meta.name}</span>}
-            {reg.options.meta?.description && <p>{reg.options.meta.description}</p>}
-          </li>
-        ))}
-      </ul>
-      {sequences.length > 0 && (
-        <>
-          <h2>Sequences</h2>
-          <ul>
-            {sequences.map((reg) => (
-              <li key={reg.id}>
-                <kbd>{reg.sequence.map((step) => formatForDisplay(step)).join(' → ')}</kbd>
-                {reg.options.meta?.name && <span> — {reg.options.meta.name}</span>}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </div>
+    <ul>
+      {registrations.map((reg) => (
+        <li key={reg.id}>
+          <kbd>{formatForDisplay(reg.hotkey)}</kbd>
+          {reg.options.meta?.name && <span> — {reg.options.meta.name}</span>}
+          {reg.kind === 'sequence' && (
+            <small>
+              {reg.matchedStepCount}/{reg.hotkey.length} steps
+            </small>
+          )}
+        </li>
+      ))}
+    </ul>
   )
 }
 ```
 
-The returned `hotkeys` array contains registration objects with the hotkey string, options (including `meta`), and enabled state. The `sequences` array contains sequence registrations with the same structure.
+Each view has an `id`, the `hotkey`, its `options` (including `meta`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedHotkey`; sequence views add `parsedSequence` and `matchedStepCount`, the steps matched so far in the current attempt.
+
+Registrations only exist while their components are mounted. To list hotkeys from routes that have not rendered, declare them with [app hotkeys](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md).

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -11,6 +11,7 @@ Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--overview.md) — 1 KiB
+- [Chords and sequences](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--chords-and-sequences.md) — 2 KiB
 - [Logical keys and physical positions](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--basic-usage.md) — 2 KiB
 - [Property getters](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--property-getters.md) — 2 KiB
@@ -23,6 +24,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [The hotkey manager](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--the-hotkey-manager.md) — 2 KiB
 
 <!-- Original source anchors retained for inbound links. -->
+<a id="chords-and-sequences"></a>
 <a id="logical-keys-and-physical-positions"></a>
 <a id="basic-usage"></a>
 <a id="callback-context"></a>

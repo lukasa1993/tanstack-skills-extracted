@@ -1,21 +1,27 @@
 # Hotkeys — The hotkey manager
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## The hotkey manager
 
-Under the hood, `useHotkey` uses the singleton `HotkeyManager`. You can also access the manager directly if needed:
+Under the hood, `useHotkey` uses the singleton `HotkeyManager`, which handles chords and sequences alike. You can access the manager directly if needed:
 
 ```tsx
 import { getHotkeyManager } from '@tanstack/preact-hotkeys'
 
 const manager = getHotkeyManager()
 
+// Register outside Preact; returns a handle with setOptions and unregister
+const handle = manager.register(['G', 'G'], () => scrollToTop(), { timeout: 500 })
+
 // Check if a hotkey is registered
 manager.isRegistered('Mod+S')
 
 // Get total number of registrations
 manager.getRegistrationCount()
+
+// Reset in-progress sequences
+manager.resetSequenceProgress()
 ```
 
-The manager attaches event listeners per target element, so only elements that have registered hotkeys receive listeners. That beats a single global listener that has to inspect every keystroke.
+The manager attaches event listeners per target element, so only elements with registered hotkeys get listeners. That beats a single global listener that has to inspect every keystroke.

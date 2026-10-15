@@ -10,7 +10,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-core-8cce251e.md",
       "sourcePath": "db-core",
       "bytes": 3237,
@@ -32,7 +32,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-meta-framework-69f8ef80.md",
       "sourcePath": "meta-framework",
       "bytes": 10408,
@@ -107,7 +107,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-core-collection-setup-883eba1c.md",
       "sourcePath": "db-core/collection-setup",
       "bytes": 2093,
@@ -252,7 +252,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-core-live-queries-ec3edb95.md",
       "sourcePath": "db-core/live-queries",
       "bytes": 2740,
@@ -363,7 +363,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-core-mutations-optimistic-9abd33bd.md",
       "sourcePath": "db-core/mutations-optimistic",
       "bytes": 11306,
@@ -429,7 +429,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-core-custom-adapter-3b9cb5f2.md",
       "sourcePath": "db-core/custom-adapter",
       "bytes": 1544,
@@ -471,7 +471,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/db",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "file": "references/guides/tanstack-db-core-persistence-2c18441d.md",
       "sourcePath": "db-core/persistence",
       "bytes": 11097,
@@ -493,7 +493,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/offline-transactions",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "file": "references/guides/tanstack-offline-transactions-offline-6f208742.md",
       "sourcePath": "offline",
       "bytes": 2181,
@@ -608,10 +608,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/react-db",
-      "version": "0.5.9",
+      "version": "0.5.10",
       "file": "references/guides/tanstack-react-db-ba0ab260.md",
       "sourcePath": "react-db",
-      "bytes": 12414,
+      "bytes": 12415,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -622,7 +622,7 @@
         {
           "title": "Overview; Setup; Hooks; Includes (Hierarchical Data); Virtual Properties; React-Specific Patterns; Common Mistakes",
           "file": "references/guides/tanstack-react-db-ba0ab260.md",
-          "bytes": 12414
+          "bytes": 12415
         }
       ],
       "examples": []
@@ -635,10 +635,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-db",
-      "version": "0.3.9",
+      "version": "0.3.10",
       "file": "references/guides/tanstack-vue-db-8ef80718.md",
       "sourcePath": "vue-db",
-      "bytes": 4972,
+      "bytes": 4973,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -649,7 +649,7 @@
         {
           "title": "Overview; Setup; Hook; Vue-Specific Patterns; Includes (Hierarchical Data); Common Mistakes",
           "file": "references/guides/tanstack-vue-db-8ef80718.md",
-          "bytes": 4972
+          "bytes": 4973
         }
       ],
       "examples": []
@@ -662,10 +662,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-db",
-      "version": "0.3.9",
+      "version": "0.3.10",
       "file": "references/guides/tanstack-solid-db-839f983b.md",
       "sourcePath": "solid-db",
-      "bytes": 6925,
+      "bytes": 6926,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -676,7 +676,7 @@
         {
           "title": "Overview; Setup; Hook; Solid-Specific Patterns; Includes (Hierarchical Data); Common Mistakes",
           "file": "references/guides/tanstack-solid-db-839f983b.md",
-          "bytes": 6925
+          "bytes": 6926
         }
       ],
       "examples": []
@@ -689,10 +689,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/svelte-db",
-      "version": "0.5.9",
+      "version": "0.5.10",
       "file": "references/guides/tanstack-svelte-db-1541b4ae.md",
       "sourcePath": "svelte-db",
-      "bytes": 5455,
+      "bytes": 5456,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -703,7 +703,7 @@
         {
           "title": "Overview; Setup; Hook; Svelte-Specific Patterns; Includes (Hierarchical Data); Common Mistakes",
           "file": "references/guides/tanstack-svelte-db-1541b4ae.md",
-          "bytes": 5455
+          "bytes": 5456
         }
       ],
       "examples": []
@@ -716,10 +716,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/angular-db",
-      "version": "0.2.9",
+      "version": "0.2.10",
       "file": "references/guides/tanstack-angular-db-3647fe7a.md",
       "sourcePath": "angular-db",
-      "bytes": 8239,
+      "bytes": 8240,
       "prerequisites": [
         {
           "id": "tanstack-db-core",
@@ -730,7 +730,7 @@
         {
           "title": "Overview; Setup; Inject Function; Angular-Specific Patterns; Includes (Hierarchical Data); Common Mistakes",
           "file": "references/guides/tanstack-angular-db-3647fe7a.md",
-          "bytes": 8239
+          "bytes": 8240
         }
       ],
       "examples": []

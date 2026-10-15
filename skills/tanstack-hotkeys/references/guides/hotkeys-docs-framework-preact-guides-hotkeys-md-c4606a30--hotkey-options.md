@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 ## Hotkey options
 
@@ -8,7 +8,7 @@
 
 Controls whether the hotkey is active. Defaults to `true`.
 
-Disabled hotkeys remain registered in the manager and stay visible in devtools; only execution is suppressed. Hooks update `enabled` on the existing registration instead of unregistering and re-registering.
+Disabled hotkeys stay registered in the manager and visible in devtools; only execution is suppressed. The hook updates `enabled` on the existing registration instead of unregistering and re-registering.
 
 ```tsx
 const [isEditing, setIsEditing] = useState(false)
@@ -52,7 +52,7 @@ useHotkey('Shift', () => deactivateMode(), { eventType: 'keyup' })
 
 ### `requireReset`
 
-When `true`, the hotkey only fires once per key press. The key must be released and pressed again to fire again. Defaults to `false`.
+When `true`, a chord fires only once per key press. The key must be released and pressed again to fire again. Defaults to `false`. Sequences ignore automatic repeats already, so this option applies only to chords.
 
 ```tsx
 // Only fires once per Escape press, not on key repeat
@@ -61,7 +61,7 @@ useHotkey('Escape', () => closePanel(), { requireReset: true })
 
 ### `ignoreInputs`
 
-When `true`, the hotkey doesn't fire when the user is focused on a text input, textarea, select, or contentEditable element. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) are not ignored, so shortcuts like Mod+S work when the user has tabbed to a form button. When unset, a smart default applies: `Ctrl`/`Meta` shortcuts and `Escape` fire in inputs; single keys and `Shift`/`Alt` combos are ignored.
+When `true`, the hotkey will not fire when the user is focused on a text input, textarea, select, or contentEditable element. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) are not ignored, so shortcuts like Mod+S work when the user has tabbed to a form button. When unset, a smart default applies: `Ctrl`/`Meta` shortcuts and `Escape` fire in inputs; single keys and `Shift`/`Alt` combos are ignored.
 
 ```tsx
 // Single key - ignored in inputs by default (smart default)
@@ -85,7 +85,7 @@ The DOM element to attach the event listener to. Defaults to `document`. Can be 
 import { useRef } from 'preact/hooks'
 
 function Panel() {
-  const panelRef = useRef<HTMLDivElement | null>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
 
   // Only listens for events on this specific element
   useHotkey('Escape', () => closePanel(), { target: panelRef })
@@ -113,6 +113,8 @@ Controls what happens when you register a hotkey that's already registered. Opti
 ```tsx
 useHotkey('Mod+S', () => save(), { conflictBehavior: 'replace' })
 ```
+
+Duplicate detection compares resolved hotkeys on the same target, so `Mod+S` and `Meta+S` conflict on macOS. Two sequences conflict when their steps are equal; a shared prefix alone is not a duplicate.
 
 ### `platform`
 

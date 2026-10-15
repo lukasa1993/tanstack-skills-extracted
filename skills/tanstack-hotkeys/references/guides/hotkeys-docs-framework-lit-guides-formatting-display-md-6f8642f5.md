@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.11.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-Use `formatForDisplay` whenever a binding appears in a menu, button, hint, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, and parsed bindings. Store the original binding and format it at render time: the display label is not a registration string.
+Use `formatForDisplay` whenever a hotkey appears in a menu, button, hint, cheat sheet, or shortcut settings panel. It accepts logical strings, bracketed physical strings, raw objects, parsed bindings, and sequences. Store the original binding and format it at render time: the display label is not a registration string.
 
 ## Format a binding
 
@@ -35,16 +35,18 @@ const parts = formatForDisplay(binding, { platform: 'mac', parts: true })
 
 With `parts` omitted or false, the result is a string. A runtime boolean returns `string | string[]`. Parts preserve literal plus keys and ignore `separatorToken`.
 
-Sequences are arrays of bindings. Format their steps individually:
+## Format sequences
+
+Pass a sequence to format each step and join the steps with `sequenceSeparator`, a space by default:
 
 ```ts
-import type { HotkeySequence } from '@tanstack/lit-hotkeys'
-
-const sequence: HotkeySequence = ['Mod+[KeyK]', 'C']
-const label = sequence.map((step) => formatForDisplay(step)).join(' → ')
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac' }) // '⌘ K C'
+formatForDisplay(['G', 'G'], { sequenceSeparator: ' → ' }) // 'G → G'
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac', parts: true })
+// [['⌘', 'K'], ['C']] — one array of keycaps per step
 ```
 
-`formatHotkeySequence` only joins stored strings with spaces. It intentionally retains brackets and code names, so use the code above for user-facing labels.
+With `parts: true`, a sequence returns one array per step, so you can render each step as a group of keycaps.
 
 ## Choose symbols and separators
 
@@ -66,7 +68,7 @@ formatForDisplay('Control++', {
 }) // 'Ctrl · +'
 ```
 
-An empty separator joins labels directly. `undefined` or `null` uses the platform default. `formatWithLabels(binding, options)` is the shorthand for `formatForDisplay` with `useSymbols: false`.
+An empty separator joins labels directly. `undefined` or `null` uses the platform default. `separatorToken` applies within a chord; `sequenceSeparator` applies between steps.
 
 ## Supply layout labels
 
@@ -91,6 +93,10 @@ formatForDisplay('Mod+[KeyQ]', {
 
 The precedence is `keyLabels`, then a layout entry, then the fallback label. Layout entries receive normal letter casing and key symbols; missing or empty entries fall back. Explicit labels are final. All of these options affect display only.
 
+## Compare hotkeys
+
+`areHotkeysEqual(a, b)` compares chords or sequences after resolving modifiers, so `Mod+S` equals `Meta+S` on macOS. Sequences compare step by step. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` turns a one-step sequence into its chord.
+
 ## Parse and store bindings
 
 `parseHotkey` returns either a logical `key` or a physical `code`, plus resolved modifier flags. Narrow the union before inspecting the identity:
@@ -108,6 +114,6 @@ formatForDisplay(stored, { platform: 'windows' }) // 'Ctrl+S'
 
 Parsed modifiers are already resolved. To display a portable `Mod` binding on another platform, serialize with the original platform first, as above. `normalizeRegisterableHotkey` accepts strings or raw objects and preserves the logical/physical distinction. Do not store display labels or put a bracketed code in a logical `key` field.
 
-Use `validateHotkey` when accepting strings from an external source. It returns `valid`, `errors`, and `warnings`; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md#source-hotkeys-docs-framework-lit-guides-hotkey-recording-md).
+Use `validateHotkey` when accepting a chord or sequence from an external source. It returns `valid`, `errors`, and `warnings`, and names the failing step of a sequence; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md#source-hotkeys-docs-framework-lit-guides-hotkey-recording-md).
 
-Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/748379f3ac2df52b7e5f2aae9cceed2ce1bea78f/examples/vanilla/formatForDisplay).
+Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/vanilla/formatForDisplay).
