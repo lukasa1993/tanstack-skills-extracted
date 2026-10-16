@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -15,6 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Logical keys and physical positions](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--basic-usage.md) — 2 KiB
 - [Property getters](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--property-getters.md) — 2 KiB
+- [Capture phase](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--capture-phase.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--default-options.md) — 2 KiB
 - [Hotkey options](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-options.md) — 3 KiB
 - [Current callbacks and automatic cleanup](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--current-callbacks-and-automatic-cleanup.md) — 1 KiB
@@ -31,6 +32,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="raw-object-bindings"></a>
 <a id="changing-a-binding"></a>
 <a id="property-getters"></a>
+<a id="capture-phase"></a>
 <a id="default-options"></a>
 <a id="smart-input-handling"></a>
 <a id="shared-default-options"></a>

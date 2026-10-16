@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 ## Hotkey options
 
@@ -61,13 +61,15 @@ useHotkey('Escape', () => closePanel(), { requireReset: true })
 
 ### `ignoreInputs`
 
-When `true`, the hotkey will not fire when the user is focused on a text input, textarea, select, or contentEditable element. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) are not ignored, so shortcuts like Mod+S work when the user has tabbed to a form button. When unset, a smart default applies: `Ctrl`/`Meta` shortcuts and `Escape` fire in inputs; single keys and `Shift`/`Alt` combos are ignored.
+When `true`, the hotkey will not fire when the user is focused on a text input, textarea, select, or contentEditable element. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) allow unrelated shortcuts, so shortcuts like Mod+S work when the user has tabbed to a form button. The default, `'auto'`, chooses from the hotkey: `Ctrl`/`Meta` shortcuts and `Escape` fire in inputs; single keys and `Shift`/`Alt` combos are ignored.
+
+When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: `Enter` and `Space` on buttons and `<summary>`, `Enter` on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
 
 ```tsx
-// Single key - ignored in inputs by default (smart default)
+// Single key - ignored in inputs by default ('auto')
 useHotkey('K', () => openSearch())
 
-// Mod+S and Escape - fire in inputs by default (smart default)
+// Mod+S and Escape - fire in inputs by default ('auto')
 useHotkey('Mod+S', () => save())
 useHotkey('Escape', () => closeDialog())
 
@@ -75,7 +77,7 @@ useHotkey('Escape', () => closeDialog())
 useHotkey('Enter', () => submit(), { ignoreInputs: false })
 ```
 
-Set `ignoreInputs: false` or `true` explicitly to override the smart default.
+Set `ignoreInputs` to `true` or `false` to override `'auto'`.
 
 ### `target`
 

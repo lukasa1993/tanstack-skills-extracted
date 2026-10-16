@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -116,4 +116,4 @@ Parsed modifiers are already resolved. To display a portable `Mod` binding on an
 
 Use `validateHotkey` when accepting a chord or sequence from an external source. It returns `valid`, `errors`, and `warnings`, and names the failing step of a sequence; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md#source-hotkeys-docs-framework-preact-guides-hotkey-recording-md).
 
-Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/vanilla/formatForDisplay).
+Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/vanilla/formatForDisplay).

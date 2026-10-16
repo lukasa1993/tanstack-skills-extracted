@@ -1,6 +1,6 @@
 # Marko Virtual — Overview
 
-[Guide and prerequisites](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.4`.
+[Guide and prerequisites](./virtual-docs-framework-marko-marko-virtual-md-0fe74d8a.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.5`.
 
 `@tanstack/marko-virtual` is the Marko 6 adapter for TanStack Virtual. It provides
 row, column, and grid virtualisation via two auto-discovered Marko tags:

@@ -1,6 +1,6 @@
 # Hotkeys — Default options
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 ## Default options
 
@@ -12,8 +12,9 @@ createHotkey('Mod+S', callback, {
   preventDefault: true,
   stopPropagation: true,
   eventType: 'keydown',
+  capture: false,
   requireReset: false,
-  ignoreInputs: undefined, // smart default: false for Mod+S, true for single keys
+  ignoreInputs: 'auto', // false for Mod+S and Escape, true for single keys
   target: document,
   platform: undefined, // auto-detected
   conflictBehavior: 'warn',

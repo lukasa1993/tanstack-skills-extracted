@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -212,9 +212,11 @@ On macOS, when a modifier key is held and a non-modifier key is pressed, the OS 
 
 When the browser window loses focus, the tracker clears all held keys. This prevents "stuck" keys after the user tabs away and releases keys outside the window.
 
+If the system swallows a modifier's release without taking focus, such as Command+Shift+4 on macOS, the tracker releases the modifier on the next key press, mouse movement, or click. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
+
 ## Under the hood
 
-The three controllers subscribe to the singleton `KeyStateTracker` store from `@tanstack/hotkeys`. The tracker manages its own event listeners on `document` and maintains state in a TanStack Store, which the controllers read reactively.
+The three controllers subscribe to the singleton `KeyStateTracker` store from `@tanstack/hotkeys`. The tracker manages its own event listeners on `window`, in the capture phase, and maintains state in a TanStack Store, which the controllers read reactively.
 
 ```ts
 import { getKeyStateTracker } from '@tanstack/lit-hotkeys'

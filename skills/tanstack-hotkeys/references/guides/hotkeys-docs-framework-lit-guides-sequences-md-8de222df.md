@@ -2,9 +2,12 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
+
+> [!IMPORTANT]
+> `@hotkeySequence`, `HotkeySequenceController`, and `HotkeySequenceRecorderController` were removed in `@tanstack/lit-hotkeys` v0.15.0. Pass a sequence to `@hotkey` or `HotkeyController` instead, and record one with `HotkeyRecorderController` and `maxSteps`.
 
 A sequence is a hotkey made of chords pressed one after another rather than together. Think Vim-style navigation, cheat codes, or multi-step commands. Sequences are ordinary hotkeys: register them with `@hotkey` and `HotkeyController`, list them with `HotkeyRegistrationsController`, record them with `HotkeyRecorderController`, and format them with `formatForDisplay`.
 
@@ -87,6 +90,10 @@ constructor() {
   )
 }
 ```
+
+## Capture phase
+
+Sequences accept `capture: true` with the same [event propagation behavior as chords](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md). The default is `false`. Each step is matched in the selected phase, but `preventDefault` and `stopPropagation` apply only when the full sequence completes. Earlier steps still reach descendant widgets. Changing `capture` preserves partial progress and the existing timeout.
 
 ## Sequences with modifiers
 

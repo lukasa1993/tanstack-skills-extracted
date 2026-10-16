@@ -1,10 +1,10 @@
 # Hotkeys — Registering multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 ## Registering multiple hotkeys
 
-Use `createHotkeys` to register a dynamic list. Per-definition options override common options. Removing an entry unregisters it. Each entry has the shared [AlpineHotkeyDefinition](https://github.com/TanStack/hotkeys/blob/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/docs/framework/alpine/reference/type-aliases/AlpineHotkeyDefinition.md) shape.
+Use `createHotkeys` to register a dynamic list. Per-definition options override common options. Removing an entry unregisters it. Each entry has the shared [AlpineHotkeyDefinition](https://github.com/TanStack/hotkeys/blob/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/docs/framework/alpine/reference/type-aliases/AlpineHotkeyDefinition.md) shape.
 
 ```ts
 this.scope.createHotkeys(

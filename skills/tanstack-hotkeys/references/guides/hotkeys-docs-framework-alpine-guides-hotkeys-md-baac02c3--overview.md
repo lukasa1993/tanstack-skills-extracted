@@ -1,6 +1,6 @@
 # Hotkeys — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 `createHotkey` registers a shortcut with the shared `HotkeyManager`. Create one scope for each Alpine component. Register shortcuts in `init()` so getters and callbacks read the reactive component instance. Call `scope.destroy()` from the component's `destroy()` method. Destruction releases registrations, effects, Store subscriptions, and active recorders. Do not reuse a destroyed scope.
 

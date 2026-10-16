@@ -1,10 +1,10 @@
 # Hotkeys — Registering multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 ## Registering multiple hotkeys
 
-Use `useHotkeys` to register a dynamic list. Per-definition options override common options. Removing an entry unregisters it. Each entry has the shared [EmberHotkeyDefinition](https://github.com/TanStack/hotkeys/blob/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/docs/framework/ember/reference/type-aliases/EmberHotkeyDefinition.md) shape.
+Use `useHotkeys` to register a dynamic list. Per-definition options override common options. Removing an entry unregisters it. Each entry has the shared [EmberHotkeyDefinition](https://github.com/TanStack/hotkeys/blob/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/docs/framework/ember/reference/type-aliases/EmberHotkeyDefinition.md) shape.
 
 ```gts
 import Component from '@glimmer/component'

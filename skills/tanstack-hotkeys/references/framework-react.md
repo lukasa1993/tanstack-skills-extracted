@@ -6,10 +6,10 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [App Hotkeys](./guides/hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
-| [Formatting Display](./guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
-| [Hotkey Recording](./guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
-| [Hotkeys](./guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
-| [Key State Tracking](./guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
-| [Sequences](./guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
-| [Quick Start](./guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md) | Release-matched documentation | `@tanstack/hotkeys@0.12.0` |
+| [App Hotkeys](./guides/hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [Formatting Display](./guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [Hotkey Recording](./guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [Hotkeys](./guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [Key State Tracking](./guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [Sequences](./guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [Quick Start](./guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |

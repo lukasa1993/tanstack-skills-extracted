@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -16,8 +16,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Basic usage](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--basic-usage.md) — 2 KiB
 - [Reactive options](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--reactive-options.md) — 2 KiB
 - [Property getters](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--property-getters.md) — 2 KiB
+- [Capture phase](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--capture-phase.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--default-options.md) — 3 KiB
-- [Hotkey options](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-options.md) — 3 KiB
+- [Hotkey options](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-options.md) — 4 KiB
 - [Automatic dependency tracking](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--automatic-dependency-tracking.md) — 1 KiB
 - [Automatic cleanup](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--automatic-cleanup.md) — 1 KiB
 - [Registering multiple hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--registering-multiple-hotkeys.md) — 2 KiB
@@ -32,6 +33,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="reactive-options"></a>
 <a id="changing-a-binding"></a>
 <a id="property-getters"></a>
+<a id="capture-phase"></a>
 <a id="default-options"></a>
 <a id="why-these-defaults"></a>
 <a id="smart-input-handling-ignoreinputs"></a>

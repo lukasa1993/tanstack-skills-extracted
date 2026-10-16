@@ -1,6 +1,6 @@
 # Virtualizer — Optional Options: `scrollToFn`
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.4`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.5`.
 
 ## Optional Options: `scrollToFn`
 

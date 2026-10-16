@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-api-virtualizer-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.4`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.5`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -42,7 +42,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Optional Options: `initialMeasurementsCache`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-initialmeasurementscache.md) — 1 KiB
 - [Optional Options: `useAnimationFrameWithResizeObserver`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-useanimationframewithresizeobserver.md) — 2 KiB
 - [Optional Options: `useCachedMeasurements`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-usecachedmeasurements.md) — 2 KiB
-- [Virtualizer Instance](./virtual-docs-api-virtualizer-md-c3b477a3--virtualizer-instance.md) — 9 KiB
+- [Virtualizer Instance](./virtual-docs-api-virtualizer-md-c3b477a3--virtualizer-instance.md) — 10 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="required-options"></a>

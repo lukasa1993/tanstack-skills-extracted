@@ -2,9 +2,12 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
+
+> [!IMPORTANT]
+> `scope.createHotkeySequence`, `scope.createHotkeySequences`, and `scope.createHotkeySequenceRecorder` were removed in `@tanstack/alpine-hotkeys` v0.3.0. Pass a sequence to `scope.createHotkey` or `scope.createHotkeys` instead, and record one with `scope.createHotkeyRecorder` and `maxSteps`.
 
 A sequence is a hotkey made of chords pressed one after another rather than together. Think Vim-style navigation, cheat codes, or multi-step commands. Sequences are ordinary hotkeys: register them with `scope.createHotkey` and `scope.createHotkeys`, list them with `scope.createHotkeyRegistrations`, record them with `scope.createHotkeyRecorder`, and format them with `formatForDisplay`.
 
@@ -82,6 +85,10 @@ this.scope.createHotkey(['G', 'G'], () => this.scrollToTop(), () => ({
   meta: { name: 'Go to top', description: 'Scroll to the top of the page' },
 }))
 ```
+
+## Capture phase
+
+Sequences accept `capture: true` with the same [event propagation behavior as chords](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md). The default is `false`. Each step is matched in the selected phase, but `preventDefault` and `stopPropagation` apply only when the full sequence completes. Earlier steps still reach descendant widgets. Changing `capture` preserves partial progress and the existing timeout.
 
 ## Sequences with modifiers
 

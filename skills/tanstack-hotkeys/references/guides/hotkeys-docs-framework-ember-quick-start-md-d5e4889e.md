@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -154,5 +154,5 @@ To list every hotkey in a cheat sheet, including hotkeys whose components haven'
 - [Hotkey recording](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md#source-hotkeys-docs-framework-ember-guides-hotkey-recording-md)
 - [Key state tracking](./hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md#source-hotkeys-docs-framework-ember-guides-key-state-tracking-md)
 - [Formatting and display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md)
-- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/ember/kitchen-sink)
-- [API reference](https://github.com/TanStack/hotkeys/blob/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/docs/framework/ember/reference/index.md)
+- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/ember/kitchen-sink)
+- [API reference](https://github.com/TanStack/hotkeys/blob/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/docs/framework/ember/reference/index.md)

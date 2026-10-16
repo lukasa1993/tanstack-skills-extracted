@@ -1,6 +1,6 @@
 # Virtualizer — Virtualizer Instance
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.4`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.5`.
 
 ## Virtualizer Instance
 
@@ -230,13 +230,15 @@ virtualizer.shouldAdjustScrollPositionOnItemSizeChange = (
   delta,
   instance,
 ) => {
-  return item.start < instance.getScrollOffset() + instance.scrollAdjustments
+  return item.start < (instance.scrollOffset ?? 0)
 }
 ```
 
 The callback receives the resized `item`, the size `delta`, and the `instance`; return `true` to apply the scroll adjustment, `false` to skip it.
 
 On iOS WebKit, scroll-position writes are deferred regardless of this callback while a finger is on screen, during momentum-scroll, and during elastic-overscroll bounce. The cumulative delta is flushed in a single write once the scroll settles, preserving iOS's native momentum physics.
+
+On iOS 27 and later a write no longer stops a fling but is overridden by it within a frame, so a `scrollToIndex`, `scrollToOffset` or `scrollToEnd` issued during a fling is written once the fling ends (about 150ms after its last frame) rather than being lost; a drag before then cancels it, a tap does not.
 
 ### `isScrolling`
 
@@ -261,3 +263,7 @@ scrollOffset: number
 ```
 
 This option represents the current scroll position along the scrolling axis. It is measured in pixels from the starting point of the scrollable area.
+
+It is a position in the list's layout, and it stays consistent with `getOffsetForIndex`, the argument to `scrollToOffset`, and `initialOffset`: restoring a saved value returns to the same layout position. That is the same item only while the items and sizes before it are unchanged; to restore across changes, pair it with `takeSnapshot()` and `initialMeasurementsCache` as described above, or scroll to the item with `scrollToIndex`.
+
+While a scroll correction is held, because a write to the element is impossible at that moment (a touch gesture or its momentum on iOS, or the element rubber-banding past an edge), `getVirtualItems()` and `getTotalSize()` describe what is rendered, shifted by the held amount so the rows on screen do not move, while `scrollOffset` keeps the layout position. The hold ends with a single write once the element can take it. Prefer `getVirtualItems()` positions over `item.start - scrollOffset` for where a row sits in the viewport, since that difference is off by the held amount for the length of the gesture or bounce.

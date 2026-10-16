@@ -1,6 +1,6 @@
 # Hotkeys — Default options
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 ## Default options
 
@@ -12,8 +12,9 @@ When you register a hotkey without passing options, or when you omit specific op
   preventDefault: true,
   stopPropagation: true,
   eventType: 'keydown',
+  capture: false,
   requireReset: false,
-  ignoreInputs: undefined, // smart default: false for Mod+S, true for single keys
+  ignoreInputs: 'auto', // false for Mod+S and Escape, true for single keys
   platform: undefined, // auto-detected
   conflictBehavior: 'warn',
 })

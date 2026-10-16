@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -14,8 +14,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Logical keys and physical positions](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--basic-usage.md) — 2 KiB
 - [Updating options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--updating-options.md) — 1 KiB
+- [Capture phase](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--capture-phase.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--default-options.md) — 3 KiB
-- [Hotkey options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--hotkey-options.md) — 4 KiB
+- [Hotkey options](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--hotkey-options.md) — 5 KiB
 - [Stale closure prevention](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--stale-closure-prevention.md) — 1 KiB
 - [Automatic cleanup](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--automatic-cleanup.md) — 1 KiB
 - [Registering multiple hotkeys](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--registering-multiple-hotkeys.md) — 3 KiB
@@ -28,6 +29,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="basic-usage"></a>
 <a id="changing-a-binding"></a>
 <a id="updating-options"></a>
+<a id="capture-phase"></a>
 <a id="default-options"></a>
 <a id="why-these-defaults"></a>
 <a id="smart-input-handling-with-ignoreinputs"></a>

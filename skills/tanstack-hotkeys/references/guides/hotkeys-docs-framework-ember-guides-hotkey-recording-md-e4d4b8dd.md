@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 

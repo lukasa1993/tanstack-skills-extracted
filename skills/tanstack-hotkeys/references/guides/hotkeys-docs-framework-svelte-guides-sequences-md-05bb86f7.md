@@ -2,9 +2,12 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
+
+> [!IMPORTANT]
+> `createHotkeySequence`, `createHotkeySequences`, and `createHotkeySequenceRecorder` were removed in `@tanstack/svelte-hotkeys` v0.14.0. Pass a sequence to `createHotkey` or `createHotkeys` instead, and record one with `createHotkeyRecorder` and `maxSteps`.
 
 A sequence is a hotkey made of chords pressed one after another rather than together. Think Vim-style navigation, cheat codes, or multi-step commands. Sequences are ordinary hotkeys: register them with `createHotkey` and `createHotkeys`, list them with `getHotkeyRegistrations`, record them with `createHotkeyRecorder`, and format them with `formatForDisplay`.
 
@@ -75,6 +78,10 @@ createHotkey(['G', 'G'], () => scrollToTop(), () => ({
   meta: { name: 'Go to top', description: 'Scroll to the top of the page' },
 }))
 ```
+
+## Capture phase
+
+Sequences accept `capture: true` with the same [event propagation behavior as chords](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md). The default is `false`. Each step is matched in the selected phase, but `preventDefault` and `stopPropagation` apply only when the full sequence completes. Earlier steps still reach descendant widgets. Changing `capture` preserves partial progress and the existing timeout.
 
 ## Sequences with modifiers
 

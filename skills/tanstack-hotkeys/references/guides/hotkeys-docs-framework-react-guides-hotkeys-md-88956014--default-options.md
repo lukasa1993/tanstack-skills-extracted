@@ -1,6 +1,6 @@
 # Hotkeys — Default options
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 ## Default options
 
@@ -12,9 +12,10 @@ useHotkey('Mod+S', callback, {
   preventDefault: true,
   stopPropagation: true,
   eventType: 'keydown',
+  capture: false,
   requireReset: false, // chords only
   timeout: 1000, // sequences only
-  ignoreInputs: undefined, // smart default: false for Mod+S, true for single keys
+  ignoreInputs: 'auto', // false for Mod+S and Escape, true for single keys
   target: document,
   platform: undefined, // auto-detected
   conflictBehavior: 'warn',
@@ -27,7 +28,7 @@ Most hotkey registrations exist to override the browser. When you bind `Mod+S` t
 
 #### Smart input handling with `ignoreInputs`
 
-By default, `Ctrl`/`Meta` shortcuts (like `Mod+S`) and `Escape` fire even while focus is inside a text field or textarea, so save and close work wherever the user happens to be. Single keys and `Shift`/`Alt` combos are ignored inside non-button inputs, because those are just typing. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) don't block any hotkeys.
+By default, `Ctrl`/`Meta` shortcuts (like `Mod+S`) and `Escape` fire even while focus is inside a text field or textarea, so save and close work wherever the user happens to be. Single keys and `Shift`/`Alt` combos are ignored inside non-button inputs, because those are just typing. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) allow unrelated shortcuts while preserving their native activation keys.
 
 #### Hotkey conflicts and `conflictBehavior`
 

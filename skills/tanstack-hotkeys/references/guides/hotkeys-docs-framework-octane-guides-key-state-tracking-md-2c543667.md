@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -104,6 +104,8 @@ macOS can swallow the keyup event for a non-modifier while a modifier is held. T
 
 The tracker clears held keys when the browser window loses focus. Keys released while another window is active therefore do not remain stuck in the UI.
 
+If the system swallows a modifier's release without taking focus, such as Command+Shift+4 on macOS, the tracker releases the modifier on the next key press, mouse movement, or click. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
+
 ## Under the hood
 
 The hooks subscribe to `KeyStateTracker` through `@tanstack/octane-store`. The shared tracker manages keyboard listeners and exposes imperative queries.
@@ -115,4 +117,4 @@ tracker.isAnyKeyHeld(['Shift', 'Control'])
 tracker.areAllKeysHeld(['Shift', 'Control'])
 ```
 
-Try [useHeldKeys](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/octane/useHeldKeys), [useKeyHold](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/octane/useKeyHold), and the [kitchen sink](https://github.com/TanStack/hotkeys/tree/72f5d4ce8e7a0f1c9593a614fc3482dd0c3da393/examples/octane/kitchen-sink).
+Try [useHeldKeys](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/octane/useHeldKeys), [useKeyHold](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/octane/useKeyHold), and the [kitchen sink](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/octane/kitchen-sink).

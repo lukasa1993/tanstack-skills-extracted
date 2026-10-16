@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -15,8 +15,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Logical keys and physical positions](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--basic-usage.md) — 2 KiB
 - [Property getters](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--property-getters.md) — 2 KiB
+- [Capture phase](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--capture-phase.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--default-options.md) — 2 KiB
-- [Hotkey options](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--hotkey-options.md) — 4 KiB
+- [Hotkey options](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--hotkey-options.md) — 5 KiB
 - [Automatic cleanup](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--automatic-cleanup.md) — 1 KiB
 - [Multiple hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--multiple-hotkeys.md) — 1 KiB
 - [Choosing between decorator and controller](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--choosing-between-decorator-and-controller.md) — 1 KiB
@@ -32,6 +33,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="the-hotkeycontroller"></a>
 <a id="changing-a-binding"></a>
 <a id="property-getters"></a>
+<a id="capture-phase"></a>
 <a id="default-options"></a>
 <a id="why-these-defaults"></a>
 <a id="smart-input-handling-ignoreinputs"></a>

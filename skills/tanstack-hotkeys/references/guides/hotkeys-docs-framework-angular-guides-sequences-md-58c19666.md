@@ -2,9 +2,12 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
+
+> [!IMPORTANT]
+> `injectHotkeySequence`, `injectHotkeySequences`, and `injectHotkeySequenceRecorder` were removed in `@tanstack/angular-hotkeys` v0.14.0. Pass a sequence to `injectHotkey` or `injectHotkeys` instead, and record one with `injectHotkeyRecorder` and `maxSteps`.
 
 A sequence is a hotkey made of chords pressed one after another rather than together. Think Vim-style navigation, cheat codes, or multi-step commands. Sequences are ordinary hotkeys: register them with `injectHotkey` and `injectHotkeys`, list them with `injectHotkeyRegistrations`, record them with `injectHotkeyRecorder`, and format them with `formatForDisplay`.
 
@@ -81,6 +84,10 @@ injectHotkey(['G', 'G'], () => this.scrollToTop(), () => ({
   meta: { name: 'Go to top', description: 'Scroll to the top of the page' },
 }))
 ```
+
+## Capture phase
+
+Sequences accept `capture: true` with the same [event propagation behavior as chords](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md). The default is `false`. Each step is matched in the selected phase, but `preventDefault` and `stopPropagation` apply only when the full sequence completes. Earlier steps still reach descendant widgets. Changing `capture` preserves partial progress and the existing timeout.
 
 ## Sequences with modifiers
 

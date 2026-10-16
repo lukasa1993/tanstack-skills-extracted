@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.12.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -15,6 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Logical keys and physical positions](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--logical-keys-and-physical-positions.md) — 2 KiB
 - [Basic usage](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--basic-usage.md) — 2 KiB
 - [Updating options](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--updating-options.md) — 1 KiB
+- [Capture phase](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--capture-phase.md) — 1 KiB
 - [Default options](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--default-options.md) — 2 KiB
 - [Hotkey options](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-options.md) — 3 KiB
 - [Current callbacks and automatic cleanup](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--current-callbacks-and-automatic-cleanup.md) — 1 KiB
@@ -31,6 +32,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="raw-object-bindings"></a>
 <a id="changing-a-binding"></a>
 <a id="updating-options"></a>
+<a id="capture-phase"></a>
 <a id="default-options"></a>
 <a id="smart-input-handling"></a>
 <a id="shared-default-options"></a>
