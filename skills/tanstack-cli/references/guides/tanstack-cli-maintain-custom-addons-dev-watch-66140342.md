@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-cli-maintain-custom-addons-dev-watch"></a>
 
-Published skill · `@tanstack/cli@0.71.1`.
+Published skill · `@tanstack/cli@0.72.0`.
 
 [Topic index](../addon-authoring.md) · [Source provenance](../SOURCES.md)
 

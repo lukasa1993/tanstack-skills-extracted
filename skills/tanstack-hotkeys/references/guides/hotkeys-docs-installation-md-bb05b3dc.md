@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -36,11 +36,11 @@ Start with the [Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91
 
 # Preact
 
-Start with the [API reference](https://github.com/TanStack/hotkeys/blob/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/docs/framework/preact/reference/index.md) and [guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+Start with the [API reference](https://github.com/TanStack/hotkeys/blob/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/docs/framework/preact/reference/index.md) and [guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). If you want the integrated devtools panel, also install:
 
 # Solid
 
-Start with the [API reference](https://github.com/TanStack/hotkeys/blob/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/docs/framework/solid/reference/index.md) and [guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+Start with the [API reference](https://github.com/TanStack/hotkeys/blob/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/docs/framework/solid/reference/index.md) and [guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). If you want the integrated devtools panel, also install:
 
 # Angular
 

@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-api-virtualizer-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.5`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.6`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -26,7 +26,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Optional Options: `getItemKey`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-getitemkey.md) — 1 KiB
 - [Optional Options: `rangeExtractor`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-rangeextractor.md) — 1 KiB
 - [Optional Options: `scrollToFn`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrolltofn.md) — 2 KiB
-- [Optional Options: `observeElementRect`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-observeelementrect.md) — 1 KiB
+- [Optional Options: `observeElementRect`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-observeelementrect.md) — 2 KiB
 - [Optional Options: `observeElementOffset`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-observeelementoffset.md) — 1 KiB
 - [Optional Options: `measureElement`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-measureelement.md) — 1 KiB
 - [Optional Options: `scrollMargin`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollmargin.md) — 2 KiB

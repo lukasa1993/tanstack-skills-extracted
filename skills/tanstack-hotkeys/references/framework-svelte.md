@@ -6,10 +6,10 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [App Hotkeys](./guides/hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
-| [Formatting Display](./guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
-| [Hotkey Recording](./guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
-| [Hotkeys](./guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
-| [Key State Tracking](./guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
-| [Sequences](./guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
-| [Quick Start](./guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md) | Release-matched documentation | `@tanstack/hotkeys@0.14.0` |
+| [App Hotkeys](./guides/hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |
+| [Formatting Display](./guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |
+| [Hotkey Recording](./guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |
+| [Hotkeys](./guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |
+| [Key State Tracking](./guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |
+| [Sequences](./guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |
+| [Quick Start](./guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md) | Release-matched documentation | `@tanstack/hotkeys@0.15.1` |

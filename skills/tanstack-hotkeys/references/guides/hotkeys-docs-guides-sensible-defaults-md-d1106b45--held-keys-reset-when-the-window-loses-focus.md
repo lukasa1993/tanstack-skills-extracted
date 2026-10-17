@@ -1,6 +1,6 @@
 # Sensible Defaults — Held keys reset when the window loses focus
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 
 ## Held keys reset when the window loses focus
 

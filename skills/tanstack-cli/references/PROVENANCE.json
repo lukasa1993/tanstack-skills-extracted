@@ -8,45 +8,45 @@
       "kind": "atomic",
       "theme": "projects-addons",
       "package": "@tanstack/cli",
-      "version": "0.71.1",
+      "version": "0.72.0",
       "sourcePath": "add-addons-existing-app",
-      "sha256": "a2848ce3e2fa4894494b81673e4462b845f61bdc1a137d5ae8792ab00d57a1c5"
+      "sha256": "48185b490361874b867c651111b0b479105de5b3b151a9b9bac1cf568dd94f33"
     },
     {
       "id": "tanstack-cli-create-app-scaffold",
       "kind": "atomic",
       "theme": "projects-addons",
       "package": "@tanstack/cli",
-      "version": "0.71.1",
+      "version": "0.72.0",
       "sourcePath": "create-app-scaffold",
-      "sha256": "0d0d5d7ff1e7b8e7cce2793a51fa6f1d80b7b53c534bca4cc82605116aae27e0"
+      "sha256": "1596a83a8368d0b2e06a0901197958e5369632d4d4015b818f0d71febd638479"
     },
     {
       "id": "tanstack-cli-choose-ecosystem-integrations",
       "kind": "atomic",
       "theme": "ecosystem-discovery",
       "package": "@tanstack/cli",
-      "version": "0.71.1",
+      "version": "0.72.0",
       "sourcePath": "choose-ecosystem-integrations",
-      "sha256": "3a19dcfea432473862885b87309a07f5365d56f0303c61626e3735856ff55a9d"
+      "sha256": "54a333180ffcd1307ef0f476c18d19bdd03043cdf9c58e0452872aaf1c41866a"
     },
     {
       "id": "tanstack-cli-query-docs-library-metadata",
       "kind": "atomic",
       "theme": "ecosystem-discovery",
       "package": "@tanstack/cli",
-      "version": "0.71.1",
+      "version": "0.72.0",
       "sourcePath": "query-docs-library-metadata",
-      "sha256": "1a145b1ea16fcd64e944a1265ad5edbe98297141be6bbdecf21dcc7e0950fc1a"
+      "sha256": "d0f696b9432070a3fd81daf75c7cbac20c380bd6b5cdf3dabf3dfb2324f0c2f2"
     },
     {
       "id": "tanstack-cli-maintain-custom-addons-dev-watch",
       "kind": "atomic",
       "theme": "addon-authoring",
       "package": "@tanstack/cli",
-      "version": "0.71.1",
+      "version": "0.72.0",
       "sourcePath": "maintain-custom-addons-dev-watch",
-      "sha256": "cc153c3c1b845bba3e97ce927490ff6d1a60fd402a5b5567bb1ec726063dc107"
+      "sha256": "49a703569236439acb42c6ab8c99ecfe57b49a357ae4d575cb4500e53c8e1044"
     }
   ],
   "duplicateDocuments": [],

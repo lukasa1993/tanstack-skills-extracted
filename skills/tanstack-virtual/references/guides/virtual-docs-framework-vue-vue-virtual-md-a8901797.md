@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-framework-vue-vue-virtual-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.5`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.6`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

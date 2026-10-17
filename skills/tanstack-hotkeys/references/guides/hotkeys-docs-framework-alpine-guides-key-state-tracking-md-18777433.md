@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-key-state-tracking-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -127,4 +127,4 @@ tracker.isAnyKeyHeld(['Shift', 'Control'])
 tracker.areAllKeysHeld(['Shift', 'Control'])
 ```
 
-Try [createHeldKeys](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/alpine/createHeldKeys), [createKeyHold](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/alpine/createKeyHold), and the [kitchen sink](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/alpine/kitchen-sink).
+Try [createHeldKeys](https://github.com/TanStack/hotkeys/tree/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/examples/alpine/createHeldKeys), [createKeyHold](https://github.com/TanStack/hotkeys/tree/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/examples/alpine/createKeyHold), and the [kitchen sink](https://github.com/TanStack/hotkeys/tree/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/examples/alpine/kitchen-sink).

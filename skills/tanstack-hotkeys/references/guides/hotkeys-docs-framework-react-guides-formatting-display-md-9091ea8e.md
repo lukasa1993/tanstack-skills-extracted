@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -116,4 +116,4 @@ Parsed modifiers are already resolved. To display a portable `Mod` binding on an
 
 Use `validateHotkey` when accepting a chord or sequence from an external source. It returns `valid`, `errors`, and `warnings`, and names the failing step of a sequence; it does not guarantee that a browser or operating system will deliver the shortcut. Recorder validation and live conflict checks are covered in the [recording guide](./hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md#source-hotkeys-docs-framework-react-guides-hotkey-recording-md).
 
-Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/vanilla/formatForDisplay).
+Try these options together in the [vanilla formatter playground](https://github.com/TanStack/hotkeys/tree/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/examples/vanilla/formatForDisplay).

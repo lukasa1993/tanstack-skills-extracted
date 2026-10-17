@@ -1,13 +1,13 @@
 ---
 name: tanstack-cli-create-app-scaffold
-description: "Scaffold a TanStack app with tanstack create using --framework, --template, --toolchain, --deployment, --add-ons, --blank, and --router-only. Covers flag compatibility, non-interactive defaults, and intent-preserving command construction."
+description: "Scaffold a TanStack app with tanstack create using --framework, --build-tool, --template, --toolchain, --deployment, --add-ons, --blank, and --router-only. Covers flag compatibility, non-interactive defaults, and intent-preserving command construction."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "tanstack-cli"
-  tanstack-library-version: "0.70.0"
+  tanstack-library-version: "0.71.0"
   tanstack-package: "@tanstack/cli"
-  tanstack-package-version: "0.71.1"
+  tanstack-package-version: "0.72.0"
   tanstack-source-skill: "create-app-scaffold"
   tanstack-type: "core"
 ---
@@ -28,6 +28,19 @@ npx @tanstack/cli create acme-web \
 ```
 
 ## Core Patterns
+
+### Choose Vite or Rsbuild explicitly
+
+Vite is the default. Use Rsbuild for React or Solid when the requested project
+fits its initial compatibility surface.
+
+```bash
+npx @tanstack/cli create acme-web \
+  --framework react \
+  --build-tool rsbuild \
+  --toolchain biome \
+  -y
+```
 
 ### Build a deterministic non-interactive scaffold
 
@@ -163,5 +176,6 @@ See also: ../tanstack-cli-query-docs-library-metadata/SKILL.md § Common Mistake
 
 - [Create flag compatibility matrix](./references/create-flag-compatibility-matrix.md)
 - [Framework adapter options](./references/framework-adapters.md)
+- [Build tool options](./references/bundlers.md)
 - [Deployment provider options](./references/deployment-providers.md)
 - [Toolchain options](./references/toolchains.md)

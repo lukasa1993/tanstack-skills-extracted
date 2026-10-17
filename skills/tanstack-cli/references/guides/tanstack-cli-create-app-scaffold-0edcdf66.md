@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-cli-create-app-scaffold"></a>
 
-Published skill · `@tanstack/cli@0.71.1`.
+Published skill · `@tanstack/cli@0.72.0`.
 
 [Topic index](../projects-addons.md) · [Source provenance](../SOURCES.md)
 
@@ -22,6 +22,19 @@ npx @tanstack/cli create acme-web \
 ```
 
 ## Core Patterns
+
+### Choose Vite or Rsbuild explicitly
+
+Vite is the default. Use Rsbuild for React or Solid when the requested project
+fits its initial compatibility surface.
+
+```bash
+npx @tanstack/cli create acme-web \
+  --framework react \
+  --build-tool rsbuild \
+  --toolchain biome \
+  -y
+```
 
 ### Build a deterministic non-interactive scaffold
 
@@ -157,5 +170,6 @@ See also: ./tanstack-cli-query-docs-library-metadata-bf917a48.md#source-tanstack
 
 - [Create flag compatibility matrix](../assets/tanstack-cli-create-app-scaffold/references/create-flag-compatibility-matrix.md)
 - [Framework adapter options](../assets/tanstack-cli-create-app-scaffold/references/framework-adapters.md)
+- [Build tool options](../assets/tanstack-cli-create-app-scaffold/references/bundlers.md)
 - [Deployment provider options](../assets/tanstack-cli-create-app-scaffold/references/deployment-providers.md)
 - [Toolchain options](../assets/tanstack-cli-create-app-scaffold/references/toolchains.md)

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.62.1"
   tanstack-package: "@tanstack/cli"
-  tanstack-package-version: "0.71.1"
+  tanstack-package-version: "0.72.0"
   tanstack-source-skill: "query-docs-library-metadata"
   tanstack-type: "core"
 ---

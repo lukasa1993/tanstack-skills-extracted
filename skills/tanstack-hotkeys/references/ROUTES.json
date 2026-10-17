@@ -12,7 +12,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md",
       "sourcePath": "docs/framework/alpine/guides/app-hotkeys.md",
       "bytes": 8898,
@@ -36,7 +36,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md",
       "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
       "bytes": 6288,
@@ -60,7 +60,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-recording-md-de504409.md",
       "sourcePath": "docs/framework/alpine/guides/hotkey-recording.md",
       "bytes": 10613,
@@ -84,7 +84,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md",
       "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
       "bytes": 2741,
@@ -168,7 +168,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-key-state-tracking-md-18777433.md",
       "sourcePath": "docs/framework/alpine/guides/key-state-tracking.md",
       "bytes": 6073,
@@ -192,16 +192,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
       "sourcePath": "docs/framework/alpine/guides/sequences.md",
-      "bytes": 7304,
+      "bytes": 7940,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
-          "bytes": 7304
+          "bytes": 7940
         }
       ],
       "examples": []
@@ -216,7 +216,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-quick-start-md-3845b066.md",
       "sourcePath": "docs/framework/alpine/quick-start.md",
       "bytes": 7901,
@@ -240,7 +240,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md",
       "sourcePath": "docs/framework/ember/guides/app-hotkeys.md",
       "bytes": 8965,
@@ -264,7 +264,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md",
       "sourcePath": "docs/framework/ember/guides/formatting-display.md",
       "bytes": 6282,
@@ -288,7 +288,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md",
       "sourcePath": "docs/framework/ember/guides/hotkey-recording.md",
       "bytes": 11203,
@@ -312,7 +312,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md",
       "sourcePath": "docs/framework/ember/guides/hotkeys.md",
       "bytes": 2726,
@@ -396,7 +396,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md",
       "sourcePath": "docs/framework/ember/guides/key-state-tracking.md",
       "bytes": 5991,
@@ -420,16 +420,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
       "sourcePath": "docs/framework/ember/guides/sequences.md",
-      "bytes": 7551,
+      "bytes": 8187,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
-          "bytes": 7551
+          "bytes": 8187
         }
       ],
       "examples": []
@@ -444,7 +444,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md",
       "sourcePath": "docs/framework/ember/quick-start.md",
       "bytes": 7372,
@@ -468,7 +468,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-app-hotkeys-md-ade4f49f.md",
       "sourcePath": "docs/framework/octane/guides/app-hotkeys.md",
       "bytes": 8234,
@@ -492,7 +492,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md",
       "sourcePath": "docs/framework/octane/guides/formatting-display.md",
       "bytes": 6288,
@@ -516,7 +516,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-recording-md-e248b1bd.md",
       "sourcePath": "docs/framework/octane/guides/hotkey-recording.md",
       "bytes": 10342,
@@ -540,7 +540,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md",
       "sourcePath": "docs/framework/octane/guides/hotkeys.md",
       "bytes": 2741,
@@ -624,7 +624,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-key-state-tracking-md-2c543667.md",
       "sourcePath": "docs/framework/octane/guides/key-state-tracking.md",
       "bytes": 5498,
@@ -648,16 +648,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
       "sourcePath": "docs/framework/octane/guides/sequences.md",
-      "bytes": 6953,
+      "bytes": 7589,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
-          "bytes": 6953
+          "bytes": 7589
         }
       ],
       "examples": []
@@ -672,7 +672,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md",
       "sourcePath": "docs/framework/octane/quick-start.md",
       "bytes": 6213,
@@ -694,16 +694,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
       "sourcePath": "docs/devtools.md",
-      "bytes": 10335,
+      "bytes": 10921,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Features; Installation; Setup; Standalone panel; Production builds",
           "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
-          "bytes": 10335
+          "bytes": 10921
         }
       ],
       "examples": []
@@ -716,7 +716,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
       "sourcePath": "docs/installation.md",
       "bytes": 6419,
@@ -738,7 +738,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
       "sourcePath": "docs/overview.md",
       "bytes": 6880,
@@ -762,7 +762,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md",
       "sourcePath": "docs/framework/react/guides/app-hotkeys.md",
       "bytes": 8718,
@@ -786,7 +786,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
       "sourcePath": "docs/framework/react/guides/formatting-display.md",
       "bytes": 6282,
@@ -810,7 +810,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-recording-md-893a8184.md",
       "sourcePath": "docs/framework/react/guides/hotkey-recording.md",
       "bytes": 12613,
@@ -834,7 +834,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
       "sourcePath": "docs/framework/react/guides/hotkeys.md",
       "bytes": 2929,
@@ -918,7 +918,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-key-state-tracking-md-f6c8e6ae.md",
       "sourcePath": "docs/framework/react/guides/key-state-tracking.md",
       "bytes": 8508,
@@ -942,16 +942,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
       "sourcePath": "docs/framework/react/guides/sequences.md",
-      "bytes": 7774,
+      "bytes": 8410,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Common sequence patterns; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
-          "bytes": 7774
+          "bytes": 8410
         }
       ],
       "examples": []
@@ -966,16 +966,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
       "sourcePath": "docs/framework/react/quick-start.md",
-      "bytes": 6327,
+      "bytes": 6443,
       "prerequisites": [],
       "sections": [
         {
           "title": "Installation; Your first hotkey; Common patterns; Setting up devtools; Declaring app hotkeys; Default options provider; Next steps",
           "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
-          "bytes": 6327
+          "bytes": 6443
         }
       ],
       "examples": []
@@ -990,7 +990,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-app-hotkeys-md-426d55b2.md",
       "sourcePath": "docs/framework/preact/guides/app-hotkeys.md",
       "bytes": 8731,
@@ -1014,7 +1014,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
       "sourcePath": "docs/framework/preact/guides/formatting-display.md",
       "bytes": 6288,
@@ -1038,7 +1038,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-recording-md-bc7de16f.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-recording.md",
       "bytes": 12634,
@@ -1062,7 +1062,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys.md",
       "bytes": 2944,
@@ -1146,7 +1146,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-key-state-tracking-md-ba04b9a5.md",
       "sourcePath": "docs/framework/preact/guides/key-state-tracking.md",
       "bytes": 8539,
@@ -1170,16 +1170,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
       "sourcePath": "docs/framework/preact/guides/sequences.md",
-      "bytes": 7787,
+      "bytes": 8423,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Common sequence patterns; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
-          "bytes": 7787
+          "bytes": 8423
         }
       ],
       "examples": []
@@ -1194,16 +1194,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md",
       "sourcePath": "docs/framework/preact/quick-start.md",
-      "bytes": 6360,
+      "bytes": 6476,
       "prerequisites": [],
       "sections": [
         {
           "title": "Installation; Your first hotkey; Common patterns; Setting up devtools; Declaring app hotkeys; Default options provider; Next steps",
           "file": "references/guides/hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md",
-          "bytes": 6360
+          "bytes": 6476
         }
       ],
       "examples": []
@@ -1218,7 +1218,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md",
       "sourcePath": "docs/framework/solid/guides/app-hotkeys.md",
       "bytes": 8547,
@@ -1242,7 +1242,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
       "sourcePath": "docs/framework/solid/guides/formatting-display.md",
       "bytes": 6282,
@@ -1266,7 +1266,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-recording-md-3f431779.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-recording.md",
       "bytes": 10729,
@@ -1290,7 +1290,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys.md",
       "bytes": 3189,
@@ -1384,7 +1384,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-key-state-tracking-md-92176d1e.md",
       "sourcePath": "docs/framework/solid/guides/key-state-tracking.md",
       "bytes": 6505,
@@ -1408,16 +1408,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
       "sourcePath": "docs/framework/solid/guides/sequences.md",
-      "bytes": 7054,
+      "bytes": 7690,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
-          "bytes": 7054
+          "bytes": 7690
         }
       ],
       "examples": []
@@ -1432,7 +1432,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md",
       "sourcePath": "docs/framework/solid/quick-start.md",
       "bytes": 5309,
@@ -1456,7 +1456,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md",
       "sourcePath": "docs/framework/svelte/guides/app-hotkeys.md",
       "bytes": 8534,
@@ -1480,7 +1480,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
       "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
       "bytes": 6288,
@@ -1504,7 +1504,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-recording-md-aeedab30.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-recording.md",
       "bytes": 10486,
@@ -1528,7 +1528,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
       "bytes": 12690,
@@ -1552,7 +1552,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-key-state-tracking-md-e34201a2.md",
       "sourcePath": "docs/framework/svelte/guides/key-state-tracking.md",
       "bytes": 3070,
@@ -1576,16 +1576,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
       "sourcePath": "docs/framework/svelte/guides/sequences.md",
-      "bytes": 7069,
+      "bytes": 7705,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
-          "bytes": 7069
+          "bytes": 7705
         }
       ],
       "examples": []
@@ -1600,7 +1600,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "bytes": 5378,
@@ -1624,7 +1624,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md",
       "sourcePath": "docs/framework/vue/guides/app-hotkeys.md",
       "bytes": 8740,
@@ -1648,7 +1648,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
       "sourcePath": "docs/framework/vue/guides/formatting-display.md",
       "bytes": 6270,
@@ -1672,7 +1672,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-recording.md",
       "bytes": 10606,
@@ -1696,7 +1696,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys.md",
       "bytes": 12222,
@@ -1720,7 +1720,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md",
       "sourcePath": "docs/framework/vue/guides/key-state-tracking.md",
       "bytes": 3070,
@@ -1744,16 +1744,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
       "sourcePath": "docs/framework/vue/guides/sequences.md",
-      "bytes": 7003,
+      "bytes": 7639,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
-          "bytes": 7003
+          "bytes": 7639
         }
       ],
       "examples": []
@@ -1768,7 +1768,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
       "bytes": 4841,
@@ -1792,7 +1792,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md",
       "sourcePath": "docs/framework/angular/guides/app-hotkeys.md",
       "bytes": 9026,
@@ -1816,7 +1816,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
       "sourcePath": "docs/framework/angular/guides/formatting-display.md",
       "bytes": 6294,
@@ -1840,7 +1840,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-recording-md-e1359976.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-recording.md",
       "bytes": 11019,
@@ -1864,7 +1864,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
       "sourcePath": "docs/framework/angular/guides/hotkeys.md",
       "bytes": 13102,
@@ -1888,7 +1888,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-key-state-tracking-md-d2b8864f.md",
       "sourcePath": "docs/framework/angular/guides/key-state-tracking.md",
       "bytes": 3160,
@@ -1912,16 +1912,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
       "sourcePath": "docs/framework/angular/guides/sequences.md",
-      "bytes": 7306,
+      "bytes": 7942,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
-          "bytes": 7306
+          "bytes": 7942
         }
       ],
       "examples": []
@@ -1936,7 +1936,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
       "bytes": 5723,
@@ -1960,7 +1960,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md",
       "sourcePath": "docs/framework/lit/guides/app-hotkeys.md",
       "bytes": 8828,
@@ -1984,7 +1984,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
       "sourcePath": "docs/framework/lit/guides/formatting-display.md",
       "bytes": 6270,
@@ -2008,7 +2008,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-recording.md",
       "bytes": 11057,
@@ -2032,7 +2032,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
       "sourcePath": "docs/framework/lit/guides/hotkeys.md",
       "bytes": 2954,
@@ -2121,7 +2121,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md",
       "sourcePath": "docs/framework/lit/guides/key-state-tracking.md",
       "bytes": 8250,
@@ -2145,16 +2145,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
       "sourcePath": "docs/framework/lit/guides/sequences.md",
-      "bytes": 7113,
+      "bytes": 7749,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Basic usage; Many sequences at once; Sequence options; Capture phase; Sequences with modifiers; Vim-style navigation; Displaying sequences; How sequences work; Standalone matching",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
-          "bytes": 7113
+          "bytes": 7749
         }
       ],
       "examples": []
@@ -2169,7 +2169,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
       "bytes": 8630,
@@ -2191,7 +2191,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.14.0",
+      "version": "0.15.1",
       "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45.md",
       "sourcePath": "docs/guides/sensible-defaults.md",
       "bytes": 3654,

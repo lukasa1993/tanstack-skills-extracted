@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -148,11 +148,14 @@ Add the TanStack Devtools to your app to inspect registered hotkeys, view held k
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { hotkeysDevtoolsPlugin } from '@tanstack/react-hotkeys-devtools'
 
+// Create the plugins once; a new array on every render remounts the panel
+const devtoolsPlugins = [hotkeysDevtoolsPlugin()]
+
 function App() {
   return (
     <div>
       {/* Your app */}
-      <TanStackDevtools plugins={[hotkeysDevtoolsPlugin()]} />
+      <TanStackDevtools plugins={devtoolsPlugins} />
     </div>
   )
 }

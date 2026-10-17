@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.14.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -136,5 +136,5 @@ To list every hotkey in a cheat sheet, including hotkeys whose components haven'
 - [Hotkey recording](./hotkeys-docs-framework-octane-guides-hotkey-recording-md-e248b1bd.md#source-hotkeys-docs-framework-octane-guides-hotkey-recording-md)
 - [Key state tracking](./hotkeys-docs-framework-octane-guides-key-state-tracking-md-2c543667.md#source-hotkeys-docs-framework-octane-guides-key-state-tracking-md)
 - [Formatting and display](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md#source-hotkeys-docs-framework-octane-guides-formatting-display-md)
-- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/examples/octane/kitchen-sink)
-- [API reference](https://github.com/TanStack/hotkeys/blob/5ce675b3ccced6ec5ac940ba5a66bff85350bf4c/docs/framework/octane/reference/index.md)
+- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/examples/octane/kitchen-sink)
+- [API reference](https://github.com/TanStack/hotkeys/blob/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/docs/framework/octane/reference/index.md)
