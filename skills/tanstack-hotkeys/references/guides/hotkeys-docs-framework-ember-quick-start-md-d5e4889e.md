@@ -2,157 +2,255 @@
 
 <a id="source-hotkeys-docs-framework-ember-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
-Install `@tanstack/ember-hotkeys` with the [installation instructions](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md). This guide builds a save shortcut and shows the component lifecycle used by the other APIs.
+This guide adds keyboard shortcuts to Ember components. If you haven't installed TanStack Hotkeys yet, see [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md).
 
-## Your first hotkey
+## Register a hotkey
 
-Use a strict-mode `.gts` component. Import the template helper into that file.
+TanStack Hotkeys needs no special setup. To register a keyboard shortcut, import the `useHotkey` helper into a strict-mode `.gts` component and invoke it in the template:
 
 ```gts
 import Component from '@glimmer/component'
-import { tracked } from '@glimmer/tracking'
-import { on } from '@ember/modifier'
-import { useHotkey, formatForDisplay } from '@tanstack/ember-hotkeys'
+import { useHotkey } from '@tanstack/ember-hotkeys'
 
 export default class Editor extends Component {
-	@tracked count = 0
-	@tracked enabled = true
-	save = () => this.count++
-	toggle = () => { this.enabled = !this.enabled }
-	label = formatForDisplay('Mod+S')
-
-	<template>
-		{{useHotkey 'Mod+S' this.save enabled=this.enabled}}
-		<button type="button" {{on 'click' this.toggle}}>Toggle shortcut</button>
-		<p>Press <kbd>{{this.label}}</kbd>. Saved {{this.count}} times.</p>
-	</template>
-}
-```
-
-Press Command+S on macOS or Control+S on Windows and Linux. The count increases and the browser save dialog is prevented. The toggle disables execution while preserving the registration.
-
-`Mod` resolves to the primary platform modifier. Use `Mod+[KeyS]` instead when the shortcut must follow the physical S position.
-
-## Registration and cleanup
-
-`useHotkey` and `useHotkeys` are template helpers. Invoke them with `{{...}}`, not as JavaScript hooks. Tracked arguments update registrations after rendering. Removing a helper from the template unregisters its bindings.
-
-State readers and recorders are JavaScript functions. Pass the containing component as their first argument, usually `this`. The adapter releases subscriptions and recorders when that owner is destroyed. State readers expose `.value`; recorder fields and registration arrays are reactive getters. Read those properties in templates or getters instead of destructuring an initial snapshot.
-
-## Common patterns
-
-### Multiple hotkeys
-
-
-```hbs
-{{useHotkey 'Mod+S' this.save}}
-{{useHotkey 'Mod+Z' this.undo}}
-{{useHotkey 'Mod+Shift+Z' this.redo}}
-```
-
-Each registration is independent. For a dynamic list, use `useHotkeys` as shown in the [hotkeys guide](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md).
-
-### Scoped hotkeys
-
-Import `onHotkey` and attach it to the element. It handles registration, reactive options, and cleanup with the element's lifecycle.
-
-```hbs
-<div tabindex="0" {{onHotkey 'Escape' this.close enabled=this.enabled}}>
-	Focus here and press Escape.
-</div>
-```
-
-Use `onHotkeys` for an array of definitions. See the [complete scoped example](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md).
-
-### Conditional hotkeys
-
-
-```hbs
-{{useHotkey 'Mod+S' this.save enabled=this.enabled}}
-```
-
-Use Ember tracked state for the enabled flag.
-
-### Multi-key sequences
-
-
-```hbs
-{{useHotkey (array 'G' 'G') this.goToTop}}
-```
-
-An array of chords registers a sequence. Import `array` from `@ember/helper` and `useHotkey` from `@tanstack/ember-hotkeys`.
-
-Release G between presses. Automatic key repeats do not advance sequences.
-
-### Tracking held keys and displaying hints
-
-
-```gts
-import Component from '@glimmer/component'
-import { useHeldKeys, useHeldKeyCodes, useKeyHold, useHotkeyHint } from '@tanstack/ember-hotkeys'
-
-export default class KeyStatus extends Component {
-	held = useHeldKeys(this)
-	codes = useHeldKeyCodes(this)
-	shift = useKeyHold(this, 'Shift')
-	hint = useHotkeyHint(this, 'Mod+S')
-
-	get keys() { return this.held.value.join(' + ') || 'No keys held' }
-	get shiftCode() { return this.codes.value.Shift ?? 'Not held' }
-
-	<template>
-		<p>{{this.keys}}</p>
-		<p>Shift position: {{this.shiftCode}}</p>
-		{{#if this.shift.value}}<button type="button">Delete permanently</button>{{/if}}
-		{{#if this.hint.value}}<kbd>Save</kbd>{{/if}}
-	</template>
-}
-```
-
-Use `formatForDisplay(binding)` for platform-specific labels. Keep the original binding in state; a display label is not a registration string.
-
-## Shared defaults
-
-Pass defaults to `createHotkeysScope`. The scope accepts `hotkey` and `hotkeyRecorder` options. `requireReset` applies to chords and `timeout` to sequences. Use the returned contextual helpers, modifiers, and recorder factories. Pass the scope through component arguments to share it with descendants; helpers and recorders still clean up with their own owners. Pass a getter for tracked defaults. Call-specific options override scope defaults, and per-definition options override common options. Omitted options use the core defaults.
-
-```gts
-import Component from '@glimmer/component'
-import { tracked } from '@glimmer/tracking'
-import { createHotkeysScope } from '@tanstack/ember-hotkeys'
-
-export default class Editor extends Component {
-  @tracked enabled = true
-  hotkeys = createHotkeysScope(() => ({
-    hotkey: { enabled: this.enabled, requireReset: true },
-    hotkeyRecorder: { ignoreInputs: false, idleTimeoutMs: 2000 },
-  }))
-  save = () => console.log('Saved')
-  next = () => console.log('Next')
+  save = () => saveDocument()
 
   <template>
-    {{this.hotkeys.useHotkey 'Mod+S' this.save}}
-    {{this.hotkeys.useHotkey 'ArrowRight' this.next requireReset=false}}
+    {{useHotkey 'Mod+S' this.save}}
+    <textarea></textarea>
   </template>
 }
 ```
 
-A child can receive this scope as `@hotkeys={{this.hotkeys}}` and call `{{@hotkeys.useHotkey ...}}`. To use recorder defaults, call `this.hotkeys.useHotkeyRecorder(this, options)`. The standalone imports use core defaults. The scope itself owns no registrations and needs no `destroy()` call.
+`useHotkey` is a template helper, not a JavaScript function you call. It registers the hotkey while the helper is rendered.
 
-## Declaring app hotkeys
+`Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
 
-To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `provideAppHotkeys`. See the [App Hotkeys Guide](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md).
+That's all a hotkey needs. Shared defaults, scopes, and the other features later in this guide are optional, so add them as your app grows.
 
-## Examples and next steps
+## Register several hotkeys
 
-- [Hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md)
-- [Sequences](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md)
-- [App hotkeys](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md)
-- [Hotkey recording](./hotkeys-docs-framework-ember-guides-hotkey-recording-md-e4d4b8dd.md#source-hotkeys-docs-framework-ember-guides-hotkey-recording-md)
-- [Key state tracking](./hotkeys-docs-framework-ember-guides-key-state-tracking-md-22346370.md#source-hotkeys-docs-framework-ember-guides-key-state-tracking-md)
-- [Formatting and display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md)
-- [Kitchen sink](https://github.com/TanStack/hotkeys/tree/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/examples/ember/kitchen-sink)
-- [API reference](https://github.com/TanStack/hotkeys/blob/2a5a38a89a05794de7b8bd85c7c57b6607f7e5e5/docs/framework/ember/reference/index.md)
+When a component has more than one hotkey, register them together with the `useHotkeys` helper:
+
+```gts
+import Component from '@glimmer/component'
+import { useHotkeys } from '@tanstack/ember-hotkeys'
+import type { EmberHotkeyDefinition } from '@tanstack/ember-hotkeys'
+
+export default class Editor extends Component {
+  shortcuts: Array<EmberHotkeyDefinition> = [
+    { hotkey: 'Mod+S', callback: () => save() },
+    { hotkey: 'Mod+Z', callback: () => undo() },
+    { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+  ]
+
+  <template>
+    {{useHotkeys this.shortcuts}}
+    <textarea></textarea>
+  </template>
+}
+```
+
+For a list that changes, use a tracked array or a getter, and the helper updates its registrations.
+
+## Sequences
+
+Pass an array of chords to register a sequence, pressed one after another. In a template, build the array with the `array` helper from `@ember/helper`:
+
+```hbs
+{{useHotkey (array 'G' 'G') this.scrollToTop}}
+```
+
+Each step must follow the previous one within a second.
+
+`useHotkeys` accepts chords and sequences in the same array:
+
+```ts
+shortcuts: Array<EmberHotkeyDefinition> = [
+  { hotkey: 'Mod+K', callback: () => openSearch() },
+  { hotkey: ['G', 'H'], callback: () => goHome() },
+  { hotkey: ['G', 'S'], callback: () => goToSettings() },
+]
+```
+
+## Show the shortcut
+
+Label a button or menu item with `formatForDisplay`. Format the same value you register, so the label always matches the binding:
+
+```gts
+import Component from '@glimmer/component'
+import { on } from '@ember/modifier'
+import { formatForDisplay, useHotkey } from '@tanstack/ember-hotkeys'
+import type { HotkeyChord } from '@tanstack/ember-hotkeys'
+
+const saveHotkey: HotkeyChord = 'Mod+S'
+
+export default class SaveButton extends Component {
+  save = () => saveDocument()
+
+  <template>
+    {{useHotkey saveHotkey this.save}}
+    <button type="button" {{on 'click' this.save}}>
+      Save <kbd>{{formatForDisplay saveHotkey}}</kbd>
+    </button>
+  </template>
+}
+```
+
+The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
+
+## Hotkeys follow your components
+
+A hotkey is registered when its helper renders, and unregistered when the helper is removed from the template. Put each hotkey in the component it belongs to, so it is active only while that component is rendered:
+
+```gts
+// settings-dialog.gts
+import Component from '@glimmer/component'
+import { useHotkey } from '@tanstack/ember-hotkeys'
+
+interface SettingsDialogSignature {
+  Args: { onClose: () => void }
+}
+
+export default class SettingsDialog extends Component<SettingsDialogSignature> {
+  <template>
+    {{! Registered only while the dialog is rendered }}
+    {{useHotkey 'Escape' @onClose}}
+    <div role="dialog">...</div>
+  </template>
+}
+```
+
+```gts
+// settings-button.gts
+import Component from '@glimmer/component'
+import { tracked } from '@glimmer/tracking'
+import { on } from '@ember/modifier'
+import SettingsDialog from './settings-dialog'
+
+export default class SettingsButton extends Component {
+  @tracked isOpen = false
+  open = () => (this.isOpen = true)
+  close = () => (this.isOpen = false)
+
+  <template>
+    <button type="button" {{on 'click' this.open}}>Settings</button>
+    {{#if this.isOpen}}
+      <SettingsDialog @onClose={{this.close}} />
+    {{/if}}
+  </template>
+}
+```
+
+For a condition that doesn't match a component, pass `enabled`. Named arguments are options, and tracked values keep them current:
+
+```hbs
+{{useHotkey 'Mod+S' this.save enabled=this.hasUnsavedChanges}}
+```
+
+When a group of hotkeys turns on and off together, put them in a scope instead. See [Add defaults and scopes](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#add-defaults-and-scopes-optional).
+
+## Element hotkeys
+
+A hotkey's default `target` is `document`, so it works wherever focus is on the page. To limit it to one element, attach the `onHotkey` modifier to that element:
+
+```gts
+import Component from '@glimmer/component'
+import { onHotkey } from '@tanstack/ember-hotkeys'
+
+export default class Panel extends Component {
+  close = () => closePanel()
+
+  <template>
+    {{! Fires only while the panel, or something inside it, has focus }}
+    <div tabindex="0" {{onHotkey 'Escape' this.close}}>...</div>
+  </template>
+}
+```
+
+`onHotkeys` does the same for an array of hotkeys. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
+
+## Add defaults and scopes (optional)
+
+So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its helper is rendered.
+
+Ember has no provider, so pass default options to `createHotkeysScope`, and use the helpers and modifiers it returns:
+
+```gts
+import Component from '@glimmer/component'
+import { array } from '@ember/helper'
+import { createHotkeysScope } from '@tanstack/ember-hotkeys'
+
+export default class Editor extends Component {
+  hotkeys = createHotkeysScope({ hotkey: { timeout: 1500 } })
+  scrollToTop = () => window.scrollTo({ top: 0 })
+
+  <template>
+    {{this.hotkeys.useHotkey (array 'G' 'G') this.scrollToTop}}
+  </template>
+}
+```
+
+Pass it to child components, such as `@hotkeys={{this.hotkeys}}`, so they share the same defaults.
+
+Hotkeys can also be grouped into scopes. Every hotkey in a scope turns on and off with it. Make a scope `exclusive`, and while it is active, only its hotkeys work. Use one for dialogs and popups that should own the keyboard.
+
+Activate the scope from the hotkey manager when the component is created, release it when the component is destroyed, and pass `scope` to the hotkeys that belong to it:
+
+```gts
+import Component from '@glimmer/component'
+import { registerDestructor } from '@ember/destroyable'
+import { getHotkeyManager, useHotkeys } from '@tanstack/ember-hotkeys'
+import type Owner from '@ember/owner'
+import type { EmberHotkeyDefinition } from '@tanstack/ember-hotkeys'
+
+interface ConfirmDialogSignature {
+  Args: { onConfirm: () => void; onCancel: () => void }
+}
+
+export default class ConfirmDialog extends Component<ConfirmDialogSignature> {
+  shortcuts: Array<EmberHotkeyDefinition> = [
+    { hotkey: 'Enter', callback: () => this.args.onConfirm() },
+    { hotkey: 'Escape', callback: () => this.args.onCancel() },
+  ]
+
+  constructor(owner: Owner, args: ConfirmDialogSignature['Args']) {
+    super(owner, args)
+    const releaseScope = getHotkeyManager().activateScope('confirm-dialog', {
+      exclusive: true,
+    })
+    registerDestructor(this, releaseScope)
+  }
+
+  <template>
+    {{useHotkeys this.shortcuts scope='confirm-dialog'}}
+    <div role="dialog">...</div>
+  </template>
+}
+```
+
+While the dialog is rendered, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog is removed, they work again.
+
+`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. Despite its name, `createHotkeysScope` only sets defaults for the helpers it returns. It doesn't create or activate a hotkey scope.
+
+## Next steps
+
+Learn more about the basics:
+
+- [Hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md): chords and sequences, options, and element hotkeys
+- [Sequences](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md): Vim-style multi-key shortcuts
+- [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
+- [Formatting & Display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md): labels and keycaps for every platform
+- [Held Key State Helpers](./hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md#source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md): show which keys are held
+- [Hotkey Hints](./hotkeys-docs-framework-ember-guides-hotkey-hints-md-12a744d3.md#source-hotkeys-docs-framework-ember-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+
+As your app grows:
+
+- [App Hotkeys](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
+- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md#source-hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Custom Hotkey Recording](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md#source-hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Manager](./hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md#source-hotkeys-docs-framework-ember-guides-hotkey-manager-md): register and inspect hotkeys outside components

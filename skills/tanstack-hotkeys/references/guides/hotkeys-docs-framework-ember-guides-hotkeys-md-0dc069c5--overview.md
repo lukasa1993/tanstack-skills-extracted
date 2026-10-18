@@ -1,7 +1,5 @@
 # Hotkeys — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
-`useHotkey` registers a shortcut with the shared `HotkeyManager`. `useHotkey` and `useHotkeys` are template helpers. Invoke them with `{{...}}`, not as JavaScript hooks. Tracked arguments update registrations after rendering. Removing a helper from the template unregisters its bindings.
-
-State readers and recorders are JavaScript functions. Pass the containing component as their first argument, usually `this`. The adapter releases subscriptions and recorders when that owner is destroyed. State readers expose `.value`; recorder fields and registration arrays are reactive getters. Read those properties in templates or getters instead of destructuring an initial snapshot.
+The `useHotkey` template helper registers a keyboard shortcut while it is rendered, and `useHotkeys` registers several. The `onHotkey` and `onHotkeys` modifiers do the same for the element they're attached to. All four take the same hotkeys and options. To register hotkeys outside Ember components, use the [hotkey manager](./hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md#source-hotkeys-docs-framework-ember-guides-hotkey-manager-md).

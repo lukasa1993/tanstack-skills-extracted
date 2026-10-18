@@ -1,15 +1,20 @@
 # Hotkeys — Chords and sequences
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Chords and sequences
 
-A hotkey is either a **chord**, keys pressed together such as `'Mod+S'`, or a **sequence**, chords pressed one after another such as `['G', 'G']`. Every API in this guide accepts both, and a one-step array such as `['Mod+S']` is the chord `'Mod+S'`.
+A hotkey is one of two kinds:
 
-```gts
-{{useHotkey 'Mod+S' this.save}}
-{{useHotkey (array 'G' 'G') this.scrollToTop timeout=500}}
-{{useHotkey 'Escape' this.close requireReset=true}}
+- A **chord** is keys pressed together, such as `'Mod+S'`, or a single key, such as `'Escape'`.
+- A **sequence** is chords pressed one after another, such as `['G', 'H']`. Write it as an array of chords. In a template, build the array with the `array` helper from `@ember/helper`.
+
+```hbs
+{{! Mod and K together }}
+{{useHotkey 'Mod+K' this.openSearch}}
+
+{{! G, then H }}
+{{useHotkey (array 'G' 'H') this.goHome}}
 ```
 
-Most options apply to both kinds. `requireReset` applies only to chords and `timeout` only to sequences; an option that doesn't match the hotkey's kind is ignored. In JavaScript, `useHotkeys` definitions are typed by their hotkey, so TypeScript rejects mismatched options there. Defaults apply only to the kinds that support them. See the [Sequences Guide](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md) for timing and matching, and the [App Hotkeys Guide](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md) to declare hotkeys up front and let users customize them.
+Every helper, modifier, and option in this guide accepts both kinds, and most examples use chords. [Sequences](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md) covers how sequences match, the time allowed between steps, and sequences that start with the same chord.

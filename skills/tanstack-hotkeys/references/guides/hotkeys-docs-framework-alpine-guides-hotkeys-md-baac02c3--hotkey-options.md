@@ -1,69 +1,57 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Hotkey options
 
-### `enabled`
-
-Set `enabled` to false to suppress execution. The registration remains in the live registry, and changing this option updates its existing handle.
-
-### `preventDefault`
-
-Set `preventDefault: false` to preserve the browser's action. The default prevents actions such as the browser's Save Page dialog.
-
-### `stopPropagation`
-
-Set `stopPropagation: false` to allow an event to bubble to an ancestor target. This is independent of preventing the browser default.
-
-### `eventType`
-
-Set `eventType: 'keyup'` to execute when the key is released. The default is `'keydown'`.
-
-### `requireReset`
-
-Set `requireReset: true` for actions that must run once per press. The key must be released before another press can trigger the action.
-
-### `ignoreInputs`
-
-When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: Enter and Space on buttons and `<summary>`, Enter on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
-
-Use `ignoreInputs: true` to ignore typing targets even for Control/Meta shortcuts. Use `false` to allow a single key such as Enter inside an input. `'auto'`, the default, restores smart input handling.
-
-### `target`
-
-Targets can be an element, `document`, or `window`. A `null` target defers registration; an omitted target uses `document`. Changing the target moves the registration and removes listeners from the previous target when no registrations remain.
-
+Pass options as the third argument:
 
 ```ts
-import Alpine from 'alpinejs'
-import { createHotkeysScope } from '@tanstack/alpine-hotkeys'
+// Submit with Enter, even while focus is in a text field
+this.hotkeys.createHotkey('Enter', () => submit(), { ignoreInputs: false })
+```
 
-Alpine.data('panel', () => ({
-	scope: createHotkeysScope(),
-	init() {
-		this.scope.createHotkey('Escape', () => console.log('Close focused panel'),
-			() => ({ target: this.$refs.panel }))
-	},
-	destroy() { this.scope.destroy() },
+| Option | Default | Description |
+| --- | --- | --- |
+| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#enable-and-disable-hotkeys). |
+| `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#hotkey-targets). |
+| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S` |
+| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
+| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
+| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
+| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#handle-duplicate-hotkeys). |
+| `scope` | `'global'` | The scope the hotkey belongs to. See [Add defaults and scopes](./hotkeys-docs-framework-alpine-quick-start-md-3845b066.md#source-hotkeys-docs-framework-alpine-quick-start-md). |
+| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
+| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#describe-hotkeys-with-meta). |
+
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`AlpineHotkeyCommonOptions` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/alpine/reference/type-aliases/AlpineHotkeyCommonOptions.md) lists the types.
+
+To change a default for the hotkeys an owner creates, pass default options to `createHotkeysScope`. Options passed to a function override the owner's defaults. Share the defaults object between components that need the same defaults:
+
+```ts
+const hotkeyDefaults = { hotkey: { requireReset: true, timeout: 1500 } }
+
+Alpine.data('editor', () => ({
+  hotkeys: createHotkeysScope(hotkeyDefaults),
+  // ...
 }))
 ```
 
-```html
-<div x-data="panel"><div x-ref="panel" tabindex="0">Focus here and press Escape.</div></div>
+Without defaults, every hotkey uses the built-in defaults in the table.
+
+### Chord and sequence options
+
+Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects options for the other kind:
+
+```ts
+this.hotkeys.createHotkey('Escape', close, { requireReset: true }) // OK
+this.hotkeys.createHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
+this.hotkeys.createHotkey('Escape', close, { timeout: 500 }) // Type error
 ```
 
-`$refs` works for elements present when `init()` runs. For conditionally created elements, store the current element in reactive component state and return it from the options getter. Set it to `null` when the element is removed.
+Options that apply to many hotkeys at once, such as an owner's defaults, apply each of these to the matching kind only. In the defaults example above, `requireReset` affects chords, and `timeout` affects sequences.
 
-### `conflictBehavior`
-
-Duplicate registrations on the same target use one of these policies:
-
-- `'warn'`: log a warning and keep both registrations.
-- `'error'`: throw an error.
-- `'replace'`: replace the existing registration.
-- `'allow'`: keep both without warning.
-
-### `platform`
-
-Pass `'mac'`, `'windows'`, or `'linux'` to override detection. Use the same platform when formatting labels or calculating modifier hints.
+When the kind isn't known until runtime, such as a `Hotkey` loaded from settings, the function accepts only the options that both kinds share.

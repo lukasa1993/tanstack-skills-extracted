@@ -1,94 +1,62 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Hotkey options
 
-### `enabled`
-
-Controls whether the hotkey is active. Defaults to `true`. Use an accessor for reactive control.
-
-Disabled hotkeys remain registered in the manager and stay visible in devtools; only execution is suppressed.
+Pass options as the third argument:
 
 ```tsx
-const [isEditing, setIsEditing] = createSignal(false)
-
-createHotkey('Mod+S', () => save(), () => ({ enabled: isEditing() }))
-```
-
-### `preventDefault`
-
-Automatically calls `event.preventDefault()` when the hotkey fires. Defaults to `true`.
-
-```tsx
-createHotkey('Mod+S', () => save())
-createHotkey('Mod+S', () => save(), { preventDefault: false })
-```
-
-### `stopPropagation`
-
-Calls `event.stopPropagation()` when the hotkey fires. Defaults to `true`.
-
-```tsx
-createHotkey('Escape', () => closeModal())
-createHotkey('Escape', () => closeModal(), { stopPropagation: false })
-```
-
-### `eventType`
-
-Whether to listen on `keydown` (default) or `keyup`.
-
-```tsx
-createHotkey('Shift', () => deactivateMode(), { eventType: 'keyup' })
-```
-
-### `requireReset`
-
-When `true`, the hotkey fires only once per key press. The key must be released and pressed again to fire again. Defaults to `false`.
-
-```tsx
-createHotkey('Escape', () => closePanel(), { requireReset: true })
-```
-
-### `ignoreInputs`
-
-When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: `Enter` and `Space` on buttons and `<summary>`, `Enter` on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
-
-When `true`, the hotkey doesn't fire when the user is focused on a text input, textarea, select, or contentEditable element. The default, `'auto'`, chooses from the hotkey.
-
-```tsx
-createHotkey('K', () => openSearch())  // 'auto': ignored in inputs
-createHotkey('Mod+S', () => save())   // 'auto': fires in inputs
+// Submit with Enter, even while focus is in a text field
 createHotkey('Enter', () => submit(), { ignoreInputs: false })
 ```
 
-### `target`
+| Option | Default | Description |
+| --- | --- | --- |
+| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#enable-and-disable-hotkeys). |
+| `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#hotkey-targets). |
+| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S` |
+| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
+| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
+| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
+| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#handle-duplicate-hotkeys). |
+| `scope` | The nearest provider's scope | The [scope](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) the hotkey belongs to |
+| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
+| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#describe-hotkeys-with-meta). |
 
-The DOM element to attach the event listener to. Defaults to `document`. Can be a DOM element, `document`, `window`, or from an accessor for reactive targets.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`CreateHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/solid/reference/type-aliases/CreateHotkeyOptions.md) lists the types.
 
-```tsx
-const [panelRef, setPanelRef] = createSignal<HTMLDivElement | null>(null)
-
-createHotkey('Escape', () => closePanel(), () => ({ target: panelRef() }))
-
-return <div ref={setPanelRef} tabIndex={0}>...</div>
-```
-
-> [!NOTE]
-> When using an accessor for the target, the primitive waits for the element to be available before registering. Ensure the element is focusable (has `tabIndex`) so it can receive keyboard events.
-
-### `conflictBehavior`
-
-Controls what happens when you register a hotkey that's already registered. Options: `'warn'`, `'error'`, `'replace'`, `'allow'`.
-
-```tsx
-createHotkey('Mod+S', () => save(), { conflictBehavior: 'replace' })
-```
-
-### `platform`
-
-Override the auto-detected platform.
+To change a default for every hotkey in your app, pass `defaultOptions` to a `HotkeysProvider` at the root. Options passed to a primitive override the provider's defaults:
 
 ```tsx
-createHotkey('Mod+S', () => save(), { platform: 'mac' })
+import { HotkeysProvider } from '@tanstack/solid-hotkeys'
+
+function Root() {
+  return (
+    <HotkeysProvider
+      defaultOptions={{ hotkey: { requireReset: true, timeout: 1500 } }}
+    >
+      <App />
+    </HotkeysProvider>
+  )
+}
 ```
+
+The provider is optional. Without one, every hotkey uses the built-in defaults in the table. See [HotkeysProvider and Scopes](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) for nested defaults and for grouping hotkeys into scopes.
+
+### Chord and sequence options
+
+Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects options for the other kind:
+
+```tsx
+createHotkey('Escape', close, { requireReset: true }) // OK
+createHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
+createHotkey('Escape', close, { timeout: 500 }) // Type error
+```
+
+Options that apply to many hotkeys at once, such as provider defaults, apply each of these to the matching kind only. In the provider example above, `requireReset` affects chords, and `timeout` affects sequences.
+
+When the kind isn't known until runtime, such as a `Hotkey` loaded from settings, the primitive accepts only the options that both kinds share.

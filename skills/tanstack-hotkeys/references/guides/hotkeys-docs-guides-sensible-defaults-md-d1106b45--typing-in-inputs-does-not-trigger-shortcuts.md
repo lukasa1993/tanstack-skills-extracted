@@ -1,6 +1,6 @@
 # Sensible Defaults — Typing in inputs does not trigger shortcuts
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Typing in inputs does not trigger shortcuts
 
@@ -16,4 +16,4 @@ For a sequence, the first step decides, so `['G', 'G']` is ignored in inputs.
 
 Text inputs, textareas, selects, and `contenteditable` elements count as inputs, including inside shadow DOM. Button-type inputs (`type="button"`, `"submit"`, and `"reset"`) do not, so shortcuts still work when the user has tabbed to a form button. A hotkey whose `target` is the input itself always receives that input's events.
 
-Set `ignoreInputs: true` or `false` to choose explicitly.
+Set `ignoreInputs: true` or `false` to choose explicitly. For example, set `ignoreInputs: false` on an `Enter` hotkey that submits a form, so it works while focus is in the form's text fields.

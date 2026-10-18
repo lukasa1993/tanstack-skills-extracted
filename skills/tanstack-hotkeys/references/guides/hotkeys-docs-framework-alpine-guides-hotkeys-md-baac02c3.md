@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -11,43 +11,27 @@ Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--overview.md) — 1 KiB
-- [Chords and sequences](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--chords-and-sequences.md) — 2 KiB
-- [Logical keys and physical positions](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--logical-keys-and-physical-positions.md) — 2 KiB
-- [Basic usage](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--basic-usage.md) — 2 KiB
-- [Property getters](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--property-getters.md) — 2 KiB
-- [Capture phase](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--capture-phase.md) — 1 KiB
-- [Default options](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--default-options.md) — 2 KiB
-- [Hotkey options](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-options.md) — 3 KiB
-- [Current callbacks and automatic cleanup](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--current-callbacks-and-automatic-cleanup.md) — 1 KiB
-- [Registering multiple hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--registering-multiple-hotkeys.md) — 2 KiB
-- [Metadata](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--metadata.md) — 1 KiB
-- [Introspecting registrations](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--introspecting-registrations.md) — 2 KiB
-- [The hotkey manager](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--the-hotkey-manager.md) — 2 KiB
+- [Chords and sequences](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--chords-and-sequences.md) — 1 KiB
+- [Register a hotkey](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-a-hotkey.md) — 5 KiB
+- [Hotkey options](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-options.md) — 5 KiB
+- [Register multiple hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-multiple-hotkeys.md) — 3 KiB
+- [Enable and disable hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--enable-and-disable-hotkeys.md) — 3 KiB
+- [Hotkey targets](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-targets.md) — 3 KiB
+- [Handle duplicate hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--handle-duplicate-hotkeys.md) — 1 KiB
+- [Describe hotkeys with `meta`](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--describe-hotkeys-with-meta.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="chords-and-sequences"></a>
-<a id="logical-keys-and-physical-positions"></a>
-<a id="basic-usage"></a>
-<a id="callback-context"></a>
-<a id="raw-object-bindings"></a>
-<a id="changing-a-binding"></a>
-<a id="property-getters"></a>
-<a id="capture-phase"></a>
-<a id="default-options"></a>
-<a id="smart-input-handling"></a>
-<a id="shared-default-options"></a>
+<a id="register-a-hotkey"></a>
+<a id="use-the-hotkeys-magic"></a>
+<a id="write-a-chord-as-a-string-or-an-object"></a>
 <a id="hotkey-options"></a>
-<a id="enabled"></a>
-<a id="preventdefault"></a>
-<a id="stoppropagation"></a>
-<a id="eventtype"></a>
-<a id="requirereset"></a>
-<a id="ignoreinputs"></a>
-<a id="target"></a>
-<a id="conflictbehavior"></a>
-<a id="platform"></a>
-<a id="current-callbacks-and-automatic-cleanup"></a>
-<a id="registering-multiple-hotkeys"></a>
-<a id="metadata"></a>
-<a id="introspecting-registrations"></a>
-<a id="the-hotkey-manager"></a>
+<a id="chord-and-sequence-options"></a>
+<a id="register-multiple-hotkeys"></a>
+<a id="share-options"></a>
+<a id="build-the-list-from-data"></a>
+<a id="enable-and-disable-hotkeys"></a>
+<a id="hotkey-targets"></a>
+<a id="a-target-is-not-a-scope"></a>
+<a id="handle-duplicate-hotkeys"></a>
+<a id="describe-hotkeys-with-meta"></a>

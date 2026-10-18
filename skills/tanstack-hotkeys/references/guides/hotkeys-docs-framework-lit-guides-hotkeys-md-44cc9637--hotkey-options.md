@@ -1,145 +1,50 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Hotkey options
 
-### `enabled`
-
-Controls whether the hotkey is active. Defaults to `true`.
+Pass options as the decorator's second argument, or the controller's fourth:
 
 ```ts
-@hotkey('Mod+S', { enabled: true })
-save() { saveDocument() }
-```
-
-### `preventDefault`
-
-Automatically calls `event.preventDefault()` when the hotkey fires. Defaults to `true`.
-
-```ts
-// Browser default is prevented (default behavior)
-@hotkey('Mod+S')
-save() { saveDocument() }
-
-// Opt out when you want the browser's default behavior
-@hotkey('Mod+P', { preventDefault: false })
-print() { customPrint() }
-```
-
-### `stopPropagation`
-
-Calls `event.stopPropagation()` when the hotkey fires. Defaults to `true`.
-
-```ts
-// Event propagation is stopped (default behavior)
-@hotkey('Escape')
-close() { closeModal() }
-
-// Opt out when you need the event to bubble
-@hotkey('Escape', { stopPropagation: false })
-close() { closeModal() }
-```
-
-### `eventType`
-
-Whether to listen on `keydown` (default) or `keyup`.
-
-```ts
-// Fire when the key is released
-@hotkey('Shift', { eventType: 'keyup' })
-deactivateMode() { this.shiftMode = false }
-```
-
-### `requireReset`
-
-When `true`, the hotkey fires only once per key press. The key must be released and pressed again to fire again. Defaults to `false`.
-
-```ts
-// Only fires once per Escape press, not on key repeat
-@hotkey('Escape', { requireReset: true })
-closePanel() { this.panelOpen = false }
-```
-
-### `ignoreInputs`
-
-When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: `Enter` and `Space` on buttons and `<summary>`, `Enter` on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
-
-When `true`, the hotkey doesn't fire when the user is focused on a text input, textarea, select, or contentEditable element. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) allow unrelated shortcuts. The default, `'auto'`, chooses from the hotkey: `Ctrl`/`Meta` shortcuts and `Escape` fire in inputs; single keys and `Shift`/`Alt` combos are ignored.
-
-```ts
-// Single key - ignored in inputs by default ('auto')
-@hotkey('K')
-openSearch() { /* ... */ }
-
-// Mod+S and Escape - fire in inputs by default ('auto')
-@hotkey('Mod+S')
-save() { /* ... */ }
-
-// Override: force a single key to fire in inputs
+// Submit with Enter, even while focus is in a text field
 @hotkey('Enter', { ignoreInputs: false })
-submit() { /* ... */ }
+submit() {}
 ```
 
-### `target`
+| Option | Default | Description |
+| --- | --- | --- |
+| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#enable-and-disable-hotkeys). |
+| `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#hotkey-targets). |
+| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S` |
+| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
+| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
+| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
+| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#handle-duplicate-hotkeys). |
+| `scope` | `'global'` | The scope the hotkey belongs to. See [Add scopes](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md). |
+| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
+| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#describe-hotkeys-with-meta). |
 
-The DOM element to attach the event listener to. When omitted, the Lit adapter resolves `document` at connect time in the browser. Can be a DOM element, `document`, or `window`. Pass `null` to intentionally skip registration.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`HotkeyControllerOptions` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/lit/reference/type-aliases/HotkeyControllerOptions.md) lists the types.
+
+Lit has no provider for app-wide defaults, so pass options to each hotkey. To give several hotkeys the same options, share an options object. See [Share options](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#share-options).
+
+### Chord and sequence options
+
+Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. The decorator's option types follow the hotkey you pass, so TypeScript rejects options for the other kind:
 
 ```ts
-import { LitElement, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
-import { createRef, ref } from 'lit/directives/ref.js'
-import { HotkeyController } from '@tanstack/lit-hotkeys'
+@hotkey('Escape', { requireReset: true }) // OK
+close() {}
 
-@customElement('my-panel')
-class MyPanel extends LitElement {
-  private panelRef = createRef<HTMLDivElement>()
-  private escapeHotkey?: HotkeyController
+@hotkey(['G', 'G'], { timeout: 500 }) // OK
+scrollToTop() {}
 
-  firstUpdated() {
-    if (!this.panelRef.value) return
-
-    this.escapeHotkey = new HotkeyController(
-      this,
-      'Escape',
-      () => this.dispatchEvent(new CustomEvent('close')),
-      { target: this.panelRef.value },
-    )
-    this.addController(this.escapeHotkey)
-  }
-
-  render() {
-    return html`
-      <div ${ref(this.panelRef)} tabindex="0">
-        <p>Press Escape while focused here to close</p>
-      </div>
-    `
-  }
-}
+@hotkey('Escape', { timeout: 500 }) // Type error
+cancel() {}
 ```
 
-> [!NOTE]
-> When using a scoped target, make sure the element is focusable (has `tabindex`) so it can receive keyboard events.
-
-### `conflictBehavior`
-
-Controls what happens when you register a hotkey that's already registered. Options:
-
-- `'warn'` (default): logs a warning but allows the registration
-- `'error'`: throws an error
-- `'replace'`: replaces the existing registration
-- `'allow'`: allows multiple registrations silently
-
-```ts
-@hotkey('Mod+S', { conflictBehavior: 'replace' })
-save() { saveDocument() }
-```
-
-### `platform`
-
-Override the auto-detected platform. Useful for testing or for applications that need to force a specific platform behavior.
-
-```ts
-@hotkey('Mod+S', { platform: 'mac' })
-save() { saveDocument() }
-```
+When the kind isn't known until runtime, such as a `Hotkey` loaded from settings, the decorator accepts only the options that both kinds share.

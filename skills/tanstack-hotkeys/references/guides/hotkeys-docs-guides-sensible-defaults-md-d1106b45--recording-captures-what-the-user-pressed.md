@@ -1,6 +1,6 @@
 # Sensible Defaults — Recording captures what the user pressed
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Recording captures what the user pressed
 
@@ -10,7 +10,7 @@ While recording:
 
 - **Escape** cancels.
 - **Backspace** or **Delete** removes the last step, or clears an empty recording.
-- **Enter** commits a multi-step recording before it reaches `maxSteps`.
+- **Enter** commits a sequence recording, made with `maxSteps: Infinity`.
 - **Registered hotkeys are paused**, so pressing `Mod+S` to record it does not also save.
 - **Typing in inputs passes through**, so other fields on the page keep working. Escape still cancels.
 - **AltGr is rejected** for position recordings, because it types characters rather than shortcuts.

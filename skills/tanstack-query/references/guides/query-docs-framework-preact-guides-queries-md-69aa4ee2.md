@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-preact-guides-queries-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.104.3`.
+Release-matched documentation · `@tanstack/preact-query@5.104.4`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 

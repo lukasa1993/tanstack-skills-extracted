@@ -1,20 +1,20 @@
 # Hotkeys — Chords and sequences
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Chords and sequences
 
-A hotkey is either a **chord**, keys pressed together such as `'Mod+S'`, or a **sequence**, chords pressed one after another such as `['G', 'G']`. Every API in this guide accepts both, and a one-step array such as `['Mod+S']` is the chord `'Mod+S'`.
+A hotkey is one of two kinds:
+
+- A **chord** is keys pressed together, such as `'Mod+S'`, or a single key, such as `'Escape'`.
+- A **sequence** is chords pressed one after another, such as `['G', 'H']`. Write it as an array of chords.
 
 ```ts
-@hotkey('Mod+S') // chord
-save() {}
+@hotkey('Mod+K') // Mod and K together
+openSearch() {}
 
-@hotkey(['G', 'G'], { timeout: 500 }) // sequence
-scrollToTop() {}
-
-@hotkey('Escape', { requireReset: true }) // chord-only option
-close() {}
+@hotkey(['G', 'H']) // G, then H
+goHome() {}
 ```
 
-Most options apply to both kinds. `requireReset` applies only to chords and `timeout` only to sequences, and TypeScript rejects options that don't match the hotkey. When the kind isn't known statically, such as a `Hotkey` loaded from settings, only the shared options are accepted. Defaults apply only to the kinds that support them. See the [Sequences Guide](./hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md#source-hotkeys-docs-framework-lit-guides-sequences-md) for timing and matching, and the [App Hotkeys Guide](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md) to declare hotkeys up front and let users customize them.
+Every decorator, controller, and option in this guide accepts both kinds, and most examples use chords. [Sequences](./hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md#source-hotkeys-docs-framework-lit-guides-sequences-md) covers how sequences match, the time allowed between steps, and sequences that start with the same chord.

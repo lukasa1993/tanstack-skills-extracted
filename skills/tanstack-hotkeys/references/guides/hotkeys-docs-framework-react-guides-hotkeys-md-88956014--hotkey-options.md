@@ -1,127 +1,62 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Hotkey options
 
-### `enabled`
-
-Controls whether the hotkey is active. Defaults to `true`.
-
-Disabled hotkeys stay registered in the manager and visible in devtools; only execution is suppressed. The hook updates `enabled` on the existing registration instead of unregistering and re-registering.
+Pass options as the third argument:
 
 ```tsx
-const [isEditing, setIsEditing] = useState(false)
-
-// Only active when editing
-useHotkey('Mod+S', () => save(), { enabled: isEditing })
-```
-
-### `preventDefault`
-
-Automatically calls `event.preventDefault()` when the hotkey fires. Defaults to `true`.
-
-```tsx
-// Browser default is prevented by default
-useHotkey('Mod+S', () => save())
-
-// Opt out when you want the browser's default behavior
-useHotkey('Mod+S', () => save(), { preventDefault: false })
-```
-
-### `stopPropagation`
-
-Calls `event.stopPropagation()` when the hotkey fires. Defaults to `true`.
-
-```tsx
-// Event propagation is stopped by default
-useHotkey('Escape', () => closeModal())
-
-// Opt out when you need the event to bubble
-useHotkey('Escape', () => closeModal(), { stopPropagation: false })
-```
-
-### `eventType`
-
-Whether to listen on `keydown` (default) or `keyup`.
-
-```tsx
-// Fire when the key is released
-useHotkey('Shift', () => deactivateMode(), { eventType: 'keyup' })
-```
-
-### `requireReset`
-
-When `true`, a chord fires only once per key press. The key must be released and pressed again to fire again. Defaults to `false`. Sequences ignore automatic repeats already, so this option applies only to chords.
-
-```tsx
-// Only fires once per Escape press, not on key repeat
-useHotkey('Escape', () => closePanel(), { requireReset: true })
-```
-
-### `ignoreInputs`
-
-When `true`, the hotkey will not fire when the user is focused on a text input, textarea, select, or contentEditable element. Button-type inputs (`type="button"`, `"submit"`, `"reset"`) allow unrelated shortcuts, so shortcuts like Mod+S work when the user has tabbed to a form button. The default, `'auto'`, chooses from the hotkey: `Ctrl`/`Meta` shortcuts and `Escape` fire in inputs; single keys and `Shift`/`Alt` combos are ignored.
-
-When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: `Enter` and `Space` on buttons and `<summary>`, `Enter` on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
-
-```tsx
-// Single key - ignored in inputs by default ('auto')
-useHotkey('K', () => openSearch())
-
-// Mod+S and Escape - fire in inputs by default ('auto')
-useHotkey('Mod+S', () => save())
-useHotkey('Escape', () => closeDialog())
-
-// Override: force a single key to fire in inputs
+// Submit with Enter, even while focus is in a text field
 useHotkey('Enter', () => submit(), { ignoreInputs: false })
 ```
 
-Set `ignoreInputs` to `true` or `false` to override `'auto'`.
+| Option | Default | Description |
+| --- | --- | --- |
+| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#enable-and-disable-hotkeys). |
+| `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#hotkey-targets). |
+| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S` |
+| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
+| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
+| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
+| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#handle-duplicate-hotkeys). |
+| `scope` | The nearest provider's scope | The [scope](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) the hotkey belongs to |
+| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
+| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#describe-hotkeys-with-meta). |
 
-### `target`
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`UseHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/react/reference/type-aliases/UseHotkeyOptions.md) lists the types.
 
-The DOM element to attach the event listener to. Defaults to `document`. Can be a DOM element, `document`, `window`, or a React ref.
+To change a default for every hotkey in your app, pass `defaultOptions` to a `HotkeysProvider` at the root. Options passed to a hook override the provider's defaults:
 
 ```tsx
-import { useRef } from 'react'
+import { HotkeysProvider } from '@tanstack/react-hotkeys'
 
-function Panel() {
-  const panelRef = useRef<HTMLDivElement>(null)
-
-  // Only listens for events on this specific element
-  useHotkey('Escape', () => closePanel(), { target: panelRef })
-
+function Root() {
   return (
-    <div ref={panelRef} tabIndex={0}>
-      <p>Panel content</p>
-    </div>
+    <HotkeysProvider
+      defaultOptions={{ hotkey: { requireReset: true, timeout: 1500 } }}
+    >
+      <App />
+    </HotkeysProvider>
   )
 }
 ```
 
-> [!NOTE]
-> When using a ref as the target, make sure the element is focusable (has `tabIndex`) so it can receive keyboard events.
+The provider is optional. Without one, every hotkey uses the built-in defaults in the table. See [HotkeysProvider and Scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) for nested defaults and for grouping hotkeys into scopes.
 
-### `conflictBehavior`
+### Chord and sequence options
 
-Controls what happens when you register a hotkey that's already registered. Options:
-
-- `'warn'` (default) - Logs a warning but allows the registration
-- `'error'` - Throws an error
-- `'replace'` - Replaces the existing registration
-- `'allow'` - Allows multiple registrations silently
+Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects options for the other kind:
 
 ```tsx
-useHotkey('Mod+S', () => save(), { conflictBehavior: 'replace' })
+useHotkey('Escape', close, { requireReset: true }) // OK
+useHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
+useHotkey('Escape', close, { timeout: 500 }) // Type error
 ```
 
-Duplicate detection compares resolved hotkeys on the same target, so `Mod+S` and `Meta+S` conflict on macOS. Two sequences conflict when their steps are equal; a shared prefix alone is not a duplicate.
+Options that apply to many hotkeys at once, such as provider defaults, apply each of these to the matching kind only. In the provider example above, `requireReset` affects chords, and `timeout` affects sequences.
 
-### `platform`
-
-Override the auto-detected platform. Useful for testing or for applications that need to force a specific platform behavior.
-
-```tsx
-useHotkey('Mod+S', () => save(), { platform: 'mac' })
-```
+When the kind isn't known until runtime, such as a `Hotkey` loaded from settings, the hook accepts only the options that both kinds share.

@@ -2,21 +2,15 @@
 
 <a id="source-hotkeys-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-## Installation
+This guide adds keyboard shortcuts to Lit elements. If you haven't installed TanStack Hotkeys yet, see [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md).
 
-Don't have TanStack Hotkeys installed yet? See the [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md) page for instructions.
+## Register a hotkey
 
-## Your first hotkey
-
-The Lit adapter offers two ways to register hotkeys: decorators for declarative method-level binding, and controllers for imperative, reactive state management.
-
-### Using the `@hotkey` decorator
-
-The `@hotkey` decorator is the simplest way to bind a keyboard shortcut to a class method:
+TanStack Hotkeys needs no special setup. To register a keyboard shortcut, decorate the method that handles it with `@hotkey`:
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -31,74 +25,167 @@ class MyEditor extends LitElement {
   }
 
   render() {
-    return html`<div>Press Cmd+S (Mac) or Ctrl+S (Windows) to save</div>`
+    return html`<textarea></textarea>`
   }
 }
 ```
 
-### Using `HotkeyController`
+`Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
 
-For more control, use the `HotkeyController` directly:
+That's all a hotkey needs. Controllers, scopes, and the other features later in this guide are optional, so add them as your app grows.
 
-```ts
-import { LitElement, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
-import { HotkeyController } from '@tanstack/lit-hotkeys'
+## Register several hotkeys
 
-@customElement('my-editor')
-class MyEditor extends LitElement {
-  private saveHotkey = new HotkeyController(
-    this,
-    'Mod+S',
-    () => this.save(),
-  )
-
-  constructor() {
-    super()
-    this.addController(this.saveHotkey)
-  }
-
-  private save() {
-    saveDocument()
-  }
-
-  render() {
-    return html`<div>Press Cmd+S (Mac) or Ctrl+S (Windows) to save</div>`
-  }
-}
-```
-
-The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Control` on Windows/Linux, so your shortcuts work across platforms without extra logic.
-
-## Common patterns
-
-### Multiple hotkeys
-
-Register as many hotkeys as you need with the `@hotkey` decorator:
+Decorate one method for each hotkey:
 
 ```ts
 @customElement('my-editor')
 class MyEditor extends LitElement {
   @hotkey('Mod+S')
-  save() { saveDocument() }
+  save() {
+    saveDocument()
+  }
 
   @hotkey('Mod+Z')
-  undo() { undoAction() }
+  undo() {
+    undoAction()
+  }
 
   @hotkey('Mod+Shift+Z')
-  redo() { redoAction() }
-
-  @hotkey('Mod+F')
-  search() { openSearch() }
-
-  @hotkey('Escape')
-  dismiss() { closeDialog() }
+  redo() {
+    redoAction()
+  }
 }
 ```
 
-### Scoped hotkeys
+For a hotkey that isn't a method, or one that changes at runtime, use `HotkeyController`, shown [below](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#hotkeys-follow-your-elements).
 
-Use the `target` option to attach hotkeys to specific elements instead of the entire document. When the target comes from a ref, create the registration after the element has rendered:
+## Sequences
+
+Pass an array of chords to register a sequence, pressed one after another:
+
+```ts
+@hotkey(['G', 'G'])
+scrollToTop() {
+  window.scrollTo({ top: 0 })
+}
+```
+
+Each step must follow the previous one within a second. Chords and sequences can sit side by side on the same element:
+
+```ts
+@customElement('my-app')
+class MyApp extends LitElement {
+  @hotkey('Mod+K')
+  openSearch() {}
+
+  @hotkey(['G', 'H'])
+  goHome() {}
+
+  @hotkey(['G', 'S'])
+  goToSettings() {}
+}
+```
+
+## Show the shortcut
+
+Label a button or menu item with `formatForDisplay`. Format the same value you register, so the label always matches the binding:
+
+```ts
+import { LitElement, html } from 'lit'
+import { customElement } from 'lit/decorators.js'
+import { formatForDisplay, hotkey } from '@tanstack/lit-hotkeys'
+import type { HotkeyChord } from '@tanstack/lit-hotkeys'
+
+const saveHotkey: HotkeyChord = 'Mod+S'
+
+@customElement('save-button')
+class SaveButton extends LitElement {
+  @hotkey(saveHotkey)
+  save() {
+    saveDocument()
+  }
+
+  render() {
+    return html`
+      <button @click=${this.save}>
+        Save <kbd>${formatForDisplay(saveHotkey)}</kbd>
+      </button>
+    `
+  }
+}
+```
+
+The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
+
+## Hotkeys follow your elements
+
+A hotkey is registered when its element connects to the document, and unregistered when the element disconnects. Put each hotkey on the element it belongs to, so it is active only while that element is connected:
+
+```ts
+import { LitElement, html, nothing } from 'lit'
+import { customElement, state } from 'lit/decorators.js'
+import { hotkey } from '@tanstack/lit-hotkeys'
+
+@customElement('settings-dialog')
+class SettingsDialog extends LitElement {
+  // Registered only while the dialog is connected
+  @hotkey('Escape')
+  close() {
+    this.dispatchEvent(new CustomEvent('close'))
+  }
+
+  render() {
+    return html`<div role="dialog">...</div>`
+  }
+}
+
+@customElement('my-app')
+class MyApp extends LitElement {
+  @state() private isOpen = false
+
+  render() {
+    return html`
+      <button @click=${() => (this.isOpen = true)}>Settings</button>
+      ${this.isOpen
+        ? html`<settings-dialog
+            @close=${() => (this.isOpen = false)}
+          ></settings-dialog>`
+        : nothing}
+    `
+  }
+}
+```
+
+For a condition that doesn't match an element, pass `enabled`. Decorator options are fixed when the class is defined, so use `HotkeyController` with an options function for values that change:
+
+```ts
+import { LitElement } from 'lit'
+import { customElement, state } from 'lit/decorators.js'
+import { HotkeyController } from '@tanstack/lit-hotkeys'
+
+@customElement('my-editor')
+class MyEditor extends LitElement {
+  @state() private hasUnsavedChanges = false
+
+  constructor() {
+    super()
+    this.addController(
+      new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
+        enabled: this.hasUnsavedChanges,
+      })),
+    )
+  }
+}
+```
+
+The controller reads the function again after each update, so keep the values it reads in reactive properties.
+
+When a group of hotkeys turns on and off together, put them in a scope instead. See [Add scopes](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#add-scopes-optional).
+
+## Element hotkeys
+
+A hotkey's default `target` is `document`, so it works wherever focus is on the page. To limit it to one element, pass that element as `target`:
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -108,190 +195,89 @@ import { HotkeyController } from '@tanstack/lit-hotkeys'
 
 @customElement('my-panel')
 class MyPanel extends LitElement {
-  private panelRef = createRef<HTMLDivElement>()
-  private escapeHotkey?: HotkeyController
+  private panel = createRef<HTMLDivElement>()
 
-  firstUpdated() {
-    if (!this.panelRef.value) return
-
-    this.escapeHotkey = new HotkeyController(
-      this,
-      'Escape',
-      () => this.closePanel(),
-      { target: this.panelRef.value },
+  constructor() {
+    super()
+    // Fires only while the panel, or something inside it, has focus
+    this.addController(
+      new HotkeyController(this, 'Escape', () => this.closePanel(), () => ({
+        target: this.panel.value ?? null,
+      })),
     )
-    this.addController(this.escapeHotkey)
-  }
-
-  private closePanel() {
-    this.dispatchEvent(new CustomEvent('close'))
   }
 
   render() {
-    return html`
-      <div ${ref(this.panelRef)} tabindex="0">
-        <p>Press Escape while focused here to close</p>
-      </div>
-    `
+    return html`<div ${ref(this.panel)} tabindex="0">...</div>`
   }
 }
 ```
 
-### Conditional hotkeys
+A `null` target waits until the element renders. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
 
-Enable or disable hotkeys based on application state via the `enabled` option:
+## Add scopes (optional)
+
+So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its element is connected. Lit has no provider for shared defaults, so set options on each hotkey.
+
+Hotkeys can also be grouped into scopes. Every hotkey in a scope turns on and off with it. Make a scope `exclusive`, and while it is active, only its hotkeys work. Use one for dialogs and popups that should own the keyboard.
+
+Lit has no provider to turn scopes on and off. Activate the scope from the hotkey manager while the element is connected, and pass `scope` to its hotkeys:
 
 ```ts
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { hotkey } from '@tanstack/lit-hotkeys'
+import { getHotkeyManager, hotkey } from '@tanstack/lit-hotkeys'
 
-@customElement('my-modal')
-class MyModal extends LitElement {
-  @hotkey('Escape', { enabled: true })
-  close() {
-    this.dispatchEvent(new CustomEvent('close'))
-  }
-}
-```
+@customElement('confirm-dialog')
+class ConfirmDialog extends LitElement {
+  private releaseScope?: () => void
 
-### Multi-key sequences
-
-Pass an array of chords to the `@hotkey` decorator or `HotkeyController` to register a Vim-style sequence:
-
-```ts
-import { LitElement } from 'lit'
-import { customElement } from 'lit/decorators.js'
-import { hotkey } from '@tanstack/lit-hotkeys'
-
-@customElement('vim-editor')
-class VimEditor extends LitElement {
-  @hotkey(['G', 'G'])
-  scrollToTop() {
-    window.scrollTo({ top: 0 })
+  connectedCallback() {
+    super.connectedCallback()
+    this.releaseScope = getHotkeyManager().activateScope('confirm-dialog', {
+      exclusive: true,
+    })
   }
 
-  @hotkey(['G', 'Shift+G'])
-  scrollToBottom() {
-    window.scrollTo({ top: document.body.scrollHeight })
+  disconnectedCallback() {
+    super.disconnectedCallback()
+    this.releaseScope?.()
   }
-}
-```
 
-### Tracking held keys
+  @hotkey('Enter', { scope: 'confirm-dialog' })
+  confirm() {
+    this.dispatchEvent(new CustomEvent('confirm'))
+  }
 
-Display modifier key state for power-user UIs using `KeyHoldController` and `HeldKeysController`:
-
-```ts
-import { LitElement, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
-import { KeyHoldController, HeldKeysController } from '@tanstack/lit-hotkeys'
-
-@customElement('status-bar')
-class StatusBar extends LitElement {
-  private shiftHold = new KeyHoldController(this, 'Shift')
-  private heldKeys = new HeldKeysController(this)
+  @hotkey('Escape', { scope: 'confirm-dialog' })
+  cancel() {
+    this.dispatchEvent(new CustomEvent('cancel'))
+  }
 
   render() {
-    return html`
-      <div class="status-bar">
-        ${this.shiftHold.value
-          ? html`<span>Shift mode active</span>`
-          : null}
-        ${this.heldKeys.value.length > 0
-          ? html`<span>Keys: ${this.heldKeys.value.join('+')}</span>`
-          : null}
-      </div>
-    `
+    return html`<div role="dialog">...</div>`
   }
 }
 ```
 
-### Recording hotkeys
+While the dialog is connected, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog disconnects, they work again.
 
-Build shortcut customization UIs with `HotkeyRecorderController`:
-
-```ts
-import { LitElement, html, nothing } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
-import {
-  HotkeyRecorderController,
-  formatForDisplay,
-  type Hotkey,
-} from '@tanstack/lit-hotkeys'
-
-@customElement('shortcut-settings')
-class ShortcutSettings extends LitElement {
-  private recorder = new HotkeyRecorderController(this, {
-    onRecord: (hotkey) => {
-      this.shortcut = hotkey
-    },
-    onCancel: () => {
-      console.log('Recording cancelled')
-    },
-  })
-
-  @state() private shortcut: Hotkey | null = null
-
-  render() {
-    return html`
-      <button @click=${() => this.recorder.startRecording()}>
-        ${this.recorder.isRecording ? 'Recording...' : 'Edit Shortcut'}
-      </button>
-      ${this.shortcut
-        ? html`<kbd>${formatForDisplay(this.shortcut)}</kbd>`
-        : nothing}
-    `
-  }
-}
-```
-
-### Displaying hotkeys in the UI
-
-Format hotkeys for platform-aware display:
-
-```ts
-import { LitElement, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
-import { hotkey, formatForDisplay } from '@tanstack/lit-hotkeys'
-
-@customElement('save-button')
-class SaveButton extends LitElement {
-  @hotkey('Mod+S')
-  save() { saveDocument() }
-
-  render() {
-    return html`
-      <button>
-        Save <kbd>${formatForDisplay('Mod+S')}</kbd>
-        <!-- Mac: "⌘S"  |  Windows: "Ctrl+S" -->
-      </button>
-    `
-  }
-}
-```
-
-## Decorators vs controllers
-
-The Lit adapter gives you two complementary approaches:
-
-| | Decorator (`@hotkey`) | Controllers (`HotkeyController`, etc.) |
-|---|---|---|
-| **Best for** | Declarative method binding | Reactive state, dynamic hotkeys |
-| **Registration** | Automatic on connect/disconnect | Automatic via `hostConnected`/`hostDisconnected` |
-| **State access** | No (fire-and-forget callbacks) | Yes (`isRecording`, `value`, etc.) |
-| **Dynamic hotkeys** | No (static at decoration time) | Yes (can re-register programmatically) |
-
-Use decorators when you simply want a method to fire on a key combo. Use controllers when you need reactive state (held keys, recording) or dynamic hotkey registration.
-
-## Declaring app hotkeys
-
-To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `provideAppHotkeys`. See the [App Hotkeys Guide](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md).
+`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released.
 
 ## Next steps
 
-- [Hotkeys Guide](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md) - Deep dive into `@hotkey` decorator and `HotkeyController` options
-- [Sequences Guide](./hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md#source-hotkeys-docs-framework-lit-guides-sequences-md) - Multi-key sequence handling
-- [Hotkey Recording Guide](./hotkeys-docs-framework-lit-guides-hotkey-recording-md-d28a7293.md#source-hotkeys-docs-framework-lit-guides-hotkey-recording-md) - Building shortcut customization UIs
-- [Key State Tracking Guide](./hotkeys-docs-framework-lit-guides-key-state-tracking-md-06b6bac9.md#source-hotkeys-docs-framework-lit-guides-key-state-tracking-md) - Real-time key state monitoring
-- [Formatting & Display Guide](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md) - Platform-aware hotkey formatting
+Learn more about the basics:
+
+- [Hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md): chords and sequences, options, and element hotkeys
+- [Sequences](./hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md#source-hotkeys-docs-framework-lit-guides-sequences-md): Vim-style multi-key shortcuts
+- [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
+- [Formatting & Display](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md): labels and keycaps for every platform
+- [Held Key State Helpers](./hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md#source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md): show which keys are held
+- [Hotkey Hints](./hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md#source-hotkeys-docs-framework-lit-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+
+As your app grows:
+
+- [App Hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
+- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md#source-hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Custom Hotkey Recording](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md#source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Manager](./hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md#source-hotkeys-docs-framework-lit-guides-hotkey-manager-md): register and inspect hotkeys outside components

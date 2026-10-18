@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -11,46 +11,26 @@ Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--overview.md) — 1 KiB
-- [Logical keys and physical positions](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--logical-keys-and-physical-positions.md) — 2 KiB
-- [Basic usage](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--basic-usage.md) — 2 KiB
-- [Updating options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--updating-options.md) — 1 KiB
-- [Capture phase](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--capture-phase.md) — 1 KiB
-- [Default options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--default-options.md) — 3 KiB
+- [Chords and sequences](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--chords-and-sequences.md) — 1 KiB
+- [Register a hotkey](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--register-a-hotkey.md) — 4 KiB
 - [Hotkey options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-options.md) — 5 KiB
-- [Stale closure prevention](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--stale-closure-prevention.md) — 1 KiB
-- [Automatic cleanup](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--automatic-cleanup.md) — 1 KiB
-- [Registering multiple hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--registering-multiple-hotkeys.md) — 3 KiB
-- [Metadata (name, description, and group)](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--metadata-name-description-and-group.md) — 2 KiB
-- [Introspecting registrations](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--introspecting-registrations.md) — 2 KiB
-- [The hotkey manager](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--the-hotkey-manager.md) — 1 KiB
+- [Register multiple hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--register-multiple-hotkeys.md) — 3 KiB
+- [Enable and disable hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--enable-and-disable-hotkeys.md) — 2 KiB
+- [Hotkey targets](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-targets.md) — 2 KiB
+- [Handle duplicate hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--handle-duplicate-hotkeys.md) — 2 KiB
+- [Describe hotkeys with `meta`](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--describe-hotkeys-with-meta.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->
-<a id="logical-keys-and-physical-positions"></a>
-<a id="basic-usage"></a>
-<a id="changing-a-binding"></a>
-<a id="updating-options"></a>
-<a id="capture-phase"></a>
-<a id="default-options"></a>
-<a id="why-these-defaults"></a>
-<a id="smart-input-handling-with-ignoreinputs"></a>
-<a id="hotkey-conflicts-and-conflictbehavior"></a>
-<a id="chord-and-sequence-options"></a>
-<a id="global-defaults-via-provider"></a>
+<a id="chords-and-sequences"></a>
+<a id="register-a-hotkey"></a>
+<a id="write-a-chord-as-a-string-or-an-object"></a>
 <a id="hotkey-options"></a>
-<a id="enabled"></a>
-<a id="preventdefault"></a>
-<a id="stoppropagation"></a>
-<a id="eventtype"></a>
-<a id="requirereset"></a>
-<a id="ignoreinputs"></a>
-<a id="target"></a>
-<a id="conflictbehavior"></a>
-<a id="platform"></a>
-<a id="stale-closure-prevention"></a>
-<a id="automatic-cleanup"></a>
-<a id="registering-multiple-hotkeys"></a>
-<a id="common-options-with-per-hotkey-overrides"></a>
-<a id="dynamic-hotkey-lists"></a>
-<a id="metadata-name-description-and-group"></a>
-<a id="introspecting-registrations"></a>
-<a id="the-hotkey-manager"></a>
+<a id="chord-and-sequence-options"></a>
+<a id="register-multiple-hotkeys"></a>
+<a id="share-options"></a>
+<a id="build-the-list-from-data"></a>
+<a id="enable-and-disable-hotkeys"></a>
+<a id="hotkey-targets"></a>
+<a id="a-target-is-not-a-scope"></a>
+<a id="handle-duplicate-hotkeys"></a>
+<a id="describe-hotkeys-with-meta"></a>

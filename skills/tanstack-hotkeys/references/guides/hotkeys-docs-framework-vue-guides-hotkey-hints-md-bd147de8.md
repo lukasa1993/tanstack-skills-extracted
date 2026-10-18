@@ -1,0 +1,118 @@
+# Hotkey Hints
+
+<a id="source-hotkeys-docs-framework-vue-guides-hotkey-hints-md"></a>
+
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+
+[Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
+
+Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `useHotkeyHint` returns a computed ref that's `true` while the user holds modifiers that belong to a hotkey. It's an optional helper, and it doesn't register anything, so use it alongside `useHotkey`.
+
+## Show a hint next to a button
+
+```vue
+<script setup lang="ts">
+import {
+  formatForDisplay,
+  useHotkey,
+  useHotkeyHint,
+} from '@tanstack/vue-hotkeys'
+
+const saveHotkey = 'Mod+S'
+
+useHotkey(saveHotkey, save)
+const showHint = useHotkeyHint(saveHotkey)
+</script>
+
+<template>
+  <button @click="save">
+    Save <kbd v-if="showHint">{{ formatForDisplay(saveHotkey) }}</kbd>
+  </button>
+</template>
+```
+
+While the user holds Command on macOS, or Control elsewhere, the button reads "Save ⌘ S" or "Save Ctrl+S". [Formatting & Display](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md) covers labels and keycaps.
+
+## When a hint shows
+
+- Holding any of the hotkey's modifiers shows the hint. For `Alt+Shift+[KeyK]`, holding Alt, Shift, or both shows it.
+- Holding a modifier the hotkey doesn't use hides the hint, so holding Control and Alt shows only the hints for hotkeys that use both.
+- Releasing every modifier, or the window losing focus, hides the hint.
+- Other held keys don't matter. AltGr never shows hints, because it types characters.
+- A hotkey without modifiers, such as `Escape` or `G`, never shows a hint.
+
+To show a hint only while every modifier is held, pass `exact`:
+
+```ts
+const showHint = useHotkeyHint('Alt+Shift+[KeyK]', { exact: true }) // Needs Alt and Shift
+```
+
+If the hotkey sets `platform`, pass the same `platform` to `useHotkeyHint`, so `Mod` resolves the same way. The hotkey and the options can also be refs or getters.
+
+## Hints for sequences
+
+A sequence shows its hint while the user holds the modifiers of its first step:
+
+```ts
+const showHint = useHotkeyHint(['Mod+K', 'Mod+C']) // true while Mod is held
+```
+
+## Hints for app hotkeys
+
+Pass an [app hotkey](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md) to show the user's current hotkey, including one they changed. An app hotkey with no hotkey assigned shows no hint. A small component keeps every button's hint the same:
+
+```vue
+<!-- Hint.vue -->
+<script setup lang="ts">
+import { computed } from 'vue'
+import {
+  formatForDisplay,
+  useAppHotkeys,
+  useHotkeyHint,
+} from '@tanstack/vue-hotkeys'
+import type { AppHotkeyId } from '@tanstack/vue-hotkeys'
+
+const props = defineProps<{ id: AppHotkeyId }>()
+const appHotkeys = useAppHotkeys()
+const appHotkey = computed(() => appHotkeys.value[props.id])
+const showHint = useHotkeyHint(appHotkey)
+</script>
+
+<template>
+  <kbd v-if="showHint && appHotkey.hotkey">
+    {{ formatForDisplay(appHotkey.hotkey) }}
+  </kbd>
+</template>
+```
+
+```vue
+<template>
+  <button @click="save">Save <Hint id="doc.save" /></button>
+</template>
+```
+
+## Hide hints for hotkeys that can't fire
+
+`useHotkeyHint` only looks at held keys. It doesn't know whether the hotkey is enabled, its scope is active, or its target has focus. When a hotkey can be off, combine the hint with the same state:
+
+```ts
+useHotkey(saveHotkey, save, { enabled: isDirty })
+const hint = useHotkeyHint(saveHotkey)
+const showHint = computed(() => hint.value && isDirty.value)
+```
+
+## Check held modifiers without the composable
+
+To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options:
+
+```ts
+import { getKeyStateTracker, matchesHeldModifiers } from '@tanstack/vue-hotkeys'
+
+const tracker = getKeyStateTracker()
+
+matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) // true while Mod is held
+```
+
+[Held Key State Helpers](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md) covers the tracker and the other held-key composables.
+
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/vue/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

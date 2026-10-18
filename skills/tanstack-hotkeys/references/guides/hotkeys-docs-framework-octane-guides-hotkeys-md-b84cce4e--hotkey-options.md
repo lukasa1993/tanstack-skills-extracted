@@ -1,64 +1,60 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Hotkey options
 
-### `enabled`
-
-Set `enabled` to false to suppress execution. The registration remains in the live registry, and changing this option updates its existing handle.
-
-### `preventDefault`
-
-Set `preventDefault: false` to preserve the browser's action. The default prevents actions such as the browser's Save Page dialog.
-
-### `stopPropagation`
-
-Set `stopPropagation: false` to allow an event to bubble to an ancestor target. This is independent of preventing the browser default.
-
-### `eventType`
-
-Set `eventType: 'keyup'` to execute when the key is released. The default is `'keydown'`.
-
-### `requireReset`
-
-Set `requireReset: true` for actions that must run once per press. The key must be released before another press can trigger the action.
-
-### `ignoreInputs`
-
-When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: Enter and Space on buttons and `<summary>`, Enter on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
-
-Use `ignoreInputs: true` to ignore typing targets even for Control/Meta shortcuts. Use `false` to allow a single key such as Enter inside an input. `'auto'`, the default, restores smart input handling.
-
-### `target`
-
-Targets can be an element, `document`, or `window`. A `null` target defers registration; an omitted target uses `document`. Changing the target moves the registration and removes listeners from the previous target when no registrations remain.
-
+Pass options as the third argument:
 
 ```tsx
-import { useState } from 'octane'
-import { useHotkey } from '@tanstack/octane-hotkeys'
+// Submit with Enter, even while focus is in a text field
+useHotkey('Enter', () => submit(), { ignoreInputs: false })
+```
 
-export function Panel() @{
-	const [target, setTarget] = useState<HTMLDivElement | null>(null)
-	useHotkey('Escape', () => console.log('Close focused panel'), { target })
-	<div>
-		<div ref={setTarget} tabIndex={0}>Focus here and press Escape.</div>
-	</div>
+| Option | Default | Description |
+| --- | --- | --- |
+| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#enable-and-disable-hotkeys). |
+| `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#hotkey-targets). |
+| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S` |
+| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
+| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
+| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
+| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#handle-duplicate-hotkeys). |
+| `scope` | The nearest provider's scope | The [scope](./hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md#source-hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md) the hotkey belongs to |
+| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
+| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#describe-hotkeys-with-meta). |
+
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`UseHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/octane/reference/type-aliases/UseHotkeyOptions.md) lists the types.
+
+To change a default for every hotkey in your app, pass `defaultOptions` to a `HotkeysProvider` at the root. Options passed to a hook override the provider's defaults:
+
+```tsx
+import { HotkeysProvider } from '@tanstack/octane-hotkeys'
+
+function Root() @{
+  <HotkeysProvider
+    defaultOptions={{ hotkey: { requireReset: true, timeout: 1500 } }}
+  >
+    <App />
+  </HotkeysProvider>
 }
 ```
 
-The callback ref updates state when the element mounts or changes. A ref object is not an accepted target.
+The provider is optional. Without one, every hotkey uses the built-in defaults in the table. See [HotkeysProvider and Scopes](./hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md#source-hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md) for nested defaults and for grouping hotkeys into scopes.
 
-### `conflictBehavior`
+### Chord and sequence options
 
-Duplicate registrations on the same target use one of these policies:
+Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects options for the other kind:
 
-- `'warn'`: log a warning and keep both registrations.
-- `'error'`: throw an error.
-- `'replace'`: replace the existing registration.
-- `'allow'`: keep both without warning.
+```tsx
+useHotkey('Escape', close, { requireReset: true }) // OK
+useHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
+useHotkey('Escape', close, { timeout: 500 }) // Type error
+```
 
-### `platform`
+Options that apply to many hotkeys at once, such as provider defaults, apply each of these to the matching kind only. In the provider example above, `requireReset` affects chords, and `timeout` affects sequences.
 
-Pass `'mac'`, `'windows'`, or `'linux'` to override detection. Use the same platform when formatting labels or calculating modifier hints.
+When the kind isn't known until runtime, such as a `Hotkey` loaded from settings, the hook accepts only the options that both kinds share.

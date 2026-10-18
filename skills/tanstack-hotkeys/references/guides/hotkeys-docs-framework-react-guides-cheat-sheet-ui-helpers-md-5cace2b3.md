@@ -1,0 +1,234 @@
+# Cheat Sheet Ui Helpers
+
+<a id="source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md"></a>
+
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+
+[Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
+
+A cheat sheet lists the shortcuts users can press. Build it from the same hotkeys that handle the key presses, and it stays correct when a hotkey changes. The helpers in this guide are optional, and each works on its own, so use only the ones your UI needs.
+
+TanStack Hotkeys gives you two lists to build from:
+
+- `useHotkeyRegistrations` returns the hotkeys registered right now. It works with plain `useHotkey` and `useHotkeys`, but it only knows about mounted components.
+- `useAppHotkeyList` returns every [app hotkey](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md) you declared, including hotkeys on pages that haven't rendered, with the status of each.
+
+Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md).
+
+## Name your hotkeys
+
+A cheat sheet needs a name for each hotkey. Pass one in `meta`, with an optional description and group:
+
+```tsx
+useHotkeys([
+  {
+    hotkey: 'Mod+S',
+    callback: () => save(),
+    options: { meta: { name: 'Save', group: 'File' } },
+  },
+  {
+    hotkey: 'Mod+Shift+S',
+    callback: () => saveAs(),
+    options: { meta: { name: 'Save as', group: 'File' } },
+  },
+  {
+    hotkey: ['G', 'H'],
+    callback: () => navigate({ to: '/' }),
+    options: { meta: { name: 'Go home', group: 'Navigation' } },
+  },
+])
+```
+
+`meta` doesn't change how a hotkey behaves. Devtools show it too.
+
+`meta` is typed as `HotkeyMeta`. To add fields of your own, such as an icon, extend it with declaration merging:
+
+```ts
+declare module '@tanstack/hotkeys' {
+  interface HotkeyMeta {
+    icon?: string
+  }
+}
+```
+
+## List the hotkeys on screen
+
+`useHotkeyRegistrations` returns every registered hotkey, and updates when hotkeys register, unregister, or change. Show the ones with a name:
+
+```tsx
+import {
+  formatForDisplay,
+  useHotkeyRegistrations,
+} from '@tanstack/react-hotkeys'
+
+function ShortcutList() {
+  const registrations = useHotkeyRegistrations().filter(
+    (reg) => reg.options.meta?.name && reg.options.enabled !== false,
+  )
+
+  return (
+    <dl>
+      {registrations.map((reg) => (
+        <div key={reg.id}>
+          <dt>{reg.options.meta?.name}</dt>
+          <dd>
+            <kbd>{formatForDisplay(reg.hotkey)}</kbd>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+```
+
+Filtering by name leaves out hotkeys you didn't mean to list, such as a dialog's `Escape`. Filtering out disabled hotkeys leaves only the ones that work right now.
+
+Each registration view has an `id`, the `hotkey`, its `options` (including `meta`, `enabled`, and `scope`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedChord`, and sequence views add `parsedSequence` and `matchedStepCount`, the number of steps the user has pressed so far. [Show sequences in your UI](./hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md#source-hotkeys-docs-framework-react-guides-sequences-md) uses it to show which keys the user has pressed.
+
+A hotkey that several components register, such as one per list row, appears once for each registration.
+
+If your app uses [scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md), also leave out hotkeys whose scope is inactive or suspended:
+
+```tsx
+import { getHotkeyManager } from '@tanstack/react-hotkeys'
+
+const manager = getHotkeyManager()
+
+const registrations = useHotkeyRegistrations().filter(
+  (reg) =>
+    reg.options.meta?.name &&
+    reg.options.enabled !== false &&
+    manager.isScopeActive(reg.options.scope),
+)
+```
+
+`useHotkeyRegistrations` updates when scopes change, so the list stays current. [Read scope state](./hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md#source-hotkeys-docs-framework-react-guides-hotkey-manager-md) covers `isScopeActive` and the rest of the manager's scope state.
+
+Registrations exist only while their components are mounted, so this list can't show shortcuts from other pages. To list those, declare them as app hotkeys.
+
+## List every app hotkey
+
+`useAppHotkeyList` returns every app hotkey in declaration order, whether or not anything has registered it. Each item has the `appHotkey`, with its current `hotkey` and its `meta`, plus a `status` and `isCustom`, which is `true` when the user changed the hotkey:
+
+```tsx
+import { formatForDisplay, useAppHotkeyList } from '@tanstack/react-hotkeys'
+
+function CheatSheet() {
+  const items = useAppHotkeyList()
+
+  return (
+    <ul>
+      {items.map(({ appHotkey, status, isCustom }) => (
+        <li key={appHotkey.id} data-status={status}>
+          {appHotkey.meta?.name}:{' '}
+          {appHotkey.hotkey ? formatForDisplay(appHotkey.hotkey) : 'Unassigned'}
+          {isCustom && ' (custom)'}
+        </li>
+      ))}
+    </ul>
+  )
+}
+```
+
+| Status | Meaning |
+| --- | --- |
+| `'active'` | At least one enabled registration |
+| `'suspended'` | Has an enabled registration, but none in an active scope |
+| `'disabled'` | Registered, but every registration has `enabled: false` |
+| `'inactive'` | Has a hotkey, but nothing has registered it |
+| `'unbound'` | No hotkey assigned |
+
+`useAppHotkeyList` needs a `HotkeysProvider` with `appHotkeys`. An app hotkey that many components register appears once, and its `registrations` array holds each live registration.
+
+To also list hotkeys that aren't app hotkeys, combine both lists. Registrations of app hotkeys have `options.appHotkeyId` set, so skip those:
+
+```tsx
+const undeclared = useHotkeyRegistrations().filter(
+  (reg) => reg.options.appHotkeyId === undefined && reg.options.meta?.name,
+)
+```
+
+## Group the list
+
+Group rows by `meta.group`:
+
+```tsx
+function CheatSheet() {
+  const items = useAppHotkeyList()
+  const groups = [...new Set(items.map((item) => item.appHotkey.meta?.group))]
+
+  return groups.map((group) => (
+    <section key={group ?? 'other'}>
+      <h3>{group ?? 'Other'}</h3>
+      <ul>
+        {items
+          .filter((item) => item.appHotkey.meta?.group === group)
+          .map(({ appHotkey }) => (
+            <li key={appHotkey.id}>...</li>
+          ))}
+      </ul>
+    </section>
+  ))
+}
+```
+
+To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md).
+
+## Open the cheat sheet with a hotkey
+
+Register a hotkey that opens the cheat sheet, and give the cheat sheet an exclusive scope. While it's open, the page's hotkeys pause, so a user who presses a shortcut while reading about it doesn't run it behind the dialog:
+
+```tsx
+import { useState } from 'react'
+import {
+  HotkeysProvider,
+  useAppHotkeys,
+  useHotkey,
+  useHotkeys,
+} from '@tanstack/react-hotkeys'
+
+// Declared with defineAppHotkeys:
+// 'help.shortcuts': { hotkey: 'Mod+/', meta: { name: 'Keyboard shortcuts', group: 'Help' } }
+
+function App() {
+  const appHotkeys = useAppHotkeys()
+  const [isOpen, setIsOpen] = useState(false)
+
+  useHotkey(appHotkeys['help.shortcuts'], () => setIsOpen(true))
+
+  return (
+    <>
+      <Main />
+      {isOpen && (
+        <HotkeysProvider scope="cheat-sheet" exclusive>
+          <CheatSheetDialog onClose={() => setIsOpen(false)} />
+        </HotkeysProvider>
+      )}
+    </>
+  )
+}
+
+function CheatSheetDialog({ onClose }: { onClose: () => void }) {
+  const appHotkeys = useAppHotkeys()
+
+  useHotkeys([
+    { hotkey: 'Escape', callback: onClose },
+    // The page's registration pauses while the cheat sheet is open, so close from here
+    { hotkey: appHotkeys['help.shortcuts'], callback: onClose },
+  ])
+
+  return (
+    <div role="dialog" aria-label="Keyboard shortcuts">
+      <CheatSheet />
+    </div>
+  )
+}
+```
+
+- The hotkey that opened the cheat sheet pauses with the rest of the page, so register it inside the dialog too, as above, to close the cheat sheet with the same keys.
+- `useAppHotkeyList` still lists every app hotkey. While the cheat sheet is open, the ones registered outside it report `'suspended'`, because they can't fire until it closes.
+- To keep the page's hotkeys working while the cheat sheet is open, leave out `exclusive`. The cheat sheet's own hotkeys still win, because its scope is newer. See [Exclusive scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md).
+
+`?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
+
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/react/kitchen-sink) has a cheat sheet with groups, statuses, and custom hotkeys.

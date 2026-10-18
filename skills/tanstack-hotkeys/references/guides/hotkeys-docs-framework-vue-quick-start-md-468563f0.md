@@ -2,162 +2,235 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
-## Installation
+This guide adds keyboard shortcuts to a Vue app. If you haven't installed TanStack Hotkeys yet, see [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md).
 
-Don't have TanStack Hotkeys installed yet? See the [Installation](./hotkeys-docs-installation-md-bb05b3dc.md#source-hotkeys-docs-installation-md) page for instructions.
+## Register a hotkey
 
-## Your first hotkey
-
-The `useHotkey` composable is the primary way to register keyboard shortcuts in Vue:
+TanStack Hotkeys needs no special setup. To register a keyboard shortcut, call `useHotkey` in the component that owns the action:
 
 ```vue
 <script setup lang="ts">
 import { useHotkey } from '@tanstack/vue-hotkeys'
 
-useHotkey('Mod+S', () => {
-  saveDocument()
-})
+useHotkey('Mod+S', () => saveDocument())
 </script>
 
 <template>
-  <div>Press Cmd+S (Mac) or Ctrl+S (Windows) to save</div>
+  <textarea />
 </template>
 ```
 
-The `Mod` modifier automatically resolves to `Meta` (Command) on macOS and `Control` on Windows/Linux, so your shortcuts work across platforms without extra logic.
+`Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
 
-## Common patterns
+That's all a hotkey needs. Providers, scopes, and the other features later in this guide are optional, so add them as your app grows.
 
-### Multiple hotkeys
+## Register several hotkeys
+
+When a component has more than one hotkey, register them together with `useHotkeys`:
 
 ```vue
 <script setup lang="ts">
-import { useHotkey } from '@tanstack/vue-hotkeys'
+import { useHotkeys } from '@tanstack/vue-hotkeys'
 
-useHotkey('Mod+S', () => save())
-useHotkey('Mod+Z', () => undo())
-useHotkey('Mod+Shift+Z', () => redo())
-useHotkey('Mod+F', () => openSearch())
-useHotkey('Escape', () => closeDialog())
+useHotkeys([
+  { hotkey: 'Mod+S', callback: () => save() },
+  { hotkey: 'Mod+Z', callback: () => undo() },
+  { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+])
 </script>
 ```
 
-### Scoped hotkeys with template refs
+`useHotkeys` also accepts a ref or getter that returns the array, so the list can come from reactive state and change length over time.
 
-```vue
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useHotkey } from '@tanstack/vue-hotkeys'
+## Sequences
 
-const panelRef = ref<HTMLDivElement | null>(null)
+Pass an array of chords to register a sequence, pressed one after another:
 
-useHotkey('Escape', () => closePanel(), { target: panelRef })
-</script>
-
-<template>
-  <div ref="panelRef" tabindex="0">
-    <p>Press Escape while focused here to close</p>
-  </div>
-</template>
-```
-
-### Conditional hotkeys
-
-```vue
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useHotkey } from '@tanstack/vue-hotkeys'
-
-const isOpen = ref(true)
-
-useHotkey('Escape', () => {
-  isOpen.value = false
-}, { enabled: isOpen })
-</script>
-```
-
-### Multi-key sequences
-
-```vue
-<script setup lang="ts">
-import { useHotkey } from '@tanstack/vue-hotkeys'
-
-// An array of chords registers a sequence
+```ts
 useHotkey(['G', 'G'], () => scrollToTop())
-useHotkey(['G', 'Shift+G'], () => scrollToBottom())
-</script>
 ```
 
-For several sequences or a list that changes at runtime, prefer a single `useHotkeys([...])` call (see the [Sequences guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)).
+Each step must follow the previous one within a second.
 
-### Tracking held keys
+`useHotkeys` accepts chords and sequences in the same array:
 
-```vue
-<script setup lang="ts">
-import { useHeldKeys, useKeyHold } from '@tanstack/vue-hotkeys'
-
-const heldKeys = useHeldKeys()
-const isShiftHeld = useKeyHold('Shift')
-</script>
-
-<template>
-  <div class="status-bar">
-    <span v-if="isShiftHeld">Shift mode active</span>
-    <span v-if="heldKeys.length > 0">Keys: {{ heldKeys.join('+') }}</span>
-  </div>
-</template>
+```ts
+useHotkeys([
+  { hotkey: 'Mod+K', callback: () => openSearch() },
+  { hotkey: ['G', 'H'], callback: () => goHome() },
+  { hotkey: ['G', 'S'], callback: () => goToSettings() },
+])
 ```
 
-### Displaying hotkeys in the UI
+## Show the shortcut
+
+Label a button or menu item with `formatForDisplay`. Format the same value you register, so the label always matches the binding:
 
 ```vue
 <script setup lang="ts">
 import { formatForDisplay, useHotkey } from '@tanstack/vue-hotkeys'
+import type { HotkeyChord } from '@tanstack/vue-hotkeys'
 
-useHotkey('Mod+S', () => save())
+const saveHotkey: HotkeyChord = 'Mod+S'
+
+useHotkey(saveHotkey, () => save())
 </script>
 
 <template>
-  <button>
-    Save <kbd>{{ formatForDisplay('Mod+S') }}</kbd>
+  <button @click="save">
+    Save <kbd>{{ formatForDisplay(saveHotkey) }}</kbd>
   </button>
 </template>
 ```
 
-## Default options provider
+The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-Wrap part of your app with `HotkeysProvider` to set default options for all Vue composables in that subtree:
+## Hotkeys follow your components
+
+A hotkey is registered when the component that calls the composable mounts, and unregistered when that component unmounts. Put each hotkey in the component it belongs to, so it is active only while that component is mounted:
 
 ```vue
+<!-- App.vue -->
+<script setup lang="ts">
+import { ref } from 'vue'
+import SettingsDialog from './SettingsDialog.vue'
+
+const isOpen = ref(false)
+</script>
+
+<template>
+  <button @click="isOpen = true">Settings</button>
+  <SettingsDialog v-if="isOpen" @close="isOpen = false" />
+</template>
+```
+
+```vue
+<!-- SettingsDialog.vue -->
+<script setup lang="ts">
+import { useHotkey } from '@tanstack/vue-hotkeys'
+
+const emit = defineEmits<{ close: [] }>()
+
+// Registered only while the dialog is mounted
+useHotkey('Escape', () => emit('close'))
+</script>
+
+<template>
+  <div role="dialog">...</div>
+</template>
+```
+
+For a condition that doesn't match a component, pass `enabled`. It accepts a ref or a getter:
+
+```ts
+useHotkey('Mod+S', () => save(), { enabled: hasUnsavedChanges })
+```
+
+When a group of hotkeys turns on and off together, put them in a scope instead. See [Add providers and scopes](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#add-providers-and-scopes-optional).
+
+## Element hotkeys
+
+A hotkey's default `target` is `document`, so it works wherever focus is on the page. To limit it to one element, pass a template ref as `target`:
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useHotkey } from '@tanstack/vue-hotkeys'
+
+const panel = ref<HTMLDivElement | null>(null)
+
+// Fires only while the panel, or something inside it, has focus
+useHotkey('Escape', () => closePanel(), { target: panel })
+</script>
+
+<template>
+  <div ref="panel" tabindex="0">...</div>
+</template>
+```
+
+The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
+
+## Add providers and scopes (optional)
+
+So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component is mounted. You don't need a provider for that.
+
+Add `HotkeysProvider` at the root to set default options for every hotkey inside it, such as more time between sequence steps:
+
+```vue
+<!-- App.vue -->
 <script setup lang="ts">
 import { HotkeysProvider } from '@tanstack/vue-hotkeys'
 </script>
 
 <template>
-  <HotkeysProvider
-    :default-options="{
-      hotkey: { preventDefault: true, timeout: 1500 },
-      hotkeyRecorder: { onCancel: () => console.log('Recording cancelled') },
-    }"
-  >
+  <HotkeysProvider :default-options="{ hotkey: { timeout: 1500 } }">
     <AppContent />
   </HotkeysProvider>
 </template>
 ```
 
-## Declaring app hotkeys
+Add more providers deeper in your app to group hotkeys into scopes. Every hotkey inside a provider with a `scope` belongs to that scope. Make the scope `exclusive`, and while it is mounted, only its hotkeys work. Use one for dialogs and popups that should own the keyboard:
 
-To list every hotkey in a cheat sheet, including hotkeys whose components haven't mounted, and to let users customize them, declare them once with `defineAppHotkeys` and provide them with `HotkeysProvider`. See the [App Hotkeys Guide](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md).
+```vue
+<!-- DocumentView.vue -->
+<script setup lang="ts">
+import { ref } from 'vue'
+import { HotkeysProvider } from '@tanstack/vue-hotkeys'
+import ConfirmDialog from './ConfirmDialog.vue'
+
+const isConfirming = ref(false)
+</script>
+
+<template>
+  <button @click="isConfirming = true">Delete</button>
+  <HotkeysProvider v-if="isConfirming" scope="confirm-dialog" exclusive>
+    <ConfirmDialog @confirm="remove" @cancel="isConfirming = false" />
+  </HotkeysProvider>
+</template>
+```
+
+```vue
+<!-- ConfirmDialog.vue -->
+<script setup lang="ts">
+import { useHotkeys } from '@tanstack/vue-hotkeys'
+
+const emit = defineEmits<{ confirm: []; cancel: [] }>()
+
+useHotkeys([
+  { hotkey: 'Enter', callback: () => emit('confirm') },
+  { hotkey: 'Escape', callback: () => emit('cancel') },
+])
+</script>
+
+<template>
+  <div role="dialog">...</div>
+</template>
+```
+
+While the dialog is open, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog closes, they work again.
+
+A composable uses the nearest provider above the component that calls it, so put the provider around the dialog component, not inside its template. [HotkeysProvider and Scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md) covers nested scopes, precedence, and turning a scope off without unmounting it.
 
 ## Next steps
 
-- [Hotkeys Guide](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md)
-- [Sequences Guide](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md)
-- [Hotkey Recording Guide](./hotkeys-docs-framework-vue-guides-hotkey-recording-md-d5805b30.md#source-hotkeys-docs-framework-vue-guides-hotkey-recording-md)
-- [App Hotkeys Guide](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md)
-- [Key State Tracking Guide](./hotkeys-docs-framework-vue-guides-key-state-tracking-md-aab0ffa7.md#source-hotkeys-docs-framework-vue-guides-key-state-tracking-md)
-- [Formatting & Display Guide](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md)
+Learn more about the basics:
+
+- [Hotkeys](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md): chords and sequences, options, and element hotkeys
+- [Sequences](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md): Vim-style multi-key shortcuts
+- [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
+- [Formatting & Display](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md): labels and keycaps for every platform
+- [Held Key State Helpers](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md): show which keys are held
+- [Hotkey Hints](./hotkeys-docs-framework-vue-guides-hotkey-hints-md-bd147de8.md#source-hotkeys-docs-framework-vue-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md): inspect registered hotkeys, scopes, and held keys while you develop
+
+As your app grows:
+
+- [HotkeysProvider and Scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
+- [App Hotkeys](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
+- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md#source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Custom Hotkey Recording](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Manager](./hotkeys-docs-framework-vue-guides-hotkey-manager-md-0dad2837.md#source-hotkeys-docs-framework-vue-guides-hotkey-manager-md): register and inspect hotkeys outside components

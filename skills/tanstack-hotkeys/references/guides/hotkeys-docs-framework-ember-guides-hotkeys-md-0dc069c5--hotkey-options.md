@@ -1,76 +1,63 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Hotkey options
 
-### `enabled`
+Pass options as named arguments:
 
-Set `enabled` to false to suppress execution. The registration remains in the live registry, and changing this option updates its existing handle.
+```hbs
+{{! Submit with Enter, even while focus is in a text field }}
+{{useHotkey 'Enter' this.submit ignoreInputs=false}}
+```
 
-### `preventDefault`
+| Option | Default | Description |
+| --- | --- | --- |
+| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#enable-and-disable-hotkeys). |
+| `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#hotkey-targets). |
+| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S` |
+| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
+| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
+| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
+| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#handle-duplicate-hotkeys). |
+| `scope` | `'global'` | The scope the hotkey belongs to. See [Add defaults and scopes](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#source-hotkeys-docs-framework-ember-quick-start-md). |
+| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
+| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#describe-hotkeys-with-meta). |
 
-Set `preventDefault: false` to preserve the browser's action. The default prevents actions such as the browser's Save Page dialog.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`EmberHotkeyCommonOptions` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/ember/reference/type-aliases/EmberHotkeyCommonOptions.md) lists the types.
 
-### `stopPropagation`
-
-Set `stopPropagation: false` to allow an event to bubble to an ancestor target. This is independent of preventing the browser default.
-
-### `eventType`
-
-Set `eventType: 'keyup'` to execute when the key is released. The default is `'keydown'`.
-
-### `requireReset`
-
-Set `requireReset: true` for actions that must run once per press. The key must be released before another press can trigger the action.
-
-### `ignoreInputs`
-
-When `ignoreInputs` is enabled, hotkeys also skip keys that a focused control inside their `target` uses itself: Enter and Space on buttons and `<summary>`, Enter on links, and navigation keys in ARIA widgets such as menus, listboxes, tabs, and grids. A hotkey targeted at the control itself still receives them, and `ignoreInputs: false` handles every key. See [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full list.
-
-Use `ignoreInputs: true` to ignore typing targets even for Control/Meta shortcuts. Use `false` to allow a single key such as Enter inside an input. `'auto'`, the default, restores smart input handling.
-
-### `target`
-
-Targets can be an element, `document`, or `window`. A `null` target defers registration; an omitted target uses `document`. Changing the target moves the registration and removes listeners from the previous target when no registrations remain.
-
-
-For shortcuts scoped to a rendered element, use the `onHotkey` modifier. It registers on that element and unregisters when the element is removed. Named options stay reactive.
+To change a default for several hotkeys, pass default options to `createHotkeysScope`, and use the helpers and modifiers it returns. Options passed to a helper override the defaults:
 
 ```gts
 import Component from '@glimmer/component'
-import { onHotkey } from '@tanstack/ember-hotkeys'
+import { array } from '@ember/helper'
+import { createHotkeysScope } from '@tanstack/ember-hotkeys'
 
-export default class Panel extends Component {
-	close = () => console.log('Close focused panel')
+export default class Editor extends Component {
+  hotkeys = createHotkeysScope({ hotkey: { requireReset: true, timeout: 1500 } })
+  scrollToTop = () => window.scrollTo({ top: 0 })
 
-	<template>
-		<div tabindex="0" {{onHotkey 'Escape' this.close}}>
-			Focus here and press Escape.
-		</div>
-	</template>
+  <template>
+    {{this.hotkeys.useHotkey (array 'G' 'G') this.scrollToTop}}
+  </template>
 }
 ```
 
-Use `onHotkeys` for a changing list:
+Pass `this.hotkeys` to child components, such as `@hotkeys={{this.hotkeys}}`, so they share the same defaults. Without defaults, every hotkey uses the built-in defaults in the table. `createHotkeysScope` only sets defaults. It doesn't create a hotkey scope.
 
-```hbs
-<fieldset {{onHotkeys this.definitions ignoreInputs=false}}>
-	<textarea></textarea>
-</fieldset>
+### Chord and sequence options
+
+Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. Named arguments accept both, and each applies only to the matching kind, so `timeout` on a chord does nothing. In a `useHotkeys` array, each definition's `options` are typed by its `hotkey`, so TypeScript rejects options for the other kind:
+
+```ts
+shortcuts: Array<EmberHotkeyDefinition> = [
+  { hotkey: 'Escape', callback: close, options: { requireReset: true } }, // OK
+  { hotkey: ['G', 'G'], callback: scrollToTop, options: { timeout: 500 } }, // OK
+  { hotkey: 'Escape', callback: close, options: { timeout: 500 } }, // Type error
+]
 ```
 
-Both modifiers use their containing element as the target, including for individual definitions. Use the `useHotkey` and `useHotkeys` helpers when you need a different target such as `window`. The modifiers are also available from `createHotkeysScope` and inherit its `hotkey` defaults.
-
-### `conflictBehavior`
-
-Duplicate registrations on the same target use one of these policies:
-
-- `'warn'`: log a warning and keep both registrations.
-- `'error'`: throw an error.
-- `'replace'`: replace the existing registration.
-- `'allow'`: keep both without warning.
-
-### `platform`
-
-Pass `'mac'`, `'windows'`, or `'linux'` to override detection. Use the same platform when formatting labels or calculating modifier hints.
+Options that apply to many hotkeys at once, such as `createHotkeysScope` defaults, also apply each of these to the matching kind only. In the defaults example above, `requireReset` affects chords, and `timeout` affects sequences.

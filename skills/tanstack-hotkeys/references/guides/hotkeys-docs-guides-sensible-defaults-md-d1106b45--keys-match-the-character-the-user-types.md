@@ -1,6 +1,6 @@
 # Sensible Defaults — Keys match the character the user types
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.15.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
 
 ## Keys match the character the user types
 
@@ -16,4 +16,22 @@ ASCII letters never fall back. If a key types `x`, it matches `X` and nothing el
 
 Letters match without regard to case: `S` and `s` are the same binding.
 
-When a shortcut should follow a position rather than a character, such as `W`/`A`/`S`/`D` movement in a game, use a physical binding with a bracketed code: `[KeyW]`. Physical bindings match `event.code` exactly and ignore the layout.
+### Match a key's position instead
+
+When a shortcut should follow a position rather than a character, such as `W`/`A`/`S`/`D` movement in a game, use a physical binding. Physical bindings match `event.code` exactly and ignore the layout:
+
+| Binding | Matches |
+| --- | --- |
+| `Mod+S` or `{ key: 'S', mod: true }` | The character S (`event.key`), with the fallbacks above |
+| `Mod+[KeyS]` or `{ code: 'KeyS', mod: true }` | The key in the S position on a US layout (`event.code`) |
+| `Enter` | Either Enter key, including the numpad's |
+| `[Enter]` or `[NumpadEnter]` | Only that Enter key |
+
+On a layout where the `KeyQ` position types `a`, `A` follows the character and `[KeyQ]` follows the position.
+
+- In strings, every physical code goes in brackets, including codes that share a name with a logical key, such as `[Enter]` and `[F13]`. Codes are type-checked and autocomplete in your editor.
+- In objects, use the `code` field for a physical binding and `key` for a logical one. A binding has one or the other, never both, and `key` never takes brackets.
+- In a chord's callback, `context.parsedChord.code` is set only for physical bindings. The same goes for each step in a sequence's `context.parsedSequence`. Check `code !== undefined` before reading it.
+- `formatForDisplay` labels physical bindings without brackets, so `Mod+[KeyS]` displays as `⌘ S` on macOS. The stored binding keeps its brackets.
+
+The [hotkey recorder](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#recording-captures-what-the-user-pressed) records positions by default, so recorded hotkeys are physical bindings.
