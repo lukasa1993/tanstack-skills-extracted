@@ -2,7 +2,7 @@
 
 <a id="source-intent-docs-cli-intent-load-md"></a>
 
-Release-matched documentation · `@tanstack/intent@0.5.5`.
+Release-matched documentation · `@tanstack/intent@0.5.6`.
 
 [Topic index](../consumer-workflow.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-db"></a>
 
-Published skill · `@tanstack/angular-db@0.2.10`.
+Published skill · `@tanstack/angular-db@0.2.11`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -91,7 +91,7 @@ const query = injectLiveQuery({
 })
 ```
 
-A bare `{ query }` config defaults to `startSync: true` and `gcTime: 0`, like
+A bare `{ query }` config defaults to `startSync: true` and `gcTime: 1`, like
 the query-function overload. Explicit values in the config override those
 defaults.
 

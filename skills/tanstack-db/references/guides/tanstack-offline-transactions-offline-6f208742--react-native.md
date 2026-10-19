@@ -1,6 +1,6 @@
 # Offline — React Native
 
-[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.1.2`.
+[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.1.3`.
 
 ## React Native
 
