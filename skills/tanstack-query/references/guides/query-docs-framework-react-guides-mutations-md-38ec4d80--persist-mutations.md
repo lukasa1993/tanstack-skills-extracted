@@ -1,6 +1,6 @@
 # Mutations — Persist mutations
 
-[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.104.4`.
+[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.104.5`.
 
 ## Persist mutations
 
@@ -64,7 +64,7 @@ queryClient.resumePausedMutations()
 
 ### Persisting Offline mutations
 
-If you persist offline mutations with the [persistQueryClient plugin](https://github.com/TanStack/query/blob/12199722dc3f7443b7bbb575611dce59cfd08534/docs/framework/react/plugins/persistQueryClient.md), mutations cannot be resumed when the page is reloaded unless you provide a default mutation function.
+If you persist offline mutations with the [persistQueryClient plugin](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/react/plugins/persistQueryClient.md), mutations cannot be resumed when the page is reloaded unless you provide a default mutation function.
 
 [//]: # 'PersistOfflineIntro'
 
@@ -73,7 +73,7 @@ This is a technical limitation. When persisting to an external storage, only the
 [//]: # 'Example11'
 
 ```tsx
-const persister = createSyncStoragePersister({
+const persister = createAsyncStoragePersister({
   storage: window.localStorage,
 })
 const queryClient = new QueryClient({
@@ -110,6 +110,6 @@ export default function App() {
 [//]: # 'Example11'
 [//]: # 'OfflineExampleLink'
 
-We also have an extensive [offline example](https://github.com/TanStack/query/blob/12199722dc3f7443b7bbb575611dce59cfd08534/examples/react/offline/README.md) that covers both queries and mutations.
+We also have an extensive [offline example](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/react/offline/README.md) that covers both queries and mutations.
 
 [//]: # 'OfflineExampleLink'

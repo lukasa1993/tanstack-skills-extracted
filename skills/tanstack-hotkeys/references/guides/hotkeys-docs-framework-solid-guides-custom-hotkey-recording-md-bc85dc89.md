@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -240,6 +240,6 @@ function ShortcutSettings() {
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md). The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/solid/reference/functions/createHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md). The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/framework/solid/reference/functions/createHotkeyRecorder.md) lists the types.
 
-The [createHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/solid/createHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/solid/createHotkeyRecorder-sequences) records sequences.
+The [createHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/solid/createHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/solid/createHotkeyRecorder-sequences) records sequences.

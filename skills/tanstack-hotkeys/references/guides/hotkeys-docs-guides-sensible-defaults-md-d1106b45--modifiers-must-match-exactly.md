@@ -1,6 +1,6 @@
 # Sensible Defaults — Modifiers must match exactly
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 ## Modifiers must match exactly
 
@@ -10,5 +10,5 @@ The exception is Shift that is needed to type a symbol. On a US layout, `?` is t
 
 Two kinds of key events never match ordinary shortcuts:
 
-- **AltGr.** On Windows and Linux, AltGr types characters such as `@` and `€` on many layouts and reports itself as Control+Alt. Those key presses do not trigger `Control+Alt` shortcuts, so typing an email address does not run a command.
+- **AltGr.** On Windows and Linux, AltGr types characters such as `@` and `€` on many layouts. A character it types matches a binding for that character, but never a `Control+Alt` shortcut, so typing an email address does not run a command. When AltGr+key types nothing new, such as AltGr+Home, or AltGr+F on a layout with nothing on that key, it does not fire `Home` or `F`. Windows reports AltGr as Control+Alt, so there it fires `Control+Alt` shortcuts instead: AltGr+Home triggers `Control+Alt+Home`, as in native Windows apps.
 - **IME composition.** While the user composes text with an input method editor, such as for Japanese, Chinese, or Korean, character and physical bindings do not fire. Named keys such as `Escape` still do.

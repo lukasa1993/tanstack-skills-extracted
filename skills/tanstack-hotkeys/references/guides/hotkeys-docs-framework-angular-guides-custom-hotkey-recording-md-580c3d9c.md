@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -251,6 +251,6 @@ export class ShortcutSettingsComponent {
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, pass `hotkeyRecorder` options to `provideHotkeys`. See [Set default options](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md). The [`injectHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/framework/angular/reference/functions/injectHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, pass `hotkeyRecorder` options to `provideHotkeys`. See [Set default options](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md). The [`injectHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/framework/angular/reference/functions/injectHotkeyRecorder.md) lists the types.
 
-The [injectHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/angular/injectHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/angular/injectHotkeyRecorder-sequences) records sequences.
+The [injectHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/angular/injectHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/angular/injectHotkeyRecorder-sequences) records sequences.

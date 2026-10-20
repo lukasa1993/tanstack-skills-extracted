@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -174,4 +174,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `useAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/AppHotkeysStore.md) to use it directly.

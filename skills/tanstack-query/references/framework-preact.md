@@ -6,11 +6,11 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Mutations](./guides/query-docs-framework-preact-guides-mutations-md-0f3744ef.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Optimistic Updates](./guides/query-docs-framework-preact-guides-optimistic-updates-md-4f4cdba0.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Queries](./guides/query-docs-framework-preact-guides-queries-md-69aa4ee2.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Query Keys](./guides/query-docs-framework-preact-guides-query-keys-md-351275cd.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Query Options](./guides/query-docs-framework-preact-guides-query-options-md-d05e4e86.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Installation](./guides/query-docs-framework-preact-installation-md-474fffb7.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Overview](./guides/query-docs-framework-preact-overview-md-f9012a78.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
-| [Quick Start](./guides/query-docs-framework-preact-quick-start-md-cb17a3a2.md) | Release-matched documentation | `@tanstack/preact-query@5.104.4` |
+| [Mutations](./guides/query-docs-framework-preact-guides-mutations-md-0f3744ef.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Optimistic Updates](./guides/query-docs-framework-preact-guides-optimistic-updates-md-4f4cdba0.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Queries](./guides/query-docs-framework-preact-guides-queries-md-69aa4ee2.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Query Keys](./guides/query-docs-framework-preact-guides-query-keys-md-351275cd.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Query Options](./guides/query-docs-framework-preact-guides-query-options-md-d05e4e86.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Installation](./guides/query-docs-framework-preact-installation-md-474fffb7.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Overview](./guides/query-docs-framework-preact-overview-md-f9012a78.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |
+| [Quick Start](./guides/query-docs-framework-preact-quick-start-md-cb17a3a2.md) | Release-matched documentation | `@tanstack/preact-query@5.104.5` |

@@ -1,6 +1,6 @@
 # Build Cloudflare Artifact Store — 2. ArtifactStore backed by D1
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.9.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-artifact-store-60c47cfe.md) · Published skill · `@tanstack/ai-persistence@0.10.0`.
 
 ## 2. ArtifactStore backed by D1
 

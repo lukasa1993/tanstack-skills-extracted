@@ -1,6 +1,6 @@
 # Stores — Choose a shape
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.9.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@0.10.0`.
 
 ## Choose a shape
 

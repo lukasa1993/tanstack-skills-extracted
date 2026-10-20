@@ -2,13 +2,76 @@
 
 <a id="source-query-docs-framework-preact-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.104.4`.
+Release-matched documentation · `@tanstack/preact-query@5.104.5`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
-## Canonical guidance
+[//]: # 'Example'
 
-This source is an exact duplicate. Read [Optimistic Updates](./query-docs-framework-preact-guides-optimistic-updates-md-4f4cdba0.md).
+If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/preact/simple/README.md)
 
+```tsx
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/preact-query'
+import { render } from 'preact'
+import { getTodos, postTodo } from '../my-api'
 
-<!-- Original source anchors retained for inbound links. -->
+// Create a client
+const queryClient = new QueryClient()
+
+function App() {
+  return (
+    // Provide the client to your App
+    <QueryClientProvider client={queryClient}>
+      <Todos />
+    </QueryClientProvider>
+  )
+}
+
+function Todos() {
+  // Access the client
+  const queryClient = useQueryClient()
+
+  // Queries
+  const query = useQuery({ queryKey: ['todos'], queryFn: getTodos })
+
+  // Mutations
+  const mutation = useMutation({
+    mutationFn: postTodo,
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries({ queryKey: ['todos'] })
+    },
+  })
+
+  return (
+    <div>
+      <ul>
+        {query.data?.map((todo) => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
+      </ul>
+
+      <button
+        onClick={() => {
+          mutation.mutate({
+            id: Date.now(),
+            title: 'Do Laundry',
+          })
+        }}
+      >
+        Add Todo
+      </button>
+    </div>
+  )
+}
+
+render(<App />, document.getElementById('root'))
+```
+
+[//]: # 'Example'

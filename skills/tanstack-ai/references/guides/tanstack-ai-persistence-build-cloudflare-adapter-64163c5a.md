@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-cloudflare-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@0.9.0`.
+Published skill · `@tanstack/ai-persistence@0.10.0`.
 
 [Topic index](../persistence-cloudflare.md) · [Source provenance](../SOURCES.md)
 

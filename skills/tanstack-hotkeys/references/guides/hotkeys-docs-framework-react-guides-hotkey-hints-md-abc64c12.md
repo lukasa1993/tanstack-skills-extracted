@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -110,4 +110,4 @@ matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) // true while Mod is held
 
 [Held Key State Helpers](./hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md#source-hotkeys-docs-framework-react-guides-held-key-state-helpers-md) covers the tracker and the other held-key hooks.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/react/kitchen-sink) shows hints on its navigation and toolbar buttons, and keeps them current when users change their hotkeys.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/react/kitchen-sink) shows hints on its navigation and toolbar buttons, and keeps them current when users change their hotkeys.

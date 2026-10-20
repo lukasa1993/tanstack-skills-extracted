@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-overview-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.104.4`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.104.5`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -61,7 +61,7 @@ On a more technical note, TanStack Query will likely:
 
 In the example below, you can see TanStack Query in its most basic and simple form being used to fetch the GitHub stats for the TanStack Query GitHub project itself:
 
-[Open in StackBlitz](https://stackblitz.com/github/TanStack/query/tree/12199722dc3f7443b7bbb575611dce59cfd08534/examples/angular/simple)
+[Open in StackBlitz](https://stackblitz.com/github/TanStack/query/tree/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/angular/simple)
 
 ```angular-ts
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
@@ -112,4 +112,4 @@ interface Response {
 
 ## You talked me into it, so what now?
 
-- Learn TanStack Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-angular-installation-md-c0c2b309.md#source-query-docs-framework-angular-installation-md) and [API Reference](https://github.com/TanStack/query/blob/12199722dc3f7443b7bbb575611dce59cfd08534/docs/framework/angular/reference/functions/injectQuery.md)
+- Learn TanStack Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-angular-installation-md-c0c2b309.md#source-query-docs-framework-angular-installation-md) and [API Reference](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/angular/reference/functions/injectQuery.md)

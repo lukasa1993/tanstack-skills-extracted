@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -189,4 +189,4 @@ An owner works without a running Alpine app, so a test can create one directly. 
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. Passing it to `createHotkeysScope` sets it for every hotkey on that owner.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.

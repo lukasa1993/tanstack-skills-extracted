@@ -2,6 +2,6 @@
 
 <a id="source-query-docs-framework-vue-guides-optimistic-updates-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.104.4`.
+Release-matched documentation · `@tanstack/vue-query@5.104.5`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)

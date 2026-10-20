@@ -1,6 +1,6 @@
 # Ai Mcp — MCP input request
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.1`.
 
 ## MCP input request
 

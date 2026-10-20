@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -197,4 +197,4 @@ it('saves with Mod+S', () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for every hotkey in a test, add `provideHotkeys({ defaultOptions: { hotkey: { platform: 'mac' } } })` to the testing module's providers.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.

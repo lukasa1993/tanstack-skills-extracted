@@ -1,6 +1,6 @@
 # Hotkeys — Chords and sequences
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 ## Chords and sequences
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -259,4 +259,4 @@ The hotkeys [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-doc
 
 Your app doesn't need to track scopes itself. If you want to show scope state anyway, read it from the hotkey manager. See [Read scope state](./hotkeys-docs-framework-octane-guides-hotkey-manager-md-1ee89e7f.md#source-hotkeys-docs-framework-octane-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/ad56a4b0dbf3c34d8552eca2cc88c5c7000d520a/examples/octane/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/octane/scopes) for nested, enabled, and exclusive scopes together.

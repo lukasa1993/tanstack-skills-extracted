@@ -1,6 +1,6 @@
 # Build Cloudflare Adapter — wrangler bindings
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.9.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-cloudflare-adapter-64163c5a.md) · Published skill · `@tanstack/ai-persistence@0.10.0`.
 
 ## wrangler bindings
 

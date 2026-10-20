@@ -6,11 +6,11 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Mutations](./guides/query-docs-framework-react-guides-mutations-md-38ec4d80.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Optimistic Updates](./guides/query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Queries](./guides/query-docs-framework-react-guides-queries-md-4c7087b8.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Query Keys](./guides/query-docs-framework-react-guides-query-keys-md-2e55d5aa.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Query Options](./guides/query-docs-framework-react-guides-query-options-md-e9cc42b7.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Installation](./guides/query-docs-framework-react-installation-md-ff0427b6.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Overview](./guides/query-docs-framework-react-overview-md-c65b979c.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
-| [Quick Start](./guides/query-docs-framework-react-quick-start-md-19b9db31.md) | Release-matched documentation | `@tanstack/react-query@5.104.4` |
+| [Mutations](./guides/query-docs-framework-react-guides-mutations-md-38ec4d80.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Optimistic Updates](./guides/query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Queries](./guides/query-docs-framework-react-guides-queries-md-4c7087b8.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Query Keys](./guides/query-docs-framework-react-guides-query-keys-md-2e55d5aa.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Query Options](./guides/query-docs-framework-react-guides-query-options-md-e9cc42b7.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Installation](./guides/query-docs-framework-react-installation-md-ff0427b6.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Overview](./guides/query-docs-framework-react-overview-md-c65b979c.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |
+| [Quick Start](./guides/query-docs-framework-react-quick-start-md-19b9db31.md) | Release-matched documentation | `@tanstack/react-query@5.104.5` |

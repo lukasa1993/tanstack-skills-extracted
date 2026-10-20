@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.69.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.70.0`.
 
 ## Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`
 

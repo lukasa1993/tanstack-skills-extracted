@@ -1,6 +1,6 @@
 # Hotkeys — Enable and disable hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.16.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
 
 ## Enable and disable hotkeys
 

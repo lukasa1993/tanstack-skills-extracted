@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-reactivity-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.104.4`.
+Release-matched documentation · `@tanstack/vue-query@5.104.5`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -160,7 +160,7 @@ export function useUserProjects(userId: MaybeRef<string>) {
 }
 ```
 
-More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/12199722dc3f7443b7bbb575611dce59cfd08534/docs/framework/vue/reference/functions/useQuery.md) page.
+More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/vue/reference/functions/useQuery.md) page.
 
 ### Immutability
 

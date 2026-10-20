@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.104.4`.
+Release-matched documentation · `@tanstack/react-query@5.104.5`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -10,11 +10,11 @@ This code snippet very briefly illustrates the 3 core concepts of React Query:
 
 - [Queries](./query-docs-framework-react-guides-queries-md-4c7087b8.md#source-query-docs-framework-react-guides-queries-md)
 - [Mutations](./query-docs-framework-react-guides-mutations-md-38ec4d80.md#source-query-docs-framework-react-guides-mutations-md)
-- [Query Invalidation](https://github.com/TanStack/query/blob/12199722dc3f7443b7bbb575611dce59cfd08534/docs/framework/react/guides/query-invalidation.md)
+- [Query Invalidation](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/react/guides/query-invalidation.md)
 
 [//]: # 'Example'
 
-If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/12199722dc3f7443b7bbb575611dce59cfd08534/examples/react/simple/README.md)
+If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/react/simple/README.md)
 
 ```tsx
 import {
@@ -24,6 +24,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { createRoot } from 'react-dom/client'
 import { getTodos, postTodo } from '../my-api'
 
 // Create a client
@@ -76,7 +77,7 @@ function Todos() {
   )
 }
 
-render(<App />, document.getElementById('root'))
+createRoot(document.getElementById('root')).render(<App />)
 ```
 
 [//]: # 'Example'

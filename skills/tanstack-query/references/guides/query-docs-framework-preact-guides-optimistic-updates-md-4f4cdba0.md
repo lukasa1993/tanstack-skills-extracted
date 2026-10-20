@@ -2,6 +2,6 @@
 
 <a id="source-query-docs-framework-preact-guides-optimistic-updates-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.104.4`.
+Release-matched documentation · `@tanstack/preact-query@5.104.5`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
