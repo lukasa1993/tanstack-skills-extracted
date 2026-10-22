@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/ai-mcp@0.9.1
+Published package: @tanstack/ai-mcp@0.9.2
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

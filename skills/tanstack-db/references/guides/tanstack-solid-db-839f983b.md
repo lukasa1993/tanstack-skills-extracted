@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-db"></a>
 
-Published skill · `@tanstack/solid-db@0.3.11`.
+Published skill · `@tanstack/solid-db@0.3.12`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-db"></a>
 
-Published skill · `@tanstack/vue-db@0.3.11`.
+Published skill · `@tanstack/vue-db@0.3.12`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

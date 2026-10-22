@@ -1,6 +1,6 @@
 # Ai Sandbox — Providers
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.24`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@0.5.25`.
 
 ## Providers
 
@@ -18,3 +18,9 @@ rename/exists), `git` (clone/status/add/commit/push/pull/branch), `process`
 `snapshot()`/`fork()`, `destroy()`. Providers advertise support via
 `capabilities()`; calling an unsupported optional method throws
 `UnsupportedCapabilityError`.
+
+For computer use (the model clicks and types on a Linux desktop), pass any of
+these providers to `sandboxComputer({ provider })` from
+`@tanstack/ai-computer-sandbox`. The image needs `xdotool`, `xdpyinfo`, and
+`scrot` (or ImageMagick). The E2B `desktop` template has them. See
+`docs/computer-use/drivers.md`.

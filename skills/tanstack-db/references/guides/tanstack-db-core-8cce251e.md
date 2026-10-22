@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core"></a>
 
-Published skill · `@tanstack/db@0.15.1`.
+Published skill · `@tanstack/db@0.15.2`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.4"
   tanstack-package: "@tanstack/ai-sandbox"
-  tanstack-package-version: "0.5.24"
+  tanstack-package-version: "0.5.25"
   tanstack-source-skill: "ai-sandbox"
   tanstack-sources: "[\"TanStack/ai:docs/sandbox/overview.md\",\"TanStack/ai:docs/sandbox/takeover.md\",\"TanStack/ai:docs/sandbox/reaping.md\"]"
   tanstack-type: "sub-skill"
@@ -287,6 +287,12 @@ rename/exists), `git` (clone/status/add/commit/push/pull/branch), `process`
 `snapshot()`/`fork()`, `destroy()`. Providers advertise support via
 `capabilities()`; calling an unsupported optional method throws
 `UnsupportedCapabilityError`.
+
+For computer use (the model clicks and types on a Linux desktop), pass any of
+these providers to `sandboxComputer({ provider })` from
+`@tanstack/ai-computer-sandbox`. The image needs `xdotool`, `xdpyinfo`, and
+`scrot` (or ImageMagick). The E2B `desktop` template has them. See
+`docs/computer-use/drivers.md`.
 
 ## Policy
 

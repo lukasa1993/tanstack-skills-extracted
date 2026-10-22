@@ -1,6 +1,6 @@
 # Offline — Architecture
 
-[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.1.3`.
+[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.1.4`.
 
 ## Architecture
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-custom-backend-integration"></a>
 
-Published skill · `@tanstack/ai@0.70.0`.
+Published skill · `@tanstack/ai@0.71.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 

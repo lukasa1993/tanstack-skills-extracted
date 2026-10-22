@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/vue-db@0.3.11
+Published package: @tanstack/vue-db@0.3.12
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |
