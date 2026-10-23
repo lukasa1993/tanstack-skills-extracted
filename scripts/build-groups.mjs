@@ -829,7 +829,8 @@ export async function rewriteAtomicAssets(sources, context) {
 function atomicTargetDestination(targetSource, context) {
   const output = context.sourceOutputMap.get(targetSource.id)
   if (output) return `${relativeLink(context.outputFile, output.file)}#${output.anchor}`
-  if (targetSource.productId === context.source.productId) {
+  // Supplemental sources retain their upstream owner, which may differ from this bundle.
+  if (targetSource.productId === context.productId) {
     throw new Error(`in-product atomic link was not bundled: ${context.source.id} -> ${targetSource.id}`)
   }
   return `https://skills.sh/lukasa1993/tanstack-skills-extracted/tanstack-${targetSource.productId}`
@@ -998,34 +999,7 @@ function buildOpenAiYaml(spec) {
   ].join('\n')
 }
 
-async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stageSkillsDir) {
-  const ownAtomic = primaryAtomic.filter((source) => source.productId === spec.id)
-  const supplemental = spec.supplementalAtomicMatch
-    ? atomicSkills.filter((source) => spec.supplementalAtomicMatch(source.name)).map((source) => ({ ...source, supplemental: true }))
-    : []
-  const docs = docSources.byProduct.get(spec.id)
-  const sources = [...ownAtomic, ...supplemental, ...(docs?.sources || [])]
-    .sort((left, right) => sourcePriority(left) - sourcePriority(right) || ascii(left.id, right.id))
-  if (!sources.length) throw new Error(`${spec.id} has no source material`)
-
-  spec = withDocumentedFrameworkThemes(spec, sources)
-  const themed = createThemeBuckets(spec)
-  for (const source of sources) {
-    const selected = selectTheme(spec, source, (fallback) => {
-      process.stderr.write(
-        `WARNING: ${source.id} has no curated theme in ${spec.id}; routing it to ${fallback.key}.\n`,
-      )
-    })
-    themed.get(selected.key).sources.push(source)
-  }
-  const usedThemes = [...themed.values()].filter((entry) => entry.sources.length > 0)
-  if (!usedThemes.length) throw new Error(`${spec.id} has no populated themes`)
-
-  const productDir = join(stageSkillsDir, spec.name)
-  await mkdir(join(productDir, 'references'), { recursive: true })
-  const atomicAssetMap = await collectAtomicAssetMap(spec, sources, productDir)
-  const docAssetMap = await collectDocAssetMap(docs, productDir)
-  const atomicFileMap = new Map(atomicSkills.map((source) => [resolve(source.skillPath), source]))
+export function buildAtomicOriginMaps(atomicSkills) {
   const atomicOriginById = new Map()
   const atomicOriginMap = new Map()
   const addAtomicOrigin = (origin, source) => {
@@ -1061,18 +1035,53 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
   ])
   const atomicByName = new Map(atomicSkills.map((source) => [source.name, source]))
   for (const [origin, name] of atomicAliases) {
+    // Legacy paths fill gaps only; newly published skills own their real paths.
+    const missingOrigins = [...new Set([origin, origin.replace(/^packages\//, '')].map((path) => posix.normalize(path)))]
+      .filter((path) => !atomicOriginMap.has(path))
+    if (!missingOrigins.length) continue
     const source = atomicByName.get(name)
     if (!source) throw new Error(`missing atomic alias target: ${name}`)
-    addAtomicOrigin(origin, source)
-    addAtomicOrigin(origin.replace(/^packages\//, ''), source)
+    for (const path of missingOrigins) addAtomicOrigin(path, source)
   }
+  return { atomicOriginById, atomicOriginMap }
+}
+
+async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stageSkillsDir) {
+  const ownAtomic = primaryAtomic.filter((source) => source.productId === spec.id)
+  const supplemental = spec.supplementalAtomicMatch
+    ? atomicSkills.filter((source) => spec.supplementalAtomicMatch(source.name)).map((source) => ({ ...source, supplemental: true }))
+    : []
+  const docs = docSources.byProduct.get(spec.id)
+  const sources = [...ownAtomic, ...supplemental, ...(docs?.sources || [])]
+    .sort((left, right) => sourcePriority(left) - sourcePriority(right) || ascii(left.id, right.id))
+  if (!sources.length) throw new Error(`${spec.id} has no source material`)
+
+  spec = withDocumentedFrameworkThemes(spec, sources)
+  const themed = createThemeBuckets(spec)
+  for (const source of sources) {
+    const selected = selectTheme(spec, source, (fallback) => {
+      process.stderr.write(
+        `WARNING: ${source.id} has no curated theme in ${spec.id}; routing it to ${fallback.key}.\n`,
+      )
+    })
+    themed.get(selected.key).sources.push(source)
+  }
+  const usedThemes = [...themed.values()].filter((entry) => entry.sources.length > 0)
+  if (!usedThemes.length) throw new Error(`${spec.id} has no populated themes`)
+
+  const productDir = join(stageSkillsDir, spec.name)
+  await mkdir(join(productDir, 'references'), { recursive: true })
+  const atomicAssetMap = await collectAtomicAssetMap(spec, sources, productDir)
+  const docAssetMap = await collectDocAssetMap(docs, productDir)
+  const atomicFileMap = new Map(atomicSkills.map((source) => [resolve(source.skillPath), source]))
+  const { atomicOriginById, atomicOriginMap } = buildAtomicOriginMaps(atomicSkills)
   const docPathMap = new Map((docs?.sources || []).map((source) => [posix.normalize(source.sourcePath), source]))
   const sourceOutputMap = new Map()
   for (const entry of usedThemes) {
     for (const source of entry.sources) sourceOutputMap.set(source.id, { file: join(productDir, 'references', 'guides', `${guideId(source.id)}.md`), anchor: anchorFor(source), theme: entry.key })
   }
 
-  await rewriteAtomicAssets(sources, { productDir, atomicAssetMap, docAssetMap,
+  await rewriteAtomicAssets(sources, { productId: spec.id, productDir, atomicAssetMap, docAssetMap,
     atomicFileMap, atomicOriginById, atomicOriginMap, docPathMap, sourceOutputMap })
 
   const provenanceSources = []
@@ -1089,7 +1098,7 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
     const seenSections = new Map()
     for (const source of entry.sources) {
       const outputFile = sourceOutputMap.get(source.id).file
-      const context = { source, outputFile, productDir, atomicAssetMap, docAssetMap,
+      const context = { source, outputFile, productId: spec.id, productDir, atomicAssetMap, docAssetMap,
         atomicFileMap, atomicOriginById, atomicOriginMap, docPathMap, sourceOutputMap }
       const sourceLink = relativeLink(indexFile, outputFile)
       indexLines.push(`| [${escapeTable(sourceLabel(source))}](${sourceLink}) | ${sourceStatus(source)} | \`${escapeTable(source.packageName)}@${escapeTable(source.packageVersion)}\` |`)
