@@ -1,6 +1,6 @@
 # Middleware — Core Patterns
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns
 
@@ -54,11 +54,12 @@ const analytics: ChatMiddleware = {
 }
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     middleware: [analytics],
   })
 
@@ -224,11 +225,12 @@ const configTransform: ChatMiddleware = {
 }
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [weatherTool, stockTool],
     middleware: [
       logging, // Runs first

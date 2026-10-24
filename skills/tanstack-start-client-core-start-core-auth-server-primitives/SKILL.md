@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.38"
+  tanstack-package-version: "1.170.39"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\",\"tanstack-start-client-core-start-core-server-functions\",\"tanstack-start-client-core-start-core-middleware\"]"
   tanstack-source-skill: "auth-server-primitives"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/authentication-overview.md\",\"TanStack/router:docs/start/framework/react/guide/authentication-server-primitives.md\"]"
@@ -16,7 +16,7 @@ metadata:
 
 # Auth Server Primitives
 
-This skill covers the **server half** of authentication: session storage, cookie issuance, OAuth flow, password-reset hardening, CSRF, rate limiting. For the **routing half** (`_authenticated` layout, `beforeLoad` redirects, RBAC checks), see [router-core/auth-and-guards](../../../../router-core/skills/router-core/auth-and-guards/SKILL.md).
+This skill covers the **server half** of authentication: session storage, cookie issuance, OAuth flow, password-reset hardening, CSRF, rate limiting. For the **routing half** (`_authenticated` layout, `beforeLoad` redirects, RBAC checks), see `@tanstack/router-core#router-core/auth-and-guards`.
 
 > **CRITICAL**: Protect the data/API boundary first. Server functions, server routes, and other API endpoints that touch private data must enforce auth **inside the handler** or middleware. Route guards are route UX, not the data security boundary.
 > **CRITICAL**: Validating the _shape_ of a client-supplied identifier (`z.string().uuid().parse(...)`) is not authorization. A parsed UUID is still _some_ tenant — re-check membership against the session principal before using it.
@@ -402,7 +402,7 @@ A session token that never rotates is functionally a long-lived credential. Rota
 
 ## Cross-References
 
-- [router-core/auth-and-guards](../../../../router-core/skills/router-core/auth-and-guards/SKILL.md) — the routing side: `_authenticated` layout, `beforeLoad`, `redirect`, RBAC checks.
+- `@tanstack/router-core#router-core/auth-and-guards` — the routing side: `_authenticated` layout, `beforeLoad`, `redirect`, RBAC checks.
 - [start-core/server-functions](../tanstack-start-client-core-start-core-server-functions/SKILL.md) — how to expose RPCs (and how the route guard does NOT cover them).
 - [start-core/middleware](../tanstack-start-client-core-start-core-middleware/SKILL.md) — composing `authMiddleware` and others.
 - [start-core/execution-model](../tanstack-start-client-core-start-core-execution-model/SKILL.md) — why module-level env/secret reads are wrong.

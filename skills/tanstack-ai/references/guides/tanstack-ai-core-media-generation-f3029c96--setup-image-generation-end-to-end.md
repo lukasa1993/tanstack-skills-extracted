@@ -1,6 +1,6 @@
 # Media Generation — Setup -- Image Generation End-to-End
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup -- Image Generation End-to-End
 
@@ -8,17 +8,31 @@
 
 ```typescript
 // routes/api/generate/image.ts
-import { generateImage, toServerSentEventsResponse } from '@tanstack/ai'
+import {
+  generateImage,
+  generationParamsFromRequest,
+  toServerSentEventsResponse,
+} from '@tanstack/ai'
 import { openaiImage } from '@tanstack/ai-openai'
 
 export async function POST(req: Request) {
-  const { prompt, size, numberOfImages } = await req.json()
+  // The hook posts an AG-UI RunAgentInput envelope: the input is in
+  // `forwardedProps`, and `threadId` / `runId` are at the top.
+  const { input, threadId, runId } = await generationParamsFromRequest(
+    'image',
+    req,
+  )
+  if (typeof input.prompt !== 'string') {
+    return new Response('Send a text prompt.', { status: 400 })
+  }
 
   const stream = generateImage({
     adapter: openaiImage('gpt-image-1'),
-    prompt,
-    size,
-    numberOfImages,
+    threadId,
+    runId,
+    prompt: input.prompt,
+    size: '1024x1024',
+    numberOfImages: input.numberOfImages,
     stream: true,
   })
 
@@ -36,6 +50,7 @@ function ImageGenerator() {
   const [prompt, setPrompt] = useState('')
   const { generate, result, isLoading, error, reset } = useGenerateImage({
     connection: fetchServerSentEvents('/api/generate/image'),
+    threadId: 'product-123-hero',
   })
 
   return (
@@ -82,11 +97,15 @@ import { openaiImage } from '@tanstack/ai-openai'
 import type { OpenAIImageModel } from '@tanstack/ai-openai'
 
 export const generateImageStreamFn = createServerFn({ method: 'POST' })
-  .inputValidator((data: { prompt: string; model?: OpenAIImageModel }) => data)
+  .inputValidator(
+    (data: { prompt: string; model?: OpenAIImageModel; threadId: string }) =>
+      data,
+  )
   .handler(({ data }) => {
     return toServerSentEventsResponse(
       generateImage({
         adapter: openaiImage(data.model ?? 'gpt-image-1'),
+        threadId: data.threadId,
         prompt: data.prompt,
         stream: true,
       }),
@@ -100,7 +119,9 @@ import { generateImageStreamFn } from '../lib/server-functions'
 
 function ImageGenerator() {
   const { generate, result, isLoading } = useGenerateImage({
-    fetcher: (input) => generateImageStreamFn({ data: input }),
+    fetcher: (input, { threadId }) =>
+      generateImageStreamFn({ data: { ...input, threadId } }),
+    threadId: 'product-123-hero',
   })
 
   return (

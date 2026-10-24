@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Pattern 1: Server-Only Tool
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 1: Server-Only Tool
 
@@ -30,10 +30,11 @@ const getUserData = getUserDataDef.server(async ({ userId }) => {
 
 // In your route handler:
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getUserData],
   })
   return toServerSentEventsResponse(stream)

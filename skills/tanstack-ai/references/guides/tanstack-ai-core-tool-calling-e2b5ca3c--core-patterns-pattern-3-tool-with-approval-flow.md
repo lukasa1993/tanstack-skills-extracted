@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Pattern 3: Tool with Approval Flow
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 3: Tool with Approval Flow
 
@@ -8,8 +8,7 @@
 Set `needsApproval: true` in the definition. Execution pauses with
 `RUN_FINISHED.outcome.type === 'interrupt'`. The primary client API is bound
 `interrupts` + `resolveInterrupt` / `resolveInterrupts` / `cancel`.
-`addToolApprovalResponse` and `pendingInterrupts` remain as deprecated
-compatibility shims during migration.
+`addToolApprovalResponse` and `pendingInterrupts` were removed in 1.0.
 
 ```typescript group=email-approval
 // tools/email.ts
@@ -45,6 +44,7 @@ import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 function ChatPage() {
   const { messages, interrupts, sendMessage } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: [sendEmailDef],
   })
 
@@ -87,6 +87,7 @@ async; watch `resuming` / `interruptErrors`):
 function ApproveAllButton() {
   const { resolveInterrupts, resuming } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: [sendEmailDef],
   })
 
@@ -114,6 +115,7 @@ function ApproveAllButton() {
 }
 ```
 
-Migration: `pendingInterrupts` aliases `interrupts`; `addToolApprovalResponse`
-forwards to the matching bound approval when present. Prefer the bound methods
-above for new code. See `docs/interrupts/`.
+Migration: 1.0 removed `pendingInterrupts` (use `interrupts`) and
+`resumeInterrupts` (use the bound methods). It also removed
+`addToolApprovalResponse` (call `resolveInterrupt` on the bound approval). See
+`docs/interrupts/` and `docs/migration/v1.md`.

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-plugin"></a>
 
-Published skill · `@tanstack/router-plugin@1.168.47`.
+Published skill · `@tanstack/router-plugin@1.168.48`.
 
 [Topic index](../ssr-build-tooling.md) · [Source provenance](../SOURCES.md)
 
@@ -92,13 +92,12 @@ esbuild.build({
 
 ### Core Options
 
-| Option                  | Type                          | Default                    | Description                                |
-| ----------------------- | ----------------------------- | -------------------------- | ------------------------------------------ |
-| `target`                | `'react' \| 'solid' \| 'vue'` | `'react'`                  | Target framework                           |
-| `routesDirectory`       | `string`                      | `'./src/routes'`           | Directory containing route files           |
-| `generatedRouteTree`    | `string`                      | `'./src/routeTree.gen.ts'` | Path for generated route tree              |
-| `autoCodeSplitting`     | `boolean`                     | `undefined`                | Enable automatic code splitting            |
-| `enableRouteGeneration` | `boolean`                     | `true`                     | Set to `false` to disable route generation |
+| Option               | Type                          | Default                    | Description                      |
+| -------------------- | ----------------------------- | -------------------------- | -------------------------------- |
+| `target`             | `'react' \| 'solid' \| 'vue'` | `'react'`                  | Target framework                 |
+| `routesDirectory`    | `string`                      | `'./src/routes'`           | Directory containing route files |
+| `generatedRouteTree` | `string`                      | `'./src/routeTree.gen.ts'` | Path for generated route tree    |
+| `autoCodeSplitting`  | `boolean`                     | `undefined`                | Enable automatic code splitting  |
 
 ### File Convention Options
 
@@ -237,5 +236,5 @@ Changes to `routeTree.gen.ts` are overwritten and can leave source routes, gener
 
 ## Cross-References
 
-- [router-core/code-splitting](./tanstack-router-core-code-splitting-21d488b4.md#source-tanstack-router-core-code-splitting) — manual code splitting concepts
-- [virtual-file-routes](./tanstack-virtual-file-routes-58d31d57.md#source-tanstack-virtual-file-routes) — programmatic route trees
+- `@tanstack/router-core#router-core/code-splitting` — manual code splitting concepts
+- `@tanstack/virtual-file-routes#virtual-file-routes` — programmatic route trees

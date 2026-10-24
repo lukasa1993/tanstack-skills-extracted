@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 2. Audio Generation (Music, Sound Effects)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 2. Audio Generation (Music, Sound Effects)
 
@@ -15,6 +15,7 @@ import { falAudio } from '@tanstack/ai-fal'
 
 const result = await generateAudio({
   adapter: falAudio('fal-ai/diffrhythm'),
+  threadId: 'thread-1',
   prompt: 'An upbeat electronic track with synths',
   duration: 10,
 })
@@ -30,6 +31,7 @@ import { useGenerateAudio, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { generate, result, isLoading } = useGenerateAudio({
   connection: fetchServerSentEvents('/api/generate/audio'),
+  threadId: 'product-123-hero',
 })
 
 // Trigger: generate({ prompt: 'Upbeat synths', duration: 10 })

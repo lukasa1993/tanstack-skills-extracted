@@ -1,6 +1,6 @@
 # Structured Outputs — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup
 
@@ -12,6 +12,7 @@ import { z } from 'zod'
 const person = await chat({
   adapter: openaiText('gpt-5.2'),
   messages: [{ role: 'user', content: 'John Doe, 30' }],
+  threadId: 'thread-1',
   outputSchema: z.object({
     name: z.string(),
     age: z.number(),

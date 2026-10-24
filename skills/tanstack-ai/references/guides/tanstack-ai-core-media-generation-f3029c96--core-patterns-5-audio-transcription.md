@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 5. Audio Transcription
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 5. Audio Transcription
 
@@ -23,6 +23,7 @@ gpt-4o-mini-transcribe, gpt-4o-transcribe-diarize) and `byteplusTranscription`
 >   const { isRecording, start, stop } = useAudioRecorder()
 >   const { generate } = useTranscription({
 >     connection: fetchServerSentEvents('/api/transcribe'),
+>     threadId: 'voice-note-1',
 >   })
 >
 >   async function finish() {
@@ -41,17 +42,26 @@ gpt-4o-mini-transcribe, gpt-4o-transcribe-diarize) and `byteplusTranscription`
 
 ```typescript
 // routes/api/transcribe.ts
-import { generateTranscription, toServerSentEventsResponse } from '@tanstack/ai'
+import {
+  generateTranscription,
+  generationParamsFromRequest,
+  toServerSentEventsResponse,
+} from '@tanstack/ai'
 import { openaiTranscription } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  // The client hook below posts { data: { audio: dataUrl, language } }
-  const { audio, language } = (await request.json()).data
+  // The hook posts { threadId, runId, forwardedProps: { audio, language } }
+  const { input, threadId, runId } = await generationParamsFromRequest(
+    'transcription',
+    request,
+  )
 
   const stream = generateTranscription({
     adapter: openaiTranscription('whisper-1'),
-    audio, // File, Blob, base64 string, or data URL
-    language,
+    threadId,
+    runId,
+    audio: input.audio, // File, Blob, base64 string, or data URL
+    language: input.language,
     responseFormat: 'verbose_json',
     modelOptions: {
       timestamp_granularities: ['word', 'segment'],
@@ -78,6 +88,7 @@ import { useTranscription, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { generate, result, isLoading } = useTranscription({
   connection: fetchServerSentEvents('/api/transcribe'),
+  threadId: 'product-123-hero',
 })
 
 // Trigger: generate({ audio: dataUrl, language: 'en' })

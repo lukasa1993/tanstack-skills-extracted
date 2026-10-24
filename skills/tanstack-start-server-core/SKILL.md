@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.169.17"
   tanstack-package: "@tanstack/start-server-core"
-  tanstack-package-version: "1.169.44"
+  tanstack-package-version: "1.169.45"
   tanstack-source-skill: "start-server-core"
   tanstack-sources: "[\"TanStack/router:packages/start-server-core/src\",\"TanStack/router:docs/start/framework/react/guide/server-entry-point.md\"]"
   tanstack-type: "core"
@@ -246,6 +246,6 @@ Do not create session config from `process.env` at module load or cache `getRequ
 
 ## Cross-References
 
-- [start-core/server-functions](../../../start-client-core/skills/start-core/server-functions/SKILL.md) — creating server functions that use these utilities
-- [start-core/middleware](../../../start-client-core/skills/start-core/middleware/SKILL.md) — request middleware
-- [start-core/server-routes](../../../start-client-core/skills/start-core/server-routes/SKILL.md) — server route handlers
+- `@tanstack/start-client-core#start-core/server-functions` — creating server functions that use these utilities
+- `@tanstack/start-client-core#start-core/middleware` — request middleware
+- `@tanstack/start-client-core#start-core/server-routes` — server route handlers

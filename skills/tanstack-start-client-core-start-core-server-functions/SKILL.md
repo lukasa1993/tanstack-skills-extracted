@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.38"
+  tanstack-package-version: "1.170.39"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "server-functions"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/server-functions.md\"]"
@@ -493,4 +493,4 @@ Relative `fetch` is fine in a browser-only event handler. It is not a universal 
 - [start-core/execution-model](../tanstack-start-client-core-start-core-execution-model/SKILL.md) — understanding where code runs
 - [start-core/middleware](../tanstack-start-client-core-start-core-middleware/SKILL.md) — composing server functions with middleware
 - [start-core/auth-server-primitives](../tanstack-start-client-core-start-core-auth-server-primitives/SKILL.md) — sessions, cookies, OAuth, CSRF, rate limiting (the server-side half of auth; `getCurrentUser` and external session helpers belong here, not at module scope)
-- [router-core/auth-and-guards](../../../../router-core/skills/router-core/auth-and-guards/SKILL.md) — routing-side UX guards; data auth belongs in the server function, server route, or API endpoint handler/middleware
+- `@tanstack/router-core#router-core/auth-and-guards` — routing-side UX guards; data auth belongs in the server function, server route, or API endpoint handler/middleware

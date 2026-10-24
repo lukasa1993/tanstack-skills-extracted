@@ -1,6 +1,6 @@
 # Chat Experience — Setup — Minimal Chat App
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup — Minimal Chat App
 
@@ -23,6 +23,7 @@ export const Route = createFileRoute('/api/chat')({
         const stream = chat({
           adapter: openaiText('gpt-5.5'),
           messages,
+          threadId: body.threadId,
           systemPrompts: ['You are a helpful assistant.'],
           abortController,
         })
@@ -47,6 +48,7 @@ function ChatPage() {
 
   const { messages, sendMessage, isLoading, error, stop } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
   })
 
   const handleSubmit = () => {

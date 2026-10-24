@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Pattern 4: Lazy Tool Discovery
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 4: Lazy Tool Discovery
 
@@ -41,10 +41,11 @@ const compareProducts = compareProductsDef.server(async ({ productIds }) => {
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getProducts, compareProducts],
     // maxIterations bounds model turns, not tool calls. For tool budgets,
     // use middleware onBeforeToolCall + onShouldContinue (see agentic-cycle docs).

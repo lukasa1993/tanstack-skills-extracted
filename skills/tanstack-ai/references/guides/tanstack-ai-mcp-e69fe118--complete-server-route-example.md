@@ -1,6 +1,6 @@
 # Ai Mcp — Complete server-route example
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## Complete server-route example
 
@@ -12,7 +12,7 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClients } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const pool = await createMCPClients({
     github: {
@@ -32,6 +32,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: await pool.tools(),
     // Close after the run ends — tools execute while the response streams,
     // so `await using` / try-finally would close the pool too early here.

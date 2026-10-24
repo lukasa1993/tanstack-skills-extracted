@@ -1,6 +1,6 @@
 # Tool Calling — Provider Skills
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Provider Skills
 
@@ -21,10 +21,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { anthropicText } from '@tanstack/ai-anthropic'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: anthropicText('claude-sonnet-4-6'),
     messages,
+    threadId,
     tools: [
       codeExecutionTool(
         { type: 'code_execution_20250825', name: 'code_execution' },
@@ -45,7 +46,7 @@ The adapter automatically:
 - Lifts the skills into the request's top-level `container.skills` param (the shape Anthropic's API requires).
 - Attaches the required beta headers (`code-execution-2025-08-25` plus `skills-2025-10-02` when skills are present). You do not set these manually.
 
-**Deprecation:** Setting skills via `modelOptions.container.skills` is deprecated. Use `codeExecutionTool(config, { skills })` instead — the legacy path bypasses the beta-header wiring.
+**1.0:** `modelOptions.container.skills` was removed. Pass skills with `codeExecutionTool(config, { skills })`.
 
 ### OpenAI: `shellTool` with skills (Responses API only)
 
@@ -57,10 +58,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [
       shellTool({
         environment: {

@@ -1,6 +1,6 @@
 # Tool Calling — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Common Mistakes
 
@@ -28,10 +28,13 @@ const adapter = openaiText('gpt-5.5')
 const messages = [{ role: 'user' as const, content: 'Run my tool' }]
 
 // server
-chat({ adapter, messages, tools: [myToolDef] })
+chat({ adapter, messages, threadId: 'thread-1', tools: [myToolDef] })
 // client
 function ChatServerOnly() {
-  useChat({ connection: fetchServerSentEvents('/api/chat') }) // no tools
+  useChat({
+    connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
+  }) // no tools
   return null
 }
 ```
@@ -40,11 +43,12 @@ Wrong -- tool only on client, LLM does not know about it:
 
 ```tsx group=tool-wiring
 // server
-chat({ adapter, messages }) // no tools
+chat({ adapter, messages, threadId: 'thread-1' }) // no tools
 // client
 function ChatClientOnly() {
   useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: clientTools(myToolDef.client(() => ({ success: true }))),
   })
   return null
@@ -55,11 +59,12 @@ Correct:
 
 ```tsx group=tool-wiring
 // server
-chat({ adapter, messages, tools: [myToolDef] })
+chat({ adapter, messages, threadId: 'thread-1', tools: [myToolDef] })
 // client
 function ChatWired() {
   useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: clientTools(
       myToolDef.client((input) => ({ success: input.id !== '' })),
     ),

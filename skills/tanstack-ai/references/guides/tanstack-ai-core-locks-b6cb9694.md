@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-locks"></a>
 
-Published skill · `@tanstack/ai@0.71.0`.
+Published skill · `@tanstack/ai@1.0.0`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 
@@ -32,8 +32,9 @@ import { openaiText } from '@tanstack/ai-openai'
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   middleware: [
     withLocks(new InMemoryLockStore()), // single process
   ],
@@ -52,8 +53,9 @@ const persistence = memoryPersistence()
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   middleware: [
     withPersistence(persistence),
     withLocks(new InMemoryLockStore()),
@@ -102,8 +104,9 @@ const locks = defineLock({
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   middleware: [withLocks(locks)],
 })
 ```

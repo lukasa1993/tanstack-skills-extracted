@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 4: useChat with outputSchema (progressive UI)
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 4: useChat with outputSchema (progressive UI)
 
@@ -22,10 +22,11 @@ const PersonSchema = z.object({
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.2'),
     messages,
+    threadId,
     outputSchema: PersonSchema,
     stream: true,
   })
@@ -48,6 +49,7 @@ const PersonSchema = z.object({
 function PersonExtractor() {
   const { sendMessage, isLoading, partial, final } = useChat({
     connection: fetchServerSentEvents('/api/extract-person'),
+    threadId: 'support-42',
     outputSchema: PersonSchema,
   })
 

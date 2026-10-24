@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.71.0"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-core/structured-outputs"
   tanstack-sources: "[\"TanStack/ai:docs/structured-outputs/overview.md\",\"TanStack/ai:docs/structured-outputs/one-shot.md\",\"TanStack/ai:docs/structured-outputs/streaming.md\",\"TanStack/ai:docs/structured-outputs/multi-turn.md\",\"TanStack/ai:docs/structured-outputs/with-tools.md\",\"TanStack/ai:docs/structured-outputs/harnesses.md\"]"
   tanstack-type: "sub-skill"
@@ -27,6 +27,7 @@ import { z } from 'zod'
 const person = await chat({
   adapter: openaiText('gpt-5.2'),
   messages: [{ role: 'user', content: 'John Doe, 30' }],
+  threadId: 'thread-1',
   outputSchema: z.object({
     name: z.string(),
     age: z.number(),
@@ -77,6 +78,7 @@ const person = await chat({
         'Extract the person info: John Doe is 30 years old, email john@example.com',
     },
   ],
+  threadId: 'thread-1',
   outputSchema: PersonSchema,
 })
 
@@ -125,6 +127,7 @@ const company = await chat({
       content: 'Extract company info from this article: ...',
     },
   ],
+  threadId: 'thread-1',
   outputSchema: CompanySchema,
 })
 
@@ -154,6 +157,7 @@ const stream = chat({
   messages: [
     { role: 'user', content: 'Extract: John Doe is 30, john@example.com' },
   ],
+  threadId: 'thread-1',
   outputSchema: PersonSchema,
   stream: true,
 })
@@ -224,10 +228,11 @@ const PersonSchema = z.object({
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.2'),
     messages,
+    threadId,
     outputSchema: PersonSchema,
     stream: true,
   })
@@ -250,6 +255,7 @@ const PersonSchema = z.object({
 function PersonExtractor() {
   const { sendMessage, isLoading, partial, final } = useChat({
     connection: fetchServerSentEvents('/api/extract-person'),
+    threadId: 'support-42',
     outputSchema: PersonSchema,
   })
 
@@ -299,6 +305,7 @@ function RecipeBuilder() {
   const { messages, sendMessage } = useChat({
     outputSchema: RecipeSchema,
     connection: fetchServerSentEvents('/api/recipes'),
+    threadId: 'support-42',
   })
 
   return (
@@ -350,11 +357,33 @@ Dedicated harness adapters honor `chat({ outputSchema })` on the same turn. Nati
 A UI endpoint must pass `stream: true`. Without it, `chat()` returns a `Promise`, not SSE.
 
 ```typescript
-import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import {
+  chat,
+  chatParamsFromRequest,
+  toServerSentEventsResponse,
+} from '@tanstack/ai'
 import { claudeCodeText } from '@tanstack/ai-claude-code'
-import { withSandbox } from '@tanstack/ai-sandbox'
+import {
+  createSecrets,
+  defineSandbox,
+  defineWorkspace,
+  githubRepo,
+  withSandbox,
+} from '@tanstack/ai-sandbox'
+import { dockerSandbox } from '@tanstack/ai-sandbox-docker'
 import { z } from 'zod'
-import { sandbox } from './sandbox'
+
+const sandbox = defineSandbox({
+  id: 'repo-report',
+  provider: dockerSandbox({ image: 'node:22' }),
+  workspace: defineWorkspace({
+    source: githubRepo({ repo: 'owner/app' }),
+    setup: ['npm install -g @anthropic-ai/claude-code --include=optional'],
+    secrets: createSecrets({
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY ?? '',
+    }),
+  }),
+})
 
 const ReportSchema = z.object({
   name: z.string(),
@@ -362,18 +391,13 @@ const ReportSchema = z.object({
 })
 
 export async function POST(request: Request) {
-  const body: unknown = await request.json()
-  const messages =
-    typeof body === 'object' &&
-    body !== null &&
-    'messages' in body &&
-    Array.isArray(body.messages)
-      ? body.messages
-      : []
+  const { messages, threadId, runId } = await chatParamsFromRequest(request)
 
   const stream = chat({
     adapter: claudeCodeText('claude-opus-4-8'),
     messages,
+    threadId,
+    runId,
     outputSchema: ReportSchema,
     stream: true,
     middleware: [withSandbox(sandbox)],
@@ -394,6 +418,7 @@ const ReportSchema = z.object({
 function RepoReport() {
   const { final, sendMessage } = useChat({
     connection: fetchServerSentEvents('/api/repo-report'),
+    threadId: 'support-42',
     outputSchema: ReportSchema,
   })
 
@@ -432,6 +457,7 @@ const RecipeSchema = z.object({
 function useRecipeChat() {
   return useChat({
     connection: fetchServerSentEvents('/api/recipes'),
+    threadId: 'support-42',
     outputSchema: RecipeSchema,
   })
 }
@@ -535,6 +561,7 @@ The adapter already handles provider differences (OpenAI uses `response_format`,
 chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   modelOptions: {
     responseFormat: { type: 'json_schema', json_schema: mySchema },
   },
@@ -550,6 +577,7 @@ import { z } from 'zod'
 const person = await chat({
   adapter: openaiText('gpt-5.2'),
   messages: [{ role: 'user', content: 'John Doe, 30' }],
+  threadId: 'thread-1',
   outputSchema: z.object({ name: z.string(), age: z.number() }),
 })
 ```
@@ -576,6 +604,7 @@ const messages = [{ role: 'user' as const, content: 'John Doe, 30' }]
 const untyped = await chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   outputSchema: {
     type: 'object',
     properties: {
@@ -591,6 +620,7 @@ const untyped = await chat({
 const person = await chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   outputSchema: z.object({
     name: z.string(),
     age: z.number(),

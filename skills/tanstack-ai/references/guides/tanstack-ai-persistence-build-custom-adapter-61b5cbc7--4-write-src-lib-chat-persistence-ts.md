@@ -1,6 +1,6 @@
 # Build Custom Adapter — 4. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@0.10.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
 
 ## 4. Write `src/lib/chat-persistence.ts`
 

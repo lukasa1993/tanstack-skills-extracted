@@ -1,6 +1,6 @@
 # Adapter Configuration — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup
 
@@ -11,11 +11,12 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.2'),
     messages,
+    threadId,
     modelOptions: {
       temperature: 0.7,
       max_output_tokens: 1000,

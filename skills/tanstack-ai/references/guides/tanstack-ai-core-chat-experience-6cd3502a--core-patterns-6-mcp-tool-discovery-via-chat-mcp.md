@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 6. MCP Tool Discovery via `chat({ mcp })`
 
@@ -50,15 +50,16 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const mcpClient = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
   })
 
   const stream = chat({
-    adapter: openaiText('gpt-5.6'),
+    adapter: openaiText('gpt-6.1-sol'),
     messages,
+    threadId,
     mcp: {
       clients: [mcpClient],
       connection: 'keep-alive', // chat() won't close it — reuse across requests
@@ -149,8 +150,9 @@ const client = await createMCPClient({
 
 try {
   const stream = chat({
-    adapter: openaiText('gpt-5.6'),
+    adapter: openaiText('gpt-6.1-sol'),
     messages: [{ role: 'user', content: 'Weather in Paris?' }],
+    threadId: 'thread-1',
     tools: await client.tools(),
   })
 

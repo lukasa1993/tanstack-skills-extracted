@@ -1,6 +1,6 @@
 # Ai Mcp — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## Common Mistakes
 
@@ -18,12 +18,17 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const client = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
   })
   const tools = await client.tools()
-  const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
+  const stream = chat({
+    adapter: openaiText('gpt-5.5'),
+    messages,
+    threadId,
+    tools,
+  })
   await client.close() // closes before the stream runs tools
   return toServerSentEventsResponse(stream)
 }
@@ -42,7 +47,7 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const client = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
   })
@@ -50,6 +55,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: await client.tools(),
     middleware: [
       {

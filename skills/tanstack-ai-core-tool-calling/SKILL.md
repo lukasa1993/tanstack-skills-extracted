@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.71.0"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-core/tool-calling"
   tanstack-sources: "[\"TanStack/ai:docs/tools/tools.md\",\"TanStack/ai:docs/tools/server-tools.md\",\"TanStack/ai:docs/tools/client-tools.md\",\"TanStack/ai:docs/tools/tool-approval.md\",\"TanStack/ai:docs/tools/lazy-tool-discovery.md\"]"
   tanstack-type: "sub-skill"
@@ -68,10 +68,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getProducts, updateCartUIDef], // server tool + client definition
   })
   return toServerSentEventsResponse(stream)
@@ -100,6 +101,7 @@ function ChatPage() {
   const tools = clientTools(updateCartUI)
   const chatOptions = createChatClientOptions({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools,
   })
   const { messages, sendMessage } = useChat(chatOptions)
@@ -210,10 +212,11 @@ const getUserData = getUserDataDef.server(async ({ userId }) => {
 
 // In your route handler:
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getUserData],
   })
   return toServerSentEventsResponse(stream)
@@ -249,10 +252,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [showNotificationDef],
   })
   return toServerSentEventsResponse(stream)
@@ -283,6 +287,7 @@ function ChatPage() {
   const { messages, sendMessage } = useChat(
     createChatClientOptions({
       connection: fetchServerSentEvents('/api/chat'),
+      threadId: 'support-42',
       tools: clientTools(showNotification),
     }),
   )
@@ -307,8 +312,7 @@ function ChatPage() {
 Set `needsApproval: true` in the definition. Execution pauses with
 `RUN_FINISHED.outcome.type === 'interrupt'`. The primary client API is bound
 `interrupts` + `resolveInterrupt` / `resolveInterrupts` / `cancel`.
-`addToolApprovalResponse` and `pendingInterrupts` remain as deprecated
-compatibility shims during migration.
+`addToolApprovalResponse` and `pendingInterrupts` were removed in 1.0.
 
 ```typescript group=email-approval
 // tools/email.ts
@@ -344,6 +348,7 @@ import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 function ChatPage() {
   const { messages, interrupts, sendMessage } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: [sendEmailDef],
   })
 
@@ -386,6 +391,7 @@ async; watch `resuming` / `interruptErrors`):
 function ApproveAllButton() {
   const { resolveInterrupts, resuming } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: [sendEmailDef],
   })
 
@@ -413,9 +419,10 @@ function ApproveAllButton() {
 }
 ```
 
-Migration: `pendingInterrupts` aliases `interrupts`; `addToolApprovalResponse`
-forwards to the matching bound approval when present. Prefer the bound methods
-above for new code. See `docs/interrupts/`.
+Migration: 1.0 removed `pendingInterrupts` (use `interrupts`) and
+`resumeInterrupts` (use the bound methods). It also removed
+`addToolApprovalResponse` (call `resolveInterrupt` on the bound approval). See
+`docs/interrupts/` and `docs/migration/v1.md`.
 
 ### Pattern 4: Lazy Tool Discovery
 
@@ -455,10 +462,11 @@ const compareProducts = compareProductsDef.server(async ({ productIds }) => {
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getProducts, compareProducts],
     // maxIterations bounds model turns, not tool calls. For tool budgets,
     // use middleware onBeforeToolCall + onShouldContinue (see agentic-cycle docs).
@@ -481,10 +489,14 @@ By default the discovery-tool catalog lists only bare names (`'none'`). Pass
 
 ```typescript group=lazy-tools
 // Same tools as the route above, with a richer discovery catalog:
-export function chatWithCatalog(messages: Array<ModelMessage>) {
+export function chatWithCatalog(
+  messages: Array<ModelMessage>,
+  threadId: string,
+) {
   return chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getProducts, compareProducts],
     agentLoopStrategy: maxIterations(20),
     lazyToolsConfig: { includeDescription: 'first-sentence' },
@@ -526,7 +538,7 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   // 1. Connect to the MCP server.
   const mcp = await createMCPClient({
@@ -543,6 +555,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [...mcpTools],
     middleware: [
       {
@@ -585,7 +598,12 @@ const mcp = await createMCPClient({
 const tools = await mcp.tools([getWeather])
 
 const messages = [{ role: 'user' as const, content: 'Weather in Paris?' }]
-const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
+const stream = chat({
+  adapter: openaiText('gpt-5.5'),
+  messages,
+  threadId: 'thread-1',
+  tools,
+})
 ```
 
 ### Multiple servers with `createMCPClients`
@@ -605,7 +623,12 @@ await using pool = await createMCPClients({
 const tools = await pool.tools()
 
 const messages = [{ role: 'user' as const, content: 'Open an issue for #42' }]
-const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
+const stream = chat({
+  adapter: openaiText('gpt-5.5'),
+  messages,
+  threadId: 'thread-1',
+  tools,
+})
 ```
 
 Use `pool.clients.<name>` for typed per-server access (resources, prompts, typed
@@ -697,7 +720,7 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const mcpClient = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
@@ -706,6 +729,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     mcp: {
       clients: [mcpClient],
       connection: 'keep-alive',
@@ -804,6 +828,7 @@ const client = await createMCPClient({
 const stream = chat({
   adapter: openaiText('gpt-5.5'),
   messages: [{ role: 'user', content: 'Weather in Paris?' }],
+  threadId: 'thread-1',
   tools: await client.tools(),
 })
 
@@ -840,10 +865,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { anthropicText } from '@tanstack/ai-anthropic'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: anthropicText('claude-sonnet-4-6'),
     messages,
+    threadId,
     tools: [
       codeExecutionTool(
         { type: 'code_execution_20250825', name: 'code_execution' },
@@ -864,7 +890,7 @@ The adapter automatically:
 - Lifts the skills into the request's top-level `container.skills` param (the shape Anthropic's API requires).
 - Attaches the required beta headers (`code-execution-2025-08-25` plus `skills-2025-10-02` when skills are present). You do not set these manually.
 
-**Deprecation:** Setting skills via `modelOptions.container.skills` is deprecated. Use `codeExecutionTool(config, { skills })` instead — the legacy path bypasses the beta-header wiring.
+**1.0:** `modelOptions.container.skills` was removed. Pass skills with `codeExecutionTool(config, { skills })`.
 
 ### OpenAI: `shellTool` with skills (Responses API only)
 
@@ -876,10 +902,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [
       shellTool({
         environment: {
@@ -927,10 +954,13 @@ const adapter = openaiText('gpt-5.5')
 const messages = [{ role: 'user' as const, content: 'Run my tool' }]
 
 // server
-chat({ adapter, messages, tools: [myToolDef] })
+chat({ adapter, messages, threadId: 'thread-1', tools: [myToolDef] })
 // client
 function ChatServerOnly() {
-  useChat({ connection: fetchServerSentEvents('/api/chat') }) // no tools
+  useChat({
+    connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
+  }) // no tools
   return null
 }
 ```
@@ -939,11 +969,12 @@ Wrong -- tool only on client, LLM does not know about it:
 
 ```tsx group=tool-wiring
 // server
-chat({ adapter, messages }) // no tools
+chat({ adapter, messages, threadId: 'thread-1' }) // no tools
 // client
 function ChatClientOnly() {
   useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: clientTools(myToolDef.client(() => ({ success: true }))),
   })
   return null
@@ -954,11 +985,12 @@ Correct:
 
 ```tsx group=tool-wiring
 // server
-chat({ adapter, messages, tools: [myToolDef] })
+chat({ adapter, messages, threadId: 'thread-1', tools: [myToolDef] })
 // client
 function ChatWired() {
   useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools: clientTools(
       myToolDef.client((input) => ({ success: input.id !== '' })),
     ),

@@ -1,11 +1,11 @@
 # Media Generation — Core Patterns: 3. Text-to-Speech
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 3. Text-to-Speech
 
 
-Adapters include `openaiSpeech` (tts-1, tts-1-hd, gpt-4o-audio-preview),
+Adapters include `openaiSpeech` (tts-1, tts-1-hd, gpt-4o-mini-tts),
 `byteplusSpeech` (`seed-audio-1.0`), and `elevenlabsSpeech` (`eleven_v4`).
 
 `elevenlabsSpeech` accepts `format: 'mp3' | 'pcm' | 'opus' | 'wav'`.
@@ -34,6 +34,7 @@ import { openaiSpeech } from '@tanstack/ai-openai'
 
 const result = await generateSpeech({
   adapter: openaiSpeech('tts-1-hd'),
+  threadId: 'thread-1',
   text: 'Hello, welcome to TanStack AI!',
   voice: 'alloy', // alloy | echo | fable | onyx | nova | shimmer | ash | ballad | coral | sage | verse
   format: 'mp3', // mp3 | opus | aac | flac | wav | pcm
@@ -52,6 +53,7 @@ import { useGenerateSpeech, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { generate, result, isLoading } = useGenerateSpeech({
   connection: fetchServerSentEvents('/api/generate/speech'),
+  threadId: 'product-123-hero',
 })
 
 // Trigger: generate({ text: 'Hello!', voice: 'alloy' })
@@ -73,6 +75,7 @@ const SECOND_VOICE = 'your-second-voice-id'
 
 const result = await generateSpeech({
   adapter: byteplusSpeech('seed-audio-1.0'),
+  threadId: 'thread-1',
   turns: [
     { text: 'Do you sell picks?', voice: 'en_female_stokie_uranus_bigtts' },
     { text: 'By the till.', voice: SECOND_VOICE },

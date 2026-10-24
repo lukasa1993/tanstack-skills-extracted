@@ -1,6 +1,6 @@
 # Ai Mcp — Error classes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## Error classes
 
@@ -19,6 +19,12 @@
 - `DuplicateToolNameError` — thrown by a single pool's own `tools()` when two
   tools within that pool share the same name (same server or pool clients with no
   prefix). Exported from `@tanstack/ai-mcp`.
+- `MCPEventsUnsupportedError` — the server did not advertise Events, or
+  `events/list` returned method-not-found.
+- `MCPEventConfigError` — bad `experimental_events` options or subscribe input.
+- `MCPUnknownEventError` — the event name is missing, or it has no webhook delivery.
+- `MCPEventRequestError` — JSON-RPC error from `events/*` (`kind` + `code`).
+- `MCPEventSubscriptionNotFoundError` — `refresh` / `unsubscribe` key or id is not in the store.
 - `MCPDuplicateToolNameError` — thrown by `chat()` when tools from separate
   `mcp.clients` entries collide after merging. Exported from `@tanstack/ai`
   (not `@tanstack/ai-mcp`), so users can `instanceof` it at the `chat()` call site.

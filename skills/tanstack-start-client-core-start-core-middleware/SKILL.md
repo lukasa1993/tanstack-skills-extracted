@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.170.14"
   tanstack-package: "@tanstack/start-client-core"
-  tanstack-package-version: "1.170.38"
+  tanstack-package-version: "1.170.39"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\",\"tanstack-start-client-core-start-core-server-functions\"]"
   tanstack-source-skill: "middleware"
   tanstack-sources: "[\"TanStack/router:docs/start/framework/react/guide/middleware.md\"]"
@@ -241,7 +241,7 @@ const authMiddleware = createMiddleware().server(async ({ next, request }) => {
 })
 ```
 
-> **Attach `authMiddleware` to every `createServerFn` that needs auth.** Server functions are API endpoints; a route `beforeLoad` does not protect their data, only the route's UI. Protect the endpoint that reads or mutates private data. See [router-core/auth-and-guards](../../../../router-core/skills/router-core/auth-and-guards/SKILL.md) and [start-core/auth-server-primitives](../tanstack-start-client-core-start-core-auth-server-primitives/SKILL.md).
+> **Attach `authMiddleware` to every `createServerFn` that needs auth.** Server functions are API endpoints; a route `beforeLoad` does not protect their data, only the route's UI. Protect the endpoint that reads or mutates private data. See `@tanstack/router-core#router-core/auth-and-guards` and [start-core/auth-server-primitives](../tanstack-start-client-core-start-core-auth-server-primitives/SKILL.md).
 
 ```tsx
 type Permissions = Record<string, string[]>
@@ -393,4 +393,4 @@ createMiddleware({ type: 'function' })
 - [start-core/server-functions](../tanstack-start-client-core-start-core-server-functions/SKILL.md) — what middleware wraps
 - [start-core/server-routes](../tanstack-start-client-core-start-core-server-routes/SKILL.md) — middleware on API endpoints
 - [start-core/auth-server-primitives](../tanstack-start-client-core-start-core-auth-server-primitives/SKILL.md) — building the `authMiddleware` factory itself: session cookie reads, OAuth state, CSRF
-- [router-core/auth-and-guards](../../../../router-core/skills/router-core/auth-and-guards/SKILL.md) — routing-side UX guards; data auth belongs in the server function, server route, or API endpoint handler/middleware
+- `@tanstack/router-core#router-core/auth-and-guards` — routing-side UX guards; data auth belongs in the server function, server route, or API endpoint handler/middleware

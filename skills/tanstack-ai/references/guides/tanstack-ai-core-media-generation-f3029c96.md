@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-media-generation"></a>
 
-Published skill · `@tanstack/ai@0.71.0`.
+Published skill · `@tanstack/ai@1.0.0`.
 
 [Topic index](../media.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-core-media-generation-f3029c96--overview.md) — 1 KiB
 - [Setup -- Image Generation End-to-End](./tanstack-ai-core-media-generation-f3029c96--setup-image-generation-end-to-end.md) — 4 KiB
-- [Core Patterns: 1. Image Generation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md) — 14 KiB
+- [Core Patterns: 1. Image Generation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-1-image-generation.md) — 13 KiB
 - [Core Patterns: 2. Audio Generation (Music, Sound Effects)](./tanstack-ai-core-media-generation-f3029c96--core-patterns-2-audio-generation-music-sound-effects.md) — 2 KiB
 - [Core Patterns: 3. Text-to-Speech](./tanstack-ai-core-media-generation-f3029c96--core-patterns-3-text-to-speech.md) — 5 KiB
 - [Core Patterns: 4. Voice Creation](./tanstack-ai-core-media-generation-f3029c96--core-patterns-4-voice-creation.md) — 4 KiB
@@ -44,7 +44,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="common-mistakes"></a>
 <a id="a-high-using-the-removed-embedding-function"></a>
 <a id="b-high-forgetting-toserversenteventsresponse-with-tanstack-start-server-functions"></a>
-<a id="c-medium-not-downloading-openai-image-urls-before-they-expire"></a>
+<a id="c-medium-not-downloading-seedream-image-urls-before-they-expire"></a>
 <a id="d-medium-using-stream-true-for-activities-that-do-not-support-streaming"></a>
 <a id="e-high-passing-responsemimetype-or-negativeprompt-to-gemini-lyria"></a>
 <a id="f-medium-passing-duration-to-lyria-expecting-it-to-control-length"></a>

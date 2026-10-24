@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.4"
   tanstack-package: "@tanstack/ai-sandbox"
-  tanstack-package-version: "0.5.25"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-sandbox"
   tanstack-sources: "[\"TanStack/ai:docs/sandbox/overview.md\",\"TanStack/ai:docs/sandbox/takeover.md\",\"TanStack/ai:docs/sandbox/reaping.md\"]"
   tanstack-type: "sub-skill"
@@ -865,16 +865,11 @@ EXISTING journal instead of starting a second agent. It belongs there and never
 on `chat()` (core has no sandbox vocabulary), and it is set only by an attach
 route, never by a `POST` handler. Load the thread from the message store: the
 client sent no history because it is reconnecting, not asking a question — and
-pass the run record's `threadId`. Forget it and the attach **refuses up front**
-with `DurableThreadIdRequiredError` rather than failing mid-stream: every emitted
-chunk carries `threadId`, so a generated one differs from the stored log in its
-very first chunk. `resolveDurableThreadId` throws only in the durable-AND-
-attaching quadrant — a durable _fresh_ run legitimately mints its `threadId`,
-since it is the run that establishes it. `JournalReplayThreadIdMismatchError` is
-still what surfaces if a mismatched `threadId` reaches `alignToStoredLog` by some
-other route; `sandboxRunDriver` itself forwards `active.threadId` into
-`drive({ runId, threadId, signal })`, so the remaining gap is application `drive`
-code that does not pass it on to `chat()`.
+pass the run record's `threadId`. Every emitted chunk carries `threadId`, so a
+different one does not match the stored log in its very first chunk, and
+alignment fails with `JournalReplayThreadIdMismatchError`. `sandboxRunDriver`
+forwards `active.threadId` into `drive({ runId, threadId, signal })`; pass it on
+to `chat()`.
 
 The response is byte-identical whether or not you pass `driver`: it still
 replays from the durability log. The drive runs beside it, appending to the

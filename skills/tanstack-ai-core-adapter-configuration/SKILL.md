@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.71.0"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-core/adapter-configuration"
   tanstack-sources: "[\"TanStack/ai:docs/adapters/openai.md\",\"TanStack/ai:docs/adapters/anthropic.md\",\"TanStack/ai:docs/adapters/gemini.md\",\"TanStack/ai:docs/adapters/ollama.md\",\"TanStack/ai:docs/advanced/per-model-type-safety.md\",\"TanStack/ai:docs/advanced/runtime-adapter-switching.md\",\"TanStack/ai:docs/advanced/extend-adapter.md\"]"
   tanstack-type: "sub-skill"
@@ -33,11 +33,12 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.2'),
     messages,
+    threadId,
     modelOptions: {
       temperature: 0.7,
       max_output_tokens: 1000,
@@ -77,6 +78,7 @@ The text adapter is the primary one for chat/completions:
 | BytePlus          | `@tanstack/ai-byteplus`          | `byteplusText`                              | `ARK_API_KEY` (falls back to `BYTEPLUS_API_KEY`)                                       |
 | OpenAI-compatible | `@tanstack/ai-openai/compatible` | `openaiCompatible` / `openaiCompatibleText` | provider-specific (passed via `apiKey`)                                                |
 | Cloudflare        | `@tanstack/ai-cloudflare`        | `cloudflareText`                            | `CLOUDFLARE_ACCOUNT_ID` + `CLOUDFLARE_API_TOKEN`, or `{ binding: env.AI }` in a Worker |
+| Neon AI Gateway   | `@tanstack/ai-neon`              | `neonText`                                  | `NEON_AI_GATEWAY_TOKEN` + `NEON_AI_GATEWAY_BASE_URL` (branch host)                     |
 
 > **BytePlus uses two keys.** `byteplusText` / `byteplusVideo` /
 > `byteplusImage` read `ARK_API_KEY` (ModelArk, `Authorization: Bearer`), but
@@ -101,8 +103,8 @@ const adapter = openaiText('gpt-5.2')
 const adapter2 = anthropicText('claude-sonnet-4-6')
 const adapter3 = geminiText('gemini-2.5-pro')
 const adapter4 = grokText('grok-4.6')
-const adapter5 = groqText('llama-3.3-70b-versatile')
-const adapter6 = openRouterText('anthropic/claude-sonnet-4')
+const adapter5 = groqText('openai/gpt-oss-120b')
+const adapter6 = openRouterText('anthropic/claude-sonnet-5.5')
 const adapter7 = ollamaText('llama3.3:latest')
 const adapter8 = bedrockText('us.anthropic.claude-3-7-sonnet-20250219-v1:0')
 const adapter9 = byteplusText('seed-2-0-lite-260428')
@@ -146,6 +148,8 @@ function isKnownProviderModel(key: string): key is keyof typeof adapters {
 export function handleChat(
   providerModel: string,
   messages: Array<ModelMessage>,
+  // The conversation id from the request. Never share one across users.
+  threadId: string,
 ) {
   if (!isKnownProviderModel(providerModel)) {
     throw new Error(`Unknown provider/model: ${providerModel}`)
@@ -154,6 +158,7 @@ export function handleChat(
   const stream = chat({
     adapter: adapters[providerModel](),
     messages,
+    threadId,
   })
 
   return toServerSentEventsResponse(stream)
@@ -178,6 +183,7 @@ const messages = [
 const openaiStream = chat({
   adapter: openaiText('gpt-5.2'),
   messages,
+  threadId: 'thread-1',
   reasoning: { level: 'high', summary: true },
 })
 
@@ -185,6 +191,7 @@ const openaiStream = chat({
 const anthropicStream = chat({
   adapter: anthropicText('claude-sonnet-4-6'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { max_tokens: 16000 },
   reasoning: { level: 'high', budgetTokens: 8000 },
 })
@@ -194,6 +201,7 @@ const anthropicStream = chat({
 const adaptiveStream = chat({
   adapter: anthropicText('claude-sonnet-5'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { max_tokens: 16000 },
   reasoning: 'high', // 'low' | 'medium' | 'high' | 'xhigh' | 'max'
 })
@@ -202,6 +210,7 @@ const adaptiveStream = chat({
 const geminiStream = chat({
   adapter: geminiText('gemini-2.5-pro'),
   messages,
+  threadId: 'thread-1',
   reasoning: { level: 'high', budgetTokens: 4096 },
 })
 ```
@@ -256,6 +265,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 chat({
   adapter: openaiText('gpt-5.2'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { temperature: 0.7, top_p: 0.9, max_output_tokens: 1000 },
 })
 
@@ -263,6 +273,7 @@ chat({
 chat({
   adapter: anthropicText('claude-sonnet-4-6'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { temperature: 0.7, top_p: 0.9, max_tokens: 1000 },
 })
 
@@ -270,6 +281,7 @@ chat({
 chat({
   adapter: geminiText('gemini-2.5-pro'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { temperature: 0.7, topP: 0.9, maxOutputTokens: 1000 },
 })
 
@@ -278,6 +290,7 @@ chat({
 chat({
   adapter: ollamaText('llama3.3:latest'),
   messages,
+  threadId: 'thread-1',
   modelOptions: {
     options: { temperature: 0.7, top_p: 0.9, num_predict: 1000 },
   },
@@ -404,8 +417,8 @@ const deepseek = openaiCompatible({
   ],
 })
 
-chat({ adapter: deepseek('deepseek-chat'), messages })
-chat({ adapter: deepseek('deepseek-reasoner'), messages })
+chat({ adapter: deepseek('deepseek-chat'), messages, threadId: 'thread-1' })
+chat({ adapter: deepseek('deepseek-reasoner'), messages, threadId: 'thread-1' })
 ```
 
 `config` also accepts any OpenAI SDK `ClientOptions` (notably `defaultHeaders`
@@ -425,6 +438,7 @@ chat({
     apiKey: process.env.DEEPSEEK_API_KEY!,
   }),
   messages,
+  threadId: 'thread-1',
 })
 ```
 
@@ -466,6 +480,7 @@ chat({
       ],
     },
   ],
+  threadId: 'thread-1',
 })
 ```
 
@@ -525,13 +540,13 @@ createGeminiChat('gemini-3.8-flash', process.env.GOOGLE_API_KEY!, {
 
 ### a. HIGH: Confusing legacy monolithic with tree-shakeable adapter
 
-The legacy `openai()` (and `anthropic()`, etc.) monolithic adapters are
-deprecated. They take the model in `chat()`, not in the factory.
+The legacy `openai()` (and `anthropic()`, etc.) monolithic adapters were
+removed in 1.0. They took the model in `chat()`, not in the factory.
 
 ```typescript ignore
 // WRONG: Legacy monolithic adapter pattern (no longer exported)
 import { openai } from '@tanstack/ai-openai'
-chat({ adapter: openai(), model: 'gpt-5.2', messages })
+chat({ adapter: openai(), model: 'gpt-5.2', messages, threadId: 'thread-1' })
 ```
 
 ```typescript
@@ -541,7 +556,7 @@ import { openaiText } from '@tanstack/ai-openai'
 
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
-chat({ adapter: openaiText('gpt-5.2'), messages })
+chat({ adapter: openaiText('gpt-5.2'), messages, threadId: 'thread-1' })
 ```
 
 Source: docs/migration/migration.md

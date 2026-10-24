@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 7. Cost tracking (fal billable units)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 7. Cost tracking (fal billable units)
 
@@ -19,6 +19,7 @@ import { falImage } from '@tanstack/ai-fal'
 
 const result = await generateImage({
   adapter: falImage('fal-ai/flux/dev'),
+  threadId: 'thread-1',
   prompt: 'a serene mountain lake',
 })
 

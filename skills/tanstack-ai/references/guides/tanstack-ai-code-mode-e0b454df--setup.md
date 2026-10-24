@@ -1,6 +1,6 @@
 # Ai Code Mode — Setup
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.5`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@1.0.0`.
 
 ## Setup
 
@@ -35,11 +35,12 @@ const codeModeTool = createCodeModeTool({
 
 // Use in chat
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [codeModeTool],
   })
 
@@ -73,13 +74,14 @@ const { tool, systemPrompt } = createCodeMode({
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     systemPrompts: ['You are a helpful assistant.', systemPrompt],
     tools: [tool],
     messages,
+    threadId,
   })
 
   return toServerSentEventsResponse(stream)

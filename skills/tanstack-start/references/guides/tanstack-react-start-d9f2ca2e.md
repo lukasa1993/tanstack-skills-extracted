@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-start"></a>
 
-Published skill · `@tanstack/react-start@1.169.3`.
+Published skill · `@tanstack/react-start@1.169.4`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -282,6 +282,6 @@ Without `<Scripts />` in the root route's `<body>`, client JavaScript doesn't lo
 
 ## Cross-References
 
-- [start-core](./tanstack-start-client-core-start-core-18293f60.md#source-tanstack-start-client-core-start-core) — core Start concepts
-- [router-core](./tanstack-router-core-3c7fd849.md#source-tanstack-router-core) — routing fundamentals
-- [react-router](./tanstack-router-core-3c7fd849.md#source-tanstack-router-core) — React Router hooks and components
+- `@tanstack/start-client-core#start-core` — core Start concepts
+- `@tanstack/router-core#router-core` — routing fundamentals
+- `@tanstack/react-router#react-router` — React Router hooks and components

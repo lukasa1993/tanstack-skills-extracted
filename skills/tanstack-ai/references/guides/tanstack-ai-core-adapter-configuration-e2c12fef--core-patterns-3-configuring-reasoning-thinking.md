@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 3. Configuring Reasoning / Thinking
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 3. Configuring Reasoning / Thinking
 
@@ -21,6 +21,7 @@ const messages = [
 const openaiStream = chat({
   adapter: openaiText('gpt-5.2'),
   messages,
+  threadId: 'thread-1',
   reasoning: { level: 'high', summary: true },
 })
 
@@ -28,6 +29,7 @@ const openaiStream = chat({
 const anthropicStream = chat({
   adapter: anthropicText('claude-sonnet-4-6'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { max_tokens: 16000 },
   reasoning: { level: 'high', budgetTokens: 8000 },
 })
@@ -37,6 +39,7 @@ const anthropicStream = chat({
 const adaptiveStream = chat({
   adapter: anthropicText('claude-sonnet-5'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { max_tokens: 16000 },
   reasoning: 'high', // 'low' | 'medium' | 'high' | 'xhigh' | 'max'
 })
@@ -45,6 +48,7 @@ const adaptiveStream = chat({
 const geminiStream = chat({
   adapter: geminiText('gemini-2.5-pro'),
   messages,
+  threadId: 'thread-1',
   reasoning: { level: 'high', budgetTokens: 4096 },
 })
 ```

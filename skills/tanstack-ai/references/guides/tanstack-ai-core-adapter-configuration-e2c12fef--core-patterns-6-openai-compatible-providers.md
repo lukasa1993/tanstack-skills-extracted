@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 6. OpenAI-Compatible Providers
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 6. OpenAI-Compatible Providers
 
@@ -33,8 +33,8 @@ const deepseek = openaiCompatible({
   ],
 })
 
-chat({ adapter: deepseek('deepseek-chat'), messages })
-chat({ adapter: deepseek('deepseek-reasoner'), messages })
+chat({ adapter: deepseek('deepseek-chat'), messages, threadId: 'thread-1' })
+chat({ adapter: deepseek('deepseek-reasoner'), messages, threadId: 'thread-1' })
 ```
 
 `config` also accepts any OpenAI SDK `ClientOptions` (notably `defaultHeaders`
@@ -54,6 +54,7 @@ chat({
     apiKey: process.env.DEEPSEEK_API_KEY!,
   }),
   messages,
+  threadId: 'thread-1',
 })
 ```
 

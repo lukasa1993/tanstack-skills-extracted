@@ -1,6 +1,6 @@
 # Custom Backend Integration — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup
 
@@ -17,6 +17,7 @@ function Chat() {
         Authorization: `Bearer ${token}`,
       },
     }),
+    threadId: 'support-42',
   })
 
   return (

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-router"></a>
 
-Published skill · `@tanstack/solid-router@1.170.42`.
+Published skill · `@tanstack/solid-router@1.170.43`.
 
 [Topic index](../router-ssr-tooling-adapters.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Prerequisite: [Router Core](./tanstack-router-core-3c7fd849.md).
 
 # Solid Router (`@tanstack/solid-router`)
 
-This skill builds on router-core. Read [router-core](./tanstack-router-core-3c7fd849.md#source-tanstack-router-core) first for foundational concepts.
+This skill builds on router-core. Read `@tanstack/router-core#router-core` first for foundational concepts.
 
 > **CRITICAL**: TanStack Router types are FULLY INFERRED. Never cast, never annotate inferred values.
 > **CRITICAL**: TanStack Router is CLIENT-FIRST. Loaders run on the client by default, not on the server.
@@ -484,4 +484,4 @@ Must set `target: 'solid'` in the router plugin config. Default is `'react'`.
 
 ## Cross-References
 
-- [./tanstack-router-core-3c7fd849.md#source-tanstack-router-core](./tanstack-router-core-3c7fd849.md#source-tanstack-router-core) — all sub-skills for domain-specific patterns (search params, data loading, navigation, auth, SSR, etc.)
+- `@tanstack/router-core#router-core` — all sub-skills for domain-specific patterns (search params, data loading, navigation, auth, SSR, etc.)

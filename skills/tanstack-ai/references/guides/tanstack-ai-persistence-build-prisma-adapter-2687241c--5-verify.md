@@ -1,6 +1,6 @@
 # Build Prisma Adapter — 5. Verify
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@0.10.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
 
 ## 5. Verify
 

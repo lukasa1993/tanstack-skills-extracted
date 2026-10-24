@@ -1,6 +1,6 @@
 # Ai Mcp — `chat({ mcp })` — discovery + lifecycle in one prop
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## `chat({ mcp })` — discovery + lifecycle in one prop
 
@@ -53,11 +53,12 @@ const mcpClient = await createMCPClient({
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     mcp: {
       clients: [mcpClient],
       connection: 'keep-alive', // chat() won't close it — reuse across requests
@@ -86,11 +87,12 @@ const pool = await createMCPClients({
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     mcp: { clients: [pool], connection: 'keep-alive' },
   })
 

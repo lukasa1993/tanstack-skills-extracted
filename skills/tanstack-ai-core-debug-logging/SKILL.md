@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.71.0"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-core/debug-logging"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/debug-logging.md\"]"
   tanstack-type: "sub-skill"
@@ -34,6 +34,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 const stream = chat({
   adapter: openaiText('gpt-5.5'),
   messages,
+  threadId: 'thread-1',
   debug: true, // all categories on, prints to console
 })
 ```
@@ -58,6 +59,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 chat({
   adapter: openaiText('gpt-5.5'),
   messages,
+  threadId: 'thread-1',
   debug: false, // silence everything, including errors
 })
 ```
@@ -112,6 +114,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 chat({
   adapter: openaiText('gpt-5.5'),
   messages,
+  threadId: 'thread-1',
   debug: { middleware: false }, // everything except middleware
 })
 ```
@@ -127,6 +130,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 chat({
   adapter: openaiText('gpt-5.5'),
   messages,
+  threadId: 'thread-1',
   debug: {
     provider: true,
     output: true,
@@ -160,6 +164,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 chat({
   adapter: openaiText('gpt-5.5'),
   messages,
+  threadId: 'thread-1',
   debug: { logger }, // all categories on, piped to pino
 })
 ```
@@ -211,26 +216,31 @@ import { audio } from './recording'
 
 summarize({
   adapter: openaiSummarize('gpt-5.5'),
+  threadId: 'thread-1',
   text: 'Long article…',
   debug: true,
 })
 generateImage({
   adapter: openaiImage('gpt-image-2'),
+  threadId: 'thread-1',
   prompt: 'a cat',
   debug: { logger },
 })
 generateSpeech({
   adapter: openaiSpeech('tts-1-hd'),
+  threadId: 'thread-1',
   text: 'Hello',
   debug: { request: true },
 })
 generateTranscription({
   adapter: openaiTranscription('gpt-4o-transcribe'),
+  threadId: 'thread-1',
   audio,
   debug: false,
 })
 generateVideo({
   adapter: openaiVideo('sora-2'),
+  threadId: 'thread-1',
   prompt: 'a wave',
   debug: { output: true },
 })
@@ -253,12 +263,12 @@ const adapter = openaiText('gpt-5.5')
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 // WRONG — expecting this to be completely silent
-chat({ adapter, messages })
+chat({ adapter, messages, threadId: 'thread-1' })
 // Errors still print via [tanstack-ai:errors] ... on failure.
 
 // CORRECT — explicit silence
-chat({ adapter, messages, debug: false })
-chat({ adapter, messages, debug: { errors: false } })
+chat({ adapter, messages, threadId: 'thread-1', debug: false })
+chat({ adapter, messages, threadId: 'thread-1', debug: { errors: false } })
 ```
 
 `debug` undefined means "only errors"; `debug: false` means "nothing at all".
@@ -281,12 +291,13 @@ const chunkLogger: ChatMiddleware = {
     console.log(chunk.type, chunk)
   },
 }
-chat({ adapter, messages, middleware: [chunkLogger] })
+chat({ adapter, messages, threadId: 'thread-1', middleware: [chunkLogger] })
 
 // CORRECT — just turn on the relevant categories
 chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   debug: { provider: true, output: true },
 })
 ```

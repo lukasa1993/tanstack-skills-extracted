@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 1: Basic structured output with Zod
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 1: Basic structured output with Zod
 
@@ -26,6 +26,7 @@ const person = await chat({
         'Extract the person info: John Doe is 30 years old, email john@example.com',
     },
   ],
+  threadId: 'thread-1',
   outputSchema: PersonSchema,
 })
 

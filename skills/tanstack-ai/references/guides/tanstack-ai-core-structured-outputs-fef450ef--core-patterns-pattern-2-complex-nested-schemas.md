@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 2: Complex nested schemas
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 2: Complex nested schemas
 
@@ -43,6 +43,7 @@ const company = await chat({
       content: 'Extract company info from this article: ...',
     },
   ],
+  threadId: 'thread-1',
   outputSchema: CompanySchema,
 })
 

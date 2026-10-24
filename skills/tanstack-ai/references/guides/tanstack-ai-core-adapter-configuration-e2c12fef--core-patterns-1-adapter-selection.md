@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 1. Adapter Selection
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 1. Adapter Selection
 
@@ -21,6 +21,7 @@ The text adapter is the primary one for chat/completions:
 | BytePlus          | `@tanstack/ai-byteplus`          | `byteplusText`                              | `ARK_API_KEY` (falls back to `BYTEPLUS_API_KEY`)                                       |
 | OpenAI-compatible | `@tanstack/ai-openai/compatible` | `openaiCompatible` / `openaiCompatibleText` | provider-specific (passed via `apiKey`)                                                |
 | Cloudflare        | `@tanstack/ai-cloudflare`        | `cloudflareText`                            | `CLOUDFLARE_ACCOUNT_ID` + `CLOUDFLARE_API_TOKEN`, or `{ binding: env.AI }` in a Worker |
+| Neon AI Gateway   | `@tanstack/ai-neon`              | `neonText`                                  | `NEON_AI_GATEWAY_TOKEN` + `NEON_AI_GATEWAY_BASE_URL` (branch host)                     |
 
 > **BytePlus uses two keys.** `byteplusText` / `byteplusVideo` /
 > `byteplusImage` read `ARK_API_KEY` (ModelArk, `Authorization: Bearer`), but
@@ -45,8 +46,8 @@ const adapter = openaiText('gpt-5.2')
 const adapter2 = anthropicText('claude-sonnet-4-6')
 const adapter3 = geminiText('gemini-2.5-pro')
 const adapter4 = grokText('grok-4.6')
-const adapter5 = groqText('llama-3.3-70b-versatile')
-const adapter6 = openRouterText('anthropic/claude-sonnet-4')
+const adapter5 = groqText('openai/gpt-oss-120b')
+const adapter6 = openRouterText('anthropic/claude-sonnet-5.5')
 const adapter7 = ollamaText('llama3.3:latest')
 const adapter8 = bedrockText('us.anthropic.claude-3-7-sonnet-20250219-v1:0')
 const adapter9 = byteplusText('seed-2-0-lite-260428')

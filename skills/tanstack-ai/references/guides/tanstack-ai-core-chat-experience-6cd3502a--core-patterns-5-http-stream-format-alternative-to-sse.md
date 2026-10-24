@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 5. HTTP Stream Format (Alternative to SSE)
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 5. HTTP Stream Format (Alternative to SSE)
 
@@ -14,12 +14,13 @@ import { chat, toHttpResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const abortController = new AbortController()
 
   const stream = chat({
-    adapter: openaiText('gpt-5.6'),
+    adapter: openaiText('gpt-6.1-sol'),
     messages,
+    threadId,
     abortController,
   })
 
@@ -34,6 +35,7 @@ import { useChat, fetchHttpStream } from '@tanstack/ai-react'
 
 const { messages, sendMessage } = useChat({
   connection: fetchHttpStream('/api/chat'),
+  threadId: 'support-42',
 })
 ```
 

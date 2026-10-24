@@ -1,6 +1,6 @@
 # Tool Calling — MCP Tools
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## MCP Tools
 
@@ -26,7 +26,7 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   // 1. Connect to the MCP server.
   const mcp = await createMCPClient({
@@ -43,6 +43,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [...mcpTools],
     middleware: [
       {
@@ -85,7 +86,12 @@ const mcp = await createMCPClient({
 const tools = await mcp.tools([getWeather])
 
 const messages = [{ role: 'user' as const, content: 'Weather in Paris?' }]
-const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
+const stream = chat({
+  adapter: openaiText('gpt-5.5'),
+  messages,
+  threadId: 'thread-1',
+  tools,
+})
 ```
 
 ### Multiple servers with `createMCPClients`
@@ -105,7 +111,12 @@ await using pool = await createMCPClients({
 const tools = await pool.tools()
 
 const messages = [{ role: 'user' as const, content: 'Open an issue for #42' }]
-const stream = chat({ adapter: openaiText('gpt-5.5'), messages, tools })
+const stream = chat({
+  adapter: openaiText('gpt-5.5'),
+  messages,
+  threadId: 'thread-1',
+  tools,
+})
 ```
 
 Use `pool.clients.<name>` for typed per-server access (resources, prompts, typed
@@ -197,7 +208,7 @@ import { openaiText } from '@tanstack/ai-openai'
 import { createMCPClient } from '@tanstack/ai-mcp'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const mcpClient = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
@@ -206,6 +217,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     mcp: {
       clients: [mcpClient],
       connection: 'keep-alive',
@@ -304,6 +316,7 @@ const client = await createMCPClient({
 const stream = chat({
   adapter: openaiText('gpt-5.5'),
   messages: [{ role: 'user', content: 'Weather in Paris?' }],
+  threadId: 'thread-1',
   tools: await client.tools(),
 })
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-mcp"></a>
 
-Published skill · `@tanstack/ai-mcp@0.9.2`.
+Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 
@@ -12,21 +12,23 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-ai-mcp-e69fe118--overview.md) — 1 KiB
 - [When to use this package](./tanstack-ai-mcp-e69fe118--when-to-use-this-package.md) — 1 KiB
-- [Install](./tanstack-ai-mcp-e69fe118--install.md) — 1 KiB
-- [Host an MCP server](./tanstack-ai-mcp-e69fe118--host-an-mcp-server.md) — 9 KiB
-- [`createMCPClient` — single server](./tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md) — 5 KiB
+- [Install](./tanstack-ai-mcp-e69fe118--install.md) — 2 KiB
+- [Host an MCP server](./tanstack-ai-mcp-e69fe118--host-an-mcp-server.md) — 10 KiB
+- [`createMCPClient` — single server](./tanstack-ai-mcp-e69fe118--createmcpclient-single-server.md) — 6 KiB
 - [Three type-safety modes](./tanstack-ai-mcp-e69fe118--three-type-safety-modes.md) — 3 KiB
 - [Tool policy: `toolFilter` and `needsApproval`](./tanstack-ai-mcp-e69fe118--tool-policy-toolfilter-and-needsapproval.md) — 3 KiB
 - [Lifecycle](./tanstack-ai-mcp-e69fe118--lifecycle.md) — 3 KiB
 - [`chat({ mcp })` — discovery + lifecycle in one prop](./tanstack-ai-mcp-e69fe118--chat-mcp-discovery-lifecycle-in-one-prop.md) — 4 KiB
 - [MCP input request](./tanstack-ai-mcp-e69fe118--mcp-input-request.md) — 3 KiB
 - [`createMCPClients` — multiple servers](./tanstack-ai-mcp-e69fe118--createmcpclients-multiple-servers.md) — 2 KiB
+- [`mcp()`: MCP servers in a harness](./tanstack-ai-mcp-e69fe118--mcp-mcp-servers-in-a-harness.md) — 3 KiB
 - [Abort signal — cancelling in-flight MCP calls](./tanstack-ai-mcp-e69fe118--abort-signal-cancelling-in-flight-mcp-calls.md) — 2 KiB
 - [Resources](./tanstack-ai-mcp-e69fe118--resources.md) — 2 KiB
 - [Prompts](./tanstack-ai-mcp-e69fe118--prompts.md) — 1 KiB
 - [MCP Apps](./tanstack-ai-mcp-e69fe118--mcp-apps.md) — 7 KiB
 - [Codegen CLI](./tanstack-ai-mcp-e69fe118--codegen-cli.md) — 2 KiB
-- [Error classes](./tanstack-ai-mcp-e69fe118--error-classes.md) — 2 KiB
+- [MCP Events (experimental)](./tanstack-ai-mcp-e69fe118--mcp-events-experimental.md) — 2 KiB
+- [Error classes](./tanstack-ai-mcp-e69fe118--error-classes.md) — 3 KiB
 - [Complete server-route example](./tanstack-ai-mcp-e69fe118--complete-server-route-example.md) — 2 KiB
 - [Common Mistakes](./tanstack-ai-mcp-e69fe118--common-mistakes.md) — 4 KiB
 - [Cross-References](./tanstack-ai-mcp-e69fe118--cross-references.md) — 1 KiB
@@ -57,6 +59,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="chat-mcp-discovery-lifecycle-in-one-prop"></a>
 <a id="mcp-input-request"></a>
 <a id="createmcpclients-multiple-servers"></a>
+<a id="mcp-mcp-servers-in-a-harness"></a>
 <a id="abort-signal-cancelling-in-flight-mcp-calls"></a>
 <a id="resources"></a>
 <a id="prompts"></a>
@@ -65,6 +68,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="interactive-apps-createmcpappcallhandler"></a>
 <a id="client-side-usemcpappbridge-mcpappresource"></a>
 <a id="codegen-cli"></a>
+<a id="mcp-events-experimental"></a>
 <a id="error-classes"></a>
 <a id="complete-server-route-example"></a>
 <a id="common-mistakes"></a>

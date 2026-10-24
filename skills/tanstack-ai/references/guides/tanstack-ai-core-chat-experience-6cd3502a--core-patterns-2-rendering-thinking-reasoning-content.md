@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 2. Rendering Thinking/Reasoning Content
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 2. Rendering Thinking/Reasoning Content
 
@@ -54,11 +54,12 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { geminiText } from '@tanstack/ai-gemini'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: geminiText('gemini-3.8-flash'),
     messages,
+    threadId,
     reasoning: 'high', // Gemini 3.x: thinkingLevel; Gemini 2.x: thinkingBudget
   })
 

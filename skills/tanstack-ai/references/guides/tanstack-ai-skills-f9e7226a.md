@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-skills"></a>
 
-Published skill · `@tanstack/ai-skills@0.1.21`.
+Published skill · `@tanstack/ai-skills@1.0.0`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 
@@ -40,11 +40,12 @@ const pptx = inlineSkill({
 })
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: anthropicText('claude-sonnet-4-6'),
     messages,
+    threadId,
     middleware: [withSkills(pptx)],
   })
 
@@ -100,7 +101,7 @@ const executeShell = toolDefinition({
   outputSchema: z.object({ stdout: z.string() }),
 }).server(async ({ command }) => ({ stdout: await runSomewhere(command) }))
 
-// chat({ tools: [executeShell], middleware: [withSkills(source)] })
+// chat({ tools: [executeShell], threadId: 'thread-1', middleware: [withSkills(source)] })
 ```
 
 The skill supplies the command; your tool supplies the ability to run it. Swap in

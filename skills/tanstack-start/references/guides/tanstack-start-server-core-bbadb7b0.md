@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-start-server-core"></a>
 
-Published skill · `@tanstack/start-server-core@1.169.44`.
+Published skill · `@tanstack/start-server-core@1.169.45`.
 
 [Topic index](../server-runtime.md) · [Source provenance](../SOURCES.md)
 
@@ -239,6 +239,6 @@ Do not create session config from `process.env` at module load or cache `getRequ
 
 ## Cross-References
 
-- [start-core/server-functions](./tanstack-start-client-core-start-core-server-functions-49d113b0.md#source-tanstack-start-client-core-start-core-server-functions) — creating server functions that use these utilities
-- [start-core/middleware](./tanstack-start-client-core-start-core-middleware-4735b1c5.md#source-tanstack-start-client-core-start-core-middleware) — request middleware
-- [start-core/server-routes](./tanstack-start-client-core-start-core-server-routes-6852c613.md#source-tanstack-start-client-core-start-core-server-routes) — server route handlers
+- `@tanstack/start-client-core#start-core/server-functions` — creating server functions that use these utilities
+- `@tanstack/start-client-core#start-core/middleware` — request middleware
+- `@tanstack/start-client-core#start-core/server-routes` — server route handlers

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-start-client-core-start-core-auth-server-primitives"></a>
 
-Published skill · `@tanstack/start-client-core@1.170.38`.
+Published skill · `@tanstack/start-client-core@1.170.39`.
 
 [Topic index](../middleware-auth.md) · [Source provenance](../SOURCES.md)
 
@@ -26,7 +26,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Rate Limiting Auth Endpoints](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874--rate-limiting-auth-endpoints.md) — 2 KiB
 - [Session Rotation on Privilege Change](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874--session-rotation-on-privilege-change.md) — 1 KiB
 - [Common Mistakes](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874--common-mistakes.md) — 3 KiB
-- [Cross-References](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874--cross-references.md) — 2 KiB
+- [Cross-References](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874--cross-references.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="auth-server-primitives"></a>

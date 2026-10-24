@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-not-found-and-errors"></a>
 
-Published skill · `@tanstack/router-core@1.171.38`.
+Published skill · `@tanstack/router-core@1.171.39`.
 
 [Topic index](../router-essentials.md) · [Source provenance](../SOURCES.md)
 

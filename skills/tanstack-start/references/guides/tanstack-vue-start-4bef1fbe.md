@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-start"></a>
 
-Published skill · `@tanstack/vue-start@1.169.3`.
+Published skill · `@tanstack/vue-start@1.169.4`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Prerequisite: [Start Core](./tanstack-start-client-core-start-core-18293f60.md).
 
 # Vue Start (`@tanstack/vue-start`)
 
-This skill builds on start-core. Read [start-core](./tanstack-start-client-core-start-core-18293f60.md#source-tanstack-start-client-core-start-core) first for foundational concepts.
+This skill builds on start-core. Read `@tanstack/start-client-core#start-core` first for foundational concepts.
 
 This skill covers the Vue-specific bindings, setup, and patterns for TanStack Start.
 
@@ -295,6 +295,6 @@ function RootComponent() {
 
 ## Cross-References
 
-- [start-core](./tanstack-start-client-core-start-core-18293f60.md#source-tanstack-start-client-core-start-core) — core Start concepts
-- [router-core](./tanstack-router-core-3c7fd849.md#source-tanstack-router-core) — routing fundamentals
-- [vue-router](./tanstack-vue-router-550286fd.md#source-tanstack-vue-router) — Vue Router composables and components
+- `@tanstack/start-client-core#start-core` — core Start concepts
+- `@tanstack/router-core#router-core` — routing fundamentals
+- `@tanstack/vue-router#vue-router` — Vue Router composables and components

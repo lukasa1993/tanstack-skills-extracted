@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "0.10.1"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-persistence/build-cloudflare-artifact-store"
 ---
 
@@ -392,7 +392,7 @@ Invariants that matter (asserted by the conformance testkit):
 
 ## 2. ArtifactStore backed by D1
 
-`ArtifactRecord` is `{ artifactId, runId, threadId, blobKey?, name, mimeType, size,
+`ArtifactRecord` is `{ artifactId, runId, threadId, blobKey, name, mimeType, size,
 sourceUrl?, createdAt }` (`createdAt` epoch ms). One flat table is keyed by
 `artifact_id`. It has run and thread ordered indexes for `list` and
 `listForThread`.
@@ -402,7 +402,7 @@ CREATE TABLE IF NOT EXISTS generation_artifacts (
   artifact_id  text PRIMARY KEY NOT NULL,
   run_id       text NOT NULL,
   thread_id    text NOT NULL,
-  blob_key     text,
+  blob_key     text NOT NULL,
   name         text NOT NULL,
   mime_type    text NOT NULL,
   size         integer NOT NULL,
@@ -423,7 +423,7 @@ interface ArtifactRow {
   artifact_id: string
   run_id: string
   thread_id: string
-  blob_key: string | null
+  blob_key: string
   name: string
   mime_type: string
   size: number
@@ -436,7 +436,7 @@ function fromRow(row: ArtifactRow): ArtifactRecord {
     artifactId: row.artifact_id,
     runId: row.run_id,
     threadId: row.thread_id,
-    ...(row.blob_key != null ? { blobKey: row.blob_key } : {}),
+    blobKey: row.blob_key,
     name: row.name,
     mimeType: row.mime_type,
     size: row.size,
@@ -464,7 +464,7 @@ export function d1ArtifactStore(db: D1Database) {
           record.artifactId,
           record.runId,
           record.threadId,
-          record.blobKey ?? null,
+          record.blobKey,
           record.name,
           record.mimeType,
           record.size,
@@ -521,11 +521,11 @@ export function d1ArtifactStore(db: D1Database) {
 }
 ```
 
-Omitting `source_url` / `blob_key` from the record when the column is `NULL`
-keeps records comparing cleanly against the reference in-memory store. Persist
-`blob_key` verbatim: a `storageKey` mapper can put the bytes anywhere, so a
-reader cannot recompute the path — `resolveArtifactBlobKey(record)` falls back
-to the default convention only for rows written before the column existed.
+Omitting `source_url` from the record when the column is `NULL` keeps records
+comparing cleanly against the reference in-memory store. Persist `blob_key`
+verbatim: a `storageKey` mapper can put the bytes anywhere, so a reader cannot
+recompute the path. `blobKey` is required. 0.x records without it are not
+supported: `retrieveBlob` throws for them. Backfill `blob_key` before upgrading.
 Cloudflare KV is not an equivalent ArtifactStore backend. The required ordering
 and indexed reads need a transactional indexed database. Use D1 or another
 transactional indexed database for artifact metadata. Store the bytes in R2.

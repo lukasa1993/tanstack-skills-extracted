@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-framework-marko-marko-virtual-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.6`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.7`.
 
 [Topic index](../framework-marko.md) · [Source provenance](../SOURCES.md)
 

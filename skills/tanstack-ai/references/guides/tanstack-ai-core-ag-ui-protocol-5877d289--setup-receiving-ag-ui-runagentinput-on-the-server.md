@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Setup — Receiving AG-UI RunAgentInput on the Server
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup — Receiving AG-UI RunAgentInput on the Server
 
@@ -26,8 +26,9 @@ export async function POST(req: Request) {
   }
 
   const stream = chat({
-    adapter: openaiText('gpt-5.6'),
+    adapter: openaiText('gpt-6.1-sol'),
     messages: params.messages,
+    threadId: params.threadId,
     tools: mergeAgentTools(serverTools, params.tools),
   })
 

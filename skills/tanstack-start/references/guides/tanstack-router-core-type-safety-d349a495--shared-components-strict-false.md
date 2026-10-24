@@ -1,6 +1,6 @@
 # Type Safety — Shared Components: `strict: false`
 
-[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.38`.
+[Guide and prerequisites](./tanstack-router-core-type-safety-d349a495.md) · Published skill · `@tanstack/router-core@1.171.39`.
 
 ## Shared Components: `strict: false`
 

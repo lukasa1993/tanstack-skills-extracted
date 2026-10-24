@@ -1,6 +1,6 @@
 # Middleware — Pattern: tool-call budget (app-owned)
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Pattern: tool-call budget (app-owned)
 
@@ -54,11 +54,12 @@ function toolCallBudget(opts: {
 }
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [weatherTool],
     agentLoopStrategy: maxIterations(20),
     middleware: [toolCallBudget({ maxPerTurn: 10, max: 20 })],

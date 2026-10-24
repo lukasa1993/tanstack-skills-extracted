@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.166.2"
   tanstack-package: "@tanstack/solid-start"
-  tanstack-package-version: "1.169.3"
+  tanstack-package-version: "1.169.4"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "solid-start"
   tanstack-sources: "[\"TanStack/router:packages/solid-start/src\",\"TanStack/router:docs/start/framework/solid/build-from-scratch.md\"]"
@@ -17,7 +17,7 @@ metadata:
 
 # Solid Start (`@tanstack/solid-start`)
 
-This skill builds on start-core. Read [start-core](../../../start-client-core/skills/start-core/SKILL.md) first for foundational concepts.
+This skill builds on start-core. Read `@tanstack/start-client-core#start-core` first for foundational concepts.
 
 This skill covers the Solid-specific bindings, setup, and patterns for TanStack Start.
 
@@ -274,6 +274,6 @@ plugins: [tanstackStart(), solidPlugin()]
 
 ## Cross-References
 
-- [start-core](../../../start-client-core/skills/start-core/SKILL.md) — core Start concepts
-- [router-core](../../../router-core/skills/router-core/SKILL.md) — routing fundamentals
-- [solid-router](../../../solid-router/skills/solid-router/SKILL.md) — Solid Router hooks and components
+- `@tanstack/start-client-core#start-core` — core Start concepts
+- `@tanstack/router-core#router-core` — routing fundamentals
+- `@tanstack/solid-router#solid-router` — Solid Router hooks and components

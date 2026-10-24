@@ -1,6 +1,6 @@
 # Structured Outputs — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Common Mistakes
 
@@ -21,6 +21,7 @@ const RecipeSchema = z.object({
 function useRecipeChat() {
   return useChat({
     connection: fetchServerSentEvents('/api/recipes'),
+    threadId: 'support-42',
     outputSchema: RecipeSchema,
   })
 }
@@ -124,6 +125,7 @@ The adapter already handles provider differences (OpenAI uses `response_format`,
 chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   modelOptions: {
     responseFormat: { type: 'json_schema', json_schema: mySchema },
   },
@@ -139,6 +141,7 @@ import { z } from 'zod'
 const person = await chat({
   adapter: openaiText('gpt-5.2'),
   messages: [{ role: 'user', content: 'John Doe, 30' }],
+  threadId: 'thread-1',
   outputSchema: z.object({ name: z.string(), age: z.number() }),
 })
 ```
@@ -165,6 +168,7 @@ const messages = [{ role: 'user' as const, content: 'John Doe, 30' }]
 const untyped = await chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   outputSchema: {
     type: 'object',
     properties: {
@@ -180,6 +184,7 @@ const untyped = await chat({
 const person = await chat({
   adapter,
   messages,
+  threadId: 'thread-1',
   outputSchema: z.object({
     name: z.string(),
     age: z.number(),

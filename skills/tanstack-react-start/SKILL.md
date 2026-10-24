@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "tanstack-start"
   tanstack-library-version: "1.168.32"
   tanstack-package: "@tanstack/react-start"
-  tanstack-package-version: "1.169.3"
+  tanstack-package-version: "1.169.4"
   tanstack-requires: "[\"tanstack-start-client-core-start-core\"]"
   tanstack-source-skill: "react-start"
   tanstack-sources: "[\"TanStack/router:packages/react-start/src\",\"TanStack/router:docs/start/framework/react/build-from-scratch.md\"]"
@@ -289,6 +289,6 @@ Without `<Scripts />` in the root route's `<body>`, client JavaScript doesn't lo
 
 ## Cross-References
 
-- [start-core](../../../start-client-core/skills/start-core/SKILL.md) — core Start concepts
-- [router-core](../../../router-core/skills/router-core/SKILL.md) — routing fundamentals
-- [react-router](../../../react-router/skills/react-router/SKILL.md) — React Router hooks and components
+- `@tanstack/start-client-core#start-core` — core Start concepts
+- `@tanstack/router-core#router-core` — routing fundamentals
+- `@tanstack/react-router#react-router` — React Router hooks and components

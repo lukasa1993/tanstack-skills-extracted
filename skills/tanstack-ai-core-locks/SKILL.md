@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.71.0"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-core/locks"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/locks.md\",\"TanStack/ai:packages/ai/src/activities/chat/middleware/locks.ts\"]"
   tanstack-type: "sub-skill"
@@ -39,8 +39,9 @@ import { openaiText } from '@tanstack/ai-openai'
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   middleware: [
     withLocks(new InMemoryLockStore()), // single process
   ],
@@ -59,8 +60,9 @@ const persistence = memoryPersistence()
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   middleware: [
     withPersistence(persistence),
     withLocks(new InMemoryLockStore()),
@@ -109,8 +111,9 @@ const locks = defineLock({
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   middleware: [withLocks(locks)],
 })
 ```

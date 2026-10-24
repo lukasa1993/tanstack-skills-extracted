@@ -1,6 +1,6 @@
 # Ai Mcp — MCP Apps
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## MCP Apps
 
@@ -124,6 +124,7 @@ function ChatPage() {
   const threadId = 'weather-chat'
   const { messages, sendMessage } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId,
   })
 
   const bridge = useMcpAppBridge({

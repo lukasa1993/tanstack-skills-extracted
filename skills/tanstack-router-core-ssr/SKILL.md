@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.38"
+  tanstack-package-version: "1.171.39"
   tanstack-requires: "[\"tanstack-router-core\",\"tanstack-router-core-data-loading\"]"
   tanstack-source-skill: "ssr"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/ssr.md\",\"TanStack/router:docs/router/guide/document-head-management.md\",\"TanStack/router:docs/router/how-to/setup-ssr.md\"]"
@@ -483,4 +483,4 @@ See [router-core/data-loading](../tanstack-router-core-data-loading/SKILL.md) fo
 ## Cross-References
 
 - [router-core/data-loading](../tanstack-router-core-data-loading/SKILL.md) — SSR changes where loaders execute
-- [compositions/router-query](../../../../react-router/skills/compositions/router-query/SKILL.md) — SSR dehydration/hydration with TanStack Query
+- `@tanstack/react-router#compositions/router-query` — SSR dehydration/hydration with TanStack Query

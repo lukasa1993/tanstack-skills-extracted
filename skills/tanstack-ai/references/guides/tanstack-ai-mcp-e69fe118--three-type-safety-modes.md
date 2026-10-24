@@ -1,6 +1,6 @@
 # Ai Mcp — Three type-safety modes
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## Three type-safety modes
 
@@ -27,6 +27,7 @@ const tools = await client.tools()
 const stream = chat({
   adapter: openaiText('gpt-5.5'),
   messages: [{ role: 'user', content: 'What is the weather in Paris?' }],
+  threadId: 'thread-1',
   tools,
 })
 ```

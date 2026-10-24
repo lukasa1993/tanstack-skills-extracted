@@ -1,6 +1,6 @@
 # Ai Mcp — Prompts
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## Prompts
 
@@ -26,5 +26,6 @@ const messages = mcpPromptToMessages(prompt)
 const stream = chat({
   adapter: openaiText('gpt-5.5'),
   messages: [...messages, { role: 'user', content: 'Review src/index.ts.' }],
+  threadId: 'thread-1',
 })
 ```

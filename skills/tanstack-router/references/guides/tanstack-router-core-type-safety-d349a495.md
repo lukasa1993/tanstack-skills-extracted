@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-router-core-type-safety"></a>
 
-Published skill · `@tanstack/router-core@1.171.38`.
+Published skill · `@tanstack/router-core@1.171.39`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 3. Client-Side Execution Progress Display
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.5`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@1.0.0`.
 
 ## Core Patterns: 3. Client-Side Execution Progress Display
 
@@ -58,6 +58,7 @@ export function CodeModeChat() {
 
   const { messages, sendMessage, isLoading } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     onCustomEvent: handleCustomEvent,
   })
 

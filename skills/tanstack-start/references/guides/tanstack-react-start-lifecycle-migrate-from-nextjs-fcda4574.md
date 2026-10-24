@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-start-lifecycle-migrate-from-nextjs"></a>
 
-Published skill · `@tanstack/react-start@1.169.3`.
+Published skill · `@tanstack/react-start@1.169.4`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -423,5 +423,5 @@ export const myAction = createServerFn({ method: 'POST' })
 ## Cross-References
 
 - [react-start](./tanstack-react-start-d9f2ca2e.md#source-tanstack-react-start) — full React Start setup
-- [start-core/server-functions](./tanstack-start-client-core-start-core-server-functions-49d113b0.md#source-tanstack-start-client-core-start-core-server-functions) — server function patterns
-- [start-core/execution-model](./tanstack-start-client-core-start-core-execution-model-6669e01c.md#source-tanstack-start-client-core-start-core-execution-model) — isomorphic execution
+- `@tanstack/start-client-core#start-core/server-functions` — server function patterns
+- `@tanstack/start-client-core#start-core/execution-model` — isomorphic execution

@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 8. Durable persistence (job lifecycle + artifact bytes)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 8. Durable persistence (job lifecycle + artifact bytes)
 
@@ -15,7 +15,11 @@ at blob key `artifacts/<runId>/<artifactId>` with an `ArtifactRecord` per file.
 `memoryPersistence()` ships all three for dev/tests.
 
 ```typescript
-import { generateImage, toServerSentEventsResponse } from '@tanstack/ai'
+import {
+  generateImage,
+  generationParamsFromRequest,
+  toServerSentEventsResponse,
+} from '@tanstack/ai'
 import { openaiImage } from '@tanstack/ai-openai'
 import {
   withGenerationPersistence,
@@ -28,12 +32,19 @@ import {
 const persistence = memoryPersistence() // swap for your DB/object-store adapter
 
 export async function POST(req: Request) {
-  const { prompt, threadId } = await req.json()
+  const { input, threadId, runId } = await generationParamsFromRequest(
+    'image',
+    req,
+  )
+  if (typeof input.prompt !== 'string') {
+    return new Response('Send a text prompt.', { status: 400 })
+  }
   return toServerSentEventsResponse(
     generateImage({
       adapter: openaiImage('gpt-image-1'),
-      prompt,
+      prompt: input.prompt,
       threadId, // the slot recorded on the job + artifacts
+      runId,
       stream: true,
       middleware: [
         withGenerationPersistence(persistence, {

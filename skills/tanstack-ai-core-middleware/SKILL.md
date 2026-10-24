@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "0.71.0"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "ai-core/middleware"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/middleware.md\",\"TanStack/ai:docs/sandbox/observability.md\",\"TanStack/ai:docs/persistence/overview.md\"]"
   tanstack-type: "sub-skill"
@@ -25,11 +25,12 @@ import { openaiText } from '@tanstack/ai-openai'
 import { trackAnalytics, reportError } from './analytics'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     middleware: [
       {
         onStart: (ctx) => {
@@ -52,7 +53,7 @@ export async function POST(request: Request) {
 ## Hooks Reference
 
 Every hook receives a `ChatMiddlewareContext` as its first argument, which provides
-`requestId`, `streamId`, `phase`, `iteration`, `chunkIndex`, `model`, `provider`,
+`requestId`, `streamId`, `phase`, `iteration`, `chunkIndex`, `callMetadata`, `model`, `provider`,
 `signal`, `abort()`, `defer()`, and more. `parentRunId` names the run this one continues. `subagentRunId` is set only inside a subagent and names its card.
 
 | Hook                       | When                                                                                                     | Second Argument                                     |
@@ -218,11 +219,12 @@ const analytics: ChatMiddleware = {
 }
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     middleware: [analytics],
   })
 
@@ -388,11 +390,12 @@ const configTransform: ChatMiddleware = {
 }
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [weatherTool, stockTool],
     middleware: [
       logging, // Runs first
@@ -470,11 +473,12 @@ function toolCallBudget(opts: {
 }
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [weatherTool],
     agentLoopStrategy: maxIterations(20),
     middleware: [toolCallBudget({ maxPerTurn: 10, max: 20 })],
@@ -501,11 +505,12 @@ const weatherTool = toolDefinition({
 }).server(async ({ city }) => ({ city, tempC: 21 }))
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [weatherTool],
     middleware: [
       toolCacheMiddleware({

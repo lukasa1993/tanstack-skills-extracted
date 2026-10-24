@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Tuning the lazy catalog with `lazyToolsConfig`
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Tuning the lazy catalog with `lazyToolsConfig`
 
@@ -10,10 +10,14 @@ By default the discovery-tool catalog lists only bare names (`'none'`). Pass
 
 ```typescript group=lazy-tools
 // Same tools as the route above, with a richer discovery catalog:
-export function chatWithCatalog(messages: Array<ModelMessage>) {
+export function chatWithCatalog(
+  messages: Array<ModelMessage>,
+  threadId: string,
+) {
   return chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getProducts, compareProducts],
     agentLoopStrategy: maxIterations(20),
     lazyToolsConfig: { includeDescription: 'first-sentence' },

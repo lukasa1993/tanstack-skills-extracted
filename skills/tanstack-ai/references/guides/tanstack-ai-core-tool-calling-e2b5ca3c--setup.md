@@ -1,6 +1,6 @@
 # Tool Calling — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup
 
@@ -53,10 +53,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [getProducts, updateCartUIDef], // server tool + client definition
   })
   return toServerSentEventsResponse(stream)
@@ -85,6 +86,7 @@ function ChatPage() {
   const tools = clientTools(updateCartUI)
   const chatOptions = createChatClientOptions({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
     tools,
   })
   const { messages, sendMessage } = useChat(chatOptions)

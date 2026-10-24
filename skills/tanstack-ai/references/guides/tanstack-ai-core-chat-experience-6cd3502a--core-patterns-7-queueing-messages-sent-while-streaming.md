@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 7. Queueing Messages Sent While Streaming
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 7. Queueing Messages Sent While Streaming
 
@@ -15,6 +15,7 @@ import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { messages, queue, sendMessage, cancelQueued, isLoading } = useChat({
   connection: fetchServerSentEvents('/api/chat'),
+  threadId: 'support-42',
   queue: { whenBusy: 'queue', drain: 'fifo', maxSize: 5, onOverflow: 'reject' },
 })
 ```
@@ -51,6 +52,7 @@ import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 function QueuedMessages() {
   const { queue, cancelQueued } = useChat({
     connection: fetchServerSentEvents('/api/chat'),
+    threadId: 'support-42',
   })
 
   return (
@@ -74,6 +76,7 @@ import { useChat, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { sendMessage } = useChat({
   connection: fetchServerSentEvents('/api/chat'),
+  threadId: 'support-42',
 })
 
 sendMessage('Never mind, do this instead', { whenBusy: 'interrupt' })

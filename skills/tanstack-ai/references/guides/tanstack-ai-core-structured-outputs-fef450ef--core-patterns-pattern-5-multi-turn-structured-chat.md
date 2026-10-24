@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 5: Multi-turn structured chat
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 5: Multi-turn structured chat
 
@@ -26,6 +26,7 @@ function RecipeBuilder() {
   const { messages, sendMessage } = useChat({
     outputSchema: RecipeSchema,
     connection: fetchServerSentEvents('/api/recipes'),
+    threadId: 'support-42',
   })
 
   return (

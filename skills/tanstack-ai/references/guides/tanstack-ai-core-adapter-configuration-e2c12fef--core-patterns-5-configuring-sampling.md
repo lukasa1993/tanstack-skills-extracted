@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 5. Configuring Sampling
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 5. Configuring Sampling
 
@@ -22,6 +22,7 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 chat({
   adapter: openaiText('gpt-5.2'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { temperature: 0.7, top_p: 0.9, max_output_tokens: 1000 },
 })
 
@@ -29,6 +30,7 @@ chat({
 chat({
   adapter: anthropicText('claude-sonnet-4-6'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { temperature: 0.7, top_p: 0.9, max_tokens: 1000 },
 })
 
@@ -36,6 +38,7 @@ chat({
 chat({
   adapter: geminiText('gemini-2.5-pro'),
   messages,
+  threadId: 'thread-1',
   modelOptions: { temperature: 0.7, topP: 0.9, maxOutputTokens: 1000 },
 })
 
@@ -44,6 +47,7 @@ chat({
 chat({
   adapter: ollamaText('llama3.3:latest'),
   messages,
+  threadId: 'thread-1',
   modelOptions: {
     options: { temperature: 0.7, top_p: 0.9, num_predict: 1000 },
   },

@@ -1,6 +1,6 @@
 # Structured Outputs — Core Patterns: Pattern 6: Harness adapters (Claude Code, Codex, OpenCode, Grok Build, ACP)
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 6: Harness adapters (Claude Code, Codex, OpenCode, Grok Build, ACP)
 
@@ -10,11 +10,33 @@ Dedicated harness adapters honor `chat({ outputSchema })` on the same turn. Nati
 A UI endpoint must pass `stream: true`. Without it, `chat()` returns a `Promise`, not SSE.
 
 ```typescript
-import { chat, toServerSentEventsResponse } from '@tanstack/ai'
+import {
+  chat,
+  chatParamsFromRequest,
+  toServerSentEventsResponse,
+} from '@tanstack/ai'
 import { claudeCodeText } from '@tanstack/ai-claude-code'
-import { withSandbox } from '@tanstack/ai-sandbox'
+import {
+  createSecrets,
+  defineSandbox,
+  defineWorkspace,
+  githubRepo,
+  withSandbox,
+} from '@tanstack/ai-sandbox'
+import { dockerSandbox } from '@tanstack/ai-sandbox-docker'
 import { z } from 'zod'
-import { sandbox } from './sandbox'
+
+const sandbox = defineSandbox({
+  id: 'repo-report',
+  provider: dockerSandbox({ image: 'node:22' }),
+  workspace: defineWorkspace({
+    source: githubRepo({ repo: 'owner/app' }),
+    setup: ['npm install -g @anthropic-ai/claude-code --include=optional'],
+    secrets: createSecrets({
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY ?? '',
+    }),
+  }),
+})
 
 const ReportSchema = z.object({
   name: z.string(),
@@ -22,18 +44,13 @@ const ReportSchema = z.object({
 })
 
 export async function POST(request: Request) {
-  const body: unknown = await request.json()
-  const messages =
-    typeof body === 'object' &&
-    body !== null &&
-    'messages' in body &&
-    Array.isArray(body.messages)
-      ? body.messages
-      : []
+  const { messages, threadId, runId } = await chatParamsFromRequest(request)
 
   const stream = chat({
     adapter: claudeCodeText('claude-opus-4-8'),
     messages,
+    threadId,
+    runId,
     outputSchema: ReportSchema,
     stream: true,
     middleware: [withSandbox(sandbox)],
@@ -54,6 +71,7 @@ const ReportSchema = z.object({
 function RepoReport() {
   const { final, sendMessage } = useChat({
     connection: fetchServerSentEvents('/api/repo-report'),
+    threadId: 'support-42',
     outputSchema: ReportSchema,
   })
 

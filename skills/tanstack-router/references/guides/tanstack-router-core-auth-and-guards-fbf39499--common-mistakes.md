@@ -1,6 +1,6 @@
 # Auth And Guards — Common Mistakes
 
-[Guide and prerequisites](./tanstack-router-core-auth-and-guards-fbf39499.md) · Published skill · `@tanstack/router-core@1.171.38`.
+[Guide and prerequisites](./tanstack-router-core-auth-and-guards-fbf39499.md) · Published skill · `@tanstack/router-core@1.171.39`.
 
 ## Common Mistakes
 
@@ -37,7 +37,7 @@ const getMyOrders = createServerFn({ method: 'GET' })
   })
 ```
 
-Rule of thumb: every `createServerFn`, server route, or API endpoint that touches user data needs `authMiddleware` (or an equivalent in-handler check). The route guard is for the page experience; the endpoint guard is for the data. See [start-core/auth-server-primitives](https://skills.sh/lukasa1993/tanstack-skills-extracted/tanstack-start) for the full session/middleware pattern.
+Rule of thumb: every `createServerFn`, server route, or API endpoint that touches user data needs `authMiddleware` (or an equivalent in-handler check). The route guard is for the page experience; the endpoint guard is for the data. See `@tanstack/start-client-core#start-core/auth-server-primitives` for the full session/middleware pattern.
 
 ### CRITICAL: The anonymous destination can still disclose protected data
 

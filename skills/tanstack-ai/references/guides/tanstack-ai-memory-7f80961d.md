@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-memory"></a>
 
-Published skill · `@tanstack/ai-memory@0.2.16`.
+Published skill · `@tanstack/ai-memory@1.0.0`.
 
 [Topic index](../memory.md) · [Source provenance](../SOURCES.md)
 
@@ -41,6 +41,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId: session.threadId,
     context: { session },
     middleware: [
       memoryMiddleware({

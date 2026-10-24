@@ -10,7 +10,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-3c7fd849.md",
       "sourcePath": "router-core",
       "bytes": 6902,
@@ -32,7 +32,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-type-safety-d349a495.md",
       "sourcePath": "type-safety",
       "bytes": 3024,
@@ -104,7 +104,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-navigation-ec84fd49.md",
       "sourcePath": "navigation",
       "bytes": 10309,
@@ -131,7 +131,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-path-params-ee026ef1.md",
       "sourcePath": "path-params",
       "bytes": 8966,
@@ -158,7 +158,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-search-params-5373becb.md",
       "sourcePath": "search-params",
       "bytes": 8652,
@@ -185,7 +185,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499.md",
       "sourcePath": "auth-and-guards",
       "bytes": 1614,
@@ -199,7 +199,7 @@
         {
           "title": "Overview",
           "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--overview.md",
-          "bytes": 969
+          "bytes": 926
         },
         {
           "title": "Setup",
@@ -214,7 +214,7 @@
         {
           "title": "Common Mistakes",
           "file": "references/guides/tanstack-router-core-auth-and-guards-fbf39499--common-mistakes.md",
-          "bytes": 4656
+          "bytes": 4613
         },
         {
           "title": "Cross-References",
@@ -232,7 +232,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-data-loading-9f5ce056.md",
       "sourcePath": "data-loading",
       "bytes": 2113,
@@ -271,12 +271,12 @@
         {
           "title": "Tensions",
           "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--tensions.md",
-          "bytes": 801
+          "bytes": 848
         },
         {
           "title": "Cross-References",
           "file": "references/guides/tanstack-router-core-data-loading-9f5ce056--cross-references.md",
-          "bytes": 503
+          "bytes": 550
         }
       ],
       "examples": []
@@ -289,7 +289,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-not-found-and-errors-9b2e7a89.md",
       "sourcePath": "not-found-and-errors",
       "bytes": 11287,
@@ -316,7 +316,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-code-splitting-21d488b4.md",
       "sourcePath": "code-splitting",
       "bytes": 8639,
@@ -343,7 +343,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-core",
-      "version": "1.171.38",
+      "version": "1.171.39",
       "file": "references/guides/tanstack-router-core-ssr-e95e1bf1.md",
       "sourcePath": "ssr",
       "bytes": 2829,
@@ -416,7 +416,7 @@
         {
           "title": "Cross-References",
           "file": "references/guides/tanstack-router-core-ssr-e95e1bf1--cross-references.md",
-          "bytes": 480
+          "bytes": 432
         }
       ],
       "examples": []
@@ -429,16 +429,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-plugin",
-      "version": "1.168.47",
+      "version": "1.168.48",
       "file": "references/guides/tanstack-router-plugin-5aa7d950.md",
       "sourcePath": "router-plugin",
-      "bytes": 8738,
+      "bytes": 8404,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Install; Bundler Setup; Configuration Options; How It Works; Route Refactor Workflow; Individual Plugin Exports; Common Mistakes; Cross-References",
           "file": "references/guides/tanstack-router-plugin-5aa7d950.md",
-          "bytes": 8738
+          "bytes": 8404
         }
       ],
       "examples": []
@@ -473,10 +473,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-router",
-      "version": "1.170.42",
+      "version": "1.170.43",
       "file": "references/guides/tanstack-solid-router-bd6ae87e.md",
       "sourcePath": "solid-router",
-      "bytes": 11773,
+      "bytes": 11638,
       "prerequisites": [
         {
           "id": "tanstack-router-core",
@@ -487,7 +487,7 @@
         {
           "title": "Overview; Full Setup: File-Based Routing with Vite; Hooks Reference; Components Reference; Solid-Specific Patterns; Common Mistakes; Cross-References",
           "file": "references/guides/tanstack-solid-router-bd6ae87e.md",
-          "bytes": 11773
+          "bytes": 11638
         }
       ],
       "examples": []
@@ -500,10 +500,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-router",
-      "version": "1.170.41",
+      "version": "1.170.42",
       "file": "references/guides/tanstack-vue-router-550286fd.md",
       "sourcePath": "vue-router",
-      "bytes": 9799,
+      "bytes": 9664,
       "prerequisites": [
         {
           "id": "tanstack-router-core",
@@ -514,7 +514,160 @@
         {
           "title": "Overview; Full Setup: File-Based Routing with Vite; Composables Reference; Components Reference; Vue-Specific Patterns; Common Mistakes; Cross-References",
           "file": "references/guides/tanstack-vue-router-550286fd.md",
-          "bytes": 9799
+          "bytes": 9664
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-router",
+      "title": "React Router",
+      "theme": "additional-guidance",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-router",
+      "version": "1.170.46",
+      "file": "references/guides/tanstack-react-router-1780aa7e.md",
+      "sourcePath": "react-router",
+      "bytes": 11535,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Full Setup: File-Based Routing with Vite; Hooks Reference; Components Reference; React-Specific Patterns; Common Mistakes; Cross-References",
+          "file": "references/guides/tanstack-react-router-1780aa7e.md",
+          "bytes": 11535
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-router-compositions-router-query",
+      "title": "Router Query",
+      "theme": "additional-guidance",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-router",
+      "version": "1.170.46",
+      "file": "references/guides/tanstack-react-router-compositions-router-query-29f6886c.md",
+      "sourcePath": "router-query",
+      "bytes": 12720,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        },
+        {
+          "id": "tanstack-router-core-data-loading",
+          "file": "references/guides/tanstack-router-core-data-loading-9f5ce056.md"
+        },
+        {
+          "id": "tanstack-react-router",
+          "file": "references/guides/tanstack-react-router-1780aa7e.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview; Setup: QueryClient in Router Context; Core Pattern: Static `query` in Loader + `useSuspenseQuery` in Component; Streaming Pattern: Fire-and-Forget `query` (Not Awaited); Error Handling with `useQueryErrorResetBoundary`; Common Mistakes; Tension: Built-In SWR Cache vs External Cache; Cross-References",
+          "file": "references/guides/tanstack-react-router-compositions-router-query-29f6886c.md",
+          "bytes": 12720
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "tanstack-react-router-lifecycle-migrate-from-react-router",
+      "title": "Migrate From React Router",
+      "theme": "additional-guidance",
+      "kind": "atomic",
+      "status": "Published skill",
+      "frameworks": [],
+      "package": "@tanstack/react-router",
+      "version": "1.170.46",
+      "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb.md",
+      "sourcePath": "migrate-from-react-router",
+      "bytes": 2724,
+      "prerequisites": [
+        {
+          "id": "tanstack-router-core",
+          "file": "references/guides/tanstack-router-core-3c7fd849.md"
+        },
+        {
+          "id": "tanstack-react-router",
+          "file": "references/guides/tanstack-react-router-1780aa7e.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Overview",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--overview.md",
+          "bytes": 1009
+        },
+        {
+          "title": "Pre-Migration",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--pre-migration.md",
+          "bytes": 918
+        },
+        {
+          "title": "Route Definitions",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--route-definitions.md",
+          "bytes": 2598
+        },
+        {
+          "title": "Navigation",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--navigation.md",
+          "bytes": 1090
+        },
+        {
+          "title": "Search Params",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--search-params.md",
+          "bytes": 1341
+        },
+        {
+          "title": "Path Params",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--path-params.md",
+          "bytes": 591
+        },
+        {
+          "title": "`useLocation` — Common Pitfall",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--uselocation-common-pitfall.md",
+          "bytes": 1597
+        },
+        {
+          "title": "Outlet",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--outlet.md",
+          "bytes": 446
+        },
+        {
+          "title": "Loaders",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--loaders.md",
+          "bytes": 1090
+        },
+        {
+          "title": "Code Splitting",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--code-splitting.md",
+          "bytes": 592
+        },
+        {
+          "title": "Cleanup",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--cleanup.md",
+          "bytes": 546
+        },
+        {
+          "title": "Common Mistakes",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--common-mistakes.md",
+          "bytes": 1795
+        },
+        {
+          "title": "Quick Reference: API Mapping",
+          "file": "references/guides/tanstack-react-router-lifecycle-migrate-from-react-router-0cb1bddb--quick-reference-api-mapping.md",
+          "bytes": 1748
         }
       ],
       "examples": []

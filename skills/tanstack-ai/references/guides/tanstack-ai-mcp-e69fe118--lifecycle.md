@@ -1,6 +1,6 @@
 # Ai Mcp — Lifecycle
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@0.9.2`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.0.0`.
 
 ## Lifecycle
 
@@ -20,13 +20,14 @@ import { createMCPClient } from '@tanstack/ai-mcp'
 
 // Option 1: middleware terminal hooks (streaming route handlers)
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const client = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
   })
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: await client.tools(),
     middleware: [
       {
@@ -41,7 +42,10 @@ export async function POST(request: Request) {
 }
 
 // Option 2: explicit close after in-scope consumption
-export async function runToCompletion(messages: Array<ModelMessage>) {
+export async function runToCompletion(
+  messages: Array<ModelMessage>,
+  threadId: string,
+) {
   const client = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
   })
@@ -49,6 +53,7 @@ export async function runToCompletion(messages: Array<ModelMessage>) {
     const stream = chat({
       adapter: openaiText('gpt-5.5'),
       messages,
+      threadId,
       tools: await client.tools(),
     })
     for await (const chunk of stream) {
@@ -61,13 +66,17 @@ export async function runToCompletion(messages: Array<ModelMessage>) {
 
 // Option 3: await using (TypeScript 5.2+ with Symbol.asyncDispose) —
 // same rule: consume the stream before the scope exits.
-export async function runWithUsing(messages: Array<ModelMessage>) {
+export async function runWithUsing(
+  messages: Array<ModelMessage>,
+  threadId: string,
+) {
   await using client = await createMCPClient({
     transport: { type: 'http', url: 'https://mcp.example.com/mcp' },
   })
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: await client.tools(),
   })
   for await (const chunk of stream) {

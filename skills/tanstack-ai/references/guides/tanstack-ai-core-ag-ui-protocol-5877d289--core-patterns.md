@@ -1,12 +1,12 @@
 # Ag Ui Protocol — Core Patterns
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns
 
 ### 1. SSE Format — toServerSentEventsStream / toServerSentEventsResponse
 
-**Wire format:** Each event is `data: <JSON>\n\n`. Stream ends with `data: [DONE]\n\n`.
+**Wire format:** Each event is `data: <JSON>\n\n`. The last event is `RUN_FINISHED` (or `RUN_ERROR`). There is no `[DONE]` line.
 
 ```typescript group=sse-response
 import {
@@ -21,8 +21,9 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 // Option A: Get a ReadableStream (manual Response construction)
 const abortController = new AbortController()
 const stream = chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   abortController,
 })
 const sseStream = toServerSentEventsStream(stream, abortController)
@@ -77,8 +78,9 @@ const messages = [{ role: 'user' as const, content: 'Hello' }]
 // Option A: Get a ReadableStream
 const abortController = new AbortController()
 const stream = chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
   abortController,
 })
 const ndjsonStream = toHttpStream(stream, abortController)
@@ -108,23 +110,23 @@ adapters from `@tanstack/ai-react` (or the framework-specific package).
 All events extend `BaseAGUIEvent` which carries `type`, `timestamp`, optional
 `model`, and optional `rawEvent`.
 
-| Event Type             | Description                                                                                                                 |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `RUN_STARTED`          | First event in a stream. Carries `runId` and optional `threadId`.                                                           |
-| `TEXT_MESSAGE_START`   | New text message begins. Carries `messageId` and `role`.                                                                    |
-| `TEXT_MESSAGE_CONTENT` | Incremental text token. Carries `messageId` and `delta` (the new text).                                                     |
-| `TEXT_MESSAGE_END`     | Text message complete. Carries `messageId`.                                                                                 |
-| `TOOL_CALL_START`      | Tool invocation begins. Carries `toolCallId`, `toolName`, and `index`.                                                      |
-| `TOOL_CALL_ARGS`       | Incremental tool arguments JSON. Carries `toolCallId` and `delta`.                                                          |
-| `TOOL_CALL_END`        | Tool call arguments complete. Carries `toolCallId` and `toolName`.                                                          |
-| `STEP_STARTED`         | Thinking/reasoning step begins. Carries `stepId` and optional `stepType`.                                                   |
-| `STEP_FINISHED`        | Thinking step complete. Carries `stepId`, `delta`, and optional `content`.                                                  |
-| `MESSAGES_SNAPSHOT`    | Full conversation transcript snapshot. Carries `messages: Array<UIMessage>`.                                                |
-| `STATE_SNAPSHOT`       | Full application state snapshot. Carries `state: Record<string, unknown>`.                                                  |
-| `STATE_DELTA`          | Incremental state update. Carries `delta: Record<string, unknown>`.                                                         |
-| `CUSTOM`               | Extension point. Carries `name` (string) and optional `value` (unknown).                                                    |
-| `RUN_FINISHED`         | Stream complete. Carries `runId` and `finishReason` (`'stop'` / `'length'` / `'content_filter'` / `'tool_calls'` / `null`). |
-| `RUN_ERROR`            | Error during stream. Carries `message`, optional `code` and `runId`; a nested `error: { message, code? }` copy is kept too. |
+| Event Type                  | Description                                                                                                                 |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `RUN_STARTED`               | First event in a stream. Carries `runId` and optional `threadId`.                                                           |
+| `TEXT_MESSAGE_START`        | New text message begins. Carries `messageId` and `role`.                                                                    |
+| `TEXT_MESSAGE_CONTENT`      | Incremental text token. Carries `messageId` and `delta` (the new text).                                                     |
+| `TEXT_MESSAGE_END`          | Text message complete. Carries `messageId`.                                                                                 |
+| `TOOL_CALL_START`           | Tool invocation begins. Carries `toolCallId`, `toolCallName`, and `index`.                                                  |
+| `TOOL_CALL_ARGS`            | Incremental tool arguments JSON. Carries `toolCallId` and `delta`.                                                          |
+| `TOOL_CALL_END`             | Tool call arguments complete. Carries `toolCallId`.                                                                         |
+| `REASONING_START`           | Thinking begins. `REASONING_MESSAGE_START` / `_CONTENT` / `_END` stream the text (`delta`), then `REASONING_END`.           |
+| `REASONING_ENCRYPTED_VALUE` | Provider thinking signature. Kept on the thinking part and sent back on the next turn.                                      |
+| `MESSAGES_SNAPSHOT`         | Full conversation transcript snapshot. Carries `messages: Array<UIMessage>`.                                                |
+| `STATE_SNAPSHOT`            | Full application state snapshot. Carries `state: Record<string, unknown>`.                                                  |
+| `STATE_DELTA`               | Incremental state update. Carries `delta: Record<string, unknown>`.                                                         |
+| `CUSTOM`                    | Extension point. Carries `name` (string) and optional `value` (unknown).                                                    |
+| `RUN_FINISHED`              | Stream complete. Carries `runId` and `finishReason` (`'stop'` / `'length'` / `'content_filter'` / `'tool_calls'` / `null`). |
+| `RUN_ERROR`                 | Error during stream. Carries `message`, optional `code` and `runId`; a nested `error: { message, code? }` copy is kept too. |
 
 **Typical event sequence for a text-only response:**
 
@@ -141,8 +143,8 @@ RUN_STARTED -> TEXT_MESSAGE_START -> TEXT_MESSAGE_CONTENT* -> TEXT_MESSAGE_END
 ```
 
 **Type aliases:** `StreamChunk` is an alias for `AGUIEvent` (the discriminated
-union of all event interfaces). `StreamChunkType` is an alias for `AGUIEventType`
-(the string union of all event type literals).
+union of all event interfaces). For event type names, use the `EventType`
+enum, or `` `${EventType}` `` for the string union.
 
 ### 4. Typed CUSTOM Events — `ChatStream` and `KnownCustomEvent`
 
@@ -163,8 +165,9 @@ import { openaiText } from '@tanstack/ai-openai'
 const messages = [{ role: 'user' as const, content: 'Hello' }]
 
 const stream = chat({
-  adapter: openaiText('gpt-5.6'),
+  adapter: openaiText('gpt-6.1-sol'),
   messages,
+  threadId: 'thread-1',
 })
 
 for await (const chunk of stream) {

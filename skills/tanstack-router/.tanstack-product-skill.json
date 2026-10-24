@@ -2,16 +2,17 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-router",
   "product": "router",
-  "sourceCount": 14,
+  "sourceCount": 17,
   "themes": [
     "foundations",
     "urls-navigation",
     "data-auth-errors",
     "ssr-build-tooling",
     "framework-solid",
-    "framework-vue"
+    "framework-vue",
+    "additional-guidance"
   ],
-  "guideCount": 14,
-  "largestGuideEntryBytes": 11773,
-  "inputSha256": "58946fd846b81fb3cdf3afd76148221632899d6acc8073693093d23a4626e1d4"
+  "guideCount": 17,
+  "largestGuideEntryBytes": 12720,
+  "inputSha256": "9eb1c6ad15ddac694bb01b0a4184efec0d369763c46d4c06a86533b6f1a040e3"
 }

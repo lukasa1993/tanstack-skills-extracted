@@ -1,6 +1,6 @@
 # Custom Backend Integration — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Common Mistakes
 
@@ -45,8 +45,16 @@ const pushAdapter: SubscribeConnectionAdapter = {
   subscribe(abortSignal) {
     return channel.chunks(abortSignal)
   },
-  async send(messages, data, abortSignal) {
-    await channel.send({ messages, ...data }, abortSignal)
+  async send(messages, data, abortSignal, runContext) {
+    await channel.send(
+      {
+        threadId: runContext.threadId,
+        runId: runContext.runId,
+        messages,
+        ...data,
+      },
+      abortSignal,
+    )
   },
 }
 ```
@@ -86,7 +94,7 @@ import type { ConnectConnectionAdapter } from '@tanstack/ai-react'
 import type { StreamChunk } from '@tanstack/ai'
 
 const resilientAdapter: ConnectConnectionAdapter = {
-  async *connect(messages, data, abortSignal) {
+  async *connect(messages, data, abortSignal, runContext) {
     const maxRetries = 3
     let attempt = 0
 
@@ -95,7 +103,12 @@ const resilientAdapter: ConnectConnectionAdapter = {
         const response = await fetch('https://my-api.com/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages, ...data }),
+          body: JSON.stringify({
+            threadId: runContext.threadId,
+            runId: runContext.runId,
+            messages,
+            ...data,
+          }),
           signal: abortSignal,
         })
 
@@ -137,6 +150,7 @@ const resilientAdapter: ConnectConnectionAdapter = {
 
 const { messages, sendMessage } = useChat({
   connection: resilientAdapter,
+  threadId: 'support-42',
 })
 ```
 

@@ -1,6 +1,6 @@
 # Media Generation — Common Hook API
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Common Hook API
 
@@ -34,6 +34,7 @@ import { useGenerateSpeech, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { result } = useGenerateSpeech({
   connection: fetchServerSentEvents('/api/generate/speech'),
+  threadId: 'product-123-hero',
   onResult: (raw) => ({
     audioUrl: `data:${raw.contentType};base64,${raw.audio}`,
     duration: raw.duration,

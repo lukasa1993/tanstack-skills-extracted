@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-router"></a>
 
-Published skill · `@tanstack/vue-router@1.170.41`.
+Published skill · `@tanstack/vue-router@1.170.42`.
 
 [Topic index](../router-ssr-tooling-adapters.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Prerequisite: [Router Core](./tanstack-router-core-3c7fd849.md).
 
 # Vue Router (`@tanstack/vue-router`)
 
-This skill builds on router-core. Read [router-core](./tanstack-router-core-3c7fd849.md#source-tanstack-router-core) first for foundational concepts.
+This skill builds on router-core. Read `@tanstack/router-core#router-core` first for foundational concepts.
 
 This skill covers the Vue-specific bindings, components, composables, and setup for TanStack Router.
 

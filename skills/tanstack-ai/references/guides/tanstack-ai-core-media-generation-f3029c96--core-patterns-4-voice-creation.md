@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 4. Voice Creation
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 4. Voice Creation
 
@@ -28,6 +28,7 @@ import {
 
 const designed = await generateVoice({
   adapter: elevenlabsVoiceDesign('eleven_ttv_v3'),
+  threadId: 'thread-1',
   prompt: 'A warm, gravelly narrator in his sixties with a slight Irish lilt',
   name: 'Irish Narrator', // omit to audition previews instead
 })
@@ -42,6 +43,7 @@ if (!voice) throw new Error('The provider returned no voices.')
 
 const speech = await generateSpeech({
   adapter: elevenlabsSpeech('eleven_v4'),
+  threadId: 'thread-1',
   text: 'Once upon a time...',
   voice: voice.voiceId,
 })

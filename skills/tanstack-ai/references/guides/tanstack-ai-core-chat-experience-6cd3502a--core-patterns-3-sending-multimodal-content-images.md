@@ -1,6 +1,6 @@
 # Chat Experience — Core Patterns: 3. Sending Multimodal Content (Images)
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 3. Sending Multimodal Content (Images)
 
@@ -13,6 +13,7 @@ import type { ContentPart } from '@tanstack/ai'
 
 const { sendMessage } = useChat({
   connection: fetchServerSentEvents('/api/chat'),
+  threadId: 'support-42',
 })
 
 function sendImageMessage(text: string, imageBase64: string, mimeType: string) {

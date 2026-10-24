@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-start-client-core-start-core-middleware"></a>
 
-Published skill · `@tanstack/start-client-core@1.170.38`.
+Published skill · `@tanstack/start-client-core@1.170.39`.
 
 [Topic index](../middleware-auth.md) · [Source provenance](../SOURCES.md)
 
@@ -236,7 +236,7 @@ const authMiddleware = createMiddleware().server(async ({ next, request }) => {
 })
 ```
 
-> **Attach `authMiddleware` to every `createServerFn` that needs auth.** Server functions are API endpoints; a route `beforeLoad` does not protect their data, only the route's UI. Protect the endpoint that reads or mutates private data. See [router-core/auth-and-guards](./tanstack-router-core-auth-and-guards-fbf39499.md#source-tanstack-router-core-auth-and-guards) and [start-core/auth-server-primitives](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md#source-tanstack-start-client-core-start-core-auth-server-primitives).
+> **Attach `authMiddleware` to every `createServerFn` that needs auth.** Server functions are API endpoints; a route `beforeLoad` does not protect their data, only the route's UI. Protect the endpoint that reads or mutates private data. See `@tanstack/router-core#router-core/auth-and-guards` and [start-core/auth-server-primitives](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md#source-tanstack-start-client-core-start-core-auth-server-primitives).
 
 ```tsx
 type Permissions = Record<string, string[]>
@@ -388,4 +388,4 @@ createMiddleware({ type: 'function' })
 - [start-core/server-functions](./tanstack-start-client-core-start-core-server-functions-49d113b0.md#source-tanstack-start-client-core-start-core-server-functions) — what middleware wraps
 - [start-core/server-routes](./tanstack-start-client-core-start-core-server-routes-6852c613.md#source-tanstack-start-client-core-start-core-server-routes) — middleware on API endpoints
 - [start-core/auth-server-primitives](./tanstack-start-client-core-start-core-auth-server-primitives-8c264874.md#source-tanstack-start-client-core-start-core-auth-server-primitives) — building the `authMiddleware` factory itself: session cookie reads, OAuth state, CSRF
-- [router-core/auth-and-guards](./tanstack-router-core-auth-and-guards-fbf39499.md#source-tanstack-router-core-auth-and-guards) — routing-side UX guards; data auth belongs in the server function, server route, or API endpoint handler/middleware
+- `@tanstack/router-core#router-core/auth-and-guards` — routing-side UX guards; data auth belongs in the server function, server route, or API endpoint handler/middleware

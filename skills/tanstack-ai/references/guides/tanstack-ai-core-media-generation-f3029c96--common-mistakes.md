@@ -1,6 +1,6 @@
 # Media Generation — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Common Mistakes
 
@@ -58,6 +58,7 @@ export const generateImageStreamFn = createServerFn({ method: 'POST' })
     // (also a type error: an AsyncIterable is not a valid server-function return)
     return generateImage({
       adapter: openaiImage('gpt-image-1'),
+      threadId: 'thread-1',
       prompt: data.prompt,
       stream: true,
     })
@@ -77,6 +78,7 @@ export const generateImageStreamFn = createServerFn({ method: 'POST' })
     return toServerSentEventsResponse(
       generateImage({
         adapter: openaiImage('gpt-image-1'),
+        threadId: 'thread-1',
         prompt: data.prompt,
         stream: true,
       }),
@@ -86,18 +88,19 @@ export const generateImageStreamFn = createServerFn({ method: 'POST' })
 
 > Source: maintainer interview.
 
-### c. MEDIUM: Not downloading OpenAI image URLs before they expire
+### c. MEDIUM: Not downloading Seedream image URLs before they expire
 
-OpenAI image URLs expire after 1 hour. If you store the URL and display it
+BytePlus Seedream image URLs expire after 24 hours. If you store the URL and display it
 later, the image will silently break. Always download or display the image
 immediately, or convert to base64 for persistence.
 
 ```typescript
 import { generateImage } from '@tanstack/ai'
-import { openaiImage } from '@tanstack/ai-openai'
+import { byteplusImage } from '@tanstack/ai-byteplus'
 
 const result = await generateImage({
-  adapter: openaiImage('dall-e-3'),
+  adapter: byteplusImage('dola-seedream-5-0-pro-260628'),
+  threadId: 'thread-1',
   prompt: 'A mountain landscape',
 })
 
@@ -110,8 +113,8 @@ for (const img of result.images) {
   }
 }
 
-// GOOD: use b64Json when available (no expiration)
-// gpt-image-1 returns b64Json by default
+// GOOD: ask for b64Json (no expiration) with
+// modelOptions: { response_format: 'b64_json' }
 ```
 
 > Source: docs/media/image-generation.md.
@@ -138,6 +141,7 @@ are not in `GeminiAudioProviderOptions` — don't reach for them via `as any`.
 // WRONG — both fields are silently ignored or rejected by the SDK
 generateAudio({
   adapter: geminiAudio('lyria-3-pro-preview'),
+  threadId: 'thread-1',
   prompt: 'ambient piano',
   modelOptions: {
     responseMimeType: 'audio/wav', // unsupported
@@ -153,6 +157,7 @@ import { geminiAudio } from '@tanstack/ai-gemini'
 // CORRECT — shape the prompt itself for what you want
 generateAudio({
   adapter: geminiAudio('lyria-3-pro-preview'),
+  threadId: 'thread-1',
   prompt: 'ambient piano, no vocals',
 })
 ```
@@ -176,6 +181,7 @@ import { falAudio } from '@tanstack/ai-fal'
 // For Lyria: put length guidance in the prompt
 generateAudio({
   adapter: geminiAudio('lyria-3-pro-preview'),
+  threadId: 'thread-1',
   prompt: 'A 2-minute ambient piano piece with gentle strings',
   // duration: 120  // ← does nothing; rely on the prompt
 })
@@ -183,6 +189,7 @@ generateAudio({
 // For fal: duration works and is translated per-model
 generateAudio({
   adapter: falAudio('fal-ai/minimax-music/v2'),
+  threadId: 'thread-1',
   prompt: 'upbeat synth melody',
   duration: 60, // → music_length_ms: 60_000
 })
@@ -206,6 +213,7 @@ import { geminiSpeech } from '@tanstack/ai-gemini'
 
 generateSpeech({
   adapter: geminiSpeech('gemini-2.5-pro-preview-tts'),
+  threadId: 'thread-1',
   text: '[Alice] Hi. [Bob] Hello!',
   modelOptions: {
     multiSpeakerVoiceConfig: {
@@ -229,30 +237,10 @@ generateSpeech({
 ### h. HIGH: Passing image prompt parts to a model that doesn't support image-conditioned generation
 
 Not every model accepts image-conditioned prompts. The `prompt` type is
-narrowed per model, so passing an image part to a text-only model
-(dall-e-3, Imagen) is a **compile-time error**; adapters
-also throw a clear runtime error as a backstop, so users learn at call
-time rather than getting silently wrong output.
-
-```typescript ignore
-// WRONG — dall-e-3 has no edit/inputs API; image parts are a type error
-generateImage({
-  adapter: openaiImage('dall-e-3'),
-  prompt: [
-    { type: 'text', content: 'Edit this' },
-    { type: 'image', source: { type: 'url', value: url } }, // ❌ type error
-  ],
-})
-
-// WRONG — Imagen is text-to-image only; same compile-time rejection
-generateImage({
-  adapter: geminiImage('imagen-4.0-generate-001'),
-  prompt: [
-    { type: 'text', content: 'Edit this' },
-    { type: 'image', source: { type: 'url', value: url } }, // ❌ type error
-  ],
-})
-```
+narrowed per model, so passing an image part to a model with no image
+input is a **compile-time error**; adapters also throw a clear runtime error
+as a backstop, so users learn at call time rather than getting silently wrong
+output.
 
 ```typescript
 import { generateImage } from '@tanstack/ai'
@@ -264,6 +252,7 @@ const url = 'https://…/photo.png'
 // CORRECT — use a model that supports image-conditioned generation
 generateImage({
   adapter: openaiImage('gpt-image-2'), // edits up to 16 images
+  threadId: 'thread-1',
   prompt: [
     { type: 'text', content: 'Edit this' },
     { type: 'image', source: { type: 'url', value: url } },
@@ -272,6 +261,7 @@ generateImage({
 
 generateImage({
   adapter: geminiImage('gemini-3.1-flash-image'), // native multimodal
+  threadId: 'thread-1',
   prompt: [
     { type: 'text', content: 'Edit this' },
     { type: 'image', source: { type: 'url', value: url } },
@@ -295,6 +285,7 @@ import { openaiSpeech } from '@tanstack/ai-openai'
 // When a speech generation sounds wrong or a transcription returns garbage
 generateSpeech({
   adapter: openaiSpeech('tts-1'),
+  threadId: 'thread-1',
   text: 'Hello',
   debug: { provider: true, output: true }, // raw SDK chunks + yielded chunks
 })

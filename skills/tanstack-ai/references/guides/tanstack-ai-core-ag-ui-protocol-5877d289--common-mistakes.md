@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Common Mistakes
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Common Mistakes
 
@@ -30,9 +30,10 @@ Source: docs/protocol/sse-protocol.md
 
 Not all event types appear in every stream:
 
-- `STEP_STARTED` / `STEP_FINISHED` only appear with thinking-enabled models
+- `REASONING_*` events only appear with thinking-enabled models
   (e.g., `o3`, `claude-sonnet-4-5` with extended thinking). Standard models
-  skip these entirely.
+  skip these entirely. TanStack AI adapters do not send `STEP_STARTED` /
+  `STEP_FINISHED` for thinking.
 - `TOOL_CALL_START` / `TOOL_CALL_ARGS` / `TOOL_CALL_END` only appear when
   the model invokes tools. A text-only response has none.
 - `STATE_SNAPSHOT` / `STATE_DELTA` only appear when server code explicitly
@@ -41,7 +42,7 @@ Not all event types appear in every stream:
   full transcript snapshot.
 - `CUSTOM` events are application-defined and never emitted by default.
 
-Code that expects a fixed sequence (e.g., always waiting for `STEP_FINISHED`
+Code that expects a fixed sequence (e.g., always waiting for `REASONING_END`
 before processing text) will hang or break on models that don't emit those events.
 
 Source: docs/protocol/chunk-definitions.md

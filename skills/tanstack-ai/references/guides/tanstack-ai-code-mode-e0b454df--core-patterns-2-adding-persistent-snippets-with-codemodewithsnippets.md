@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 2. Adding Persistent Snippets with codeModeWithSnippets()
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@0.5.5`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@1.0.0`.
 
 ## Core Patterns: 2. Adding Persistent Snippets with codeModeWithSnippets()
 
@@ -49,7 +49,7 @@ const storage = createFileSnippetStorage({
 const driver = createNodeIsolateDriver()
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
 
   // High-level API: automatic LLM-based snippet selection
   const { toolsRegistry, systemPrompt } = await codeModeWithSnippets({
@@ -65,12 +65,14 @@ export async function POST(request: Request) {
       maxSnippetsInContext: 5,
     },
     messages,
+    threadId,
   })
 
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     tools: toolsRegistry.getTools(),
     messages,
+    threadId,
     systemPrompts: ['You are a helpful assistant.', systemPrompt],
     agentLoopStrategy: maxIterations(15),
   })

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.171.15"
   tanstack-package: "@tanstack/router-core"
-  tanstack-package-version: "1.171.38"
+  tanstack-package-version: "1.171.39"
   tanstack-requires: "[\"tanstack-router-core\"]"
   tanstack-source-skill: "data-loading"
   tanstack-sources: "[\"TanStack/router:docs/router/guide/data-loading.md\",\"TanStack/router:docs/router/guide/deferred-data-loading.md\",\"TanStack/router:docs/router/guide/router-context.md\",\"TanStack/router:docs/router/guide/data-mutations.md\"]"
@@ -482,11 +482,11 @@ Returning the whole `search` object means unrelated param changes (e.g., `sortDi
 ## Tensions
 
 - **Client-first loaders vs SSR expectations**: Loaders run on the client by default. When using SSR (TanStack Start), they run on both client and server. Browser-only APIs work by default but break under SSR. Server-only APIs (fs, db) break by default but work under Start server functions. See **../tanstack-router-core-ssr/SKILL.md**.
-- **Built-in SWR cache vs external cache coordination**: Router has built-in caching. When using TanStack Query, set `defaultPreloadStaleTime: 0` to avoid double-caching. See **compositions/router-query/SKILL.md**.
+- **Built-in SWR cache vs external cache coordination**: Router has built-in caching. When using TanStack Query, set `defaultPreloadStaleTime: 0` to avoid double-caching. See **../tanstack-react-router-compositions-router-query/SKILL.md**.
 
 ---
 
 ## Cross-References
 
 - See also: **../tanstack-router-core-search-params/SKILL.md** — `loaderDeps` consumes validated search params as cache keys
-- See also: **compositions/router-query/SKILL.md** — for external cache coordination with TanStack Query
+- See also: **../tanstack-react-router-compositions-router-query/SKILL.md** — for external cache coordination with TanStack Query

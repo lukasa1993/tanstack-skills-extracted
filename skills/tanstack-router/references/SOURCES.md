@@ -2,19 +2,22 @@
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
-| `tanstack-router-core` | atomic | `foundations` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-type-safety` | atomic | `foundations` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-navigation` | atomic | `urls-navigation` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-path-params` | atomic | `urls-navigation` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-search-params` | atomic | `urls-navigation` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-auth-and-guards` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-data-loading` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-not-found-and-errors` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-code-splitting` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-core-ssr` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.38` |  |
-| `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.168.47` |  |
+| `tanstack-router-core` | atomic | `foundations` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-type-safety` | atomic | `foundations` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-navigation` | atomic | `urls-navigation` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-path-params` | atomic | `urls-navigation` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-search-params` | atomic | `urls-navigation` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-auth-and-guards` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-data-loading` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-not-found-and-errors` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-code-splitting` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-core-ssr` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.39` |  |
+| `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.168.48` |  |
 | `tanstack-virtual-file-routes` | atomic | `ssr-build-tooling` | `@tanstack/virtual-file-routes` | `1.162.0` |  |
-| `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.42` |  |
-| `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.41` |  |
+| `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.43` |  |
+| `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.42` |  |
+| `tanstack-react-router` | atomic | `additional-guidance` | `@tanstack/react-router` | `1.170.46` |  |
+| `tanstack-react-router-compositions-router-query` | atomic | `additional-guidance` | `@tanstack/react-router` | `1.170.46` |  |
+| `tanstack-react-router-lifecycle-migrate-from-react-router` | atomic | `additional-guidance` | `@tanstack/react-router` | `1.170.46` |  |
 
 Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

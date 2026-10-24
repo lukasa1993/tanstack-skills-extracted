@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-memory"
-  tanstack-package-version: "0.2.16"
+  tanstack-package-version: "1.0.0"
   tanstack-source-skill: "tanstack-ai-memory"
 ---
 
@@ -44,6 +44,7 @@ export async function POST(request: Request) {
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId: session.threadId,
     context: { session },
     middleware: [
       memoryMiddleware({

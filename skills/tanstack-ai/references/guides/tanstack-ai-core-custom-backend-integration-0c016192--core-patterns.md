@@ -1,6 +1,6 @@
 # Custom Backend Integration — Core Patterns
 
-[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-custom-backend-integration-0c016192.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns
 
@@ -23,6 +23,7 @@ const { messages, sendMessage } = useChat({
     },
     credentials: 'include',
   }),
+  threadId: 'support-42',
 })
 ```
 
@@ -45,11 +46,13 @@ const { messages, sendMessage } = useChat({
       },
     }),
   ),
+  threadId: 'support-42',
 })
 ```
 
-The `body` field in options is merged into the POST request body alongside
-`messages` and `data`, so the server receives `{ messages, data, provider, model }`.
+The `body` field in the connection options is merged into AG-UI
+`forwardedProps`, so the server reads `params.forwardedProps.provider` and
+`params.forwardedProps.model`.
 
 **Custom fetch client (for proxies, interceptors, retries):**
 
@@ -64,6 +67,7 @@ const { messages, sendMessage } = useChat({
   connection: fetchServerSentEvents('/api/chat', {
     fetchClient: myCustomFetch,
   }),
+  threadId: 'support-42',
 })
 ```
 
@@ -82,6 +86,7 @@ const { messages, sendMessage } = useChat({
       Authorization: `Bearer ${token}`,
     },
   }),
+  threadId: 'support-42',
 })
 ```
 
@@ -103,6 +108,7 @@ const { messages, sendMessage } = useChat({
       headers: { Authorization: `Bearer ${await refreshToken()}` },
     }),
   ),
+  threadId: 'support-42',
 })
 ```
 
@@ -124,7 +130,7 @@ import type { ConnectConnectionAdapter } from '@tanstack/ai-react'
 import type { StreamChunk } from '@tanstack/ai'
 
 const websocketAdapter: ConnectConnectionAdapter = {
-  async *connect(messages, data, abortSignal) {
+  async *connect(messages, data, abortSignal, runContext) {
     const ws = new WebSocket('wss://my-api.com/chat')
 
     // Wait for connection
@@ -134,7 +140,15 @@ const websocketAdapter: ConnectConnectionAdapter = {
     })
 
     // Send messages
-    ws.send(JSON.stringify({ messages, ...data }))
+    // Send the run ids the client made. Never make up your own.
+    ws.send(
+      JSON.stringify({
+        threadId: runContext.threadId,
+        runId: runContext.runId,
+        messages,
+        ...data,
+      }),
+    )
 
     // Create an async queue to bridge WebSocket events to an async iterable
     const queue: Array<StreamChunk> = []
@@ -177,6 +191,7 @@ const websocketAdapter: ConnectConnectionAdapter = {
 function Chat() {
   const { messages, sendMessage } = useChat({
     connection: websocketAdapter,
+    threadId: 'support-42',
   })
 
   // ... render messages
@@ -232,16 +247,24 @@ const pushAdapter: SubscribeConnectionAdapter = {
     }
   },
 
-  async send(messages, data) {
+  async send(messages, data, _abortSignal, runContext) {
     // Dispatch messages; chunks arrive through subscribe()
     await ready
-    ws.send(JSON.stringify({ messages, ...data }))
+    ws.send(
+      JSON.stringify({
+        threadId: runContext.threadId,
+        runId: runContext.runId,
+        messages,
+        ...data,
+      }),
+    )
   },
 }
 
 function Chat() {
   const { messages, sendMessage } = useChat({
     connection: pushAdapter,
+    threadId: 'support-42',
   })
 
   // ... render messages
@@ -255,11 +278,14 @@ a shorthand for creating a `ConnectConnectionAdapter` from an async generator:
 import { useChat, stream } from '@tanstack/ai-react'
 import type { StreamChunk } from '@tanstack/ai'
 
-const directAdapter = stream(async function* (messages, data) {
+// The 4th argument is the AG-UI RunAgentInput for this run: threadId, runId,
+// resume, client tools, and forwardedProps. Send it as the request body.
+const directAdapter = stream(async function* (_messages, _data, signal, input) {
   const response = await fetch('https://my-api.com/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ messages, ...data }),
+    body: JSON.stringify(input),
+    signal,
   })
 
   const reader = response.body!.getReader()
@@ -285,5 +311,6 @@ const directAdapter = stream(async function* (messages, data) {
 
 const { messages, sendMessage } = useChat({
   connection: directAdapter,
+  threadId: 'support-42',
 })
 ```

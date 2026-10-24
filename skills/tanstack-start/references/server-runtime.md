@@ -6,6 +6,6 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Server Functions](./guides/tanstack-start-client-core-start-core-server-functions-49d113b0.md) | Published skill | `@tanstack/start-client-core@1.170.38` |
-| [Server Routes](./guides/tanstack-start-client-core-start-core-server-routes-6852c613.md) | Published skill | `@tanstack/start-client-core@1.170.38` |
-| [Start Server Core](./guides/tanstack-start-server-core-bbadb7b0.md) | Published skill | `@tanstack/start-server-core@1.169.44` |
+| [Server Functions](./guides/tanstack-start-client-core-start-core-server-functions-49d113b0.md) | Published skill | `@tanstack/start-client-core@1.170.39` |
+| [Server Routes](./guides/tanstack-start-client-core-start-core-server-routes-6852c613.md) | Published skill | `@tanstack/start-client-core@1.170.39` |
+| [Start Server Core](./guides/tanstack-start-server-core-bbadb7b0.md) | Published skill | `@tanstack/start-server-core@1.169.45` |

@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 6. Video Generation (Experimental -- async polling)
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: 6. Video Generation (Experimental -- async polling)
 
@@ -21,9 +21,9 @@ jobs without `url`), the adapter's `getVideo()` returns
 `body` into the blob store (R2, S3, filesystem) and sets `url`. Without it,
 core buffers the whole video in memory and sets `url` to a base64 `data:` URL
 (fine for short clips, an out-of-memory risk on serverless above ~10 MiB).
-Custom adapters implement `getVideo()`. `adapter.getVideoUrl()` is deprecated:
-it is `getVideo()` with the stream always buffered, and adapters that only
-implement it still work. Providers that
+Custom adapters must implement `getVideo()`. There is no `getVideoUrl()`.
+To poll from app code, call `getVideoJobStatus({ adapter, jobId })`. With middleware,
+also pass the `threadId` of the submit. Providers that
 return a URL (Grok, fal, BytePlus) pass through; persistence still re-hosts
 them, which you want because those URLs expire.
 
@@ -51,6 +51,7 @@ export async function pollVideo(jobId: string, threadId: string) {
 ```typescript
 import {
   generateVideo,
+  generationParamsFromRequest,
   getVideoJobStatus,
   toServerSentEventsResponse,
 } from '@tanstack/ai'
@@ -59,6 +60,7 @@ import { openaiVideo } from '@tanstack/ai-openai'
 // Non-streaming: manual polling loop
 const { jobId } = await generateVideo({
   adapter: openaiVideo('sora-2'),
+  threadId: 'thread-1',
   prompt: 'A golden retriever playing in sunflowers',
   size: '1280x720',
   duration: 8,
@@ -72,10 +74,18 @@ while (status.status !== 'completed' && status.status !== 'failed') {
 
 // Streaming: server handles polling, client gets real-time updates
 export async function POST(request: Request) {
-  const { prompt } = await request.json()
+  const { input, threadId, runId } = await generationParamsFromRequest(
+    'video',
+    request,
+  )
+  if (typeof input.prompt !== 'string') {
+    return new Response('Send a text prompt.', { status: 400 })
+  }
   const stream = generateVideo({
     adapter: openaiVideo('sora-2'),
-    prompt,
+    threadId,
+    runId,
+    prompt: input.prompt,
     stream: true,
     pollingInterval: 3000,
     maxDuration: 600_000,
@@ -101,6 +111,7 @@ adapter.availableDurations() // { kind: 'discrete', values: [4, 6, 8] }
 
 const { jobId } = await generateVideo({
   adapter,
+  threadId: 'thread-1',
   prompt: 'A golden retriever playing in sunflowers',
   size: '16:9', // Veo sizes are aspect ratios: '16:9' | '9:16'
   duration: adapter.snapDuration(7), // 6
@@ -131,11 +142,13 @@ import { geminiVideo } from '@tanstack/ai-gemini'
 const omni = geminiVideo('gemini-omni-1.1-flash')
 const first = await generateVideo({
   adapter: omni,
+  threadId: 'thread-1',
   prompt: 'A violinist outdoors',
 })
 // …poll first.jobId to completion, then edit it:
 const edited = await generateVideo({
   adapter: omni,
+  threadId: 'thread-1',
   prompt: 'Make the violin invisible',
   modelOptions: { previous_interaction_id: first.jobId },
 })
@@ -189,6 +202,7 @@ adapter.snapDuration(7.4) // 7
 const sliderSeconds = 7 // raw seconds from a UI control
 const { jobId } = await generateVideo({
   adapter,
+  threadId: 'thread-1',
   prompt: 'A timelapse of clouds',
   duration: adapter.snapDuration(sliderSeconds),
 })
@@ -203,6 +217,7 @@ import { useGenerateVideo, fetchServerSentEvents } from '@tanstack/ai-react'
 
 const { generate, result, jobId, videoStatus, isLoading } = useGenerateVideo({
   connection: fetchServerSentEvents('/api/generate/video'),
+  threadId: 'product-123-hero',
   onJobCreated: (id) => console.log('Job created:', id),
   onStatusUpdate: (status) =>
     console.log(`${status.status} (${status.progress}%)`),

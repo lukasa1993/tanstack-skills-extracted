@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Setup — Server Endpoint Producing AG-UI Events via SSE
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Setup — Server Endpoint Producing AG-UI Events via SSE
 
@@ -9,10 +9,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
-    adapter: openaiText('gpt-5.6'),
+    adapter: openaiText('gpt-6.1-sol'),
     messages,
+    threadId,
   })
   return toServerSentEventsResponse(stream)
 }

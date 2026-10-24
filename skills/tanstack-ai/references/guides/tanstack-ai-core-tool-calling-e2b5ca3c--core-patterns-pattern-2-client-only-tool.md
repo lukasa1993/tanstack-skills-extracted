@@ -1,6 +1,6 @@
 # Tool Calling — Core Patterns: Pattern 2: Client-Only Tool
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@0.71.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.0.0`.
 
 ## Core Patterns: Pattern 2: Client-Only Tool
 
@@ -32,10 +32,11 @@ import { chat, toServerSentEventsResponse } from '@tanstack/ai'
 import { openaiText } from '@tanstack/ai-openai'
 
 export async function POST(request: Request) {
-  const { messages } = await request.json()
+  const { messages, threadId } = await request.json()
   const stream = chat({
     adapter: openaiText('gpt-5.5'),
     messages,
+    threadId,
     tools: [showNotificationDef],
   })
   return toServerSentEventsResponse(stream)
@@ -66,6 +67,7 @@ function ChatPage() {
   const { messages, sendMessage } = useChat(
     createChatClientOptions({
       connection: fetchServerSentEvents('/api/chat'),
+      threadId: 'support-42',
       tools: clientTools(showNotification),
     }),
   )
