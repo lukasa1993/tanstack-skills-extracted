@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -15,7 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Register a hotkey](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-a-hotkey.md) — 4 KiB
 - [Hotkey options](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-multiple-hotkeys.md) — 3 KiB
-- [Enable and disable hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--enable-and-disable-hotkeys.md) — 2 KiB
+- [Enable and disable hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--enable-and-disable-hotkeys.md) — 3 KiB
 - [Hotkey targets](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-targets.md) — 2 KiB
 - [Handle duplicate hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--handle-duplicate-hotkeys.md) — 2 KiB
 - [Describe hotkeys with `meta`](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--describe-hotkeys-with-meta.md) — 1 KiB

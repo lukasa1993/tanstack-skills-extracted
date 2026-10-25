@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
-Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `useHotkeyHint` returns an object whose tracked `value` is `true` while the user holds modifiers that belong to a hotkey. It's an optional helper, and it doesn't register anything, so use it alongside the `useHotkey` helper.
+Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `useHotkeyHint` returns an object whose tracked `value` is `true` while the user holds modifiers that belong to a hotkey that can fire. It's an optional helper, and it doesn't register anything, so use it alongside the `useHotkey` helper.
 
 ## Show a hint next to a button
 
@@ -46,6 +46,9 @@ While the user holds Command on macOS, or Control elsewhere, the button reads "S
 - Releasing every modifier, or the window losing focus, hides the hint.
 - Other held keys don't matter. AltGr never shows hints, because it types characters.
 - A hotkey without modifiers, such as `Escape` or `G`, never shows a hint.
+- The hotkey must be able to fire. A hint shows only while a registration of the hotkey is enabled and in an active [scope](./hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md#source-hotkeys-docs-framework-ember-guides-hotkey-manager-md). A hotkey that nothing registers never shows a hint.
+- Every registration of the hotkey counts, not only the one in your component. If two components register the same hotkey and only one is enabled, both show the hint.
+- A hotkey bound to an element's `target` shows its hint only while focus is inside that element. A hotkey on `document` or `window` shows it wherever focus is.
 
 To show a hint only while every modifier is held, pass `exact`:
 
@@ -91,48 +94,49 @@ export default class Hint extends Component<{ Args: { id: AppHotkeyId } }> {
 }
 ```
 
-```hbs
-<button type='button' {{on 'click' this.save}}>Save <Hint @id='doc.save' /></button>
-```
-
-## Hide hints for hotkeys that can't fire
-
-`useHotkeyHint` only looks at held keys. It doesn't know whether the hotkey is enabled, its scope is active, or its target has focus. When a hotkey can be off, combine the hint with the same state:
-
 ```gts
-export default class SaveButton extends Component {
-  @tracked dirty = false
-  hint = useHotkeyHint(this, saveHotkey)
-  label = formatForDisplay(saveHotkey)
+import Component from '@glimmer/component'
+import { on } from '@ember/modifier'
+import { useAppHotkeys, useHotkey } from '@tanstack/ember-hotkeys'
+import Hint from './hint'
+
+export default class Toolbar extends Component {
+  appHotkeys = useAppHotkeys(this)
   save = () => {
     /* ... */
   }
 
-  get showHint() {
-    return this.hint.value && this.dirty
+  get saveHotkey() {
+    return this.appHotkeys.value['doc.save']
   }
 
   <template>
-    {{useHotkey saveHotkey this.save enabled=this.dirty}}
-    <button type='button' {{on 'click' this.save}}>
-      Save {{#if this.showHint}}<kbd>{{this.label}}</kbd>{{/if}}
-    </button>
+    {{useHotkey this.saveHotkey this.save}}
+    <button type='button' {{on 'click' this.save}}>Save <Hint @id='doc.save' /></button>
   </template>
 }
 ```
 
 ## Check held modifiers without the utility
 
-To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options:
+To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options, but it only looks at held keys. To also check that the hotkey can fire, call `hasActiveRegistration` on the hotkey manager:
 
 ```ts
-import { getKeyStateTracker, matchesHeldModifiers } from '@tanstack/ember-hotkeys'
+import {
+  getHotkeyManager,
+  getKeyStateTracker,
+  matchesHeldModifiers,
+} from '@tanstack/ember-hotkeys'
 
 const tracker = getKeyStateTracker()
 
 matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) // true while Mod is held
+
+const showHint =
+  matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) &&
+  getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the utility
 ```
 
 [Held Key State Helpers](./hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md#source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md) covers the tracker and the other held-key utilities.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/ember/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/ember/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

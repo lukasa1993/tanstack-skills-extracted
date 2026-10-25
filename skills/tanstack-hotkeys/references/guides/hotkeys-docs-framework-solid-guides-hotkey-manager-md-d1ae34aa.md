@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -99,7 +99,7 @@ releaseScope()
 
 ### Read scope state
 
-`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. `createHotkeyRegistrations` updates when scopes change, so a list filtered with `isScopeActive` stays current.
+`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. To list which registered hotkeys are on, read each registration's `status`. See [List the hotkeys on screen](./hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md-db8cc71d.md#source-hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md).
 
 `manager.scopes` is a store with these fields:
 
@@ -108,18 +108,14 @@ releaseScope()
 - `allowed` lists the active scopes that the exclusive scope allows.
 - `suspended` lists the active scopes that can't fire because another scope is exclusive. It can include `'global'`.
 
-To read it in a component, copy it into a signal and unsubscribe on cleanup:
+To read it in a component, use `createHotkeyScopesState`. It updates when scopes activate or release:
 
 ```tsx
-import { Show, createSignal, onCleanup } from 'solid-js'
-import { getHotkeyManager } from '@tanstack/solid-hotkeys'
-
-const manager = getHotkeyManager()
+import { Show } from 'solid-js'
+import { createHotkeyScopesState } from '@tanstack/solid-hotkeys'
 
 function KeyboardOwner() {
-  const [scopes, setScopes] = createSignal(manager.scopes.state)
-  const subscription = manager.scopes.subscribe((state) => setScopes(state))
-  onCleanup(() => subscription.unsubscribe())
+  const scopes = createHotkeyScopesState()
 
   return (
     <Show when={scopes().exclusive}>
@@ -185,4 +181,4 @@ it('saves with Mod+S', () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for every hotkey in a test, pass it in `HotkeysProvider` default options: `defaultOptions={{ hotkey: { platform: 'mac' } }}`.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/41f06c51a38fac64409a3d4932cc8958f558ae57/docs/reference/classes/HotkeyManager.md) lists every method.

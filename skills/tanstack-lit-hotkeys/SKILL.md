@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/lit-hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/lit-hotkeys"
-  tanstack-package-version: "0.17.0"
+  tanstack-package-version: "0.18.0"
   tanstack-purpose: "Lit bindings for TanStack Hotkeys: the decorator, reactive controllers, manager-activated scopes, and the Lit-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "lit-hotkeys"
@@ -54,19 +54,20 @@ export class MyEditor extends LitElement {
 
 ## API
 
-| API                                                      | What it's for                                                                                                                                               |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `@hotkey(hotkey, options?)`                              | Run the decorated method when the hotkey fires, with options fixed when the class is defined.                                                               |
-| `new HotkeyController(host, hotkey, callback, options?)` | Register a hotkey whose options can change; add it with `this.addController(...)`.                                                                          |
-| `provideAppHotkeys(appHotkeys, options?)`                | Declare app hotkeys and load the user's custom hotkeys once at startup, since Lit has no provider.                                                          |
-| `getHotkeyManager().activateScope(scope, options?)`      | Turn on a scope, such as an exclusive one for a dialog; it returns the function that turns the scope off.                                                   |
-| `new AppHotkeysController(host)`                         | Read `appHotkeys`, the cheat sheet `list`, and `customHotkeys`, and change custom hotkeys with `setCustomHotkey`, `resetCustomHotkey`, and `findConflicts`. |
-| `new HotkeyRecorderController(host, options)`            | Record a chord or sequence the user presses, for a settings screen.                                                                                         |
-| `new HotkeyRegistrationsController(host)`                | Read `.hotkeys`, every registered hotkey with its options and `meta`.                                                                                       |
-| `new HotkeyHintController(host, hotkey, options?)`       | Read `.value`, whether held modifiers should reveal a shortcut's hint.                                                                                      |
-| `new KeyHoldController(host, key)`                       | Read `.value`, whether one key is held.                                                                                                                     |
-| `new HeldKeysController(host)`                           | Read `.value`, every key that's held right now.                                                                                                             |
-| `new HeldKeyCodesController(host)`                       | Read `.value`, which maps each held key to its physical `event.code`.                                                                                       |
+| API                                                      | What it's for                                                                                                                                                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `@hotkey(hotkey, options?)`                              | Run the decorated method when the hotkey fires, with options fixed when the class is defined.                                                                                                     |
+| `new HotkeyController(host, hotkey, callback, options?)` | Register a hotkey whose options can change; add it with `this.addController(...)`.                                                                                                                |
+| `provideAppHotkeys(appHotkeys, options?)`                | Declare app hotkeys and load the user's custom hotkeys once at startup, since Lit has no provider.                                                                                                |
+| `getHotkeyManager().activateScope(scope, options?)`      | Turn on a scope, such as an exclusive one for a dialog; it returns the function that turns the scope off.                                                                                         |
+| `new AppHotkeysController(host)`                         | Read `appHotkeys`, the cheat sheet `list`, and `customHotkeys`, and change custom hotkeys with `setCustomHotkey`, `resetCustomHotkey`, and `findConflicts`.                                       |
+| `new HotkeyRecorderController(host, options)`            | Record a chord or sequence the user presses, for a settings screen.                                                                                                                               |
+| `new HotkeyRegistrationsController(host)`                | Read `.hotkeys`, every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                    |
+| `new HotkeyScopesStateController(host)`                  | Read `.value`, the active scopes and the exclusive scope that owns the keyboard.                                                                                                                  |
+| `new HotkeyHintController(host, hotkey, options?)`       | Read `.value`, whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
+| `new KeyHoldController(host, key)`                       | Read `.value`, whether one key is held.                                                                                                                                                           |
+| `new HeldKeysController(host)`                           | Read `.value`, every key that's held right now.                                                                                                                                                   |
+| `new HeldKeyCodesController(host)`                       | Read `.value`, which maps each held key to its physical `event.code`.                                                                                                                             |
 
 The package also re-exports `@tanstack/hotkeys`, such as `formatForDisplay`, `matchesKeyboardEvent`, and `defineAppHotkeys`.
 

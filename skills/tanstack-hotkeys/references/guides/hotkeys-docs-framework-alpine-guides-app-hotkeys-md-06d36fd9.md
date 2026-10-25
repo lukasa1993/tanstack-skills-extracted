@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -186,4 +186,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `createAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/41f06c51a38fac64409a3d4932cc8958f558ae57/docs/reference/classes/AppHotkeysStore.md) to use it directly.

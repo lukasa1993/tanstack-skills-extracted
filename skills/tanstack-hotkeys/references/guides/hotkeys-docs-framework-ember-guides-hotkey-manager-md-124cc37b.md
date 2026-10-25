@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -99,7 +99,7 @@ releaseScope()
 
 ### Read scope state
 
-`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. `useHotkeyRegistrations` updates when scopes change, so a list filtered with `isScopeActive` stays current.
+`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. To list which registered hotkeys are on, read each registration's `status`. See [List the hotkeys on screen](./hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md#source-hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md).
 
 `manager.scopes` is a store with these fields:
 
@@ -108,31 +108,18 @@ releaseScope()
 - `allowed` lists the active scopes that the exclusive scope allows.
 - `suspended` lists the active scopes that can't fire because another scope is exclusive. It can include `'global'`.
 
-To read it in a component, copy the fields you need into tracked properties, and unsubscribe when the component is destroyed:
+To read it in a component, pass the component to `useHotkeyScopesState`. Its `value` updates when scopes activate or release:
 
 ```gts
 import Component from '@glimmer/component'
-import { tracked } from '@glimmer/tracking'
-import { registerDestructor } from '@ember/destroyable'
-import { getHotkeyManager } from '@tanstack/ember-hotkeys'
-import type Owner from '@ember/owner'
-
-const manager = getHotkeyManager()
+import { useHotkeyScopesState } from '@tanstack/ember-hotkeys'
 
 export default class KeyboardOwner extends Component {
-  @tracked exclusive = manager.scopes.state.exclusive
-
-  constructor(owner: Owner, args: object) {
-    super(owner, args)
-    const subscription = manager.scopes.subscribe((state) => {
-      this.exclusive = state.exclusive
-    })
-    registerDestructor(this, () => subscription.unsubscribe())
-  }
+  scopes = useHotkeyScopesState(this)
 
   <template>
-    {{#if this.exclusive}}
-      <p>Shortcuts belong to {{this.exclusive}}</p>
+    {{#if this.scopes.value.exclusive}}
+      <p>Shortcuts belong to {{this.scopes.value.exclusive}}</p>
     {{/if}}
   </template>
 }
@@ -194,4 +181,4 @@ module('Integration | editor hotkeys', function (hooks) {
 
 `platform='mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for several hotkeys, pass it to `createHotkeysScope({ hotkey: { platform: 'mac' } })`, and use the helpers it returns.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/41f06c51a38fac64409a3d4932cc8958f558ae57/docs/reference/classes/HotkeyManager.md) lists every method.

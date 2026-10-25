@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
-Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `createHotkeyHint` returns an object whose `value` is `true` while the user holds modifiers that belong to a hotkey. It's an optional helper, and it doesn't register anything, so use it alongside `createHotkey`.
+Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `createHotkeyHint` returns an object whose `value` is `true` while the user holds modifiers that belong to a hotkey that can fire. It's an optional helper, and it doesn't register anything, so use it alongside `createHotkey`.
 
 ## Show a hint next to a button
 
@@ -49,6 +49,9 @@ While the user holds Command on macOS, or Control elsewhere, the button reads "S
 - Releasing every modifier, or the window losing focus, hides the hint.
 - Other held keys don't matter. AltGr never shows hints, because it types characters.
 - A hotkey without modifiers, such as `Escape` or `G`, never shows a hint.
+- The hotkey must be able to fire. A hint shows only while a registration of the hotkey is enabled and in an active [scope](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md). A hotkey that nothing registers never shows a hint.
+- Every registration of the hotkey counts, not only the one in your component. If two components register the same hotkey and only one is enabled, both show the hint.
+- A hotkey bound to an element's `target` shows its hint only while focus is inside that element. A hotkey on `document` or `window` shows it wherever focus is.
 
 To show a hint only while every modifier is held, pass `exact`:
 
@@ -90,46 +93,49 @@ Alpine.data('hint', (id: AppHotkeyId) => {
 })
 ```
 
-```html
-<button @click="save()">
-  Save <kbd x-data="hint('doc.save')" x-show="label" x-text="label"></kbd>
-</button>
+```ts
+Alpine.data('toolbar', () => {
+  const hotkeys = createHotkeysScope()
+  const appHotkeys = hotkeys.createAppHotkeys()
+  hotkeys.createHotkey(() => appHotkeys.value['doc.save'], () => save())
+
+  return {
+    save,
+    destroy() {
+      hotkeys.destroy()
+    },
+  }
+})
 ```
 
-## Hide hints for hotkeys that can't fire
-
-`createHotkeyHint` only looks at held keys. It doesn't know whether the hotkey is enabled, its scope is active, or its target has focus. When a hotkey can be off, combine the hint with the same state:
-
-```ts
-Alpine.data('saveButton', () => ({
-  dirty: false,
-  hotkeys: createHotkeysScope(),
-  hint: null as null | { readonly value: boolean },
-  init() {
-    this.hotkeys.createHotkey(saveHotkey, () => save(), () => ({ enabled: this.dirty }))
-    this.hint = this.hotkeys.createHotkeyHint(saveHotkey)
-  },
-  get showHint() {
-    return Boolean(this.hint?.value && this.dirty)
-  },
-  destroy() {
-    this.hotkeys.destroy()
-  },
-}))
+```html
+<div x-data="toolbar">
+  <button @click="save()">
+    Save <kbd x-data="hint('doc.save')" x-show="label" x-text="label"></kbd>
+  </button>
+</div>
 ```
 
 ## Check held modifiers without the helper
 
-To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options:
+To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options, but it only looks at held keys. To also check that the hotkey can fire, call `hasActiveRegistration` on the hotkey manager:
 
 ```ts
-import { getKeyStateTracker, matchesHeldModifiers } from '@tanstack/alpine-hotkeys'
+import {
+  getHotkeyManager,
+  getKeyStateTracker,
+  matchesHeldModifiers,
+} from '@tanstack/alpine-hotkeys'
 
 const tracker = getKeyStateTracker()
 
 matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) // true while Mod is held
+
+const showHint =
+  matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) &&
+  getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the helper
 ```
 
 [Held Key State Helpers](./hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md#source-hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md) covers the tracker and the other held-key functions.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/alpine/kitchen-sink) shows hints next to its buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/alpine/kitchen-sink) shows hints next to its buttons while Alt or Option is held.

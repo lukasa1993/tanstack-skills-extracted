@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `HotkeyHintController` has a `value` that's `true` while the user holds modifiers that belong to a hotkey. It's an optional helper, and it doesn't register anything, so use it alongside `@hotkey` or `HotkeyController`.
+Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `HotkeyHintController` has a `value` that's `true` while the user holds modifiers that belong to a hotkey that can fire. It's an optional helper, and it doesn't register anything, so use it alongside `@hotkey` or `HotkeyController`.
 
 ## Show a hint next to a button
 
@@ -49,6 +49,9 @@ The controller requests an update only when the hint appears or disappears. Whil
 - Releasing every modifier, or the window losing focus, hides the hint.
 - Other held keys don't matter. AltGr never shows hints, because it types characters.
 - A hotkey without modifiers, such as `Escape` or `G`, never shows a hint.
+- The hotkey must be able to fire. A hint shows only while a registration of the hotkey is enabled and in an active [scope](./hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md#source-hotkeys-docs-framework-lit-guides-hotkey-manager-md). A hotkey that nothing registers never shows a hint.
+- Every registration of the hotkey counts, not only the one in your element. If two elements register the same hotkey and only one is enabled, both show the hint.
+- A hotkey bound to an element's `target` shows its hint only while focus is inside that element. A hotkey on `document` or `window` shows it wherever focus is.
 
 To show a hint only while every modifier is held, pass `exact`:
 
@@ -94,44 +97,42 @@ class ShortcutHint extends LitElement {
 ```
 
 ```ts
-html`<button @click=${this.save}>Save <shortcut-hint hotkeyId="doc.save"></shortcut-hint></button>`
-```
+import { hotkey } from '@tanstack/lit-hotkeys'
+import { appHotkeys } from './app-hotkeys'
 
-## Hide hints for hotkeys that can't fire
+@customElement('doc-toolbar')
+class DocToolbar extends LitElement {
+  @hotkey(appHotkeys['doc.save'])
+  save() {
+    /* ... */
+  }
 
-`HotkeyHintController` only looks at held keys. It doesn't know whether the hotkey is enabled, its scope is active, or its target has focus. When a hotkey can be off, combine the hint with the same state:
-
-```ts
-@property({ type: Boolean }) dirty = false
-private hint = new HotkeyHintController(this, saveHotkey)
-
-constructor() {
-  super()
-  this.addController(
-    new HotkeyController(this, saveHotkey, () => this.save(), () => ({
-      enabled: this.dirty,
-    })),
-  )
-}
-
-render() {
-  const showHint = this.hint.value && this.dirty
-  // ...
+  render() {
+    return html`<button @click=${() => this.save()}>Save <shortcut-hint hotkeyId="doc.save"></shortcut-hint></button>`
+  }
 }
 ```
 
 ## Check held modifiers without the controller
 
-To check outside an element, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options:
+To check outside an element, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options, but it only looks at held keys. To also check that the hotkey can fire, call `hasActiveRegistration` on the hotkey manager:
 
 ```ts
-import { getKeyStateTracker, matchesHeldModifiers } from '@tanstack/lit-hotkeys'
+import {
+  getHotkeyManager,
+  getKeyStateTracker,
+  matchesHeldModifiers,
+} from '@tanstack/lit-hotkeys'
 
 const tracker = getKeyStateTracker()
 
 matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) // true while Mod is held
+
+const showHint =
+  matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) &&
+  getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the controller
 ```
 
 [Held Key State Helpers](./hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md#source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md) covers the tracker and the other held-key controllers.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/lit/kitchen-sink) shows hints next to its buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/lit/kitchen-sink) shows hints next to its buttons while Alt or Option is held.

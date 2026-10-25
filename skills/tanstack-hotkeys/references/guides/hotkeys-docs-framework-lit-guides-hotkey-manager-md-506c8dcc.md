@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -98,7 +98,7 @@ releaseScope()
 
 ### Read scope state
 
-`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. `HotkeyRegistrationsController` updates its element when scopes change, so a list filtered with `isScopeActive` stays current.
+`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. To list which registered hotkeys are on, read each registration's `status`. See [List the hotkeys on screen](./hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md#source-hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md).
 
 `manager.scopes` is a store with these fields:
 
@@ -107,31 +107,19 @@ releaseScope()
 - `allowed` lists the active scopes that the exclusive scope allows.
 - `suspended` lists the active scopes that can't fire because another scope is exclusive. It can include `'global'`.
 
-To read it in an element, subscribe while the element is connected, and request an update when it changes:
+To read it in an element, add a `HotkeyScopesStateController`. It updates the element when scopes activate or release:
 
 ```ts
 import { LitElement, html, nothing } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { getHotkeyManager } from '@tanstack/lit-hotkeys'
-
-const manager = getHotkeyManager()
+import { HotkeyScopesStateController } from '@tanstack/lit-hotkeys'
 
 @customElement('keyboard-owner')
 class KeyboardOwner extends LitElement {
-  private subscription?: { unsubscribe: () => void }
-
-  connectedCallback() {
-    super.connectedCallback()
-    this.subscription = manager.scopes.subscribe(() => this.requestUpdate())
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    this.subscription?.unsubscribe()
-  }
+  private scopes = new HotkeyScopesStateController(this)
 
   render() {
-    const { exclusive } = manager.scopes.state
+    const { exclusive } = this.scopes.value
     return exclusive ? html`<p>Shortcuts belong to ${exclusive}</p>` : nothing
   }
 }
@@ -199,4 +187,4 @@ it('saves with Mod+S', async () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/41f06c51a38fac64409a3d4932cc8958f558ae57/docs/reference/classes/HotkeyManager.md) lists every method.

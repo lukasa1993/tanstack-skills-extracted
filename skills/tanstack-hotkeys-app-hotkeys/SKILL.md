@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/hotkeys"
-  tanstack-package-version: "0.17.0"
+  tanstack-package-version: "0.18.0"
   tanstack-purpose: "Declare every shortcut once with defineAppHotkeys, then build cheat sheets, rebinding, conflict checks, and persistence from those declarations instead of a parallel shortcut registry."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "app-hotkeys"

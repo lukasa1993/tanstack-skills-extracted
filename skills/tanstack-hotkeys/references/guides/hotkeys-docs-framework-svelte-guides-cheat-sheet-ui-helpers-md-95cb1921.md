@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -65,7 +65,7 @@ declare module '@tanstack/hotkeys' {
   const registrations = getHotkeyRegistrations()
   const named = $derived(
     registrations.hotkeys.filter(
-      (reg) => reg.options.meta?.name && reg.options.enabled !== false,
+      (reg) => reg.options.meta?.name && reg.status === 'active',
     ),
   )
 </script>
@@ -80,30 +80,13 @@ declare module '@tanstack/hotkeys' {
 </dl>
 ```
 
-Filtering by name leaves out hotkeys you didn't mean to list, such as a dialog's `Escape`. Filtering out disabled hotkeys leaves only the ones that work right now.
+Filtering by name leaves out hotkeys you didn't mean to list, such as a dialog's `Escape`. Filtering by `status` leaves only the hotkeys that are on right now.
 
-Each registration view has an `id`, the `hotkey`, its `options` (including `meta`, `enabled`, and `scope`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedChord`, and sequence views add `parsedSequence` and `matchedStepCount`, the number of steps the user has pressed so far. [Show sequences in your UI](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md) uses it to show which keys the user has pressed.
+`status` is `'active'` when the hotkey is enabled and its scope is active, `'suspended'` when its [scope](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) is inactive or suspended by an exclusive scope, and `'disabled'` when it has `enabled: false`. `getHotkeyRegistrations` updates when scopes change, so the list stays current.
+
+Each registration view has an `id`, the `hotkey`, a `status`, its `options` (including `meta`, `enabled`, and `scope`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedChord`, and sequence views add `parsedSequence` and `matchedStepCount`, the number of steps the user has pressed so far. [Show sequences in your UI](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md) uses it to show which keys the user has pressed.
 
 A hotkey that several components register, such as one per list row, appears once for each registration.
-
-If your app uses [scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md), also leave out hotkeys whose scope is inactive or suspended:
-
-```ts
-import { getHotkeyManager } from '@tanstack/svelte-hotkeys'
-
-const manager = getHotkeyManager()
-
-const named = $derived(
-  registrations.hotkeys.filter(
-    (reg) =>
-      reg.options.meta?.name &&
-      reg.options.enabled !== false &&
-      manager.isScopeActive(reg.options.scope),
-  ),
-)
-```
-
-`getHotkeyRegistrations` updates when scopes change, so the list stays current. [Read scope state](./hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md#source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md) covers `isScopeActive` and the rest of the manager's scope state.
 
 Registrations exist only while their components are mounted, so this list can't show shortcuts from other pages. To list those, declare them as app hotkeys.
 
@@ -229,4 +212,4 @@ Register a hotkey that opens the cheat sheet, and give the cheat sheet an exclus
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/svelte/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/svelte/kitchen-sink) has a shortcut list built from live registrations.

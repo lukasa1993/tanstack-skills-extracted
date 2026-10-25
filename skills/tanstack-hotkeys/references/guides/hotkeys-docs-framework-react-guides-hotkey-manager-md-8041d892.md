@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -99,7 +99,7 @@ releaseScope()
 
 ### Read scope state
 
-`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. `useHotkeyRegistrations` re-renders when scopes change, so a list filtered with `isScopeActive` stays current.
+`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. To list which registered hotkeys are on, read each registration's `status`. See [List the hotkeys on screen](./hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md#source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md).
 
 `manager.scopes` is a store with these fields:
 
@@ -108,25 +108,13 @@ releaseScope()
 - `allowed` lists the active scopes that the exclusive scope allows.
 - `suspended` lists the active scopes that can't fire because another scope is exclusive. It can include `'global'`.
 
-To read it in a component, subscribe with React's `useSyncExternalStore`:
+To read it in a component, use `useHotkeyScopesState`. It updates when scopes activate or release:
 
 ```tsx
-import { useSyncExternalStore } from 'react'
-import { getHotkeyManager } from '@tanstack/react-hotkeys'
-
-const manager = getHotkeyManager()
-
-function subscribe(onChange: () => void) {
-  const subscription = manager.scopes.subscribe(onChange)
-  return () => subscription.unsubscribe()
-}
-
-function getScopes() {
-  return manager.scopes.state
-}
+import { useHotkeyScopesState } from '@tanstack/react-hotkeys'
 
 function KeyboardOwner() {
-  const scopes = useSyncExternalStore(subscribe, getScopes, getScopes)
+  const scopes = useHotkeyScopesState()
 
   return scopes.exclusive ? <p>Shortcuts belong to {scopes.exclusive}</p> : null
 }
@@ -188,4 +176,4 @@ it('saves with Mod+S', () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for every hotkey in a test, pass it in `HotkeysProvider` default options: `defaultOptions={{ hotkey: { platform: 'mac' } }}`.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/41f06c51a38fac64409a3d4932cc8958f558ae57/docs/reference/classes/HotkeyManager.md) lists every method.

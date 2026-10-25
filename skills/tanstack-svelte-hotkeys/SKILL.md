@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/svelte-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/svelte-hotkeys"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.17.0"
   tanstack-purpose: "Svelte 5 bindings for TanStack Hotkeys: getters, attachments, providers, and the Svelte-specific reactivity mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "svelte-hotkeys"
@@ -44,25 +44,26 @@ Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack
 
 ## API
 
-| API                                                    | What it's for                                                                                                                    |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| `createHotkey(hotkey, callback, options?)`             | Register one chord, sequence, or app hotkey on the document while the component is mounted; pass getters for values that change. |
-| `createHotkeys(definitions, commonOptions?)`           | Register several hotkeys on the document, or a getter of a list built from data.                                                 |
-| `createHotkeyAttachment(hotkey, callback, options?)`   | Create an attachment for `{@attach}` that listens on one element.                                                                |
-| `createHotkeysAttachment(definitions, commonOptions?)` | Create an attachment that registers several hotkeys on one element.                                                              |
-| `<HotkeysProvider>`                                    | Set default options, a scope (`exclusive` for dialogs), `enabled`, and app hotkeys for the components inside it.                 |
-| `setHotkeysContext(options)`                           | Set the same options from a component's script instead of rendering `HotkeysProvider`; they apply to that component too.         |
-| `getHotkeysContext()`                                  | Read the nearest context's merged defaults and enabled state, or `null` outside one.                                             |
-| `getDefaultHotkeysOptions()`                           | Read the default options merged from every context above.                                                                        |
-| `getAppHotkeys()`                                      | Read `.current`, the declared app hotkeys with the user's custom hotkeys applied.                                                |
-| `getAppHotkeyList()`                                   | Read `.current`, every app hotkey with its status, for a cheat sheet or settings screen.                                         |
-| `getCustomHotkeys()`                                   | Read the user's custom hotkeys from `.current`, change or reset them, and check a new one for conflicts.                         |
-| `createHotkeyRecorder(options)`                        | Record a chord or sequence the user presses, for a settings screen.                                                              |
-| `getHotkeyRegistrations()`                             | Read `.hotkeys`, every registered hotkey with its options and `meta`.                                                            |
-| `getHotkeyHint(hotkey, options?)`                      | Read `.visible`, whether held modifiers should reveal a shortcut's hint.                                                         |
-| `getIsKeyHeld(key)`                                    | Read `.held`, whether one key is held.                                                                                           |
-| `getHeldKeys()`                                        | Read `.keys`, every key that's held right now.                                                                                   |
-| `getHeldKeyCodesMap()`                                 | Read `.codes`, which maps each held key to its physical `event.code`.                                                            |
+| API                                                    | What it's for                                                                                                                                                                                       |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `createHotkey(hotkey, callback, options?)`             | Register one chord, sequence, or app hotkey on the document while the component is mounted; pass getters for values that change.                                                                    |
+| `createHotkeys(definitions, commonOptions?)`           | Register several hotkeys on the document, or a getter of a list built from data.                                                                                                                    |
+| `createHotkeyAttachment(hotkey, callback, options?)`   | Create an attachment for `{@attach}` that listens on one element.                                                                                                                                   |
+| `createHotkeysAttachment(definitions, commonOptions?)` | Create an attachment that registers several hotkeys on one element.                                                                                                                                 |
+| `<HotkeysProvider>`                                    | Set default options, a scope (`exclusive` for dialogs), `enabled`, and app hotkeys for the components inside it.                                                                                    |
+| `setHotkeysContext(options)`                           | Set the same options from a component's script instead of rendering `HotkeysProvider`; they apply to that component too.                                                                            |
+| `getHotkeysContext()`                                  | Read the nearest context's merged defaults and enabled state, or `null` outside one.                                                                                                                |
+| `getDefaultHotkeysOptions()`                           | Read the default options merged from every context above.                                                                                                                                           |
+| `getAppHotkeys()`                                      | Read `.current`, the declared app hotkeys with the user's custom hotkeys applied.                                                                                                                   |
+| `getAppHotkeyList()`                                   | Read `.current`, every app hotkey with its status, for a cheat sheet or settings screen.                                                                                                            |
+| `getCustomHotkeys()`                                   | Read the user's custom hotkeys from `.current`, change or reset them, and check a new one for conflicts.                                                                                            |
+| `createHotkeyRecorder(options)`                        | Record a chord or sequence the user presses, for a settings screen.                                                                                                                                 |
+| `getHotkeyRegistrations()`                             | Read `.hotkeys`, every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                      |
+| `getHotkeyScopesState()`                               | Read `.state`, the active scopes and the exclusive scope that owns the keyboard.                                                                                                                    |
+| `getHotkeyHint(hotkey, options?)`                      | Read `.visible`, whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
+| `getIsKeyHeld(key)`                                    | Read `.held`, whether one key is held.                                                                                                                                                              |
+| `getHeldKeys()`                                        | Read `.keys`, every key that's held right now.                                                                                                                                                      |
+| `getHeldKeyCodesMap()`                                 | Read `.codes`, which maps each held key to its physical `event.code`.                                                                                                                               |
 
 The package also re-exports `@tanstack/hotkeys`, such as `formatForDisplay`, `matchesKeyboardEvent`, and `defineAppHotkeys`.
 

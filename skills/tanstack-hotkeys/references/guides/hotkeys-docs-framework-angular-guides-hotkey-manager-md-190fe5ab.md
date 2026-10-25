@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -99,7 +99,7 @@ releaseScope()
 
 ### Read scope state
 
-`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. `injectHotkeyRegistrations` updates when scopes change, so a list filtered with `isScopeActive` stays current.
+`manager.isScopeActive(scope)` returns whether hotkeys in a scope can fire. To list which registered hotkeys are on, read each registration's `status`. See [List the hotkeys on screen](./hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md#source-hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md).
 
 `manager.scopes` is a store with these fields:
 
@@ -108,11 +108,11 @@ releaseScope()
 - `allowed` lists the active scopes that the exclusive scope allows.
 - `suspended` lists the active scopes that can't fire because another scope is exclusive. It can include `'global'`.
 
-To read it in a component, copy it into a signal and unsubscribe when the component is destroyed:
+To read it in a component, use `injectHotkeyScopesState`. It updates when scopes activate or release:
 
 ```ts
-import { Component, DestroyRef, inject, signal } from '@angular/core'
-import { getHotkeyManager } from '@tanstack/angular-hotkeys'
+import { Component } from '@angular/core'
+import { injectHotkeyScopesState } from '@tanstack/angular-hotkeys'
 
 @Component({
   selector: 'app-keyboard-owner',
@@ -123,15 +123,7 @@ import { getHotkeyManager } from '@tanstack/angular-hotkeys'
   `,
 })
 export class KeyboardOwnerComponent {
-  private readonly manager = getHotkeyManager()
-  readonly scopes = signal(this.manager.scopes.state)
-
-  constructor() {
-    const subscription = this.manager.scopes.subscribe((state) =>
-      this.scopes.set(state),
-    )
-    inject(DestroyRef).onDestroy(() => subscription.unsubscribe())
-  }
+  readonly scopes = injectHotkeyScopesState()
 }
 ```
 
@@ -197,4 +189,4 @@ it('saves with Mod+S', () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for every hotkey in a test, add `provideHotkeys({ defaultOptions: { hotkey: { platform: 'mac' } } })` to the testing module's providers.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/41f06c51a38fac64409a3d4932cc8958f558ae57/docs/reference/classes/HotkeyManager.md) lists every method.

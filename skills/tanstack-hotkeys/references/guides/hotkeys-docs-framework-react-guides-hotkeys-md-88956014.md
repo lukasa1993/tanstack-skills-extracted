@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -15,7 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Register a hotkey](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--register-a-hotkey.md) — 4 KiB
 - [Hotkey options](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--register-multiple-hotkeys.md) — 3 KiB
-- [Enable and disable hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--enable-and-disable-hotkeys.md) — 2 KiB
+- [Enable and disable hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--enable-and-disable-hotkeys.md) — 3 KiB
 - [Hotkey targets](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-targets.md) — 2 KiB
 - [Handle duplicate hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--handle-duplicate-hotkeys.md) — 2 KiB
 - [Describe hotkeys with `meta`](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014--describe-hotkeys-with-meta.md) — 1 KiB

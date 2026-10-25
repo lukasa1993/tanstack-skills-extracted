@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -18,6 +18,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--typing-in-inputs-does-not-trigger-shortcuts.md) — 2 KiB
 - [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--focused-controls-keep-their-own-keys.md) — 3 KiB
 - [The browser's action is prevented](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--the-browser-s-action-is-prevented.md) — 2 KiB
+- [Hotkeys that can't fire leave the key alone](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-that-can-t-fire-leave-the-key-alone.md) — 3 KiB
 - [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--single-key-shortcuts-need-an-off-switch.md) — 2 KiB
 - [Chords fire on keydown and repeat while held](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--chords-fire-on-keydown-and-repeat-while-held.md) — 1 KiB
 - [Listeners attach to the document](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--listeners-attach-to-the-document.md) — 1 KiB
@@ -38,6 +39,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="typing-in-inputs-does-not-trigger-shortcuts"></a>
 <a id="focused-controls-keep-their-own-keys"></a>
 <a id="the-browsers-action-is-prevented"></a>
+<a id="hotkeys-that-cant-fire-leave-the-key-alone"></a>
 <a id="single-key-shortcuts-need-an-off-switch"></a>
 <a id="chords-fire-on-keydown-and-repeat-while-held"></a>
 <a id="listeners-attach-to-the-document"></a>

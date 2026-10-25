@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
-Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `injectHotkeyHint` returns a signal that's `true` while the user holds modifiers that belong to a hotkey. It's an optional helper, and it doesn't register anything, so use it alongside `injectHotkey`.
+Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `injectHotkeyHint` returns a signal that's `true` while the user holds modifiers that belong to a hotkey that can fire. It's an optional helper, and it doesn't register anything, so use it alongside `injectHotkey`.
 
 ## Show a hint next to a button
 
@@ -54,6 +54,9 @@ While the user holds Command on macOS, or Control elsewhere, the button reads "S
 - Releasing every modifier, or the window losing focus, hides the hint.
 - Other held keys don't matter. AltGr never shows hints, because it types characters.
 - A hotkey without modifiers, such as `Escape` or `G`, never shows a hint.
+- The hotkey must be able to fire. A hint shows only while a registration of the hotkey is enabled and in an active [scope](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md). A hotkey that nothing registers never shows a hint.
+- Every registration of the hotkey counts, not only the one in your component. If two components register the same hotkey and only one is enabled, both show the hint.
+- A hotkey bound to an element's `target` shows its hint only while focus is inside that element. A hotkey on `document` or `window` shows it wherever focus is.
 
 To show a hint only while every modifier is held, pass `exact`:
 
@@ -101,36 +104,45 @@ export class HintComponent {
 }
 ```
 
-```html
-<button (click)="save()">Save <app-hint id="doc.save" /></button>
-```
-
-## Hide hints for hotkeys that can't fire
-
-`injectHotkeyHint` only looks at held keys. It doesn't know whether the hotkey is enabled, its scope is active, or its target has focus. When a hotkey can be off, combine the hint with the same state:
-
 ```ts
-readonly isDirty = signal(false)
-private readonly hint = injectHotkeyHint(saveHotkey)
-readonly showHint = computed(() => this.hint() && this.isDirty())
+@Component({
+  selector: 'app-toolbar',
+  imports: [HintComponent],
+  template: `<button (click)="save()">Save <app-hint id="doc.save" /></button>`,
+})
+export class ToolbarComponent {
+  readonly appHotkeys = injectAppHotkeys()
 
-constructor() {
-  injectHotkey(saveHotkey, () => this.save(), () => ({ enabled: this.isDirty() }))
+  constructor() {
+    injectHotkey(() => this.appHotkeys()['doc.save'], () => this.save())
+  }
+
+  save() {
+    /* ... */
+  }
 }
 ```
 
 ## Check held modifiers without the helper
 
-To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options:
+To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options, but it only looks at held keys. To also check that the hotkey can fire, call `hasActiveRegistration` on the hotkey manager:
 
 ```ts
-import { getKeyStateTracker, matchesHeldModifiers } from '@tanstack/angular-hotkeys'
+import {
+  getHotkeyManager,
+  getKeyStateTracker,
+  matchesHeldModifiers,
+} from '@tanstack/angular-hotkeys'
 
 const tracker = getKeyStateTracker()
 
 matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) // true while Mod is held
+
+const showHint =
+  matchesHeldModifiers('Mod+S', tracker.getHeldKeys()) &&
+  getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the helper
 ```
 
 [Held Key State Helpers](./hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md#source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md) covers the tracker and the other held-key functions.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/2172bfc6a4a50b4adb6f86c3f79b6eb3ae7a28b3/examples/angular/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/angular/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

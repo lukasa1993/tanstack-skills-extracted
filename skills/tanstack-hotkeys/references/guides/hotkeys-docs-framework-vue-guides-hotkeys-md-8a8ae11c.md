@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -15,7 +15,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Register a hotkey](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--register-a-hotkey.md) — 4 KiB
 - [Hotkey options](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--register-multiple-hotkeys.md) — 3 KiB
-- [Enable and disable hotkeys](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--enable-and-disable-hotkeys.md) — 2 KiB
+- [Enable and disable hotkeys](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--enable-and-disable-hotkeys.md) — 3 KiB
 - [Hotkey targets](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--hotkey-targets.md) — 2 KiB
 - [Handle duplicate hotkeys](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--handle-duplicate-hotkeys.md) — 2 KiB
 - [Describe hotkeys with `meta`](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--describe-hotkeys-with-meta.md) — 1 KiB

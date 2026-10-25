@@ -1,6 +1,6 @@
 # Sensible Defaults — At a glance
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.17.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
 
 ## At a glance
 
@@ -11,6 +11,7 @@
 | Modifiers | Must match exactly | List every modifier in the binding |
 | Typing in inputs | Single keys and `Shift`/`Alt` chords are ignored; `Control`/`Meta` chords and `Escape` fire | `ignoreInputs` |
 | Browser behavior | Prevented, and the event stops propagating | `preventDefault`, `stopPropagation` |
+| Hotkeys that can't fire | The browser acts on the key | `preventDefault: 'always'` |
 | When a chord fires | On keydown, and again on each automatic repeat while held | `eventType`, `requireReset` |
 | Where listeners attach | `document` | `target` |
 | When hotkeys run | After the keyboard handlers of widgets inside the target (bubble phase) | `capture` |
