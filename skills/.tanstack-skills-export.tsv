@@ -31,7 +31,7 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/devtools-webmcp	0.0.2	MIT	1	1	tanstack-devtools-webmcp
 @tanstack/ember-hotkeys	0.6.0	MIT	1	1	tanstack-ember-hotkeys
 @tanstack/ember-table	9.3.1	MIT	2	2	tanstack-ember-table-getting-started,tanstack-ember-table-table-state
-@tanstack/highlight	1.1.0	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
+@tanstack/highlight	1.2.0	MIT	5	5	tanstack-highlight-configure-selective-highlighting,tanstack-highlight-extend-language-support,tanstack-highlight-integrate-framework-code-blocks,tanstack-highlight-integrate-markdown-pipelines,tanstack-highlight-theme-and-annotate-code
 @tanstack/hotkeys	0.18.0	MIT	2	2	tanstack-hotkeys-app-hotkeys,tanstack-hotkeys-core
 @tanstack/lit-hotkeys	0.18.0	MIT	1	1	tanstack-lit-hotkeys
 @tanstack/lit-table	9.3.1	MIT	3	3	tanstack-lit-table-getting-started,tanstack-lit-table-migrate-v8-to-v9,tanstack-lit-table-table-state

@@ -3,12 +3,12 @@
   "requests": {
     "https://api.github.com/repos/TanStack/query/pulls/10879": {
       "status": 200,
-      "sha256": "03dc62dddc395bca722065fe6e333f9eb8f585cdcd59dd2ca70565412efafeb9",
+      "sha256": "6e5ea03a88cbee761edd2cd431d12d61e2ebc5a93843c3b08a3633c68f9eba06",
       "bytes": 17127
     },
     "https://api.github.com/repos/sxzz/userscripts": {
       "status": 200,
-      "sha256": "2ef00419f9341c3cec7d3f4dda586b930ad511d7ff662a017e23703af44b42f5",
+      "sha256": "913eeddaf7886b23e8ee01afb50a65368254de22a3de2dee0d23423d4d44e0ec",
       "bytes": 5108
     },
     "https://api.github.com/repos/sxzz/userscripts/commits?sha=main&path=src%2Fnpm-trusted-publisher.md&per_page=1": {
@@ -873,8 +873,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fhighlight/latest": {
       "status": 200,
-      "sha256": "894bc700f8724d105e933ef1cc25d8eec2d1d3fd31be06212137619fc2a9865e",
-      "bytes": 4763
+      "sha256": "3db04cf384c72bb5a6b37c778d1f2e6e926935babf4cd06d2161828b6e01f51a",
+      "bytes": 4764
     },
     "https://registry.npmjs.org/%40tanstack%2Fhistory/latest": {
       "status": 200,
@@ -1468,8 +1468,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fredact/latest": {
       "status": 200,
-      "sha256": "e48ba21b62a325a6a41e4e527c811a09c1d0040d2fc543ff6777d71ad242fdc3",
-      "bytes": 3528
+      "sha256": "ab231568e11a2f62077a2a613ab872c25f81115ac7975efc79d295daf13f1543",
+      "bytes": 4026
     },
     "https://registry.npmjs.org/%40tanstack%2Frouter-arktype-adapter/latest": {
       "status": 200,
@@ -2098,8 +2098,8 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fform-core@1.33.5": {
       "status": 200,
-      "sha256": "7fb4ac46018d6e2dea585da138794e85ea74f1092f2d241226945106b6b9e682",
-      "bytes": 14191
+      "sha256": "1e7b0df71331efaf8e406109b2ec75daf179c46f1cfd7fa95e06c467bac559e6",
+      "bytes": 14265
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fhotkeys@0.18.0": {
       "status": 200,
@@ -2148,8 +2148,8 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-form@1.33.5": {
       "status": 200,
-      "sha256": "9512cebd46e31e83b5c107a404c52625ebcdbfa030a9849662b881516c54d89c",
-      "bytes": 14242
+      "sha256": "e71a30618b38fd62e38d2462cdfc8db80c0e6683d2696819fce870f7c57b4c9c",
+      "bytes": 14317
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-native-charts@1.1.0": {
       "status": 200,
@@ -3001,10 +3001,10 @@
       "sha256": "e67ae3e8ccf0a6e56ec85747cffeeeaebc3563e5f71c7902573048f4e8e6670f",
       "bytes": 20742
     },
-    "https://registry.npmjs.org/@tanstack/highlight/-/highlight-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/highlight/-/highlight-1.2.0.tgz": {
       "status": 200,
-      "sha256": "34ced6b05bfff85b5e85be152427eadb5454f703ae3cd74f692065abde83e95e",
-      "bytes": 59840
+      "sha256": "f7d0cccb965b9b7b27c84b810afdec8817b16ab27dafa92a57bffab656a6453c",
+      "bytes": 80274
     },
     "https://registry.npmjs.org/@tanstack/history/-/history-1.162.5.tgz": {
       "status": 200,
@@ -3596,10 +3596,10 @@
       "sha256": "a1b56d159f254889b3595f562c6849ff5d8e6c04458a4bc43f224e77f876203a",
       "bytes": 14262
     },
-    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.1.5.tgz": {
+    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.2.0.tgz": {
       "status": 200,
-      "sha256": "ed1a55906f24e31ebaa3b1d3c134634dbbd437c9b3a02745377d05404701d358",
-      "bytes": 368381
+      "sha256": "f96146af80a5c1e0a0e66ef9b981311b7c23e63c9fb25f40ca823084a351f23c",
+      "bytes": 1383890
     },
     "https://registry.npmjs.org/@tanstack/router-arktype-adapter/-/router-arktype-adapter-1.81.5.tgz": {
       "status": 200,
@@ -4203,8 +4203,8 @@
     },
     "https://tanstack.com/api/data/libraries": {
       "status": 200,
-      "sha256": "706a37b22e6b201ec89a312717fddcfc672bba0eb662eca36cd72ddb3bf10558",
-      "bytes": 11496
+      "sha256": "1325bc1066d08c80adefa787ad9205f4d24d01a5c1cf837e0b370cdb96ca8c92",
+      "bytes": 11474
     }
   }
 }
