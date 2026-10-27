@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-guides-query-keys-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.30`.
+Release-matched documentation · `@tanstack/lit-query@0.2.31`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -40,17 +40,22 @@ createQueryController(this, () => ({
 }))
 ```
 
-The pagination example uses a key shaped like this:
+The pagination example builds its key in a query factory, together with the query function:
 
 ```ts
-type ProjectsQueryKey = readonly ['projects', number, number, boolean]
-
-function projectsQueryKey(
-  page: number,
-  delayMs: number,
-  forceError: boolean,
-): ProjectsQueryKey {
-  return ['projects', page, delayMs, forceError] as const
+export const projectsQueries = {
+  all: () => ['projects'] as const,
+  list: (page: number, delayMs: number, forceError: boolean) =>
+    queryOptions({
+      queryKey: [
+        ...projectsQueries.all(),
+        'list',
+        page,
+        delayMs,
+        forceError,
+      ] as const,
+      queryFn: () => projectsAPI.getProjects(page, delayMs, forceError),
+    }),
 }
 ```
 
@@ -76,6 +81,10 @@ If your query function reads a reactive host property, include that value in the
 
 ```ts
 class UserTodos extends LitElement {
+  static properties = {
+    userId: { type: String },
+  }
+
   userId = ''
 
   private readonly todos = createQueryController(this, () => ({

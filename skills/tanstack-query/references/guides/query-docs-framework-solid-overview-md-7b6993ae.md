@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-overview-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.104.5`.
+Release-matched documentation · `@tanstack/solid-query@5.105.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -89,7 +89,7 @@ function App() {
       if (!result.ok) throw new Error('Failed to fetch data')
       return result.json()
     },
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 5 * 60 * 1000, // 5 minutes
     throwOnError: true, // Throw an error if the query fails
   }))
 

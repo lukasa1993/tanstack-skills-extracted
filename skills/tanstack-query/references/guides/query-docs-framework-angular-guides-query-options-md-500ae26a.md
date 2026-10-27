@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-guides-query-options-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.104.5`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.105.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -48,11 +48,11 @@ queryClient.setQueryData(this.queries.post(42).queryKey, newPost)
 [//]: # 'Example2'
 
 ```ts
-// Type inference still works, so groupQuery.data will be the return type of select instead of queryFn
+// Type inference still works, so postQuery.data will be the return type of select instead of queryFn
 queries = inject(QueriesService)
 
-groupQuery = injectQuery(() => ({
-  ...groupOptions(1),
+postQuery = injectQuery(() => ({
+  ...this.queries.post(1),
   select: (data) => data.title,
 }))
 ```

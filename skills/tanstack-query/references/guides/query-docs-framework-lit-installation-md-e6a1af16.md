@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-installation-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.30`.
+Release-matched documentation · `@tanstack/lit-query@0.2.31`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -10,25 +10,25 @@ Release-matched documentation · `@tanstack/lit-query@0.2.30`.
 
 Install Lit Query with Lit and TanStack Query Core:
 
-```bash
+```sh
 npm i @tanstack/lit-query @tanstack/query-core lit
 ```
 
 or
 
-```bash
+```sh
 pnpm add @tanstack/lit-query @tanstack/query-core lit
 ```
 
 or
 
-```bash
+```sh
 yarn add @tanstack/lit-query @tanstack/query-core lit
 ```
 
 or
 
-```bash
+```sh
 bun add @tanstack/lit-query @tanstack/query-core lit
 ```
 
@@ -37,6 +37,16 @@ bun add @tanstack/lit-query @tanstack/query-core lit
 ## Requirements
 
 Lit Query is intended for Lit 2.8 and newer, including Lit 3. It uses Lit reactive controllers and Lit context, so query consumers should be `ReactiveControllerHost` instances such as `LitElement`.
+
+The snippets in these docs declare reactive properties with `static properties` and initialize them as class fields. Class fields that use the native `[[Define]]` semantics shadow the accessors Lit uses to detect changes, so with TypeScript set `useDefineForClassFields` to `false`, as the runnable examples do. See [Avoiding issues with class fields](https://lit.dev/docs/components/properties/#avoiding-issues-with-class-fields) in the Lit docs for more details.
+
+```json
+{
+  "compilerOptions": {
+    "useDefineForClassFields": false
+  }
+}
+```
 
 TanStack Query is optimized for modern browsers:
 
@@ -99,7 +109,7 @@ class AppRoot extends LitElement {
 }
 ```
 
-If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
+If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
 
 ## Render Roots
 

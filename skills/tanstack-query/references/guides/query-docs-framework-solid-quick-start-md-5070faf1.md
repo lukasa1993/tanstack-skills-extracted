@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.104.5`.
+Release-matched documentation · `@tanstack/solid-query@5.105.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -120,7 +120,7 @@ function Example() {
   // const { isPending, error, data } = useQuery({
   //   queryKey: ['repoData'],
   //   queryFn: () =>
-  //     fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
+  //     fetch('https://api.github.com/repos/TanStack/query').then(
   //       (res) => res.json()
   //     ),
   // })
@@ -129,8 +129,8 @@ function Example() {
   const query = useQuery(() => ({
     queryKey: ['repoData'],
     queryFn: () =>
-      fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
-        (res) => res.json(),
+      fetch('https://api.github.com/repos/TanStack/query').then((res) =>
+        res.json(),
       ),
   }))
 

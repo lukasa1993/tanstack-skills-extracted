@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-installation-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.104.5`.
+Release-matched documentation · `@tanstack/solid-query@5.105.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -12,29 +12,31 @@ or a good ol' `<script>` via
 
 ### NPM
 
-```bash
+```sh
 npm i @tanstack/solid-query
 ```
 
 or
 
-```bash
+```sh
 pnpm add @tanstack/solid-query
 ```
 
 or
 
-```bash
+```sh
 yarn add @tanstack/solid-query
 ```
 
 or
 
-```bash
+```sh
 bun add @tanstack/solid-query
 ```
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/solid/simple/README.md) or [basic](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/solid/basic/README.md) examples!
+Solid Query is compatible with Solid v1.6+.
+
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/solid/simple/README.md) or [basic](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/solid/basic/README.md) examples!
 
 ### CDN
 

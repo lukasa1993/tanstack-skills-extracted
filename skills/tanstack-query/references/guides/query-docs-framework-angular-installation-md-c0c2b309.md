@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-installation-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.104.5`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.105.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -10,28 +10,28 @@ Release-matched documentation · `@tanstack/angular-query-experimental@5.104.5`.
 
 ### NPM
 
-_Angular Query is compatible with Angular v16 and higher_
-
-```bash
+```sh
 npm i @tanstack/angular-query-experimental
 ```
 
 or
 
-```bash
+```sh
 pnpm add @tanstack/angular-query-experimental
 ```
 
 or
 
-```bash
+```sh
 yarn add @tanstack/angular-query-experimental
 ```
 
 or
 
-```bash
+```sh
 bun add @tanstack/angular-query-experimental
 ```
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/angular/simple/README.md) or [basic](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/angular/basic/README.md) examples!
+Angular Query is compatible with Angular v16+.
+
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/angular/simple/README.md) or [basic](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/angular/basic/README.md) examples!

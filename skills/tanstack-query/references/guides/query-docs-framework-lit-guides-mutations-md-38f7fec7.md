@@ -2,11 +2,11 @@
 
 <a id="source-query-docs-framework-lit-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.30`.
+Release-matched documentation · `@tanstack/lit-query@0.2.31`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-Unlike queries, mutations are used to create, update, delete, or otherwise perform server side effects. In Lit, use [`createMutationController`](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/lit/reference/functions/createMutationController.md).
+Unlike queries, mutations are used to create, update, delete, or otherwise perform server side effects. In Lit, use [`createMutationController`](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/docs/framework/lit/reference/functions/createMutationController.md).
 
 ```ts
 import { LitElement, html } from 'lit'
@@ -123,21 +123,17 @@ html`
 
 ## Side Effects
 
-Mutation options support `onMutate`, `onError`, `onSuccess`, and `onSettled`. The pagination example passes an explicit `queryClient` to the controller and uses the same in-scope client for optimistic updates and rollback:
+Mutation options support `onMutate`, `onError`, `onSuccess`, and `onSettled`. The pagination example passes an explicit `queryClient` to the controller and uses the same in-scope client for optimistic updates and rollback. Its `mutationKey` and `mutationFn` come from the example's `projectsMutations.updateFavorite()`:
 
 ```ts
 private readonly favoriteMutation = createMutationController(
   this,
   {
-    mutationKey: ['toggle-project-favorite'],
-    mutationFn: async (input) => {
-      const response = await toggleProjectFavoriteOnServer(input)
-      return response.project
-    },
+    ...projectsMutations.updateFavorite(),
     onMutate: async (variables) => {
-      await queryClient.cancelQueries({ queryKey: ['projects'] })
+      await queryClient.cancelQueries({ queryKey: projectsQueries.all() })
       const snapshots = queryClient.getQueriesData<ProjectsPageResponse>({
-        queryKey: ['projects'],
+        queryKey: projectsQueries.all(),
       })
 
       for (const [key, existing] of snapshots) {
@@ -155,17 +151,17 @@ private readonly favoriteMutation = createMutationController(
 
       return { snapshots }
     },
-    onError: (_error, _variables, context) => {
-      for (const [key, snapshot] of context?.snapshots ?? []) {
+    onError: (_error, _variables, onMutateResult) => {
+      for (const [key, snapshot] of onMutateResult?.snapshots ?? []) {
         queryClient.setQueryData(key, snapshot)
       }
     },
     onSettled: async () => {
-      await queryClient.invalidateQueries({ queryKey: ['projects'] })
+      await queryClient.invalidateQueries({ queryKey: projectsQueries.all() })
     },
   },
   queryClient,
 )
 ```
 
-For the exact runnable flow, see the [Pagination example](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/lit/pagination/README.md).
+For the exact runnable flow, see the [Pagination example](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/lit/pagination/README.md).

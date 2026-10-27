@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-installation-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.104.5`.
+Release-matched documentation · `@tanstack/vue-query@5.105.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -10,33 +10,33 @@ You can install Vue Query via [NPM](https://npmjs.com).
 
 ### NPM
 
-```bash
+```sh
 npm i @tanstack/vue-query
 ```
 
 or
 
-```bash
+```sh
 pnpm add @tanstack/vue-query
 ```
 
 or
 
-```bash
+```sh
 yarn add @tanstack/vue-query
 ```
 
 or
 
-```bash
+```sh
 bun add @tanstack/vue-query
 ```
 
-> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/vue/basic/README.md) example!
-
-Vue Query is compatible with Vue 2.x and 3.x
+Vue Query is compatible with Vue v2.6+ and v3.3+.
 
 > If you are using Vue 2.6, make sure to also setup [@vue/composition-api](https://github.com/vuejs/composition-api)
+
+> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/vue/basic/README.md) example!
 
 ### Vue Query Initialization
 
@@ -50,7 +50,7 @@ app.use(VueQueryPlugin)
 
 ### Use of Composition API with `<script setup>`
 
-All examples in our documentation use [`<script setup>`](https://staging.vuejs.org/api/sfc-script-setup.html) syntax.
+All examples in our documentation use [`<script setup>`](https://vuejs.org/api/sfc-script-setup.html) syntax.
 
 Vue 2 users can also use that syntax using [this plugin](https://github.com/antfu/unplugin-vue2-script-setup). Please check the plugin documentation for installation details.
 

@@ -2,13 +2,13 @@
 
 <a id="source-query-docs-framework-vue-reactivity-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.104.5`.
+Release-matched documentation · `@tanstack/vue-query@5.105.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
 Runnable repository example: [Vue query with reactive inputs and enabled state](../examples/vue-reactivity.ts). Tested with `@tanstack/vue-query@5.102.8`, `vue@3.5.42`. This MIT-licensed example is maintained here; the official guidance follows.
 
-Vue uses the [the signals paradigm](https://vuejs.org/guide/extras/reactivity-in-depth.html#connection-to-signals) to handle and track reactivity. A key feature of
+Vue uses [the signals paradigm](https://vuejs.org/guide/extras/reactivity-in-depth.html#connection-to-signals) to handle and track reactivity. A key feature of
 this system is the reactive system only triggers updates on specifically watched reactive properties. A consequence of this is you also need to ensure that the queries are updated when values they consume are updated.
 
 ## Keeping Queries Reactive
@@ -17,10 +17,10 @@ When creating a composable for a query your first choice may be to write it like
 
 ```ts
 export function useUserProjects(userId: string) {
-  return useQuery(
+  return useQuery({
     queryKey: ['userProjects', userId],
     queryFn: () => api.fetchUserProjects(userId),
-  );
+  })
 }
 ```
 
@@ -40,14 +40,14 @@ const onChangeUser = (newUserId: string) => {
 
 This code will not work as intended. This is because we are extracting the value from the userId ref directly. Vue-query is not tracking the `userId` `ref` so it has no way of knowing when the value changes.
 
-Luckily, the fix for this is trivial. The value must be made trackable in the query key. We can Just accept the `ref` directly in the composable and place it in the query key:
+Luckily, the fix for this is trivial. The value must be made trackable in the query key. We can just accept the `ref` directly in the composable and place it in the query key:
 
 ```ts
 export function useUserProjects(userId: Ref<string>) {
-  return useQuery(
+  return useQuery({
     queryKey: ['userProjects', userId],
     queryFn: () => api.fetchUserProjects(userId.value),
-  );
+  })
 }
 ```
 
@@ -65,7 +65,7 @@ parameters for a given request change.
 
 ### Accounting for Non-Reactive Queries
 
-While far less likely, sometimes passing non-reactive variables is intentional. For example, some entities only need to be fetched once and don't need tracking or we invalidate a mutation a query options object after a mutation.
+While far less likely, sometimes passing non-reactive variables is intentional. For example, some entities only need to be fetched once and don't need tracking, or we invalidate the query manually after a mutation instead.
 If we use our custom composable defined above the usage in this case feels a bit off:
 
 ```ts
@@ -76,10 +76,10 @@ We have to create an intermediate `ref` just to make the parameter type-compatib
 
 ```ts
 export function useUserProjects(userId: MaybeRef<string>) {
-  return useQuery(
+  return useQuery({
     queryKey: ['userProjects', userId],
     queryFn: () => api.fetchUserProjects(toValue(userId)),
-  );
+  })
 }
 ```
 
@@ -152,15 +152,17 @@ the use of reactive values. This comes in handy in situations where you want to 
 
 ```ts
 export function useUserProjects(userId: MaybeRef<string>) {
-  return useQuery(
+  return useQuery({
     queryKey: ['userProjects', userId],
     queryFn: () => api.fetchUserProjects(toValue(userId)),
-    enabled: () => userId.value === activeUserId.value,
-  );
+    enabled: () => toValue(userId) === activeUserId.value,
+  })
 }
 ```
 
-More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/docs/framework/vue/reference/functions/useQuery.md) page.
+More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/docs/framework/vue/reference/functions/useQuery.md) page.
+
+The other query options accept refs as well, and pick up changes to them. Reactive getters, however, are only resolved in `queryKey` and `enabled`, since a function is already a valid value for options such as `select` or `staleTime`.
 
 ### Immutability
 
@@ -170,7 +172,7 @@ One implication of this design is that passing values from `useQuery` to a two-w
 
 ## Key Takeaways
 
-- `enabled` and `queryKey` are the two query options that can accept reactive values.
+- Every query option accepts refs, but only `queryKey` and `enabled` also accept reactive getters.
 - Pass query option that accept all three types of values in Vue: refs, plain values, and reactive getters.
 - If you expect a query to react to changes based on the values it consumes, ensure that the values are reactive. (i.e. pass in refs directly to the query, or use reactive getters)
 - If you don't need a query to be reactive pass in a plain value.

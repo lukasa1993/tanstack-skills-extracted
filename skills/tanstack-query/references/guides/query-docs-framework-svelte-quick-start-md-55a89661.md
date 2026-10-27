@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-svelte-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-query@6.3.5`.
+Release-matched documentation · `@tanstack/svelte-query@6.3.6`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -77,8 +77,8 @@ createQuery(() => ({
   const query = createQuery(() => ({
     queryKey: ['repoData'],
     queryFn: () =>
-      fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
-        (res) => res.json(),
+      fetch('https://api.github.com/repos/TanStack/query').then((res) =>
+        res.json(),
       ),
   }))
 </script>
@@ -87,7 +87,7 @@ createQuery(() => ({
   const { isPending, error, data } = useQuery({
     queryKey: ['repoData'],
     queryFn: () =>
-      fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
+      fetch('https://api.github.com/repos/TanStack/query').then(
         (res) => res.json(),
       ),
   }) -->

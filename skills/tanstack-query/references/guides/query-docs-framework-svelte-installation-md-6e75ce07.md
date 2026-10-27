@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-svelte-installation-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-query@6.3.5`.
+Release-matched documentation · `@tanstack/svelte-query@6.3.6`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -10,26 +10,28 @@ You can install Svelte Query via [NPM](https://npmjs.com).
 
 ### NPM
 
-```bash
+```sh
 npm i @tanstack/svelte-query
 ```
 
 or
 
-```bash
+```sh
 pnpm add @tanstack/svelte-query
 ```
 
 or
 
-```bash
+```sh
 yarn add @tanstack/svelte-query
 ```
 
 or
 
-```bash
+```sh
 bun add @tanstack/svelte-query
 ```
 
-> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/a8ecc8d42f82c795fbe5771be5e41dee54bd7e34/examples/svelte/basic/README.md) example!
+Svelte Query is compatible with Svelte v5.25+.
+
+> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/svelte/basic/README.md) example!
