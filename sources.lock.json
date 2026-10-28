@@ -3,7 +3,7 @@
   "requests": {
     "https://api.github.com/repos/TanStack/query/pulls/10879": {
       "status": 200,
-      "sha256": "7c52f78fd57cb23b2f5d56e863ff60599730657206820eeb4ebf1def938455a2",
+      "sha256": "760aa8cee584d2419a8b7b7c1a8a415e49b662fa746273a8df78361bba3f9619",
       "bytes": 17127
     },
     "https://api.github.com/repos/sxzz/userscripts": {
@@ -1468,8 +1468,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fredact/latest": {
       "status": 200,
-      "sha256": "33ee0399dc603f78404a3444320e6e83d3b83a19c6faa5502fa7c6ed37306de6",
-      "bytes": 4084
+      "sha256": "cd4b5005e550a3ec92113f47525fdd15253cd87ee3098edc2b8ece8129ff9f9f",
+      "bytes": 4085
     },
     "https://registry.npmjs.org/%40tanstack%2Frouter-arktype-adapter/latest": {
       "status": 200,
@@ -2148,8 +2148,8 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-form@1.33.5": {
       "status": 200,
-      "sha256": "e71a30618b38fd62e38d2462cdfc8db80c0e6683d2696819fce870f7c57b4c9c",
-      "bytes": 14317
+      "sha256": "9512cebd46e31e83b5c107a404c52625ebcdbfa030a9849662b881516c54d89c",
+      "bytes": 14242
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-native-charts@1.1.0": {
       "status": 200,
@@ -2173,8 +2173,8 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fstore@0.11.2": {
       "status": 200,
-      "sha256": "65576c1b2f73251a5ee1ac100075dab7bb1bafa088c129dd4a42cc197395230a",
-      "bytes": 14433
+      "sha256": "13642c5c2762b9c688547da0022410afb2f7efd9b06f183a64d7278ac92f790a",
+      "bytes": 14356
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsvelte-form@1.33.5": {
       "status": 200,
@@ -3596,10 +3596,10 @@
       "sha256": "a1b56d159f254889b3595f562c6849ff5d8e6c04458a4bc43f224e77f876203a",
       "bytes": 14262
     },
-    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.2.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.2.2.tgz": {
       "status": 200,
-      "sha256": "85563eb6b280464e46168cbe1628166553994e4d30f5f47aeed4a86ebfd28c08",
-      "bytes": 1392291
+      "sha256": "8e01b415897c081dcee7b19dde4f37728301dc9949a156aac65fb9dd57dab89a",
+      "bytes": 1392874
     },
     "https://registry.npmjs.org/@tanstack/router-arktype-adapter/-/router-arktype-adapter-1.81.5.tgz": {
       "status": 200,
