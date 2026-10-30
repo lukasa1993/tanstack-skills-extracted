@@ -1,6 +1,6 @@
 # Stores — Authorization
 
-[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-stores-e6061122.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 ## Authorization
 

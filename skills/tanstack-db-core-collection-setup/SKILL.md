@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.15.2"
+  tanstack-package-version: "1.0.0-rc.1"
   tanstack-source-skill: "db-core/collection-setup"
   tanstack-sources: "[\"TanStack/db:docs/overview.md\",\"TanStack/db:docs/guides/schemas.md\",\"TanStack/db:docs/collections/query-collection.md\",\"TanStack/db:docs/collections/electric-collection.md\",\"TanStack/db:docs/collections/powersync-collection.md\",\"TanStack/db:docs/collections/rxdb-collection.md\",\"TanStack/db:docs/collections/trailbase-collection.md\",\"TanStack/db:docs/collections/indexed-db-collection.md\",\"TanStack/db:packages/db/src/collection/index.ts\"]"
   tanstack-type: "sub-skill"
@@ -46,15 +46,18 @@ const todoCollection = createCollection(
     queryClient,
     getKey: (item) => item.id,
     schema: todoSchema,
-    onInsert: async ({ transaction }) => {
+    onInsert: async ({ transaction, collection }) => {
       await api.todos.create(transaction.mutations[0].modified)
+      await collection.utils.refetch()
     },
-    onUpdate: async ({ transaction }) => {
+    onUpdate: async ({ transaction, collection }) => {
       const mut = transaction.mutations[0]
       await api.todos.update(mut.key, mut.changes)
+      await collection.utils.refetch()
     },
-    onDelete: async ({ transaction }) => {
+    onDelete: async ({ transaction, collection }) => {
       await api.todos.delete(transaction.mutations[0].key)
+      await collection.utils.refetch()
     },
   }),
 )
@@ -154,6 +157,7 @@ Use `z.union([z.string(), z.date()])` for transformed fields — this ensures `T
 Always use a schema with Electric — without one, the collection types as `Record<string, unknown>`.
 
 ```ts
+import { createCollection } from '@tanstack/db'
 import { electricCollectionOptions } from '@tanstack/electric-db-collection'
 import { z } from 'zod'
 
@@ -169,15 +173,15 @@ const todoCollection = createCollection(
     schema: todoSchema,
     shapeOptions: { url: '/api/electric/todos' },
     getKey: (item) => item.id,
-    onInsert: async ({ transaction }) => {
+    onInsert: async ({ transaction, collection }) => {
       const res = await api.todos.create(transaction.mutations[0].modified)
-      return { txid: res.txid }
+      await collection.utils.awaitTxId(res.txid)
     },
   }),
 )
 ```
 
-The returned `txid` tells the collection to hold optimistic state until Electric streams back that transaction. See the [Electric adapter reference](./references/electric-adapter.md) for the full dual-path pattern (schema + parser).
+The handler waits for Electric to stream the `txid` before it completes, keeping optimistic state visible until then. See the [Electric adapter reference](./references/electric-adapter.md) for the full dual-path pattern (schema + parser).
 
 ## Common Mistakes
 
@@ -431,7 +435,7 @@ Correct:
 ```ts
 todoCollection.utils.writeInsert(newItem)
 // Use staleTime to prevent immediate refetch
-// Or return { refetch: false } from mutation handlers
+// Handlers do not refetch automatically; await confirmed direct writes
 ```
 
 Direct writes update the collection immediately, but the next `queryFn` returns complete server state which overwrites them.

@@ -1,6 +1,6 @@
 # Live Queries — Virtual Properties
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Virtual Properties
 
@@ -14,5 +14,3 @@ Live query results include computed, read-only virtual properties on every row:
 - `$collectionId`: the source collection ID.
 
 These props are added automatically and can be used in `where`, `select`, and `orderBy` clauses. Do not persist them back to storage.
-The deprecated `$synced` alias is the inverse of `$hasPendingWrites` and will
-be removed in the 1.0 RC.

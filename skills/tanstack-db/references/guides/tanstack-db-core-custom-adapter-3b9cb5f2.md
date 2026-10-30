@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-custom-adapter"></a>
 
-Published skill · `@tanstack/db@0.15.2`.
+Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 [Topic index](../sync-persistence.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./tanstack-db-core-custom-adapter-3b9cb5f2--overview.md) — 1 KiB
 - [Setup](./tanstack-db-core-custom-adapter-3b9cb5f2--setup.md) — 4 KiB
-- [Core Patterns](./tanstack-db-core-custom-adapter-3b9cb5f2--core-patterns.md) — 6 KiB
+- [Core Patterns](./tanstack-db-core-custom-adapter-3b9cb5f2--core-patterns.md) — 7 KiB
 - [Common Mistakes](./tanstack-db-core-custom-adapter-3b9cb5f2--common-mistakes.md) — 4 KiB
 - [Tension: Simplicity vs. Correctness in Sync](./tanstack-db-core-custom-adapter-3b9cb5f2--tension-simplicity-vs-correctness-in-sync.md) — 1 KiB
 

@@ -1,6 +1,6 @@
 # Devtools Vite Plugin — Installation and Basic Setup
 
-[Guide and prerequisites](./tanstack-devtools-vite-plugin-cfc5c562.md) · Published skill · `@tanstack/devtools-vite@0.8.5`.
+[Guide and prerequisites](./tanstack-devtools-vite-plugin-cfc5c562.md) · Published skill · `@tanstack/devtools-vite@0.8.6`.
 
 ## Installation and Basic Setup
 

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.0.1"
   tanstack-source-skill: "ai-core/custom-backend-integration"
   tanstack-sources: "[\"TanStack/ai:docs/transports/sse.md\",\"TanStack/ai:docs/transports/http-stream.md\",\"TanStack/ai:docs/transports/request-options.md\",\"TanStack/ai:docs/transports/custom.md\"]"
   tanstack-type: "composition"

@@ -8,90 +8,90 @@
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools",
-      "version": "0.15.0",
+      "version": "0.16.0",
       "sourcePath": "devtools-app-setup",
-      "sha256": "9443bdda0cd9b5a145fcd46bde7f69f8053b94ff666a06f8f73ef57c5be3866b"
+      "sha256": "193065097cc8583e03d9da6d63242de313d5e2bccad922c66c5f20d7f8cfa5c5"
     },
     {
       "id": "tanstack-devtools-production",
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools",
-      "version": "0.15.0",
+      "version": "0.16.0",
       "sourcePath": "devtools-production",
-      "sha256": "d8822d2da35a6df12546bac9b182e16c08f94ebc9ef70217b681b598c0fd8f33"
+      "sha256": "e7b74673099cfcf2cb1b6638b9d7e1906d07060dbefd73ccfb1559ea2aba1a46"
     },
     {
       "id": "tanstack-devtools-vite-plugin",
       "kind": "atomic",
       "theme": "setup-production",
       "package": "@tanstack/devtools-vite",
-      "version": "0.8.5",
+      "version": "0.8.6",
       "sourcePath": "devtools-vite-plugin",
-      "sha256": "9c83e29481fc617d0d076c93dcfc1ef8efa801c774a8244378c2cffc58f4012a"
+      "sha256": "f951ea7c102fa224d9e18cbf59772e6a06465f159a0503abf07d439bac317efd"
     },
     {
       "id": "tanstack-devtools-marketplace",
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools",
-      "version": "0.15.0",
+      "version": "0.16.0",
       "sourcePath": "devtools-marketplace",
-      "sha256": "e12f9ddfab48cba52588d56ffd51be46aa536aeba58fe035f2db31d1e449d2f1"
+      "sha256": "d56809c9fb83b516cbc325fcdfb6db42496b7ff744607e1752a54bb70b3b2d75"
     },
     {
       "id": "tanstack-devtools-plugin-panel",
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools",
-      "version": "0.15.0",
+      "version": "0.16.0",
       "sourcePath": "devtools-plugin-panel",
-      "sha256": "bc4f2dda7cbf0f122cc3534fb38e0d460c848051e50aa8abcc430cbc8a29ef25"
+      "sha256": "93716700bc6e04fb29072ff7672e89b493468eeb1c319d2d57de943c648e7836"
     },
     {
       "id": "tanstack-devtools-utils-devtools-framework-adapters",
       "kind": "atomic",
       "theme": "plugins-marketplace",
       "package": "@tanstack/devtools-utils",
-      "version": "0.7.1",
+      "version": "0.7.2",
       "sourcePath": "devtools-framework-adapters",
-      "sha256": "a6d5320be84eb047701342cb33e77b6a9b0aef64a69743c32935af551a78dbcb"
+      "sha256": "0f540b9e63af332d1ef03788a62af8acc198251c3d3dd522515e442c533eea3e"
     },
     {
       "id": "tanstack-devtools-event-client",
       "kind": "atomic",
       "theme": "events-instrumentation",
       "package": "@tanstack/devtools-event-client",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "sourcePath": "devtools-event-client",
-      "sha256": "1bd34fe0584b206e6255dee19cf132ec0c2fa914ead4f4ae12eb03ba4fb3a5b3"
+      "sha256": "521946271ed6a70c312f5fc15a3ac1a4f41ae1461f73fc473dca76d191c67889"
     },
     {
       "id": "tanstack-devtools-event-client-devtools-bidirectional",
       "kind": "atomic",
       "theme": "events-instrumentation",
       "package": "@tanstack/devtools-event-client",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "sourcePath": "devtools-bidirectional",
-      "sha256": "b3ccb14befd234036953c58c6a0d27ee31c1ea522c66782676807de38451eff0"
+      "sha256": "b243c16e8fe9b709b44d42ddf3360873e3ab0bf67d658676fd6382c2674ed96e"
     },
     {
       "id": "tanstack-devtools-event-client-devtools-instrumentation",
       "kind": "atomic",
       "theme": "events-instrumentation",
       "package": "@tanstack/devtools-event-client",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "sourcePath": "devtools-instrumentation",
-      "sha256": "5fd41289f9a56cb4b731af95c105e6143ecfccaa34cb3fa1cbc531921933b40d"
+      "sha256": "b2527814f225c1f845316e06f3e6fa1cdeae4068dbe3b8905ebf24f8b6b80ffe"
     },
     {
       "id": "tanstack-devtools-webmcp",
       "kind": "atomic",
       "theme": "additional-guidance",
       "package": "@tanstack/devtools-webmcp",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "sourcePath": "devtools-webmcp",
-      "sha256": "2df2369c573cf0c85687c52fdbc9dbce7b20106e848490b11d35986573c7416d"
+      "sha256": "45413997c1abc448aa1f9842e3b9969ba332742be65d4b3c9e82f464db99f92e"
     }
   ],
   "duplicateDocuments": [],

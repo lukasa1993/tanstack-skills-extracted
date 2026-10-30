@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-persistence"></a>
 
-Published skill · `@tanstack/db@0.15.2`.
+Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 [Topic index](../sync-persistence.md) · [Source provenance](../SOURCES.md)
 
@@ -78,7 +78,7 @@ const todosCollection = createCollection(
     ...electricCollectionOptions({
       id: 'todos',
       shapeOptions: { url: '/api/electric/todos' },
-      getKey: (item) => item.id,
+      getKey: (item: { id: string }) => item.id,
     }),
     persistence,
     schemaVersion: 1,

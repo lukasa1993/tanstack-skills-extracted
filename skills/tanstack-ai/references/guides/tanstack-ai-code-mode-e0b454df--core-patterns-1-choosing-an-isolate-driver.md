@@ -1,6 +1,6 @@
 # Ai Code Mode — Core Patterns: 1. Choosing an Isolate Driver
 
-[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-code-mode-e0b454df.md) · Published skill · `@tanstack/ai-code-mode@1.0.1`.
 
 ## Core Patterns: 1. Choosing an Isolate Driver
 

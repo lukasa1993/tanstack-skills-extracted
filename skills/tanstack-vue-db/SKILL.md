@@ -1,6 +1,6 @@
 ---
 name: tanstack-vue-db
-description: "Vue 3 bindings for TanStack DB. useLiveQuery composable with MaybeRefOrGetter query functions, ComputedRef return values for all fields (data, state, collection, status, isLoading, isReady, isError). Dependency arrays with Vue refs. Conditional queries via returning undefined/null. Pre-created collection support via ref or getter. Import from @tanstack/vue-db (re-exports all of @tanstack/db)."
+description: "Vue 3 bindings for TanStack DB. useLiveQuery composable with MaybeRefOrGetter query functions, ComputedRef return values for all fields (data, state, collection, status, isLoading, isReady, isLoadingError, isCrashed, isSyncError, health). isLoadingError means the first load failed; isCrashed means status 'crashed'; isSyncError means the data is shown but a sync problem is in the health tree. Dependency arrays with Vue refs. Conditional queries via returning undefined/null. Pre-created collection support via ref or getter. Import from @tanstack/vue-db (re-exports all of @tanstack/db)."
 license: "MIT"
 metadata:
   internal: true
@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/vue-db"
-  tanstack-package-version: "0.3.12"
+  tanstack-package-version: "1.0.0-rc.1"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "vue-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/vue/overview.md\",\"TanStack/db:packages/vue-db/src/useLiveQuery.ts\"]"
@@ -110,21 +110,23 @@ const handleToggle = (id: number) => {
 
 ## Includes (Hierarchical Data)
 
-When a query uses includes (subqueries in `select`), each child field is a live `Collection` by default. Subscribe to it with `useLiveQuery` in a subcomponent:
+When a query uses `include()` for a subquery in `select`, each child field is a live `Collection`. Subscribe to it with `useLiveQuery` in a subcomponent:
 
 ```vue
 <!-- ProjectList.vue -->
 <script setup lang="ts">
-import { useLiveQuery, eq } from '@tanstack/vue-db'
+import { useLiveQuery, eq, include } from '@tanstack/vue-db'
 
 const { data: projects } = useLiveQuery((q) =>
   q.from({ p: projectsCollection }).select(({ p }) => ({
     id: p.id,
     name: p.name,
-    issues: q
-      .from({ i: issuesCollection })
-      .where(({ i }) => eq(i.projectId, p.id))
-      .select(({ i }) => ({ id: i.id, title: i.title })),
+    issues: include(
+      q
+        .from({ i: issuesCollection })
+        .where(({ i }) => eq(i.projectId, p.id))
+        .select(({ i }) => ({ id: i.id, title: i.title })),
+    ),
   })),
 )
 </script>

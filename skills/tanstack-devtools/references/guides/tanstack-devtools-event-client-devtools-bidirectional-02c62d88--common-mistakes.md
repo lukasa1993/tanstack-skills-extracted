@@ -1,6 +1,6 @@
 # Devtools Bidirectional — Common Mistakes
 
-[Guide and prerequisites](./tanstack-devtools-event-client-devtools-bidirectional-02c62d88.md) · Published skill · `@tanstack/devtools-event-client@0.5.0`.
+[Guide and prerequisites](./tanstack-devtools-event-client-devtools-bidirectional-02c62d88.md) · Published skill · `@tanstack/devtools-event-client@0.5.1`.
 
 ## Common Mistakes
 

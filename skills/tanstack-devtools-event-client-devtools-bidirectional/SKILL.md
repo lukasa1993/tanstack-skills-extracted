@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools-event-client"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-event-client"
-  tanstack-package-version: "0.5.0"
+  tanstack-package-version: "0.5.1"
   tanstack-requires: "[\"tanstack-devtools-event-client\"]"
   tanstack-source-skill: "devtools-bidirectional"
   tanstack-sources: "[\"packages/event-bus-client/src/plugin.ts\",\"docs/bidirectional-communication.md\"]"

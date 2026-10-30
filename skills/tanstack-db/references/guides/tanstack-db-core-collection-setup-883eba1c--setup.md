@@ -1,6 +1,6 @@
 # Collection Setup — Setup
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Setup
 
@@ -31,15 +31,18 @@ const todoCollection = createCollection(
     queryClient,
     getKey: (item) => item.id,
     schema: todoSchema,
-    onInsert: async ({ transaction }) => {
+    onInsert: async ({ transaction, collection }) => {
       await api.todos.create(transaction.mutations[0].modified)
+      await collection.utils.refetch()
     },
-    onUpdate: async ({ transaction }) => {
+    onUpdate: async ({ transaction, collection }) => {
       const mut = transaction.mutations[0]
       await api.todos.update(mut.key, mut.changes)
+      await collection.utils.refetch()
     },
-    onDelete: async ({ transaction }) => {
+    onDelete: async ({ transaction, collection }) => {
       await api.todos.delete(transaction.mutations[0].key)
+      await collection.utils.refetch()
     },
   }),
 )

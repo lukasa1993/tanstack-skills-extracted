@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-code-mode"></a>
 
-Published skill · `@tanstack/ai-code-mode@1.0.0`.
+Published skill · `@tanstack/ai-code-mode@1.0.1`.
 
 [Topic index](../code-execution.md) · [Source provenance](../SOURCES.md)
 

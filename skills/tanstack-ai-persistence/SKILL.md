@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.0.1"
   tanstack-source-skill: "ai-persistence"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/overview.md\",\"TanStack/ai:docs/persistence/chat-persistence.md\",\"TanStack/ai:docs/persistence/client-persistence.md\",\"TanStack/ai:docs/persistence/controls.md\",\"TanStack/ai:docs/persistence/build-your-own-adapter.md\",\"TanStack/ai:docs/advanced/server-keys.md\",\"TanStack/ai:packages/ai/src/byok/credentials.ts\"]"
   tanstack-type: "core"
@@ -104,7 +104,10 @@ reference counts in one transaction.
 
 Adding persistence to an app? Pick the recipe that matches what it already
 runs — each one writes a single `chat-persistence.ts` against the app's
-existing database client and schema:
+existing database client and schema. Every recipe writes all four chat
+stores (messages, runs, interrupts, metadata) and all four tables, on every
+dialect; the "which stores do you need" minimums in the docs are for
+hand-rolled adapters, not these recipes:
 
 | The app runs...                                      | Read                                                    |
 | ---------------------------------------------------- | ------------------------------------------------------- |

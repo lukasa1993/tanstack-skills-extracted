@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-webmcp"></a>
 
-Published skill · `@tanstack/devtools-webmcp@0.0.2`.
+Published skill · `@tanstack/devtools-webmcp@0.0.3`.
 
 [Topic index](../additional-guidance.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Ai Persistence — Overview
 
-[Guide and prerequisites](./tanstack-ai-persistence-2fec28cd.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-2fec28cd.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 # TanStack AI Persistence
 

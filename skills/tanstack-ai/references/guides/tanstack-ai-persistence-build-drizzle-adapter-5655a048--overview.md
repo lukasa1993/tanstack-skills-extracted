@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — Overview
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 # Drizzle Chat Persistence
 
@@ -11,6 +11,13 @@ through the app's existing `drizzle-kit` setup.
 
 Do not create a package, a second `db` instance, a migration runner, or a
 `drizzle.config.ts`. The app has those.
+
+**Always write all four tables and all four stores: threads, runs, interrupts,
+metadata.** This is true on every dialect. The docs call `interrupts` and
+`metadata` optional for a hand-rolled adapter; this recipe is not that case.
+`withPersistence` needs all four to type-check as `ChatPersistence`, and
+the conformance suite in step 5 fails without them. Do not stop at
+`chat_threads` + `chat_runs`.
 
 Read the **Store Reference**
 (`docs/persistence/store-reference.md`) for the store contracts and

@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 3. Text-to-Speech
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.0.1`.
 
 ## Core Patterns: 3. Text-to-Speech
 

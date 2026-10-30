@@ -1,13 +1,13 @@
 ---
 name: tanstack-db-core-custom-adapter
-description: "Building custom collection adapters for new backends. SyncConfig interface: sync function receiving begin, write, commit, markReady, markError, truncate, metadata primitives and returning cleanup, loadSubset, and optional unloadSubset handlers. ChangeMessage format (insert, update, delete). On-demand LoadSubsetOptions (where, orderBy, limit, offset, cursor). Expression parsing: parseWhereExpression, parseOrderByExpression, extractSimpleComparisons, parseLoadSubsetOptions. Collection options creator pattern. rowUpdateMode (partial vs full). Sync run, subscription lifecycle, and cleanup functions. Persisted sync metadata API (metadata.row and metadata.collection) for storing per-row and per-collection adapter state."
+description: "Building custom collection adapters for new backends. SyncConfig interface: sync function receiving begin, write, commit, markReady, fail, reportError, reportHealthy, truncate, metadata primitives and returning cleanup, loadSubset, and optional unloadSubset handlers. ChangeMessage format (insert, update, delete). On-demand LoadSubsetOptions (where, orderBy, limit, offset, cursor). Expression parsing: parseWhereExpression, parseOrderByExpression, extractSimpleComparisons, parseLoadSubsetOptions. Collection options creator pattern. rowUpdateMode (partial vs full). Sync run, subscription lifecycle, and cleanup functions. Persisted sync metadata API (metadata.row and metadata.collection) for storing per-row and per-collection adapter state."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.15.2"
+  tanstack-package-version: "1.0.0-rc.1"
   tanstack-source-skill: "db-core/custom-adapter"
   tanstack-sources: "[\"TanStack/db:docs/guides/collection-options-creator.md\",\"TanStack/db:packages/db/src/collection/sync.ts\"]"
   tanstack-type: "sub-skill"
@@ -47,7 +47,7 @@ function myBackendCollectionOptions<T extends object>(config: {
   return {
     getKey: config.getKey,
     sync: {
-      sync: ({ begin, write, commit, markReady, markError, collection }) => {
+      sync: ({ begin, write, commit, markReady, fail }) => {
         let isInitialSyncComplete = false
         const bufferedEvents: Array<BackendEvent<T>> = []
         const initialSyncAbort = new AbortController()
@@ -87,9 +87,10 @@ function myBackendCollectionOptions<T extends object>(config: {
           .catch((error) => {
             if (initialSyncAbort.signal.aborted) return
             console.error('Initial sync failed:', error)
-            // Only initial startup owns collection readiness. A later refetch
-            // failure must keep the last ready snapshot usable.
-            if (collection.status === 'loading') markError(error)
+            // This catch runs only before this run's markReady(). After it,
+            // report problems with reportError() and keep the rows. Do not
+            // read collection.status: a reload keeps the previous status.
+            fail(error)
           })
 
         // 5. Return cleanup function
@@ -197,20 +198,21 @@ return the fetched rows. `parseLoadSubsetOptions()` returns only `filters`,
 opaque backend cursor; translate or combine those expressions for your API.
 Return `unloadSubset` only when `loadSubset` creates an ongoing resource, such
 as a per-subset server subscription, that must be released.
-Ownership transfers to core only when `loadSubset` returns `true` or a promise.
-If it throws synchronously after partial setup, release that partial resource
-before throwing; core will not call `unloadSubset` for a request that never
-returned. A must-refetch can call `loadSubset` again with the same options. Each
-successful return is a fresh acquisition: core releases the previous
-acquisition when its replacement returns, then releases the current one when
-the demand ends.
+A Collection subscription installs its logical owner before calling
+`loadSubset`. A synchronous throw fails the load but keeps that owner; when
+the owner is released, core calls `unloadSubset` for the failed load too.
+Make `unloadSubset` safe after partial setup. A must-refetch can call
+`loadSubset` again with the same options. Replay first detaches and releases
+the old acquisition lease, then starts a fresh acquisition if the logical
+demand and replay are still current. Core releases the current acquisition
+when the demand ends.
 
 ### Managing optimistic state duration
 
 Mutation handlers must not resolve until server changes have synced back to the collection. Five strategies:
 
 1. **Refetch** (simplest): `await collection.utils.refetch()`
-2. **Transaction ID**: return `{ txid }` and track via sync stream
+2. **Transaction ID**: await a utility that observes the mutation's transaction ID in the sync stream, such as Electric's `await collection.utils.awaitTxId(txid)`
 3. **ID-based tracking**: await specific record ID appearing in sync stream
 4. **Version/timestamp**: wait until sync stream catches up to mutation time
 5. **Provider method**: `await backend.waitForPendingWrites()`
@@ -226,7 +228,7 @@ Without persistence the metadata is in-memory only and does not survive
 reloads. With persistence, it is durable across sessions.
 
 ```ts
-sync: ({ begin, write, commit, markReady, markError, metadata }) => {
+sync: ({ begin, write, commit, markReady, fail, metadata }) => {
   if (!metadata) throw new Error('Sync metadata API is unavailable')
 
   // Row metadata: store per-row state (e.g. server version, ETag)
@@ -270,7 +272,7 @@ sync: ({ begin, write, commit, markReady, metadata }) => {
   })
 
   stream.on('ready', () => markReady())
-  stream.on('initial-error', (error) => markError(error))
+  stream.on('initial-error', (error) => fail(error))
   return () => stream.close()
 }
 ```
@@ -339,13 +341,23 @@ sync: ({ begin, write, commit, markReady }) => {
 
 `markReady()` transitions the collection to "ready" status. Without it, live queries never resolve and `useLiveSuspenseQuery` hangs forever in Suspense.
 
-If initial sync fails before it produces a usable snapshot, call
-`markError(error)` instead. This rejects readiness waits with the supplied cause
-and moves dependent live queries to the error state. Calling `markError()`
-without a cause remains supported and rejects with a generic collection-state
-error. Later successful work in the same sync run can call `markReady()` to
-recover. Cleanup ends that run; a restart invokes `sync()` again and starts a
-new one.
+If initial sync fails before it produces a usable snapshot and you stop
+retrying, call `fail(error)` instead. The status becomes `error`, readiness
+waits reject with the supplied cause, and dependent live queries move to
+`error`. A later `markReady()` in the same sync run does nothing; only a new
+sync run can reach `ready`. Use `collection.reload()` to start a new sync run.
+
+After the first `markReady()`, the rows stay. Report a sync problem with
+`reportError(error)` while you keep trying; it sets the node's
+`failureReason`. Call `reportHealthy()` when sync works again; it does nothing
+when nothing is wrong. When you stop trying, call `fail(error)`: after
+readiness the node shows an `error`, and only `reload()` clears it.
+`reportError()` and `reportHealthy()` throw before the first `markReady()`.
+Apps read these reports from `collection.health` and from each live query's
+`health` tree. While a retry is in progress before readiness, report nothing.
+
+A throwing `sync` function crashes the Collection (`status: 'crashed'`).
+Reserve that for broken local state, not for network failures.
 
 Source: docs/guides/collection-options-creator.md
 

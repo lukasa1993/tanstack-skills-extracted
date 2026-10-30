@@ -1,13 +1,15 @@
 # Build Prisma Adapter — 3. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 ## 3. Write `src/lib/chat-persistence.ts`
 
 Two conversions the SQL backends do not need: `BigInt` timestamps in and out,
 and JSON as strings. Everything else is the shared invariant set.
 
-```ts ignore
+<!-- fence: prisma-chat-persistence -->
+
+```ts
 import { defineAIPersistence } from '@tanstack/ai-persistence'
 import type {
   ChatInterrupt,

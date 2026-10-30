@@ -1,6 +1,6 @@
 # Live Queries — Core Patterns
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Core Patterns
 
@@ -42,7 +42,7 @@ non-null value.
 Join conditions accept `eq()` or a nonempty, possibly nested `and()` of equalities (equality only -- IVM constraint). Default join type is `left`. Convenience methods: `leftJoin`, `rightJoin`, `innerJoin`, `fullJoin`.
 
 ```ts
-import { eq } from '@tanstack/db'
+import { createLiveQueryCollection, eq } from '@tanstack/db'
 
 const userPosts = createLiveQueryCollection((q) =>
   q
@@ -69,7 +69,7 @@ q.from({ user: usersCollection })
 
 ### 3. Aggregation with groupBy + having
 
-Use `groupBy` to group rows, then aggregate in `select`. Filter groups with `having`. The `$selected` namespace lets `having` and `orderBy` reference fields defined in `select`.
+Use `groupBy` to group rows, then aggregate in `select`. Filter groups with `having`. The `$selected` namespace lets `having` and `orderBy` reference fields defined in `select`. A `groupBy` with no aggregate wraps its keys in `groupKeys()`: `.groupBy(groupKeys(({ order }) => order.status))`; without it the query throws `GroupingOperatorRequiredError`. A `groupKeys()` built outside `.groupBy()` takes the context as a type argument, `groupKeys<ContextFromSource<{ order: typeof ordersCollection }>>(...)`; without it the callback is untyped.
 
 ```ts
 import { count, sum, gt } from '@tanstack/db'

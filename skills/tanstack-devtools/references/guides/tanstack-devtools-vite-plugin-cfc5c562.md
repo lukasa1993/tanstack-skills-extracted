@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-vite-plugin"></a>
 
-Published skill · `@tanstack/devtools-vite@0.8.5`.
+Published skill · `@tanstack/devtools-vite@0.8.6`.
 
 [Topic index](../setup-production.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-prisma-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@1.0.0`.
+Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Published skill · `@tanstack/ai-persistence@1.0.0`.
 
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-- [Overview](./tanstack-ai-persistence-build-prisma-adapter-2687241c--overview.md) — 1 KiB
+- [Overview](./tanstack-ai-persistence-build-prisma-adapter-2687241c--overview.md) — 2 KiB
 - [1. Read the app before writing anything](./tanstack-ai-persistence-build-prisma-adapter-2687241c--1-read-the-app-before-writing-anything.md) — 2 KiB
 - [2. Add the models to their schema](./tanstack-ai-persistence-build-prisma-adapter-2687241c--2-add-the-models-to-their-schema.md) — 4 KiB
 - [3. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-prisma-adapter-2687241c--3-write-src-lib-chat-persistence-ts.md) — 13 KiB

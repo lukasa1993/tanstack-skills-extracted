@@ -1,6 +1,6 @@
 # Live Queries — Includes (Subqueries in Select)
 
-[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-live-queries-ec3edb95.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Includes (Subqueries in Select)
 
@@ -8,29 +8,31 @@ Embed a correlated subquery inside `select()` to produce hierarchical (nested)
 data. The subquery must contain a `where` with an `eq()` that correlates a
 parent field with a child field.
 
-### Collection includes (default)
+### Collection includes with include()
 
 Return a child `Collection` on each parent row:
 
 ```ts
-import { eq, createLiveQueryCollection } from '@tanstack/db'
+import { createLiveQueryCollection, eq, include } from '@tanstack/db'
 
 const projectsWithIssues = createLiveQueryCollection((q) =>
   q.from({ p: projectsCollection }).select(({ p }) => ({
     id: p.id,
     name: p.name,
-    issues: q
-      .from({ i: issuesCollection })
-      .where(({ i }) => eq(i.projectId, p.id))
-      .select(({ i }) => ({
-        id: i.id,
-        title: i.title,
-      })),
+    issues: include(
+      q
+        .from({ i: issuesCollection })
+        .where(({ i }) => eq(i.projectId, p.id))
+        .select(({ i }) => ({
+          id: i.id,
+          title: i.title,
+        })),
+    ),
   })),
 )
 
 // Each row's `issues` is a live Collection
-for (const project of projectsWithIssues) {
+for (const project of projectsWithIssues.toArray) {
   console.log(project.name, project.issues.toArray)
 }
 ```
@@ -115,5 +117,5 @@ const messagesWithContent = createLiveQueryCollection((q) =>
   Like `toArray()`, it must be a top-level value in `select()` and cannot be
   nested inside `coalesce()`, `eq()`, or another expression.
 - `concat(toArray())` requires a **scalar** `select` to concatenate into a string.
-- Collection includes (bare subquery) require an **object** `select`.
+- Collection includes (`include(subquery)`) require an **object** `select`. A bare subquery in `select` throws `IncludeOperatorRequiredError`.
 - Includes subqueries are compiled into the same incremental pipeline as the parent query -- they are not separate live queries.

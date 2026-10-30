@@ -1,6 +1,6 @@
 # Build Custom Adapter — Verify (required)
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 ## Verify (required)
 
@@ -13,13 +13,13 @@ import { runPersistenceConformance } from '@tanstack/ai-persistence/testkit'
 import { chatPersistence } from '../src/lib/chat-persistence'
 
 runPersistenceConformance('app-custom', () => chatPersistence, {
-  skip: ['generationRuns', 'artifacts', 'blobs'],
+  skip: ['activities', 'generationRuns', 'artifacts', 'blobs'],
 })
 ```
 
-Point it at a throwaway database and reset between runs. The suite covers all
-seven stores, so declare every intentional omission — a chat adapter skips the
-generation half above, and adds e.g. `'metadata'` if it drops that too. `skip`
+Point it at a throwaway database and reset between runs. The suite covers
+every store, so declare every intentional omission: a chat adapter skips the
+optional `activities` store and the generation half, as above. `skip`
 never accepts `'locks'`, which is not a store.
 
 If your recipe leaves `listByThread` or `listReclaimable` unimplemented,

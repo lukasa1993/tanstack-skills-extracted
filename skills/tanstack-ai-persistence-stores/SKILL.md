@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.0.0"
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.0.1"
   tanstack-source-skill: "ai-persistence/stores"
   tanstack-sources: "[\"TanStack/ai:docs/persistence/store-reference.md\",\"TanStack/ai:docs/persistence/controls.md\",\"TanStack/ai:packages/ai-persistence/src/types.ts\"]"
   tanstack-type: "sub-skill"
@@ -458,10 +458,10 @@ import { myPersistence } from '../src/persistence'
 
 runPersistenceConformance('my-backend', () => myPersistence())
 
-// Declare intentional omissions. The suite covers all seven stores, so a
-// chat-only backend skips the generation half:
+// Declare intentional omissions. The suite covers every store, so a
+// chat-only backend skips the optional activities store and the generation half:
 // runPersistenceConformance('chat-only', () => p, {
-//   skip: ['generationRuns', 'artifacts', 'blobs'],
+//   skip: ['activities', 'generationRuns', 'artifacts', 'blobs'],
 // })
 // `skip` never accepts 'locks' — locks are not a store.
 

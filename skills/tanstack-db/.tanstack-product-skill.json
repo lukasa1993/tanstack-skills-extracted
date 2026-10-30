@@ -2,7 +2,7 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-db",
   "product": "db",
-  "sourceCount": 25,
+  "sourceCount": 26,
   "themes": [
     "foundations",
     "collections-schema",
@@ -13,9 +13,10 @@
     "framework-vue",
     "framework-solid",
     "framework-svelte",
-    "framework-angular"
+    "framework-angular",
+    "additional-guidance"
   ],
-  "guideCount": 25,
-  "largestGuideEntryBytes": 12415,
-  "inputSha256": "ddd5d4d66d204efe70c581a6b6d6a0684d6617c6ea80137d83e1844d7da5319b"
+  "guideCount": 26,
+  "largestGuideEntryBytes": 11531,
+  "inputSha256": "8b548afd925926d3db9bafeb44745524c02f03e2686709a6265eb07ad96e9651"
 }

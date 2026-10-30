@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/svelte-db"
-  tanstack-package-version: "0.5.12"
+  tanstack-package-version: "1.0.0-rc.1"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "svelte-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/svelte/overview.md\",\"TanStack/db:packages/svelte-db/src/useLiveQuery.svelte.ts\"]"
@@ -56,6 +56,10 @@ Returns a reactive object with getter properties:
 // Query function — access via dot notation
 const query = useLiveQuery((q) => q.from({ todo: todoCollection }))
 // query.data, query.isLoading, query.status, etc.
+// query.isLoadingError → the first load failed: nothing to show
+// query.isCrashed      → status 'crashed': local storage broke
+// query.isSyncError    → data is shown, but a sync problem is in health
+// query.health → health tree: one node for the query and one per source
 
 // With reactive deps — use GETTER FUNCTIONS
 let minPriority = $state(5)
@@ -110,22 +114,24 @@ const { data, isLoading } = $derived(query)
 
 ## Includes (Hierarchical Data)
 
-When a query uses includes (subqueries in `select`), each child field is a live `Collection` by default. Subscribe to it with `useLiveQuery` in a subcomponent:
+When a query uses `include()` for a subquery in `select`, each child field is a live `Collection`. Subscribe to it with `useLiveQuery` in a subcomponent:
 
 ```svelte
 <!-- ProjectList.svelte -->
 <script lang="ts">
-import { useLiveQuery, eq } from "@tanstack/svelte-db"
+import { useLiveQuery, eq, include } from "@tanstack/svelte-db"
 import IssueList from "./IssueList.svelte"
 
 const projectsQuery = useLiveQuery((q) =>
   q.from({ p: projectsCollection }).select(({ p }) => ({
     id: p.id,
     name: p.name,
-    issues: q
-      .from({ i: issuesCollection })
-      .where(({ i }) => eq(i.projectId, p.id))
-      .select(({ i }) => ({ id: i.id, title: i.title })),
+    issues: include(
+      q
+        .from({ i: issuesCollection })
+        .where(({ i }) => eq(i.projectId, p.id))
+        .select(({ i }) => ({ id: i.id, title: i.title })),
+    ),
   }))
 )
 </script>

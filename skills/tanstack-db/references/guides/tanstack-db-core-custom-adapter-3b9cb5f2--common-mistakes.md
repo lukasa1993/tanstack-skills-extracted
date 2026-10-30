@@ -1,6 +1,6 @@
 # Custom Adapter — Common Mistakes
 
-[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Common Mistakes
 
@@ -49,13 +49,23 @@ sync: ({ begin, write, commit, markReady }) => {
 
 `markReady()` transitions the collection to "ready" status. Without it, live queries never resolve and `useLiveSuspenseQuery` hangs forever in Suspense.
 
-If initial sync fails before it produces a usable snapshot, call
-`markError(error)` instead. This rejects readiness waits with the supplied cause
-and moves dependent live queries to the error state. Calling `markError()`
-without a cause remains supported and rejects with a generic collection-state
-error. Later successful work in the same sync run can call `markReady()` to
-recover. Cleanup ends that run; a restart invokes `sync()` again and starts a
-new one.
+If initial sync fails before it produces a usable snapshot and you stop
+retrying, call `fail(error)` instead. The status becomes `error`, readiness
+waits reject with the supplied cause, and dependent live queries move to
+`error`. A later `markReady()` in the same sync run does nothing; only a new
+sync run can reach `ready`. Use `collection.reload()` to start a new sync run.
+
+After the first `markReady()`, the rows stay. Report a sync problem with
+`reportError(error)` while you keep trying; it sets the node's
+`failureReason`. Call `reportHealthy()` when sync works again; it does nothing
+when nothing is wrong. When you stop trying, call `fail(error)`: after
+readiness the node shows an `error`, and only `reload()` clears it.
+`reportError()` and `reportHealthy()` throw before the first `markReady()`.
+Apps read these reports from `collection.health` and from each live query's
+`health` tree. While a retry is in progress before readiness, report nothing.
+
+A throwing `sync` function crashes the Collection (`status: 'crashed'`).
+Reserve that for broken local state, not for network failures.
 
 Source: docs/guides/collection-options-creator.md
 

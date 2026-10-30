@@ -1,6 +1,6 @@
 # Custom Adapter — Setup
 
-[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-custom-adapter-3b9cb5f2.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Setup
 
@@ -26,7 +26,7 @@ function myBackendCollectionOptions<T extends object>(config: {
   return {
     getKey: config.getKey,
     sync: {
-      sync: ({ begin, write, commit, markReady, markError, collection }) => {
+      sync: ({ begin, write, commit, markReady, fail }) => {
         let isInitialSyncComplete = false
         const bufferedEvents: Array<BackendEvent<T>> = []
         const initialSyncAbort = new AbortController()
@@ -66,9 +66,10 @@ function myBackendCollectionOptions<T extends object>(config: {
           .catch((error) => {
             if (initialSyncAbort.signal.aborted) return
             console.error('Initial sync failed:', error)
-            // Only initial startup owns collection readiness. A later refetch
-            // failure must keep the last ready snapshot usable.
-            if (collection.status === 'loading') markError(error)
+            // This catch runs only before this run's markReady(). After it,
+            // report problems with reportError() and keep the rows. Do not
+            // read collection.status: a reload keeps the previous status.
+            fail(error)
           })
 
         // 5. Return cleanup function

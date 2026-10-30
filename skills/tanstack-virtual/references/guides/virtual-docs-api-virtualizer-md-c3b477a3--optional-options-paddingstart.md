@@ -1,6 +1,6 @@
 # Virtualizer — Optional Options: `paddingStart`
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.8`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.9`.
 
 ## Optional Options: `paddingStart`
 

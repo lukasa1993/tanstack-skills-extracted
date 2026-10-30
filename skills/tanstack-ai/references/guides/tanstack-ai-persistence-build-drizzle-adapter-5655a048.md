@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-persistence-build-drizzle-adapter"></a>
 
-Published skill · `@tanstack/ai-persistence@1.0.0`.
+Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 [Topic index](../persistence-adapters.md) · [Source provenance](../SOURCES.md)
 
@@ -10,13 +10,14 @@ Published skill · `@tanstack/ai-persistence@1.0.0`.
 
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-- [Overview](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--overview.md) — 1 KiB
+- [Overview](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--overview.md) — 2 KiB
 - [1. Read the app before writing anything](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--1-read-the-app-before-writing-anything.md) — 2 KiB
-- [2. Add the tables to their schema file](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--2-add-the-tables-to-their-schema-file.md) — 5 KiB
-- [3. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--3-write-src-lib-chat-persistence-ts.md) — 12 KiB
+- [2. Add the tables to their schema file](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--2-add-the-tables-to-their-schema-file.md) — 7 KiB
+- [3. Write `src/lib/chat-persistence.ts`](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--3-write-src-lib-chat-persistence-ts.md) — 13 KiB
 - [3. Write `src/lib/chat-persistence.ts`: If `db` is per-request](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--3-write-src-lib-chat-persistence-ts-if-db-is-per-request.md) — 1 KiB
 - [4. Wire it into the chat route](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--4-wire-it-into-the-chat-route.md) — 2 KiB
 - [5. Verify](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--5-verify.md) — 2 KiB
+- [Before you say it is done](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--before-you-say-it-is-done.md) — 1 KiB
 - [Only if you are publishing this as a package](./tanstack-ai-persistence-build-drizzle-adapter-5655a048--only-if-you-are-publishing-this-as-a-package.md) — 2 KiB
 
 <!-- Original source anchors retained for inbound links. -->
@@ -27,4 +28,5 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="if-db-is-per-request"></a>
 <a id="4-wire-it-into-the-chat-route"></a>
 <a id="5-verify"></a>
+<a id="before-you-say-it-is-done"></a>
 <a id="only-if-you-are-publishing-this-as-a-package"></a>

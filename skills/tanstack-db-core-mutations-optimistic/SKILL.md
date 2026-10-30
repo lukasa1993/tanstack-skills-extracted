@@ -1,13 +1,13 @@
 ---
 name: tanstack-db-core-mutations-optimistic
-description: "collection.insert, collection.update (Immer-style draft proxy), collection.delete. createOptimisticAction (onMutate + mutationFn). createPacedMutations with debounceStrategy, throttleStrategy, queueStrategy. createTransaction, getActiveTransaction, ambient transaction context. Transaction lifecycle (pending/persisting/completed/failed). Mutation merging. onInsert/onUpdate/onDelete handlers. PendingMutation type. Transaction.isPersisted."
+description: "collection.insert, collection.update (Immer-style draft proxy), collection.delete. createOptimisticAction (onMutate + mutationFn). createPacedMutations with debounceStrategy, throttleStrategy, queueStrategy. createTransaction, getActiveTransaction, ambient transaction context. Transaction lifecycle (pending/persisting/completed/failed). Mutation merging. onInsert/onUpdate/onDelete handlers. PendingMutation type. Transaction.when('settled')."
 license: "MIT"
 metadata:
   internal: true
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.15.2"
+  tanstack-package-version: "1.0.0-rc.1"
   tanstack-source-skill: "db-core/mutations-optimistic"
   tanstack-sources: "[\"TanStack/db:docs/guides/mutations.md\",\"TanStack/db:packages/db/src/transactions.ts\",\"TanStack/db:packages/db/src/optimistic-action.ts\",\"TanStack/db:packages/db/src/paced-mutations.ts\"]"
   tanstack-type: "sub-skill"
@@ -224,47 +224,50 @@ a good fit for draft-style flows where local state updates immediately but the
 server call waits for Save/Blur; call `tx.rollback()` to discard the optimistic
 changes.
 
-### 4. Mutation handlers with automatic refetch (QueryCollection pattern)
+### 4. Mutation handlers with explicit refetch (QueryCollection pattern)
 
 ```ts
 const todoCollection = createCollection(
-  queryCollectionOptions({
+  queryCollectionOptions<{ id: string; text: string; completed: boolean }>({
     queryKey: ['todos'],
+    queryClient,
     queryFn: () => api.todos.getAll(),
     getKey: (t) => t.id,
-    onInsert: async ({ transaction }) => {
+    onInsert: async ({ transaction, collection }) => {
       await Promise.all(
         transaction.mutations.map((m) => api.todos.create(m.modified)),
       )
-      // Query Collection refetches after the handler completes and awaits it.
+      await collection.utils.refetch()
     },
-    onUpdate: async ({ transaction }) => {
+    onUpdate: async ({ transaction, collection }) => {
       await Promise.all(
         transaction.mutations.map((m) =>
           api.todos.update(m.original.id, m.changes),
         ),
       )
+      await collection.utils.refetch()
     },
-    onDelete: async ({ transaction }) => {
+    onDelete: async ({ transaction, collection }) => {
       await Promise.all(
         transaction.mutations.map((m) => api.todos.delete(m.original.id)),
       )
+      await collection.utils.refetch()
     },
   }),
 )
 ```
 
-For ElectricCollection, return `{ txid }` instead of refetching:
+For ElectricCollection, wait for each txid in the Electric stream:
 
 ```ts
-onUpdate: async ({ transaction }) => {
+onUpdate: async ({ transaction, collection }) => {
   const txids = await Promise.all(
     transaction.mutations.map(async (m) => {
       const res = await api.todos.update(m.original.id, m.changes)
       return res.txid
     }),
   )
-  return { txid: txids }
+  await Promise.all(txids.map((txid) => collection.utils.awaitTxId(txid)))
 }
 ```
 
@@ -347,27 +350,27 @@ If an item with the same key already exists (synced or optimistic), throws
 `DuplicateKeyError`. Always generate a unique key (e.g. `safeRandomUUID()`)
 or check before inserting.
 
-### HIGH: Manually refetching inside a Query Collection handler
+### HIGH: Returning before Query Collection has confirmed data
 
-Query Collection automatically refetches after `onInsert`, `onUpdate`, and
-`onDelete` complete, and waits for that refetch before the mutation finishes.
-Calling `utils.refetch()` inside the handler sends a redundant request.
+Query Collection does not refetch after `onInsert`, `onUpdate`, or `onDelete`.
+A server write alone leaves synced rows unchanged. When the handler returns,
+its optimistic state drops, so the previous synced rows reappear.
 
 ```ts
-// WRONG -- causes one manual and one automatic refetch
+// WRONG -- the optimistic insert disappears at settlement
 onInsert: async ({ transaction }) => {
+  await api.createTodo(transaction.mutations[0].modified)
+}
+
+// CORRECT -- explicitly read back the server state
+onInsert: async ({ transaction, collection }) => {
   await api.createTodo(transaction.mutations[0].modified)
   await collection.utils.refetch()
 }
-
-// CORRECT -- automatic refetch is awaited after this returns
-onInsert: async ({ transaction }) => {
-  await api.createTodo(transaction.mutations[0].modified)
-}
 ```
 
-When the handler writes the confirmed server result with direct-write utilities,
-return `{ refetch: false }` to skip the automatic refetch.
+Alternatively, await a direct-write utility with the confirmed server result.
+Handlers return `Promise<void>`; `{ refetch: false }` is no longer supported.
 
 ---
 

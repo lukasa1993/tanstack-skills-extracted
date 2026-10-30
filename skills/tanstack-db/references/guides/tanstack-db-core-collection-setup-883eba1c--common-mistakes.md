@@ -1,6 +1,6 @@
 # Collection Setup — Common Mistakes
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@0.15.2`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 ## Common Mistakes
 
@@ -254,7 +254,7 @@ Correct:
 ```ts
 todoCollection.utils.writeInsert(newItem)
 // Use staleTime to prevent immediate refetch
-// Or return { refetch: false } from mutation handlers
+// Handlers do not refetch automatically; await confirmed direct writes
 ```
 
 Direct writes update the collection immediately, but the next `queryFn` returns complete server state which overwrites them.

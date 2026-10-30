@@ -1,6 +1,6 @@
 # Build Prisma Adapter — Overview
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-prisma-adapter-2687241c.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 # Prisma Chat Persistence
 
@@ -11,6 +11,12 @@ with the app's own `prisma migrate`.
 
 Do not create a package, a second client, a datasource block, a generator, or a
 hand-written SQL migration. The app has those.
+
+**Always write all four models and all four stores: thread, run, interrupt,
+metadata.** The docs call `interrupts` and `metadata` optional for a
+hand-rolled adapter; this recipe is not that case. `withPersistence` needs
+all four to type-check as `ChatPersistence`, and the conformance suite fails
+without them. Do not stop at a thread table and a run table.
 
 Read the **Store Reference**
 (`docs/persistence/store-reference.md`) for the store contracts and

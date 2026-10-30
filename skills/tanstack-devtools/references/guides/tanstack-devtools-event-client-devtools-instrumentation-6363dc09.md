@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-event-client-devtools-instrumentation"></a>
 
-Published skill · `@tanstack/devtools-event-client@0.5.0`.
+Published skill · `@tanstack/devtools-event-client@0.5.1`.
 
 [Topic index](../events-instrumentation.md) · [Source provenance](../SOURCES.md)
 

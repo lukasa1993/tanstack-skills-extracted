@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.0.1"
   tanstack-source-skill: "ai-core/media-generation"
   tanstack-sources: "[\"TanStack/ai:docs/media/generations.md\",\"TanStack/ai:docs/media/generation-hooks.md\",\"TanStack/ai:docs/media/image-generation.md\",\"TanStack/ai:docs/media/audio-generation.md\",\"TanStack/ai:docs/media/video-generation.md\",\"TanStack/ai:docs/media/text-to-speech.md\",\"TanStack/ai:docs/adapters/elevenlabs.md\",\"TanStack/ai:docs/media/voice-creation.md\",\"TanStack/ai:docs/media/transcription.md\",\"TanStack/ai:docs/advanced/debug-logging.md\"]"
   tanstack-type: "sub-skill"
@@ -656,7 +656,7 @@ const { generate, result, isLoading } = useTranscription({
 // Trigger: generate({ audio: dataUrl, language: 'en' })
 ```
 
-### 6. Video Generation (Experimental -- async polling)
+### 6. Video Generation (async polling)
 
 Video generation uses a jobs/polling architecture. The server creates a job,
 polls for status, and streams updates to the client. Adapters: `openaiVideo`

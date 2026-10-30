@@ -1,13 +1,15 @@
 # Build Drizzle Adapter — 3. Write `src/lib/chat-persistence.ts`
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 ## 3. Write `src/lib/chat-persistence.ts`
 
 The whole file. Idempotency is the entire game — the comments below mark the
 rules the conformance suite checks.
 
-```ts ignore
+<!-- fence: drizzle-chat-persistence -->
+
+```ts
 import { and, asc, desc, eq, isNotNull, lte } from 'drizzle-orm'
 import { defineAIPersistence } from '@tanstack/ai-persistence'
 import type { SQL } from 'drizzle-orm'
@@ -108,7 +110,8 @@ function createRunStore(db: Db): RunStore {
       .from(chatRuns)
       .where(eq(chatRuns.runId, runId))
       .limit(1)
-    return rows[0] ? mapRun(rows[0]) : null
+    const row = rows[0]
+    return row ? mapRun(row) : null
   }
 
   return {
@@ -195,7 +198,8 @@ function createRunStore(db: Db): RunStore {
         )
         .orderBy(desc(chatRuns.startedAt))
         .limit(1)
-      return rows[0] ? mapRun(rows[0]) : null
+      const row = rows[0]
+      return row ? mapRun(row) : null
     },
     // Optional; every run for the thread, ascending by startedAt. Uses the
     // (threadId, startedAt) index.
@@ -288,7 +292,8 @@ function createInterruptStore(db: Db): InterruptStore {
         .from(chatInterrupts)
         .where(eq(chatInterrupts.interruptId, interruptId))
         .limit(1)
-      return rows[0] ? mapInterrupt(rows[0]) : null
+      const row = rows[0]
+      return row ? mapInterrupt(row) : null
     },
     list: (threadId) => listWhere(eq(chatInterrupts.threadId, threadId)),
     listPending: (threadId) =>

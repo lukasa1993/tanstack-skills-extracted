@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-debug-logging"></a>
 
-Published skill · `@tanstack/ai@1.0.0`.
+Published skill · `@tanstack/ai@1.0.1`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 

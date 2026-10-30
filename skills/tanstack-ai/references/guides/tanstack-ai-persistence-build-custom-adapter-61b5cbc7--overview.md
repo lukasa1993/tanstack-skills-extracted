@@ -1,6 +1,6 @@
 # Build Custom Adapter — Overview
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@1.0.0`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-custom-adapter-61b5cbc7.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
 
 # Custom Chat Persistence
 
@@ -10,6 +10,12 @@ has. Plus whatever DDL that database needs, added through the app's existing
 migration flow.
 
 Do not create a package, a second client, or a migration runner.
+
+**Always write all four tables (or collections) and all four stores: thread, run, interrupt,
+metadata.** The docs call `interrupts` and `metadata` optional for a
+hand-rolled adapter; this recipe is not that case. `withPersistence` needs
+all four to type-check as `ChatPersistence`, and the conformance suite fails
+without them. Do not stop at a thread table and a run table.
 
 **Route first.** If the app already runs one of these, stop and use that skill —
 it has the driver-specific code:

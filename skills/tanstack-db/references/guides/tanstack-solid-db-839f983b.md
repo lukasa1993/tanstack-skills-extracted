@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-db"></a>
 
-Published skill · `@tanstack/solid-db@0.3.12`.
+Published skill · `@tanstack/solid-db@1.0.0-rc.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -48,9 +48,12 @@ Returns an `Accessor<Array<T>>` (or `Accessor<T | undefined>` with `findOne`) wi
 // Query function — call result as function for data
 const query = useLiveQuery((q) => q.from({ todo: todoCollection }))
 // query()        → Array<T> (data)  — or T | undefined when using findOne()
-// query.data     → DEPRECATED — use query() instead. Migrate any existing code.
 // query.status   → CollectionStatus
-// query.isLoading, query.isReady, query.isError
+// query.isLoading, query.isReady
+// query.isLoadingError → the first load failed: nothing to show
+// query.isCrashed      → status 'crashed': local storage broke
+// query.isSyncError    → data is shown, but a sync problem is in health
+// query.health   → health tree: one node for the query and one per source
 // query.state    → ReactiveMap<TKey, T>
 // query.collection → Collection
 
@@ -130,11 +133,13 @@ return <Show when={userQuery()}>{(user) => <div>{user().name}</div>}</Show>
 
 `useLiveQuery` integrates with Solid's `createResource`. Use `<Suspense>` for
 loading and `<ErrorBoundary>` for errors. Reading an errored query throws
-through the resource, so do not rely on reading `isError` after failure.
+through the resource, so do not rely on reading `isLoadingError` after failure.
+After the first data, sync problems do not throw: read `isSyncError` or
+`health`. `isError` and node `phase` were removed.
 
 ## Includes (Hierarchical Data)
 
-When a query uses includes (subqueries in `select`), each child field is a live `Collection` by default. Subscribe to it with `useLiveQuery` in a subcomponent:
+When a query uses `include()` for a subquery in `select`, each child field is a live `Collection`. Subscribe to it with `useLiveQuery` in a subcomponent:
 
 ```tsx
 function ProjectList() {
@@ -142,10 +147,12 @@ function ProjectList() {
     q.from({ p: projectsCollection }).select(({ p }) => ({
       id: p.id,
       name: p.name,
-      issues: q
-        .from({ i: issuesCollection })
-        .where(({ i }) => eq(i.projectId, p.id))
-        .select(({ i }) => ({ id: i.id, title: i.title })),
+      issues: include(
+        q
+          .from({ i: issuesCollection })
+          .where(({ i }) => eq(i.projectId, p.id))
+          .select(({ i }) => ({ id: i.id, title: i.title })),
+      ),
     })),
   )
 
@@ -221,7 +228,7 @@ Solid's reactivity tracks signal reads inside reactive contexts. Reading outside
 
 Source: docs/framework/solid/overview.md
 
-### MEDIUM Using deprecated query.data instead of query()
+### MEDIUM Reading query.data instead of calling query()
 
 Wrong:
 
@@ -235,7 +242,7 @@ Correct:
 <For each={todosQuery()}>{(todo) => <li>{todo.text}</li>}</For>
 ```
 
-`query.data` is deprecated. Always use `query()` to access data. If you encounter existing code using `.data`, migrate it to the function call form.
+`query.data` has been removed. Call `query()` to access data.
 
 See also: ./tanstack-db-core-live-queries-ec3edb95.md#source-tanstack-db-core-live-queries — for query builder API.
 

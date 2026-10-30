@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/db"
-  tanstack-package-version: "0.15.2"
+  tanstack-package-version: "1.0.0-rc.1"
   tanstack-source-skill: "db-core/live-queries"
   tanstack-sources: "[\"TanStack/db:docs/guides/live-queries.md\",\"TanStack/db:packages/db/src/query/builder/index.ts\",\"TanStack/db:packages/db/src/query/compiler/index.ts\"]"
   tanstack-type: "sub-skill"
@@ -108,7 +108,7 @@ non-null value.
 Join conditions accept `eq()` or a nonempty, possibly nested `and()` of equalities (equality only -- IVM constraint). Default join type is `left`. Convenience methods: `leftJoin`, `rightJoin`, `innerJoin`, `fullJoin`.
 
 ```ts
-import { eq } from '@tanstack/db'
+import { createLiveQueryCollection, eq } from '@tanstack/db'
 
 const userPosts = createLiveQueryCollection((q) =>
   q
@@ -135,7 +135,7 @@ q.from({ user: usersCollection })
 
 ### 3. Aggregation with groupBy + having
 
-Use `groupBy` to group rows, then aggregate in `select`. Filter groups with `having`. The `$selected` namespace lets `having` and `orderBy` reference fields defined in `select`.
+Use `groupBy` to group rows, then aggregate in `select`. Filter groups with `having`. The `$selected` namespace lets `having` and `orderBy` reference fields defined in `select`. A `groupBy` with no aggregate wraps its keys in `groupKeys()`: `.groupBy(groupKeys(({ order }) => order.status))`; without it the query throws `GroupingOperatorRequiredError`. A `groupKeys()` built outside `.groupBy()` takes the context as a type argument, `groupKeys<ContextFromSource<{ order: typeof ordersCollection }>>(...)`; without it the callback is untyped.
 
 ```ts
 import { count, sum, gt } from '@tanstack/db'
@@ -216,8 +216,6 @@ Live query results include computed, read-only virtual properties on every row:
 - `$collectionId`: the source collection ID.
 
 These props are added automatically and can be used in `where`, `select`, and `orderBy` clauses. Do not persist them back to storage.
-The deprecated `$synced` alias is the inverse of `$hasPendingWrites` and will
-be removed in the 1.0 RC.
 
 ## Includes (Subqueries in Select)
 
@@ -225,29 +223,31 @@ Embed a correlated subquery inside `select()` to produce hierarchical (nested)
 data. The subquery must contain a `where` with an `eq()` that correlates a
 parent field with a child field.
 
-### Collection includes (default)
+### Collection includes with include()
 
 Return a child `Collection` on each parent row:
 
 ```ts
-import { eq, createLiveQueryCollection } from '@tanstack/db'
+import { createLiveQueryCollection, eq, include } from '@tanstack/db'
 
 const projectsWithIssues = createLiveQueryCollection((q) =>
   q.from({ p: projectsCollection }).select(({ p }) => ({
     id: p.id,
     name: p.name,
-    issues: q
-      .from({ i: issuesCollection })
-      .where(({ i }) => eq(i.projectId, p.id))
-      .select(({ i }) => ({
-        id: i.id,
-        title: i.title,
-      })),
+    issues: include(
+      q
+        .from({ i: issuesCollection })
+        .where(({ i }) => eq(i.projectId, p.id))
+        .select(({ i }) => ({
+          id: i.id,
+          title: i.title,
+        })),
+    ),
   })),
 )
 
 // Each row's `issues` is a live Collection
-for (const project of projectsWithIssues) {
+for (const project of projectsWithIssues.toArray) {
   console.log(project.name, project.issues.toArray)
 }
 ```
@@ -332,7 +332,7 @@ const messagesWithContent = createLiveQueryCollection((q) =>
   Like `toArray()`, it must be a top-level value in `select()` and cannot be
   nested inside `coalesce()`, `eq()`, or another expression.
 - `concat(toArray())` requires a **scalar** `select` to concatenate into a string.
-- Collection includes (bare subquery) require an **object** `select`.
+- Collection includes (`include(subquery)`) require an **object** `select`. A bare subquery in `select` throws `IncludeOperatorRequiredError`.
 - Includes subqueries are compiled into the same incremental pipeline as the parent query -- they are not separate live queries.
 
 ## One-Shot Queries with queryOnce

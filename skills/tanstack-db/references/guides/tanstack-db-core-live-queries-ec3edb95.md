@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-live-queries"></a>
 
-Published skill · `@tanstack/db@0.15.2`.
+Published skill · `@tanstack/db@1.0.0-rc.1`.
 
 [Topic index](../live-queries.md) · [Source provenance](../SOURCES.md)
 
@@ -31,7 +31,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="4-standalone-derived-collection-with-createlivequerycollection"></a>
 <a id="virtual-properties"></a>
 <a id="includes-subqueries-in-select"></a>
-<a id="collection-includes-default"></a>
+<a id="collection-includes-with-include"></a>
 <a id="array-includes-with-toarray"></a>
 <a id="plain-values-with-materialize"></a>
 <a id="concatenated-scalar-with-concattoarray"></a>

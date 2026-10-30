@@ -1,6 +1,6 @@
 # Devtools Production — @tanstack/devtools-webmcp root import
 
-[Guide and prerequisites](./tanstack-devtools-production-258b04dd.md) · Published skill · `@tanstack/devtools@0.15.0`.
+[Guide and prerequisites](./tanstack-devtools-production-258b04dd.md) · Published skill · `@tanstack/devtools@0.16.0`.
 
 ## @tanstack/devtools-webmcp root import
 

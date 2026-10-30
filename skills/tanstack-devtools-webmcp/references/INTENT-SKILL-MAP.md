@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/devtools-webmcp@0.0.2
+Published package: @tanstack/devtools-webmcp@0.0.3
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

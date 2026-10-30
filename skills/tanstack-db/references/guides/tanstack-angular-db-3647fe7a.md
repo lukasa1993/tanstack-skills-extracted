@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-db"></a>
 
-Published skill · `@tanstack/angular-db@0.2.12`.
+Published skill · `@tanstack/angular-db@1.0.0-rc.1`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -56,7 +56,11 @@ Returns an object with Angular `Signal<T>` properties — call with `()` in temp
 const query = injectLiveQuery((q) => q.from({ todo: todoCollection }))
 // query.data()       → Array<T>
 // query.status()     → CollectionStatus | 'disabled'
-// query.isLoading(), query.isReady(), query.isError()
+// query.isLoading(), query.isReady()
+// query.isLoadingError() → the first load failed: nothing to show
+// query.isCrashed()      → status 'crashed': local storage broke
+// query.isSyncError()    → data is shown, but a sync problem is in health
+// query.health()     → health tree: one node for the query and one per source
 // query.isIdle(), query.isCleanedUp()  (seldom used)
 // query.state()      → Map<TKey, T>
 // query.collection() → Collection | null
@@ -178,7 +182,7 @@ Angular 16 structural directives:
 
 ## Includes (Hierarchical Data)
 
-When a query uses includes (subqueries in `select`), each child field is a live `Collection` by default. Subscribe to it with `injectLiveQuery` in a child component:
+When a query uses `include()` for a subquery in `select`, each child field is a live `Collection`. Subscribe to it with `injectLiveQuery` in a child component:
 
 ```typescript
 @Component({
@@ -199,10 +203,12 @@ export class ProjectListComponent {
     q.from({ p: projectsCollection }).select(({ p }) => ({
       id: p.id,
       name: p.name,
-      issues: q
-        .from({ i: issuesCollection })
-        .where(({ i }) => eq(i.projectId, p.id))
-        .select(({ i }) => ({ id: i.id, title: i.title })),
+      issues: include(
+        q
+          .from({ i: issuesCollection })
+          .where(({ i }) => eq(i.projectId, p.id))
+          .select(({ i }) => ({ id: i.id, title: i.title })),
+      ),
     })),
   )
 }

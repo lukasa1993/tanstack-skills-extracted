@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools-webmcp"
   tanstack-library-version: "0.0.1"
   tanstack-package: "@tanstack/devtools-webmcp"
-  tanstack-package-version: "0.0.2"
+  tanstack-package-version: "0.0.3"
   tanstack-source-skill: "devtools-webmcp"
   tanstack-sources: "[\"docs/webmcp-tools.md\",\"docs/production.md\"]"
   tanstack-type: "core"

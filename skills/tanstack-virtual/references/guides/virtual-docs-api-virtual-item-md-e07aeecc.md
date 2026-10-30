@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-api-virtual-item-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.8`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.9`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
