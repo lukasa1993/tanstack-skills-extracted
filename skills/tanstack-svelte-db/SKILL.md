@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/svelte-db"
-  tanstack-package-version: "1.0.0-rc.1"
+  tanstack-package-version: "1.0.0-rc.1.1"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "svelte-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/svelte/overview.md\",\"TanStack/db:packages/svelte-db/src/useLiveQuery.svelte.ts\"]"

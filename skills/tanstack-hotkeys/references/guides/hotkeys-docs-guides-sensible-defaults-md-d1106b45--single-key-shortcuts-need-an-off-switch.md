@@ -1,6 +1,6 @@
 # Sensible Defaults — Single-key shortcuts need an off switch
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 ## Single-key shortcuts need an off switch
 

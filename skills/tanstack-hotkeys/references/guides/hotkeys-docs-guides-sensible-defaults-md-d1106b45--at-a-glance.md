@@ -1,6 +1,6 @@
 # Sensible Defaults — At a glance
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 ## At a glance
 
@@ -16,6 +16,6 @@
 | Where listeners attach | `document` | `target` |
 | When hotkeys run | After the keyboard handlers of widgets inside the target (bubble phase) | `capture` |
 | Time between sequence steps | 1 second | `timeout` |
-| Duplicate registrations | Allowed, with a console warning | `conflictBehavior` |
+| Duplicate registrations | Allowed, with a console warning in development | `conflictBehavior` |
 | Recording | Records key positions; Escape cancels | `recordBy`, recorder options |
 | Display | Symbols on macOS (`⇧ ⌘ S`), text elsewhere (`Ctrl+Shift+S`) | `formatForDisplay` options |

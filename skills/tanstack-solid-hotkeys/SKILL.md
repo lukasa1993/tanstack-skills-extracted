@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/solid-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/solid-hotkeys"
-  tanstack-package-version: "0.17.0"
+  tanstack-package-version: "0.18.0"
   tanstack-purpose: "Solid bindings for TanStack Hotkeys: primitives, accessors, providers, and the Solid-specific reactivity mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "solid-hotkeys"

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -32,17 +32,25 @@ Each framework package re-exports everything from the core `@tanstack/hotkeys` p
 
 # React
 
+Use React 18 or newer. The hooks and `HotkeysProvider` are client components, so a server component such as a Next.js `app/layout.tsx` can render `HotkeysProvider` directly.
+
 Start with the [Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md) guide. If you want the integrated devtools panel, also install:
 
 # Preact
+
+Use Preact 10.5.2 or newer. TypeScript with `"moduleResolution": "bundler"` needs Preact 10.7.2 or newer.
 
 Start with the [Quick Start](./hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md#source-hotkeys-docs-framework-preact-quick-start-md) guide and the Preact-specific [guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). If you want the integrated devtools panel, also install:
 
 # Solid
 
+Use Solid 1.7 or newer within version 1. The devtools panel needs Solid 1.9.15 or newer.
+
 Start with the [Quick Start](./hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md#source-hotkeys-docs-framework-solid-quick-start-md) guide and the Solid-specific [guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). If you want the integrated devtools panel, also install:
 
 # Angular
+
+Use Angular 19 or newer.
 
 Start with the [Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md) guide and the Angular-specific [guides](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md).
 
@@ -50,15 +58,21 @@ The integrated devtools panel requires Angular 21 or newer. To use it, also inst
 
 # Vue
 
+Use Vue 3.3 or newer.
+
 Start with the [Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md) guide and the Vue-specific [guides](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md).
 
 If you want the Vue devtools panel component, also install:
 
 # Svelte
 
+Use Svelte 5.40 or newer within version 5.
+
 Start with the [Quick Start](./hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md#source-hotkeys-docs-framework-svelte-quick-start-md) guide and the Svelte-specific [guides](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md). If you want the integrated devtools panel, also install:
 
 # Lit
+
+Use Lit 3 or newer.
 
 Start with the [Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md) guide and the Lit-specific [guides](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md).
 
@@ -66,19 +80,19 @@ Lit currently ships the hotkeys adapter only, so no dedicated Lit devtools packa
 
 # Alpine
 
-Use Alpine 3.15.12 or newer within version 3. Install the optional `hotkeysPlugin` before `Alpine.start()`, or create a scope explicitly.
+Use Alpine 3.13 or newer within version 3. Install `hotkeysPlugin` with `Alpine.plugin(hotkeysPlugin)` before `Alpine.start()`, so the adapter uses your Alpine instance.
 
 Start with the [Quick Start](./hotkeys-docs-framework-alpine-quick-start-md-3845b066.md#source-hotkeys-docs-framework-alpine-quick-start-md), then follow the [guides](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md). The package includes the hotkeys adapter; a dedicated Alpine devtools adapter is not provided.
 
 # Ember
 
-Use Ember 6.8 or newer. Register hotkeys with imported template helpers in strict-mode `.gts` components. Pass the component as owner to state readers and recorders.
+Use Ember 6.8.3 or newer, except 6.9.0 and 6.10.0. The adapter works in Vite (Embroider) apps and in classic ember-cli apps that use ember-auto-import. Register hotkeys with imported template helpers in strict-mode `.gts` components. Pass the component as owner to state readers and recorders.
 
 Start with the [Quick Start](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#source-hotkeys-docs-framework-ember-quick-start-md), then follow the [guides](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md). The package includes the hotkeys adapter; a dedicated Ember devtools adapter is not provided.
 
 # Octane
 
-Use Octane 0.1.36 or newer within version 0.1, with compiler-enabled `.tsrx` components. The Octane adapter requires Node.js 22.22.2 or newer when used in Node.js.
+Use Octane 0.12 or newer, with compiler-enabled `.tsrx` components. The Octane adapter requires Node.js 22.22.2 or newer when used in Node.js.
 
 Start with the [Quick Start](./hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md#source-hotkeys-docs-framework-octane-quick-start-md), then follow the [guides](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#source-hotkeys-docs-framework-octane-guides-hotkeys-md). The package includes the hotkeys adapter; a dedicated Octane devtools adapter is not provided.
 

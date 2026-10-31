@@ -1,6 +1,6 @@
 # Sensible Defaults — Hotkeys that can't fire leave the key alone
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 ## Hotkeys that can't fire leave the key alone
 

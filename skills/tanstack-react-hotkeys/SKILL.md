@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/react-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/react-hotkeys"
-  tanstack-package-version: "0.17.0"
+  tanstack-package-version: "0.19.0"
   tanstack-purpose: "React bindings for TanStack Hotkeys: hooks, providers, refs, and the React-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "react-hotkeys"
@@ -56,7 +56,7 @@ export function SaveButton({ onSave }: { onSave: () => void }) {
 
 The package also re-exports `@tanstack/hotkeys`, such as `formatForDisplay`, `matchesKeyboardEvent`, and `defineAppHotkeys`.
 
-No provider is required. In React Server Components frameworks, use the hooks and `HotkeysProvider` in client components.
+No provider is required. In React Server Components frameworks, call the hooks from client components. The package marks `HotkeysProvider` as a client component, so a server layout can render it without a `'use client'` wrapper.
 
 ## A dialog that owns the keyboard
 

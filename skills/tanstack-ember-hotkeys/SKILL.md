@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/ember-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/ember-hotkeys"
-  tanstack-package-version: "0.6.0"
+  tanstack-package-version: "0.7.0"
   tanstack-purpose: "Ember bindings for TanStack Hotkeys: template helpers, element modifiers, owner-bound state readers, manager-activated scopes, and the Ember-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "ember-hotkeys"
@@ -64,7 +64,7 @@ export default class Editor extends Component {
 
 The package also re-exports `@tanstack/hotkeys`, such as `formatForDisplay`, `matchesKeyboardEvent`, and `defineAppHotkeys`.
 
-The helpers are template helpers, not JavaScript functions. State readers take the component as their owner, and their state is read through `.value`, or `.hotkeys` for registrations. Use Ember 6.8 or newer and strict-mode `.gts` components.
+The helpers are template helpers, not JavaScript functions. State readers take the component as their owner, and their state is read through `.value`, or `.hotkeys` for registrations. Use Ember 6.8.3 or newer, except 6.9.0 and 6.10.0, and strict-mode `.gts` components.
 
 ## Pitfalls
 

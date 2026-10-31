@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -17,7 +17,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Register multiple hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--enable-and-disable-hotkeys.md) — 3 KiB
 - [Hotkey targets](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-targets.md) — 3 KiB
-- [Handle duplicate hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--handle-duplicate-hotkeys.md) — 1 KiB
+- [Handle duplicate hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--handle-duplicate-hotkeys.md) — 2 KiB
 - [Describe hotkeys with `meta`](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--describe-hotkeys-with-meta.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->

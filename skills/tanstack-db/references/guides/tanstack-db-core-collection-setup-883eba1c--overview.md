@@ -1,6 +1,6 @@
 # Collection Setup — Overview
 
-[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@1.0.0-rc.1`.
+[Guide and prerequisites](./tanstack-db-core-collection-setup-883eba1c.md) · Published skill · `@tanstack/db@1.0.0-rc.1.1`.
 
 This skill builds on db-core. Read it first for the overall mental model.
 

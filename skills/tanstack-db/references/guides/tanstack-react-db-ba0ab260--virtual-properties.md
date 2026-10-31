@@ -1,6 +1,6 @@
 # React Db — Virtual Properties
 
-[Guide and prerequisites](./tanstack-react-db-ba0ab260.md) · Published skill · `@tanstack/react-db@1.0.0-rc.1`.
+[Guide and prerequisites](./tanstack-react-db-ba0ab260.md) · Published skill · `@tanstack/react-db@1.0.0-rc.1.1`.
 
 ## Virtual Properties
 

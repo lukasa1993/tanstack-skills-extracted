@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-devtools-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -26,6 +26,8 @@ The Hotkeys devtools panel lets you:
 
 Install the TanStack Devtools host package and the Hotkeys devtools adapter for your framework.
 
+The adapters need a current TanStack Devtools host, such as `@tanstack/react-devtools` 0.10.14 or newer. Older hosts pass the plugin a theme string instead of props, so the panel ignores the theme and TypeScript rejects the plugin. Both libraries are in beta, so upgrade them together.
+
 <!-- ::start:framework -->
 
 # React
@@ -41,6 +43,8 @@ npm install @tanstack/preact-devtools @tanstack/preact-hotkeys-devtools
 ```
 
 # Solid
+
+Requires Solid 1.9.15 or newer within version 1.
 
 ```sh
 npm install @tanstack/solid-devtools @tanstack/solid-hotkeys-devtools
@@ -62,7 +66,7 @@ npm install @tanstack/vue-hotkeys-devtools
 
 # Svelte
 
-Requires Svelte 5.25 or newer within version 5.
+Requires Svelte 5.40 or newer within version 5.
 
 ```sh
 npm install @tanstack/svelte-devtools @tanstack/svelte-hotkeys-devtools

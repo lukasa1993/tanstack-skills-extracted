@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -131,6 +131,10 @@ useHotkey('Mod+S', () => save(), { enabled: hasUnsavedChanges })
 ```
 
 When a group of hotkeys turns on and off together, put them in a scope instead. See [Add providers and scopes](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#add-providers-and-scopes-optional).
+
+The composables also work outside a component, in an `effectScope`, such as a shared composable or a module-level store. Their hotkeys unregister when the scope stops.
+
+During server rendering, the composables return the current state and register nothing, so they are safe to call in Nuxt and other SSR apps.
 
 ## Element hotkeys
 

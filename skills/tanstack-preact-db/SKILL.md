@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "db"
   tanstack-library-version: "0.6.17"
   tanstack-package: "@tanstack/preact-db"
-  tanstack-package-version: "1.0.0-rc.1"
+  tanstack-package-version: "1.0.0-rc.1.1"
   tanstack-requires: "[\"tanstack-db-core\"]"
   tanstack-source-skill: "preact-db"
   tanstack-sources: "[\"TanStack/db:docs/framework/preact/overview.md\",\"TanStack/db:packages/preact-db/src/useLiveQuery.ts\",\"TanStack/db:packages/preact-db/src/useLiveInfiniteQuery.ts\"]"

@@ -1,6 +1,6 @@
 # Sensible Defaults — Focused controls keep their own keys
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 ## Focused controls keep their own keys
 
@@ -8,7 +8,12 @@ Buttons, links, and ARIA widgets also use keys for themselves. A hotkey bound to
 
 | Focused control | Keys it keeps |
 | --- | --- |
-| `<button>`, button-type inputs, `<summary>`, `role="button"` | Enter, Space |
+| `<button>`, button-type, image, color, and file inputs, `<summary>`, `role="button"` | Enter, Space |
+| Checkbox inputs | Space |
+| Radio inputs | Arrow keys, Space |
+| Range inputs | Arrow keys, Home, End, Page Up, Page Down |
+| Read-only text inputs | Left, Right, Home, End |
+| Read-only textareas | Arrow keys, Home, End, Page Up, Page Down |
 | Links with an `href`, `role="link"` | Enter |
 | `role="checkbox"`, `"switch"`, `"radio"` | Space |
 | `role="tab"`, `"option"`, `"treeitem"`, `"menuitem"` (and its checkbox and radio forms) | Enter, Space |

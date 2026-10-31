@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/svelte-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/svelte-hotkeys"
-  tanstack-package-version: "0.17.0"
+  tanstack-package-version: "0.18.0"
   tanstack-purpose: "Svelte 5 bindings for TanStack Hotkeys: getters, attachments, providers, and the Svelte-specific reactivity mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "svelte-hotkeys"

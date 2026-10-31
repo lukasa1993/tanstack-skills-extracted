@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-svelte-hotkeys"></a>
 
-Published skill · `@tanstack/svelte-hotkeys@0.17.0`.
+Published skill · `@tanstack/svelte-hotkeys@0.18.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

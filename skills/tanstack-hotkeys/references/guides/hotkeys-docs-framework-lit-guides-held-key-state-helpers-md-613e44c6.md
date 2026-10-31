@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -30,6 +30,8 @@ class KeyDisplay extends LitElement {
 }
 ```
 
+To label each held key the way hotkeys are labeled, pass it to `formatForDisplay` as `{ key }`: `Shift` becomes `⇧` on macOS and `Escape` becomes `Esc`. Held keys come from the browser and can be outside the key types, which the `{ key }` form accepts.
+
 ## Check whether a key is held
 
 `KeyHoldController` tracks whether one key is held. It updates the element only when that key is pressed or released:
@@ -54,6 +56,8 @@ class FileItem extends LitElement {
   }
 }
 ```
+
+To track a key that changes, pass a getter, such as `new KeyHoldController(this, () => this.key)`. The controller reads it again on each update.
 
 ## Tell left and right modifiers apart
 
@@ -107,4 +111,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [held-keys example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/lit/held-keys) shows held keys and their codes, and the [key-hold example](https://github.com/TanStack/hotkeys/tree/41f06c51a38fac64409a3d4932cc8958f558ae57/examples/lit/key-hold) shows modifier indicators.
+The [held-keys example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/lit/held-keys) shows held keys and their codes, and the [key-hold example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/lit/key-hold) shows modifier indicators.

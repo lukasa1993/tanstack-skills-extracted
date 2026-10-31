@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/octane-hotkeys"
   tanstack-library-version: "0.5.0"
   tanstack-package: "@tanstack/octane-hotkeys"
-  tanstack-package-version: "0.7.0"
+  tanstack-package-version: "0.8.0"
   tanstack-purpose: "Octane bindings for TanStack Hotkeys: hooks in compiler-enabled .tsrx components, element targets, providers, and the Octane-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "octane-hotkeys"

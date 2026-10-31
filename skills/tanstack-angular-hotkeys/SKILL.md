@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/angular-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/angular-hotkeys"
-  tanstack-package-version: "0.17.0"
+  tanstack-package-version: "0.18.0"
   tanstack-purpose: "Angular bindings for TanStack Hotkeys: inject functions, signal-driven options, provideHotkeys scopes, and the Angular-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "angular-hotkeys"

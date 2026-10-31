@@ -1,6 +1,6 @@
 # Sensible Defaults — Chords fire on keydown and repeat while held
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.18.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
 
 ## Chords fire on keydown and repeat while held
 

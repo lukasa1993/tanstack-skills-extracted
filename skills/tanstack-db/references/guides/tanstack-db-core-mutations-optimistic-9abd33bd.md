@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-db-core-mutations-optimistic"></a>
 
-Published skill · `@tanstack/db@1.0.0-rc.1`.
+Published skill · `@tanstack/db@1.0.0-rc.1.1`.
 
 [Topic index](../mutations.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ember-hotkeys"></a>
 
-Published skill · `@tanstack/ember-hotkeys@0.6.0`.
+Published skill · `@tanstack/ember-hotkeys@0.7.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -56,7 +56,7 @@ export default class Editor extends Component {
 
 The package also re-exports `@tanstack/hotkeys`, such as `formatForDisplay`, `matchesKeyboardEvent`, and `defineAppHotkeys`.
 
-The helpers are template helpers, not JavaScript functions. State readers take the component as their owner, and their state is read through `.value`, or `.hotkeys` for registrations. Use Ember 6.8 or newer and strict-mode `.gts` components.
+The helpers are template helpers, not JavaScript functions. State readers take the component as their owner, and their state is read through `.value`, or `.hotkeys` for registrations. Use Ember 6.8.3 or newer, except 6.9.0 and 6.10.0, and strict-mode `.gts` components.
 
 ## Pitfalls
 
