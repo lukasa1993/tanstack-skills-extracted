@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--register-a-hotkey.md) — 5 KiB
+- [Register a hotkey](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--register-a-hotkey.md) — 6 KiB
 - [Hotkey options](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--enable-and-disable-hotkeys.md) — 3 KiB
@@ -23,6 +23,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <!-- Original source anchors retained for inbound links. -->
 <a id="chords-and-sequences"></a>
 <a id="register-a-hotkey"></a>
+<a id="optional-hotkeys"></a>
 <a id="write-a-chord-as-a-string-or-an-object"></a>
 <a id="hotkey-options"></a>
 <a id="chord-and-sequence-options"></a>

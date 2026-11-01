@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -223,4 +223,4 @@ useHotkeys(() => [
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/vue/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/vue/kitchen-sink) has a shortcut list built from live registrations.

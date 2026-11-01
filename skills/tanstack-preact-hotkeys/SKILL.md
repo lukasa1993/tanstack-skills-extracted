@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/preact-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/preact-hotkeys"
-  tanstack-package-version: "0.18.0"
+  tanstack-package-version: "0.19.1"
   tanstack-purpose: "Preact bindings for TanStack Hotkeys: hooks, providers, refs, and the Preact-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "preact-hotkeys"
@@ -92,7 +92,7 @@ A hook uses the nearest `HotkeysProvider` above its component. Registering `Esca
 
 ## Pitfalls
 
-- **Pass the ref, not `ref.current`.** `target: listRef.current` is `null` on the first render, and a `null` target means `document`, so the hotkey works page-wide. Pass `target: listRef`; a ref that is still empty waits for its element.
+- **Pass the ref, not `ref.current`.** `target: listRef.current` is `null` on the first render, and a `null` target registers nothing, so the hotkey doesn't work until the component renders again. Pass `target: listRef`; a ref that is still empty waits for its element.
 - **No dependency arrays or `useCallback`.** The hooks read the hotkey, callback, and options on every render, so inline callbacks always see current state.
 - **Call the hooks directly.** A `useShortcut(keys: string)` wrapper has to cast strings to hotkeys, which turns off type checking and drops sequences, options, app hotkeys, and the typed callback context.
 - **In tests,** set `<HotkeysProvider defaultOptions={{ hotkey: { platform: 'mac' } }}>`.

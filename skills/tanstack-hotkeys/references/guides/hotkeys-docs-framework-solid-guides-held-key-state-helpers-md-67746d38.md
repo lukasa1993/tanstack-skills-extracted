@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -100,4 +100,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [createHeldKeys example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/solid/createHeldKeys) shows held keys and their codes, and the [createKeyHold example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/solid/createKeyHold) shows modifier indicators.
+The [createHeldKeys example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/solid/createHeldKeys) shows held keys and their codes, and the [createKeyHold example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/solid/createKeyHold) shows modifier indicators.

@@ -2,37 +2,35 @@
 
 <a id="source-query-docs-framework-lit-installation-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.31`.
+Release-matched documentation · `@tanstack/lit-query@0.2.32`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
 > IMPORTANT: The Lit adapter is currently experimental and v0.1. Pin exact versions if you need extra release stability while the API is early.
 
-Install Lit Query with Lit and TanStack Query Core:
+Install Lit Query:
 
 ```sh
-npm i @tanstack/lit-query @tanstack/query-core lit
+npm i @tanstack/lit-query
 ```
 
 or
 
 ```sh
-pnpm add @tanstack/lit-query @tanstack/query-core lit
+pnpm add @tanstack/lit-query
 ```
 
 or
 
 ```sh
-yarn add @tanstack/lit-query @tanstack/query-core lit
+yarn add @tanstack/lit-query
 ```
 
 or
 
 ```sh
-bun add @tanstack/lit-query @tanstack/query-core lit
+bun add @tanstack/lit-query
 ```
-
-`@tanstack/query-core` is a peer dependency of `@tanstack/lit-query`. Even though the Lit docs import user-facing APIs from `@tanstack/lit-query`, your app should install `@tanstack/query-core` explicitly.
 
 ## Requirements
 
@@ -109,7 +107,7 @@ class AppRoot extends LitElement {
 }
 ```
 
-If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
+If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/a6be1cede9b69b56ee0bd6c84641dd3899c86ed2/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
 
 ## Render Roots
 

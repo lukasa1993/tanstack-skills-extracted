@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -23,6 +23,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <!-- Original source anchors retained for inbound links. -->
 <a id="chords-and-sequences"></a>
 <a id="register-a-hotkey"></a>
+<a id="optional-hotkeys"></a>
 <a id="write-a-chord-as-a-string-or-an-object"></a>
 <a id="hotkey-options"></a>
 <a id="chord-and-sequence-options"></a>

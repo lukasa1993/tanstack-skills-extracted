@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -185,7 +185,7 @@ Alpine.data('panel', () => ({
 </div>
 ```
 
-A `null` target waits until the element exists. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
+`$refs` holds elements that exist when `init()` runs. For an element that Alpine adds later, such as one inside `x-if`, keep the element in component state and return it from the getter. A `null` target waits until the element exists. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
 
 ## Add defaults and scopes (optional)
 

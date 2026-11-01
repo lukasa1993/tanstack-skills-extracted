@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -248,6 +248,6 @@ export default class ShortcutSettings extends Component {
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, create them from `createHotkeysScope`, such as `createHotkeysScope({ hotkeyRecorder: { idleTimeoutMs: 2000 } }).useHotkeyRecorder(this, options)`. The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/docs/framework/ember/reference/functions/useHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, create them from `createHotkeysScope`, such as `createHotkeysScope({ hotkeyRecorder: { idleTimeoutMs: 2000 } }).useHotkeyRecorder(this, options)`. The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/e56edd6b54a755f8bc9a34243d3a497c56560840/docs/framework/ember/reference/functions/useHotkeyRecorder.md) lists the types.
 
-The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/ember/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/5d9d8332ef4fa70cdcb00bb84f43b4a1ada9df02/examples/ember/useHotkeyRecorder-sequences) records sequences.
+The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/ember/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/ember/useHotkeyRecorder-sequences) records sequences.

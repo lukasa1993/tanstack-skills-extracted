@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-overview-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.105.0`.
+Release-matched documentation · `@tanstack/solid-query@5.105.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 ## Hotkey targets
 
@@ -25,6 +25,8 @@ function Panel() {
 
 > [!NOTE]
 > An element receives key presses only while it, or something inside it, has focus. Give it a `tabIndex` if it isn't focusable already.
+
+A `null` target, or a ref whose `current` is still `null`, registers nothing until the element exists. To listen on `document`, omit `target`.
 
 While focus is inside the element, its hotkeys run before hotkeys on `document`. With the default `stopPropagation: true`, a `document` hotkey for the same key doesn't run at all. A sequence with a target advances only on key presses inside the target.
 

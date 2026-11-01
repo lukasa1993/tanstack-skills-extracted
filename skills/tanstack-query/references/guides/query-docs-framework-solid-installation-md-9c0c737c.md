@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-installation-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.105.0`.
+Release-matched documentation · `@tanstack/solid-query@5.105.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -36,7 +36,7 @@ bun add @tanstack/solid-query
 
 Solid Query is compatible with Solid v1.6+.
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/solid/simple/README.md) or [basic](https://github.com/TanStack/query/blob/5cc606e2e84b6feb86a2284a984ba2d3ef1643c8/examples/solid/basic/README.md) examples!
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/a6be1cede9b69b56ee0bd6c84641dd3899c86ed2/examples/solid/simple/README.md) or [basic](https://github.com/TanStack/query/blob/a6be1cede9b69b56ee0bd6c84641dd3899c86ed2/examples/solid/basic/README.md) examples!
 
 ### CDN
 

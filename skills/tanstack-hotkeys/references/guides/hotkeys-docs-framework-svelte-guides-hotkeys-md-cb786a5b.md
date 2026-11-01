@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.20.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--register-a-hotkey.md) — 4 KiB
+- [Register a hotkey](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--register-a-hotkey.md) — 5 KiB
 - [Hotkey options](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--enable-and-disable-hotkeys.md) — 3 KiB
@@ -23,6 +23,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <!-- Original source anchors retained for inbound links. -->
 <a id="chords-and-sequences"></a>
 <a id="register-a-hotkey"></a>
+<a id="optional-hotkeys"></a>
 <a id="write-a-chord-as-a-string-or-an-object"></a>
 <a id="hotkey-options"></a>
 <a id="chord-and-sequence-options"></a>

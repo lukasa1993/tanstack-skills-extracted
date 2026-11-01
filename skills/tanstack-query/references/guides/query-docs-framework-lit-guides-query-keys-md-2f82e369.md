@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-guides-query-keys-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.31`.
+Release-matched documentation · `@tanstack/lit-query@0.2.32`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 

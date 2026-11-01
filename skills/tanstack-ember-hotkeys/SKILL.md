@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/ember-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/ember-hotkeys"
-  tanstack-package-version: "0.7.0"
+  tanstack-package-version: "0.8.1"
   tanstack-purpose: "Ember bindings for TanStack Hotkeys: template helpers, element modifiers, owner-bound state readers, manager-activated scopes, and the Ember-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "ember-hotkeys"

@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/alpine-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/alpine-hotkeys"
-  tanstack-package-version: "0.8.0"
+  tanstack-package-version: "0.9.1"
   tanstack-purpose: "Alpine bindings for TanStack Hotkeys: per-component owners, the $hotkeys magic, getter options, manager-activated scopes, and the Alpine-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "alpine-hotkeys"

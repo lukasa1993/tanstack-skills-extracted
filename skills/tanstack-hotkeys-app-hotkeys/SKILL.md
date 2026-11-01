@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/hotkeys"
-  tanstack-package-version: "0.20.0"
+  tanstack-package-version: "0.22.0"
   tanstack-purpose: "Declare every shortcut once with defineAppHotkeys, then build cheat sheets, rebinding, conflict checks, and persistence from those declarations instead of a parallel shortcut registry."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "app-hotkeys"
@@ -35,12 +35,11 @@ export const appHotkeys = defineAppHotkeys({
 })
 ```
 
-Augment `Register` in the adapter module you import from, such as `declare module '@tanstack/react-hotkeys' { interface Register { appHotkeys: typeof appHotkeys } }`, to type ids. Lit, Alpine, and Ember have no provider: call `provideAppHotkeys(appHotkeys, options)` once at startup.
+Augment `Register` in the adapter module you import from, such as `declare module '@tanstack/react-hotkeys' { interface Register { appHotkeys: typeof appHotkeys } }`, to type ids. Lit, Alpine, and Ember have no provider: call `provideAppHotkeys(appHotkeys, options)` once at startup. Pass saved data that loads later to `store.setOptions({ customHotkeys })` on the returned store; providers apply a changed `customHotkeys` prop themselves. `undefined` leaves custom hotkeys unchanged while data loads; `null` clears them, such as on sign-out.
 
 ## Pitfalls
 
 - **Register the app hotkey, not its value.** Pass `appHotkeys['doc.save']`. Passing `.hotkey` registers the declared default, so the user's rebinding never applies, and the list reports the shortcut as `'inactive'`.
-- **The provider reads `customHotkeys` once.** When saved shortcuts load asynchronously, render the provider after they arrive, or key it by user. Change shortcuts afterwards through the adapter's custom hotkeys API, not by updating the prop.
 - **Save what `onCustomHotkeysChange` receives.** It holds only the shortcuts the user changed, so users still get new defaults. Saving every effective hotkey freezes today's defaults into their data.
 - **Ids are a storage contract.** Saved data is keyed by id, and unknown ids are dropped with a warning, so renaming an id discards users' customizations.
 - **`setCustomHotkey` returns conflicts and changes nothing when there are any.** Check the result before reporting success, or reject the key press earlier by calling `findConflicts` in the recorder's `validate`.

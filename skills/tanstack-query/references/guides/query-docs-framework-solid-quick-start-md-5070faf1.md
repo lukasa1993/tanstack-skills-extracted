@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.105.0`.
+Release-matched documentation · `@tanstack/solid-query@5.105.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -215,6 +215,6 @@ function App() {
 ```
 
 - Errors can be caught and reset using SolidJS' native `ErrorBoundary` component.
-  Set `throwOnError` or the `suspense` option to `true` to make sure errors are thrown to the `ErrorBoundary`
+  Set `throwOnError` to `true` to make sure errors are thrown to the `ErrorBoundary`
 
 - Since Property tracking is handled through Solid's fine grained reactivity, options like `notifyOnChangeProps` are not needed
