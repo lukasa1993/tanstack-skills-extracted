@@ -1,6 +1,6 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 ## Register multiple hotkeys
 
@@ -63,7 +63,7 @@ export class RichTextEditorComponent {
         { hotkey: 'Mod+I', callback: () => this.toggleItalic() },
         { hotkey: 'Mod+Z', callback: () => this.undo(), options: { enabled: this.canUndo() } },
       ],
-      () => ({ target: this.editor()?.nativeElement ?? null }),
+      { target: this.editor },
     )
   }
 }

@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-chat-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.9`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.10`.
 
 [Topic index](../measurement-feeds.md) · [Source provenance](../SOURCES.md)
 
@@ -23,7 +23,7 @@ const virtualizer = useVirtualizer({
 })
 ```
 
-See the full [React chat example](https://github.com/TanStack/virtual/blob/51b06cd5e078a289fe1cbf25a8d2e647aa98bfff/examples/react/chat/README.md).
+See the full [React chat example](https://github.com/TanStack/virtual/blob/0a368c76950610227af7a5d3695e53877f9ad914/examples/react/chat/README.md).
 
 ## Behaviors
 

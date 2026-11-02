@@ -1,6 +1,6 @@
 # Hotkeys — Enable and disable hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 ## Enable and disable hotkeys
 
@@ -24,25 +24,18 @@ class SettingsDialog extends LitElement {
 For a condition that doesn't match an element, pass `enabled` from a `HotkeyController` options function:
 
 ```ts
-constructor() {
-  super()
-  this.addController(
-    new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
-      enabled: this.hasUnsavedChanges,
-    })),
-  )
-}
+private saveHotkey = new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
+  enabled: this.hasUnsavedChanges,
+}))
 ```
 
 A disabled hotkey stays registered, and changing `enabled` doesn't register it again. While disabled, it ignores key presses, so pressing `Mod+S` opens the browser's Save dialog. To keep the dialog closed, set `preventDefault: 'always'`:
 
 ```ts
-this.addController(
-  new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
-    enabled: this.hasUnsavedChanges,
-    preventDefault: 'always',
-  })),
-)
+private saveHotkey = new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
+  enabled: this.hasUnsavedChanges,
+  preventDefault: 'always',
+}))
 ```
 
 With `'always'`, a hotkey that can't fire, because it's disabled or its scope is inactive or suspended, still prevents the browser's action. It doesn't stop propagation, and when another hotkey handles the key, that hotkey's options apply instead. Sequences treat `'always'` as `true`. To apply it to several hotkeys, put it in a [shared options object](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#share-options). We recommend it for most hotkeys, but not for hotkeys you turn off to hand the key back to the browser, such as `Mod+C` or `Tab`. See [Hotkeys that can't fire leave the key alone](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).

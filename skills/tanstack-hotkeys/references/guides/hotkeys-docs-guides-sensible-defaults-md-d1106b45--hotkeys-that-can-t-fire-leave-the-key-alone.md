@@ -1,6 +1,6 @@
 # Sensible Defaults — Hotkeys that can't fire leave the key alone
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 ## Hotkeys that can't fire leave the key alone
 
@@ -19,6 +19,6 @@ It isn't the default because turning a hotkey off is often how an app hands a ke
 
 - **Editing and clipboard shortcuts.** A grid that enables `Mod+C`, `Mod+A`, or `Mod+Z` only while cells are selected blocks native copy, select all, and undo the rest of the time. `Mod` chords fire in text fields by default, so this includes undo while typing.
 - **Single keys behind an [off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#single-key-shortcuts-need-an-off-switch).** When a user turns off single-key shortcuts, `Space` and the arrow keys still don't scroll, and `/` still doesn't open Firefox's quick find.
-- **Focus and native dialogs.** A disabled `Tab` hotkey keeps focus from moving off buttons and links, and a disabled `Escape` hotkey stops a native `<dialog>` from closing.
+- **Focus.** A disabled `Tab` hotkey keeps focus from moving off buttons and links.
 
 If you set `'always'` in shared defaults, set `preventDefault: true` on hotkeys like these, so the browser takes over while they're off.

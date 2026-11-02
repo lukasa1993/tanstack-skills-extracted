@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 ## Hotkey targets
 
@@ -16,15 +16,10 @@ import { HotkeyController } from '@tanstack/lit-hotkeys'
 class MyPanel extends LitElement {
   private panel = createRef<HTMLDivElement>()
 
-  constructor() {
-    super()
-    // Fires only while the panel, or something inside it, has focus
-    this.addController(
-      new HotkeyController(this, 'Escape', () => this.closePanel(), () => ({
-        target: this.panel.value ?? null,
-      })),
-    )
-  }
+  // Fires only while the panel, or something inside it, has focus
+  private closeHotkey = new HotkeyController(this, 'Escape', () => this.closePanel(), () => ({
+    target: this.panel.value ?? null,
+  }))
 
   render() {
     return html`<div ${ref(this.panel)} tabindex="0">Panel content</div>`
@@ -33,6 +28,10 @@ class MyPanel extends LitElement {
 ```
 
 A `null` target waits until the element renders.
+
+The controller reads the options function when its element connects and after each of its element's updates. Render the target in the controller's own element, as above, so each render that adds or replaces the target also updates the hotkey.
+
+When another element renders the target, such as a child that shows it from its own state, the controller's element doesn't update, so the hotkey keeps the old target or none. Either keep the element in a reactive property, for example set from an event the child dispatches, or call `this.requestUpdate()` on the controller's element after the target changes. You can also register the hotkey in the child with its own `HotkeyController`.
 
 > [!NOTE]
 > An element receives key presses only while it, or something inside it, has focus. Give it a `tabindex` if it isn't focusable already.

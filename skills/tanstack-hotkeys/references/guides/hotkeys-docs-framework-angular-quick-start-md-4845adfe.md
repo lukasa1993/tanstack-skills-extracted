@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -32,6 +32,8 @@ export class EditorComponent {
 ```
 
 Call it in an injection context, such as a constructor or a field initializer.
+
+In apps that use zone.js, hotkeys listen outside the Angular zone, so typing doesn't run change detection on every key. Callbacks run inside the zone, so the view updates after a hotkey fires.
 
 `Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
 
@@ -112,6 +114,8 @@ export class SaveButtonComponent {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
+If your app renders on the server, such as with Angular SSR or Analog, use `injectFormatForDisplay` instead, and set the `platform` in `provideHotkeys` from the request, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md).
+
 ## Hotkeys follow your components
 
 A hotkey is registered when the component that injects it is created, and unregistered when that component is destroyed. Put each hotkey in the component it belongs to, so it is active only while that component exists:
@@ -175,14 +179,12 @@ export class PanelComponent {
 
   constructor() {
     // Fires only while the panel, or something inside it, has focus
-    injectHotkey('Escape', () => this.closePanel(), () => ({
-      target: this.panel()?.nativeElement ?? null,
-    }))
+    injectHotkey('Escape', () => this.closePanel(), { target: this.panel })
   }
 }
 ```
 
-A `null` target waits until the element is rendered. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
+The hotkey registers once the element renders. The hotkey fires while focus is on the element or inside it. If nothing there can take focus, give the element a `tabindex`.
 
 ## Add providers and scopes (optional)
 

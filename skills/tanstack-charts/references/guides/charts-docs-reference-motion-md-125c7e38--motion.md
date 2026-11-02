@@ -1,8 +1,12 @@
 # Motion — `motion`
 
-[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
+[Guide and prerequisites](./charts-docs-reference-motion-md-125c7e38.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 ## `motion`
+
+For a smaller renderer with whole-chart fade entrance and basic keyed SVG
+updates, use [`motionLite`](./charts-docs-reference-motion-md-125c7e38.md#motionlite). Keep `motion()` for springs,
+definition-local timing, rolling paths, and animated interaction geometry.
 
 ```ts
 import { motion } from '@tanstack/charts/motion'
@@ -45,12 +49,22 @@ Set `initial: 'always'` when a hydrated chart should replay the same entrance
 as a client-only mount. Keyed updates start from painted geometry. An
 interrupted spring carries its sampled value and velocity into the new target.
 A spring has no duration; it finishes when both `restSpeed` and `restDelta` are
-satisfied, with a 10-second safety limit.
+satisfied, with a 10-second safety limit. Their defaults are `0.01` value units
+per second and `0.005` value units, respectively. These are absolute thresholds,
+not percentages of the distance traveled. A pixel-coordinate track uses pixels
+and pixels per second; opacity and normalized path-progress tracks use their
+own numeric units. Larger thresholds let a spring settle sooner.
 
 Initial choreography follows geometry: Cartesian bars and paths grow from
 their semantic baseline, radial lines and areas grow from the polar center,
 and arcs sweep through their authored angle. Keyed removals stay painted
 through their exit transition.
+
+With the default `resize: false`, a real size change during entrance or data
+motion cancels that animation and paints the final scene at the new size.
+Use `resize: true` to animate the resized scene from the currently painted
+geometry. A size notification that does not change the chart's dimensions does
+not interrupt its entrance.
 
 Data-less `crosshair` marks use the same keyed focus-motion path. Rapid pointer
 or keyboard retargeting preserves the guide elements and incoming spring

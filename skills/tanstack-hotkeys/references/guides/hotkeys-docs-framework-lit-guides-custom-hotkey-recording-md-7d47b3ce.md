@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -202,11 +202,9 @@ class ShortcutSettings extends LitElement {
 
   constructor() {
     super()
-    // Register each action with its current hotkey
+    // Register each action with its current hotkey. Each controller adds itself.
     for (const action of ['save', 'undo', 'search'] as const) {
-      this.addController(
-        new HotkeyController(this, () => this.shortcuts[action], () => this.run(action)),
-      )
+      new HotkeyController(this, () => this.shortcuts[action], () => this.run(action))
     }
   }
 
@@ -251,6 +249,6 @@ class ShortcutSettings extends LitElement {
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-Lit has no provider, so set recorder options on each controller. The [`HotkeyRecorderController` reference](https://github.com/TanStack/hotkeys/blob/e56edd6b54a755f8bc9a34243d3a497c56560840/docs/framework/lit/reference/classes/HotkeyRecorderController.md) lists the types.
+Lit has no provider, so set recorder options on each controller. The [`HotkeyRecorderController` reference](https://github.com/TanStack/hotkeys/blob/24f618ff48e83d4dabd039860ee41408326800aa/docs/framework/lit/reference/classes/HotkeyRecorderController.md) lists the types.
 
-The [hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/lit/hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/e56edd6b54a755f8bc9a34243d3a497c56560840/examples/lit/hotkey-recorder-sequences) records sequences.
+The [hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/lit/hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/lit/hotkey-recorder-sequences) records sequences.

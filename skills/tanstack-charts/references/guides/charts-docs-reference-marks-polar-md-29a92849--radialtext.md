@@ -1,6 +1,6 @@
 # Polar — `radialText`
 
-[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 ## `radialText`
 

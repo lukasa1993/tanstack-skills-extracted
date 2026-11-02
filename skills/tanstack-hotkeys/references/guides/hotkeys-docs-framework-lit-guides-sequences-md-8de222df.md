@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -132,6 +132,16 @@ deleteInnerWord() {}
 ```
 
 Sharing first steps isn't a duplicate, so TanStack Hotkeys doesn't warn. Two sequences with all the same steps are duplicates. See [Handle duplicate hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md).
+
+### A sequence that starts a longer one
+
+When one sequence is the start of another, such as `['G', 'G']` and `['G', 'G', 'G']`, the shorter one doesn't wait to see whether the user is typing the longer one. It runs as soon as its last key is pressed:
+
+- The second G runs `['G', 'G']`.
+- The third G runs `['G', 'G', 'G']`. The user gets both actions.
+- A fourth G runs `['G', 'G']` again, because each sequence tracks its own progress.
+
+TanStack Hotkeys doesn't warn about this. Choose sequences where neither one starts the other, such as `['G', 'G']` and `['G', 'B']`. [App hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md) report these pairs as conflicts, and so does the [hotkey recorder](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md#source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md) with `detectConflicts` on.
 
 ### Sequences and chords on the same key
 

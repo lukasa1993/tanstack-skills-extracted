@@ -1137,7 +1137,7 @@
       "repository": "TanStack/pacer",
       "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
       "sourcePath": "docs/overview.md",
-      "sha256": "d0e4d13fcace2d10983823c096b74e51587fcc43ba454539eb774c1a8bffd3b5",
+      "sha256": "9ecbb1fad624dc3205ea10eb595f48a7dbb6fcd3bcc4e2c6eda0761750664da1",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
         "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2"
@@ -3694,8 +3694,7 @@
       "localDocuments": 757,
       "localAssets": 0,
       "pinnedRepository": 155,
-      "pinnedExternalRepository": 0,
-      "externalRepositoryPins": [],
+      "externalRepositoryReferences": [],
       "unavailableAssets": []
     }
   }

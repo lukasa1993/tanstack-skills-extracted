@@ -114,7 +114,7 @@
       "repository": "TanStack/config",
       "commit": "64b9024002980574af45c82b663891ce0c0bdc30",
       "sourcePath": "docs/publish.md",
-      "sha256": "1c5287e530cab6afcdc8206e39b1a5456e64a50a2efb540e8d83bd38c74471e7",
+      "sha256": "9e130dda6173b87c05d179dba8972e648b8513d17a82018f5983fcf1819ddad2",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
         "64b9024002980574af45c82b663891ce0c0bdc30",
@@ -162,21 +162,11 @@
       "localDocuments": 6,
       "localAssets": 1,
       "pinnedRepository": 1,
-      "pinnedExternalRepository": 1,
-      "externalRepositoryPins": [
+      "externalRepositoryReferences": [
         {
           "sourcePath": "docs/publish.md",
-          "originalUrl": "https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md",
-          "repository": "sxzz/userscripts",
-          "defaultBranch": "main",
-          "commit": "f54258a122c0fe5c09b6b8826800c00ac9b46e6e",
-          "targetPath": "src/npm-trusted-publisher.md",
-          "pinnedUrl": "https://github.com/sxzz/userscripts/blob/f54258a122c0fe5c09b6b8826800c00ac9b46e6e/src/npm-trusted-publisher.md",
-          "repositoryApiUrl": "https://api.github.com/repos/sxzz/userscripts",
-          "commitApiUrl": "https://api.github.com/repos/sxzz/userscripts/commits?sha=main&path=src%2Fnpm-trusted-publisher.md&per_page=1",
-          "contentUrl": "https://raw.githubusercontent.com/sxzz/userscripts/f54258a122c0fe5c09b6b8826800c00ac9b46e6e/src/npm-trusted-publisher.md",
-          "contentSha256": "2aa20d7ec513d969b10bb188fe209d474e305362af297182e45a3c04b4490d5f",
-          "occurrences": 1
+          "url": "https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md",
+          "repository": "sxzz/userscripts"
         }
       ],
       "unavailableAssets": []

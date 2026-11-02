@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -30,9 +30,11 @@ class MyEditor extends LitElement {
 }
 ```
 
-`@hotkey` is a legacy TypeScript decorator, so set `experimentalDecorators: true` and `useDefineForClassFields: false` in your `tsconfig.json`. Without it, use [`HotkeyController`](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#hotkeys-follow-your-elements) instead.
-
 `Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
+
+`@hotkey` works with standard decorators and with TypeScript's legacy decorators (`experimentalDecorators: true`), and needs no other setup.
+
+Lit's own decorators have their own rules. With standard decorators, declare `@property` and `@state` fields with the `accessor` keyword. With legacy decorators, set `useDefineForClassFields: false`. The examples here use legacy decorators. See Lit's [decorators guide](https://lit.dev/docs/components/decorators/).
 
 That's all a hotkey needs. Controllers, scopes, and the other features later in this guide are optional, so add them as your app grows.
 
@@ -120,6 +122,8 @@ class SaveButton extends LitElement {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
+If your app renders on the server with Lit SSR, pass the user's `platform` to `formatForDisplay`, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md).
+
 ## Hotkeys follow your elements
 
 A hotkey is registered when its element connects to the document, and unregistered when the element disconnects. Put each hotkey on the element it belongs to, so it is active only while that element is connected:
@@ -170,18 +174,13 @@ import { HotkeyController } from '@tanstack/lit-hotkeys'
 class MyEditor extends LitElement {
   @state() private hasUnsavedChanges = false
 
-  constructor() {
-    super()
-    this.addController(
-      new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
-        enabled: this.hasUnsavedChanges,
-      })),
-    )
-  }
+  private saveHotkey = new HotkeyController(this, 'Mod+S', () => this.save(), () => ({
+    enabled: this.hasUnsavedChanges,
+  }))
 }
 ```
 
-The controller reads the function again after each update, so keep the values it reads in reactive properties.
+A controller adds itself to the element you pass, so a class field is enough. It reads the function again after each update, so keep the values it reads in reactive properties.
 
 When a group of hotkeys turns on and off together, put them in a scope instead. See [Add scopes](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#add-scopes-optional).
 
@@ -201,15 +200,10 @@ import { HotkeyController } from '@tanstack/lit-hotkeys'
 class MyPanel extends LitElement {
   private panel = createRef<HTMLDivElement>()
 
-  constructor() {
-    super()
-    // Fires only while the panel, or something inside it, has focus
-    this.addController(
-      new HotkeyController(this, 'Escape', () => this.closePanel(), () => ({
-        target: this.panel.value ?? null,
-      })),
-    )
-  }
+  // Fires only while the panel, or something inside it, has focus
+  private closeHotkey = new HotkeyController(this, 'Escape', () => this.closePanel(), () => ({
+    target: this.panel.value ?? null,
+  }))
 
   render() {
     return html`<div ${ref(this.panel)} tabindex="0">...</div>`
@@ -217,7 +211,7 @@ class MyPanel extends LitElement {
 }
 ```
 
-A `null` target waits until the element renders. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
+A `null` target waits until the element renders. The controller reads the target after each update of its own element, so render the target in that element. See [Hotkey targets](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md) for a target that another element renders. The hotkey fires while focus is on the element or inside it. If nothing there can take focus, give the element a `tabindex`.
 
 ## Add scopes (optional)
 

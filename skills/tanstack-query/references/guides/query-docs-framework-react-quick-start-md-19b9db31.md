@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.105.1`.
+Release-matched documentation · `@tanstack/react-query@5.105.2`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -10,11 +10,11 @@ This code snippet very briefly illustrates the 3 core concepts of React Query:
 
 - [Queries](./query-docs-framework-react-guides-queries-md-4c7087b8.md#source-query-docs-framework-react-guides-queries-md)
 - [Mutations](./query-docs-framework-react-guides-mutations-md-38ec4d80.md#source-query-docs-framework-react-guides-mutations-md)
-- [Query Invalidation](https://github.com/TanStack/query/blob/a6be1cede9b69b56ee0bd6c84641dd3899c86ed2/docs/framework/react/guides/query-invalidation.md)
+- [Query Invalidation](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/docs/framework/react/guides/query-invalidation.md)
 
 [//]: # 'Example'
 
-If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/a6be1cede9b69b56ee0bd6c84641dd3899c86ed2/examples/react/simple/README.md)
+If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/examples/react/simple/README.md)
 
 ```tsx
 import {

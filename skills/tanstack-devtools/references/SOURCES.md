@@ -1,5 +1,7 @@
 # Source provenance
 
+Imported material is tied to the versions and commits below. Outbound links to other repositories are preserved as upstream references; their contents are not part of this release snapshot and may change independently.
+
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
 | `tanstack-devtools-app-setup` | atomic | `setup-production` | `@tanstack/devtools` | `0.16.0` |  |

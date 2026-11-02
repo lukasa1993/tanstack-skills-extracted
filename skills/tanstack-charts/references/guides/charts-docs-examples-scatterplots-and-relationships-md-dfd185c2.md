@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-scatterplots-and-relationships-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.1.0`.
+Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 [Topic index](../examples-core.md) · [Source provenance](../SOURCES.md)
 

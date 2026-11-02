@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -23,6 +23,8 @@ function Editor() @{
 ```
 
 Write hook calls in compiler-enabled `.tsrx` components. The Octane compiler tracks hooks by call site, so call them at the top level of the component, not in loops or conditions.
+
+A custom hook in a plain `.ts` or `.js` file needs the compiler too. Start the file with `/** @jsxImportSource octane */`, or import a value such as `useState` from `octane`. Otherwise every such call to the same hook in a component shares one slot, and only the last one works. See [Custom hooks](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#source-hotkeys-docs-framework-octane-guides-hotkeys-md).
 
 `Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
 
@@ -89,6 +91,8 @@ function SaveButton() @{
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
+If your app renders on the server, such as with TanStack Start or Astro, use `useFormatForDisplay` instead, and set the provider's `platform` from the request, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md#source-hotkeys-docs-framework-octane-guides-formatting-display-md).
+
 ## Hotkeys follow your components
 
 A hotkey is registered when the component that calls the hook mounts, and unregistered when that component unmounts. Put each hotkey in the component it belongs to, so it is active only while that component is mounted:
@@ -140,7 +144,7 @@ function Panel() @{
 }
 ```
 
-A target must be an element, not a ref object. A `null` target waits until the element mounts. The element must be focusable to receive key presses, so give it a `tabIndex` if it isn't a control.
+A target must be an element, not a ref object. A `null` target waits until the element mounts. The hotkey fires while focus is on the element or inside it. If nothing there can take focus, give the element a `tabIndex`.
 
 ## Add providers and scopes (optional)
 

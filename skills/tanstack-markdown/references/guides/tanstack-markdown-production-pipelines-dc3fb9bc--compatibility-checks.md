@@ -1,6 +1,6 @@
 # Production Pipelines — Compatibility Checks
 
-[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@1.0.0`.
+[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@1.1.1`.
 
 ## Compatibility Checks
 

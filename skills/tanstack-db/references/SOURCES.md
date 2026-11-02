@@ -1,5 +1,7 @@
 # Source provenance
 
+Imported material is tied to the versions and commits below. Outbound links to other repositories are preserved as upstream references; their contents are not part of this release snapshot and may change independently.
+
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
 | `tanstack-db-core` | atomic | `foundations` | `@tanstack/db` | `1.0.0-rc.1.1` |  |

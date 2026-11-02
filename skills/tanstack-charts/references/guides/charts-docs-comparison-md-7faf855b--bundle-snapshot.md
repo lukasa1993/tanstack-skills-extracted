@@ -1,10 +1,10 @@
 # Comparison — Bundle snapshot
 
-[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
+[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 ## Bundle snapshot
 
-Baseline date: `2026-10-08`.
+Baseline date: `2026-10-14`.
 
 Controlled ranges cover 12 independently built, minified browser consumers:
 line, bar, area, and scatter at basic, interactive, and advanced tiers. Only

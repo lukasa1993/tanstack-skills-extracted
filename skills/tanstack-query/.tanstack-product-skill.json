@@ -2,7 +2,7 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-query",
   "product": "query",
-  "sourceCount": 79,
+  "sourceCount": 82,
   "themes": [
     "framework-react",
     "framework-preact",
@@ -19,7 +19,7 @@
     "offline-integrations",
     "quality"
   ],
-  "guideCount": 79,
+  "guideCount": 82,
   "largestGuideEntryBytes": 7793,
-  "inputSha256": "0ed7d3c10cf8bfc460c46cc9ffcb0a84051c143aa90c8e0205d8594bb782d5a3"
+  "inputSha256": "cfad97e180b62019e4df6a3784efc2a8160f2820f69a3ca96e4fe1bf6a10ada3"
 }

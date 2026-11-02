@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-framework-tick-labels-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.1.0`.
+Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 

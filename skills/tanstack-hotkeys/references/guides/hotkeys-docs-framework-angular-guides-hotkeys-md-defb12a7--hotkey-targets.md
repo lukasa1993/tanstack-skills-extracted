@@ -1,10 +1,10 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 ## Hotkey targets
 
-A hotkey listens on `document` by default, so it works wherever focus is on the page. Set `target` to an element, `document`, or `window` to listen somewhere else. Read the element with `viewChild`, and pass the options as a function:
+A hotkey listens on `document` by default, so it works wherever focus is on the page. Set `target` to an element, an `ElementRef`, `document`, or `window` to listen somewhere else. To listen on an element in the template, pass its `viewChild` signal:
 
 ```ts
 import { Component, ElementRef, viewChild } from '@angular/core'
@@ -19,14 +19,12 @@ export class PanelComponent {
 
   constructor() {
     // Fires only while the panel, or something inside it, has focus
-    injectHotkey('Escape', () => this.closePanel(), () => ({
-      target: this.panel()?.nativeElement ?? null,
-    }))
+    injectHotkey('Escape', () => this.closePanel(), { target: this.panel })
   }
 }
 ```
 
-A `null` target waits until the element is rendered.
+The hotkey reads the signal, so it registers once the element renders and moves if the element changes. A `null` target, or a signal of `undefined`, registers nothing until the element exists.
 
 > [!NOTE]
 > An element receives key presses only while it, or something inside it, has focus. Give it a `tabindex` if it isn't focusable already.

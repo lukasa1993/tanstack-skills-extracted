@@ -58,7 +58,7 @@ Trusted publishing is the new npm strategy to allow publishing packages without 
 
 - If you're only setting up one package, you can skip this step. Otherwise, the tools below help dramatically when setting up 5+ packages all at once.
 - [open-packages-on-npm](https://github.com/antfu/open-packages-on-npm)
-- [sxzz's userscript](https://github.com/sxzz/userscripts/blob/f54258a122c0fe5c09b6b8826800c00ac9b46e6e/src/npm-trusted-publisher.md)
+- [sxzz's userscript](https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md)
 
 ### Step 3
 

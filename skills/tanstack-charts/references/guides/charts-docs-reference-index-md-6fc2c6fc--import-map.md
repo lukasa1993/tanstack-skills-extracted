@@ -1,6 +1,6 @@
 # Index — Import map
 
-[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
+[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 ## Import map
 
@@ -78,6 +78,7 @@ aggregate `/scales` export.
 | `@tanstack/charts/mark/scale-values`    | `createMarkWithScaleValues`                                                                                                                                                                                                     |
 | `@tanstack/charts/motion`               | `motion`, `stagger`, `ChartMotionOptions`, and renderer-neutral motion types                                                                                                                                                    |
 | `@tanstack/charts/motion/definition`    | Isolated `stagger` and `ChartMotionStaggerOptions` without the renderer or spring solver                                                                                                                                        |
+| `@tanstack/charts/motion/lite`          | `motionLite` and `ChartMotionLiteOptions` for whole-chart fade entrance and basic keyed SVG updates                                                                                                                             |
 | `@tanstack/charts/network/force`        | `forceLayout`, built-in descriptors, named D3-compatible force factories, private working-clone context, settled node/link result, and lineage types                                                                            |
 | `@tanstack/charts/network/sankey`       | `sankeyDiagram`, shorthand and callable alignment types, responsive layout options, immutable node/link values, comparator contexts, and lineage types                                                                          |
 | `@tanstack/charts/polar`                | `pie`, `polar`, `focusGroupAngle`, `radialArc`, `radialBarRadius`, `radialBarAngle`, other radial marks, and radial/angle guides                                                                                                |

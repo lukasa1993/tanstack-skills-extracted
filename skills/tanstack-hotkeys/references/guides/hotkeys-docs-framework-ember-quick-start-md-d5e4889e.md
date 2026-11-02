@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -103,6 +103,8 @@ export default class SaveButton extends Component {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
+If your app renders on the server with FastBoot, use `useFormatForDisplay` with a scope's `platform` instead, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md).
+
 ## Hotkeys follow your components
 
 A hotkey is registered when its helper renders, and unregistered when the helper is removed from the template. Put each hotkey in the component it belongs to, so it is active only while that component is rendered:
@@ -172,7 +174,7 @@ export default class Panel extends Component {
 }
 ```
 
-`onHotkeys` does the same for an array of hotkeys. The element must be focusable to receive key presses, so give it a `tabindex` if it isn't a control.
+`onHotkeys` does the same for an array of hotkeys. The hotkey fires while focus is on the element or inside it. If nothing there can take focus, give the element a `tabindex`.
 
 ## Add defaults and scopes (optional)
 

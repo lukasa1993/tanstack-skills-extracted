@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-scales-guides-and-color-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.1.0`.
+Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 [Topic index](../runtime-scales-reference.md) · [Source provenance](../SOURCES.md)
 

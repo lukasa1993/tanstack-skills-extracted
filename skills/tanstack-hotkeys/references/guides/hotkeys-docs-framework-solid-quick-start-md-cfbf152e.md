@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -89,6 +89,8 @@ function SaveButton() {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
+If your app renders on the server, such as with SolidStart or TanStack Start, use `createFormatForDisplay` instead, and set the provider's `platform` from the request, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
+
 ## Hotkeys follow your components
 
 A hotkey is registered when the component that creates it renders, and removed when that component is disposed. Put each hotkey in the component it belongs to, so it is active only while that component is rendered:
@@ -147,7 +149,22 @@ function Panel() {
 }
 ```
 
-A `null` target waits until the element is attached. The element must be focusable to receive key presses, so give it a `tabIndex` if it isn't a control.
+A `null` target waits until the element is attached. The hotkey fires while focus is on the element or inside it. If nothing there can take focus, give the element a `tabIndex`.
+
+Solid doesn't clear a ref when the element is removed, so the signal keeps a removed element. For an element inside `<Show>` or `<For>`, register the hotkey in the element's `ref` callback instead:
+
+```tsx
+<Show when={open()}>
+  <div
+    ref={(el) => createHotkey('Escape', () => closePanel(), { target: el })}
+    tabIndex={0}
+  >
+    ...
+  </div>
+</Show>
+```
+
+The callback runs each time the element is created, and the hotkey unregisters when the element is removed.
 
 ## Add providers and scopes (optional)
 

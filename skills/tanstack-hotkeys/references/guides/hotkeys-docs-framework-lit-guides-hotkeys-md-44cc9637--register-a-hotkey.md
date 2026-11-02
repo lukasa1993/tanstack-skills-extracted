@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 ## Register a hotkey
 
@@ -34,7 +34,7 @@ save(event: KeyboardEvent, context: HotkeyChordCallbackContext) {
 }
 ```
 
-The method runs with the element as `this`, so it reads the element's current properties.
+The method runs with the element as `this`, so it reads the element's current properties. The decorator looks the method up each time the hotkey fires, so a subclass that overrides it runs the override. `@hotkey` works with standard and legacy decorators. With standard decorators, it also works on `#private` methods.
 
 Decorator arguments are fixed when the class is defined. When the hotkey or its options change, use `HotkeyController` and pass them as functions. The controller reads them when the element connects and after each update. When only the options change, it updates the existing registration. When the hotkey or its `target` changes, it replaces the registration:
 
@@ -49,17 +49,12 @@ class MyEditor extends LitElement {
   @property({ attribute: false }) saveHotkey: Hotkey = 'Mod+S'
   @property({ type: Boolean }) readOnly = false
 
-  constructor() {
-    super()
-    this.addController(
-      new HotkeyController(
-        this,
-        () => this.saveHotkey,
-        () => this.save(),
-        () => ({ enabled: !this.readOnly }),
-      ),
-    )
-  }
+  private saveController = new HotkeyController(
+    this,
+    () => this.saveHotkey,
+    () => this.save(),
+    () => ({ enabled: !this.readOnly }),
+  )
 
   save() {
     saveDocument()
@@ -111,16 +106,11 @@ saveAs() {}
 @hotkey({ code: 'KeyW' }) // Same as '[KeyW]'
 moveUp() {}
 
-constructor() {
-  super()
-  this.addController(
-    new HotkeyController(
-      this,
-      () => ({ key: this.binding.key, mod: this.binding.mod, shift: this.binding.shift }),
-      () => this.runAction(),
-    ),
-  )
-}
+private actionHotkey = new HotkeyController(
+  this,
+  () => ({ key: this.binding.key, mod: this.binding.mod, shift: this.binding.shift }),
+  () => this.runAction(),
+)
 ```
 
 Sequence steps can be strings, objects, or a mix:

@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.105.1`.
+Release-matched documentation · `@tanstack/vue-query@5.105.2`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -94,5 +94,10 @@ createApp(App).use(VueQueryPlugin, vueQueryOptions).mount('#app')
 ```
 
 [//]: # 'Example11'
+[//]: # 'OfflineExampleLink'
+
+We also have an extensive [offline example](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/examples/vue/offline-vue-router/README.md) that covers both queries and mutations.
+
+[//]: # 'OfflineExampleLink'
 [//]: # 'Materials'
 [//]: # 'Materials'

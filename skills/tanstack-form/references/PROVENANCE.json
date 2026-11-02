@@ -57,7 +57,7 @@
       "repository": "TanStack/form",
       "commit": "b865ef335a69aa08a2f160895258f13e03773467",
       "sourcePath": "docs/overview.md",
-      "sha256": "a0160c9f8a413d670c6c756dda8655375ce8eb8c15d01300c9fb6cbd97779ee6",
+      "sha256": "164d460696358c3d292395e80a371b935a8b7aad38e770f1ffdc53456fddfdf7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
         "b865ef335a69aa08a2f160895258f13e03773467"
@@ -1338,8 +1338,7 @@
       "localDocuments": 40,
       "localAssets": 24,
       "pinnedRepository": 1,
-      "pinnedExternalRepository": 0,
-      "externalRepositoryPins": [],
+      "externalRepositoryReferences": [],
       "unavailableAssets": [
         {
           "document": "docs/framework/svelte/guides/form-composition.md",

@@ -1,6 +1,6 @@
 # Rendering And Export — Custom renderers
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.1.0`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
 
 ## Custom renderers
 
@@ -115,6 +115,10 @@ interface ChartRenderContext<
 | `subscribePresentationPoints()` | Notify the host as presentation geometry advances so focus and tooltips remain aligned                                         |
 | `paintFocus()`                  | Paint or clear authored focus layers and guides, then optionally return the destination scene used for subsequent pointer hits |
 | `destroy()`                     | Release renderer-owned animation, observers, listeners, and resources                                                          |
+
+Presentation-point subscriptions track temporary interaction geometry, not
+completion of every animation layer. See [Observing motion and styling SVG](./charts-docs-reference-motion-md-125c7e38.md#source-charts-docs-reference-motion-md)
+for scene-settling semantics, cancellation, and the limits of renderer DOM hooks.
 
 ### Rectangle geometry helpers
 

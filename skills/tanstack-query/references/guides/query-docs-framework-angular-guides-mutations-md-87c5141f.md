@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.105.1`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.105.2`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -264,5 +264,7 @@ queryClient.resumePausedMutations()
 [//]: # 'Example10'
 [//]: # 'Example11'
 [//]: # 'Example11'
+[//]: # 'OfflineExampleLink'
+[//]: # 'OfflineExampleLink'
 [//]: # 'Materials'
 [//]: # 'Materials'

@@ -3,23 +3,13 @@
   "requests": {
     "https://api.github.com/repos/TanStack/query/pulls/10879": {
       "status": 200,
-      "sha256": "41c8f6c54cd4f5e0f8591da18b8ac4eafa8e3bcd0dcd9be2603d756b172474c8",
+      "sha256": "2fde19e39bb2a316b21bd5ee26b17889c56b570c1e8c92d2e3486d978e98593e",
       "bytes": 17127
     },
-    "https://api.github.com/repos/sxzz/userscripts": {
+    "https://codeload.github.com/TanStack/charts/tar.gz/d9bf5efa206afbdde10696e806b453bd1e6653bf": {
       "status": 200,
-      "sha256": "913eeddaf7886b23e8ee01afb50a65368254de22a3de2dee0d23423d4d44e0ec",
-      "bytes": 5108
-    },
-    "https://api.github.com/repos/sxzz/userscripts/commits?sha=main&path=src%2Fnpm-trusted-publisher.md&per_page=1": {
-      "status": 200,
-      "sha256": "51e9c92d88a9ee835bdd785bb308b7dd42de586fd05eaab5228cd29cecd83911",
-      "bytes": 3744
-    },
-    "https://codeload.github.com/TanStack/charts/tar.gz/57774e14a1a86081eddb3a23523724a40da05640": {
-      "status": 200,
-      "sha256": "5a6d7e3c8241b59a6e6e88bc5a4bb367c86147763bb328ac44df35320d4cfca1",
-      "bytes": 7061841
+      "sha256": "3aace82fc46754af2a1e820a8dcadd69d18c60d31488301c6ef75f6e10890d4d",
+      "bytes": 7085962
     },
     "https://codeload.github.com/TanStack/config/tar.gz/64b9024002980574af45c82b663891ce0c0bdc30": {
       "status": 200,
@@ -41,10 +31,10 @@
       "sha256": "4fa4e3834c7bc147d77f312b2fd163142352cb54086c51000e82df38794ecebc",
       "bytes": 1893746
     },
-    "https://codeload.github.com/TanStack/hotkeys/tar.gz/e56edd6b54a755f8bc9a34243d3a497c56560840": {
+    "https://codeload.github.com/TanStack/hotkeys/tar.gz/24f618ff48e83d4dabd039860ee41408326800aa": {
       "status": 200,
-      "sha256": "0f8389e5d985ea06bf7f65ad32932531a622b456e5134b44e00fe293e7dfe082",
-      "bytes": 1671109
+      "sha256": "1e90aee5fd628535e8d692349fc742ad358668c977c3e49fc411e7574c6a7efc",
+      "bytes": 1964317
     },
     "https://codeload.github.com/TanStack/intent/tar.gz/b9f205d69ba2bec93954508ff76281ae2178062c": {
       "status": 200,
@@ -56,30 +46,25 @@
       "sha256": "295fe256633ff13aa7e3441a3189ff878662bfcf020cc64fc47a7df057291d58",
       "bytes": 2597208
     },
-    "https://codeload.github.com/TanStack/query/tar.gz/a6be1cede9b69b56ee0bd6c84641dd3899c86ed2": {
-      "status": 200,
-      "sha256": "b01dfebf6a588325902da8620e31984ac5bc3ed93424c3fa6f7e2ab450a94a76",
-      "bytes": 20835019
-    },
     "https://codeload.github.com/TanStack/query/tar.gz/b2a99c82d38601f89c963cbde1c811c1a615950c": {
       "status": 200,
       "sha256": "bc399c2f52e2531e2909bb91dbf193711c30e43c705cbf7b615e71a2b8da47f1",
       "bytes": 19273979
+    },
+    "https://codeload.github.com/TanStack/query/tar.gz/d6b2b643f64cf29d18563d326700b61cc09fd432": {
+      "status": 200,
+      "sha256": "aff4274ceb6cd272602835dbaed97f26d88c7aab7b0e06d9f0c3e7ed97bcf3ec",
+      "bytes": 20923776
     },
     "https://codeload.github.com/TanStack/store/tar.gz/a9cf2324b4a24a8190ed7981c3be1594e0446872": {
       "status": 200,
       "sha256": "3bb02c7039231063ff3a3f462438f77e229f569f1b77795db7d7f61762dc26b7",
       "bytes": 665949
     },
-    "https://codeload.github.com/TanStack/virtual/tar.gz/51b06cd5e078a289fe1cbf25a8d2e647aa98bfff": {
+    "https://codeload.github.com/TanStack/virtual/tar.gz/0a368c76950610227af7a5d3695e53877f9ad914": {
       "status": 200,
-      "sha256": "6c68068ec151436a6aa13c741064615959a810bc4902e192c28c2448be992b32",
-      "bytes": 1419163
-    },
-    "https://raw.githubusercontent.com/sxzz/userscripts/f54258a122c0fe5c09b6b8826800c00ac9b46e6e/src/npm-trusted-publisher.md": {
-      "status": 200,
-      "sha256": "2aa20d7ec513d969b10bb188fe209d474e305362af297182e45a3c04b4490d5f",
-      "bytes": 1011
+      "sha256": "6721353f6133350a51df4d323ea8f8ef47a8760382a09760e6680c01fdf2268e",
+      "bytes": 1421753
     },
     "https://registry.npmjs.org/%40tanstack%2Factions/latest": {
       "status": 200,
@@ -483,13 +468,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Falpine-charts/latest": {
       "status": 200,
-      "sha256": "e4e9ab7af3ea168e9a5c68bf64728dc0f5c99e84999b5d65687352d4c94ce379",
+      "sha256": "734a318ab468c83ef6a5ec5cb11ac193e8b44698950437855a5e050a123b0a4d",
       "bytes": 2609
     },
     "https://registry.npmjs.org/%40tanstack%2Falpine-hotkeys/latest": {
       "status": 200,
-      "sha256": "2fb32326433eef0ee42d681a589d6bdddf0cbfb330bc3325603674205ddf8d74",
-      "bytes": 2465
+      "sha256": "c2d62ce66ac5460323219e30fc2396e9845cc823b4dd72cce733e1df5f8df081",
+      "bytes": 2470
     },
     "https://registry.npmjs.org/%40tanstack%2Falpine-pacer/latest": {
       "status": 200,
@@ -503,8 +488,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-charts/latest": {
       "status": 200,
-      "sha256": "139349573f63ac0f3454a0d2b6401e280df6ae57ed13c1412290f0a25852032c",
-      "bytes": 2904
+      "sha256": "4ace6693d59789e7594f94c8e676877ad7b59fa327dac148e29b20ef294278c5",
+      "bytes": 2905
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-db/latest": {
       "status": 200,
@@ -523,13 +508,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "1499e8f458254b59c59d548049b9d65ce00ac2be9c81f94a1031fd0756a49f00",
+      "sha256": "26e1d3fec99152e2d3d13e10bf2a7c08e0999f3c2fb0beeac60fa2776a950eec",
       "bytes": 2726
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-hotkeys/latest": {
       "status": 200,
-      "sha256": "879d38d694a3efc7244c24f6b4fb02cb69b06a15a9d3bfa2a464a7d206c3c50c",
-      "bytes": 2608
+      "sha256": "df8996f8ff369f18a79905db4290cc45c1f5796ab7328a5d7a79af8dcaba5a76",
+      "bytes": 2628
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-pacer-devtools/latest": {
       "status": 200,
@@ -553,8 +538,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-query-experimental/latest": {
       "status": 200,
-      "sha256": "30fb10aa5a68b1c6f58f689f62a368f2c61583b06e643981d942423ff2262ec0",
-      "bytes": 4824
+      "sha256": "049e22db26895742c1ec2cb2e80cfa02512c5fae16f5852e0baec1a5d47aaf85",
+      "bytes": 4825
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-query-persist-client/latest": {
       "status": 200,
@@ -583,8 +568,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-virtual/latest": {
       "status": 200,
-      "sha256": "288d561761243244c9f0e82b5e4660b686c702568c6431a44e9138b526c11c05",
-      "bytes": 2796
+      "sha256": "6ad1e5bd7d9f2d04deb89cbdbed11c6fb5d8803d5e4cdffab27b2a6ce6e5a581",
+      "bytes": 2797
     },
     "https://registry.npmjs.org/%40tanstack%2Farktype-adapter/latest": {
       "status": 200,
@@ -608,17 +593,17 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fcharts-scales/latest": {
       "status": 200,
-      "sha256": "574ba34f132658a6000ae67c44f07983db2aa7fda4ee4d2c541e4ab18b3512c1",
+      "sha256": "451af86c8c10b98f7dbe3ca3d803b26b79c7b7c4fb6fabe06c55da9f3213ce0a",
       "bytes": 2807
     },
     "https://registry.npmjs.org/%40tanstack%2Fcharts/latest": {
       "status": 200,
-      "sha256": "8f7766b28900be602adb549b7956266943b31ca18ce3f64bd87bb6ac5987795a",
-      "bytes": 14002
+      "sha256": "a181ee76a288124a8ead042a9f5d049b0eaceaafb27244435a2b5255ec60db84",
+      "bytes": 14097
     },
     "https://registry.npmjs.org/%40tanstack%2Fcli/latest": {
       "status": 200,
-      "sha256": "fd937803f68e8d9fafaf686db869914b25863c408d3b4e4528953bef50a2fc32",
+      "sha256": "26e36b7493cc54dddb6e1e526a73e6bc3a0d4adfc71593ba19d483e39ea05ff2",
       "bytes": 3010
     },
     "https://registry.npmjs.org/%40tanstack%2Fcloudflare-durable-objects-db-sqlite-persistence/latest": {
@@ -643,7 +628,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fcreate-start/latest": {
       "status": 200,
-      "sha256": "8b93b5913b2610d7961c5c17cdeb1aea59c7d4540915e2b3233f1055e642501e",
+      "sha256": "8ff3ca99e785dd81db1387bd8fea89ea13ad7768070772fe32774c45ed2d90b5",
       "bytes": 2148
     },
     "https://registry.npmjs.org/%40tanstack%2Fcreate-ui/latest": {
@@ -653,8 +638,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fcreate/latest": {
       "status": 200,
-      "sha256": "8cd4cc2c0a8562a5f1b98d1eb3392e88df8f9afbe0b51c54eee9a29b1e736d06",
-      "bytes": 3495
+      "sha256": "9c7daa2ce32fdf8d6154e8f01e0de290406ffa6b0fb201e2bd5a409e31308b04",
+      "bytes": 3510
     },
     "https://registry.npmjs.org/%40tanstack%2Fcta-cli/latest": {
       "status": 200,
@@ -828,8 +813,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fember-hotkeys/latest": {
       "status": 200,
-      "sha256": "e317f2080435498f6a28cbb9a590f8e9ab5a3c544fae6fb8144b1698c9b5ecb5",
-      "bytes": 3393
+      "sha256": "4aaebe6a30af838717324d34cd3cf5021927fa89a31787c1341a989fd2d35434",
+      "bytes": 3398
     },
     "https://registry.npmjs.org/%40tanstack%2Fember-pacer/latest": {
       "status": 200,
@@ -848,7 +833,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Feslint-plugin-query/latest": {
       "status": 200,
-      "sha256": "a45f7a51856a88f39d899824ce68532127cffb14f57310cf650f544c2e06c8d7",
+      "sha256": "48e16fa50c316682abb5356572283cc10acf743b4396404efee7c07ee1207559",
       "bytes": 4041
     },
     "https://registry.npmjs.org/%40tanstack%2Feslint-plugin-router/latest": {
@@ -878,8 +863,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fhighlight/latest": {
       "status": 200,
-      "sha256": "3db04cf384c72bb5a6b37c778d1f2e6e926935babf4cd06d2161828b6e01f51a",
-      "bytes": 4764
+      "sha256": "fcedfaea29d6c0fe9154267310d5d4be582202da6a71d5c077bf753bf155e80e",
+      "bytes": 4763
     },
     "https://registry.npmjs.org/%40tanstack%2Fhistory/latest": {
       "status": 200,
@@ -888,13 +873,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fhotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "faace2807dcfc740783c351240ccc4e74c2ed8190d79002a96a06f8145551fa8",
+      "sha256": "6c45a5862c0988737d3a0b3abccf474fe4063407682fd48b5bffa67f4f5dbbb5",
       "bytes": 2624
     },
     "https://registry.npmjs.org/%40tanstack%2Fhotkeys/latest": {
       "status": 200,
-      "sha256": "6d5d70a6864416ae94ea525b2a98a73efcf3cf9e75800a70302094768c65a8e1",
-      "bytes": 2462
+      "sha256": "5f6ee4b97e72fceadfc9e3a90814541f322a4546e9303e5616f51cb4ab5c5012",
+      "bytes": 2464
     },
     "https://registry.npmjs.org/%40tanstack%2Fintent/latest": {
       "status": 200,
@@ -903,8 +888,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-charts/latest": {
       "status": 200,
-      "sha256": "c8002da9543de4ac9a5da15d72a8fcc712db65a5abcb73e355b0eda7ea590a3b",
-      "bytes": 2571
+      "sha256": "8cf4cf24110f40eeb90ee603f2d2e6d4b4bb18fa7fefb32ddf12616485320400",
+      "bytes": 2572
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-form/latest": {
       "status": 200,
@@ -913,8 +898,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-hotkeys/latest": {
       "status": 200,
-      "sha256": "417c5f87e2892111fe5fd76c73a82c01493e1cdb9d15d4197417754248710b56",
-      "bytes": 2401
+      "sha256": "4a488cf96e427719a86922e5730b6b056b12488d087d7ae1261836b8c9c3df94",
+      "bytes": 2402
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-pacer/latest": {
       "status": 200,
@@ -923,8 +908,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-query/latest": {
       "status": 200,
-      "sha256": "150873d95c7f18e5acd3c9d7fb8475ca0887bb710ca6e4eef2e7d911ab33fbb6",
-      "bytes": 3799
+      "sha256": "40020b194019b7b77f7272277a91f17ffcf36ea353889354dae91efd162a65ac",
+      "bytes": 3798
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-store/latest": {
       "status": 200,
@@ -938,8 +923,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Flit-virtual/latest": {
       "status": 200,
-      "sha256": "5c6b3ab1a031d3b5d1342bd461a694b9485169f914fd1b207bd3f2b93167e18d",
-      "bytes": 2549
+      "sha256": "76b06671bdb99fd75cd9d70609f9a6fc8e57a0536bcbac8f4282d8e08def6073",
+      "bytes": 2550
     },
     "https://registry.npmjs.org/%40tanstack%2Floaders/latest": {
       "status": 200,
@@ -953,8 +938,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fmarkdown/latest": {
       "status": 200,
-      "sha256": "78a4dc1b754ef66999934142de2110ed0cd60c33d6fad80c4a29724213213d34",
-      "bytes": 5106
+      "sha256": "42deaeb82ceae1162ea4bb5549e02902d018a38a7ed5ea6c76be00884f2587a1",
+      "bytes": 5218
     },
     "https://registry.npmjs.org/%40tanstack%2Fmarko-store/latest": {
       "status": 200,
@@ -963,8 +948,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fmarko-virtual/latest": {
       "status": 200,
-      "sha256": "e326e8bd760682b08ac6b8873392a9313eb111d09cfba0c2c193a091bb833697",
-      "bytes": 2865
+      "sha256": "99f730d9a5237c31b19f64bec048fad73f12f96094d55bf9ef053a863865611a",
+      "bytes": 2867
     },
     "https://registry.npmjs.org/%40tanstack%2Fmatch-sorter-utils/latest": {
       "status": 200,
@@ -983,13 +968,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Foctane-charts/latest": {
       "status": 200,
-      "sha256": "0d1f910b4d9e4de4d9f5a1a755e039ff35e00f1a3a8721c44cc5a4d5734a7de0",
-      "bytes": 2947
+      "sha256": "bf5948423dc567ce6bb7e83c81ce1afaa9081a98bbfe2fe70649caff360ddce0",
+      "bytes": 2985
     },
     "https://registry.npmjs.org/%40tanstack%2Foctane-hotkeys/latest": {
       "status": 200,
-      "sha256": "043d29b7d0edf57e578f3b967d94b6d3d6c6f09edc41e3d007e1bf1c34dab5dd",
-      "bytes": 2593
+      "sha256": "66461822b3cb1fd42b36a7c797fa93a62e39bcf1e62c4a449df8e351d36380cc",
+      "bytes": 2598
     },
     "https://registry.npmjs.org/%40tanstack%2Foctane-pacer/latest": {
       "status": 200,
@@ -1058,7 +1043,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-charts/latest": {
       "status": 200,
-      "sha256": "92eeea9dac4710616d7fb00efd52643987d7eec20696d18d8951e900f50af694",
+      "sha256": "da6ecae5bb8c3a966ceee6ec90f94422c8d3aaa2a24f36c8f561a37577bef79f",
       "bytes": 2638
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-db/latest": {
@@ -1078,12 +1063,12 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "88c51e2c7ec630c2876b61e002cd763c5e1248a4c16358c046658f6feef1d771",
-      "bytes": 2701
+      "sha256": "fc1f3bf158bf7266e2ab935af4b7272b8cc6492ce25563345f9475adf30bfb1c",
+      "bytes": 2699
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-hotkeys/latest": {
       "status": 200,
-      "sha256": "b208212bf67e9db83d435d623fefc9925c1068eebea95ca0e522855e38c60354",
+      "sha256": "498e2f6691b84b0f3089ba7d77962f4dadca25cfe19844b6f925a2bc847b94d0",
       "bytes": 2503
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-pacer-devtools/latest": {
@@ -1098,18 +1083,18 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-query-devtools/latest": {
       "status": 200,
-      "sha256": "580dcd61c3ff6777ae6445f176e26baca6bf74159a019f300f3f044a56a326de",
-      "bytes": 4462
+      "sha256": "8b5f04f6e35aeb1d051f8f7be8d1506f69e430682b22c0ce2d84879dead8ee96",
+      "bytes": 4460
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-query-persist-client/latest": {
       "status": 200,
-      "sha256": "4448fb11049a7107dbafebbfa1a8939d7dd6cff629badc8af48cacd981a38b85",
+      "sha256": "cf8abdd47299c0938b2bfddd0b35b36061728d3f538e3862f394a1d37689fe20",
       "bytes": 4089
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-query/latest": {
       "status": 200,
-      "sha256": "2ac3b7f0fb56d4c7b96c5a197219162e9c1cc06f8d9ad54a1656197bb70e63b5",
-      "bytes": 4164
+      "sha256": "df343953c0c2c75064e39577cc9750fd4af6466ff3e65ed8b8270984b8657648",
+      "bytes": 4163
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-store/latest": {
       "status": 200,
@@ -1133,17 +1118,17 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-async-storage-persister/latest": {
       "status": 200,
-      "sha256": "d1ed7fed3ee932e515fc2ce7b2cad2fd8b0c59ea4efbb18ed262b0f468600ac0",
+      "sha256": "2c491f25494c21941dd3f66595433a21ab2dbd4129c8f38f6d2f9288c937eafa",
       "bytes": 3950
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-broadcast-client-experimental/latest": {
       "status": 200,
-      "sha256": "f377ded70a9434891625c5a2c963b4eba9b31d963705d9a277de23110ef73d38",
+      "sha256": "e4e0498ace926545df994fb9a14e8c6be177f8128e6f13b6744fbccec620c224",
       "bytes": 4043
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-core/latest": {
       "status": 200,
-      "sha256": "546f304ffff51f4ef81f17ed54f6b5a9db52d01b8597c6fea1cce3d4f8cf795d",
+      "sha256": "24638e39870a388f32fb3730ca29358f957ba81ba89548267f666b3e1b6082fd",
       "bytes": 3707
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-db-collection/latest": {
@@ -1153,18 +1138,18 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-devtools/latest": {
       "status": 200,
-      "sha256": "0ac013c4c17dfcbd8e8c541d593c29faf1498b8734ea7100950e11b6cf2ab6c9",
+      "sha256": "3b13cdb71b670c02c145574b4801925bae3f08a40cc67e1a8a188296c45a7be8",
       "bytes": 4203
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-persist-client-core/latest": {
       "status": 200,
-      "sha256": "fb4180be087ae4782ce4e11042aac6a26c66ab8bd6fa809e42391f02d2fca581",
+      "sha256": "a8b0b8cb57cd91f24a6999fde6023eee892f23736ce7f8a389c31fe0fc9d4dff",
       "bytes": 3901
     },
     "https://registry.npmjs.org/%40tanstack%2Fquery-sync-storage-persister/latest": {
       "status": 200,
-      "sha256": "03959f6e822642223655f0f74a49280a7b3c5ae5ca2679f6f462db5ee2a3da4b",
-      "bytes": 3943
+      "sha256": "2963a0b6d04f7b7f6aaed2fceb13aa71435089be69f6d6ef0108be9a8afae24a",
+      "bytes": 3942
     },
     "https://registry.npmjs.org/%40tanstack%2Fqwik-table/latest": {
       "status": 200,
@@ -1193,7 +1178,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-charts/latest": {
       "status": 200,
-      "sha256": "1f3653d18d697c4fb4dc3afc1cff0b0132d90cd67d9209bfbbdcfb2dd218f87b",
+      "sha256": "2ffac413168c50ced0f7f1221ca77c95045ba84c3c68b4edc0d69c4367fcc966",
       "bytes": 2874
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-cross-context/latest": {
@@ -1248,13 +1233,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "cc57c3a3c79a47142ea0b4fbeefadbaead8fe42fce3971199d35ca7313868c7d",
-      "bytes": 2952
+      "sha256": "2ec4b7e46db35a19b317cc14ca1c3b2c264dc65f0dcbdc215ac193e07205377c",
+      "bytes": 2951
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-hotkeys/latest": {
       "status": 200,
-      "sha256": "8182c1706640ef9f1fb9dff68780fefaf62346b2400bab92947c7967da19d09a",
-      "bytes": 2717
+      "sha256": "5e896d5664cd243edc2df8011261aaf82a7fbc0ba5ad1251e4c8bf4baf7b796b",
+      "bytes": 2746
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-loaders/latest": {
       "status": 200,
@@ -1298,8 +1283,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-native-charts/latest": {
       "status": 200,
-      "sha256": "a7951425452d416c90a45d1456de8a6a62129e3fd4098aec8e8405866374a9a0",
-      "bytes": 2941
+      "sha256": "28705a4ae10e0e5ed07980c64074e75ddc03a023a96045f81f6659b93248d962",
+      "bytes": 2952
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-native-db-sqlite-persistence/latest": {
       "status": 200,
@@ -1333,23 +1318,23 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-query-devtools/latest": {
       "status": 200,
-      "sha256": "f0aff80503424bf15e1f30620547f57f57bbe0bac5e5fd4d353469bceb88b7db",
-      "bytes": 4627
+      "sha256": "cbca647e40610d9522ddce3ccbca2834b6e1da91e4c31bf12ac5840b5565719e",
+      "bytes": 4626
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-query-next-experimental/latest": {
       "status": 200,
-      "sha256": "4e4f5b36e60d277ad8bfef61ee52d443a9dd8655b83e59d7fc0cd7113a428625",
-      "bytes": 4113
+      "sha256": "c3efa381de28e42bb0e6066ec226df29010685a803d7c4ed119fb76b2723c1f3",
+      "bytes": 4112
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-query-persist-client/latest": {
       "status": 200,
-      "sha256": "90e23901dd77eb689a4d7d4caf6dffda1f4fcd14ba55ce18227fffad663eaa8b",
-      "bytes": 4282
+      "sha256": "fb92a3170df4e1b172e431f864a7bff4a3231d6779fad8674623502730168368",
+      "bytes": 4284
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-query/latest": {
       "status": 200,
-      "sha256": "2078981f8577cec3d395e3698929c6c85b7394838dca4ad1382670325282951e",
-      "bytes": 4459
+      "sha256": "66d943b8d8e8643e644a592087d76907c58590d8ee1f0847f290ed524d342642",
+      "bytes": 4458
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-ranger/latest": {
       "status": 200,
@@ -1468,8 +1453,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-virtual/latest": {
       "status": 200,
-      "sha256": "4920a90737a11536b201c3a5ce3051147b170fc3993f53302749fdb7ff199229",
-      "bytes": 2898
+      "sha256": "40761cfb0e46785854ed2b6eff155b11dd73d4a2829ce75498a75d595ab1d61b",
+      "bytes": 2901
     },
     "https://registry.npmjs.org/%40tanstack%2Freact/latest": {
       "status": 200,
@@ -1478,7 +1463,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fredact/latest": {
       "status": 200,
-      "sha256": "c89804fa30f20d1acde4bdce7c7e3e23a894de90f19340ff83a276f10b9b59f3",
+      "sha256": "5d86e4f2ca23d28ab4f4d30b91fce6b4536ad26c1b529600369e29ecc0463f56",
       "bytes": 4085
     },
     "https://registry.npmjs.org/%40tanstack%2Frouter-arktype-adapter/latest": {
@@ -1573,7 +1558,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-charts/latest": {
       "status": 200,
-      "sha256": "4dd324cb5a98700d60493a2efa89a53d03b867a384903819eb681b4cc56b8f67",
+      "sha256": "d03c8a473dcf404b206b009162bf93a13f44ff6baf044dbfef6320602bcf2c56",
       "bytes": 2654
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-cross-context/latest": {
@@ -1603,13 +1588,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "3ab45ff61a26d539f339b6731d8d8c228e69807aa0fc5f2fb6a4dffd7225840e",
-      "bytes": 2742
+      "sha256": "fb4d72af158f010cee1ce23e7861632d0197f055837e69ee5661a7394ce6c130",
+      "bytes": 2741
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-hotkeys/latest": {
       "status": 200,
-      "sha256": "3a49568b9d3ca46066e868d826ffd5d82ae230eb12bfde2b200559c2362302dd",
-      "bytes": 2573
+      "sha256": "c1aa9b132f0cca0a12126a27177e7a54b8b155948bfbe215b630cd3edd46846a",
+      "bytes": 2572
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-pacer-devtools/latest": {
       "status": 200,
@@ -1623,18 +1608,18 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-query-devtools/latest": {
       "status": 200,
-      "sha256": "d62c33cf6ce7ff5b3fdef7341fe47fe33e8c35f007aeb3505f942e6a64980663",
-      "bytes": 4138
+      "sha256": "bf07d67fe0be543d342164549e85b86632cbecc620e12fc2b367c8575a19064b",
+      "bytes": 4137
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-query-persist-client/latest": {
       "status": 200,
-      "sha256": "56ca4a3cd2df76afbfe3923f16a1e906c19beb60ae41823d3ce523c2ada59899",
-      "bytes": 4189
+      "sha256": "9a4626371949b79d194688539d302fb5550b4a3a4a8627b62f51b68b2d0b408d",
+      "bytes": 4190
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-query/latest": {
       "status": 200,
-      "sha256": "3b76b33084cce0b536ef2e3b4bd1b9a5d72c8fb3be7b4963f615a4da9ca47209",
-      "bytes": 4052
+      "sha256": "f798fcb05f9dcbc2ca1acd2297480c6d39cf4a128632c6372132dc02fef35e6c",
+      "bytes": 4054
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-router-devtools/latest": {
       "status": 200,
@@ -1698,8 +1683,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-virtual/latest": {
       "status": 200,
-      "sha256": "85ff12a6a669a5bf643b93deb5bb6adf9897e9ed866f97fe886bcf9cac12c13c",
-      "bytes": 2595
+      "sha256": "2044875023839ad2a18280a96a30ba6baf83d4b97de8c81f11b39f9664873971",
+      "bytes": 2598
     },
     "https://registry.npmjs.org/%40tanstack%2Fstart-api-routes/latest": {
       "status": 200,
@@ -1808,7 +1793,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-charts/latest": {
       "status": 200,
-      "sha256": "e10e403749f4d5c636540f63831bb0c6cfd4893bae67c3f376fd24bcbb179b36",
+      "sha256": "057e2710e071600438c96f24ea06ced698870b4b1eb2ac6c8fb83d26d7d5df19",
       "bytes": 2752
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-db/latest": {
@@ -1828,13 +1813,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "84d1f527e3d82489542331157edaba9576c3fbbc9795ea263f15b820c8f30c86",
-      "bytes": 3070
+      "sha256": "dee648e71617774651e6d4e635d07b55d19592e374ef70a2813f473d80f413ed",
+      "bytes": 3071
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-hotkeys/latest": {
       "status": 200,
-      "sha256": "491760dfc833b529ffe37606ff702b644134816a5e9443966ba7b426c8f126d2",
-      "bytes": 2703
+      "sha256": "e247b95fc04a4ba15a675c51756e73e5c9fa927f465f709c96687ac4a7486fce",
+      "bytes": 2702
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-pacer-devtools/latest": {
       "status": 200,
@@ -1848,18 +1833,18 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-query-devtools/latest": {
       "status": 200,
-      "sha256": "a1d86602bb2d371ab491b16850521f3d5833d78725cd0ebf68fe4e83e85c83f0",
+      "sha256": "c1f6aee250797e3dd5c045b6d8d9069c4bf59afbfc2fb5080ac2fb0a5ff326c7",
       "bytes": 4965
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-query-persist-client/latest": {
       "status": 200,
-      "sha256": "a2cab9669c031bc672baf2d72eb9680dc69e2d550772e9198601a2ac9db4d561",
-      "bytes": 5059
+      "sha256": "b55730a78dad510fa65e7500fd78c339ad977c140d36145f084dfbe5d851e6ed",
+      "bytes": 5058
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-query/latest": {
       "status": 200,
-      "sha256": "973445906861e5a19e06a0b16b97e3e89fbf4f118c6ae0fc6d0f5b1773f885a9",
-      "bytes": 4890
+      "sha256": "df05a349e3812369618de1cf896d8632d6b8c33e23288157c0fce02e76ad3ba1",
+      "bytes": 4892
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-store/latest": {
       "status": 200,
@@ -1873,8 +1858,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-virtual/latest": {
       "status": 200,
-      "sha256": "09beb0ac0ea89c90cd873a6b888eb0f5c669984ccae390a6dd62d382d02a66df",
-      "bytes": 2582
+      "sha256": "1a88b0ba158dd6abed857707d9429f38b6a61418e6abd683963dcb541a938e44",
+      "bytes": 2584
     },
     "https://registry.npmjs.org/%40tanstack%2Ftable-core/latest": {
       "status": 200,
@@ -1918,8 +1903,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fvirtual-core/latest": {
       "status": 200,
-      "sha256": "cbb46e664892c124e299deef1c961b36fd5619d396dab52ad7e89654015e171e",
-      "bytes": 2438
+      "sha256": "9a6769cddf74415e54e631131b5306eb40114d5418f8fadd9e75bd04c272eb21",
+      "bytes": 2443
     },
     "https://registry.npmjs.org/%40tanstack%2Fvirtual-file-routes/latest": {
       "status": 200,
@@ -1933,8 +1918,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-charts/latest": {
       "status": 200,
-      "sha256": "253ac1131eb02c6aded3ce3d7ef7076894365ade6d4b95c0ec187aab41845486",
-      "bytes": 2604
+      "sha256": "afd99218d837fa02bdcec7ca3cacb95932222bd3c3e2c1908fa8fbc72ecc7f4e",
+      "bytes": 2603
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-db/latest": {
       "status": 200,
@@ -1953,13 +1938,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "434cafe3ddb989c5c21d4889429116d8fb16d22201566d3cb8a7585364d9cffb",
-      "bytes": 2669
+      "sha256": "6c3210891eab3914417e7e93a728e57b77d6bb8c4a6d01582a61fca810ee76ef",
+      "bytes": 2668
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-hotkeys/latest": {
       "status": 200,
-      "sha256": "ad656fa354fa0a4094972343d07fc6b6d9a9e5e50dd319f090f72e8095fa4c36",
-      "bytes": 2493
+      "sha256": "4b14a3a22fc2f6e34ea5f9ca702addfa13f9decb7c2f9f1e6b14792f53ecb378",
+      "bytes": 2492
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-pacer-devtools/latest": {
       "status": 200,
@@ -1973,13 +1958,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-query-devtools/latest": {
       "status": 200,
-      "sha256": "71386f4b6edfcc1807c2706ff4ad275cc2a1a1630c9186293f7532f5143ec038",
-      "bytes": 3703
+      "sha256": "3f54eaf25f6f56bbed907995f57bae9b24f5505b64fef912bcb26e8ef8ff45b8",
+      "bytes": 3704
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-query/latest": {
       "status": 200,
-      "sha256": "d14d9c273300ad8ee911a45921db8de507638d014974d722540b8aa917ae17b1",
-      "bytes": 4361
+      "sha256": "373045e7954d44c1dab1c4aa500b773e1fa29a6b048aed021baa28f4d96623e7",
+      "bytes": 4362
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-router-devtools/latest": {
       "status": 200,
@@ -2028,8 +2013,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-virtual/latest": {
       "status": 200,
-      "sha256": "52df894130ebf881bca79fe7a7431e57dd457a2cceadeb8c865703d10ae7aa89",
-      "bytes": 2588
+      "sha256": "887c74bb4f1641da199dc24da3cc05a82b4b8405e346ae7c28eb1bb44e819bfd",
+      "bytes": 2660
     },
     "https://registry.npmjs.org/%40tanstack%2Fworkflow-cloudflare/latest": {
       "status": 200,
@@ -2091,15 +2076,15 @@
       "sha256": "efc56b07408d796b1544f1a6aaf6f33cced753c50dcbe9973522a584682f10ec",
       "bytes": 14425
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fangular-query-experimental@5.105.1": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fangular-query-experimental@5.105.2": {
       "status": 200,
-      "sha256": "d48f01b2eaae943ca83980ca661daf95dcebba680c89253f00279795be5ee440",
-      "bytes": 16335
+      "sha256": "da4906f525bee8eba15769e991d4b5ce6feb52311fcf7942c99e0c0067ac4150",
+      "bytes": 16447
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fcharts@1.1.0": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fcharts@1.2.0": {
       "status": 200,
-      "sha256": "42cd433f53042804422329bd5ba70a0b9f4a2474dc9d497705bdb7505d000aed",
-      "bytes": 14313
+      "sha256": "b2d338ddbda01e24325c170386a00cad03bcacc94b2c5e185d03bc5520243a65",
+      "bytes": 14797
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2feslint-config@0.4.0": {
       "status": 200,
@@ -2108,67 +2093,67 @@
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fform-core@1.33.5": {
       "status": 200,
-      "sha256": "1e7b0df71331efaf8e406109b2ec75daf179c46f1cfd7fa95e06c467bac559e6",
-      "bytes": 14265
+      "sha256": "7fb4ac46018d6e2dea585da138794e85ea74f1092f2d241226945106b6b9e682",
+      "bytes": 14191
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fhotkeys@0.22.0": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fhotkeys@0.24.0": {
       "status": 200,
-      "sha256": "7695eb7c37464ab54e96791866d1f015551b2195f06bf0efe8b7aa77c38450f1",
-      "bytes": 15983
+      "sha256": "70129df23814745a9b45238a1e8362c164651d1c196ae765730bb0d9742907aa",
+      "bytes": 15795
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fintent@0.5.6": {
       "status": 200,
-      "sha256": "2fac5babad295a77fc726c56902e13c88ea4c9763b996ecab16a7348f95b27c4",
-      "bytes": 14268
+      "sha256": "fb75e0a2d9208555a599e8434f6d5fe2a7bcb862f04a29627a60eecbcd4aec15",
+      "bytes": 14345
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2flit-form@1.25.5": {
       "status": 200,
       "sha256": "1cfb79750444a1225ebd2ae0bd6e383ac4fee7f909f2567222b0b16d39b9fec2",
       "bytes": 14349
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2flit-query@0.2.32": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2flit-query@0.2.33": {
       "status": 200,
-      "sha256": "c361f48d7a6633ce4ad3f5697b30f31feca4188d0d5fced6edde9a818af1043f",
-      "bytes": 16207
+      "sha256": "26df7fbd37b7b5dfd0b041fd5d97b1de8ee280fef8abed34d88f922ae2223cd0",
+      "bytes": 16223
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fpacer@0.23.1": {
       "status": 200,
-      "sha256": "5b2ef86955fbaa0930ed807a7e35dd15bb06c2519819b92d7bee8787b50d71f6",
-      "bytes": 15948
+      "sha256": "4ff7084947495d752341f13465318b7aa7b7541f6a1d510b42bc43f25a5e4628",
+      "bytes": 16023
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fpreact-form@1.30.5": {
       "status": 200,
       "sha256": "deecda2d0685e72094ae8f9865244a2a706ea406dc46975357ec969781a97ab0",
       "bytes": 14357
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fpreact-query@5.105.1": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fpreact-query@5.105.2": {
       "status": 200,
-      "sha256": "aa549e006e1eea7c30a097764798b42564e4249a7fb4e14096c445171681241a",
-      "bytes": 16411
+      "sha256": "12b1ab33fba96fa59da352b5aa694bb0f3bcaa1c233112bb9ffca47be8a3be59",
+      "bytes": 16343
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fpublish-config@0.2.7": {
       "status": 200,
       "sha256": "6aa211f3164949fa6dd50fa884f26d700f600059203dc7b3630566023804735f",
       "bytes": 14309
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fquery-core@5.105.1": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fquery-core@5.105.2": {
       "status": 200,
-      "sha256": "363f8ae982701a3184b3831aea481fca2eba94d7e7541fded01ad92d290a0278",
-      "bytes": 16323
+      "sha256": "9eb3537d1ae43bfe991dd7b156bfae3a7658fbb711bda56cfa3d983bb97a6622",
+      "bytes": 16423
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-form@1.33.5": {
       "status": 200,
       "sha256": "9512cebd46e31e83b5c107a404c52625ebcdbfa030a9849662b881516c54d89c",
       "bytes": 14242
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-native-charts@1.1.0": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-native-charts@1.2.0": {
       "status": 200,
-      "sha256": "d034952c7df1002953cbf0bf1d2ba5234f0218d8352969aa969ba732754a28ee",
-      "bytes": 14421
+      "sha256": "aa2c23bb2849add4c73b66edfb714a227aeb0527def3c3cf7d2a5d7cef410a63",
+      "bytes": 15045
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-query@5.105.1": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-query@5.105.2": {
       "status": 200,
-      "sha256": "5585d93d9d75af7efb29d479a57cdb2c7916edea830eebe8f3e82cf5674d7e32",
+      "sha256": "e84f7a7727939bcd7474cefc91b5b5891a66346e734f5b796ba7fcd2b657b463",
       "bytes": 16331
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsolid-form@1.33.5": {
@@ -2176,30 +2161,30 @@
       "sha256": "0ddc521335c7f2f2f89679d0b486dde183c5202681cc9e41589b1fc9a363de6f",
       "bytes": 14589
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsolid-query@5.105.1": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsolid-query@5.105.2": {
       "status": 200,
-      "sha256": "d87678f3bdca2481d5925d7ae6352a19dfe9fed0e67f9e751d4c444dde97c3f4",
-      "bytes": 16279
+      "sha256": "406298afe7caccdedfbbaf841b34c0755f04a2e2e97eaed4f4f279f35cde3511",
+      "bytes": 16379
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fstore@0.11.2": {
       "status": 200,
-      "sha256": "13642c5c2762b9c688547da0022410afb2f7efd9b06f183a64d7278ac92f790a",
-      "bytes": 14356
+      "sha256": "65576c1b2f73251a5ee1ac100075dab7bb1bafa088c129dd4a42cc197395230a",
+      "bytes": 14433
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsvelte-form@1.33.5": {
       "status": 200,
       "sha256": "a7645f5e3b5c1cbba0aabff0deabd5acf733adf21d5f1dbf3542a563914165a0",
       "bytes": 14217
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsvelte-query@6.3.7": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fsvelte-query@6.3.8": {
       "status": 200,
-      "sha256": "f16b000f5c3c6046678b6e622f329f456ec097e6d42d2150ada673cdfb07a9e8",
-      "bytes": 16375
+      "sha256": "ec34fc59ee28d88a2b309fe741bbe53ab995683ba81a7eadc8f76e0000ee2c31",
+      "bytes": 16467
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fvirtual-core@3.19.9": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fvirtual-core@3.19.10": {
       "status": 200,
-      "sha256": "dec1141e4f2a3d31714fe43692905b1d93cc712931f9e4f989dfd6473141d927",
-      "bytes": 14230
+      "sha256": "8316e1b97244a9706aa267793cc9e1c52bc0f2dd7af0513782bff5187692351d",
+      "bytes": 14401
     },
     "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fvite-config@0.6.0": {
       "status": 200,
@@ -2211,10 +2196,10 @@
       "sha256": "107404cf2aaaf5c21ce4350b0195d1b8886fbe9727c91a58cccd93914913aa96",
       "bytes": 14149
     },
-    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fvue-query@5.105.1": {
+    "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2fvue-query@5.105.2": {
       "status": 200,
-      "sha256": "a10c9a84fb91fd3dc06992fb2ebaf99b8206d56cf997ea08bbf80903054c59c1",
-      "bytes": 16227
+      "sha256": "58fe543fac976666c4d71b48f27cdd01fb2a7858d3fc2497e8145d0881a77bb3",
+      "bytes": 16283
     },
     "https://registry.npmjs.org/-/org/tanstack/package?format=cli": {
       "status": 200,
@@ -2621,15 +2606,15 @@
       "sha256": "847639b55b3e8d7f8d79c9ac550623a96b738924e21247043b97ebeae0e848d1",
       "bytes": 1430890
     },
-    "https://registry.npmjs.org/@tanstack/alpine-charts/-/alpine-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/alpine-charts/-/alpine-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "517d3875aaadc67561adb0b75f2b41b0e95281fb1c01072e8dc3b6f57f1c3d82",
+      "sha256": "f154b0c20b47e862090eb6d6791f43271d252671ebb50d21dd7682ea3e8049d5",
       "bytes": 4211
     },
-    "https://registry.npmjs.org/@tanstack/alpine-hotkeys/-/alpine-hotkeys-0.9.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/alpine-hotkeys/-/alpine-hotkeys-0.11.1.tgz": {
       "status": 200,
-      "sha256": "d13a7b38a8151af5ea579a9c64c4dc346e70e6f3c148f191683419e0193fde0f",
-      "bytes": 11324
+      "sha256": "565d3df816f9adb8e54089c244972dac8d9a81ec83ee18f8578cde118d410a77",
+      "bytes": 12290
     },
     "https://registry.npmjs.org/@tanstack/alpine-pacer/-/alpine-pacer-0.2.0.tgz": {
       "status": 200,
@@ -2641,9 +2626,9 @@
       "sha256": "b9f7b53dc0460c7ab28424db3db76bdf6fab9f67e68b742b088035e5abe1c551",
       "bytes": 11121
     },
-    "https://registry.npmjs.org/@tanstack/angular-charts/-/angular-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/angular-charts/-/angular-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "d38e9d0fff40c25a52af105ff1d30dd711d35ccb1bebd78f8d94cac289a592b5",
+      "sha256": "233d5d620b619959aa3369c95e661b5529aa88b0c1aa9e235cd155ac58b06b76",
       "bytes": 10361
     },
     "https://registry.npmjs.org/@tanstack/angular-db/-/angular-db-1.0.0-rc.1.1.tgz": {
@@ -2661,15 +2646,15 @@
       "sha256": "1ab702e9147c3d76f6213979f2b33ee1f4d274715f08160bb767f221728ce49d",
       "bytes": 16329
     },
-    "https://registry.npmjs.org/@tanstack/angular-hotkeys-devtools/-/angular-hotkeys-devtools-0.4.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/angular-hotkeys-devtools/-/angular-hotkeys-devtools-0.5.1.tgz": {
       "status": 200,
-      "sha256": "1e26c2d6410cab7fdb0640359dba8be079784ca3e5a210ba5b4f7905f0a87ed0",
+      "sha256": "172da4b8f665bd6edc260deab4035d357def5ead6b62eddb1abecc0a31bec7f9",
       "bytes": 4777
     },
-    "https://registry.npmjs.org/@tanstack/angular-hotkeys/-/angular-hotkeys-0.19.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/angular-hotkeys/-/angular-hotkeys-0.21.1.tgz": {
       "status": 200,
-      "sha256": "78a2a7c4f85d464baa4f707ffe97ee1c07ba0e1f19eacacc77019c679d5fde67",
-      "bytes": 16845
+      "sha256": "438c4f3fb5bee9f9366b71e7996caa411535a149dda2da8565b1dd2c6e60642a",
+      "bytes": 18616
     },
     "https://registry.npmjs.org/@tanstack/angular-pacer-devtools/-/angular-pacer-devtools-0.2.0.tgz": {
       "status": 200,
@@ -2691,10 +2676,10 @@
       "sha256": "d9a36441f4032672296d110ebbe17b4723f3308da22a3c2e348b36b1555af217",
       "bytes": 1098
     },
-    "https://registry.npmjs.org/@tanstack/angular-query-experimental/-/angular-query-experimental-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/angular-query-experimental/-/angular-query-experimental-5.105.2.tgz": {
       "status": 200,
-      "sha256": "5b8f2625e28e9f97c89edada20e25f0a3c40d01db0242e03d81a728297a98569",
-      "bytes": 109822
+      "sha256": "1f1a87e6019f01cb782166485a175e9508fb9c9a26e8b1b1771480aa1acd2d26",
+      "bytes": 109845
     },
     "https://registry.npmjs.org/@tanstack/angular-query-persist-client/-/angular-query-persist-client-0.0.0.tgz": {
       "status": 200,
@@ -2721,9 +2706,9 @@
       "sha256": "06870d3760e615c0b0ed9389d02c325382ca08e09d07a43e07da4edf1308714b",
       "bytes": 25650
     },
-    "https://registry.npmjs.org/@tanstack/angular-virtual/-/angular-virtual-6.1.10.tgz": {
+    "https://registry.npmjs.org/@tanstack/angular-virtual/-/angular-virtual-6.1.11.tgz": {
       "status": 200,
-      "sha256": "2732433790b1974e3db3daf41ce3b489c33cffd740d232c520bb8dd48aa87fe0",
+      "sha256": "a249719029daddf6627098d560d9ea8fb8751d34a2964e24c60d821ca8fc4f82",
       "bytes": 11080
     },
     "https://registry.npmjs.org/@tanstack/arktype-adapter/-/arktype-adapter-1.167.0.tgz": {
@@ -2746,20 +2731,20 @@
       "sha256": "526246a3b54035241f5e85cf2aa84739daa06e76d1ff200c7b8297cad18a0298",
       "bytes": 15072
     },
-    "https://registry.npmjs.org/@tanstack/charts-scales/-/charts-scales-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/charts-scales/-/charts-scales-1.2.0.tgz": {
       "status": 200,
-      "sha256": "a00f8de1f83d42e0f0654b479a656fe8b1e68bd89576cb95774bc4852fc5d581",
+      "sha256": "320f5cfa971d1dd0def260ed2618881d5a837a7d45cf17ece3ba5d754f0a9db2",
       "bytes": 6610
     },
-    "https://registry.npmjs.org/@tanstack/charts/-/charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/charts/-/charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "1a2a8f03ee27a8b7ecb38ab41e2f6d3d66b90998b473fa4a43b0d15dab22ac79",
-      "bytes": 701879
+      "sha256": "bc37c51c5553476d84c3d23c05a707fe90d4a71e881c0c0e7df40a86acd3f4fc",
+      "bytes": 704823
     },
-    "https://registry.npmjs.org/@tanstack/cli/-/cli-0.72.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/cli/-/cli-0.72.7.tgz": {
       "status": 200,
-      "sha256": "6c4e998577534a8b171f2581b7cb749428510be926f5d3095acb3cd794683b82",
-      "bytes": 45380
+      "sha256": "790f10a1b670632d0b5949210cd353ff6c1bc69d65f71729e53b7a82f84c1c7d",
+      "bytes": 45382
     },
     "https://registry.npmjs.org/@tanstack/cloudflare-durable-objects-db-sqlite-persistence/-/cloudflare-durable-objects-db-sqlite-persistence-1.0.0-rc.1.1.tgz": {
       "status": 200,
@@ -2781,20 +2766,20 @@
       "sha256": "a09661a66a4df9a27fe6f259125496c19bf03d3ec9f5eb6499a46eabcaee62e9",
       "bytes": 7061
     },
-    "https://registry.npmjs.org/@tanstack/create-start/-/create-start-0.59.45.tgz": {
+    "https://registry.npmjs.org/@tanstack/create-start/-/create-start-0.59.52.tgz": {
       "status": 200,
-      "sha256": "eafe74e0ba5749a2ef7e0b557af144b35f626a97230984120d2d995ed570d5f9",
-      "bytes": 7946
+      "sha256": "61afb44afef482c383f19059b08ffb9b59fd43be80f292adc6d213ae968c2fbe",
+      "bytes": 8254
     },
     "https://registry.npmjs.org/@tanstack/create-ui/-/create-ui-0.59.8.tgz": {
       "status": 200,
       "sha256": "1712b5d379ecf6ddb6d90e0787857602de5414c42b95d49067227ede60c76563",
       "bytes": 1551177
     },
-    "https://registry.npmjs.org/@tanstack/create/-/create-0.71.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/create/-/create-0.71.7.tgz": {
       "status": 200,
-      "sha256": "7de33fe49239ee6740ad2ca293e1f0bc1840c1c033d29788434fb3ec88b9c498",
-      "bytes": 39067276
+      "sha256": "ec739ffc885179df310b83726ee07976459547bf4f346697e6fe12e8247bea48",
+      "bytes": 19601000
     },
     "https://registry.npmjs.org/@tanstack/cta-cli/-/cta-cli-0.48.2.tgz": {
       "status": 200,
@@ -2966,10 +2951,10 @@
       "sha256": "21ea701bf7963092f7becd2094f416eabb718004a4528a72432167005efd92ba",
       "bytes": 32349
     },
-    "https://registry.npmjs.org/@tanstack/ember-hotkeys/-/ember-hotkeys-0.8.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/ember-hotkeys/-/ember-hotkeys-0.10.1.tgz": {
       "status": 200,
-      "sha256": "fd6dad12f5f079f5d2aa31191bea2d65aeca82368d3f7ec04d32064da2963118",
-      "bytes": 14000
+      "sha256": "6afdd08cefb500a782f883e14cf96b65e89033100a9afa75765c375208384ac3",
+      "bytes": 15342
     },
     "https://registry.npmjs.org/@tanstack/ember-pacer/-/ember-pacer-0.2.0.tgz": {
       "status": 200,
@@ -2986,10 +2971,10 @@
       "sha256": "aad70d2c44049d9aca756fcb5480914da2bd214ce12fe11278ed255b33cb777c",
       "bytes": 7317
     },
-    "https://registry.npmjs.org/@tanstack/eslint-plugin-query/-/eslint-plugin-query-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/eslint-plugin-query/-/eslint-plugin-query-5.105.2.tgz": {
       "status": 200,
-      "sha256": "01f90e79e42e5439fc3fb9f49205b17a69a503167c7a711e08b85704964cb5c1",
-      "bytes": 176382
+      "sha256": "bbb33218208f35a465a513b865ba931eeb56e3a2bcf219dd8e45c441e852463d",
+      "bytes": 176380
     },
     "https://registry.npmjs.org/@tanstack/eslint-plugin-router/-/eslint-plugin-router-1.162.0.tgz": {
       "status": 200,
@@ -3016,34 +3001,34 @@
       "sha256": "e67ae3e8ccf0a6e56ec85747cffeeeaebc3563e5f71c7902573048f4e8e6670f",
       "bytes": 20742
     },
-    "https://registry.npmjs.org/@tanstack/highlight/-/highlight-1.2.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/highlight/-/highlight-1.2.9.tgz": {
       "status": 200,
-      "sha256": "f7d0cccb965b9b7b27c84b810afdec8817b16ab27dafa92a57bffab656a6453c",
-      "bytes": 80274
+      "sha256": "684771122ac1b976d1e6bfb6793765b2bca3813b9ac05542061aa7328f7bb0c4",
+      "bytes": 81391
     },
     "https://registry.npmjs.org/@tanstack/history/-/history-1.162.5.tgz": {
       "status": 200,
       "sha256": "4976509ecbfa216337dc5b9bcbd05fe0e1c2fd6acbc9b25709495cac7cc1efc4",
       "bytes": 19072
     },
-    "https://registry.npmjs.org/@tanstack/hotkeys-devtools/-/hotkeys-devtools-1.7.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/hotkeys-devtools/-/hotkeys-devtools-1.8.1.tgz": {
       "status": 200,
-      "sha256": "4f1ff38b39450569a4e6d33d4f257213152285618d2e78a7738ab98a3f92e27b",
-      "bytes": 27250
+      "sha256": "22b933835e0d699063594e58d46eeac1fc42c2f16b9b7ec96aef5224b2ec1fa3",
+      "bytes": 27253
     },
-    "https://registry.npmjs.org/@tanstack/hotkeys/-/hotkeys-0.22.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/hotkeys/-/hotkeys-0.24.0.tgz": {
       "status": 200,
-      "sha256": "43441f97b1bb4a4284d478968b2cca21e9648eee1abcec6ab57093e288b3cb52",
-      "bytes": 75664
+      "sha256": "84b65df5cfdb019c91447d870256d5b5b0a4463df3857c2c67817857cdc1cbb4",
+      "bytes": 80030
     },
     "https://registry.npmjs.org/@tanstack/intent/-/intent-0.5.6.tgz": {
       "status": 200,
       "sha256": "1388cec441efffe2452ec4f07a16b8b0f0ec8dd20b9ade18c404a8718172c53c",
       "bytes": 245478
     },
-    "https://registry.npmjs.org/@tanstack/lit-charts/-/lit-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/lit-charts/-/lit-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "312532906b7585c0698826bbdc7c2596ecb35eb4d081c8d4ee571f65094310a1",
+      "sha256": "4f869b909b6796d426c3b255df71e7b84b05330aff17d2aeb991ef2d433159ac",
       "bytes": 4549
     },
     "https://registry.npmjs.org/@tanstack/lit-form/-/lit-form-1.25.5.tgz": {
@@ -3051,20 +3036,20 @@
       "sha256": "b0fa663c9e3cb69876ae42ee5cfd41423d0196dca3e2514cdcbe832e8f7ca051",
       "bytes": 8368
     },
-    "https://registry.npmjs.org/@tanstack/lit-hotkeys/-/lit-hotkeys-0.20.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/lit-hotkeys/-/lit-hotkeys-0.22.1.tgz": {
       "status": 200,
-      "sha256": "9f7932b31be8c3e75c2522fa6f1e74ba9700af7d688d4a91bfa2d00ec6a83328",
-      "bytes": 16257
+      "sha256": "da821f0ef6f9683c3a9e3cbf126757dcf5d27d32537642304b88ef0626b0d41a",
+      "bytes": 16334
     },
     "https://registry.npmjs.org/@tanstack/lit-pacer/-/lit-pacer-0.2.0.tgz": {
       "status": 200,
       "sha256": "24c819d9585f292b8ae4f1b37977b6bcad1bb90cb6387601fbe980be08fab69d",
       "bytes": 25554
     },
-    "https://registry.npmjs.org/@tanstack/lit-query/-/lit-query-0.2.32.tgz": {
+    "https://registry.npmjs.org/@tanstack/lit-query/-/lit-query-0.2.33.tgz": {
       "status": 200,
-      "sha256": "8f8d79bd3d9da9cff4a94f86cf157291236a0180c91f262cf9c90d38d1ae5f55",
-      "bytes": 170928
+      "sha256": "601c1191893fad74824e5bc8ad31d4ee7e52916dcdd06d446548c8a12c2aa3f6",
+      "bytes": 170948
     },
     "https://registry.npmjs.org/@tanstack/lit-store/-/lit-store-0.14.2.tgz": {
       "status": 200,
@@ -3076,10 +3061,10 @@
       "sha256": "01c3b17dd7ba64f0cb2fd78227f67026ec6438782dcea455f250f130546218d3",
       "bytes": 22139
     },
-    "https://registry.npmjs.org/@tanstack/lit-virtual/-/lit-virtual-3.15.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/lit-virtual/-/lit-virtual-3.15.2.tgz": {
       "status": 200,
-      "sha256": "ceeaeed96efdbbda8175eb13c43779d629dbf602840ae268b1f31e90e3d33c7c",
-      "bytes": 6058
+      "sha256": "ff6dd2e9bdb021bc1d5fcd6fd175595aff735b8c27148523fe63532a58556847",
+      "bytes": 6422
     },
     "https://registry.npmjs.org/@tanstack/loaders/-/loaders-0.0.1-beta.52.tgz": {
       "status": 200,
@@ -3091,20 +3076,20 @@
       "sha256": "bb225a650f68166f680958a1311e18bd2ad798c78872c6748c98f60266ced926",
       "bytes": 210295
     },
-    "https://registry.npmjs.org/@tanstack/markdown/-/markdown-1.0.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/markdown/-/markdown-1.1.1.tgz": {
       "status": 200,
-      "sha256": "c888ee77fa05172987936c152bb0ce0611157a6a6d1081a467049a0c708a592a",
-      "bytes": 45472
+      "sha256": "031e21b3e15d8608a06753145e4e60c8e10e84092d74a7a9ffa30a81737e06f9",
+      "bytes": 46757
     },
     "https://registry.npmjs.org/@tanstack/marko-store/-/marko-store-0.1.0.tgz": {
       "status": 200,
       "sha256": "6af7e5b2fef799a9a69ffc769bf3b6e22526092b0d78e703a36776e7c3e657c8",
       "bytes": 28025
     },
-    "https://registry.npmjs.org/@tanstack/marko-virtual/-/marko-virtual-3.16.10.tgz": {
+    "https://registry.npmjs.org/@tanstack/marko-virtual/-/marko-virtual-3.16.11.tgz": {
       "status": 200,
-      "sha256": "e7246ca379d25e1b6b58f3dda48506cfed3e687ae7978ca2980619a4bbd2a2bd",
-      "bytes": 13927
+      "sha256": "250a085e3ccd38def4f58c650b135b193304d837f02f61e666a66294b190a468",
+      "bytes": 13929
     },
     "https://registry.npmjs.org/@tanstack/match-sorter-utils/-/match-sorter-utils-9.2.6.tgz": {
       "status": 200,
@@ -3121,15 +3106,15 @@
       "sha256": "af80d879e43faf4bc59d2657785d58fd12fc36b77e812779744ed08f888758d9",
       "bytes": 13294
     },
-    "https://registry.npmjs.org/@tanstack/octane-charts/-/octane-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/octane-charts/-/octane-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "0d6376bbd1f241e9e48d9b09d10c682fcc89f4b7af41425a71e37f7b76b6f2d1",
-      "bytes": 6564
+      "sha256": "9bd21bf66138280f919a50fcce3ada42993772be7a459bc48c5263dbddbd3c60",
+      "bytes": 6584
     },
-    "https://registry.npmjs.org/@tanstack/octane-hotkeys/-/octane-hotkeys-0.9.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/octane-hotkeys/-/octane-hotkeys-0.11.0.tgz": {
       "status": 200,
-      "sha256": "192c770c2a6be1db8f31d50f517fdb648f505ebbb4df21da0d61a2382f57226f",
-      "bytes": 13030
+      "sha256": "b206e1874a9adc59ffdd457088ea727e570f956bcf32d6a9896bfaf4be01e2a2",
+      "bytes": 14093
     },
     "https://registry.npmjs.org/@tanstack/octane-pacer/-/octane-pacer-0.3.0.tgz": {
       "status": 200,
@@ -3196,9 +3181,9 @@
       "sha256": "aeb14d8b00a4f2ae56ca1169595ab101f304a05a2aedf8234765ccec779a9a2a",
       "bytes": 7938
     },
-    "https://registry.npmjs.org/@tanstack/preact-charts/-/preact-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-charts/-/preact-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "b6083bd153388f5ebb9e6c08d917253de679b5c63d3867a09ee958e15dc7b63b",
+      "sha256": "10d9c7c2b7482cdd9bc17b7d04d1c46f4889a310ad50e9c2b093de7a644d308e",
       "bytes": 4105
     },
     "https://registry.npmjs.org/@tanstack/preact-db/-/preact-db-1.0.0-rc.1.1.tgz": {
@@ -3216,15 +3201,15 @@
       "sha256": "fcbe6d9ab4a5a890e65eaab0669344ef8d9a8540cdbc794227857623493e9729",
       "bytes": 40609
     },
-    "https://registry.npmjs.org/@tanstack/preact-hotkeys-devtools/-/preact-hotkeys-devtools-0.12.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-hotkeys-devtools/-/preact-hotkeys-devtools-0.13.1.tgz": {
       "status": 200,
-      "sha256": "85d80511d9cbfa7b1d1ec5b44f1ef841ee0cd4d062b9c8678fc2ff1de77cd43a",
-      "bytes": 4623
+      "sha256": "4af232462288543e5de5f39706a93cd476845ef6c75ea0495ec89754af0edbb5",
+      "bytes": 4624
     },
-    "https://registry.npmjs.org/@tanstack/preact-hotkeys/-/preact-hotkeys-0.19.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-hotkeys/-/preact-hotkeys-0.20.1.tgz": {
       "status": 200,
-      "sha256": "e8a957d75050a4758bfac616e6656ed6053fea94c048fcf1a446cdfec3c0d396",
-      "bytes": 17251
+      "sha256": "d0ce02b4af4b3cd42c632ea0b6a1bb522737acfc45b2e900ab7433d885854d74",
+      "bytes": 18300
     },
     "https://registry.npmjs.org/@tanstack/preact-pacer-devtools/-/preact-pacer-devtools-0.8.1.tgz": {
       "status": 200,
@@ -3236,20 +3221,20 @@
       "sha256": "c3d68bc52a0933d3fc6b02e2607d5bb0e11ecc86a5bc8b89774855c3a477322c",
       "bytes": 44855
     },
-    "https://registry.npmjs.org/@tanstack/preact-query-devtools/-/preact-query-devtools-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-query-devtools/-/preact-query-devtools-5.105.2.tgz": {
       "status": 200,
-      "sha256": "f76288d9b7661c4fe83e68dc6af77ce0d8ffcfa7d5dfd0b4fa77893c3a0f63d7",
-      "bytes": 14543
+      "sha256": "88abd07dc4792a32b0b9a68552c89f747e0e7e0f3f906fe0efc34a46b65342d8",
+      "bytes": 14545
     },
-    "https://registry.npmjs.org/@tanstack/preact-query-persist-client/-/preact-query-persist-client-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-query-persist-client/-/preact-query-persist-client-5.105.2.tgz": {
       "status": 200,
-      "sha256": "c7f5132c683c242b886471d536835197cf04c98d6f25e9aef50c5bb999b9e814",
-      "bytes": 5723
+      "sha256": "2b85e7c44c0c046676c1e909e1c75e9c3820483ceba7154efa9088d4eb068572",
+      "bytes": 5726
     },
-    "https://registry.npmjs.org/@tanstack/preact-query/-/preact-query-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-query/-/preact-query-5.105.2.tgz": {
       "status": 200,
-      "sha256": "9a87ff643faecd6ccee278edd8753c7c29ae086585c6dab8a347416ce38d15b1",
-      "bytes": 216032
+      "sha256": "27ac6c2873bef0bad771c83ed778c4e6807dba8e6080a3f67196233bc4fd3b52",
+      "bytes": 216054
     },
     "https://registry.npmjs.org/@tanstack/preact-store/-/preact-store-0.13.5.tgz": {
       "status": 200,
@@ -3271,39 +3256,39 @@
       "sha256": "b916afe6a1bc53d83fb7dc0d4f635ba6356a778628adae888768a09cfded8893",
       "bytes": 6581
     },
-    "https://registry.npmjs.org/@tanstack/query-async-storage-persister/-/query-async-storage-persister-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/query-async-storage-persister/-/query-async-storage-persister-5.105.2.tgz": {
       "status": 200,
-      "sha256": "783103c2dae70418c89fc80b3bce258a7b9ef375248b0d31d6c4c5d6c2162563",
+      "sha256": "f4732d0b51e322c35222c77ba9b71e4f0f28764474a90ea83bd26df1f571dbb2",
       "bytes": 11108
     },
-    "https://registry.npmjs.org/@tanstack/query-broadcast-client-experimental/-/query-broadcast-client-experimental-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/query-broadcast-client-experimental/-/query-broadcast-client-experimental-5.105.2.tgz": {
       "status": 200,
-      "sha256": "3312f5bb4b9dd7f77e3c7d88e09edc02aee713e70a1461937d0c301a37a09a76",
-      "bytes": 9471
+      "sha256": "96b3993b77b24854b94cb6ab78ff602c97f38aa2429d6084f3ba2c597626699c",
+      "bytes": 9472
     },
-    "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.105.2.tgz": {
       "status": 200,
-      "sha256": "62f33ec365870bc207c437c8d4234c1f73faeb3c1e1f94e60f83e96cdd78be99",
-      "bytes": 721471
+      "sha256": "1cc93a9e6fcb1bf654746af7fd39042aa6755f34454d77b026510be57ce2196b",
+      "bytes": 728042
     },
     "https://registry.npmjs.org/@tanstack/query-db-collection/-/query-db-collection-1.5.0.tgz": {
       "status": 200,
       "sha256": "9cac8c6a3e04e89fc4b750ba2cb37377e3f7c3b5862ec4d394db0d465c686be4",
       "bytes": 219598
     },
-    "https://registry.npmjs.org/@tanstack/query-devtools/-/query-devtools-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/query-devtools/-/query-devtools-5.105.2.tgz": {
       "status": 200,
-      "sha256": "2c1ddd6b867cbe6aaaac0686d416ae20a8788913a8a1b920cfae4656a9b91553",
-      "bytes": 693867
+      "sha256": "c7c13d48d2fafaceac211c57c870cd29922e3eb24197c9f51709d3e66fc6ff63",
+      "bytes": 693869
     },
-    "https://registry.npmjs.org/@tanstack/query-persist-client-core/-/query-persist-client-core-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/query-persist-client-core/-/query-persist-client-core-5.105.2.tgz": {
       "status": 200,
-      "sha256": "efadacb07e221a1049ee2c3f7c942dce8ec1b825f167d006183855608624a236",
+      "sha256": "83cc83ded71d25bb612905095d5c14f499d2bf5b601a741df1c4e4d71eaacbe7",
       "bytes": 43119
     },
-    "https://registry.npmjs.org/@tanstack/query-sync-storage-persister/-/query-sync-storage-persister-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/query-sync-storage-persister/-/query-sync-storage-persister-5.105.2.tgz": {
       "status": 200,
-      "sha256": "480e86989a3dbabe2a7509d03d5b21b85b0aec9533af8b76dbd830f809aecdbf",
+      "sha256": "6a3f3df4f5c8109affce49a4864fd2320b78f85ff5018f2c2ebdbfea68fa7720",
       "bytes": 7880
     },
     "https://registry.npmjs.org/@tanstack/qwik-table/-/qwik-table-8.21.3.tgz": {
@@ -3331,10 +3316,10 @@
       "sha256": "996bc255a81d462906df8a8805fa006f6e8a243b752fd746acceccd1e3f3493f",
       "bytes": 1208665
     },
-    "https://registry.npmjs.org/@tanstack/react-charts/-/react-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-charts/-/react-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "1b6252c0904264bfd432817c49524492e101b9af6826885fb2521f0ddc1ca3ba",
-      "bytes": 6435
+      "sha256": "181b71304d4971ccb63eeae597e98833e7ffd106bbf4509344b7405380518e57",
+      "bytes": 6454
     },
     "https://registry.npmjs.org/@tanstack/react-cross-context/-/react-cross-context-1.99.0.tgz": {
       "status": 200,
@@ -3386,15 +3371,15 @@
       "sha256": "0203726978897d8d2e9c19e053f4c0b28a5365023f9858ffe1d5900e250fee6f",
       "bytes": 46079
     },
-    "https://registry.npmjs.org/@tanstack/react-hotkeys-devtools/-/react-hotkeys-devtools-0.13.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-hotkeys-devtools/-/react-hotkeys-devtools-0.14.1.tgz": {
       "status": 200,
-      "sha256": "33a18c38b4c85e3d3de0a35c70b32a593c4723c4f3b309a58b643478364d6a3b",
-      "bytes": 4819
+      "sha256": "088cbe9cf903dc459605c1b79bec0b7bf1bcf3658f178838f39b4deceff8ca59",
+      "bytes": 4822
     },
-    "https://registry.npmjs.org/@tanstack/react-hotkeys/-/react-hotkeys-0.20.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-hotkeys/-/react-hotkeys-0.22.0.tgz": {
       "status": 200,
-      "sha256": "3c641640f23f7045cdcd719013b97a3051dfdb392e8fdca7da8213b8cb6009a6",
-      "bytes": 17256
+      "sha256": "917f93b86925d2b816308aa367e0e2882bcb7cfc064d5ba5718352c20b3ecb4f",
+      "bytes": 18497
     },
     "https://registry.npmjs.org/@tanstack/react-loaders/-/react-loaders-0.0.1-beta.53.tgz": {
       "status": 200,
@@ -3436,10 +3421,10 @@
       "sha256": "66234844e673571dedf8ba619102fdbaa6f0ba485a5da8562cbbd4075d6127d3",
       "bytes": 199743
     },
-    "https://registry.npmjs.org/@tanstack/react-native-charts/-/react-native-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-native-charts/-/react-native-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "f02db82dcd9ef5c29d68d8354b68d2534a4f912fa0e08caf8f650df431596fa4",
-      "bytes": 19237
+      "sha256": "97aeed000e1e9e9db5e58c73fdaa4bafa1bab039f44777ea79b7cf86462da681",
+      "bytes": 19417
     },
     "https://registry.npmjs.org/@tanstack/react-native-db-sqlite-persistence/-/react-native-db-sqlite-persistence-1.0.0-rc.1.1.tgz": {
       "status": 200,
@@ -3471,25 +3456,25 @@
       "sha256": "8fd72954068a3885375156d0be056ab36efc79f68492979607d0e522c9026483",
       "bytes": 5922
     },
-    "https://registry.npmjs.org/@tanstack/react-query-devtools/-/react-query-devtools-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-query-devtools/-/react-query-devtools-5.105.2.tgz": {
       "status": 200,
-      "sha256": "e39b4d8b0849c17b6e5cfd10d3a15b36247519022af17c7d7bf5ca100d05078d",
+      "sha256": "b3ae7a2440925926a475720ee08e04b24d4024232549af23ce808e370f821283",
       "bytes": 15806
     },
-    "https://registry.npmjs.org/@tanstack/react-query-next-experimental/-/react-query-next-experimental-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-query-next-experimental/-/react-query-next-experimental-5.105.2.tgz": {
       "status": 200,
-      "sha256": "e4f194c856f7d05f4a499621285259d913ffc9d0b46d35be4bdc1304c1efa3a4",
-      "bytes": 21258
+      "sha256": "986324acbd087fb0e9900749361c6d77965032818413fb9422949a216f2754a6",
+      "bytes": 21260
     },
-    "https://registry.npmjs.org/@tanstack/react-query-persist-client/-/react-query-persist-client-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-query-persist-client/-/react-query-persist-client-5.105.2.tgz": {
       "status": 200,
-      "sha256": "919800c49212c8f0d0bcc4b2c52d198c8795369410a0eac416a713f64fbe0b20",
-      "bytes": 6205
+      "sha256": "c77039fb11ffe1036fe46fbd0640f4a7eba9e745aa611a30e82f3e7b4a036af4",
+      "bytes": 6206
     },
-    "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.105.2.tgz": {
       "status": 200,
-      "sha256": "dc2d1c68cb25d7d9c89fe82ec4f34d98f7de55faba63a132e52153806d020b87",
-      "bytes": 211849
+      "sha256": "3b5e7125533ca6cb02ecec642400cd9b91ae4a8374a83111060f08843553d1ff",
+      "bytes": 211878
     },
     "https://registry.npmjs.org/@tanstack/react-ranger/-/react-ranger-0.0.5.tgz": {
       "status": 200,
@@ -3606,20 +3591,20 @@
       "sha256": "1065d9ce5603ff52b7207dacea492bc7eb4ed95b56dbcee903eb0a4efd32e3aa",
       "bytes": 29513
     },
-    "https://registry.npmjs.org/@tanstack/react-virtual/-/react-virtual-3.14.24.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-virtual/-/react-virtual-3.14.25.tgz": {
       "status": 200,
-      "sha256": "ef4e7354e463f5ced4e763fa291de17f2591d1ddd540a95e88b1d97302d6b161",
-      "bytes": 10083
+      "sha256": "9c3453763440fe12c41b39654346ccbe805b0964381fcb5c3ee5859ccd73a8c3",
+      "bytes": 10084
     },
     "https://registry.npmjs.org/@tanstack/react/-/react-0.1.0-alpha.0.tgz": {
       "status": 200,
       "sha256": "a1b56d159f254889b3595f562c6849ff5d8e6c04458a4bc43f224e77f876203a",
       "bytes": 14262
     },
-    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.2.3.tgz": {
+    "https://registry.npmjs.org/@tanstack/redact/-/redact-0.2.4.tgz": {
       "status": 200,
-      "sha256": "b49fa92bbf10ea64500c924ae741c6063f9a854fb4daaa9310eed1e14da19681",
-      "bytes": 1391662
+      "sha256": "46eaffcb001229f706f4fee52df7d85cb1c9630d54ee13c1ce6bbd5c2207a095",
+      "bytes": 1393749
     },
     "https://registry.npmjs.org/@tanstack/router-arktype-adapter/-/router-arktype-adapter-1.81.5.tgz": {
       "status": 200,
@@ -3711,9 +3696,9 @@
       "sha256": "ef4c132d67f01cd6e4e09c0dea961cff8a2d6cf3a368fb6d1771ac990c7405c7",
       "bytes": 8007
     },
-    "https://registry.npmjs.org/@tanstack/solid-charts/-/solid-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-charts/-/solid-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "5c2247af1f2ee9c445d5e410f8812e47569db9a3e3a8c04bc15f08f31be2b8da",
+      "sha256": "3163e83bd4c1857a8f489bca5f2ceaf57510896cfe3576e37e2a880ab970f83d",
       "bytes": 4159
     },
     "https://registry.npmjs.org/@tanstack/solid-cross-context/-/solid-cross-context-1.111.0.tgz": {
@@ -3741,15 +3726,15 @@
       "sha256": "de42d7b812b01302e4dd2588b7145818fed779f317151f91306f8af04ca19ac2",
       "bytes": 40178
     },
-    "https://registry.npmjs.org/@tanstack/solid-hotkeys-devtools/-/solid-hotkeys-devtools-0.12.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-hotkeys-devtools/-/solid-hotkeys-devtools-0.13.1.tgz": {
       "status": 200,
-      "sha256": "2caa49dcec6bf6984c4e1234f273259302a77c4858438e0a2365cb4b7ff27857",
-      "bytes": 4738
+      "sha256": "0a7d53c05c27d40a193177927d73653761cacfadc9f4f404fbeac15cf3cb0f68",
+      "bytes": 4739
     },
-    "https://registry.npmjs.org/@tanstack/solid-hotkeys/-/solid-hotkeys-0.19.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-hotkeys/-/solid-hotkeys-0.21.0.tgz": {
       "status": 200,
-      "sha256": "d4500ffaee5a861fea22e04bdbc231a5af23c2bd2fef15e8083a73c49ba86482",
-      "bytes": 15769
+      "sha256": "fa17f09d5d2785d5890cafd14fbec9d08035a89ab82bbb9faca053855e6cd74d",
+      "bytes": 16807
     },
     "https://registry.npmjs.org/@tanstack/solid-pacer-devtools/-/solid-pacer-devtools-0.8.1.tgz": {
       "status": 200,
@@ -3761,20 +3746,20 @@
       "sha256": "38cba05deab53adcf80693e91d3969b45af477bc66641b0a1939a1384590f031",
       "bytes": 34511
     },
-    "https://registry.npmjs.org/@tanstack/solid-query-devtools/-/solid-query-devtools-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-query-devtools/-/solid-query-devtools-5.105.2.tgz": {
       "status": 200,
-      "sha256": "d48b7471de351a70fa1d063db5912d8f7153334bc341b84169931c37ac157bf7",
-      "bytes": 11114
+      "sha256": "e32a4d45fdf76de25e3eb986f478f165046d7f9a3c6495b4902f32644c905f0f",
+      "bytes": 11116
     },
-    "https://registry.npmjs.org/@tanstack/solid-query-persist-client/-/solid-query-persist-client-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-query-persist-client/-/solid-query-persist-client-5.105.2.tgz": {
       "status": 200,
-      "sha256": "9b93a390b56bb1cdda308f13e619603274aba3783056ae3c239526468393bcc0",
-      "bytes": 4882
+      "sha256": "625af408701c7660a5b0b3ca005fbb65dd827ede8d956cea1208f30fec555020",
+      "bytes": 4884
     },
-    "https://registry.npmjs.org/@tanstack/solid-query/-/solid-query-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-query/-/solid-query-5.105.2.tgz": {
       "status": 200,
-      "sha256": "32a6c7be2d4fdcc006ba478e89b2beef00ba1a0e8df5e8f0d94b47ae8e0ef85a",
-      "bytes": 92750
+      "sha256": "cd14bd4872f1d1e69924f397decdc8cf769f47526b45c9c4f283f5d9f97f1a00",
+      "bytes": 92754
     },
     "https://registry.npmjs.org/@tanstack/solid-router-devtools/-/solid-router-devtools-1.167.2.tgz": {
       "status": 200,
@@ -3836,10 +3821,10 @@
       "sha256": "41a64eddba662e0ac28a3e0fdc378754b64c8f44f9e9eaa645c486e94d959701",
       "bytes": 19205
     },
-    "https://registry.npmjs.org/@tanstack/solid-virtual/-/solid-virtual-3.13.51.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-virtual/-/solid-virtual-3.13.52.tgz": {
       "status": 200,
-      "sha256": "b2947aad8919ff1485c5027a30d97d486476c9bb82b5660b94766408371e989b",
-      "bytes": 4770
+      "sha256": "9d2c78df2def6e899ec0c0d5ad723d17311b9b6d34c6d45c9cc3ed7d4c77fad2",
+      "bytes": 4771
     },
     "https://registry.npmjs.org/@tanstack/start-api-routes/-/start-api-routes-1.120.19.tgz": {
       "status": 200,
@@ -3946,9 +3931,9 @@
       "sha256": "a15c6d7c89d176fb49f85c426ab55cd185bd594368ac8423be06ff669a0d962f",
       "bytes": 7983
     },
-    "https://registry.npmjs.org/@tanstack/svelte-charts/-/svelte-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-charts/-/svelte-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "d7437752c86ca4e59bb4d8e6a2c080d74a27641ce8424d8f5b0dfa2804fd72fb",
+      "sha256": "e69a45f34bdfe0855dc2139ec4f885eb293ca05954a43410f5d1b809a1b0aea2",
       "bytes": 4559
     },
     "https://registry.npmjs.org/@tanstack/svelte-db/-/svelte-db-1.0.0-rc.1.1.tgz": {
@@ -3966,15 +3951,15 @@
       "sha256": "f8713a67069cb5fe051f9035361ea7a2aadad800fdacf3eda7308a699aa9e990",
       "bytes": 12305
     },
-    "https://registry.npmjs.org/@tanstack/svelte-hotkeys-devtools/-/svelte-hotkeys-devtools-0.4.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-hotkeys-devtools/-/svelte-hotkeys-devtools-0.5.1.tgz": {
       "status": 200,
-      "sha256": "477814567c7ca2b1738930f8c7a837b6fcab38a01c928e02f8b6496b76023083",
-      "bytes": 4496
+      "sha256": "f6ca8a1dd806224c2f65e22cedcd109f2e31e4aeb8bef90bac327bcc12a0302e",
+      "bytes": 4497
     },
-    "https://registry.npmjs.org/@tanstack/svelte-hotkeys/-/svelte-hotkeys-0.19.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-hotkeys/-/svelte-hotkeys-0.21.0.tgz": {
       "status": 200,
-      "sha256": "ff8ea7ba1ef1e2d8f63e50f6dd7fb557f30792e13f8615eba852bd621ed0a465",
-      "bytes": 17154
+      "sha256": "c9c51e4e90ed194d1f7b399eb93d808b2f9538f2f5003d2329ddbd4ed4234eb3",
+      "bytes": 18005
     },
     "https://registry.npmjs.org/@tanstack/svelte-pacer-devtools/-/svelte-pacer-devtools-0.2.0.tgz": {
       "status": 200,
@@ -3986,20 +3971,20 @@
       "sha256": "a45453b8d9044ae1bcc0d65a22c23c3d00c605851c8fa25e32e3503eea15ce28",
       "bytes": 23180
     },
-    "https://registry.npmjs.org/@tanstack/svelte-query-devtools/-/svelte-query-devtools-6.3.7.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-query-devtools/-/svelte-query-devtools-6.3.8.tgz": {
       "status": 200,
-      "sha256": "100dce546886a5f59d1b235dc503633c4f8c323ccd02dfc09683d8079c00c9d9",
-      "bytes": 3850
+      "sha256": "0191d63c2bbac3cf2972dccd4fc6b5e4cb5a6b861123cce6377644cd17993a50",
+      "bytes": 3852
     },
-    "https://registry.npmjs.org/@tanstack/svelte-query-persist-client/-/svelte-query-persist-client-6.3.7.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-query-persist-client/-/svelte-query-persist-client-6.3.8.tgz": {
       "status": 200,
-      "sha256": "e9911d00e253a86510d5f687be4eb40555500f09632b23b29ddcbc3a6b8d9ba0",
-      "bytes": 3485
+      "sha256": "4107e329b09d2eba1e1eaa517b24e07eadb69dbfb55c728967ad590ac53223e3",
+      "bytes": 3483
     },
-    "https://registry.npmjs.org/@tanstack/svelte-query/-/svelte-query-6.3.7.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-query/-/svelte-query-6.3.8.tgz": {
       "status": 200,
-      "sha256": "8bc9dcab59bd0f9bc1c1513f97383cf6cb88487ca650cfecb6a45027527edd54",
-      "bytes": 44054
+      "sha256": "b9db5c6928f8340b4f04ae1d35180b7895a09f0a1c0da48a2de18534a2f6c710",
+      "bytes": 44052
     },
     "https://registry.npmjs.org/@tanstack/svelte-store/-/svelte-store-0.12.3.tgz": {
       "status": 200,
@@ -4011,10 +3996,10 @@
       "sha256": "a87f2804a8145c2868f205c7ba0270ea49cab2598954c232c0c7795a762f4a5e",
       "bytes": 25902
     },
-    "https://registry.npmjs.org/@tanstack/svelte-virtual/-/svelte-virtual-3.13.50.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-virtual/-/svelte-virtual-3.13.51.tgz": {
       "status": 200,
-      "sha256": "e7703bef6856dbc3ee3a51163ff1a7756676228150d89cde157c6d3db437dcad",
-      "bytes": 2742
+      "sha256": "b276929cdf1b6dcc36f49151cbff025b20ef9e67a229f9957421319aacf8d0e3",
+      "bytes": 2743
     },
     "https://registry.npmjs.org/@tanstack/table-core/-/table-core-9.3.1.tgz": {
       "status": 200,
@@ -4051,10 +4036,10 @@
       "sha256": "9d5e8c4bf3c6d3ece7179c107738bb43f3313cbcf8d9b98dd911c2c166597cff",
       "bytes": 4203
     },
-    "https://registry.npmjs.org/@tanstack/virtual-core/-/virtual-core-3.19.9.tgz": {
+    "https://registry.npmjs.org/@tanstack/virtual-core/-/virtual-core-3.19.10.tgz": {
       "status": 200,
-      "sha256": "5d8d0973f9be6d710f9b5d3605271b33213cda1c920d05b2cfae306bef1706c2",
-      "bytes": 167842
+      "sha256": "8625316efe9d0b14d3097871318b097afb5f3cd8eb9306921678461e7dbb94f9",
+      "bytes": 168591
     },
     "https://registry.npmjs.org/@tanstack/virtual-file-routes/-/virtual-file-routes-1.162.0.tgz": {
       "status": 200,
@@ -4066,9 +4051,9 @@
       "sha256": "3648af8c5fade1018f5ff9fa76f6450c205843df523ebc2b8299d8370f7bfe37",
       "bytes": 4702
     },
-    "https://registry.npmjs.org/@tanstack/vue-charts/-/vue-charts-1.1.0.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-charts/-/vue-charts-1.2.0.tgz": {
       "status": 200,
-      "sha256": "0cc4152eda9acddfc2000736227ae246c5d92447fd44a7747c51834729176e9a",
+      "sha256": "1de9127397f60c65f5609d8618bc9f07e51d6a20a5eb65a2cc90145e2b66e516",
       "bytes": 4327
     },
     "https://registry.npmjs.org/@tanstack/vue-db/-/vue-db-1.0.0-rc.1.1.tgz": {
@@ -4086,15 +4071,15 @@
       "sha256": "63b544b01fadc1383fc4fc2cc942e85c290e20216cc9b16704e183203a598939",
       "bytes": 21428
     },
-    "https://registry.npmjs.org/@tanstack/vue-hotkeys-devtools/-/vue-hotkeys-devtools-0.12.2.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-hotkeys-devtools/-/vue-hotkeys-devtools-0.13.1.tgz": {
       "status": 200,
-      "sha256": "494e5fb5252a14f615d6b2b0a58e1e24ee39d9c05dcad393418a7f770a34d321",
+      "sha256": "ad57e6681a882971733b3f1999f449f06c9c5a90a25508681d5b9ff56fcb6b18",
       "bytes": 5075
     },
-    "https://registry.npmjs.org/@tanstack/vue-hotkeys/-/vue-hotkeys-0.19.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-hotkeys/-/vue-hotkeys-0.21.1.tgz": {
       "status": 200,
-      "sha256": "2967298808d7d11579c24a866ee375daac10087e0c121016a76316deedc02dd6",
-      "bytes": 17567
+      "sha256": "6bc960525fbdcafb94ad73bce447b4cd1ca3ec930d5036e73f3f0a5d1b29eb01",
+      "bytes": 18755
     },
     "https://registry.npmjs.org/@tanstack/vue-pacer-devtools/-/vue-pacer-devtools-0.2.0.tgz": {
       "status": 200,
@@ -4106,15 +4091,15 @@
       "sha256": "c8cae03e6adb3fa02a86ef81b274f2869e7bb28d77ac8ca004e9772147fdf6d5",
       "bytes": 22756
     },
-    "https://registry.npmjs.org/@tanstack/vue-query-devtools/-/vue-query-devtools-6.3.7.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-query-devtools/-/vue-query-devtools-6.3.8.tgz": {
       "status": 200,
-      "sha256": "60763ea1b61405a244d44343e0c5a1a42fa0d8bfe32855bcd7c143fc443fcaac",
+      "sha256": "e08224824a9bbdea604b213111ff103c54ab092d91cd12779493b13f6204a51d",
       "bytes": 6421
     },
-    "https://registry.npmjs.org/@tanstack/vue-query/-/vue-query-5.105.1.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-query/-/vue-query-5.105.2.tgz": {
       "status": 200,
-      "sha256": "c8780fe5d6aa3915159e43390f363c0300d1d45a819f528f7c211e4627b55438",
-      "bytes": 211863
+      "sha256": "9fbd2c8585c4acaa08785cf7e493d47d94efd8550b42bb66d249adc226820f67",
+      "bytes": 211866
     },
     "https://registry.npmjs.org/@tanstack/vue-router-devtools/-/vue-router-devtools-1.167.2.tgz": {
       "status": 200,
@@ -4161,10 +4146,10 @@
       "sha256": "d2922a75c142c53c0e6c7b32c60693a99f4e7f972bc910493469f72c431713e1",
       "bytes": 18621
     },
-    "https://registry.npmjs.org/@tanstack/vue-virtual/-/vue-virtual-3.13.50.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-virtual/-/vue-virtual-3.13.51.tgz": {
       "status": 200,
-      "sha256": "a39819c0102d33e97215c8b712c0402d8e5c47489e9023ffcb5d049edfa89dc0",
-      "bytes": 4006
+      "sha256": "23ab4f283fab3e0e0accb7877003918f12bb1c1d21816c0fe0e114f875a8bc50",
+      "bytes": 4002
     },
     "https://registry.npmjs.org/@tanstack/workflow-cloudflare/-/workflow-cloudflare-0.0.3.tgz": {
       "status": 200,

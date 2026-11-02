@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-cli-query-docs-library-metadata"></a>
 
-Published skill · `@tanstack/cli@0.72.0`.
+Published skill · `@tanstack/cli@0.72.7`.
 
 [Topic index](../ecosystem-discovery.md) · [Source provenance](../SOURCES.md)
 

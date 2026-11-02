@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.22.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -20,9 +20,10 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [The browser's action is prevented](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--the-browser-s-action-is-prevented.md) — 2 KiB
 - [Hotkeys that can't fire leave the key alone](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-that-can-t-fire-leave-the-key-alone.md) — 3 KiB
 - [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--single-key-shortcuts-need-an-off-switch.md) — 2 KiB
-- [Chords fire on keydown and repeat while held](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--chords-fire-on-keydown-and-repeat-while-held.md) — 1 KiB
+- [Chords fire on keydown and repeat while held](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--chords-fire-on-keydown-and-repeat-while-held.md) — 2 KiB
 - [Listeners attach to the document](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--listeners-attach-to-the-document.md) — 1 KiB
 - [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-run-after-the-page-s-own-handlers.md) — 2 KiB
+- [Component libraries that handle the same keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--component-libraries-that-handle-the-same-keys.md) — 10 KiB
 - [Sequences allow 1 second between steps](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--sequences-allow-1-second-between-steps.md) — 2 KiB
 - [Duplicate registrations warn](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--duplicate-registrations-warn.md) — 1 KiB
 - [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md) — 2 KiB
@@ -44,12 +45,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="chords-fire-on-keydown-and-repeat-while-held"></a>
 <a id="listeners-attach-to-the-document"></a>
 <a id="hotkeys-run-after-the-pages-own-handlers"></a>
-<a id="sequences-allow-1-second-between-steps"></a>
-<a id="duplicate-registrations-warn"></a>
-<a id="recording-captures-what-the-user-pressed"></a>
-<a id="held-keys-reset-when-the-window-loses-focus"></a>
-<a id="display-matches-the-platform"></a>
-<a id="changing-the-defaults"></a>
+<a id="component-libraries-that-handle-the-same-keys"></a>
+<a id="skip-keys-a-library-already-handled"></a>
 <a id="react"></a>
 <a id="preact"></a>
 <a id="solid"></a>
@@ -60,3 +57,30 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="alpine"></a>
 <a id="ember"></a>
 <a id="octane"></a>
+<a id="let-an-open-overlay-handle-escape"></a>
+<a id="react-1"></a>
+<a id="preact-1"></a>
+<a id="solid-1"></a>
+<a id="angular-1"></a>
+<a id="vue-1"></a>
+<a id="svelte-1"></a>
+<a id="lit-1"></a>
+<a id="alpine-1"></a>
+<a id="ember-1"></a>
+<a id="octane-1"></a>
+<a id="sequences-allow-1-second-between-steps"></a>
+<a id="duplicate-registrations-warn"></a>
+<a id="recording-captures-what-the-user-pressed"></a>
+<a id="held-keys-reset-when-the-window-loses-focus"></a>
+<a id="display-matches-the-platform"></a>
+<a id="changing-the-defaults"></a>
+<a id="react-2"></a>
+<a id="preact-2"></a>
+<a id="solid-2"></a>
+<a id="angular-2"></a>
+<a id="vue-2"></a>
+<a id="svelte-2"></a>
+<a id="lit-2"></a>
+<a id="alpine-2"></a>
+<a id="ember-2"></a>
+<a id="octane-2"></a>
