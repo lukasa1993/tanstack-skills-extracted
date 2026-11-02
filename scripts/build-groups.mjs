@@ -19,6 +19,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { categoryGroups, expectedCatalogIds } from './catalog-config.mjs'
 import { createThemeBuckets, resolveProduct, selectTheme, withDocumentedFrameworkThemes } from './product-routing.mjs'
 import { guideId, planGuide, sourceStatus } from './guide-layout.mjs'
+import { rewriteRepositoryLinks } from './repository-links.mjs'
 
 const root = resolve(process.env.TANSTACK_BUILD_ROOT || resolve(dirname(fileURLToPath(import.meta.url)), '..'))
 const exampleDir = join(dirname(fileURLToPath(import.meta.url)), 'examples')
@@ -709,10 +710,10 @@ async function collectDocAssetMap(docBundle, outputDir) {
   return map
 }
 
-function rewriteLinks(text, context) {
+export function rewriteLinks(text, context) {
   const rewriteLine = (line) => line.replace(/\]\(([^)]+)\)/g, (match, rawTarget, offset) => {
     if (isInsideInlineCode(line, offset)) return match
-    const wrapped = rawTarget.trim()
+    const wrapped = rawTarget.trim().match(/^(<[^>]+>|\S+)/)?.[1] || ''
     const targetValue = wrapped.startsWith('<') && wrapped.endsWith('>') ? wrapped.slice(1, -1) : wrapped
     const liveGithub = targetValue.match(/^https:\/\/github\.com\/([^/]+\/[^/]+)\/(?:blob|tree)\/(?:main|master)\/([^#?]+)([?#].*)?$/i)
     if (liveGithub && context.source.sourceDocuments?.includes(`${liveGithub[1]}:${liveGithub[2]}`)) {
@@ -720,8 +721,6 @@ function rewriteLinks(text, context) {
       if (!output) throw new Error(`source document link has no bundled output: ${context.source.id}`)
       return `](${relativeLink(context.outputFile, output.file)}#${output.anchor})`
     }
-    const pinned = pinMutableRepositoryRefs(targetValue, gitSource(context.source))
-    if (pinned !== targetValue) return `](${pinned})`
     const parts = targetValue.match(/^([^#?]*)([?#].*)?$/)
     if (!parts) return match
     let target = parts[1]
@@ -768,7 +767,7 @@ function rewriteLinks(text, context) {
     return `](https://github.com/${repo}/blob/${commit}/${resolvedSourcePath}${suffix})`
   })
   let fence = null
-  return text.split('\n').map((line) => {
+  const rewritten = text.split('\n').map((line) => {
     const fenceMatch = line.match(/^\s*(```+|~~~+)/)
     if (fenceMatch) {
       const marker = fenceMatch[1]
@@ -776,8 +775,9 @@ function rewriteLinks(text, context) {
       else if (fence.character === marker[0] && marker.length >= fence.length) fence = null
       return line
     }
-    return fence ? line : pinMutableRepositoryRefsInLine(rewriteAtomicLiteralSkillPaths(rewriteLine(line), context), context.source)
+    return fence ? line : rewriteAtomicLiteralSkillPaths(rewriteLine(line), context)
   }).join('\n')
+  return rewriteRepositoryLinks(rewritten, gitSource(context.source))
 }
 
 function isInsideInlineCode(line, index) {
@@ -855,32 +855,6 @@ function gitSource(source) {
   }
   const match = source.sourceRef?.match(/^github:([^@]+)@([0-9a-f]{40})#/i)
   return match ? { repository: match[1], commit: match[2] } : null
-}
-
-function pinMutableRepositoryRefs(value, sourceGit) {
-  if (!sourceGit) return value
-  const escapedRepo = sourceGit.repository.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  const patterns = [
-    new RegExp(`(https://github\\.com/${escapedRepo}/(?:blob|tree)/)(?:main|master)(?=/|[?#]|$)`, 'gi'),
-    new RegExp(`(https://raw\\.githubusercontent\\.com/${escapedRepo}/)(?:main|master)(?=/|[?#]|$)`, 'gi'),
-    new RegExp(`(https://(?:codesandbox\\.io/s/|stackblitz\\.com/)github/${escapedRepo}/(?:blob|tree)/)(?:main|master)(?=/|[?#]|$)`, 'gi'),
-  ]
-  return patterns.reduce((result, pattern) => result.replace(pattern, `$1${sourceGit.commit}`), value)
-}
-
-function pinMutableRepositoryRefsInLine(line, source) {
-  const sourceGit = gitSource(source)
-  if (!sourceGit) return line
-  return line.replace(/https:\/\/[^\s<>"'`)]+/gi, (url, offset) =>
-    isInsideInlineCode(line, offset) ? url : pinMutableRepositoryRefs(url, sourceGit))
-}
-
-function containsMutableRepositoryRef(value) {
-  return [
-    /https:\/\/github\.com\/[^/\s]+\/[^/\s]+\/(?:blob|tree)\/(?:main|master)(?=\/|[?#]|$)/i,
-    /https:\/\/raw\.githubusercontent\.com\/[^/\s]+\/[^/\s]+\/(?:main|master)(?=\/|[?#]|$)/i,
-    /https:\/\/(?:codesandbox\.io\/s\/|stackblitz\.com\/)github\/[^/\s]+\/[^/\s]+\/(?:blob|tree)\/(?:main|master)(?=\/|[?#]|$)/i,
-  ].some((pattern) => pattern.test(value))
 }
 
 function relativeLink(fromFile, toFile) {
@@ -1209,6 +1183,8 @@ async function buildProduct(spec, primaryAtomic, atomicSkills, docSources, stage
   const sourcesMarkdown = [
     '# Source provenance',
     '',
+    'Imported material is tied to the versions and commits below. Outbound links to other repositories are preserved as upstream references; their contents are not part of this release snapshot and may change independently.',
+    '',
     '| Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |',
     '| --- | --- | --- | --- | --- | --- |',
     ...provenanceSources.map((source) =>
@@ -1312,7 +1288,7 @@ function hasMarkdownFragment(text, fragment) {
   return markdownHeadingFragments(text).has(fragment)
 }
 
-async function validateProduct(directory, spec, themes) {
+export async function validateProduct(directory, spec, themes) {
   const rootSkill = join(directory, 'SKILL.md')
   const text = await readFile(rootSkill, 'utf8')
   const parsed = parseFrontmatter(text, rootSkill)
@@ -1343,12 +1319,6 @@ async function validateProduct(directory, spec, themes) {
         continue
       }
       if (fence) continue
-      for (const match of line.matchAll(/https:\/\/[^\s<>"'`)]+/gi)) {
-        if (isInsideInlineCode(line, match.index)) continue
-        if (containsMutableRepositoryRef(match[0])) {
-          throw new Error(`mutable repository reference in generated content: ${file} -> ${match[0]}`)
-        }
-      }
       for (const match of line.matchAll(/\]\(([^)]+)\)/g)) {
         if (isInsideInlineCode(line, match.index)) continue
         const raw = match[1].trim().replace(/^<|>$/g, '')

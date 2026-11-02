@@ -23,6 +23,9 @@ should require little routine maintainer intervention.
   Distinguish released guidance, documentation-derived guidance, and drafts.
   An official repository location alone does not establish compatibility with
   the installed release.
+  Outbound references are preserved as authored and do not become mandatory
+  acquisition dependencies. Release provenance covers the imported material,
+  not the independently changing contents of other repositories.
 - **Honest coverage:** a listed framework needs an actionable route. Cross-framework
   translation requirements and missing guidance must be visible.
 - **Controlled context use:** preserve source material while making individual
@@ -66,6 +69,7 @@ Its product guides now draw on extracted skills and 362 official documents.
 | Implement a reactive query in a Vue project | The route supplies actionable Vue guidance and makes any React-only examples or draft assumptions explicit. |
 | Add validation to a React Form project | The route reaches the needed validation guidance; record the amount of unrelated content the agent must read. |
 | Upstream adds a skill or adapter | Preserve the source and report any routing or coverage gap without silently claiming support. |
+| Upstream adds, moves, or removes an external reference | Preserve the citation without a URL allowlist or a new network dependency; keep imported source provenance and installed navigation checks. |
 | A source fetch fails | Existing published skills remain usable; the refresh reports what could not be verified. |
 | An unrelated package changes | Its metadata change alone does not cause a new skill release or a repeat index report. |
 

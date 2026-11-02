@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import test from 'node:test'
-import { buildAtomicOriginMaps, rewriteAtomicAssets } from './build-groups.mjs'
+import { buildAtomicOriginMaps, rewriteAtomicAssets, rewriteLinks, validateProduct } from './build-groups.mjs'
 import { reachableFiles } from './validate-guidance.mjs'
 
 function atomicSource(name, packageName, sourcePath) {
@@ -14,6 +14,26 @@ const routerCore = atomicSource('tanstack-router-core', '@tanstack/router-core',
 const queryComposition = atomicSource('tanstack-query-intent-compositions-compose-query-with-t-d0bcdebe',
   '@tanstack/query-intent', 'compositions/compose-query-with-tanstack-router')
 const legacySources = [routerCore, queryComposition]
+
+test('product validation permits external references while rejecting broken installed navigation', async (t) => {
+  const root = await mkdtemp(join(tmpdir(), 'tanstack-external-reference-'))
+  t.after(() => rm(root, { recursive: true, force: true }))
+  await mkdir(join(root, 'references'))
+  await writeFile(join(root, 'SKILL.md'), '---\nname: tanstack-hotkeys\ndescription: Hotkeys guide\n---\n[Guide](references/guide.md)\n')
+  const source = { kind: 'document', id: 'hotkeys:guide', productManifest: { repository: 'TanStack/hotkeys' }, sourceCommit: 'a'.repeat(40) }
+  const body = '# Guide\n[SSR](https://github.com/octanejs/octane/blob/main/docs/ssr.md)\n' +
+    '[Owned](<https://github.com/TanStack/hotkeys/blob/main/docs/overview.md> "Title")\n'
+  const output = rewriteLinks(body, { source })
+  assert.ok(output.includes('octanejs/octane/blob/main/docs/ssr.md'))
+  assert.ok(output.includes(`](<https://github.com/TanStack/hotkeys/blob/${source.sourceCommit}/docs/overview.md> "Title")`))
+  await writeFile(join(root, 'references/guide.md'), output)
+  const spec = { id: 'hotkeys', name: 'tanstack-hotkeys' }
+  await validateProduct(root, spec, [])
+  await writeFile(join(root, 'references/guide.md'), `${output}\n[Missing](missing.md)\n`)
+  await assert.rejects(validateProduct(root, spec, []), /broken generated link/)
+  await writeFile(join(root, 'references/guide.md'), `${output}\n[Missing section](guide.md#missing)\n`)
+  await assert.rejects(validateProduct(root, spec, []), /broken generated fragment/)
+})
 
 test('legacy Router links retain fallback targets when the upstream paths are absent', () => {
   const { atomicOriginMap } = buildAtomicOriginMaps(legacySources)

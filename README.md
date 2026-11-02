@@ -84,6 +84,14 @@ Downloaded bodies live in the ignored `.tanstack-source-cache/`, with their
 hashes checked on every read. Fresh runs resolve moving sources again and reuse
 immutable archives. An outage never silently substitutes old mutable metadata.
 
+Release matching applies to imported source material. Links into its source
+repository are pinned to the verified commit. Outbound references to other
+repositories stay as upstream wrote them; they are not fetched or treated as
+release-matched content. New, moved, or removed external citations require no
+exporter configuration change. Their URLs are recorded in documentation
+provenance, and installed source notes explain this boundary. Corrupt sources,
+missing required guidance, and broken links inside an installation still fail.
+
 Rebuild the exact saved snapshot without network access:
 
 ```sh

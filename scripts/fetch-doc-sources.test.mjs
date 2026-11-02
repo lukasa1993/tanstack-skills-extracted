@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { products, validateReleaseVersion, validateDocumentSet } from './fetch-doc-sources.mjs'
+import { products, validateReleaseVersion, validateDocumentSet, rewriteMarkdownLinks } from './fetch-doc-sources.mjs'
+import { rewriteRepositoryLinks } from './repository-links.mjs'
+import { rewriteLinks } from './build-groups.mjs'
 
 test('every product follows upstream releases across major versions', () => {
   for (const product of products) {
@@ -32,4 +34,20 @@ test('official release documents determine framework coverage as adapters evolve
   assert.deepEqual(validateDocumentSet(product, documents), ['alpine', 'new-framework', 'react'])
   assert.throws(() => validateDocumentSet(product, documents.slice(1)), /no required overview/)
   assert.throws(() => validateDocumentSet(product, []), /no selected documents/)
+})
+
+test('new external references survive document import and product guide generation', () => {
+  const sourcePath = 'docs/framework/octane/guides/formatting-display.md'
+  const sourceGit = { repository: 'TanStack/hotkeys', commit: 'a'.repeat(40) }
+  const external = 'https://github.com/octanejs/octane/blob/main/docs/ssr.md'
+  const owned = 'https://github.com/TanStack/hotkeys/blob/main/docs/overview.md'
+  const body = `# Formatting display\n\n[SSR](${external}#hydration)\n[Overview](${owned})\n`
+  const imported = rewriteRepositoryLinks(rewriteMarkdownLinks(body, sourcePath,
+    (value) => ({ destination: value })), sourceGit)
+  const context = { source: { kind: 'document', id: `hotkeys:${sourcePath}`, sourcePath,
+    sourceCommit: sourceGit.commit, productManifest: sourceGit } }
+  const output = rewriteLinks(imported, context)
+  assert.ok(output.includes(`[SSR](${external}#hydration)`))
+  assert.ok(output.includes(owned.replace('/main/', `/${sourceGit.commit}/`)))
+  assert.equal(rewriteLinks(output, context), output)
 })

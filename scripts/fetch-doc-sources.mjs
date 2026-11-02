@@ -16,23 +16,12 @@ import { dirname, join, posix, resolve, sep } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
 import { sources } from './source-client.mjs'
-import { expectedCatalogIds, inspectCatalogIds } from './catalog-config.mjs'
+import { inspectCatalogIds } from './catalog-config.mjs'
+import { repositoryLink, rewriteRepositoryLinks } from './repository-links.mjs'
 
 const root = resolve(process.env.TANSTACK_BUILD_ROOT || resolve(dirname(fileURLToPath(import.meta.url)), '..'))
 const outputDir = join(root, '.tanstack-doc-sources')
 const catalogUrl = 'https://tanstack.com/api/data/libraries'
-const expectedLibraryIds = expectedCatalogIds
-
-const externalGithubLinkSpecs = [
-  {
-    productId: 'config',
-    sourcePath: 'docs/publish.md',
-    originalUrl:
-      'https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md',
-    repository: 'sxzz/userscripts',
-    targetPath: 'src/npm-trusted-publisher.md',
-  },
-]
 
 export const products = [
   {
@@ -397,138 +386,6 @@ async function fetchJson(url, options) {
     }
     throw error
   }
-}
-
-function parseExternalGithubLinkSpec(spec) {
-  assertPlainObject(spec, 'external GitHub link configuration')
-  if (
-    typeof spec.productId !== 'string' ||
-    !expectedLibraryIds.includes(spec.productId) ||
-    typeof spec.repository !== 'string' ||
-    !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(spec.repository)
-  ) {
-    fail('External GitHub link configuration has an invalid product or repository')
-  }
-  assertSafeRelativePath(spec.sourcePath, 'external link source path')
-  assertSafeRelativePath(spec.targetPath, 'external link target path')
-  const url = checkedUrl(spec.originalUrl, ['github.com'], 'external GitHub link')
-  if (url.search) fail(`External GitHub link must not have a query: ${url.href}`)
-  let parts
-  try {
-    parts = url.pathname
-      .split('/')
-      .filter(Boolean)
-      .map((part) => decodeURIComponent(part))
-  } catch {
-    fail(`External GitHub link has invalid URL encoding: ${url.href}`)
-  }
-  if (
-    `${parts[0]}/${parts[1]}` !== spec.repository ||
-    parts[2] !== 'blob' ||
-    !['main', 'master'].includes(parts[3]) ||
-    parts.slice(4).join('/') !== spec.targetPath
-  ) {
-    fail(`External GitHub link does not match its configured repository and path: ${url.href}`)
-  }
-  return { ...spec, originalUrl: url.href, originalBranch: parts[3] }
-}
-
-async function resolveExternalGithubLinks() {
-  const specs = externalGithubLinkSpecs
-    .map(parseExternalGithubLinkSpec)
-    .sort((left, right) =>
-      `${left.productId}\t${left.sourcePath}\t${left.originalUrl}`.localeCompare(
-        `${right.productId}\t${right.sourcePath}\t${right.originalUrl}`,
-      ),
-    )
-  const identities = new Set()
-  for (const spec of specs) {
-    const identity = `${spec.productId}\t${spec.sourcePath}\t${spec.originalUrl}`
-    if (identities.has(identity)) fail(`Duplicate external GitHub link configuration: ${identity}`)
-    identities.add(identity)
-  }
-
-  const repositoryResolutions = new Map()
-  const resolved = []
-  for (const spec of specs) {
-    let repositoryResolution = repositoryResolutions.get(spec.repository)
-    if (!repositoryResolution) {
-      const repositoryApiUrl = `https://api.github.com/repos/${spec.repository}`
-      const repositoryMetadata = assertPlainObject(
-        await fetchJson(repositoryApiUrl, {
-          hosts: ['api.github.com'],
-          label: `${spec.repository} GitHub repository metadata`,
-          limit: maxBytes.githubApi,
-        }),
-        `${spec.repository} GitHub repository metadata`,
-      )
-      const defaultBranch = repositoryMetadata.default_branch
-      if (
-        repositoryMetadata.full_name?.toLowerCase() !== spec.repository.toLowerCase() ||
-        typeof defaultBranch !== 'string' ||
-        !/^[A-Za-z0-9._/-]+$/.test(defaultBranch)
-      ) {
-        fail(`${spec.repository} has invalid GitHub repository metadata`)
-      }
-      repositoryResolution = {
-        repositoryApiUrl,
-        defaultBranch,
-      }
-      repositoryResolutions.set(spec.repository, repositoryResolution)
-    }
-    if (spec.originalBranch !== repositoryResolution.defaultBranch) {
-      fail(
-        `${spec.originalUrl} names ${spec.originalBranch}, but ${spec.repository} uses default branch ${repositoryResolution.defaultBranch}`,
-      )
-    }
-
-    const commitApi = new URL(`${repositoryResolution.repositoryApiUrl}/commits`)
-    commitApi.searchParams.set('sha', repositoryResolution.defaultBranch)
-    commitApi.searchParams.set('path', spec.targetPath)
-    commitApi.searchParams.set('per_page', '1')
-    const commitApiUrl = commitApi.href
-    const commitList = await fetchJson(commitApiUrl, {
-      hosts: ['api.github.com'],
-      label: `${spec.repository} latest ${spec.targetPath} commit`,
-      limit: maxBytes.githubApi,
-    })
-    if (!Array.isArray(commitList) || commitList.length !== 1) {
-      fail(`${spec.repository} ${spec.targetPath} did not resolve to one latest commit`)
-    }
-    const commitMetadata = assertPlainObject(
-      commitList[0],
-      `${spec.repository} latest ${spec.targetPath} commit`,
-    )
-    const commit = commitMetadata.sha
-    if (
-      typeof commit !== 'string' ||
-      !/^[0-9a-f]{40}$/.test(commit) ||
-      commitMetadata.html_url !== `https://github.com/${spec.repository}/commit/${commit}`
-    ) {
-      fail(`${spec.repository} ${spec.targetPath} did not resolve to one full Git commit`)
-    }
-
-    const encodedPath = encodedRepositoryPath(spec.targetPath)
-    const pinnedUrl = `https://github.com/${spec.repository}/blob/${commit}/${encodedPath}`
-    const contentUrl = `https://raw.githubusercontent.com/${spec.repository}/${commit}/${encodedPath}`
-    const content = await fetchBytes(contentUrl, {
-      hosts: ['raw.githubusercontent.com'],
-      label: `${spec.repository} pinned external document`,
-      limit: maxBytes.document,
-    })
-    if (!content.length) fail(`${spec.repository} pinned external document is empty`)
-    decodeUtf8(content, `${spec.repository} pinned external document`)
-    resolved.push({
-      ...spec,
-      ...repositoryResolution,
-      commitApiUrl,
-      commit,
-      pinnedUrl,
-      contentUrl,
-      contentSha256: sha256(content),
-    })
-  }
-  return resolved
 }
 
 function decodeBase64(value, label) {
@@ -971,38 +828,10 @@ function isAssetPath(path) {
 }
 
 function sameRepositoryUrlTarget(product, destination) {
-  let url
-  try {
-    url = new URL(destination)
-  } catch {
-    return undefined
-  }
-  const parts = url.pathname.split('/').filter(Boolean)
-  const [owner, repository] = product.repository.split('/')
-  if (parts[0]?.toLowerCase() !== owner.toLowerCase() || parts[1]?.toLowerCase() !== repository.toLowerCase()) {
-    return undefined
-  }
-
-  if (url.hostname === 'github.com' && ['blob', 'tree'].includes(parts[2])) {
-    if (parts.length < 5) return undefined
-    return {
-      path: parts.slice(4).map((part) => decodeURIComponent(part)).join('/'),
-      type: parts[2] === 'tree' ? 'directory' : 'file',
-      suffix: `${url.search}${url.hash}`,
-    }
-  }
-  if (url.hostname === 'raw.githubusercontent.com') {
-    let pathStart = 3
-    if (parts[2] === 'refs' && parts[3] === 'heads') pathStart = 5
-    if (parts.length <= pathStart) return undefined
-    return {
-      path: parts.slice(pathStart).map((part) => decodeURIComponent(part)).join('/'),
-      type: 'file',
-      raw: true,
-      suffix: `${url.search}${url.hash}`,
-    }
-  }
-  return undefined
+  const link = repositoryLink(destination)
+  return link?.repository.toLowerCase() === product.repository.toLowerCase() &&
+    ['github.com', 'raw.githubusercontent.com'].includes(link.url.hostname) && link.kind !== 'commits'
+    ? link : undefined
 }
 
 function inlineCodeRanges(line) {
@@ -1028,62 +857,7 @@ function insideRange(index, ranges) {
   return ranges.some(([start, end]) => index >= start && index < end)
 }
 
-function isMutableGithubUrl(value) {
-  let url
-  try {
-    url = new URL(value)
-  } catch {
-    return false
-  }
-  let parts
-  try {
-    parts = url.pathname
-      .split('/')
-      .filter(Boolean)
-      .map((part) => decodeURIComponent(part).toLowerCase())
-  } catch {
-    fail(`GitHub link has invalid URL encoding: ${value}`)
-  }
-  if (url.hostname === 'github.com') {
-    if (!['blob', 'tree', 'raw', 'commits'].includes(parts[2])) return false
-    const branch =
-      parts[3] === 'refs' && parts[4] === 'heads' ? parts[5] : parts[3]
-    return ['main', 'master'].includes(branch)
-  }
-  if (url.hostname === 'raw.githubusercontent.com') {
-    const branch =
-      parts[2] === 'refs' && parts[3] === 'heads' ? parts[4] : parts[2]
-    return ['main', 'master'].includes(branch)
-  }
-  return false
-}
-
-function assertNoMutableGithubLinks(text, label) {
-  const lines = text.match(/[^\n]*\n|[^\n]+$/g) ?? []
-  let fence
-  for (const line of lines) {
-    const fenceMatch = /^ {0,3}(`{3,}|~{3,})/.exec(line)
-    if (fenceMatch) {
-      const marker = fenceMatch[1]
-      if (!fence) {
-        fence = { character: marker[0], length: marker.length }
-      } else if (marker[0] === fence.character && marker.length >= fence.length) {
-        fence = undefined
-      }
-      continue
-    }
-    if (fence) continue
-    const codeRanges = inlineCodeRanges(line)
-    const pattern = /https:\/\/(?:github\.com|raw\.githubusercontent\.com)\/[^\s<>"'`)\]}]+/gi
-    for (const match of line.matchAll(pattern)) {
-      if (!insideRange(match.index, codeRanges) && isMutableGithubUrl(match[0])) {
-        fail(`${label} retained mutable GitHub branch link ${match[0]}`)
-      }
-    }
-  }
-}
-
-function rewriteMarkdownLinks(text, sourcePath, resolveDestination) {
+export function rewriteMarkdownLinks(text, sourcePath, resolveDestination) {
   const lines = text.match(/[^\n]*\n|[^\n]+$/g) ?? []
   let fence
   const rewritten = []
@@ -1218,7 +992,6 @@ async function buildProduct(
   archiveDir,
   product,
   catalogProduct,
-  externalGithubLinks,
 ) {
   const packageSpecs = product.releasePackages
     .map(normalizeReleasePackage)
@@ -1396,27 +1169,13 @@ async function buildProduct(
   const documentsBySourcePath = new Map(
     documentDefinitions.map((document) => [document.sourcePath, document]),
   )
-  const configuredExternalLinks = externalGithubLinks.filter(
-    (link) => link.productId === product.id,
-  )
-  const externalLinksByUrl = new Map()
-  for (const link of configuredExternalLinks) {
-    if (!documentsBySourcePath.has(link.sourcePath)) {
-      fail(`${product.name} external link source is not selected: ${link.sourcePath}`)
-    }
-    if (externalLinksByUrl.has(link.originalUrl)) {
-      fail(`${product.name} has duplicate external link URL ${link.originalUrl}`)
-    }
-    externalLinksByUrl.set(link.originalUrl, link)
-  }
-  const externalLinkUsage = new Map()
+  const externalRepositoryReferences = []
   const assetRequests = new Map()
   const unavailableAssets = new Map()
   const linkCounts = {
     localDocuments: 0,
     localAssets: 0,
     pinnedRepository: 0,
-    pinnedExternalRepository: 0,
   }
 
   const requestAsset = (sourcePath, document, repositorySource) => {
@@ -1441,20 +1200,6 @@ async function buildProduct(
     const repositorySource = repositorySources.get(document.sourceCommit)
     if (!repositorySource) fail(`${product.name} has no source archive for ${document.sourceCommit}`)
     const repositoryEntries = new Set(repositorySource.entries)
-
-    const externalLink = externalLinksByUrl.get(pathname)
-    if (externalLink) {
-      if (externalLink.sourcePath !== sourcePath) {
-        fail(
-          `${product.name} external link ${pathname} appeared in unexpected document ${sourcePath}`,
-        )
-      }
-      externalLinkUsage.set(pathname, (externalLinkUsage.get(pathname) ?? 0) + 1)
-      linkCounts.pinnedExternalRepository += 1
-      return {
-        destination: joinLinkDestination(externalLink.pinnedUrl, suffix, wrapped),
-      }
-    }
 
     const sameRepositoryTarget = sameRepositoryUrlTarget(product, pathname)
     if (sameRepositoryTarget) {
@@ -1558,30 +1303,12 @@ async function buildProduct(
       document.sourcePath,
       resolveDestination,
     )
-    document.bytes = Buffer.from(rewritten, 'utf8')
-    assertNoMutableGithubLinks(rewritten, `${product.name} ${document.sourcePath}`)
+    const external = new Map()
+    document.bytes = Buffer.from(rewriteRepositoryLinks(rewritten,
+      { repository: product.repository, commit: document.sourceCommit },
+      (link) => external.set(link.url, { sourcePath: document.sourcePath, ...link })), 'utf8')
+    externalRepositoryReferences.push(...external.values())
   }
-
-  const externalRepositoryPins = configuredExternalLinks.map((link) => {
-    const occurrences = externalLinkUsage.get(link.originalUrl) ?? 0
-    if (!occurrences) {
-      fail(`${product.name} did not find configured external link ${link.originalUrl}`)
-    }
-    return {
-      sourcePath: link.sourcePath,
-      originalUrl: link.originalUrl,
-      repository: link.repository,
-      defaultBranch: link.defaultBranch,
-      commit: link.commit,
-      targetPath: link.targetPath,
-      pinnedUrl: link.pinnedUrl,
-      repositoryApiUrl: link.repositoryApiUrl,
-      commitApiUrl: link.commitApiUrl,
-      contentUrl: link.contentUrl,
-      contentSha256: link.contentSha256,
-      occurrences,
-    }
-  })
 
   const assets = []
   for (const request of [...assetRequests.values()].sort((left, right) =>
@@ -1769,7 +1496,7 @@ async function buildProduct(
     licenses,
     linkValidation: {
       ...linkCounts,
-      externalRepositoryPins,
+      externalRepositoryReferences,
       unavailableAssets: [...unavailableAssets.values()].sort((left, right) =>
         `${left.document}\t${left.sourcePath}`.localeCompare(
           `${right.document}\t${right.sourcePath}`,
@@ -1861,7 +1588,6 @@ async function main() {
   }
 
   const { ids, byId, bodySha256 } = await validateCatalog()
-  const externalGithubLinks = await resolveExternalGithubLinks()
   const stageDir = await mkdtemp(join(root, '.tanstack-doc-sources.tmp-'))
   const archiveDir = await mkdtemp(join(tmpdir(), 'tanstack-doc-source-archives-'))
   let installed = false
@@ -1874,7 +1600,6 @@ async function main() {
           archiveDir,
           product,
           byId.get(product.id),
-          externalGithubLinks,
         ),
       )
     }
