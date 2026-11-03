@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.62.1"
   tanstack-package: "@tanstack/cli"
-  tanstack-package-version: "0.72.7"
+  tanstack-package-version: "0.72.13"
   tanstack-requires: "[\"tanstack-cli-add-addons-existing-app\"]"
   tanstack-source-skill: "maintain-custom-addons-dev-watch"
   tanstack-type: "lifecycle"

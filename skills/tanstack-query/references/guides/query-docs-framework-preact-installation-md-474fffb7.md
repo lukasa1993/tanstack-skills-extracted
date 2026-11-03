@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-preact-installation-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.105.2`.
+Release-matched documentation · `@tanstack/preact-query@5.105.3`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/preact-query@5.105.2`.
 
 Preact Query is compatible with Preact v10+.
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/examples/preact/simple/README.md) example
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/7bf1e0f7d7e76cdf31bad0708a4c5a47df8babca/examples/preact/simple/README.md) example
 
 [//]: # 'Compatibility'
 [//]: # 'CDNExample'

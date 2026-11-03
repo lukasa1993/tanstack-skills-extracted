@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-charts-ship-accessible-charts"></a>
 
-Published skill · `@tanstack/charts@1.2.0`.
+Published skill · `@tanstack/charts@1.2.1`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 

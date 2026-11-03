@@ -1,6 +1,6 @@
 # Networks And Hierarchies — Compare hierarchy area
 
-[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Compare hierarchy area
 

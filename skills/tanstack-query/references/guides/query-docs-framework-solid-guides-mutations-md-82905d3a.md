@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.105.2`.
+Release-matched documentation · `@tanstack/solid-query@5.105.3`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

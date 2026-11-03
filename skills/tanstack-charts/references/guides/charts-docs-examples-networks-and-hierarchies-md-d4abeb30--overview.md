@@ -1,6 +1,6 @@
 # Networks And Hierarchies — Overview
 
-[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 Network and hierarchy charts show relationships rather than values on two
 independent quantitative axes. Node-link layouts can produce semantic

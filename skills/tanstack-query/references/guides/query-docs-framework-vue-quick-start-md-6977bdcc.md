@@ -2,13 +2,13 @@
 
 <a id="source-query-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.105.2`.
+Release-matched documentation · `@tanstack/vue-query@5.105.3`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
 [//]: # 'Example'
 
-If you're looking for a fully functioning example, please have a look at our [basic codesandbox example](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/examples/vue/basic/README.md)
+If you're looking for a fully functioning example, please have a look at our [basic codesandbox example](https://github.com/TanStack/query/blob/7bf1e0f7d7e76cdf31bad0708a4c5a47df8babca/examples/vue/basic/README.md)
 
 ```vue
 <script setup>

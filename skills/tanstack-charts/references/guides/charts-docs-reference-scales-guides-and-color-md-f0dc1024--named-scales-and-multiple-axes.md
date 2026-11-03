@@ -1,6 +1,6 @@
 # Scales Guides And Color — Named scales and multiple axes
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Named scales and multiple axes
 

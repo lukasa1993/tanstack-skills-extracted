@@ -1,6 +1,6 @@
 # Types — Values and channels
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Values and channels
 

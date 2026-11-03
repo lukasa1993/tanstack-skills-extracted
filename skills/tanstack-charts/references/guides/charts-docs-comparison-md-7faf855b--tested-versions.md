@@ -1,6 +1,6 @@
 # Comparison — Tested versions
 
-[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Tested versions
 

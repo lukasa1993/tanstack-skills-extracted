@@ -1,6 +1,6 @@
 # Index — Core reference
 
-[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-reference-index-md-6fc2c6fc.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Core reference
 

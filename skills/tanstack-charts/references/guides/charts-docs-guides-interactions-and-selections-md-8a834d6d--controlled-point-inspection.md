@@ -1,6 +1,6 @@
 # Interactions And Selections — Controlled point inspection
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Controlled point inspection
 

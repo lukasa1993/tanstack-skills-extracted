@@ -1,6 +1,6 @@
 # Installation — Browser and server requirements
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Browser and server requirements
 

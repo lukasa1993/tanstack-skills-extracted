@@ -1,6 +1,6 @@
 # Custom Extensions — Distinct point and scale values
 
-[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Distinct point and scale values
 

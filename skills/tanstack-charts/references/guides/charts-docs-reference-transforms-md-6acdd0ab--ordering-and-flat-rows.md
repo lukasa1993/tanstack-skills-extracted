@@ -1,6 +1,6 @@
 # Transforms — Ordering and flat rows
 
-[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 ## Ordering and flat rows
 

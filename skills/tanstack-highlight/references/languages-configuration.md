@@ -6,5 +6,5 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Configure Selective Highlighting](./guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md) | Published skill | `@tanstack/highlight@1.2.9` |
-| [Extend Language Support](./guides/tanstack-highlight-extend-language-support-752c4660.md) | Published skill | `@tanstack/highlight@1.2.9` |
+| [Configure Selective Highlighting](./guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md) | Published skill | `@tanstack/highlight@1.2.11` |
+| [Extend Language Support](./guides/tanstack-highlight-extend-language-support-752c4660.md) | Published skill | `@tanstack/highlight@1.2.11` |

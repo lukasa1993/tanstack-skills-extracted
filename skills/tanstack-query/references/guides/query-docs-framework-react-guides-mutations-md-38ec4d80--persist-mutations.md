@@ -1,6 +1,6 @@
 # Mutations — Persist mutations
 
-[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.105.2`.
+[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.105.3`.
 
 ## Persist mutations
 
@@ -64,7 +64,7 @@ queryClient.resumePausedMutations()
 
 ### Persisting Offline mutations
 
-If you persist offline mutations with the [persistQueryClient plugin](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/docs/framework/react/plugins/persistQueryClient.md), mutations cannot be resumed when the page is reloaded unless you provide a default mutation function.
+If you persist offline mutations with the [persistQueryClient plugin](https://github.com/TanStack/query/blob/7bf1e0f7d7e76cdf31bad0708a4c5a47df8babca/docs/framework/react/plugins/persistQueryClient.md), mutations cannot be resumed when the page is reloaded unless you provide a default mutation function.
 
 [//]: # 'PersistOfflineIntro'
 
@@ -110,6 +110,6 @@ export default function App() {
 [//]: # 'Example11'
 [//]: # 'OfflineExampleLink'
 
-We also have an extensive [offline example](https://github.com/TanStack/query/blob/d6b2b643f64cf29d18563d326700b61cc09fd432/examples/react/offline-tanstack-router/README.md) that covers both queries and mutations.
+We also have an extensive [offline example](https://github.com/TanStack/query/blob/7bf1e0f7d7e76cdf31bad0708a4c5a47df8babca/examples/react/offline-tanstack-router/README.md) that covers both queries and mutations.
 
 [//]: # 'OfflineExampleLink'

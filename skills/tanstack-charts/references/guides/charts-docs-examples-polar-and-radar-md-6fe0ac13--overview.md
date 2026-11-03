@@ -1,6 +1,6 @@
 # Polar And Radar — Overview
 
-[Guide and prerequisites](./charts-docs-examples-polar-and-radar-md-6fe0ac13.md) · Release-matched documentation · `@tanstack/charts@1.2.0`.
+[Guide and prerequisites](./charts-docs-examples-polar-and-radar-md-6fe0ac13.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
 
 Polar geometry is available only from `@tanstack/charts/polar`. The container
 owns responsive center, angle, and radius ranges. Its eager `pie` transform

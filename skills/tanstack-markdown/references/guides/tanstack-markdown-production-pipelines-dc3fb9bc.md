@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-markdown-production-pipelines"></a>
 
-Published skill · `@tanstack/markdown@1.1.1`.
+Published skill · `@tanstack/markdown@1.2.0`.
 
 [Topic index](../production.md) · [Source provenance](../SOURCES.md)
 

@@ -4,10 +4,10 @@ Imported material is tied to the versions and commits below. Outbound links to o
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
-| `tanstack-highlight-configure-selective-highlighting` | atomic | `languages-configuration` | `@tanstack/highlight` | `1.2.9` |  |
-| `tanstack-highlight-extend-language-support` | atomic | `languages-configuration` | `@tanstack/highlight` | `1.2.9` |  |
-| `tanstack-highlight-integrate-framework-code-blocks` | atomic | `integrations` | `@tanstack/highlight` | `1.2.9` |  |
-| `tanstack-highlight-integrate-markdown-pipelines` | atomic | `integrations` | `@tanstack/highlight` | `1.2.9` |  |
-| `tanstack-highlight-theme-and-annotate-code` | atomic | `themes-annotations` | `@tanstack/highlight` | `1.2.9` |  |
+| `tanstack-highlight-configure-selective-highlighting` | atomic | `languages-configuration` | `@tanstack/highlight` | `1.2.11` |  |
+| `tanstack-highlight-extend-language-support` | atomic | `languages-configuration` | `@tanstack/highlight` | `1.2.11` |  |
+| `tanstack-highlight-integrate-framework-code-blocks` | atomic | `integrations` | `@tanstack/highlight` | `1.2.11` |  |
+| `tanstack-highlight-integrate-markdown-pipelines` | atomic | `integrations` | `@tanstack/highlight` | `1.2.11` |  |
+| `tanstack-highlight-theme-and-annotate-code` | atomic | `themes-annotations` | `@tanstack/highlight` | `1.2.11` |  |
 
 Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 0. No fuzzy deduplication is used.

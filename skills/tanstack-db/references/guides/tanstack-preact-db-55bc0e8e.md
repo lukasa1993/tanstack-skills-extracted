@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-preact-db"></a>
 
-Published skill · `@tanstack/preact-db@1.0.0-rc.1.1`.
+Published skill · `@tanstack/preact-db@1.0.0-rc.1.2`.
 
 [Topic index](../additional-guidance.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-cli-choose-ecosystem-integrations"></a>
 
-Published skill · `@tanstack/cli@0.72.7`.
+Published skill · `@tanstack/cli@0.72.13`.
 
 [Topic index](../ecosystem-discovery.md) · [Source provenance](../SOURCES.md)
 

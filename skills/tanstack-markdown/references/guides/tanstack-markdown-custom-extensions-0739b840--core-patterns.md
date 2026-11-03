@@ -1,6 +1,6 @@
 # Custom Extensions — Core Patterns
 
-[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@1.1.1`.
+[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@1.2.0`.
 
 ## Core Patterns
 
