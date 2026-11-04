@@ -1,6 +1,6 @@
 # Virtualizer — Virtualizer Instance
 
-[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.10`.
+[Guide and prerequisites](./virtual-docs-api-virtualizer-md-c3b477a3.md) · Release-matched documentation · `@tanstack/virtual-core@3.19.11`.
 
 ## Virtualizer Instance
 

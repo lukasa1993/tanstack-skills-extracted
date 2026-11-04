@@ -1,6 +1,6 @@
 # React Db — Common Mistakes
 
-[Guide and prerequisites](./tanstack-react-db-ba0ab260.md) · Published skill · `@tanstack/react-db@1.0.0-rc.1.2`.
+[Guide and prerequisites](./tanstack-react-db-ba0ab260.md) · Published skill · `@tanstack/react-db@1.0.0-rc.1.3`.
 
 ## Common Mistakes
 

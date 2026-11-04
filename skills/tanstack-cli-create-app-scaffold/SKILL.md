@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-cli"
   tanstack-library-version: "0.71.0"
   tanstack-package: "@tanstack/cli"
-  tanstack-package-version: "0.72.13"
+  tanstack-package-version: "0.72.16"
   tanstack-source-skill: "create-app-scaffold"
   tanstack-type: "core"
 ---

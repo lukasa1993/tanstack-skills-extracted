@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-cli-create-app-scaffold"></a>
 
-Published skill · `@tanstack/cli@0.72.13`.
+Published skill · `@tanstack/cli@0.72.16`.
 
 [Topic index](../projects-addons.md) · [Source provenance](../SOURCES.md)
 
