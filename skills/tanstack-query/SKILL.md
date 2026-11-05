@@ -62,6 +62,6 @@ Use these separate product skills when the task crosses their boundary: `tanstac
 
 ## Source status
 
-Official documentation from `TanStack/query`, matched to these verified release inputs: @tanstack/angular-query-experimental@5.105.3, @tanstack/lit-query@0.2.34, @tanstack/preact-query@5.105.3, @tanstack/query-core@5.105.3, @tanstack/react-query@5.105.3, @tanstack/solid-query@5.105.3, @tanstack/svelte-query@6.3.9, @tanstack/vue-query@5.105.3.
+Official documentation from `TanStack/query`, matched to these verified release inputs: @tanstack/angular-query-experimental@5.106.1, @tanstack/lit-query@0.2.36, @tanstack/preact-query@5.106.1, @tanstack/query-core@5.106.1, @tanstack/react-query@5.106.1, @tanstack/solid-query@5.106.1, @tanstack/svelte-query@6.3.11, @tanstack/vue-query@5.106.1.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

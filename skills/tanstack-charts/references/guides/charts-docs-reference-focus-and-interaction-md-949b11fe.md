@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-focus-and-interaction-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../interaction-motion-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -26,6 +26,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Callbacks](./charts-docs-reference-focus-and-interaction-md-949b11fe--callbacks.md) — 1 KiB
 - [Spatial indexes](./charts-docs-reference-focus-and-interaction-md-949b11fe--spatial-indexes.md) — 2 KiB
 - [Application-owned gestures](./charts-docs-reference-focus-and-interaction-md-949b11fe--application-owned-gestures.md) — 2 KiB
+- [Earlier pointer samples](./charts-docs-reference-focus-and-interaction-md-949b11fe--earlier-pointer-samples.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->
 <a id="default-behavior"></a>
@@ -47,3 +48,4 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="callbacks"></a>
 <a id="spatial-indexes"></a>
 <a id="application-owned-gestures"></a>
+<a id="earlier-pointer-samples"></a>

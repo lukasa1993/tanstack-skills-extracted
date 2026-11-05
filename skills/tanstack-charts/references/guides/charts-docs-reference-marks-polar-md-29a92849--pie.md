@@ -1,6 +1,6 @@
 # Polar — `pie`
 
-[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## `pie`
 

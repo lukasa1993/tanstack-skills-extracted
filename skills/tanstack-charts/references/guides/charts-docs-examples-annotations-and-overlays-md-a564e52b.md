@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-annotations-and-overlays-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../examples-core.md) · [Source provenance](../SOURCES.md)
 

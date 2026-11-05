@@ -1,6 +1,6 @@
 # Adapter Configuration — Core Patterns: 2. Runtime Adapter Switching
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.0.1`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.1.0`.
 
 ## Core Patterns: 2. Runtime Adapter Switching
 

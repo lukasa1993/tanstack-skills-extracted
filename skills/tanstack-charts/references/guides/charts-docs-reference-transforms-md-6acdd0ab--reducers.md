@@ -1,6 +1,6 @@
 # Transforms — Reducers
 
-[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-reference-transforms-md-6acdd0ab.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Reducers
 

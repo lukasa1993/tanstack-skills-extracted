@@ -1,6 +1,6 @@
 # Dom Host — Host options
 
-[Guide and prerequisites](./charts-docs-reference-dom-host-md-10380040.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-reference-dom-host-md-10380040.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Host options
 

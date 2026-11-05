@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-scales-guides-and-color-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../runtime-scales-reference.md) · [Source provenance](../SOURCES.md)
 
@@ -11,7 +11,7 @@ Release-matched documentation · `@tanstack/charts@1.2.1`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./charts-docs-reference-scales-guides-and-color-md-f0dc1024--overview.md) — 2 KiB
-- [Default compact scale entries](./charts-docs-reference-scales-guides-and-color-md-f0dc1024--default-compact-scale-entries.md) — 2 KiB
+- [Default compact scale entries](./charts-docs-reference-scales-guides-and-color-md-f0dc1024--default-compact-scale-entries.md) — 3 KiB
 - [Positional scale factories](./charts-docs-reference-scales-guides-and-color-md-f0dc1024--positional-scale-factories.md) — 2 KiB
 - [D3 scale upgrades](./charts-docs-reference-scales-guides-and-color-md-f0dc1024--d3-scale-upgrades.md) — 2 KiB
 - [Fixed domains](./charts-docs-reference-scales-guides-and-color-md-f0dc1024--fixed-domains.md) — 1 KiB

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-charts-configure-scales-guides-color"></a>
 
-Published skill · `@tanstack/charts@1.2.1`.
+Published skill · `@tanstack/charts@1.4.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -54,7 +54,8 @@ export const chart = defineChart({
 - Categories with width → compact `scaleBand`.
 - Categories without width → compact `scalePoint`.
 - Stable categorical paint → compact `scaleOrdinal`.
-- Elapsed time, nonlinear transforms, radial mapping, statistical bins, or continuous color → exact `d3-scale` family.
+- UTC calendar time → compact `scaleUtc` from `@tanstack/charts/scales/time`.
+- Local-time calendars, nonlinear transforms, radial mapping, statistical bins, or continuous color → exact `d3-scale` family.
 
 Read [the ownership matrix](../assets/tanstack-charts-configure-scales-guides-color/references/scale-guide-ownership.md) before configuring a D3 instance.
 

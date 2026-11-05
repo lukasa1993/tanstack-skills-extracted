@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-custom-marks-and-renderers-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../composition.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Layout Axes And Coordinates — Container responsiveness
 
-[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-concepts-layout-axes-and-coordinates-md-371d3a9a.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Container responsiveness
 

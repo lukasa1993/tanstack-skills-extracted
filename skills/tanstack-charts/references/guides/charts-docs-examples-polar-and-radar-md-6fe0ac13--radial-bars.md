@@ -1,6 +1,6 @@
 # Polar And Radar — Radial bars
 
-[Guide and prerequisites](./charts-docs-examples-polar-and-radar-md-6fe0ac13.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-examples-polar-and-radar-md-6fe0ac13.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Radial bars
 

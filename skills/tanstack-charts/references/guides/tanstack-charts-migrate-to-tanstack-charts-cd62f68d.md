@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-charts-migrate-to-tanstack-charts"></a>
 
-Published skill · `@tanstack/charts@1.2.1`.
+Published skill · `@tanstack/charts@1.4.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 

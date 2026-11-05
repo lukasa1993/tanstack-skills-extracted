@@ -1,6 +1,6 @@
 # Types — Callback shape
 
-[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-reference-types-md-686ca8ea.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Callback shape
 

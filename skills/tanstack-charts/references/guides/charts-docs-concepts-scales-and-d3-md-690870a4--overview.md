@@ -1,14 +1,14 @@
 # Scales And D3 — Overview
 
-[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-concepts-scales-and-d3-md-690870a4.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 TanStack Charts accepts callable, copyable scale factories and instances. Start
 with the exact compact scale entry that matches the mapping. Upgrade only the
 axis, color, or radius mapping whose semantics require D3.
 
 - **TanStack compact scales** cover numeric linear, categorical band and point,
-  and ordinal mappings without a production D3 dependency.
-- **D3** adds temporal, nonlinear, radial, interpolated, and statistical scale
+  ordinal, and UTC time mappings without a production D3 dependency.
+- **D3** adds local-time, nonlinear, radial, interpolated, and statistical scale
   semantics plus optional shape, time, and spatial algorithms.
 - **TanStack Charts** infers factory domains from mark channels, assigns
   responsive pixel ranges, lays out guides, compiles scenes, and renders them.

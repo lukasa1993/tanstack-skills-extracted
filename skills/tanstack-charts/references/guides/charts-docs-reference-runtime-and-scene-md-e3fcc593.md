@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-runtime-and-scene-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../runtime-scales-reference.md) · [Source provenance](../SOURCES.md)
 

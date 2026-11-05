@@ -2,7 +2,7 @@
 
 <a id="source-charts-packages-react-native-charts-readme-md"></a>
 
-Release-matched documentation · `@tanstack/react-native-charts@1.2.1`.
+Release-matched documentation · `@tanstack/react-native-charts@1.4.0`.
 
 [Topic index](../framework-react-native.md) · [Source provenance](../SOURCES.md)
 

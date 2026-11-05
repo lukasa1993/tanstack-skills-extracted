@@ -1,6 +1,6 @@
 # Rules Links Arrows Vectors And Ticks — `ruleX` and `ruleY`
 
-[Guide and prerequisites](./charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-reference-marks-rules-links-arrows-vectors-and-ticks-md-364694cb.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## `ruleX` and `ruleY`
 

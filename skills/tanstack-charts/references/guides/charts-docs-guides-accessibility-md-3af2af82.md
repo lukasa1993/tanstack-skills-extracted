@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-accessibility-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../interaction-accessibility.md) · [Source provenance](../SOURCES.md)
 

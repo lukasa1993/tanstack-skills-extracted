@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.105.3`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.106.1`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/angular-query-experimental@5.105.3`.
 
 [//]: # 'Example'
 
-If you're looking for a fully functioning example, please have a look at our [basic codesandbox example](https://github.com/TanStack/query/blob/7bf1e0f7d7e76cdf31bad0708a4c5a47df8babca/examples/angular/basic/README.md)
+If you're looking for a fully functioning example, please have a look at our [basic codesandbox example](https://github.com/TanStack/query/blob/284abac02d34f88ceb119c2af3fd3cf400b64a7a/examples/angular/basic/README.md)
 
 ### Provide the client to your App
 

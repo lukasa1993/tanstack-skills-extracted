@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-chart-definitions-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../specifications.md) · [Source provenance](../SOURCES.md)
 
@@ -102,7 +102,7 @@ does not return or own them.
 
 `ChartDefinitionOptions<TDatum, TXValue, TYValue>` contains `focus`,
 `focusRing`, `selection`, `controls`, `cursor`, `maxFocusDistance`,
-`spatialIndex`, `svgAnimation`, `pointer`, `keyboard`, and `tooltip`. These options
+`spatialIndex`, `svgAnimation`, `pointer`, `pointerEvent`, `keyboard`, and `tooltip`. These options
 belong to both static and responsive definitions. Hosts and framework adapters
 do not override them.
 

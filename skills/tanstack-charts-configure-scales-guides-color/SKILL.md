@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/charts"
-  tanstack-library-version: "1.2.1"
+  tanstack-library-version: "1.4.0"
   tanstack-package: "@tanstack/charts"
-  tanstack-package-version: "1.2.1"
+  tanstack-package-version: "1.4.0"
   tanstack-source-skill: "configure-scales-guides-color"
   tanstack-sources: "[\"TanStack/charts:docs/concepts/scales-and-d3.md\",\"TanStack/charts:docs/reference/scales-guides-and-color.md\",\"TanStack/charts:docs/guides/legends-and-color.md\",\"TanStack/charts:docs/guides/responsive-charts.md\"]"
   tanstack-type: "core"
@@ -61,7 +61,8 @@ export const chart = defineChart({
 - Categories with width → compact `scaleBand`.
 - Categories without width → compact `scalePoint`.
 - Stable categorical paint → compact `scaleOrdinal`.
-- Elapsed time, nonlinear transforms, radial mapping, statistical bins, or continuous color → exact `d3-scale` family.
+- UTC calendar time → compact `scaleUtc` from `@tanstack/charts/scales/time`.
+- Local-time calendars, nonlinear transforms, radial mapping, statistical bins, or continuous color → exact `d3-scale` family.
 
 Read [the ownership matrix](./references/scale-guide-ownership.md) before configuring a D3 instance.
 

@@ -1,8 +1,14 @@
 # Interactions And Selections — Brush selection
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Brush selection
+
+`brushX` owns a persistent range and its handles. For a range that exists only
+while dragging, use [application-owned pointer handling](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md#controlled-point-inspection)
+and [invert the resolved scale](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md#invert-resolved-scales). Clear the temporary
+range on release or cancellation; forward idle hover through `resolvePointer`
+and `setControlledFocus` to retain the chart's focus and tooltip.
 
 A complete brush owns:
 

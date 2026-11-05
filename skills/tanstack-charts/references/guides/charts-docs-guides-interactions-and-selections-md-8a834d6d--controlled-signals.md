@@ -1,6 +1,6 @@
 # Interactions And Selections — Controlled signals
 
-[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-guides-interactions-and-selections-md-8a834d6d.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Controlled signals
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core"></a>
 
-Published skill · `@tanstack/ai@1.0.1`.
+Published skill · `@tanstack/ai@1.1.0`.
 
 [Topic index](../chat-providers.md) · [Source provenance](../SOURCES.md)
 

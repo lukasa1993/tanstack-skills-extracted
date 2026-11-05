@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.105.3`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.106.1`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

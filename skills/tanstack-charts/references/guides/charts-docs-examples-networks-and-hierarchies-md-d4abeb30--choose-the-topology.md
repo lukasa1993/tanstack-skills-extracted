@@ -1,6 +1,6 @@
 # Networks And Hierarchies — Choose the topology
 
-[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-examples-networks-and-hierarchies-md-d4abeb30.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## Choose the topology
 

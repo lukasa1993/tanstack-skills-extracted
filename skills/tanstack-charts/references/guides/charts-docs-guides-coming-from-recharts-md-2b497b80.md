@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-guides-coming-from-recharts-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.2.1`.
+Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 

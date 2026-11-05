@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-memory"
-  tanstack-package-version: "1.0.0"
+  tanstack-package-version: "1.1.0"
   tanstack-source-skill: "tanstack-ai-memory"
 ---
 

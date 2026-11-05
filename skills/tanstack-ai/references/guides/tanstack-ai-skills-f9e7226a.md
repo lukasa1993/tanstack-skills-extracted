@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-skills"></a>
 
-Published skill · `@tanstack/ai-skills@1.0.0`.
+Published skill · `@tanstack/ai-skills@1.0.1`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 

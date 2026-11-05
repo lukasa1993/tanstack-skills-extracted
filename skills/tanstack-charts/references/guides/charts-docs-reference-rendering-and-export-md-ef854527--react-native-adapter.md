@@ -1,6 +1,6 @@
 # Rendering And Export — React Native adapter
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.2.1`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
 
 ## React Native adapter
 
