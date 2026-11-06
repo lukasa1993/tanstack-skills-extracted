@@ -1,6 +1,6 @@
 # Ai Sandbox — Takeover: detached runs and single-writer safety: The reaper ships as a function, not a scheduler
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.1.0`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.2.0`.
 
 ## Takeover: detached runs and single-writer safety: The reaper ships as a function, not a scheduler
 
