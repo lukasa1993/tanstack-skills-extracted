@@ -2,13 +2,13 @@
 
 <a id="source-query-docs-framework-svelte-overview-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-query@6.3.11`.
+Release-matched documentation · `@tanstack/svelte-query@6.4.1`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
 The `@tanstack/svelte-query` package offers a 1st-class API for using TanStack Query via Svelte.
 
-> Migrating from stores to the runes syntax? See the [migration guide](https://github.com/TanStack/query/blob/284abac02d34f88ceb119c2af3fd3cf400b64a7a/docs/framework/svelte/migrate-from-v5-to-v6.md).
+> Migrating from stores to the runes syntax? See the [migration guide](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/docs/framework/svelte/migrate-from-v5-to-v6.md).
 
 ## Example
 
@@ -54,7 +54,7 @@ Then call any function (e.g. createQuery) from any component:
 
 ## SvelteKit
 
-If you are using SvelteKit, please have a look at [SSR & SvelteKit](https://github.com/TanStack/query/blob/284abac02d34f88ceb119c2af3fd3cf400b64a7a/docs/framework/svelte/ssr.md).
+If you are using SvelteKit, please have a look at [SSR & SvelteKit](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/docs/framework/svelte/ssr.md).
 
 ## Available Functions
 
