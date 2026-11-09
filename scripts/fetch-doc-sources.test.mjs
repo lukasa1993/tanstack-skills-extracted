@@ -1,8 +1,98 @@
 import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
+import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
+import { dirname, join } from 'node:path'
 import test from 'node:test'
-import { products, validateReleaseVersion, validateDocumentSet, rewriteMarkdownLinks } from './fetch-doc-sources.mjs'
+import { buildProduct, products, validateReleaseVersion, validateDocumentSet, rewriteMarkdownLinks } from './fetch-doc-sources.mjs'
 import { rewriteRepositoryLinks } from './repository-links.mjs'
 import { rewriteLinks } from './build-groups.mjs'
+import { sha256 } from './source-client.mjs'
+
+async function configFixture(t, changeFiles = () => {}) {
+  const dir = await mkdtemp(join(tmpdir(), 'tanstack-config-releases-'))
+  t.after(() => rm(dir, { recursive: true, force: true }))
+  const product = products.find(({ id }) => id === 'config')
+  const repositories = new Map()
+  const releases = new Map()
+  const originals = new Map()
+  for (const [index, tool] of ['eslint', 'publish', 'vite'].entries()) {
+    const name = `@tanstack/${tool}-config`
+    const commit = String(index + 1).repeat(40)
+    const files = {
+      LICENSE: 'MIT License\n',
+      'docs/overview.md': `# Overview at ${tool} release\n\n[ESLint](./eslint.md)\n`,
+      'docs/eslint.md': `# ESLint at ${tool} release\n\n[Overview](./overview.md)\n`,
+      'docs/publish.md': `# Publish at ${tool} release\n\n[Source](../src/publish.ts)\n`,
+      'docs/vite.md': `# Vite at ${tool} release\n`,
+      'src/publish.ts': '// fixture\n',
+    }
+    changeFiles(files, tool)
+    const archiveRoot = `config-${commit}`
+    const archivePath = join(dir, `${tool}.tgz`)
+    for (const [path, body] of Object.entries(files)) {
+      await mkdir(dirname(join(dir, archiveRoot, path)), { recursive: true })
+      await writeFile(join(dir, archiveRoot, path), body)
+    }
+    execFileSync('tar', ['-czf', archivePath, '-C', dir, archiveRoot])
+    repositories.set(commit, { archivePath, archiveRoot, entries: Object.keys(files), manifest: { commit } })
+    releases.set(name, { manifest: { name, version: `${index + 1}.0.0`, commit, frameworks: [], role: 'tool' } })
+    originals.set(name, files)
+  }
+  const stageDir = join(dir, 'stage')
+  const build = (overrides = {}) => buildProduct(stageDir, dir, { ...product, ...overrides }, { frameworks: [] }, {
+    fetchRelease: async ({ name }) => releases.get(name),
+    fetchRepository: async (_, commit) => repositories.get(commit),
+  })
+  return { stageDir, product, releases, originals, build }
+}
+
+test('Config imports each guide from its owning release when package docs diverge', async (t) => {
+  const fixture = await configFixture(t)
+  const manifest = await fixture.build()
+  assert.equal(manifest.documents.length, 4)
+  for (const document of manifest.documents) {
+    const owner = fixture.product.documentPackages[document.sourcePath] || fixture.product.sourcePackage
+    const release = fixture.releases.get(owner).manifest
+    const original = fixture.originals.get(owner)[document.sourcePath]
+    assert.equal(document.sourcePackage, owner)
+    assert.equal(document.sourceCommit, release.commit)
+    assert.deepEqual(document.verifiedCommits, [release.commit])
+    assert.equal(document.sourceSha256, sha256(original))
+    const body = await readFile(join(fixture.stageDir, 'products/config', document.sourcePath), 'utf8')
+    assert.ok(body.startsWith(original.split('\n')[0]))
+    if (document.sourcePath === 'docs/publish.md') {
+      assert.ok(body.includes(`https://github.com/TanStack/config/blob/${release.commit}/src/publish.ts`))
+    }
+  }
+})
+
+test('owned guides are discovered even when absent from the primary package release', async (t) => {
+  const fixture = await configFixture(t, (files, tool) => {
+    if (tool === 'vite') {
+      files['docs/overview.md'] = '# Overview\n'
+      delete files['docs/eslint.md']
+      delete files['docs/publish.md']
+    }
+  })
+  assert.equal((await fixture.build()).documents.length, 4)
+})
+
+test('missing owner guides and unconfigured owners fail instead of borrowing another release', async (t) => {
+  const fixture = await configFixture(t, (files, tool) => {
+    if (tool === 'eslint') delete files['docs/eslint.md']
+  })
+  await assert.rejects(fixture.build(), /@tanstack\/eslint-config.*missing.*docs\/eslint\.md/)
+  await assert.rejects(fixture.build({ documentPackages: { 'docs/eslint.md': '@tanstack/missing-config' } }),
+    /no release for @tanstack\/missing-config/)
+})
+
+test('missing required shared guidance still fails', async (t) => {
+  const fixture = await configFixture(t, (files, tool) => {
+    if (tool === 'vite') delete files['docs/overview.md']
+  })
+  await assert.rejects(fixture.build(), /no required overview/)
+})
 
 test('every product follows upstream releases across major versions', () => {
   for (const product of products) {

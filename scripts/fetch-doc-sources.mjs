@@ -107,7 +107,6 @@ export const products = [
         repositoryDirectory: 'packages/vite-config',
       },
     ],
-    verifyDocumentsAtEveryRelease: true,
     documentPackages: {
       'docs/eslint.md': '@tanstack/eslint-config',
       'docs/publish.md': '@tanstack/publish-config',
@@ -987,11 +986,12 @@ export function validateDocumentSet(product, documentDefinitions) {
   return [...new Set(documentDefinitions.flatMap((document) => document.frameworks))].sort()
 }
 
-async function buildProduct(
+export async function buildProduct(
   stageDir,
   archiveDir,
   product,
   catalogProduct,
+  { fetchRelease = fetchReleasePackage, fetchRepository = fetchRepositoryArchive } = {},
 ) {
   const packageSpecs = product.releasePackages
     .map(normalizeReleasePackage)
@@ -999,7 +999,7 @@ async function buildProduct(
   const releaseSources = []
   for (const packageSpec of packageSpecs) {
     releaseSources.push(
-      await fetchReleasePackage(packageSpec, product.repository, archiveDir, product.id),
+      await fetchRelease(packageSpec, product.repository, archiveDir, product.id),
     )
   }
   const sourceRelease = releaseSources.find(
@@ -1021,31 +1021,45 @@ async function buildProduct(
     if (!repositorySources.has(sourceCommit)) {
       repositorySources.set(
         sourceCommit,
-        await fetchRepositoryArchive(product, sourceCommit, archiveDir),
+        await fetchRepository(product, sourceCommit, archiveDir),
       )
     }
     return repositorySources.get(sourceCommit)
   }
   const sourceRepository = await getRepositorySource(commit)
-  if (product.verifyDocumentsAtEveryRelease) {
-    for (const release of releaseSources) await getRepositorySource(release.manifest.commit)
-  }
 
   const primaryDocumentSource =
     product.documentSource === 'npm-package' ? sourceRelease : sourceRepository
   const adapterReleases = product.matchAdapterDocuments
     ? new Map(releaseSources.flatMap((release) => release.manifest.frameworks.map((framework) => [framework, release])))
     : new Map()
-  const selectedDocumentSources = [{ repository: primaryDocumentSource, release: sourceRelease, framework: null }]
+  // Choose the owning release before reading bytes. Independently published
+  // tools and adapters need not share the primary package's documentation.
+  const selectedDocumentSources = [{
+    repository: primaryDocumentSource,
+    release: sourceRelease,
+    matches: (path) => !product.documentPackages?.[path] &&
+      !adapterReleases.has(documentMetadata(path).frameworks[0]),
+  }]
   for (const [framework, release] of adapterReleases) {
-    selectedDocumentSources.push({ repository: await getRepositorySource(release.manifest.commit), release, framework })
-  }
-  const documentDefinitions = selectedDocumentSources.flatMap(({ repository, release, framework }) => repository.entries
-    .filter((path) => {
-      if (!isDocument(product, path)) return false
-      const owner = documentMetadata(path).frameworks[0]
-      return framework ? owner === framework : !adapterReleases.has(owner)
+    selectedDocumentSources.push({
+      repository: await getRepositorySource(release.manifest.commit),
+      release,
+      matches: (path) => !product.documentPackages?.[path] &&
+        documentMetadata(path).frameworks[0] === framework,
     })
+  }
+  for (const [sourcePath, packageName] of Object.entries(product.documentPackages ?? {})) {
+    const release = releaseSources.find((candidate) => candidate.manifest.name === packageName)
+    if (!release) fail(`${product.name} has no release for ${packageName}`)
+    const repository = await getRepositorySource(release.manifest.commit)
+    if (!repository.entries.includes(sourcePath)) {
+      fail(`${product.name} ${packageName}@${release.manifest.version} is missing ${sourcePath} at ${release.manifest.commit}`)
+    }
+    selectedDocumentSources.push({ repository, release, matches: (path) => path === sourcePath })
+  }
+  const documentDefinitions = selectedDocumentSources.flatMap(({ repository, release, matches }) => repository.entries
+    .filter((path) => isDocument(product, path) && matches(path))
     .map((sourcePath) => {
       const { kind, frameworks } = documentMetadata(sourcePath)
       return {
@@ -1060,7 +1074,7 @@ async function buildProduct(
         sourcePackage: release.manifest.name,
         sourceCommit: release.manifest.commit,
         sourceKind:
-          product.documentSource === 'npm-package'
+          repository === release
             ? 'npm-package'
             : 'github-release-archive',
         fileSource: repository,
@@ -1131,39 +1145,8 @@ async function buildProduct(
       }
     }
 
-    const verifiedCommits = product.verifyDocumentsAtEveryRelease
-      ? [...repositorySources.keys()].sort()
-      : [document.sourceCommit]
-    for (const verifiedCommit of verifiedCommits) {
-      const verifiedSource = await getRepositorySource(verifiedCommit)
-      if (!verifiedSource.entries.includes(document.sourcePath)) {
-        fail(`${product.name} ${document.sourcePath} is absent at release ${verifiedCommit}`)
-      }
-      const verifiedBytes = normalizeText(
-        await extractArchiveFile(
-          verifiedSource.archivePath,
-          verifiedSource.archiveRoot,
-          document.sourcePath,
-          maxBytes.document,
-        ),
-        `${product.name} ${document.sourcePath} at ${verifiedCommit}`,
-      )
-      if (!document.rawBytes.equals(verifiedBytes)) {
-        fail(`${product.name} ${document.sourcePath} differs at release ${verifiedCommit}`)
-      }
-    }
-    document.verifiedCommits = verifiedCommits
+    document.verifiedCommits = [document.sourceCommit]
     document.sourceSha256 = sha256(document.rawBytes)
-
-    const owningPackage = product.documentPackages?.[document.sourcePath]
-    if (owningPackage) {
-      const ownerRelease = releaseSources.find(
-        (release) => release.manifest.name === owningPackage,
-      )
-      if (!ownerRelease) fail(`${product.name} has no release for ${owningPackage}`)
-      document.sourcePackage = owningPackage
-      document.sourceCommit = ownerRelease.manifest.commit
-    }
   }
 
   const documentsBySourcePath = new Map(

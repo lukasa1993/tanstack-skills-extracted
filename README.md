@@ -51,6 +51,11 @@ TanStack Form, Charts, Intent, Virtual, Pacer, Hotkeys, Store, and Config do not
 
 TanStack Query includes release-matched setup and selected task documentation for React, Preact, Vue, Solid, Svelte, Angular, and Lit. Each adapter uses its own published version and repository commit; adapters can have different major versions. Query and Form framework documents are matched to the adapter release that owns them.
 
+Config's ESLint, publish, and Vite guides each come from their owning package's
+release commit. Shared Config pages use the Vite release snapshot. Documentation
+can differ between these independently published packages; each guide records
+the package version and commit used for its actual content.
+
 Query also preserves the official [Query Intent draft PR](https://github.com/TanStack/query/pull/10879) as separately labeled supplementary guidance. The exporter uses the PR head until the package is published, including when the draft is closed but its official branch remains available. Draft examples do not establish compatibility with another adapter or release.
 
 TanStack Charts is currently pre-alpha. Its skill preserves that warning and uses release-matched documentation instead of unreleased `main` APIs.
