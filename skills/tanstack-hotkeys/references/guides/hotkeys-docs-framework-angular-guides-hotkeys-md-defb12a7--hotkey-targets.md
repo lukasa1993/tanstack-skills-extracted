@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Hotkey targets
 
@@ -24,7 +24,7 @@ export class PanelComponent {
 }
 ```
 
-The hotkey reads the signal, so it registers once the element renders and moves if the element changes. A `null` target, or a signal of `undefined`, registers nothing until the element exists.
+The hotkey reads the signal, so it registers once the element renders and moves if the element changes. A `null` or `undefined` target, or a signal of either, registers nothing until the element exists, including a value read in an options function, such as `() => ({ target: this.panel()?.nativeElement })`. Only an omitted `target` listens on `document`, so a wrapper that forwards an unset `target` waits too. Set `target: document` to choose the document explicitly.
 
 > [!NOTE]
 > An element receives key presses only while it, or something inside it, has focus. Give it a `tabindex` if it isn't focusable already.

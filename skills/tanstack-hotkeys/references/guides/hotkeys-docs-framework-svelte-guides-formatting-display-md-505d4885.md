@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -16,7 +16,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Format sequences](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-sequences.md) — 1 KiB
 - [Choose symbols and separators](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--choose-symbols-and-separators.md) — 1 KiB
 - [Supply layout labels](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--supply-layout-labels.md) — 2 KiB
-- [Format labels in server-rendered apps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-labels-in-server-rendered-apps.md) — 7 KiB
+- [Format labels in server-rendered apps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-labels-in-server-rendered-apps.md) — 8 KiB
 - [Parse, compare, and store hotkeys](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--parse-compare-and-store-hotkeys.md) — 3 KiB
 
 <!-- Original source anchors retained for inbound links. -->

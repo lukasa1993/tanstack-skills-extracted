@@ -1,6 +1,6 @@
 # Formatting Display — Supply layout labels
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Supply layout labels
 

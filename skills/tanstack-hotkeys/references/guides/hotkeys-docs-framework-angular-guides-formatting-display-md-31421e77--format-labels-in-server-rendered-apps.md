@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once Angular hydrates the component. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `injectFormatForDisplay()` instead of `formatForDisplay`.
+2. Format labels with `injectFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
 
 ```ts
 import { REQUEST, inject } from '@angular/core'
@@ -44,7 +44,7 @@ export class ToolbarComponent {
 
 `injectFormatForDisplay` returns a function with the same options as `formatForDisplay`. Inject it once, then call the function anywhere, including in templates. The function reads the provider's `platform` each time it runs, so a template updates when the platform changes. A `platform` passed to the function wins over the provider's.
 
-In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. An inner provider inherits it.
+In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
 Without a provider `platform`, `injectFormatForDisplay` renders `'linux'` labels on the server. Mac users see `Ctrl+S` until Angular hydrates the component. Set the provider's `platform` to avoid that.
 
@@ -79,7 +79,7 @@ export const appConfig: ApplicationConfig = {
 
 `REQUEST` is also `null` when a route is prerendered. See [Static and prerendered pages](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#static-and-prerendered-pages).
 
-The [Angular SSR example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/angular/injectFormatForDisplay-angular-ssr) shows this setup.
+The [Angular SSR example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/angular/injectFormatForDisplay-angular-ssr) shows this setup.
 
 ### Analog
 
@@ -103,7 +103,7 @@ export const appConfig: ApplicationConfig = {
 }
 ```
 
-The [Analog example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/angular/injectFormatForDisplay-analog) shows this setup.
+The [Analog example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/angular/injectFormatForDisplay-analog) shows this setup.
 
 ### Render a label only in the browser
 

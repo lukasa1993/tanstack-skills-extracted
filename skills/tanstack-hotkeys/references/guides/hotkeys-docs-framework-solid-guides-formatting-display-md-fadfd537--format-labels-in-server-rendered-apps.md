@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML. Solid keeps the server's text when it hydrates, so the label stays `Ctrl+S`, and Solid doesn't warn about it. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `createFormatForDisplay()` instead of `formatForDisplay`.
+2. Format labels with `createFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
 
 ```tsx
 import { HotkeysProvider, detectPlatform } from '@tanstack/solid-hotkeys'
@@ -41,7 +41,7 @@ function Toolbar() {
 
 `createFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call `createFormatForDisplay` once in the component, then call the function anywhere in its JSX. The function reads the provider's `platform` each time it runs, so a label in JSX updates when the platform changes. A `platform` passed to the function wins over the provider's.
 
-In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. An inner provider inherits it.
+In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
 Without a provider `platform`, `createFormatForDisplay` renders `'linux'` labels on the server, and Mac users keep them after hydration. Set the provider's `platform` in every server-rendered app.
 
@@ -75,7 +75,7 @@ export default function App() {
 }
 ```
 
-The [SolidStart example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/solid/createFormatForDisplay-solid-start) shows this setup.
+The [SolidStart example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/solid/createFormatForDisplay-solid-start) shows this setup.
 
 ### TanStack Start
 
@@ -101,7 +101,7 @@ function RootComponent() {
 }
 ```
 
-The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
+The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
 
 ### Astro
 
@@ -134,7 +134,7 @@ export default function Shortcuts(props: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/solid/createFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/solid/createFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 

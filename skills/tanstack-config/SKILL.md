@@ -28,6 +28,6 @@ Library-maintenance guidance for package structure, dependencies, ESLint, Vite, 
 
 ## Source status
 
-Official documentation from `TanStack/config`, matched to these verified release inputs: @tanstack/eslint-config@0.4.0, @tanstack/publish-config@0.2.7, @tanstack/vite-config@0.6.0.
+Official documentation from `TanStack/config`, matched to these verified release inputs: @tanstack/eslint-config@0.5.0, @tanstack/publish-config@0.2.7, @tanstack/vite-config@0.6.0.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

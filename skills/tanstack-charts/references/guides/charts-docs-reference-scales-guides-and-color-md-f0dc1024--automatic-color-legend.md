@@ -1,6 +1,6 @@
 # Scales Guides And Color — Automatic color legend
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## Automatic color legend
 

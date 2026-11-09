@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -84,11 +84,14 @@ Options can also be a getter, such as `createHotkeyRecorder(() => ({ maxSteps: I
 | A key, with or without modifiers | Records a chord, such as `Mod+[KeyS]` or `[F1]` |
 | Enter | Commits a sequence recording. With `maxSteps: 1` or `commitKeys: 'none'`, records Enter like any other key. |
 | Escape | Cancels the recording and calls `onCancel` |
+| Tab or Shift+Tab, without Control, Alt, or Meta | Cancels the recording and calls `onCancel`, and the browser moves focus as usual. In a text field, moves focus without cancelling. With `recordTab: true`, records Tab like any other key. |
 | Backspace or Delete, without modifiers | Removes the last step. With no steps, stops recording and calls `onClear`. |
 
 Repeats and IME composition never add a step. `onClear` doesn't change anything on its own, so your app decides whether clearing removes a hotkey or restores its default.
 
 By default, the recorder ignores typing in text fields, so other fields on the page keep working while it listens. Escape still cancels. Set `ignoreInputs: false` to record from inside a text field.
+
+Tab and Shift+Tab end the recording, so keyboard users don't get stuck on the recorder ([WCAG 2.1.2](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)). Set `recordTab: true` to let users bind Tab, for example in an editor. Escape still cancels, so show it while recording, such as "Press Escape to cancel".
 
 ## Validate and check conflicts
 
@@ -100,7 +103,7 @@ Pass `validate` to accept or reject each recording before it commits. Return `tr
 createHotkeyRecorder({
   validate: (_hotkey, { parsedChord }) =>
     parsedChord.modifiers.length > 0 || 'Include a modifier.',
-  onReject: ({ message }) => setError(message),
+  onReject: ({ message }) => setError(message ?? 'Try another shortcut.'),
   onRecord: (hotkey) => saveHotkey(hotkey),
 })
 ```
@@ -127,9 +130,8 @@ Set `detectConflicts: true` to reject a hotkey that's already registered:
 ```ts
 createHotkeyRecorder({
   detectConflicts: true,
-  onReject: ({ reason, message, conflicts }) => {
-    // reason is 'conflict', and conflicts lists the registrations it collides with
-    setError(message)
+  onReject: ({ reason }) => {
+    if (reason === 'conflict') setError('That shortcut is already in use.')
   },
   onRecord: (hotkey) => saveHotkey(hotkey),
 })
@@ -150,7 +152,7 @@ detectConflicts: {
 
 A conflict check finds hotkeys that could collide. It can't promise which callback a key press would run, because propagation, typing in fields, other listeners, and pages that haven't rendered all affect that. To check app hotkeys, including ones on pages that haven't rendered, use `findConflicts` from [app hotkeys](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md) instead.
 
-`onReject` receives a `reason`: `'conflict'`, `'validation'`, `'invalid'`, `'missing-code'` for a key press with no physical code, or `'alt-graph'` for AltGr typing a character. It also receives a `message`, the rejected `hotkey` when there is one, and the `conflicts` for a conflict.
+`onReject` receives a `reason`: `'conflict'`, `'validation'`, `'whitespace'` for a whitespace character, `'missing-code'` for a key press with no physical code, or `'alt-graph'` for AltGr typing a character. It also receives the rejected `hotkey` when there is one, the `conflicts` for a conflict, and the `message` your `validate` callback returned. The recorder sends no text of its own, so map each `reason` to your app's wording.
 
 To check a hotkey outside a recording, call `findHotkeyConflicts(hotkey, options)`. It takes the same options, and returns [registration views](./hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md#source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md).
 
@@ -217,18 +219,19 @@ For a few hotkeys in one component, `$state` is enough:
 | Option | Default | Description |
 | --- | --- | --- |
 | `onRecord` | Required | Called with the recorded hotkey when a recording commits |
-| `onCancel` | None | Called when the user presses Escape or you call `cancelRecording()` |
+| `onCancel` | None | Called when the user presses Escape, Tab, or Shift+Tab, or you call `cancelRecording()` |
 | `onClear` | None | Called when the user presses Backspace or Delete with nothing recorded |
 | `maxSteps` | `1` | `1` records a chord. `Infinity` records a sequence. |
 | `commitKeys` | `'enter'` | With `maxSteps: Infinity`, whether plain Enter commits (`'enter'`) or records as a step (`'none'`) |
 | `idleTimeoutMs` | None | With `maxSteps: Infinity`, commits after this many milliseconds without a new step. The timer starts after the first chord. |
 | `recordBy` | `'code'` | Records the key's position (`'code'`) or the character it types (`'key'`) |
 | `ignoreInputs` | `true` | Lets typing in text fields pass through while recording |
+| `recordTab` | `false` | Records Tab and Shift+Tab instead of letting them cancel and move focus |
 | `validate` | None | Accepts or rejects a recording. See [Reject hotkeys you don't want](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#reject-hotkeys-you-dont-want). |
 | `detectConflicts` | `false` | Rejects a recording that collides with a registered hotkey. See [Check for conflicts](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#check-for-conflicts). |
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md). The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/24f618ff48e83d4dabd039860ee41408326800aa/docs/framework/svelte/reference/functions/createHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md). The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/docs/framework/svelte/reference/functions/createHotkeyRecorder.md) lists the types.
 
-The [create-hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/svelte/create-hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/svelte/create-hotkey-recorder-sequences) records sequences.
+The [create-hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/svelte/create-hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/svelte/create-hotkey-recorder-sequences) records sequences.

@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-concepts-data-and-channels-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.4.0`.
+Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 [Topic index](../chart-grammar.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 > [!IMPORTANT]
 > `scope.createHotkeyRecorder` was removed in `@tanstack/alpine-hotkeys` v0.10.0, so apps that don't record hotkeys don't ship the recorder. Call `createHotkeyRecorder(scope, options)` instead, or `$hotkeyRecorder(options)` after you install `hotkeyRecorderPlugin`.

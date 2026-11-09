@@ -2,7 +2,7 @@
 
 <a id="source-config-docs-eslint-md"></a>
 
-Release-matched documentation · `@tanstack/eslint-config@0.4.0`.
+Release-matched documentation · `@tanstack/eslint-config@0.5.0`.
 
 [Topic index](../toolchain.md) · [Source provenance](../SOURCES.md)
 
@@ -46,4 +46,4 @@ export default [
 
 ## Rules
 
-You can inspect the enabled rules by running `pnpm dlx @eslint/config-inspector`, or by browsing the source [here](https://github.com/TanStack/config/tree/d517be12810c82d6372f3887d74088832d329b3e/packages/eslint-config). Each rule has a comment explaining why it is included in the shared config.
+You can inspect the enabled rules by running `pnpm dlx @eslint/config-inspector`, or by browsing the source [here](https://github.com/TanStack/config/tree/a041f4eeb8e4d595aee89f8992b20c669288a741/packages/eslint-config). Each rule has a comment explaining why it is included in the shared config.

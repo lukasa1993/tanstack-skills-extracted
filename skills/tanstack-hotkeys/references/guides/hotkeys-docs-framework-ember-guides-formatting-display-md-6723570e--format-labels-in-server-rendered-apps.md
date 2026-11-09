@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered in FastBoot uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once the app boots in the browser. To render the right label from the start:
 
 1. Read the request's `User-Agent` header from the `fastboot` service, and pass `detectPlatform(userAgent)` as the `platform` of a `createHotkeysScope` scope.
-2. Format labels with `useFormatForDisplay(scope)` instead of `formatForDisplay`.
+2. Format labels with `useFormatForDisplay(scope)` instead of `formatForDisplay`. `formatForDisplay` doesn't read the scope, so it ignores the platform from step 1.
 
 Create the scope in a component near the top of your app, such as the one your application template renders:
 

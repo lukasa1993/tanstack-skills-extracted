@@ -1,6 +1,6 @@
 # Comparison — Bundle snapshot
 
-[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-comparison-md-7faf855b.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## Bundle snapshot
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 

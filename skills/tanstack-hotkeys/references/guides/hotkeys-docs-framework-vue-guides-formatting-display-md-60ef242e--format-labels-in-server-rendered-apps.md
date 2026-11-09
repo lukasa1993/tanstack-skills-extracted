@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once Vue hydrates, with a hydration mismatch. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`.
+2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
 
 ```vue
 <script setup lang="ts">
@@ -42,7 +42,7 @@ const format = useFormatForDisplay()
 
 `useFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call the composable once in `setup`, then call the function anywhere, including in templates, loops, and computed properties. The function reads the provider's `platform` each time you call it, so labels update when the platform changes. A `platform` passed to the function wins over the provider's.
 
-In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. An inner provider inherits it.
+In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
 Vue has no fallback for a missing platform. Without a provider `platform`, `useFormatForDisplay` renders `'linux'` labels on the server and the browser's platform during hydration. Vue then replaces the label text, and logs a hydration mismatch: a warning for each label in development, and one error in production builds. Attributes, such as a `title` that contains a label, keep the server's value. Set the provider's `platform` on every page that renders on the server.
 
@@ -72,7 +72,7 @@ const platform = detectPlatform(useRequestHeader('user-agent'))
 
 If your app uses layouts, wrap `<NuxtLayout>` instead of `<NuxtPage />`. For routes that Nuxt prerenders, see [Static and prerendered pages](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#static-and-prerendered-pages).
 
-The [Nuxt example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/vue/useFormatForDisplay-nuxt) shows this setup.
+The [Nuxt example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/useFormatForDisplay-nuxt) shows this setup.
 
 ### Vite SSR
 
@@ -125,7 +125,7 @@ defineProps<{ platform: HotkeyPlatform }>()
 </template>
 ```
 
-The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/vue/useFormatForDisplay-vite-ssr) shows this setup.
+The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/useFormatForDisplay-vite-ssr) shows this setup.
 
 ### Astro
 
@@ -161,7 +161,7 @@ defineProps<{ platform: HotkeyPlatform }>()
 </template>
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/vue/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/useFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 
@@ -239,7 +239,7 @@ Press <Shortcut hotkey="Mod+K" /> to search.
 
 VitePress's `<ClientOnly>` renders nothing on the server, and the label appears once the page hydrates.
 
-The [VitePress example](https://github.com/TanStack/hotkeys/blob/24f618ff48e83d4dabd039860ee41408326800aa/examples/vue/useFormatForDisplay-vitepress/index.md) shows labels in `<ClientOnly>` on a static site.
+The [VitePress example](https://github.com/TanStack/hotkeys/blob/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/useFormatForDisplay-vitepress/index.md) shows labels in `<ClientOnly>` on a static site.
 
 ### Development warning
 

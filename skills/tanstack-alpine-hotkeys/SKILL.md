@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/alpine-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/alpine-hotkeys"
-  tanstack-package-version: "0.11.1"
+  tanstack-package-version: "0.11.4"
   tanstack-purpose: "Alpine bindings for TanStack Hotkeys: per-component owners, the $hotkeys magic, getter options, manager-activated scopes, and the Alpine-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "alpine-hotkeys"
@@ -21,8 +21,8 @@ metadata:
 Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack/intent@latest load @tanstack/hotkeys#hotkeys-core`).
 
 ```ts no-check
-import Alpine from 'alpinejs'
 import { createHotkeysScope, hotkeysPlugin } from '@tanstack/alpine-hotkeys'
+import Alpine from 'alpinejs'
 
 Alpine.plugin(hotkeysPlugin) // before Alpine.start()
 

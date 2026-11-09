@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/ember-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/ember-hotkeys"
-  tanstack-package-version: "0.10.1"
+  tanstack-package-version: "0.10.4"
   tanstack-purpose: "Ember bindings for TanStack Hotkeys: template helpers, element modifiers, owner-bound state readers, manager-activated scopes, and the Ember-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "ember-hotkeys"
@@ -74,7 +74,7 @@ The helpers are template helpers, not JavaScript functions. State readers take t
 - **`createHotkeysScope` isn't a hotkey scope.** It only sets defaults for its helpers. For a dialog, call `getHotkeyManager().activateScope(name, { exclusive: true })` in the constructor, pass the result to `registerDestructor(this, release)`, and put `scope=name` on the dialog's hotkeys. Give each open dialog its own name.
 - **Read app hotkeys through getters.** Template paths can't index ids that contain dots.
 - **Scopes have no `useHotkeyRecorder`** since v0.9.0. Call `useHotkeyRecorder(this, options, this.hotkeys)`, so apps that set defaults but don't record don't ship the recorder.
-- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Pass `platform: detectPlatform(userAgent)` to `createHotkeysScope`, with the user agent from FastBoot's request, and format labels with `format = useFormatForDisplay(this.hotkeys)`, then `{{this.format hotkey}}`. Keep plain `formatForDisplay` for labels that render only in the browser.
+- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Pass `platform: detectPlatform(userAgent)` to `createHotkeysScope`, with the user agent from FastBoot's request, and format labels with `format = useFormatForDisplay(this.hotkeys)`, then `{{this.format hotkey}}`. Keep plain `formatForDisplay` for labels that render only in the browser, when no scope sets `platform`.
 
 When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in Ember](./references/app-hotkeys.md).
 

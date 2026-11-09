@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/react-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/react-hotkeys"
-  tanstack-package-version: "0.22.0"
+  tanstack-package-version: "0.22.3"
   tanstack-purpose: "React bindings for TanStack Hotkeys: hooks, providers, refs, and the React-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "react-hotkeys"
@@ -62,9 +62,9 @@ No provider is required. In React Server Components frameworks, call the hooks f
 ## A dialog that owns the keyboard
 
 ```tsx
+import { HotkeysProvider, useHotkey } from '@tanstack/react-hotkeys'
 import { useId } from 'react'
 import type { ReactNode } from 'react'
-import { HotkeysProvider, useHotkey } from '@tanstack/react-hotkeys'
 
 export function Dialog(props: { onClose: () => void; children: ReactNode }) {
   return (
@@ -95,8 +95,8 @@ A hook uses the nearest `HotkeysProvider` above its component. Registering `Esca
 - **No dependency arrays or `useCallback`.** The hooks read the hotkey, callback, and options on every render, so inline callbacks always see current state.
 - **Call the hooks directly.** A `useShortcut(keys: string)` wrapper has to cast strings to hotkeys, which turns off type checking and drops sequences, options, app hotkeys, and the typed callback context.
 - **`matchesKeyboardEvent` takes the DOM event.** In a widget's `onKeyDown`, pass `event.nativeEvent`.
-- **In tests,** set `<HotkeysProvider defaultOptions={{ hotkey: { platform: 'mac' } }}>`.
-- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header, and format labels with `const format = useFormatForDisplay()` at the top of the component, then `format(hotkey)`. Keep plain `formatForDisplay` for labels that render only in the browser.
+- **In tests,** set `<HotkeysProvider defaultOptions={{ platform: 'mac' }}>`. It applies to hotkeys, recorders, labels, and app hotkey conflict checks.
+- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header, and format labels with `const format = useFormatForDisplay()` at the top of the component, then `format(hotkey)`. Keep plain `formatForDisplay` for labels that render only in the browser, when no provider sets `platform`.
 
 When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in React](./references/app-hotkeys.md).
 

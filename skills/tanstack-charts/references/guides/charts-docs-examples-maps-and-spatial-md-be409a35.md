@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-examples-maps-and-spatial-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.4.0`.
+Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 [Topic index](../examples-advanced.md) · [Source provenance](../SOURCES.md)
 

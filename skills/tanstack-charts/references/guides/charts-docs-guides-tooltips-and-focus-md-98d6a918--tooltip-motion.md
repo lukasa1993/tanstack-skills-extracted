@@ -1,6 +1,6 @@
 # Tooltips And Focus — Tooltip motion
 
-[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-guides-tooltips-and-focus-md-98d6a918.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## Tooltip motion
 

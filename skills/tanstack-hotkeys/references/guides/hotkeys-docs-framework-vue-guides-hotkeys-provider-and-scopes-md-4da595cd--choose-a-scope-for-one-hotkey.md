@@ -1,6 +1,6 @@
 # Hotkeys Provider And Scopes — Choose a scope for one hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Choose a scope for one hotkey
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-alpine-hotkeys"></a>
 
-Published skill · `@tanstack/alpine-hotkeys@0.11.1`.
+Published skill · `@tanstack/alpine-hotkeys@0.11.4`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -13,8 +13,8 @@ Prerequisite: [Hotkeys Core](./tanstack-hotkeys-core-62518e1a.md).
 Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack/intent@latest load @tanstack/hotkeys#hotkeys-core`).
 
 ```ts no-check
-import Alpine from 'alpinejs'
 import { createHotkeysScope, hotkeysPlugin } from '@tanstack/alpine-hotkeys'
+import Alpine from 'alpinejs'
 
 Alpine.plugin(hotkeysPlugin) // before Alpine.start()
 

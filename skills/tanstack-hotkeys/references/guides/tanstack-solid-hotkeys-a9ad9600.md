@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-hotkeys"></a>
 
-Published skill · `@tanstack/solid-hotkeys@0.21.0`.
+Published skill · `@tanstack/solid-hotkeys@0.21.3`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -13,8 +13,8 @@ Prerequisite: [Hotkeys Core](./tanstack-hotkeys-core-62518e1a.md).
 Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack/intent@latest load @tanstack/hotkeys#hotkeys-core`).
 
 ```tsx
-import { createSignal } from 'solid-js'
 import { createHotkey } from '@tanstack/solid-hotkeys'
+import { createSignal } from 'solid-js'
 
 export function Editor() {
   const [isDirty, setIsDirty] = createSignal(false)
@@ -63,12 +63,12 @@ The state these return is accessors, including the recorder's fields. No provide
 ## Pitfalls
 
 - **Pass options as an accessor.** `{ enabled: isDirty() }` is read once, during setup, so the hotkey never follows the signal. Use `() => ({ enabled: isDirty() })`. The hotkey and `createHotkeys`' definitions also accept accessors.
-- **Keep element targets in a signal.** A `let el` variable is still `undefined` when the options are read, and an undefined target means `document`. Use `ref={setEl}` and `() => ({ target: el() })`; a `null` target waits for the element.
+- **Keep element targets in a signal.** A `let el` variable is still `undefined` when the options are read, and nothing tracks it, so the hotkey waits and never registers. Use `ref={setEl}` and `() => ({ target: el() })`; a `null` or `undefined` target waits for the element.
 - **Register hotkeys for removable elements in their `ref`.** Solid never calls a `ref` with `null`, so a signal keeps an element that `<Show>` or `<For>` removed, and the hotkey stays registered on it. Use `ref={(el) => createHotkey('K', cb, { target: el })}`; the hotkey unregisters when the element is removed.
 - **The callback isn't tracked.** Read props inside it, as `() => props.onClose()`, rather than passing `props.onClose` itself.
 - **Register a dialog's hotkeys in a child of its provider.** A primitive uses the nearest `HotkeysProvider` above its component, so a dialog that renders `<HotkeysProvider scope={...} exclusive>` and creates `Escape` itself puts it in the suspended outer scope. Give each open dialog its own scope name, such as `` `dialog-${createUniqueId()}` ``.
 - **Call the primitives directly.** A `createShortcut(keys: string)` wrapper has to cast strings to hotkeys, which turns off type checking and drops sequences, accessor options, and app hotkeys.
-- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header, and format labels with `const format = createFormatForDisplay()` in the component, then `format(hotkey)`. Keep plain `formatForDisplay` for labels that render only in the browser.
+- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header, and format labels with `const format = createFormatForDisplay()` in the component, then `format(hotkey)`. Keep plain `formatForDisplay` for labels that render only in the browser, when no provider sets `platform`.
 
 When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in Solid](../assets/tanstack-solid-hotkeys/references/app-hotkeys.md).
 

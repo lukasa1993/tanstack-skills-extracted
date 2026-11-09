@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -270,4 +270,4 @@ The hotkeys [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-doc
 
 Your app doesn't need to track scopes itself. If you want to show scope state anyway, read it from the hotkey manager. See [Read scope state](./hotkeys-docs-framework-preact-guides-hotkey-manager-md-60f997b1.md#source-hotkeys-docs-framework-preact-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/preact/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/preact/scopes) for nested, enabled, and exclusive scopes together.

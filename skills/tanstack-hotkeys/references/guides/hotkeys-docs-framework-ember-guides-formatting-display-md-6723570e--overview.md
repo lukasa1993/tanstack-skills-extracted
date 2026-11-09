@@ -1,11 +1,11 @@
 # Formatting Display — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
-> [!NOTE]
-> Showing hotkey labels on the page is one of the few parts of TanStack Hotkeys that needs extra care in server-rendered apps. The server doesn't know the user's operating system, so a label it renders can differ from the label the browser renders, which causes a hydration error. The library has helpers that prevent this. See [Format labels in server-rendered apps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#format-labels-in-server-rendered-apps).
+> [!WARNING]
+> **Server rendering? Don't render labels with `formatForDisplay`.** It doesn't read the scope's `platform`, so without a `platform` option it renders Linux labels on the server, such as `Ctrl+S`. When the app boots in the browser, Mac users see the label change to `⌘ S`. Use `useFormatForDisplay(scope)` instead, and set the scope's `platform` from the request. See [Format labels in server-rendered apps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#format-labels-in-server-rendered-apps).
 
-Use `formatForDisplay` whenever a hotkey appears in a menu, button, tooltip, cheat sheet, or shortcut settings panel. It accepts chord strings, including physical ones such as `'Mod+[KeyS]'`, chord objects, parsed chords, and sequences. Store the hotkey itself, and format it when you render. A label is for reading, not for registering.
+Format a hotkey as a label whenever it appears in a menu, button, tooltip, cheat sheet, or shortcut settings panel. `formatForDisplay` accepts chord strings, including physical ones such as `'Mod+[KeyS]'`, chord objects, parsed chords, and sequences. Store the hotkey itself, and format it when you render. A label is for reading, not for registering.
 
 A label depends on the user's platform: `Mod+S` is `⌘ S` on macOS and `Ctrl+S` elsewhere. Pick the API by where your labels render:
 

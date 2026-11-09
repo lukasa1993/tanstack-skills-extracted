@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-start"></a>
 
-Published skill · `@tanstack/solid-start@1.169.4`.
+Published skill · `@tanstack/solid-start@1.169.5`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

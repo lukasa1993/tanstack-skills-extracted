@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -119,7 +119,7 @@ provideAppHotkeys(appHotkeys, {
 ```
 
 - `customHotkeys` holds only the hotkeys that differ from the declared defaults, keyed by id. `null` means the user unbound that hotkey. Saving differences means users who never changed a hotkey get new defaults when you change them.
-- To apply saved data that loads later, such as from a server, call `store.setOptions({ customHotkeys })` on the store that `provideAppHotkeys` returns. It replaces the current custom hotkeys without calling `onCustomHotkeysChange`. `undefined` leaves them unchanged, and `null` clears them. Saved data can outlive the code that wrote it, so unknown ids and invalid hotkeys are ignored with a warning in development.
+- To apply saved data that loads later, such as from a server, call `store.setOptions({ customHotkeys })` on the store that `provideAppHotkeys` returns. It replaces the current custom hotkeys without calling `onCustomHotkeysChange`. `undefined` leaves them unchanged, and `null` clears them. Saved data can outlive the code that wrote it, so unknown ids and invalid hotkeys are ignored.
 - `onCustomHotkeysChange` receives the complete custom hotkeys after every change, ready to save. Storage can be anything: local storage, a server, or a user profile.
 
 The [hotkey recorder](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md) records `Mod` rather than platform-specific modifiers, so a hotkey saved on one platform works on others.
@@ -190,4 +190,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `createAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/24f618ff48e83d4dabd039860ee41408326800aa/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/docs/reference/classes/AppHotkeysStore.md) to use it directly.

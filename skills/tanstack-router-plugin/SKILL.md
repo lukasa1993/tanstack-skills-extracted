@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-router"
   tanstack-library-version: "1.168.23"
   tanstack-package: "@tanstack/router-plugin"
-  tanstack-package-version: "1.168.48"
+  tanstack-package-version: "1.169.0"
   tanstack-source-skill: "router-plugin"
   tanstack-sources: "[\"TanStack/router:packages/router-plugin/src\",\"TanStack/router:docs/router/routing/file-based-routing.md\",\"TanStack/router:docs/router/guide/code-splitting.md\"]"
   tanstack-type: "core"
@@ -89,11 +89,12 @@ esbuild.build({
   plugins: [
     tanstackRouter({
       target: 'react',
-      autoCodeSplitting: true,
     }),
   ],
 })
 ```
+
+> Automatic code splitting is not available with esbuild: the plugin throws when `autoCodeSplitting` is `true`. Use manual code splitting (`.lazy.tsx` files) or another bundler to split routes.
 
 ## Configuration Options
 

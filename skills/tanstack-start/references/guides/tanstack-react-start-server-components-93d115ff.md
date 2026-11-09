@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-react-start-server-components"></a>
 
-Published skill · `@tanstack/react-start@1.169.4`.
+Published skill · `@tanstack/react-start@1.169.5`.
 
 [Topic index](../deployment-rendering.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Sensible Defaults — Recording captures what the user pressed
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Recording captures what the user pressed
 
@@ -9,6 +9,7 @@ The hotkey recorder records physical key positions by default (`recordBy: 'code'
 While recording:
 
 - **Escape** cancels.
+- **Tab** and **Shift+Tab** cancel and move focus, so keyboard users can leave the recorder. Set `recordTab: true` to record them instead, and tell users that Escape cancels.
 - **Backspace** or **Delete** removes the last step, or clears an empty recording.
 - **Enter** commits a sequence recording, made with `maxSteps: Infinity`.
 - **Registered hotkeys are paused**, so pressing `Mod+S` to record it does not also save.

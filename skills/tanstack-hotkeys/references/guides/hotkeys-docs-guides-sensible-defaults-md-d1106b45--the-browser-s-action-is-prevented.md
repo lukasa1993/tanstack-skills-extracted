@@ -1,6 +1,6 @@
 # Sensible Defaults — The browser's action is prevented
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## The browser's action is prevented
 
@@ -9,3 +9,5 @@
 Both apply only when a hotkey matches; every other key press is left alone. For a sequence, every step that advances it calls `preventDefault`, so the browser doesn't act on `Mod+K` in `['Mod+K', 'Mod+C']`. Propagation stops only on the last step, so earlier steps still reach other listeners. Set either option to `false` when you want to observe a shortcut without taking it over.
 
 Some browser and operating system shortcuts never reach the page and cannot be overridden. Browsers keep `Mod+T`, `Mod+N`, and `Mod+W` for opening and closing tabs and windows, and the operating system keeps shortcuts such as `Alt+Tab` and `Command+Tab`. Pick other keys for your app.
+
+A `Tab`, `Shift+Tab`, or `F6` hotkey on the document also fires while a button or link has focus, and its `preventDefault` keeps focus from moving. Give it an element `target`, such as an editor or a component that manages focus itself.

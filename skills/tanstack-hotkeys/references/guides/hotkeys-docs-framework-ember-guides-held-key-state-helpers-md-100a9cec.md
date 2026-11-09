@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -109,4 +109,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/ember/useHeldKeys) shows held keys and their codes, and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/ember/useKeyHold) shows modifier indicators.
+The [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/ember/useHeldKeys) shows held keys and their codes, and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/ember/useKeyHold) shows modifier indicators.

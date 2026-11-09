@@ -15,9 +15,7 @@
       "sha256": "5d66cdbbbe94658bf69aeb093e1fcffacdd33fec3e05aaecc1f9c4f755705c3e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46"
       ]
     },
     {
@@ -32,9 +30,7 @@
       "sha256": "ba112548218399d4c7f939eaa52461644ffffd61a544716492af2065fa84c808",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46"
       ]
     },
     {
@@ -49,9 +45,7 @@
       "sha256": "45a86357d2ec457c1a78d5287b429e6a3b12015ffacad9fad96ab64014110256",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46"
       ]
     },
     {
@@ -59,16 +53,14 @@
       "kind": "document",
       "theme": "toolchain",
       "package": "@tanstack/eslint-config",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "repository": "TanStack/config",
-      "commit": "d517be12810c82d6372f3887d74088832d329b3e",
+      "commit": "a041f4eeb8e4d595aee89f8992b20c669288a741",
       "sourcePath": "docs/eslint.md",
-      "sha256": "cf65dc12248ccc3d0ee2500843eabd58996f847e3aa38e521b268840971ccc5d",
+      "sha256": "a368b2b705895a907ccd9d0b2f1da8ebba989b0d58c64731831a2f7e7e25b3d4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "a041f4eeb8e4d595aee89f8992b20c669288a741"
       ]
     },
     {
@@ -83,9 +75,7 @@
       "sha256": "a245fa02208f822f9a43a19f69c38cd2ec25f270f330a013d89ffe9cf09a5ab7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46"
       ]
     },
     {
@@ -100,9 +90,7 @@
       "sha256": "1834fa8c614503d4c2943439449b3427a262d3fcb968212837c1aa4bcba8fabf",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "bfa16483f70e69805e1ea4eee29988b133d2aa46"
       ]
     },
     {
@@ -117,9 +105,7 @@
       "sha256": "9e130dda6173b87c05d179dba8972e648b8513d17a82018f5983fcf1819ddad2",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "64b9024002980574af45c82b663891ce0c0bdc30",
-        "bfa16483f70e69805e1ea4eee29988b133d2aa46",
-        "d517be12810c82d6372f3887d74088832d329b3e"
+        "64b9024002980574af45c82b663891ce0c0bdc30"
       ]
     }
   ],
@@ -148,14 +134,14 @@
         "sha256": "844de3c451bfb3f83c9cff028e2630967fd1d82394da8d9c004bdaf089622d43"
       },
       {
+        "url": "https://codeload.github.com/TanStack/config/tar.gz/a041f4eeb8e4d595aee89f8992b20c669288a741",
+        "commit": "a041f4eeb8e4d595aee89f8992b20c669288a741",
+        "sha256": "f3df8f6b210d6cafcdd75ffec88006a04cb5973677c37a461288ecf41b35ae79"
+      },
+      {
         "url": "https://codeload.github.com/TanStack/config/tar.gz/bfa16483f70e69805e1ea4eee29988b133d2aa46",
         "commit": "bfa16483f70e69805e1ea4eee29988b133d2aa46",
         "sha256": "a3eb3dec2160e6e6523191d88e35ceae736c1a8408a1a54248ac302325d5c562"
-      },
-      {
-        "url": "https://codeload.github.com/TanStack/config/tar.gz/d517be12810c82d6372f3887d74088832d329b3e",
-        "commit": "d517be12810c82d6372f3887d74088832d329b3e",
-        "sha256": "cc3fcfc6c6c8f3cfcd8c3ef96216177332b222d3e34562f7e9bb1f06129d5ae3"
       }
     ],
     "linkValidation": {

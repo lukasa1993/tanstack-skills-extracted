@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -121,7 +121,7 @@ bootstrapApplication(AppComponent, {
 ```
 
 - `customHotkeys` holds only the hotkeys that differ from the declared defaults, keyed by id. `null` means the user unbound that hotkey. Saving differences means users who never changed a hotkey get new defaults when you change them.
-- Pass `customHotkeys` as a signal or function when saved data loads later. When its value changes, it replaces the current custom hotkeys without calling `onCustomHotkeysChange`. `undefined` leaves them unchanged, such as while saved data loads, and `null` clears them, such as on sign-out. Saved data can outlive the code that wrote it, so unknown ids and invalid hotkeys are ignored with a warning in development.
+- Pass `customHotkeys` as a signal or function when saved data loads later. When its value changes, it replaces the current custom hotkeys without calling `onCustomHotkeysChange`. `undefined` leaves them unchanged, such as while saved data loads, and `null` clears them, such as on sign-out. Saved data can outlive the code that wrote it, so unknown ids and invalid hotkeys are ignored.
 - `onCustomHotkeysChange` receives the complete custom hotkeys after every change, ready to save. Storage can be anything: local storage, a server, or a user profile.
 
 The [hotkey recorder](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md#source-hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md) records `Mod` rather than platform-specific modifiers, so a hotkey saved on one platform works on others.
@@ -180,4 +180,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `injectAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`provideHotkeys` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/24f618ff48e83d4dabd039860ee41408326800aa/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`provideHotkeys` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/docs/reference/classes/AppHotkeysStore.md) to use it directly.

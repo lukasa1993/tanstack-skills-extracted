@@ -1,6 +1,6 @@
 # Polar — `radialLine` and `radialArea`
 
-[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-reference-marks-polar-md-29a92849.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## `radialLine` and `radialArea`
 

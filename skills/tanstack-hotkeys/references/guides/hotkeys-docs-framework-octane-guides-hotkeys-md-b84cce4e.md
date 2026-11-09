@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -16,7 +16,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Hotkey options](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--enable-and-disable-hotkeys.md) — 3 KiB
-- [Hotkey targets](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-targets.md) — 2 KiB
+- [Hotkey targets](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-targets.md) — 3 KiB
 - [Handle duplicate hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--handle-duplicate-hotkeys.md) — 2 KiB
 - [Describe hotkeys with `meta`](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--describe-hotkeys-with-meta.md) — 1 KiB
 

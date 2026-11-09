@@ -1,6 +1,6 @@
 # Formatting Display — Parse, compare, and store hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Parse, compare, and store hotkeys
 
@@ -21,6 +21,6 @@ A parsed chord's modifiers are already resolved for one platform. To store it as
 
 `areHotkeysEqual(a, b)` compares chords or sequences after resolving modifiers, so `Mod+S` equals `Meta+S` on macOS. Sequences compare step by step. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` turns a one-step sequence into its chord.
 
-Use `validateHotkey` when you accept a hotkey from somewhere else, such as a settings file. It returns `valid`, `errors`, and `warnings`, and names the failing step of a sequence. It can't promise that the browser or operating system delivers the shortcut. To check hotkeys as users record them, see [Validate and check conflicts](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md#source-hotkeys-docs-framework-react-guides-custom-hotkey-recording-md).
+Use `validateHotkey` when you accept a hotkey from somewhere else, such as a settings file. It returns `valid`, `errors`, and `warnings`. Each error or warning has a `reason` code, such as `'unknown-modifier'`, the `part` it's about, and for a sequence, the index of the `step`. The library sends no text, so write your own messages for users. The devtools describe each problem in the details of a hotkey. It can't promise that the browser or operating system delivers the shortcut. To check hotkeys as users record them, see [Validate and check conflicts](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md#source-hotkeys-docs-framework-react-guides-custom-hotkey-recording-md).
 
-Try these options together with the format toggles in the [server-rendered cheat sheet example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/react/useFormatForDisplay-tanstack-start). For a full list of your app's shortcuts, see [Cheat Sheet UI Helpers](./hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md#source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md).
+Try these options together with the format toggles in the [server-rendered cheat sheet example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/useFormatForDisplay-tanstack-start). For a full list of your app's shortcuts, see [Cheat Sheet UI Helpers](./hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md#source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md).

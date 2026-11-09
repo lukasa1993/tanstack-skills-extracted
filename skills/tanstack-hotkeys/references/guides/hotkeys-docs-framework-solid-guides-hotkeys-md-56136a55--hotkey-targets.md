@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Hotkey targets
 
@@ -23,7 +23,7 @@ function Panel() {
 }
 ```
 
-A `null` target waits until the element is attached.
+A `null` or `undefined` target waits until the element is attached. Only an omitted `target` listens on `document`, so a wrapper that forwards an unset `target` waits too. Set `target: document` to choose the document explicitly.
 
 > [!NOTE]
 > An element receives key presses only while it, or something inside it, has focus. Give it a `tabIndex` if it isn't focusable already.

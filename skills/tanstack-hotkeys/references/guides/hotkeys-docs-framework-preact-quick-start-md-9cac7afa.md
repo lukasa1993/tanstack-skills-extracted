@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -68,20 +68,21 @@ useHotkeys([
 
 ## Show the shortcut
 
-Label a button or menu item with `formatForDisplay`. Format the same value you register, so the label always matches the binding:
+Label a button or menu item with `useFormatForDisplay`. Format the same value you register, so the label always matches the binding:
 
 ```tsx
-import { formatForDisplay, useHotkey } from '@tanstack/preact-hotkeys'
+import { useFormatForDisplay, useHotkey } from '@tanstack/preact-hotkeys'
 import type { HotkeyChord } from '@tanstack/preact-hotkeys'
 
 const saveHotkey: HotkeyChord = 'Mod+S'
 
 function SaveButton() {
   useHotkey(saveHotkey, () => save())
+  const format = useFormatForDisplay()
 
   return (
     <button onClick={save}>
-      Save <kbd>{formatForDisplay(saveHotkey)}</kbd>
+      Save <kbd>{format(saveHotkey)}</kbd>
     </button>
   )
 }
@@ -89,7 +90,7 @@ function SaveButton() {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server, such as with Fresh or Astro, use `useFormatForDisplay` and set the provider's `platform` from the request, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md#source-hotkeys-docs-framework-preact-guides-formatting-display-md).
+If your app renders on the server, such as with Fresh or Astro, set the provider's `platform` from the request, so the server renders the user's labels without hydration errors, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md#source-hotkeys-docs-framework-preact-guides-formatting-display-md).
 
 ## Hotkeys follow your components
 

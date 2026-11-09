@@ -1,8 +1,11 @@
 # Formatting Display — Format a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Format a hotkey
+
+> [!IMPORTANT]
+> `formatForDisplay` never reads the provider's `platform`. Use it for labels that render only in the browser, or pass `platform` yourself. In a server-rendered app, or when the provider sets `platform`, use `injectFormatForDisplay()` instead. It returns a function with the same options.
 
 ```ts
 import { formatForDisplay } from '@tanstack/angular-hotkeys'

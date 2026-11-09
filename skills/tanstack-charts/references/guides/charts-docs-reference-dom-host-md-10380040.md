@@ -2,7 +2,7 @@
 
 <a id="source-charts-docs-reference-dom-host-md"></a>
 
-Release-matched documentation · `@tanstack/charts@1.4.0`.
+Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 [Topic index](../rendering-composition-reference.md) · [Source provenance](../SOURCES.md)
 

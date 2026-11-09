@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Register a hotkey
 
@@ -34,7 +34,7 @@ save(event: KeyboardEvent, context: HotkeyChordCallbackContext) {
 }
 ```
 
-The method runs with the element as `this`, so it reads the element's current properties. The decorator looks the method up each time the hotkey fires, so a subclass that overrides it runs the override. `@hotkey` works with standard and legacy decorators. With standard decorators, it also works on `#private` methods.
+The method runs with the element as `this`, so it reads the element's current properties. The decorator looks the method up each time the hotkey fires, so a subclass that overrides it runs the override. When the subclass also puts `@hotkey` on the override, the subclass's hotkeys replace the parent's for that method: `@hotkey('K')` on both registers K once, and `@hotkey('J')` on the override moves the method from K to J. To keep K and add J, put both on the override. `@hotkey` works with standard and legacy decorators. With standard decorators, it also works on `#private` methods.
 
 Decorator arguments are fixed when the class is defined. When the hotkey or its options change, use `HotkeyController` and pass them as functions. The controller reads them when the element connects and after each update. When only the options change, it updates the existing registration. When the hotkey or its `target` changes, it replaces the registration:
 

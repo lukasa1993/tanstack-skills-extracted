@@ -429,16 +429,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/router-plugin",
-      "version": "1.168.48",
+      "version": "1.169.0",
       "file": "references/guides/tanstack-router-plugin-5aa7d950.md",
       "sourcePath": "router-plugin",
-      "bytes": 8404,
+      "bytes": 8567,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Install; Bundler Setup; Configuration Options; How It Works; Route Refactor Workflow; Individual Plugin Exports; Common Mistakes; Cross-References",
           "file": "references/guides/tanstack-router-plugin-5aa7d950.md",
-          "bytes": 8404
+          "bytes": 8567
         }
       ],
       "examples": []

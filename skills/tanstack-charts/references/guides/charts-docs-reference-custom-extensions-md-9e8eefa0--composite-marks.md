@@ -1,6 +1,6 @@
 # Custom Extensions — Composite marks
 
-[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-reference-custom-extensions-md-9e8eefa0.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## Composite marks
 

@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Hotkey options
 
@@ -28,7 +28,7 @@ useHotkey('Enter', () => submit(), { ignoreInputs: false })
 | `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
 | `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#describe-hotkeys-with-meta). |
 
-The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`UseHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/24f618ff48e83d4dabd039860ee41408326800aa/docs/framework/vue/reference/type-aliases/UseHotkeyOptions.md) lists the types.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`UseHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/docs/framework/vue/reference/type-aliases/UseHotkeyOptions.md) lists the types.
 
 To change a default for every hotkey in your app, wrap it in a `HotkeysProvider` with `default-options`. Options passed to a composable override the provider's defaults:
 

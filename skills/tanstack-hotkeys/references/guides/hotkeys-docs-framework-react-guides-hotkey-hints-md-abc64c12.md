@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -115,4 +115,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md#source-hotkeys-docs-framework-react-guides-held-key-state-helpers-md) covers the tracker and the other held-key hooks.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/react/kitchen-sink) shows hints on its navigation and toolbar buttons, and keeps them current when users change their hotkeys.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/kitchen-sink) shows hints on its navigation and toolbar buttons, and keeps them current when users change their hotkeys.

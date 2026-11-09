@@ -14,7 +14,7 @@ Imported material is tied to the versions and commits below. Outbound links to o
 | `tanstack-router-core-not-found-and-errors` | atomic | `data-auth-errors` | `@tanstack/router-core` | `1.171.39` |  |
 | `tanstack-router-core-code-splitting` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.39` |  |
 | `tanstack-router-core-ssr` | atomic | `ssr-build-tooling` | `@tanstack/router-core` | `1.171.39` |  |
-| `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.168.48` |  |
+| `tanstack-router-plugin` | atomic | `ssr-build-tooling` | `@tanstack/router-plugin` | `1.169.0` |  |
 | `tanstack-virtual-file-routes` | atomic | `ssr-build-tooling` | `@tanstack/virtual-file-routes` | `1.162.0` |  |
 | `tanstack-solid-router` | atomic | `framework-solid` | `@tanstack/solid-router` | `1.170.43` |  |
 | `tanstack-vue-router` | atomic | `framework-vue` | `@tanstack/vue-router` | `1.170.42` |  |

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -68,20 +68,21 @@ createHotkeys([
 
 ## Show the shortcut
 
-Label a button or menu item with `formatForDisplay`. Format the same value you register, so the label always matches the binding:
+Label a button or menu item with `createFormatForDisplay`. Format the same value you register, so the label always matches the binding:
 
 ```tsx
-import { createHotkey, formatForDisplay } from '@tanstack/solid-hotkeys'
+import { createFormatForDisplay, createHotkey } from '@tanstack/solid-hotkeys'
 import type { HotkeyChord } from '@tanstack/solid-hotkeys'
 
 const saveHotkey: HotkeyChord = 'Mod+S'
 
 function SaveButton() {
   createHotkey(saveHotkey, () => save())
+  const format = createFormatForDisplay()
 
   return (
     <button onClick={save}>
-      Save <kbd>{formatForDisplay(saveHotkey)}</kbd>
+      Save <kbd>{format(saveHotkey)}</kbd>
     </button>
   )
 }
@@ -89,7 +90,7 @@ function SaveButton() {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server, such as with SolidStart or TanStack Start, use `createFormatForDisplay` instead, and set the provider's `platform` from the request, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
+If your app renders on the server, such as with SolidStart or TanStack Start, set the provider's `platform` from the request, so the server renders the user's labels without hydration errors, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
 
 ## Hotkeys follow your components
 

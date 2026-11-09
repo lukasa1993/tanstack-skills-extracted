@@ -1,6 +1,6 @@
 # Hotkeys — Describe hotkeys with `meta`
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Describe hotkeys with `meta`
 

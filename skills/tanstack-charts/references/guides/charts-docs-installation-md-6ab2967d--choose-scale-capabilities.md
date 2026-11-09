@@ -1,6 +1,6 @@
 # Installation — Choose scale capabilities
 
-[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-installation-md-6ab2967d.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## Choose scale capabilities
 

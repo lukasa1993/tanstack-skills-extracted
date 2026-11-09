@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/octane-hotkeys"
   tanstack-library-version: "0.5.0"
   tanstack-package: "@tanstack/octane-hotkeys"
-  tanstack-package-version: "0.11.0"
+  tanstack-package-version: "0.11.3"
   tanstack-purpose: "Octane bindings for TanStack Hotkeys: hooks in compiler-enabled .tsrx components, element targets, providers, and the Octane-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "octane-hotkeys"
@@ -63,12 +63,12 @@ No provider is required. Use Octane 0.12 or newer, with hooks in compiler-enable
 
 ## Pitfalls
 
-- **Targets are elements, not ref objects.** Keep the element in state with a callback ref, as above; a `null` target waits for the element.
+- **Keep elements that mount later in state.** A ref object such as `useRef<HTMLDivElement | null>(null)` works as `target`, but the hook reads `ref.current` only after its component renders, so it misses an element that mounts later, such as one a child shows from its own state. Keep such an element in state with a callback ref, as above. A `null` or `undefined` target, or an unset ref, waits for the element.
 - **Register a dialog's hotkeys in a child of its provider.** A hook uses the nearest `HotkeysProvider` above its component, so a dialog that renders `<HotkeysProvider scope={...} exclusive>` and registers `Escape` itself puts it in the suspended outer scope. Give each open dialog its own scope name, such as `` `dialog-${useId()}` ``.
 - **Hooks are tracked by call site.** Use `useHotkeys(items.map(...))` for lists, not `useHotkey` in a loop.
 - **Custom hooks in plain `.ts` and `.js` files need the compiler.** Calls from a `.ts` or `.js` file that the compiler skips share one slot per hook in each component, even across different custom hooks, so only the last `useHotkey` call works. The compiler handles a file that imports a value from `octane` or starts with `/** @jsxImportSource octane */`. A type-only import doesn't count. `.tsrx` and `.tsx` files are fine.
 - **Call the hooks directly.** A `useShortcut(keys: string)` wrapper has to cast strings to hotkeys, which turns off type checking and drops sequences, options, and app hotkeys.
-- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header, and format labels with `const format = useFormatForDisplay()` at the top of the component, then `format(hotkey)`. Keep plain `formatForDisplay` for labels that render only in the browser.
+- **Server-rendered labels need the user's platform.** On the server, `formatForDisplay` can't see the user's OS, so it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header, and format labels with `const format = useFormatForDisplay()` at the top of the component, then `format(hotkey)`. Keep plain `formatForDisplay` for labels that render only in the browser, when no provider sets `platform`.
 
 When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in Octane](./references/app-hotkeys.md).
 

@@ -1,6 +1,6 @@
 # Provide Hotkeys And Scopes — Scopes and app hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Scopes and app hotkeys
 

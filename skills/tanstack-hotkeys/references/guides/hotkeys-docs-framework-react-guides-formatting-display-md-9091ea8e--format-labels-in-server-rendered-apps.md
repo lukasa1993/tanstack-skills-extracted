@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once React hydrates, with a hydration mismatch. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`.
+2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1. A React Server Component can't call hooks, so pass the platform to `formatForDisplay` there instead. See [Next.js](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#nextjs-app-router).
 
 ```tsx
 import { HotkeysProvider, detectPlatform } from '@tanstack/react-hotkeys'
@@ -38,7 +38,7 @@ function Toolbar() {
 
 `useFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call the hook once at the top of the component, then call the function anywhere, including in loops and conditions. A `platform` passed to the function wins over the provider's.
 
-In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. An inner provider inherits it.
+In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
 Without a provider `platform`, `useFormatForDisplay` renders `'linux'` labels on the server and during hydration, then switches to the browser's platform without a hydration error. Mac users see `Ctrl+S` until React hydrates. Set the provider's `platform` to avoid that.
 
@@ -70,7 +70,7 @@ function RootComponent() {
 }
 ```
 
-The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/react/useFormatForDisplay-tanstack-start) shows this setup.
+The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/useFormatForDisplay-tanstack-start) shows this setup.
 
 ### Next.js (App Router)
 
@@ -96,9 +96,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 }
 ```
 
+`useFormatForDisplay` is a hook, so call it in a client component, marked with `'use client'`. In a server component, call `formatForDisplay(hotkey, { platform })` with the platform you detected there instead.
+
 Reading `headers()` renders the layout on each request. For a page that should stay static, see [Static and prerendered pages](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#static-and-prerendered-pages).
 
-The [Next.js example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/react/useFormatForDisplay-nextjs) shows this setup.
+The [Next.js example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/useFormatForDisplay-nextjs) shows this setup.
 
 ### React Router (framework mode)
 
@@ -123,7 +125,7 @@ export default function App({ loaderData }: Route.ComponentProps) {
 }
 ```
 
-The [React Router example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/react/useFormatForDisplay-react-router) shows this setup.
+The [React Router example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/useFormatForDisplay-react-router) shows this setup.
 
 ### Astro
 
@@ -156,7 +158,7 @@ export default function Shortcuts({ platform }: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/24f618ff48e83d4dabd039860ee41408326800aa/examples/react/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/useFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 

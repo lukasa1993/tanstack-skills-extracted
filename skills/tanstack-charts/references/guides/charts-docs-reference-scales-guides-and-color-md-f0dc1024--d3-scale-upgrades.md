@@ -1,6 +1,6 @@
 # Scales Guides And Color — D3 scale upgrades
 
-[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-reference-scales-guides-and-color-md-f0dc1024.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## D3 scale upgrades
 

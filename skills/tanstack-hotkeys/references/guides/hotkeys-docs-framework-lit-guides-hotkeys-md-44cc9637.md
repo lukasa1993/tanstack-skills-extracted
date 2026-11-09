@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -12,9 +12,9 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--register-a-hotkey.md) — 5 KiB
+- [Register a hotkey](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--register-a-hotkey.md) — 6 KiB
 - [Hotkey options](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--hotkey-options.md) — 5 KiB
-- [Register multiple hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--register-multiple-hotkeys.md) — 2 KiB
+- [Register multiple hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--enable-and-disable-hotkeys.md) — 3 KiB
 - [Hotkey targets](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--hotkey-targets.md) — 3 KiB
 - [Handle duplicate hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--handle-duplicate-hotkeys.md) — 2 KiB

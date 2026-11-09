@@ -1,6 +1,6 @@
 # Hotkeys — Enable and disable hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 ## Enable and disable hotkeys
 

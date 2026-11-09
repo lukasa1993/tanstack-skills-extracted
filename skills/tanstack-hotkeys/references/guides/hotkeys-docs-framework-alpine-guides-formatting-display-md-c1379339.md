@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.24.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -118,6 +118,6 @@ A parsed chord's modifiers are already resolved for one platform. To store it as
 
 `areHotkeysEqual(a, b)` compares chords or sequences after resolving modifiers, so `Mod+S` equals `Meta+S` on macOS. Sequences compare step by step. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` turns a one-step sequence into its chord.
 
-Use `validateHotkey` when you accept a hotkey from somewhere else, such as a settings file. It returns `valid`, `errors`, and `warnings`, and names the failing step of a sequence. It can't promise that the browser or operating system delivers the shortcut. To check hotkeys as users record them, see [Validate and check conflicts](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md).
+Use `validateHotkey` when you accept a hotkey from somewhere else, such as a settings file. It returns `valid`, `errors`, and `warnings`. Each error or warning has a `reason` code, such as `'unknown-modifier'`, the `part` it's about, and for a sequence, the index of the `step`. The library sends no text, so write your own messages for users. The devtools describe each problem in the details of a hotkey. It can't promise that the browser or operating system delivers the shortcut. To check hotkeys as users record them, see [Validate and check conflicts](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md).
 
 For a full list of your app's shortcuts, see [Cheat Sheet UI Helpers](./hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md#source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md).

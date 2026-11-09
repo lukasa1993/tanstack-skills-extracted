@@ -1,6 +1,6 @@
 # Rendering And Export — Mark-level renderers
 
-[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.4.0`.
+[Guide and prerequisites](./charts-docs-reference-rendering-and-export-md-ef854527.md) · Release-matched documentation · `@tanstack/charts@1.5.0`.
 
 ## Mark-level renderers
 
