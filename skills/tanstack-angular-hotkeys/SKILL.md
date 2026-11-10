@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/angular-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/angular-hotkeys"
-  tanstack-package-version: "0.21.4"
+  tanstack-package-version: "0.22.0"
   tanstack-purpose: "Angular bindings for TanStack Hotkeys: inject functions, signal-driven options, provideHotkeys scopes, and the Angular-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "angular-hotkeys"
@@ -64,7 +64,7 @@ export class PanelComponent {
 | `injectHotkeyRegistrations()`                | Get a signal listing every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                 |
 | `injectHotkeyScopesState()`                  | Get a signal of the active scopes and the exclusive scope that owns the keyboard.                                                                                                                  |
 | `injectHotkeyHint(hotkey, options?)`         | Get a signal of whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
-| `injectKeyHold(key)`                         | Get a signal of whether one key is held.                                                                                                                                                           |
+| `injectKeyHold(key)`                         | Get a signal of whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                              |
 | `injectHeldKeys()`                           | Get a signal of every key that's held right now.                                                                                                                                                   |
 | `injectHeldKeyCodes()`                       | Get a signal mapping each held key to its physical `event.code`.                                                                                                                                   |
 

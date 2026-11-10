@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/hotkeys"
-  tanstack-package-version: "0.26.0"
+  tanstack-package-version: "0.27.0"
   tanstack-purpose: "Framework-neutral rules for TanStack Hotkeys: the work the library already does, how hotkeys turn on and off, and the pitfalls that don't surface as errors."
   tanstack-source-skill: "hotkeys-core"
   tanstack-sources: "[\"src/hotkey-manager.ts\",\"src/match.ts\",\"TanStack/hotkeys:docs/guides/sensible-defaults.md\",\"TanStack/hotkeys:docs/framework/react/guides/hotkeys.md\",\"TanStack/hotkeys:docs/framework/react/guides/sequences.md\",\"TanStack/hotkeys:docs/framework/react/guides/hotkeys-provider-and-scopes.md\",\"TanStack/hotkeys:packages/react-hotkeys/tests/skills/editor-shortcuts/**\"]"

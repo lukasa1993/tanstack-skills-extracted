@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -51,6 +51,8 @@ const isShiftHeld = useKeyHold('Shift')
 </template>
 ```
 
+Key names follow the same rule as hotkeys: letters match in any case, so `'a'` and `'A'` are the same key, and other names are case-sensitive. Write `'Shift'` and `'Escape'`, not `'shift'` or `'escape'`.
+
 ## Tell left and right modifiers apart
 
 `useHeldKeyCodes` maps each held key to the physical key that's down, from `event.code`:
@@ -95,4 +97,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/useHeldKeys) shows held keys and their codes, and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/useKeyhold) shows modifier indicators.
+The [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/vue/useHeldKeys) shows held keys and their codes, and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/vue/useKeyhold) shows modifier indicators.

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -216,4 +216,4 @@ function CheatSheetDialog({ onClose }: { onClose: () => void }) {
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/react/kitchen-sink) has a cheat sheet with groups, statuses, and custom hotkeys.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/react/kitchen-sink) has a cheat sheet with groups, statuses, and custom hotkeys.

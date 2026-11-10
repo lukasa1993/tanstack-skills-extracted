@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 

@@ -1,6 +1,6 @@
 # Provide Hotkeys And Scopes — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 `provideHotkeys` is optional. Without it, every hotkey uses the built-in defaults and belongs to the `'global'` scope, so it works for as long as its component exists. Many apps never need more. Add it to your application config or to a component's `providers` when you want to:
 

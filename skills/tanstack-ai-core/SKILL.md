@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "1.2.0"
+  tanstack-package-version: "1.4.0"
   tanstack-source-skill: "ai-core"
   tanstack-type: "core"
 ---

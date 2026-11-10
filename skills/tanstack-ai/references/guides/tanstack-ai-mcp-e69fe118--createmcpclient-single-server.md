@@ -1,6 +1,6 @@
 # Ai Mcp — `createMCPClient` — single server
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.1.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.2.0`.
 
 ## `createMCPClient` — single server
 

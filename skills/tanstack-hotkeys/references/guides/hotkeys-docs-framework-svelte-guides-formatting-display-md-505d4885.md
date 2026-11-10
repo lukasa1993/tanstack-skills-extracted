@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -11,7 +11,7 @@ Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--overview.md) — 2 KiB
-- [Format a hotkey](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-a-hotkey.md) — 2 KiB
+- [Format a hotkey](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-a-hotkey.md) — 3 KiB
 - [Render individual keycaps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--render-individual-keycaps.md) — 1 KiB
 - [Format sequences](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-sequences.md) — 1 KiB
 - [Choose symbols and separators](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--choose-symbols-and-separators.md) — 1 KiB

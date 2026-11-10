@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/octane-hotkeys"
   tanstack-library-version: "0.5.0"
   tanstack-package: "@tanstack/octane-hotkeys"
-  tanstack-package-version: "0.11.3"
+  tanstack-package-version: "0.12.0"
   tanstack-purpose: "Octane bindings for TanStack Hotkeys: hooks in compiler-enabled .tsrx components, element targets, providers, and the Octane-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "octane-hotkeys"
@@ -53,7 +53,7 @@ export function Panel({ onSave }: { onSave: () => void }) @{
 | `useHotkeyRegistrations()`                | List every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope), for a cheat sheet of what's mounted.                                                                              |
 | `useHotkeyScopesState()`                  | Get the active scopes and the exclusive scope that owns the keyboard.                                                                                                                                                                |
 | `useHotkeyHint(hotkey, options?)`         | Get whether held modifiers should reveal a shortcut's hint, such as labels that appear while Mod is held. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
-| `useKeyHold(key)`                         | Get whether one key is held, such as Shift for a range-select mode.                                                                                                                                                                  |
+| `useKeyHold(key)`                         | Get whether one key is held, such as Shift for a range-select mode. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                                     |
 | `useHeldKeys()`                           | Get every key that's held right now.                                                                                                                                                                                                 |
 | `useHeldKeyCodes()`                       | Map each held key to its physical `event.code`.                                                                                                                                                                                      |
 

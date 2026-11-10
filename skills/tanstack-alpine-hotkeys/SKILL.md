@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/alpine-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/alpine-hotkeys"
-  tanstack-package-version: "0.11.4"
+  tanstack-package-version: "0.12.0"
   tanstack-purpose: "Alpine bindings for TanStack Hotkeys: per-component owners, the $hotkeys magic, getter options, manager-activated scopes, and the Alpine-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "alpine-hotkeys"
@@ -72,7 +72,7 @@ Each owner has these methods. Read their state through `.value`, or `.hotkeys` f
 | `createHotkeyRegistrations()`                | List every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                     |
 | `createHotkeyScopesState()`                  | Get the active scopes and the exclusive scope that owns the keyboard.                                                                                                                  |
 | `createHotkeyHint(hotkey, options?)`         | Get whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
-| `createKeyHold(key)`                         | Get whether one key is held.                                                                                                                                                           |
+| `createKeyHold(key)`                         | Get whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                              |
 | `createHeldKeys()`                           | Get every key that's held right now.                                                                                                                                                   |
 | `createHeldKeyCodes()`                       | Map each held key to its physical `event.code`.                                                                                                                                        |
 | `destroy()`                                  | Release every hotkey, subscription, and recorder the owner created.                                                                                                                    |

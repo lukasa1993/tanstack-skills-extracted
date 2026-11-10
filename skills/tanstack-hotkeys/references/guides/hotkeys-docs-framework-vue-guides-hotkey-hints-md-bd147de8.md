@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -124,4 +124,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md) covers the tracker and the other held-key composables.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/examples/vue/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/vue/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

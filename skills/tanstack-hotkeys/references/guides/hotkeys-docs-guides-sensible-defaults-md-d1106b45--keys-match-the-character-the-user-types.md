@@ -1,6 +1,6 @@
 # Sensible Defaults — Keys match the character the user types
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 ## Keys match the character the user types
 
@@ -17,14 +17,16 @@ Otherwise, the character the key reports wins, wherever the key sits:
 
 - ASCII letters never fall back, and ASCII symbols fall back only on the digit row or with Shift. On AZERTY, the key in the US `/` position types `+`, so Cmd++ zooms the page instead of firing `Mod+/`. On Dvorak, the key that types `'` does not fire `Q`.
 - Latin letters such as `ü`, `ö`, and `ø` match only themselves when typed on their own. With Control or Command held on a punctuation key they fall back, so German Cmd+ü still fires `Mod+[` (German types `[` with Option).
-- On Windows, Control+Alt works like AltGr, so a Latin letter it types on a letter key matches only itself. Polish Ctrl+Alt+A types `ą` and does not fire `Control+Alt+A`. Symbols and the digit row still fall back, so German Ctrl+Alt+E, which types `€`, fires `Control+Alt+E`, and Danish Ctrl+Alt+2, which types `@`, fires `Control+Alt+2`. Avoid `Control+Alt` with letters and digits on Windows when users type in other languages.
-- Named keys never fall back. With NumLock off, the numpad's 1 key reports `End`, so it fires `End` and not `1`.
+- On Windows, Control+Alt works like AltGr. On a layout with AltGr, browsers report Left Ctrl + Left Alt as AltGr, so a character it types matches only itself. German Ctrl+Alt+E types `€` and fires `€`, not `Control+Alt+E`. Polish Ctrl+Alt+A types `ą` and does not fire `Control+Alt+A`. Avoid `Control+Alt` with letters, digits, and symbols on Windows when users type in other languages.
+- Named keys never fall back. With NumLock off, the numpad's 1 key reports `End`, so it fires `End` and not `1`. Numpad 5 has no navigation key, so with NumLock off it fires no digit, even in Firefox, which reports it as `Unidentified`.
 
 When one key press could match several registrations on the same target, an exact match takes priority over a fallback.
 
 A symbol that needs Shift on some layouts, such as `/` on German QWERTZ (Shift+7), matches when typed on its own. With Command held, macOS browsers report the unshifted character instead (`7`), so `Mod+/` can't match there. Register the per-layout combination as well, such as `Mod+Shift+7`.
 
 Letters match without regard to case: `S` and `s` are the same binding.
+
+Turkish dotless `ı` and dotted `İ` are letters of their own, not other cases of `I` and `i`. A binding for `ı` fires only on the key that types `ı`, and a binding for `İ` only on the key that types `İ`. `I` fires on the key that types `i`, and also on the key that types `ı`, as in native Windows apps, where that key is the I key. An `ı` binding takes priority there. With `recordBy: 'key'`, the recorder records `ı`, and labels show `ı`.
 
 ### Match a key's position instead
 

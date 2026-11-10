@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-svelte-hotkeys"></a>
 
-Published skill · `@tanstack/svelte-hotkeys@0.21.3`.
+Published skill · `@tanstack/svelte-hotkeys@0.22.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -54,7 +54,7 @@ Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack
 | `getHotkeyRegistrations()`                             | Read `.hotkeys`, every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                      |
 | `getHotkeyScopesState()`                               | Read `.state`, the active scopes and the exclusive scope that owns the keyboard.                                                                                                                    |
 | `getHotkeyHint(hotkey, options?)`                      | Read `.visible`, whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
-| `getIsKeyHeld(key)`                                    | Read `.held`, whether one key is held.                                                                                                                                                              |
+| `getIsKeyHeld(key)`                                    | Read `.held`, whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                                 |
 | `getHeldKeys()`                                        | Read `.keys`, every key that's held right now.                                                                                                                                                      |
 | `getHeldKeyCodesMap()`                                 | Read `.codes`, which maps each held key to its physical `event.code`.                                                                                                                               |
 

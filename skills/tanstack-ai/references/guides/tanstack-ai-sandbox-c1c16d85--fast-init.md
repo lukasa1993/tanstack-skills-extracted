@@ -1,6 +1,6 @@
 # Ai Sandbox — Fast init
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.2.0`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.2.1`.
 
 ## Fast init
 

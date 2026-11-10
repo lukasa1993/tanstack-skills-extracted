@@ -1,6 +1,6 @@
 # Sensible Defaults — Component libraries that handle the same keys
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 ## Component libraries that handle the same keys
 

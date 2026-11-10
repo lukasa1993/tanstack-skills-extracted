@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

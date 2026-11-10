@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.2.5"
   tanstack-package: "@tanstack/ai-mcp"
-  tanstack-package-version: "1.1.0"
+  tanstack-package-version: "1.2.0"
   tanstack-source-skill: "ai-mcp"
   tanstack-sources: "[\"TanStack/ai:docs/tools/mcp.md\",\"TanStack/ai:docs/tools/mcp-events.md\",\"TanStack/ai:packages/ai-mcp/src/client.ts\",\"TanStack/ai:packages/ai-mcp/src/pool.ts\",\"TanStack/ai:packages/ai-mcp/src/resources.ts\",\"TanStack/ai:packages/ai-mcp/src/transport.ts\",\"TanStack/ai:packages/ai-mcp/src/server/create-server.ts\",\"TanStack/ai:packages/ai-mcp/src/server/stdio.ts\",\"TanStack/ai:packages/ai-mcp/src/harness-plugin.ts\",\"TanStack/ai:packages/ai-mcp/src/events/index.ts\"]"
   tanstack-type: "sub-skill"

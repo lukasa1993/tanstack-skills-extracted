@@ -1,6 +1,6 @@
 # Media Generation — Core Patterns: 4. Voice Creation
 
-[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.2.0`.
+[Guide and prerequisites](./tanstack-ai-core-media-generation-f3029c96.md) · Published skill · `@tanstack/ai@1.4.0`.
 
 ## Core Patterns: 4. Voice Creation
 

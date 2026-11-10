@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-hotkeys"></a>
 
-Published skill · `@tanstack/vue-hotkeys@0.21.4`.
+Published skill · `@tanstack/vue-hotkeys@0.22.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -49,7 +49,7 @@ useHotkey('Escape', () => closePanel(), { target: panel })
 | `useHotkeyRegistrations()`                | Get a ref listing every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                          |
 | `useHotkeyScopesState()`                  | Get a ref of the active scopes and the exclusive scope that owns the keyboard.                                                                                                                           |
 | `useHotkeyHint(hotkey, options?)`         | Get a computed ref of whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
-| `useKeyHold(key)`                         | Get a ref of whether one key is held.                                                                                                                                                                    |
+| `useKeyHold(key)`                         | Get a ref of whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                                       |
 | `useHeldKeys()`                           | Get a ref of every key that's held right now.                                                                                                                                                            |
 | `useHeldKeyCodes()`                       | Get a ref mapping each held key to its physical `event.code`.                                                                                                                                            |
 

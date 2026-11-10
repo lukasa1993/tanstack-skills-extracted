@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/ember-hotkeys"
   tanstack-library-version: "0.4.0"
   tanstack-package: "@tanstack/ember-hotkeys"
-  tanstack-package-version: "0.10.4"
+  tanstack-package-version: "0.11.0"
   tanstack-purpose: "Ember bindings for TanStack Hotkeys: template helpers, element modifiers, owner-bound state readers, manager-activated scopes, and the Ember-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "ember-hotkeys"
@@ -59,7 +59,7 @@ export default class Editor extends Component {
 | `useHotkeyRegistrations(this)`                      | Read `.hotkeys`, every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                         |
 | `useHotkeyScopesState(this)`                        | Get the active scopes and the exclusive scope that owns the keyboard.                                                                                                                  |
 | `useHotkeyHint(this, hotkey, options?)`             | Get whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target. |
-| `useKeyHold(this, key)`                             | Get whether one key is held.                                                                                                                                                           |
+| `useKeyHold(this, key)`                             | Get whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                              |
 | `useHeldKeys(this)`                                 | Get every key that's held right now.                                                                                                                                                   |
 | `useHeldKeyCodes(this)`                             | Map each held key to its physical `event.code`.                                                                                                                                        |
 

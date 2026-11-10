@@ -1,6 +1,6 @@
 # Sensible Defaults — Recording captures what the user pressed
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 ## Recording captures what the user pressed
 
@@ -14,4 +14,4 @@ While recording:
 - **Enter** commits a sequence recording, made with `maxSteps: Infinity`.
 - **Registered hotkeys are paused**, so pressing `Mod+S` to record it does not also save.
 - **Typing in inputs passes through**, so other fields on the page keep working. Escape still cancels.
-- **AltGr is rejected** for position recordings, because it types characters rather than shortcuts. The exception is AltGr with a key it does not change on Windows, such as AltGr+Home, which records as Control+Alt.
+- **AltGr is rejected** for position recordings, because it types characters rather than shortcuts. The exception is AltGr with a key it does not change on Windows, such as AltGr+Home, which records as Control+Alt. Character recordings (`recordBy: 'key'`) accept the characters AltGr types, but on Linux they reject AltGr with a key it does not change, because that press fires no hotkey.

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.26.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -181,4 +181,4 @@ module('Integration | editor hotkeys', function (hooks) {
 
 `platform='mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for several hotkeys, pass it to `createHotkeysScope({ hotkey: { platform: 'mac' } })`, and use the helpers it returns.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/a9dd5ea3fb8a4d3d660638add1766bc35ef114f6/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/e7cbe578686100589221c8a0b6140496985e6c45/docs/reference/classes/HotkeyManager.md) lists every method.
