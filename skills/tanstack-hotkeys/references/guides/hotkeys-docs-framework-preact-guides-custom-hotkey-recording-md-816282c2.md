@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -237,6 +237,6 @@ function ShortcutSettings() {
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md#source-hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md). The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/e7cbe578686100589221c8a0b6140496985e6c45/docs/framework/preact/reference/functions/useHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md#source-hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md). The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/docs/framework/preact/reference/functions/useHotkeyRecorder.md) lists the types.
 
-The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/preact/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/preact/useHotkeyRecorder-sequences) records sequences.
+The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/preact/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/preact/useHotkeyRecorder-sequences) records sequences.

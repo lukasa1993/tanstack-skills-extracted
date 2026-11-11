@@ -1,6 +1,6 @@
 # Formatting Display — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 > [!WARNING]
 > **Server rendering? Don't render labels with `formatForDisplay`.** It doesn't read the provider's `platform`, so without a `platform` option it renders Linux labels on the server, such as `Ctrl+S`. Mac users then get `⌘ S` in the browser and a hydration error. Use `useFormatForDisplay()` instead, and set the provider's `platform` from the request. See [Format labels in server-rendered apps](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#format-labels-in-server-rendered-apps).

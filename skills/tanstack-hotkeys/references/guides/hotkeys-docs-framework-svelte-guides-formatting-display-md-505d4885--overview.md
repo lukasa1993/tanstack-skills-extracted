@@ -1,6 +1,6 @@
 # Formatting Display — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 > [!WARNING]
 > **Server rendering? Don't render labels with `formatForDisplay`.** It doesn't read the provider's `platform`, so without a `platform` option it renders Linux labels on the server, such as `Ctrl+S`. When Svelte hydrates, Mac users see the label change to `⌘ S`. Use `getFormatForDisplay()` instead, and set the provider's `platform` from the request. See [Format labels in server-rendered apps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#format-labels-in-server-rendered-apps).

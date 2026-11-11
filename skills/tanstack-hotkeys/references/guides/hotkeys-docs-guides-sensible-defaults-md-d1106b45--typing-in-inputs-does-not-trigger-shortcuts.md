@@ -1,6 +1,6 @@
 # Sensible Defaults — Typing in inputs does not trigger shortcuts
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 ## Typing in inputs does not trigger shortcuts
 

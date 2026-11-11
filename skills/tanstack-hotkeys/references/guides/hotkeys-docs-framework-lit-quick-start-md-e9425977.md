@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -184,7 +184,7 @@ A controller adds itself to the element you pass, so a class field is enough. It
 
 When a group of hotkeys turns on and off together, put them in a scope instead. See [Add scopes](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#add-scopes-optional).
 
-During server rendering, controllers register nothing and subscribe to nothing, even with `@lit-labs/ssr`'s `connectedCallback: true` option. Read-side controllers report the current state, so the server HTML matches the first client render.
+During server rendering, controllers register nothing and subscribe to nothing, even with `@lit-labs/ssr`'s `connectedCallback: true` option and its global DOM shim. Read-side controllers report the current state, so the server HTML matches the first client render.
 
 ## Element hotkeys
 

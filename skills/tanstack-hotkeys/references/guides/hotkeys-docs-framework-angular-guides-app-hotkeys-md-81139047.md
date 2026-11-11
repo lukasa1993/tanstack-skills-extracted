@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -180,4 +180,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `injectAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`provideHotkeys` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/e7cbe578686100589221c8a0b6140496985e6c45/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`provideHotkeys` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/docs/reference/classes/AppHotkeysStore.md) to use it directly.

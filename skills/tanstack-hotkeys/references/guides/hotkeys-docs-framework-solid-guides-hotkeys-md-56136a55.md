@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-a-hotkey.md) — 5 KiB
+- [Register a hotkey](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-a-hotkey.md) — 6 KiB
 - [Hotkey options](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--enable-and-disable-hotkeys.md) — 3 KiB
@@ -24,6 +24,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="chords-and-sequences"></a>
 <a id="register-a-hotkey"></a>
 <a id="optional-hotkeys"></a>
+<a id="register-after-an-await"></a>
 <a id="write-a-chord-as-a-string-or-an-object"></a>
 <a id="hotkey-options"></a>
 <a id="chord-and-sequence-options"></a>

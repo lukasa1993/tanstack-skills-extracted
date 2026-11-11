@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-highlight-extend-language-support"></a>
 
-Published skill · `@tanstack/highlight@1.2.11`.
+Published skill · `@tanstack/highlight@1.2.12`.
 
 [Topic index](../languages-configuration.md) · [Source provenance](../SOURCES.md)
 

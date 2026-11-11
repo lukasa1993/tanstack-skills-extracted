@@ -1,6 +1,6 @@
 # Formatting Display — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 > [!WARNING]
 > **Server rendering? Don't render labels with `formatForDisplay`.** It doesn't read the provider's `platform`, so without a `platform` option it renders Linux labels on the server, such as `Ctrl+S`. Solid keeps the server's text when it hydrates, so Mac users keep `Ctrl+S`, and Solid doesn't warn. Use `createFormatForDisplay()` instead, and set the provider's `platform` from the request. See [Format labels in server-rendered apps](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#format-labels-in-server-rendered-apps).

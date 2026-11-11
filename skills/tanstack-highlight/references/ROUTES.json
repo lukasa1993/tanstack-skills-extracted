@@ -10,16 +10,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md",
       "sourcePath": "configure-selective-highlighting",
-      "bytes": 7069,
+      "bytes": 7389,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-configure-selective-highlighting-aee9011b.md",
-          "bytes": 7069
+          "bytes": 7389
         }
       ],
       "examples": []
@@ -32,7 +32,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "file": "references/guides/tanstack-highlight-extend-language-support-752c4660.md",
       "sourcePath": "extend-language-support",
       "bytes": 8832,
@@ -59,7 +59,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "file": "references/guides/tanstack-highlight-integrate-framework-code-blocks-9c88ca76.md",
       "sourcePath": "integrate-framework-code-blocks",
       "bytes": 9456,
@@ -90,7 +90,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "file": "references/guides/tanstack-highlight-integrate-markdown-pipelines-32cb443f.md",
       "sourcePath": "integrate-markdown-pipelines",
       "bytes": 8374,
@@ -117,16 +117,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "file": "references/guides/tanstack-highlight-theme-and-annotate-code-f5bc5628.md",
       "sourcePath": "theme-and-annotate-code",
-      "bytes": 6924,
+      "bytes": 7039,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Setup; Core Patterns; Common Mistakes; References",
           "file": "references/guides/tanstack-highlight-theme-and-annotate-code-f5bc5628.md",
-          "bytes": 6924
+          "bytes": 7039
         }
       ],
       "examples": []

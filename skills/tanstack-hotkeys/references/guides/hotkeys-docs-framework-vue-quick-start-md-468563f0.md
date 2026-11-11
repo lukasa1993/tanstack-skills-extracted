@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -94,7 +94,7 @@ If your app renders on the server, such as with Nuxt, set the provider's `platfo
 
 ## Hotkeys follow your components
 
-A hotkey is registered when the component that calls the composable mounts, and unregistered when that component unmounts. Put each hotkey in the component it belongs to, so it is active only while that component is mounted:
+A hotkey is registered when the component that calls the composable is set up, and unregistered when that component unmounts. A hotkey with an element `target` waits until its element exists. Put each hotkey in the component it belongs to, so it is active only while that component is mounted:
 
 ```vue
 <!-- App.vue -->

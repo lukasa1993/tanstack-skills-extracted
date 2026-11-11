@@ -8,45 +8,45 @@
       "kind": "atomic",
       "theme": "languages-configuration",
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "sourcePath": "configure-selective-highlighting",
-      "sha256": "e499ccaf84a7ad9522cd306c9e293f5ac63e0d30fc0972146373decf80a5b6d2"
+      "sha256": "a520d1fafd86aadc7f6ad4c116ef50c0b59214aebd9bf4d2eee1b94e48972057"
     },
     {
       "id": "tanstack-highlight-extend-language-support",
       "kind": "atomic",
       "theme": "languages-configuration",
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "sourcePath": "extend-language-support",
-      "sha256": "a46d8d9ef0d844062c804e07d724ca1a86a54f61f11b917c1ea3867df8b2e2a3"
+      "sha256": "d547c707c066766425cfb60cd3b42dc3c645b1330d6e1719d4747c742d71212b"
     },
     {
       "id": "tanstack-highlight-integrate-framework-code-blocks",
       "kind": "atomic",
       "theme": "integrations",
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "sourcePath": "integrate-framework-code-blocks",
-      "sha256": "f878fa4212bd1085bc94cb45524912be6658ebe1fd8cbf75d7ae87afb9b6f651"
+      "sha256": "2fd2094a73e637102dbc1fa13661dbd3cd80cfeb274ecfd0b41a899541a21863"
     },
     {
       "id": "tanstack-highlight-integrate-markdown-pipelines",
       "kind": "atomic",
       "theme": "integrations",
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "sourcePath": "integrate-markdown-pipelines",
-      "sha256": "1819fc8d971f0ec37bd4161851c57f883bd31be301d47e027d7ba2e035f4b18f"
+      "sha256": "214eca4228c49f71e2360d8a8262f73fdae821200b0c7fbf7ddf509f74003453"
     },
     {
       "id": "tanstack-highlight-theme-and-annotate-code",
       "kind": "atomic",
       "theme": "themes-annotations",
       "package": "@tanstack/highlight",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "sourcePath": "theme-and-annotate-code",
-      "sha256": "3b091374f913bd02da3fa21b2c5a52d62036cbbab3e3b04c416e552bdb528c22"
+      "sha256": "bfae83de2ad5742905b4d3ce7638d9f6edd5ae37f75089093e75ce9c8c4be685"
     }
   ],
   "duplicateDocuments": [],

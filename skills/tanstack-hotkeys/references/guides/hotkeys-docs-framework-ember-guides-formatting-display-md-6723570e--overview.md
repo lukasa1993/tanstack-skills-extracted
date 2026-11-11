@@ -1,6 +1,6 @@
 # Formatting Display — Overview
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 > [!WARNING]
 > **Server rendering? Don't render labels with `formatForDisplay`.** It doesn't read the scope's `platform`, so without a `platform` option it renders Linux labels on the server, such as `Ctrl+S`. When the app boots in the browser, Mac users see the label change to `⌘ S`. Use `useFormatForDisplay(scope)` instead, and set the scope's `platform` from the request. See [Format labels in server-rendered apps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#format-labels-in-server-rendered-apps).

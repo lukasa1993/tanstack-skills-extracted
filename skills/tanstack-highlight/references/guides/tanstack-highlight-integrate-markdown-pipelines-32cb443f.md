@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-highlight-integrate-markdown-pipelines"></a>
 
-Published skill · `@tanstack/highlight@1.2.11`.
+Published skill · `@tanstack/highlight@1.2.12`.
 
 [Topic index](../integrations.md) · [Source provenance](../SOURCES.md)
 

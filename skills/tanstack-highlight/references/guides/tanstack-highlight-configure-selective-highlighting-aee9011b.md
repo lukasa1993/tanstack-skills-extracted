@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-highlight-configure-selective-highlighting"></a>
 
-Published skill · `@tanstack/highlight@1.2.11`.
+Published skill · `@tanstack/highlight@1.2.12`.
 
 [Topic index](../languages-configuration.md) · [Source provenance](../SOURCES.md)
 
@@ -117,7 +117,7 @@ export const html = highlighter.highlightToHtml('const answer = 42', {
 })
 ```
 
-The root entry constructs and retains the all-language registry.
+The root bound helper used here retains the all-language registry. Core-only imports from the root can tree-shake in a compatible bundler; direct `/core` imports make the separation explicit.
 
 Source: `docs/guides/language-registration.md`
 
@@ -149,7 +149,7 @@ export function render(code: string) {
 }
 ```
 
-The immutable registry can be shared across blocks and requests.
+Reuse the highlighter across blocks and requests to avoid rebuilding its name and alias maps. Registrations cannot be added through the API after construction. Keep retained language definitions unchanged and their tokenizers free of request-specific state.
 
 Source: `docs/guides/language-registration.md`
 

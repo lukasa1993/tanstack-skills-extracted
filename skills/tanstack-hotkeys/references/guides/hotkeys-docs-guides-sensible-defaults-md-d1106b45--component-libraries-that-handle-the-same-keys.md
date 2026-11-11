@@ -1,6 +1,6 @@
 # Sensible Defaults — Component libraries that handle the same keys
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 ## Component libraries that handle the same keys
 
@@ -86,7 +86,7 @@ Turn it on if a component in your app calls `preventDefault()` on keys it handle
 
 ### Let an open overlay handle Escape
 
-A native modal `<dialog>` or an open popover gets Escape on its own, except a `popover="manual"` popover, which doesn't close on Escape. While one is open, hotkeys outside it skip Escape, so the browser closes it and your hotkey doesn't run. A hotkey targeted at the dialog or popover, or at an element inside it, still receives Escape. When modal dialogs stack, only the top one counts: a hotkey targeted inside it receives Escape, and hotkeys in the dialogs underneath skip it. TanStack Hotkeys finds these elements in the document, not inside shadow roots.
+A native modal `<dialog>` or an open popover gets Escape on its own, except a `popover="manual"` popover, which doesn't close on Escape. While one is open, hotkeys outside it skip Escape, so the browser closes it and your hotkey doesn't run. A hotkey targeted at the dialog or popover, or at an element inside it, still receives Escape. When modal dialogs stack, only the top one counts: a hotkey targeted inside it receives Escape, and hotkeys in the dialogs underneath skip it. TanStack Hotkeys finds these elements in the document. Inside a shadow root, where component libraries such as Material Web keep their `<dialog>`, it finds the ones that hold focus.
 
 For other overlays, when the option above can't help, a global `Escape` hotkey and an open overlay both act on one key press:
 
@@ -159,11 +159,10 @@ See [scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-
 
 These overlays stay open:
 
-- Material Web dialogs, which keep their native `<dialog>` inside a shadow root
 - Shoelace dialogs, drawers, and dropdowns, in browsers with `CloseWatcher`
 - Vaadin overlays
 
-Web Awesome and Ionic overlays close on Escape and your hotkey runs too.
+Web Awesome and Ionic overlays close on Escape and your hotkey runs too. Material Web dialogs use a native `<dialog>`, so they close on Escape and your hotkey doesn't run.
 
 See [scopes](./hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md#source-hotkeys-docs-framework-lit-guides-hotkey-manager-md) to give an overlay its own scope.
 

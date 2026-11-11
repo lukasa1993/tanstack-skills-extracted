@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -41,7 +41,7 @@ To label each held key the way hotkeys are labeled, pass it to `formatForDisplay
 
 ## Check whether a key is held
 
-`createKeyHold` tracks whether one key is held. Its value changes only when that key is pressed or released, and it accepts a getter for a key that changes:
+`createKeyHold` tracks whether one key is held, and it accepts a getter for a key that changes. An effect that reads its value runs again whenever any key is pressed or released:
 
 ```ts
 Alpine.data('fileItem', (file: File) => {
@@ -124,4 +124,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [createHeldKeys example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/alpine/createHeldKeys) shows held keys and their codes, and the [createKeyHold example](https://github.com/TanStack/hotkeys/tree/e7cbe578686100589221c8a0b6140496985e6c45/examples/alpine/createKeyHold) shows modifier indicators.
+The [createHeldKeys example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/alpine/createHeldKeys) shows held keys and their codes, and the [createKeyHold example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/alpine/createKeyHold) shows modifier indicators.

@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/react-hotkeys"
   tanstack-library-version: "0.15.0"
   tanstack-package: "@tanstack/react-hotkeys"
-  tanstack-package-version: "0.23.0"
+  tanstack-package-version: "0.23.1"
   tanstack-purpose: "React bindings for TanStack Hotkeys: hooks, providers, refs, and the React-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "react-hotkeys"

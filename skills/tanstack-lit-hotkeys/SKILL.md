@@ -8,7 +8,7 @@ metadata:
   tanstack-library: "@tanstack/lit-hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/lit-hotkeys"
-  tanstack-package-version: "0.24.0"
+  tanstack-package-version: "0.24.1"
   tanstack-purpose: "Lit bindings for TanStack Hotkeys: the decorator, reactive controllers, manager-activated scopes, and the Lit-specific mistakes to avoid."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "lit-hotkeys"

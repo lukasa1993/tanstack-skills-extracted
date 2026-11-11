@@ -5,9 +5,9 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-library: "@tanstack/highlight"
-  tanstack-library-version: "1.2.11"
+  tanstack-library-version: "1.2.12"
   tanstack-package: "@tanstack/highlight"
-  tanstack-package-version: "1.2.11"
+  tanstack-package-version: "1.2.12"
   tanstack-source-skill: "theme-and-annotate-code"
   tanstack-sources: "[\"TanStack/highlight:docs/guides/themes.md\",\"TanStack/highlight:docs/guides/annotations.md\",\"TanStack/highlight:docs/guides/output-and-css.md\",\"TanStack/highlight:src/theme.ts\",\"TanStack/highlight:src/core.ts\"]"
   tanstack-type: "core"
@@ -94,7 +94,7 @@ export const result = highlighter.highlight(
 
 Line coordinates are one-based and inclusive; decorations activate `th-line` wrappers even without line numbers.
 
-### Attach exact source diagnostics
+### Render application-supplied diagnostics
 
 ```ts
 import { highlighter } from './highlight'
@@ -117,7 +117,7 @@ export const result = highlighter.highlight(code, {
 })
 ```
 
-Character ranges use zero-based, end-exclusive UTF-16 offsets.
+Character ranges use zero-based, end-exclusive UTF-16 offsets. The application supplies the range and diagnostic message; Highlight does not perform diagnostic analysis.
 
 ### Own font styles and annotation presentation in CSS
 

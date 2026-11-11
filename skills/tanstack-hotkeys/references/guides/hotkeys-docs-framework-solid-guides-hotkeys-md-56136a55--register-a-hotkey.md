@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 
 ## Register a hotkey
 
@@ -63,6 +63,31 @@ That lets you register a hotkey the user chose, such as one from the [hotkey rec
 A hotkey of `undefined`, `null`, or `''` registers nothing, so a component can take an optional shortcut. When the hotkey changes to one of these values, its registration is removed. When it changes back to a hotkey, it registers again. Hints for no hotkey are hidden.
 
 To keep a hotkey registered, and listed in devtools and cheat sheets, but stop it from firing, set `enabled: false` instead.
+
+### Register after an `await`
+
+A hotkey unregisters when the component or reactive scope that created it is cleaned up. Solid knows that scope only while the component is being created, so call `createHotkey` directly in the component, not after an `await` or in a timer. A hotkey created there has no owner, and it keeps firing after the component unmounts.
+
+When the hotkey needs something that loads later, register it right away, read the loaded value in the callback, and keep the hotkey disabled until the value is there. A disabled hotkey leaves the key to the browser:
+
+```tsx
+import { createResource } from 'solid-js'
+import { createHotkey } from '@tanstack/solid-hotkeys'
+
+function Editor() {
+  const [commands] = createResource(loadCommands)
+
+  createHotkey(
+    'Mod+S',
+    () => commands()?.save(),
+    () => ({ enabled: !!commands() }),
+  )
+
+  return <textarea />
+}
+```
+
+If you must create a hotkey later, capture `getOwner()` while the component is created and make the call inside `runWithOwner`. Skip the call if the component was already cleaned up.
 
 ### Write a chord as a string or an object
 
