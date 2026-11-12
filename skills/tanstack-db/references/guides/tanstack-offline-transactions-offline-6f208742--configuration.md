@@ -1,6 +1,6 @@
 # Offline — Configuration
 
-[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.2.0`.
+[Guide and prerequisites](./tanstack-offline-transactions-offline-6f208742.md) · Published skill · `@tanstack/offline-transactions@1.2.1`.
 
 ## Configuration
 

@@ -1,6 +1,6 @@
 # Ai Sandbox — Takeover: detached runs and single-writer safety: Single-writer safety: BOTH seams are fenced
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.2.1`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.3.0`.
 
 ## Takeover: detached runs and single-writer safety: Single-writer safety: BOTH seams are fenced
 

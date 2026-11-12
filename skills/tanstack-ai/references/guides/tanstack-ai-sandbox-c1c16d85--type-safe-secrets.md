@@ -1,6 +1,6 @@
 # Ai Sandbox — Type-safe secrets
 
-[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.2.1`.
+[Guide and prerequisites](./tanstack-ai-sandbox-c1c16d85.md) · Published skill · `@tanstack/ai-sandbox@1.3.0`.
 
 ## Type-safe secrets
 

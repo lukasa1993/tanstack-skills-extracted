@@ -33,6 +33,6 @@ Imported material is tied to the versions and commits below. Outbound links to o
 | `tanstack-ai-mcp` | atomic | `agent-runtimes` | `@tanstack/ai-mcp` | `1.2.0` |  |
 | `tanstack-ai-skills` | atomic | `agent-runtimes` | `@tanstack/ai-skills` | `1.0.2` |  |
 | `tanstack-ai-code-mode` | atomic | `code-execution` | `@tanstack/ai-code-mode` | `1.1.1` |  |
-| `tanstack-ai-sandbox` | atomic | `code-execution` | `@tanstack/ai-sandbox` | `1.2.1` |  |
+| `tanstack-ai-sandbox` | atomic | `code-execution` | `@tanstack/ai-sandbox` | `1.3.0` |  |
 
 Exact duplicate documents replaced with canonical links: 0. Exact duplicate H2 sections replaced with canonical links: 1. No fuzzy deduplication is used.
