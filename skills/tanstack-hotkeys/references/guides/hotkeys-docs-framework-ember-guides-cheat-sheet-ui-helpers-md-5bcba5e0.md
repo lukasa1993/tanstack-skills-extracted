@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ TanStack Hotkeys gives you two lists to build from:
 - `useHotkeyRegistrations` returns the hotkeys registered right now, in its `hotkeys` property. It works with plain `useHotkey` and `useHotkeys`, but it only knows about rendered helpers.
 - `useAppHotkeyList` returns every [app hotkey](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md) you declared, in its `value` property, including hotkeys on pages that haven't rendered, with the status of each.
 
-Pass the component as the owner of each one. Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md).
+Pass the component as the owner of each one. Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `useFormatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md).
 
 ## Name your hotkeys
 
@@ -58,11 +58,12 @@ declare module '@tanstack/hotkeys' {
 ```gts
 import Component from '@glimmer/component'
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkeyRegistrations,
 } from '@tanstack/ember-hotkeys'
 
 export default class ShortcutList extends Component {
+  formatForDisplay = useFormatForDisplay()
   registrations = useHotkeyRegistrations(this)
 
   get named() {
@@ -76,7 +77,7 @@ export default class ShortcutList extends Component {
       {{#each this.named key='id' as |reg|}}
         <div>
           <dt>{{reg.options.meta.name}}</dt>
-          <dd><kbd>{{formatForDisplay reg.hotkey}}</kbd></dd>
+          <dd><kbd>{{this.formatForDisplay reg.hotkey}}</kbd></dd>
         </div>
       {{/each}}
     </dl>
@@ -100,20 +101,21 @@ Registrations exist only while their helpers are rendered, so this list can't sh
 
 ```gts
 import Component from '@glimmer/component'
-import { formatForDisplay, useAppHotkeyList } from '@tanstack/ember-hotkeys'
+import { useAppHotkeyList, useFormatForDisplay } from '@tanstack/ember-hotkeys'
 import type { AppHotkey } from '@tanstack/ember-hotkeys'
 
-const label = (appHotkey: AppHotkey) =>
-  appHotkey.hotkey ? formatForDisplay(appHotkey.hotkey) : 'Unassigned'
-
 export default class CheatSheet extends Component {
+  formatForDisplay = useFormatForDisplay()
   items = useAppHotkeyList(this)
+
+  label = (appHotkey: AppHotkey) =>
+    appHotkey.hotkey ? this.formatForDisplay(appHotkey.hotkey) : 'Unassigned'
 
   <template>
     <ul>
       {{#each this.items.value key='appHotkey.id' as |item|}}
         <li data-status={{item.status}}>
-          {{item.appHotkey.meta.name}}: {{label item.appHotkey}}
+          {{item.appHotkey.meta.name}}: {{this.label item.appHotkey}}
           {{#if item.isCustom}}(custom){{/if}}
         </li>
       {{/each}}
@@ -174,7 +176,7 @@ export default class CheatSheet extends Component {
 }
 ```
 
-To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md).
+To show keycaps, pass `parts: true` to the function from `useFormatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md).
 
 ## Open the cheat sheet with a hotkey
 
@@ -244,4 +246,4 @@ export default class App extends Component {
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/ember/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/ember/kitchen-sink) has a shortcut list built from live registrations.

@@ -1,18 +1,22 @@
 # Custom Hotkey Recording — Record a chord
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Record a chord
 
 ```ts
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { HotkeyRecorderController, formatForDisplay } from '@tanstack/lit-hotkeys'
+import {
+  FormatForDisplayController,
+  HotkeyRecorderController,
+} from '@tanstack/lit-hotkeys'
 
 @customElement('shortcut-recorder')
 class ShortcutRecorder extends LitElement {
+  private formatForDisplay = new FormatForDisplayController(this)
   private recorder = new HotkeyRecorderController(this, {
-    onRecord: (hotkey) => console.log('Recorded:', hotkey), // e.g. 'Mod+Shift+[KeyS]'
+    onRecord: (hotkey) => console.log('Recorded:', hotkey), // e.g. 'Mod+Shift+S'
   })
 
   render() {
@@ -22,7 +26,7 @@ class ShortcutRecorder extends LitElement {
         ${isRecording
           ? 'Press a key combination...'
           : recordedHotkey
-            ? formatForDisplay(recordedHotkey)
+            ? this.formatForDisplay.format(recordedHotkey)
             : 'Click to record'}
       </button>
       ${isRecording
@@ -33,7 +37,9 @@ class ShortcutRecorder extends LitElement {
 }
 ```
 
-The recorder records the key's position by default, so Option+S on macOS records `Alt+[KeyS]`, even though it types `ß`. It records `Mod` rather than Command or Control, so the hotkey works on every platform. Pass the result straight to `HotkeyController`, and label it with `formatForDisplay`. [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults. Set `recordBy: 'key'` to record the character instead.
+The recorder writes the hotkey the way you would write it by hand. Command+S on macOS, or Control+S on Windows and Linux, records `Mod+S` on any keyboard layout. It records `Mod` rather than Command or Control, so the hotkey works on every platform. Pass the result straight to `HotkeyController`, and label it with `FormatForDisplayController`.
+
+Some presses have no name that means the same thing on every platform. The recorder records those by the key's position, in brackets: Shift+/ records `Shift+[Slash]`, and Option+1 on macOS records `Alt+[Digit1]`, even though it types `¡`. [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) lists these cases. Set `recordBy: 'code'` to record every key by position, or `recordBy: 'key'` to record the character every press types. Recording by position needs a physical code, so it rejects a press that has none.
 
 The controller adds itself to the element, requests an update whenever its state changes, and has the recorder's state and controls:
 

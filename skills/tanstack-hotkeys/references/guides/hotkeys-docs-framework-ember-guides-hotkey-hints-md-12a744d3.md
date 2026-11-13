@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -14,7 +14,7 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 import Component from '@glimmer/component'
 import { on } from '@ember/modifier'
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/ember-hotkeys'
@@ -22,8 +22,8 @@ import {
 const saveHotkey = 'Mod+S'
 
 export default class SaveButton extends Component {
+  formatForDisplay = useFormatForDisplay()
   hint = useHotkeyHint(this, saveHotkey)
-  label = formatForDisplay(saveHotkey)
   save = () => {
     /* ... */
   }
@@ -31,7 +31,7 @@ export default class SaveButton extends Component {
   <template>
     {{useHotkey saveHotkey this.save}}
     <button type='button' {{on 'click' this.save}}>
-      Save {{#if this.hint.value}}<kbd>{{this.label}}</kbd>{{/if}}
+      Save {{#if this.hint.value}}<kbd>{{this.formatForDisplay saveHotkey}}</kbd>{{/if}}
     </button>
   </template>
 }
@@ -73,19 +73,20 @@ Pass an [app hotkey](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d94
 ```gts
 import Component from '@glimmer/component'
 import {
-  formatForDisplay,
   useAppHotkeys,
+  useFormatForDisplay,
   useHotkeyHint,
 } from '@tanstack/ember-hotkeys'
 import type { AppHotkeyId } from '@tanstack/ember-hotkeys'
 
 export default class Hint extends Component<{ Args: { id: AppHotkeyId } }> {
+  formatForDisplay = useFormatForDisplay()
   appHotkeys = useAppHotkeys(this)
   hint = useHotkeyHint(this, () => this.appHotkeys.value[this.args.id])
 
   get label() {
     const { hotkey } = this.appHotkeys.value[this.args.id]
-    return this.hint.value && hotkey ? formatForDisplay(hotkey) : null
+    return this.hint.value && hotkey ? this.formatForDisplay(hotkey) : null
   }
 
   <template>
@@ -139,4 +140,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md#source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md) covers the tracker and the other held-key utilities.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/ember/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/ember/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

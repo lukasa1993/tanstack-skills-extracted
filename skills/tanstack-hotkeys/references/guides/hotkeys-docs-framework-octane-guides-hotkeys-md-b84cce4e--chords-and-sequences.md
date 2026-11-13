@@ -1,6 +1,6 @@
 # Hotkeys — Chords and sequences
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Chords and sequences
 

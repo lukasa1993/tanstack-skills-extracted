@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 

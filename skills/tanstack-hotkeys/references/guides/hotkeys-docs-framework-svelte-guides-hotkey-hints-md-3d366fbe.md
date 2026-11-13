@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -14,12 +14,13 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 <script lang="ts">
   import {
     createHotkey,
-    formatForDisplay,
+    getFormatForDisplay,
     getHotkeyHint,
   } from '@tanstack/svelte-hotkeys'
 
   const saveHotkey = 'Mod+S'
 
+  const formatForDisplay = getFormatForDisplay()
   createHotkey(saveHotkey, save)
   const hint = getHotkeyHint(saveHotkey)
 </script>
@@ -67,13 +68,14 @@ Pass an [app hotkey](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b
 <!-- Hint.svelte -->
 <script lang="ts">
   import {
-    formatForDisplay,
     getAppHotkeys,
+    getFormatForDisplay,
     getHotkeyHint,
   } from '@tanstack/svelte-hotkeys'
   import type { AppHotkeyId } from '@tanstack/svelte-hotkeys'
 
   let { id }: { id: AppHotkeyId } = $props()
+  const formatForDisplay = getFormatForDisplay()
   const appHotkeys = getAppHotkeys()
   const appHotkey = $derived(appHotkeys.current[id])
   const hint = getHotkeyHint(() => appHotkey)
@@ -118,4 +120,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md#source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md) covers the tracker and the other held-key functions.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/svelte/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/svelte/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

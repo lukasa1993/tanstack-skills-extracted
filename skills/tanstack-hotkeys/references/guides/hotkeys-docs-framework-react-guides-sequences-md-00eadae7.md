@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -143,7 +143,7 @@ The [hotkey recorder](./hotkeys-docs-framework-react-guides-custom-hotkey-record
 
 ## Show sequences in your UI
 
-`formatForDisplay` formats each step and joins them with a space:
+The function from `useFormatForDisplay` formats each step and joins them with a space:
 
 ```tsx
 formatForDisplay(['Mod+K', 'Mod+C'], { platform: 'mac' }) // '⌘ K ⌘ C'
@@ -156,12 +156,13 @@ A sequence's first steps have no visible effect, so show users what they've pres
 
 ```tsx
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkeyRegistrations,
 } from '@tanstack/react-hotkeys'
 import type { HotkeySequenceRegistrationView } from '@tanstack/react-hotkeys'
 
 function PendingKeys() {
+  const formatForDisplay = useFormatForDisplay()
   const inProgress = useHotkeyRegistrations().filter(
     (reg): reg is HotkeySequenceRegistrationView =>
       reg.kind === 'sequence' && reg.matchedStepCount > 0,

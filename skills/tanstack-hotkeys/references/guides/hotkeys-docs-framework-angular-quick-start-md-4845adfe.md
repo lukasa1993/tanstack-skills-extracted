@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -97,11 +97,11 @@ const saveHotkey: HotkeyChord = 'Mod+S'
 
 @Component({
   selector: 'app-save-button',
-  template: `<button (click)="save()">Save <kbd>{{ format(saveHotkey) }}</kbd></button>`,
+  template: `<button (click)="save()">Save <kbd>{{ formatForDisplay(saveHotkey) }}</kbd></button>`,
 })
 export class SaveButtonComponent {
   readonly saveHotkey = saveHotkey
-  readonly format = injectFormatForDisplay()
+  readonly formatForDisplay = injectFormatForDisplay()
 
   constructor() {
     injectHotkey(saveHotkey, () => this.save())

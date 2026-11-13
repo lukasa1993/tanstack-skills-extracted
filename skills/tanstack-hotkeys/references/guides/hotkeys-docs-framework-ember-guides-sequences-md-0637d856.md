@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -165,7 +165,7 @@ The [hotkey recorder](./hotkeys-docs-framework-ember-guides-custom-hotkey-record
 
 ## Show sequences in your UI
 
-`formatForDisplay` formats each step and joins them with a space:
+The function from `useFormatForDisplay` formats each step and joins them with a space:
 
 ```ts
 formatForDisplay(['Mod+K', 'Mod+C'], { platform: 'mac' }) // '⌘ K ⌘ C'
@@ -179,12 +179,13 @@ A sequence's first steps have no visible effect, so show users what they've pres
 ```gts
 import Component from '@glimmer/component'
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkeyRegistrations,
 } from '@tanstack/ember-hotkeys'
 import type { HotkeySequenceRegistrationView } from '@tanstack/ember-hotkeys'
 
 export default class PendingKeys extends Component {
+  formatForDisplay = useFormatForDisplay()
   registrations = useHotkeyRegistrations(this)
 
   get pressed() {
@@ -195,7 +196,7 @@ export default class PendingKeys extends Component {
       )
       .sort((a, b) => b.matchedStepCount - a.matchedStepCount)[0]
     return longest
-      ? formatForDisplay(longest.hotkey.slice(0, longest.matchedStepCount))
+      ? this.formatForDisplay(longest.hotkey.slice(0, longest.matchedStepCount))
       : null
   }
 

@@ -1,6 +1,6 @@
 # Hotkeys Provider And Scopes — Set default options
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Set default options
 
@@ -25,5 +25,6 @@ import { HotkeysProvider } from '@tanstack/vue-hotkeys'
 
 - `hotkey` defaults apply to every `useHotkey` and `useHotkeys` inside the provider. `requireReset` applies to chords, and `timeout` to sequences. Options passed to a composable override the defaults. See [Hotkey options](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md).
 - `hotkeyRecorder` defaults apply to every `useHotkeyRecorder` inside the provider. See [Custom Hotkey Recording](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md).
+- `keyboardLayout: false` stops labels from asking the browser for the user's keyboard layout. See [Label physical keys for the user's keyboard](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md).
 
 A nested provider merges its defaults over its parent's, so a provider deeper in the tree can change the defaults for one part of your app.

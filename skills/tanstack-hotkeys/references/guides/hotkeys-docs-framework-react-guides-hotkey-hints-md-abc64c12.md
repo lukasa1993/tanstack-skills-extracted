@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 
 ```tsx
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/react-hotkeys'
@@ -20,6 +20,7 @@ import {
 const saveHotkey = 'Mod+S'
 
 function SaveButton() {
+  const formatForDisplay = useFormatForDisplay()
   useHotkey(saveHotkey, save)
   const showHint = useHotkeyHint(saveHotkey)
 
@@ -66,14 +67,15 @@ Pass an [app hotkey](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92
 
 ```tsx
 import {
-  formatForDisplay,
   useAppHotkeys,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/react-hotkeys'
 import type { AppHotkeyId } from '@tanstack/react-hotkeys'
 
 function Hint({ id }: { id: AppHotkeyId }) {
+  const formatForDisplay = useFormatForDisplay()
   const appHotkey = useAppHotkeys()[id]
   const showHint = useHotkeyHint(appHotkey)
 
@@ -115,4 +117,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md#source-hotkeys-docs-framework-react-guides-held-key-state-helpers-md) covers the tracker and the other held-key hooks.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/react/kitchen-sink) shows hints on its navigation and toolbar buttons, and keeps them current when users change their hotkeys.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/react/kitchen-sink) shows hints on its navigation and toolbar buttons, and keeps them current when users change their hotkeys.

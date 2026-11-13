@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -13,13 +13,14 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 ```vue
 <script setup lang="ts">
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/vue-hotkeys'
 
 const saveHotkey = 'Mod+S'
 
+const formatForDisplay = useFormatForDisplay()
 useHotkey(saveHotkey, save)
 const showHint = useHotkeyHint(saveHotkey)
 </script>
@@ -69,13 +70,14 @@ Pass an [app hotkey](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41
 <script setup lang="ts">
 import { computed } from 'vue'
 import {
-  formatForDisplay,
   useAppHotkeys,
+  useFormatForDisplay,
   useHotkeyHint,
 } from '@tanstack/vue-hotkeys'
 import type { AppHotkeyId } from '@tanstack/vue-hotkeys'
 
 const props = defineProps<{ id: AppHotkeyId }>()
+const formatForDisplay = useFormatForDisplay()
 const appHotkeys = useAppHotkeys()
 const appHotkey = computed(() => appHotkeys.value[props.id])
 const showHint = useHotkeyHint(appHotkey)
@@ -124,4 +126,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md) covers the tracker and the other held-key composables.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/vue/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/vue/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

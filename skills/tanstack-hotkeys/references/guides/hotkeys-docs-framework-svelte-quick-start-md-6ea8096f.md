@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -76,11 +76,11 @@ Label a button or menu item with `getFormatForDisplay`. Format the same value yo
   const saveHotkey: HotkeyChord = 'Mod+S'
 
   createHotkey(saveHotkey, () => save())
-  const format = getFormatForDisplay()
+  const formatForDisplay = getFormatForDisplay()
 </script>
 
 <button onclick={save}>
-  Save <kbd>{format(saveHotkey)}</kbd>
+  Save <kbd>{formatForDisplay(saveHotkey)}</kbd>
 </button>
 ```
 

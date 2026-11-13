@@ -38,22 +38,22 @@ A settings row records with `createHotkeyRecorder` on its owner:
 import {
   createHotkeyRecorder,
   createHotkeysScope,
-  formatForDisplay,
 } from '@tanstack/alpine-hotkeys'
 import Alpine from 'alpinejs'
 import type { AppHotkeyId } from '@tanstack/alpine-hotkeys'
 
 Alpine.data('shortcutRow', (id: AppHotkeyId) => {
   const hotkeys = createHotkeysScope()
+  const formatForDisplay = hotkeys.createFormatForDisplay()
   const appHotkeys = hotkeys.createAppHotkeys()
   const custom = hotkeys.createCustomHotkeys()
   const recorder = createHotkeyRecorder(hotkeys, {
     maxSteps: Infinity,
-    validate: (hotkey) => {
-      const [conflict] = custom.findConflicts(id, hotkey)
+    validate: (hotkey, context) => {
+      const [conflict] = custom.findConflicts(id, hotkey, context)
       return conflict ? `Used by ${conflict.meta?.name ?? conflict.id}` : true
     },
-    onRecord: (hotkey) => custom.setCustomHotkey(id, hotkey),
+    onRecord: (hotkey, context) => custom.setCustomHotkey(id, hotkey, context),
     onClear: () => custom.setCustomHotkey(id, null),
   })
 

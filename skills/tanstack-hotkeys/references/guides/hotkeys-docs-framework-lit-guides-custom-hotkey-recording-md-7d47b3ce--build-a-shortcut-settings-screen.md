@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Build a shortcut settings screen
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Build a shortcut settings screen
 
@@ -12,9 +12,9 @@ For a few hotkeys in one element, reactive state is enough:
 import { LitElement, html } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
 import {
+  FormatForDisplayController,
   HotkeyController,
   HotkeyRecorderController,
-  formatForDisplay,
 } from '@tanstack/lit-hotkeys'
 import type { Hotkey } from '@tanstack/lit-hotkeys'
 
@@ -29,6 +29,7 @@ class ShortcutSettings extends LitElement {
   }
   @state() editing: Action | null = null
 
+  private formatForDisplay = new FormatForDisplayController(this)
   private recorder = new HotkeyRecorderController(this, {
     maxSteps: Infinity,
     onRecord: (hotkey) => {
@@ -58,7 +59,7 @@ class ShortcutSettings extends LitElement {
           ${action}:
           ${this.editing === action && this.recorder.isRecording
             ? 'Press keys...'
-            : formatForDisplay(hotkey)}
+            : this.formatForDisplay.format(hotkey)}
         </button>
       `,
     )

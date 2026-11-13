@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 
 ```tsx
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/preact-hotkeys'
@@ -20,6 +20,7 @@ import {
 const saveHotkey = 'Mod+S'
 
 function SaveButton() {
+  const formatForDisplay = useFormatForDisplay()
   useHotkey(saveHotkey, save)
   const showHint = useHotkeyHint(saveHotkey)
 
@@ -66,14 +67,15 @@ Pass an [app hotkey](./hotkeys-docs-framework-preact-guides-app-hotkeys-md-426d5
 
 ```tsx
 import {
-  formatForDisplay,
   useAppHotkeys,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/preact-hotkeys'
 import type { AppHotkeyId } from '@tanstack/preact-hotkeys'
 
 function Hint({ id }: { id: AppHotkeyId }) {
+  const formatForDisplay = useFormatForDisplay()
   const appHotkey = useAppHotkeys()[id]
   const showHint = useHotkeyHint(appHotkey)
 
@@ -115,4 +117,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-preact-guides-held-key-state-helpers-md-4ba7e38b.md#source-hotkeys-docs-framework-preact-guides-held-key-state-helpers-md) covers the tracker and the other held-key hooks.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/preact/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/preact/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML. When Preact hydrates, it replaces the label's text with `⌘ S`, so the label changes in front of the user. Preact's `hydrate()` doesn't update attributes, so a label in an attribute, such as a `title`, keeps `Ctrl+S`. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
+2. Format labels with `useFormatForDisplay()`. It reads the provider, so it uses the platform from step 1.
 
 ```tsx
 import { HotkeysProvider, detectPlatform } from '@tanstack/preact-hotkeys'
@@ -22,13 +22,13 @@ import { useFormatForDisplay } from '@tanstack/preact-hotkeys'
 
 function Toolbar() {
   // Call it at the top of the component, like any hook
-  const format = useFormatForDisplay()
+  const formatForDisplay = useFormatForDisplay()
 
   return (
     <ul>
       {commands.map((command) => (
         <li key={command.id}>
-          {command.name} <kbd>{format(command.hotkey)}</kbd>
+          {command.name} <kbd>{formatForDisplay(command.hotkey)}</kbd>
         </li>
       ))}
     </ul>
@@ -36,11 +36,11 @@ function Toolbar() {
 }
 ```
 
-`useFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call the hook once at the top of the component, then call the function anywhere, including in loops and conditions. A `platform` passed to the function wins over the provider's.
+Call the hook once at the top of the component, then call the function anywhere, including in loops and conditions. A `platform` passed to the function wins over the provider's.
 
 In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
-Without a provider `platform`, `useFormatForDisplay` detects the platform the same way `formatForDisplay` does: `'linux'` on the server and the user's platform in the browser. It doesn't hold the server's label until hydration finishes, so the label changes as described above. Set the provider's `platform` in every server-rendered Preact app.
+Without a provider `platform`, `useFormatForDisplay` detects the platform: `'linux'` on the server and the user's platform in the browser. It doesn't hold the server's label until hydration finishes, so the label changes as described above. Set the provider's `platform` in every server-rendered Preact app.
 
 The provider must render on the server too, so wrap your app in it where the request is available, as shown for each framework below.
 
@@ -110,7 +110,7 @@ export default function Shortcuts({ platform }: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/preact/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/preact/useFormatForDisplay-astro) shows this setup.
 
 ### Vite server rendering
 
@@ -152,16 +152,17 @@ hydrate(<App platform={detectPlatform()} />, document.getElementById('app')!)
 
 Your server calls `render` with the request's `User-Agent` header: `request.headers.get('user-agent')` for a Fetch API `Request`, or `req.headers['user-agent']` in Express.
 
-The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/preact/useFormatForDisplay-vite-ssr) shows this setup.
+The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/preact/useFormatForDisplay-vite-ssr) shows this setup.
 
 ### Render a label only in the browser
 
-To skip server rendering for a label instead, render it after hydration. In the browser, plain `formatForDisplay` detects the platform:
+To skip server rendering for a label instead, render it after hydration. A component that first renders in the browser gets the browser's platform from `useFormatForDisplay` at once:
 
 ```tsx
 import { useEffect, useState } from 'preact/hooks'
 import type { ComponentChildren } from 'preact'
-import { formatForDisplay } from '@tanstack/preact-hotkeys'
+import { useFormatForDisplay } from '@tanstack/preact-hotkeys'
+import type { Hotkey } from '@tanstack/preact-hotkeys'
 
 function ClientOnly({ children, fallback = null }: { children: ComponentChildren; fallback?: ComponentChildren }) {
   const [hydrated, setHydrated] = useState(false)
@@ -169,8 +170,14 @@ function ClientOnly({ children, fallback = null }: { children: ComponentChildren
   return <>{hydrated ? children : fallback}</>
 }
 
+// Formats when it renders, which happens only in the browser
+function ShortcutLabel({ hotkey }: { hotkey: Hotkey }) {
+  const formatForDisplay = useFormatForDisplay()
+  return <kbd>{formatForDisplay(hotkey)}</kbd>
+}
+
 <ClientOnly fallback={<kbd>&nbsp;</kbd>}>
-  <kbd>{formatForDisplay('Mod+S')}</kbd>
+  <ShortcutLabel hotkey="Mod+S" />
 </ClientOnly>
 ```
 
@@ -178,7 +185,7 @@ The server and the first browser render both show the fallback, so hydration mat
 
 ### Static and prerendered pages
 
-A page rendered at build time has no request and no user, so neither `formatForDisplay` nor `useFormatForDisplay` can know the platform. This includes Astro's default static output and any page you prerender with `preact-render-to-string`. Render platform-specific labels in a client-only wrapper, as above.
+A page rendered at build time has no request and no user, so `useFormatForDisplay` can't know the platform. This includes Astro's default static output and any page you prerender with `preact-render-to-string`. Render platform-specific labels in a client-only wrapper, as above.
 
 ### Development warning
 

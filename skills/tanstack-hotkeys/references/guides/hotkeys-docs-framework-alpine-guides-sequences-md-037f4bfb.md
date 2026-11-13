@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -150,7 +150,7 @@ The [hotkey recorder](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recor
 
 ## Show sequences in your UI
 
-`formatForDisplay` formats each step and joins them with a space:
+The function from `createFormatForDisplay` formats each step and joins them with a space:
 
 ```ts
 formatForDisplay(['Mod+K', 'Mod+C'], { platform: 'mac' }) // '⌘ K ⌘ C'
@@ -163,11 +163,12 @@ A sequence's first steps have no visible effect, so show users what they've pres
 
 ```ts
 import Alpine from 'alpinejs'
-import { createHotkeysScope, formatForDisplay } from '@tanstack/alpine-hotkeys'
+import { createHotkeysScope } from '@tanstack/alpine-hotkeys'
 import type { HotkeySequenceRegistrationView } from '@tanstack/alpine-hotkeys'
 
 Alpine.data('pendingKeys', () => {
   const hotkeys = createHotkeysScope()
+  const formatForDisplay = hotkeys.createFormatForDisplay()
   const registrations = hotkeys.createHotkeyRegistrations()
 
   return {

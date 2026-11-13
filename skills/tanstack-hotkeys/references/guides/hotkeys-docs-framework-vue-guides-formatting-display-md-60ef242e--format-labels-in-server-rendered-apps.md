@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once Vue hydrates, with a hydration mismatch. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
+2. Format labels with `useFormatForDisplay()`. It reads the provider, so it uses the platform from step 1.
 
 ```vue
 <script setup lang="ts">
@@ -28,19 +28,19 @@ const platform = detectPlatform(userAgent)
 import { useFormatForDisplay } from '@tanstack/vue-hotkeys'
 
 // Call it in setup, like any composable
-const format = useFormatForDisplay()
+const formatForDisplay = useFormatForDisplay()
 </script>
 
 <template>
   <ul>
     <li v-for="command in commands" :key="command.id">
-      {{ command.name }} <kbd>{{ format(command.hotkey) }}</kbd>
+      {{ command.name }} <kbd>{{ formatForDisplay(command.hotkey) }}</kbd>
     </li>
   </ul>
 </template>
 ```
 
-`useFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call the composable once in `setup`, then call the function anywhere, including in templates, loops, and computed properties. The function reads the provider's `platform` each time you call it, so labels update when the platform changes. A `platform` passed to the function wins over the provider's.
+Call the composable once in `setup`, then call the function anywhere, including in templates, loops, and computed properties. The function reads the provider's `platform` each time you call it, so labels update when the platform changes. A `platform` passed to the function wins over the provider's.
 
 In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
@@ -72,7 +72,7 @@ const platform = detectPlatform(useRequestHeader('user-agent'))
 
 If your app uses layouts, wrap `<NuxtLayout>` instead of `<NuxtPage />`. For routes that Nuxt prerenders, see [Static and prerendered pages](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#static-and-prerendered-pages).
 
-The [Nuxt example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/vue/useFormatForDisplay-nuxt) shows this setup.
+The [Nuxt example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/vue/useFormatForDisplay-nuxt) shows this setup.
 
 ### Vite SSR
 
@@ -125,7 +125,7 @@ defineProps<{ platform: HotkeyPlatform }>()
 </template>
 ```
 
-The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/vue/useFormatForDisplay-vite-ssr) shows this setup.
+The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/vue/useFormatForDisplay-vite-ssr) shows this setup.
 
 ### Astro
 
@@ -161,17 +161,18 @@ defineProps<{ platform: HotkeyPlatform }>()
 </template>
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/vue/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/vue/useFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 
-To skip server rendering for a label instead, render it after the component mounts. In the browser, plain `formatForDisplay` detects the platform:
+To skip server rendering for a label instead, render it after the component mounts. Without a provider `platform`, the function from `useFormatForDisplay` detects the platform in the browser:
 
 ```vue
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { formatForDisplay } from '@tanstack/vue-hotkeys'
+import { useFormatForDisplay } from '@tanstack/vue-hotkeys'
 
+const formatForDisplay = useFormatForDisplay()
 const mounted = ref(false)
 onMounted(() => {
   mounted.value = true
@@ -199,17 +200,18 @@ A fallback with the label's width keeps the layout from shifting.
 
 ### Static and prerendered pages
 
-A page rendered at build time has no request and no user, so neither `formatForDisplay` nor `useFormatForDisplay` can know the platform. This includes `nuxt generate`, Nuxt routes with `prerender: true` in `routeRules`, VitePress sites, and Astro's default static output. Render platform-specific labels in a client-only wrapper, as above. Without one, Mac and Windows users get `'linux'` labels in the HTML and a hydration mismatch.
+A page rendered at build time has no request and no user, so `useFormatForDisplay` can't know the platform. This includes `nuxt generate`, Nuxt routes with `prerender: true` in `routeRules`, VitePress sites, and Astro's default static output. Render platform-specific labels in a client-only wrapper, as above. Without one, Mac and Windows users get `'linux'` labels in the HTML and a hydration mismatch.
 
 For example, a VitePress site can show shortcut labels in Markdown with a global component:
 
 ```vue
 <!-- .vitepress/theme/Shortcut.vue -->
 <script setup lang="ts">
-import { formatForDisplay } from '@tanstack/vue-hotkeys'
+import { useFormatForDisplay } from '@tanstack/vue-hotkeys'
 import type { Hotkey } from '@tanstack/vue-hotkeys'
 
 defineProps<{ hotkey: Hotkey }>()
+const formatForDisplay = useFormatForDisplay()
 </script>
 
 <template>
@@ -239,7 +241,7 @@ Press <Shortcut hotkey="Mod+K" /> to search.
 
 VitePress's `<ClientOnly>` renders nothing on the server, and the label appears once the page hydrates.
 
-The [VitePress example](https://github.com/TanStack/hotkeys/blob/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/vue/useFormatForDisplay-vitepress/index.md) shows labels in `<ClientOnly>` on a static site.
+The [VitePress example](https://github.com/TanStack/hotkeys/blob/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/vue/useFormatForDisplay-vitepress/index.md) shows labels in `<ClientOnly>` on a static site.
 
 ### Development warning
 

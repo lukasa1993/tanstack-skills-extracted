@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -143,7 +143,7 @@ The [hotkey recorder](./hotkeys-docs-framework-vue-guides-custom-hotkey-recordin
 
 ## Show sequences in your UI
 
-`formatForDisplay` formats each step and joins them with a space:
+The function from `useFormatForDisplay` formats each step and joins them with a space:
 
 ```ts
 formatForDisplay(['Mod+K', 'Mod+C'], { platform: 'mac' }) // '⌘ K ⌘ C'
@@ -157,9 +157,10 @@ A sequence's first steps have no visible effect, so show users what they've pres
 ```vue
 <script setup lang="ts">
 import { computed } from 'vue'
-import { formatForDisplay, useHotkeyRegistrations } from '@tanstack/vue-hotkeys'
+import { useFormatForDisplay, useHotkeyRegistrations } from '@tanstack/vue-hotkeys'
 import type { HotkeySequenceRegistrationView } from '@tanstack/vue-hotkeys'
 
+const formatForDisplay = useFormatForDisplay()
 const registrations = useHotkeyRegistrations()
 const longest = computed(
   () =>

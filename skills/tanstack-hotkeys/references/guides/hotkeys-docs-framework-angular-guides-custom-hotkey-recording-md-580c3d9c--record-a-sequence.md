@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Record a sequence
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Record a sequence
 
@@ -13,19 +13,19 @@ Set `maxSteps: Infinity` to let users record a sequence. Each chord adds a step,
     <button (click)="recorder.startRecording()">
       {{
         recorder.isRecording()
-          ? format(recorder.steps()) || 'Press chords, then Enter...'
+          ? formatForDisplay(recorder.steps()) || 'Press chords, then Enter...'
           : recorder.recordedHotkey()
-            ? format(recorder.recordedHotkey()!)
+            ? formatForDisplay(recorder.recordedHotkey()!)
             : 'Click to record'
       }}
     </button>
   `,
 })
 export class SequenceRecorderComponent {
-  readonly format = formatForDisplay
+  readonly formatForDisplay = injectFormatForDisplay()
   readonly recorder = injectHotkeyRecorder({
     maxSteps: Infinity,
-    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+[KeyS]' or ['[KeyG]', '[KeyG]']
+    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+S' or ['G', 'G']
   })
 }
 ```

@@ -1,6 +1,6 @@
 # Provide Hotkeys And Scopes — Group hotkeys into scopes
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Group hotkeys into scopes
 
@@ -27,7 +27,7 @@ export class Editor {
 
 A hotkey registered with `injectHotkey` or `injectHotkeys` uses the scope of the nearest provider that sets one. Hotkeys outside any scoped provider, including those under the `provideHotkeys` in your application config, are in the `'global'` scope, which is always active. A provider without `scope` uses its parent's scope.
 
-The scope activates when the first hotkey in it is injected, and stays active until the component is destroyed. Angular creates a provider only when something injects it, so a provider with no hotkeys under it never activates. To activate it anyway, such as for an exclusive overlay that has no hotkeys of its own, call `injectHotkeysContext()` in the component:
+The scope activates when something under the provider first reads it, such as `injectHotkey` or `injectFormatForDisplay`, and stays active until the component is destroyed. Angular creates a provider only when something injects it, so a provider with no hotkeys or labels under it never activates. To activate it anyway, such as for an exclusive overlay that has no hotkeys of its own, call `injectHotkeysContext()` in the component:
 
 ```ts
 import { Component } from '@angular/core'

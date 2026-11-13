@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Hotkey options
 
@@ -29,7 +29,7 @@ submit() {}
 | `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
 | `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#describe-hotkeys-with-meta). |
 
-The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`HotkeyControllerOptions` reference](https://github.com/TanStack/hotkeys/blob/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/docs/framework/lit/reference/type-aliases/HotkeyControllerOptions.md) lists the types.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`HotkeyControllerOptions` reference](https://github.com/TanStack/hotkeys/blob/1f0a2c627c4a18f005762600966a81e9b8daef3a/docs/framework/lit/reference/type-aliases/HotkeyControllerOptions.md) lists the types.
 
 Lit has no provider for app-wide defaults, so pass options to each hotkey. To give several hotkeys the same options, share an options object. See [Share options](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#share-options).
 

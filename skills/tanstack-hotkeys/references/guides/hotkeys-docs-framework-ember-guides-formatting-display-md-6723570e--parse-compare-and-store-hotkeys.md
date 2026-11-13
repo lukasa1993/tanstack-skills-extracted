@@ -1,20 +1,19 @@
 # Formatting Display — Parse, compare, and store hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Parse, compare, and store hotkeys
 
 `parseHotkey` returns each chord's key, as either a logical `key` or a physical `code`, plus its modifiers with `Mod` resolved. Check which one you have before reading it:
 
 ```ts
-import { formatForDisplay, normalizeHotkey, parseHotkey } from '@tanstack/ember-hotkeys'
+import { normalizeHotkey, parseHotkey } from '@tanstack/ember-hotkeys'
 
 const parsed = parseHotkey('Mod+[KeyS]', 'mac')
 if (parsed.code !== undefined) {
   console.log(parsed.code) // 'KeyS'; parsed.key is undefined
 }
 const stored = normalizeHotkey(parsed, 'mac') // 'Mod+[KeyS]'
-formatForDisplay(stored, { platform: 'windows' }) // 'Ctrl+S'
 ```
 
 A parsed chord's modifiers are already resolved for one platform. To store it as a hotkey that works on every platform, normalize it with that same platform, as above. `normalizeHotkey` also accepts chord strings, chord objects, and sequences. Store hotkeys, never display labels. [Write a chord as a string or an object](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md) covers the forms a hotkey can take.

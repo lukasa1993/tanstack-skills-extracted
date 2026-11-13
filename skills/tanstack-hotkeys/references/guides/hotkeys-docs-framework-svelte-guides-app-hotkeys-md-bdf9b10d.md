@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -137,24 +137,25 @@ The [hotkey recorder](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recor
 <script lang="ts">
   import {
     createHotkeyRecorder,
-    formatForDisplay,
     getAppHotkeys,
     getCustomHotkeys,
+    getFormatForDisplay,
   } from '@tanstack/svelte-hotkeys'
   import type { AppHotkeyId } from '@tanstack/svelte-hotkeys'
 
   let { id }: { id: AppHotkeyId } = $props()
+  const formatForDisplay = getFormatForDisplay()
   const appHotkeys = getAppHotkeys()
   const custom = getCustomHotkeys()
   const appHotkey = $derived(appHotkeys.current[id])
 
   const recorder = createHotkeyRecorder(() => ({
     maxSteps: Infinity,
-    validate: (hotkey) => {
-      const conflicts = custom.findConflicts(id, hotkey)
+    validate: (hotkey, context) => {
+      const conflicts = custom.findConflicts(id, hotkey, context)
       return conflicts.length === 0 || `Used by ${conflicts[0]?.meta?.name}`
     },
-    onRecord: (hotkey) => custom.setCustomHotkey(id, hotkey),
+    onRecord: (hotkey, context) => custom.setCustomHotkey(id, hotkey, context),
     onClear: () => custom.setCustomHotkey(id, null),
   }))
 </script>
@@ -167,11 +168,13 @@ The [hotkey recorder](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recor
 </div>
 ```
 
+Pass the recorder's `context` to `findConflicts` and `setCustomHotkey`. It holds the key press that made the recording, so the check also finds an app hotkey that is written differently but fires for the same press. On a US keyboard, a recorded `Shift+[Slash]` and a declared `?` are one key press, and only the key press shows that.
+
 | Member | Description |
 | --- | --- |
 | `current` | The hotkeys that differ from the defaults |
-| `setCustomHotkey(id, hotkey)` | Sets a hotkey, or unbinds with `null`. Returns conflicting app hotkeys; when there are any, nothing changes. |
-| `findConflicts(id, hotkey)` | App hotkeys that would collide if `id` used `hotkey` |
+| `setCustomHotkey(id, hotkey, context?)` | Sets a hotkey, or unbinds with `null`. Returns conflicting app hotkeys; when there are any, nothing changes. Takes the recorder's `context`, as `findConflicts` does. |
+| `findConflicts(id, hotkey, context?)` | App hotkeys that would collide if `id` used `hotkey`. With the recorder's `context`, also checks with the key press that recorded it. |
 | `resetCustomHotkey(id)` | Restores one default |
 | `resetCustomHotkeys()` | Restores every default |
 
@@ -179,4 +182,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `getAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/1f0a2c627c4a18f005762600966a81e9b8daef3a/docs/reference/classes/AppHotkeysStore.md) to use it directly.

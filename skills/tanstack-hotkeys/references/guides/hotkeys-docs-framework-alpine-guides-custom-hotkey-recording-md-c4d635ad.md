@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -11,10 +11,10 @@ Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--overview.md) — 2 KiB
-- [Record a chord](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--record-a-chord.md) — 3 KiB
+- [Record a chord](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--record-a-chord.md) — 4 KiB
 - [Record a sequence](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--record-a-sequence.md) — 2 KiB
 - [Keys the recorder handles](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--keys-the-recorder-handles.md) — 2 KiB
-- [Validate and check conflicts](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--validate-and-check-conflicts.md) — 4 KiB
+- [Validate and check conflicts](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--validate-and-check-conflicts.md) — 5 KiB
 - [Build a shortcut settings screen](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--build-a-shortcut-settings-screen.md) — 3 KiB
 - [Recorder options](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--recorder-options.md) — 3 KiB
 

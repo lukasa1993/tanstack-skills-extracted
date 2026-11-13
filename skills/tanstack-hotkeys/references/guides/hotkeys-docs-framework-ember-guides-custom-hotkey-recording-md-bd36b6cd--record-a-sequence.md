@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Record a sequence
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Record a sequence
 
@@ -8,15 +8,16 @@ Set `maxSteps: Infinity` to let users record a sequence. Each chord adds a step,
 
 ```gts
 export default class SequenceRecorder extends Component {
+  formatForDisplay = useFormatForDisplay()
   recorder = useHotkeyRecorder(this, {
     maxSteps: Infinity,
-    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+[KeyS]' or ['[KeyG]', '[KeyG]']
+    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+S' or ['G', 'G']
   })
 
   get label() {
     const { isRecording, steps, recordedHotkey } = this.recorder
-    if (isRecording) return formatForDisplay(steps) || 'Press chords, then Enter...'
-    return recordedHotkey ? formatForDisplay(recordedHotkey) : 'Click to record'
+    if (isRecording) return this.formatForDisplay(steps) || 'Press chords, then Enter...'
+    return recordedHotkey ? this.formatForDisplay(recordedHotkey) : 'Click to record'
   }
 
   <template>

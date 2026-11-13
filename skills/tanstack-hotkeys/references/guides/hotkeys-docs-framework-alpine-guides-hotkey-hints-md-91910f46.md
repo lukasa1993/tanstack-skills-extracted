@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -12,17 +12,20 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 
 ```ts
 import Alpine from 'alpinejs'
-import { createHotkeysScope, formatForDisplay } from '@tanstack/alpine-hotkeys'
+import { createHotkeysScope } from '@tanstack/alpine-hotkeys'
 
 const saveHotkey = 'Mod+S'
 
 Alpine.data('saveButton', () => {
   const hotkeys = createHotkeysScope()
+  const formatForDisplay = hotkeys.createFormatForDisplay()
   hotkeys.createHotkey(saveHotkey, () => save())
   const hint = hotkeys.createHotkeyHint(saveHotkey)
 
   return {
-    label: formatForDisplay(saveHotkey),
+    get label() {
+      return formatForDisplay(saveHotkey)
+    },
     get showHint() {
       return hint.value
     },
@@ -78,6 +81,7 @@ import type { AppHotkeyId } from '@tanstack/alpine-hotkeys'
 
 Alpine.data('hint', (id: AppHotkeyId) => {
   const hotkeys = createHotkeysScope()
+  const formatForDisplay = hotkeys.createFormatForDisplay()
   const appHotkeys = hotkeys.createAppHotkeys()
   const hint = hotkeys.createHotkeyHint(() => appHotkeys.value[id])
 
@@ -138,4 +142,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md#source-hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md) covers the tracker and the other held-key functions.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/alpine/kitchen-sink) shows hints next to its buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/alpine/kitchen-sink) shows hints next to its buttons while Alt or Option is held.

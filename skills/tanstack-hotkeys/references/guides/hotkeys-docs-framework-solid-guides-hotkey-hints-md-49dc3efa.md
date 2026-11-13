@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -13,14 +13,15 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 ```tsx
 import { Show } from 'solid-js'
 import {
+  createFormatForDisplay,
   createHotkey,
   createHotkeyHint,
-  formatForDisplay,
 } from '@tanstack/solid-hotkeys'
 
 const saveHotkey = 'Mod+S'
 
 function SaveButton() {
+  const formatForDisplay = createFormatForDisplay()
   createHotkey(saveHotkey, save)
   const showHint = createHotkeyHint(saveHotkey)
 
@@ -71,14 +72,15 @@ Pass an [app hotkey](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd906
 ```tsx
 import { Show } from 'solid-js'
 import {
+  createFormatForDisplay,
   createHotkey,
   createHotkeyHint,
-  formatForDisplay,
   useAppHotkeys,
 } from '@tanstack/solid-hotkeys'
 import type { AppHotkeyId } from '@tanstack/solid-hotkeys'
 
 function Hint(props: { id: AppHotkeyId }) {
+  const formatForDisplay = createFormatForDisplay()
   const appHotkeys = useAppHotkeys()
   const appHotkey = () => appHotkeys()[props.id]
   const showHint = createHotkeyHint(appHotkey)
@@ -124,4 +126,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md#source-hotkeys-docs-framework-solid-guides-held-key-state-helpers-md) covers the tracker and the other held-key primitives.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/solid/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/solid/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

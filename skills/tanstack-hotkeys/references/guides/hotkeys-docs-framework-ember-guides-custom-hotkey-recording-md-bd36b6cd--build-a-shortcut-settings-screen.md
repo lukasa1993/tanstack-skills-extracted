@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Build a shortcut settings screen
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Build a shortcut settings screen
 
@@ -14,7 +14,7 @@ import { tracked } from '@glimmer/tracking'
 import { fn } from '@ember/helper'
 import { on } from '@ember/modifier'
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkeyRecorder,
   useHotkeys,
 } from '@tanstack/ember-hotkeys'
@@ -23,6 +23,7 @@ import type { EmberHotkeyDefinition, Hotkey } from '@tanstack/ember-hotkeys'
 type Action = 'save' | 'undo' | 'search'
 
 export default class ShortcutSettings extends Component {
+  formatForDisplay = useFormatForDisplay()
   @tracked shortcuts: Record<Action, Hotkey> = {
     save: 'Mod+S',
     undo: 'Mod+Z',
@@ -53,7 +54,7 @@ export default class ShortcutSettings extends Component {
       label:
         this.editing === action && this.recorder.isRecording
           ? 'Press keys...'
-          : formatForDisplay(hotkey),
+          : this.formatForDisplay(hotkey),
     }))
   }
 

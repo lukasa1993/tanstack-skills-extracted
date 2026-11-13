@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ TanStack Hotkeys gives you two lists to build from, both created on an owner fro
 - `createHotkeyRegistrations` returns the hotkeys registered right now, in its `hotkeys` property. It works with plain `createHotkey` and `createHotkeys`, but it only knows about owners that exist.
 - `createAppHotkeyList` returns every [app hotkey](./hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md#source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md) you declared, in its `value` property, including hotkeys on pages that haven't rendered, with the status of each.
 
-Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md#source-hotkeys-docs-framework-alpine-guides-formatting-display-md).
+Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `createFormatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md#source-hotkeys-docs-framework-alpine-guides-formatting-display-md).
 
 ## Name your hotkeys
 
@@ -57,10 +57,11 @@ declare module '@tanstack/hotkeys' {
 
 ```ts
 import Alpine from 'alpinejs'
-import { createHotkeysScope, formatForDisplay } from '@tanstack/alpine-hotkeys'
+import { createHotkeysScope } from '@tanstack/alpine-hotkeys'
 
 Alpine.data('shortcutList', () => {
   const hotkeys = createHotkeysScope()
+  const formatForDisplay = hotkeys.createFormatForDisplay()
   const registrations = hotkeys.createHotkeyRegistrations()
 
   return {
@@ -105,6 +106,7 @@ Registrations exist only while their owners exist, so this list can't show short
 ```ts
 Alpine.data('cheatSheet', () => {
   const hotkeys = createHotkeysScope()
+  const formatForDisplay = hotkeys.createFormatForDisplay()
   const items = hotkeys.createAppHotkeyList()
 
   return {
@@ -178,7 +180,7 @@ get groups() {
 </template>
 ```
 
-To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md#source-hotkeys-docs-framework-alpine-guides-formatting-display-md).
+To show keycaps, pass `parts: true` to the function from `createFormatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md#source-hotkeys-docs-framework-alpine-guides-formatting-display-md).
 
 ## Open the cheat sheet with a hotkey
 
@@ -240,4 +242,4 @@ Alpine.data('app', () => ({
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/alpine/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/alpine/kitchen-sink) has a shortcut list built from live registrations.

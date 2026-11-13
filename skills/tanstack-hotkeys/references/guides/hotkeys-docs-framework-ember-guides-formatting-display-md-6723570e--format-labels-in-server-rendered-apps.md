@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered in FastBoot uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once the app boots in the browser. To render the right label from the start:
 
 1. Read the request's `User-Agent` header from the `fastboot` service, and pass `detectPlatform(userAgent)` as the `platform` of a `createHotkeysScope` scope.
-2. Format labels with `useFormatForDisplay(scope)` instead of `formatForDisplay`. `formatForDisplay` doesn't read the scope, so it ignores the platform from step 1.
+2. Format labels with `useFormatForDisplay(scope)`. It reads the scope, so it uses the platform from step 1.
 
 Create the scope in a component near the top of your app, such as the one your application template renders:
 
@@ -54,19 +54,19 @@ interface ToolbarSignature {
 }
 
 export default class Toolbar extends Component<ToolbarSignature> {
-  format = useFormatForDisplay(this.args.hotkeys)
+  formatForDisplay = useFormatForDisplay(this.args.hotkeys)
 
   <template>
     <ul>
       {{#each commands as |command|}}
-        <li>{{command.name}} <kbd>{{this.format command.hotkey}}</kbd></li>
+        <li>{{command.name}} <kbd>{{this.formatForDisplay command.hotkey}}</kbd></li>
       {{/each}}
     </ul>
   </template>
 }
 ```
 
-`useFormatForDisplay` returns a function with the same options as `formatForDisplay`, and templates can call it as a helper. It reads the scope's `platform` each time it formats, so labels update when the scope's defaults change. A `platform` passed to the function wins over the scope's. Without a scope, it works like `formatForDisplay`.
+Call the utility once in a class field, then call the function anywhere, including in the template's loops and conditions. It reads the scope's `platform` each time it formats, so labels update when the scope's defaults change. A `platform` passed to the function wins over the scope's.
 
 In the browser, `fastboot.request` is `null`, so `detectPlatform()` reads the browser's `navigator`. The server and the browser get the same platform for practically every user. The scope's `platform` is also the default platform for the hotkeys and recorders that use the scope. Pass the scope to child components, such as `@hotkeys={{this.hotkeys}}`, so their labels use the same platform.
 
@@ -76,12 +76,12 @@ Pages rendered this way depend on the request's `User-Agent` header. If a CDN or
 
 ### Render a label only in the browser
 
-To leave a label out of the server's HTML instead, check the `fastboot` service's `isFastBoot`. In the browser, plain `formatForDisplay` detects the platform:
+To leave a label out of the server's HTML instead, check the `fastboot` service's `isFastBoot`. A label that first renders in the browser gets the browser's platform from `useFormatForDisplay` at once:
 
 ```gts
 import Component from '@glimmer/component'
 import { service } from '@ember/service'
-import { formatForDisplay } from '@tanstack/ember-hotkeys'
+import { useFormatForDisplay } from '@tanstack/ember-hotkeys'
 
 interface FastBootService {
   isFastBoot: boolean
@@ -90,11 +90,13 @@ interface FastBootService {
 export default class SaveShortcut extends Component {
   @service declare fastboot: FastBootService
 
+  formatForDisplay = useFormatForDisplay()
+
   <template>
     {{#if this.fastboot.isFastBoot}}
       <kbd>&nbsp;</kbd>
     {{else}}
-      <kbd>{{formatForDisplay 'Mod+S'}}</kbd>
+      <kbd>{{this.formatForDisplay 'Mod+S'}}</kbd>
     {{/if}}
   </template>
 }
@@ -104,7 +106,7 @@ export default class SaveShortcut extends Component {
 
 ### Static and prerendered pages
 
-Prember renders pages with FastBoot at build time. A page rendered at build time has no request and no user, so neither `formatForDisplay` nor `useFormatForDisplay` can know the platform. The scope recipe above gets `'linux'` there, because the build sends no `User-Agent` header. Render platform-specific labels only in the browser, as above. `useFormatForDisplay` without a scope `platform` also works: it shows `'linux'` labels until the app boots, then switches.
+Prember renders pages with FastBoot at build time. A page rendered at build time has no request and no user, so `useFormatForDisplay` can't know the platform. The scope recipe above gets `'linux'` there, because the build sends no `User-Agent` header. Without a scope `platform`, `useFormatForDisplay` shows `'linux'` labels until the app boots, then switches. To show nothing until then, render the labels only in the browser, as above.
 
 ### Development warning
 

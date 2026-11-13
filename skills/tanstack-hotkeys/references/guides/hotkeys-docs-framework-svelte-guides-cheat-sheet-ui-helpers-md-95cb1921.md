@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ TanStack Hotkeys gives you two lists to build from:
 - `getHotkeyRegistrations` returns the hotkeys registered right now, in its `hotkeys` property. It works with plain `createHotkey` and `createHotkeys`, but it only knows about mounted components.
 - `getAppHotkeyList` returns every [app hotkey](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md) you declared, in its `current` property, including hotkeys on pages that haven't rendered, with the status of each.
 
-Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md).
+Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `getFormatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md).
 
 ## Name your hotkeys
 
@@ -58,10 +58,11 @@ declare module '@tanstack/hotkeys' {
 ```svelte
 <script lang="ts">
   import {
-    formatForDisplay,
+    getFormatForDisplay,
     getHotkeyRegistrations,
   } from '@tanstack/svelte-hotkeys'
 
+  const formatForDisplay = getFormatForDisplay()
   const registrations = getHotkeyRegistrations()
   const named = $derived(
     registrations.hotkeys.filter(
@@ -96,8 +97,9 @@ Registrations exist only while their components are mounted, so this list can't 
 
 ```svelte
 <script lang="ts">
-  import { formatForDisplay, getAppHotkeyList } from '@tanstack/svelte-hotkeys'
+  import { getAppHotkeyList, getFormatForDisplay } from '@tanstack/svelte-hotkeys'
 
+  const formatForDisplay = getFormatForDisplay()
   const items = getAppHotkeyList()
 </script>
 
@@ -158,7 +160,7 @@ Group rows by `meta.group`:
 {/each}
 ```
 
-To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md).
+To show keycaps, pass `parts: true` to the function from `getFormatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md).
 
 ## Open the cheat sheet with a hotkey
 
@@ -212,4 +214,4 @@ Register a hotkey that opens the cheat sheet, and give the cheat sheet an exclus
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/svelte/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/svelte/kitchen-sink) has a shortcut list built from live registrations.

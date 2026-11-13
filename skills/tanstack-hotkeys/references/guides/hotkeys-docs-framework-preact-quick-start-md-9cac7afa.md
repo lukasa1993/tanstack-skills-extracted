@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -78,11 +78,11 @@ const saveHotkey: HotkeyChord = 'Mod+S'
 
 function SaveButton() {
   useHotkey(saveHotkey, () => save())
-  const format = useFormatForDisplay()
+  const formatForDisplay = useFormatForDisplay()
 
   return (
     <button onClick={save}>
-      Save <kbd>{format(saveHotkey)}</kbd>
+      Save <kbd>{formatForDisplay(saveHotkey)}</kbd>
     </button>
   )
 }

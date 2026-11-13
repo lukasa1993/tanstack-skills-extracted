@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -78,12 +78,12 @@ import type { HotkeyChord } from '@tanstack/vue-hotkeys'
 const saveHotkey: HotkeyChord = 'Mod+S'
 
 useHotkey(saveHotkey, () => save())
-const format = useFormatForDisplay()
+const formatForDisplay = useFormatForDisplay()
 </script>
 
 <template>
   <button @click="save">
-    Save <kbd>{{ format(saveHotkey) }}</kbd>
+    Save <kbd>{{ formatForDisplay(saveHotkey) }}</kbd>
   </button>
 </template>
 ```

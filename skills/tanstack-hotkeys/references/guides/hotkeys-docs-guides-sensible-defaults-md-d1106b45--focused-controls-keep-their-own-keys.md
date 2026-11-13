@@ -1,6 +1,6 @@
 # Sensible Defaults — Focused controls keep their own keys
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Focused controls keep their own keys
 

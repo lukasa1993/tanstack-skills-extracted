@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Build a shortcut settings screen
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Build a shortcut settings screen
 
@@ -11,7 +11,7 @@ For a few hotkeys in one component, signals are enough:
 ```ts
 import { Component, signal } from '@angular/core'
 import {
-  formatForDisplay,
+  injectFormatForDisplay,
   injectHotkeyRecorder,
   injectHotkeys,
 } from '@tanstack/angular-hotkeys'
@@ -25,13 +25,13 @@ type Action = 'save' | 'undo' | 'search'
     @for (entry of entries(); track entry[0]) {
       <button (click)="edit(entry[0])">
         {{ entry[0] }}:
-        {{ editing() === entry[0] && recorder.isRecording() ? 'Press keys...' : format(entry[1]) }}
+        {{ editing() === entry[0] && recorder.isRecording() ? 'Press keys...' : formatForDisplay(entry[1]) }}
       </button>
     }
   `,
 })
 export class ShortcutSettingsComponent {
-  readonly format = formatForDisplay
+  readonly formatForDisplay = injectFormatForDisplay()
   readonly shortcuts = signal<Record<Action, Hotkey>>({
     save: 'Mod+S',
     undo: 'Mod+Z',

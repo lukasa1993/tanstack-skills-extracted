@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML and `⌘ S` once Octane hydrates, with a hydration mismatch. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `useFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
+2. Format labels with `useFormatForDisplay()`. It reads the provider, so it uses the platform from step 1.
 
 ```tsx
 import { HotkeysProvider, detectPlatform } from '@tanstack/octane-hotkeys'
@@ -22,19 +22,19 @@ import { useFormatForDisplay } from '@tanstack/octane-hotkeys'
 
 function Toolbar() @{
   // Call it at the top level of the component, like any hook
-  const format = useFormatForDisplay()
+  const formatForDisplay = useFormatForDisplay()
 
   <ul>
     @for (const command of commands; key command.id) {
       <li>
-        {command.name} <kbd>{format(command.hotkey)}</kbd>
+        {command.name} <kbd>{formatForDisplay(command.hotkey)}</kbd>
       </li>
     }
   </ul>
 }
 ```
 
-`useFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call the hook once at the top level of the component, then call the function anywhere, including in loops and conditions. A `platform` passed to the function wins over the provider's.
+Call the hook once at the top level of the component, then call the function anywhere, including in loops and conditions. A `platform` passed to the function wins over the provider's.
 
 In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
@@ -97,7 +97,7 @@ export function Shortcuts({ platform }: { platform: HotkeyPlatform }) @{
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/octane/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/octane/useFormatForDisplay-astro) shows this setup.
 
 ### Your own server
 
@@ -138,23 +138,30 @@ hydrateRoot(document.getElementById('app')!, App, { platform: detectPlatform() }
 
 Put `css` in the page's `<head>` and `html` in the element you hydrate. `render` takes a Fetch API `Request`. In Express, pass `req.headers['user-agent']` to `detectPlatform` instead. Octane's [server-side rendering guide](https://github.com/octanejs/octane/blob/main/docs/ssr.md) covers compiling the server build and streaming.
 
-The [server rendering example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/octane/useFormatForDisplay-server) shows this setup.
+The [server rendering example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/octane/useFormatForDisplay-server) shows this setup.
 
 ### Render a label only in the browser
 
-To skip server rendering for a label instead, render it after hydration. In the browser, plain `formatForDisplay` detects the platform:
+To skip server rendering for a label instead, render it after hydration. A component that first renders in the browser gets the browser's platform from `useFormatForDisplay` at once:
 
 ```tsx
 import { useSyncExternalStore } from 'octane'
-import { formatForDisplay } from '@tanstack/octane-hotkeys'
+import { useFormatForDisplay } from '@tanstack/octane-hotkeys'
+import type { Hotkey } from '@tanstack/octane-hotkeys'
 
 const subscribe = () => () => {}
+
+// Formats when it renders, which happens only in the browser
+function ShortcutLabel({ hotkey }: { hotkey: Hotkey }) @{
+  const formatForDisplay = useFormatForDisplay()
+  <kbd>{formatForDisplay(hotkey)}</kbd>
+}
 
 function SaveShortcut() @{
   const hydrated = useSyncExternalStore(subscribe, () => true, () => false)
 
   @if (hydrated) {
-    <kbd>{formatForDisplay('Mod+S')}</kbd>
+    <ShortcutLabel hotkey="Mod+S" />
   } @else {
     <kbd>{' '}</kbd>
   }
@@ -165,7 +172,7 @@ Framework wrappers do the same: `<ClientOnly>` from `@octanejs/tanstack-router`,
 
 ### Static and prerendered pages
 
-A page rendered at build time has no request and no user, so neither `formatForDisplay` nor `useFormatForDisplay` can know the platform. This includes prerendered routes in TanStack Start, Astro's default static output, and pages rendered with `prerender` from `octane/static`. Render platform-specific labels in a client-only wrapper, as above. `useFormatForDisplay` without a provider `platform` also works there: it shows `'linux'` labels until hydration, then switches.
+A page rendered at build time has no request and no user, so `useFormatForDisplay` can't know the platform. This includes prerendered routes in TanStack Start, Astro's default static output, and pages rendered with `prerender` from `octane/static`. Without a provider `platform`, `useFormatForDisplay` shows `'linux'` labels until hydration, then switches. To show nothing until then, render the labels in a client-only wrapper, as above.
 
 ### Development warning
 

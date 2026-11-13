@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ TanStack Hotkeys gives you two lists to build from:
 - `createHotkeyRegistrations` returns the hotkeys registered right now. It works with plain `createHotkey` and `createHotkeys`, but it only knows about mounted components.
 - `createAppHotkeyList` returns every [app hotkey](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md#source-hotkeys-docs-framework-solid-guides-app-hotkeys-md) you declared, including hotkeys on pages that haven't rendered, with the status of each.
 
-Both return accessors. Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
+Both return accessors. Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `createFormatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
 
 ## Name your hotkeys
 
@@ -58,11 +58,12 @@ declare module '@tanstack/hotkeys' {
 ```tsx
 import { For } from 'solid-js'
 import {
+  createFormatForDisplay,
   createHotkeyRegistrations,
-  formatForDisplay,
 } from '@tanstack/solid-hotkeys'
 
 function ShortcutList() {
+  const formatForDisplay = createFormatForDisplay()
   const registrations = createHotkeyRegistrations()
   const named = () =>
     registrations().filter(
@@ -102,9 +103,10 @@ Registrations exist only while their components are mounted, so this list can't 
 
 ```tsx
 import { For } from 'solid-js'
-import { createAppHotkeyList, formatForDisplay } from '@tanstack/solid-hotkeys'
+import { createAppHotkeyList, createFormatForDisplay } from '@tanstack/solid-hotkeys'
 
 function CheatSheet() {
+  const formatForDisplay = createFormatForDisplay()
   const items = createAppHotkeyList()
 
   return (
@@ -174,7 +176,7 @@ function CheatSheet() {
 }
 ```
 
-To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
+To show keycaps, pass `parts: true` to the function from `createFormatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md#source-hotkeys-docs-framework-solid-guides-formatting-display-md).
 
 ## Open the cheat sheet with a hotkey
 
@@ -233,4 +235,4 @@ function CheatSheetDialog(props: { onClose: () => void }) {
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/solid/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/solid/kitchen-sink) has a shortcut list built from live registrations.

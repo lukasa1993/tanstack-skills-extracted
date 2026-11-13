@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -135,23 +135,24 @@ The [hotkey recorder](./hotkeys-docs-framework-ember-guides-custom-hotkey-record
 import Component from '@glimmer/component'
 import { on } from '@ember/modifier'
 import {
-  formatForDisplay,
   useAppHotkeys,
   useCustomHotkeys,
+  useFormatForDisplay,
   useHotkeyRecorder,
 } from '@tanstack/ember-hotkeys'
 import type { AppHotkeyId } from '@tanstack/ember-hotkeys'
 
 export default class ShortcutRow extends Component<{ Args: { id: AppHotkeyId } }> {
+  formatForDisplay = useFormatForDisplay()
   appHotkeys = useAppHotkeys(this)
   custom = useCustomHotkeys(this)
   recorder = useHotkeyRecorder(this, () => ({
     maxSteps: Infinity,
-    validate: (hotkey) => {
-      const conflicts = this.custom.findConflicts(this.args.id, hotkey)
+    validate: (hotkey, context) => {
+      const conflicts = this.custom.findConflicts(this.args.id, hotkey, context)
       return conflicts.length === 0 || `Used by ${conflicts[0]?.meta?.name}`
     },
-    onRecord: (hotkey) => this.custom.setCustomHotkey(this.args.id, hotkey),
+    onRecord: (hotkey, context) => this.custom.setCustomHotkey(this.args.id, hotkey, context),
     onClear: () => this.custom.setCustomHotkey(this.args.id, null),
   }))
 
@@ -160,7 +161,7 @@ export default class ShortcutRow extends Component<{ Args: { id: AppHotkeyId } }
   }
   get label() {
     const { hotkey } = this.appHotkey
-    return hotkey ? formatForDisplay(hotkey) : 'Unassigned'
+    return hotkey ? this.formatForDisplay(hotkey) : 'Unassigned'
   }
   reset = () => this.custom.resetCustomHotkey(this.args.id)
 
@@ -172,11 +173,13 @@ export default class ShortcutRow extends Component<{ Args: { id: AppHotkeyId } }
 }
 ```
 
+Pass the recorder's `context` to `findConflicts` and `setCustomHotkey`. It holds the key press that made the recording, so the check also finds an app hotkey that is written differently but fires for the same press. On a US keyboard, a recorded `Shift+[Slash]` and a declared `?` are one key press, and only the key press shows that.
+
 | Member | Description |
 | --- | --- |
 | `value` | The hotkeys that differ from the defaults |
-| `setCustomHotkey(id, hotkey)` | Sets a hotkey, or unbinds with `null`. Returns conflicting app hotkeys; when there are any, nothing changes. |
-| `findConflicts(id, hotkey)` | App hotkeys that would collide if `id` used `hotkey` |
+| `setCustomHotkey(id, hotkey, context?)` | Sets a hotkey, or unbinds with `null`. Returns conflicting app hotkeys; when there are any, nothing changes. Takes the recorder's `context`, as `findConflicts` does. |
+| `findConflicts(id, hotkey, context?)` | App hotkeys that would collide if `id` used `hotkey`. With the recorder's `context`, also checks with the key press that recorded it. |
 | `resetCustomHotkey(id)` | Restores one default |
 | `resetCustomHotkeys()` | Restores every default |
 
@@ -184,4 +187,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `useAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/1f0a2c627c4a18f005762600966a81e9b8daef3a/docs/reference/classes/AppHotkeysStore.md) to use it directly.

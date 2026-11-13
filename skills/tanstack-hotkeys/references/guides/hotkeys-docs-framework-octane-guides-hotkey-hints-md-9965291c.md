@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 
 ```tsx
 import {
-  formatForDisplay,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/octane-hotkeys'
@@ -20,6 +20,7 @@ import {
 const saveHotkey = 'Mod+S'
 
 function SaveButton() @{
+  const formatForDisplay = useFormatForDisplay()
   useHotkey(saveHotkey, save)
   const showHint = useHotkeyHint(saveHotkey)
 
@@ -67,14 +68,15 @@ Pass an [app hotkey](./hotkeys-docs-framework-octane-guides-app-hotkeys-md-ade4f
 
 ```tsx
 import {
-  formatForDisplay,
   useAppHotkeys,
+  useFormatForDisplay,
   useHotkey,
   useHotkeyHint,
 } from '@tanstack/octane-hotkeys'
 import type { AppHotkeyId } from '@tanstack/octane-hotkeys'
 
 function Hint({ id }: { id: AppHotkeyId }) @{
+  const formatForDisplay = useFormatForDisplay()
   const appHotkey = useAppHotkeys()[id]
   const showHint = useHotkeyHint(appHotkey)
 
@@ -114,4 +116,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-octane-guides-held-key-state-helpers-md-8f82c6a9.md#source-hotkeys-docs-framework-octane-guides-held-key-state-helpers-md) covers the tracker and the other held-key hooks.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/octane/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/octane/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -33,6 +33,7 @@ function Root() @{
 
 - `hotkey` defaults apply to every `useHotkey` and `useHotkeys` inside the provider. `requireReset` applies to chords, and `timeout` to sequences. Options passed to a hook override the defaults. See [Hotkey options](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#source-hotkeys-docs-framework-octane-guides-hotkeys-md).
 - `hotkeyRecorder` defaults apply to every `useHotkeyRecorder` inside the provider. See [Custom Hotkey Recording](./hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md#source-hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md).
+- `keyboardLayout: false` stops labels from asking the browser for the user's keyboard layout. See [Label physical keys for the user's keyboard](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md#source-hotkeys-docs-framework-octane-guides-formatting-display-md).
 
 A nested provider merges its defaults over its parent's, so a provider deeper in the tree can change the defaults for one part of your app.
 
@@ -259,4 +260,4 @@ The hotkeys [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-doc
 
 Your app doesn't need to track scopes itself. If you want to show scope state anyway, read it from the hotkey manager. See [Read scope state](./hotkeys-docs-framework-octane-guides-hotkey-manager-md-1ee89e7f.md#source-hotkeys-docs-framework-octane-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/octane/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/octane/scopes) for nested, enabled, and exclusive scopes together.

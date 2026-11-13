@@ -1,13 +1,13 @@
 # Custom Hotkey Recording — Keys the recorder handles
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Keys the recorder handles
 
 | Key | What it does |
 | --- | --- |
 | A modifier alone, such as Shift | Waits for a key to go with it |
-| A key, with or without modifiers | Records a chord, such as `Mod+[KeyS]` or `[F1]` |
+| A key, with or without modifiers | Records a chord, such as `Mod+S` or `F1` |
 | Enter | Commits a sequence recording. With `maxSteps: 1` or `commitKeys: 'none'`, records Enter like any other key. |
 | Escape | Cancels the recording and calls `onCancel` |
 | Tab or Shift+Tab, without Control, Alt, or Meta | Cancels the recording and calls `onCancel`, and the browser moves focus as usual. In a text field, moves focus without cancelling. With `recordTab: true`, records Tab like any other key. |

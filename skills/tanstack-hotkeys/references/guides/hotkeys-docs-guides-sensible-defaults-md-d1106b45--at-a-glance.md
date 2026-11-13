@@ -1,6 +1,6 @@
 # Sensible Defaults — At a glance
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## At a glance
 
@@ -18,5 +18,5 @@
 | Keys another listener prevented | Hotkeys still fire | `ignoreDefaultPrevented` |
 | Time between sequence steps | 1 second | `timeout` |
 | Duplicate registrations | Allowed, with a console warning in development | `conflictBehavior` |
-| Recording | Records key positions; Escape, Tab, and Shift+Tab cancel | `recordBy`, `recordTab`, recorder options |
-| Display | Symbols on macOS (`⇧ ⌘ S`), text elsewhere (`Ctrl+Shift+S`) | `formatForDisplay` options |
+| Recording | Records a key by name, or by position where it has no portable name; Escape, Tab, and Shift+Tab cancel | `recordBy`, `recordTab`, recorder options |
+| Display | Symbols on macOS (`⇧ ⌘ S`), text elsewhere (`Ctrl+Shift+S`) | Options of your framework's label primitive, such as `useFormatForDisplay` |

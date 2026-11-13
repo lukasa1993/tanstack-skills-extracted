@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-overview-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

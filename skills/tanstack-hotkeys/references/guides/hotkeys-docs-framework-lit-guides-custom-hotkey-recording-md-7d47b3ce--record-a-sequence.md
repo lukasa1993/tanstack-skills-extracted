@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Record a sequence
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Record a sequence
 
@@ -9,9 +9,10 @@ Set `maxSteps: Infinity` to let users record a sequence. Each chord adds a step,
 ```ts
 @customElement('sequence-recorder')
 class SequenceRecorder extends LitElement {
+  private formatForDisplay = new FormatForDisplayController(this)
   private recorder = new HotkeyRecorderController(this, {
     maxSteps: Infinity,
-    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+[KeyS]' or ['[KeyG]', '[KeyG]']
+    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+S' or ['G', 'G']
   })
 
   render() {
@@ -19,9 +20,9 @@ class SequenceRecorder extends LitElement {
     return html`
       <button @click=${() => this.recorder.startRecording()}>
         ${isRecording
-          ? formatForDisplay(steps) || 'Press chords, then Enter...'
+          ? this.formatForDisplay.format(steps) || 'Press chords, then Enter...'
           : recordedHotkey
-            ? formatForDisplay(recordedHotkey)
+            ? this.formatForDisplay.format(recordedHotkey)
             : 'Click to record'}
       </button>
     `

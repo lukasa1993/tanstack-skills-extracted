@@ -49,26 +49,27 @@ A settings row records with `useHotkeyRecorder` and saves through `useCustomHotk
 ```vue
 <script setup lang="ts">
 import {
-  formatForDisplay,
   useAppHotkeys,
   useCustomHotkeys,
+  useFormatForDisplay,
   useHotkeyRecorder,
 } from '@tanstack/vue-hotkeys'
 import { computed } from 'vue'
 import type { AppHotkeyId } from '@tanstack/vue-hotkeys'
 
 const props = defineProps<{ id: AppHotkeyId }>()
+const formatForDisplay = useFormatForDisplay()
 const appHotkeys = useAppHotkeys()
 const appHotkey = computed(() => appHotkeys.value[props.id])
 const { findConflicts, setCustomHotkey, resetCustomHotkey } = useCustomHotkeys()
 
 const { startRecording } = useHotkeyRecorder({
   maxSteps: Infinity,
-  validate: (hotkey) => {
-    const [conflict] = findConflicts(props.id, hotkey)
+  validate: (hotkey, context) => {
+    const [conflict] = findConflicts(props.id, hotkey, context)
     return conflict ? `Used by ${conflict.meta?.name ?? conflict.id}` : true
   },
-  onRecord: (hotkey) => setCustomHotkey(props.id, hotkey),
+  onRecord: (hotkey, context) => setCustomHotkey(props.id, hotkey, context),
   onClear: () => setCustomHotkey(props.id, null),
 })
 </script>

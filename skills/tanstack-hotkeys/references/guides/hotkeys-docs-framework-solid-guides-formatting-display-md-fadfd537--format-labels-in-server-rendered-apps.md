@@ -1,13 +1,13 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Format labels in server-rendered apps
 
 The server doesn't know the user's platform. Without one, a label rendered on the server uses `'linux'`, so a Mac user gets `Ctrl+S` in the server's HTML. Solid keeps the server's text when it hydrates, so the label stays `Ctrl+S`, and Solid doesn't warn about it. To render the right label from the start:
 
 1. Read the request's `User-Agent` header on the server, and pass `detectPlatform(userAgent)` as the provider's `platform`.
-2. Format labels with `createFormatForDisplay()` instead of `formatForDisplay`. `formatForDisplay` doesn't read the provider, so it ignores the platform from step 1.
+2. Format labels with `createFormatForDisplay()`. It reads the provider, so it uses the platform from step 1.
 
 ```tsx
 import { HotkeysProvider, detectPlatform } from '@tanstack/solid-hotkeys'
@@ -23,14 +23,14 @@ import { createFormatForDisplay } from '@tanstack/solid-hotkeys'
 
 function Toolbar() {
   // Call it in the component, like other primitives
-  const format = createFormatForDisplay()
+  const formatForDisplay = createFormatForDisplay()
 
   return (
     <ul>
       <For each={commands}>
         {(command) => (
           <li>
-            {command.name} <kbd>{format(command.hotkey)}</kbd>
+            {command.name} <kbd>{formatForDisplay(command.hotkey)}</kbd>
           </li>
         )}
       </For>
@@ -39,7 +39,7 @@ function Toolbar() {
 }
 ```
 
-`createFormatForDisplay` returns a function with the same options as `formatForDisplay`. Call `createFormatForDisplay` once in the component, then call the function anywhere in its JSX. The function reads the provider's `platform` each time it runs, so a label in JSX updates when the platform changes. A `platform` passed to the function wins over the provider's.
+Call `createFormatForDisplay` once in the component, then call the function anywhere in its JSX. The function reads the provider's `platform` each time it runs, so a label in JSX updates when the platform changes. A `platform` passed to the function wins over the provider's.
 
 In the browser, `detectPlatform()` reads the browser's own `navigator`, so the server and the browser get the same platform for practically every user. The provider's `platform` is also the default platform for hotkeys and recorders inside it. The provider that holds `appHotkeys` also compares app hotkeys on its platform, such as for conflicts. An inner provider inherits it.
 
@@ -75,7 +75,7 @@ export default function App() {
 }
 ```
 
-The [SolidStart example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/solid/createFormatForDisplay-solid-start) shows this setup.
+The [SolidStart example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/solid/createFormatForDisplay-solid-start) shows this setup.
 
 ### TanStack Start
 
@@ -101,7 +101,7 @@ function RootComponent() {
 }
 ```
 
-The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
+The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
 
 ### Astro
 
@@ -134,16 +134,17 @@ export default function Shortcuts(props: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/solid/createFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/solid/createFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 
-To skip server rendering for a label instead, render it after hydration. In the browser, plain `formatForDisplay` detects the platform:
+To skip server rendering for a label instead, render it after hydration. A component that first renders in the browser gets the browser's platform from `createFormatForDisplay` at once:
 
 ```tsx
 import { Show, createSignal, onMount } from 'solid-js'
-import { formatForDisplay } from '@tanstack/solid-hotkeys'
+import { createFormatForDisplay } from '@tanstack/solid-hotkeys'
 import type { JSX } from 'solid-js'
+import type { Hotkey } from '@tanstack/solid-hotkeys'
 
 function ClientOnly(props: { children: JSX.Element; fallback?: JSX.Element }) {
   const [mounted, setMounted] = createSignal(false)
@@ -155,8 +156,14 @@ function ClientOnly(props: { children: JSX.Element; fallback?: JSX.Element }) {
   )
 }
 
+// Formats when it renders, which happens only in the browser
+function ShortcutLabel(props: { hotkey: Hotkey }) {
+  const formatForDisplay = createFormatForDisplay()
+  return <kbd>{formatForDisplay(props.hotkey)}</kbd>
+}
+
 <ClientOnly fallback={<kbd>&nbsp;</kbd>}>
-  <kbd>{formatForDisplay('Mod+S')}</kbd>
+  <ShortcutLabel hotkey="Mod+S" />
 </ClientOnly>
 ```
 
@@ -166,7 +173,7 @@ Don't use `<NoHydration>` or an `isServer` check for labels. `<NoHydration>` kee
 
 ### Static and prerendered pages
 
-A page rendered at build time has no request and no user, so neither `formatForDisplay` nor `createFormatForDisplay` can know the platform. This includes prerendered routes in SolidStart and TanStack Start, and Astro's default static output. Render platform-specific labels in a client-only wrapper, as above. Don't use `createFormatForDisplay` without a provider `platform` there: Solid keeps the `'linux'` labels from the build.
+A page rendered at build time has no request and no user, so `createFormatForDisplay` can't know the platform. This includes prerendered routes in SolidStart and TanStack Start, and Astro's default static output. Render platform-specific labels in a client-only wrapper, as above. Without a wrapper, Solid keeps the `'linux'` labels from the build.
 
 ### Development warning
 

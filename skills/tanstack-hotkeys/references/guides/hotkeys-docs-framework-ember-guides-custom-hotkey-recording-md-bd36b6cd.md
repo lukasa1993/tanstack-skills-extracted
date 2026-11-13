@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -14,7 +14,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Record a chord](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--record-a-chord.md) — 3 KiB
 - [Record a sequence](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--record-a-sequence.md) — 2 KiB
 - [Keys the recorder handles](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--keys-the-recorder-handles.md) — 2 KiB
-- [Validate and check conflicts](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--validate-and-check-conflicts.md) — 4 KiB
+- [Validate and check conflicts](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--validate-and-check-conflicts.md) — 5 KiB
 - [Build a shortcut settings screen](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--build-a-shortcut-settings-screen.md) — 3 KiB
 - [Recorder options](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--recorder-options.md) — 3 KiB
 

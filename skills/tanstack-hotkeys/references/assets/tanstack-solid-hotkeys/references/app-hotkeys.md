@@ -47,25 +47,26 @@ A settings row records with `createHotkeyRecorder` and saves through `useCustomH
 
 ```tsx
 import {
+  createFormatForDisplay,
   createHotkeyRecorder,
-  formatForDisplay,
   useAppHotkeys,
   useCustomHotkeys,
 } from '@tanstack/solid-hotkeys'
 import type { AppHotkeyId } from '@tanstack/solid-hotkeys'
 
 export function ShortcutRow(props: { id: AppHotkeyId }) {
+  const formatForDisplay = createFormatForDisplay()
   const appHotkeys = useAppHotkeys()
   const appHotkey = () => appHotkeys()[props.id]
   const { findConflicts, setCustomHotkey, resetCustomHotkey } =
     useCustomHotkeys()
   const recorder = createHotkeyRecorder({
     maxSteps: Infinity,
-    validate: (hotkey) => {
-      const [conflict] = findConflicts(props.id, hotkey)
+    validate: (hotkey, context) => {
+      const [conflict] = findConflicts(props.id, hotkey, context)
       return conflict ? `Used by ${conflict.meta?.name ?? conflict.id}` : true
     },
-    onRecord: (hotkey) => setCustomHotkey(props.id, hotkey),
+    onRecord: (hotkey, context) => setCustomHotkey(props.id, hotkey, context),
     onClear: () => setCustomHotkey(props.id, null),
   })
 

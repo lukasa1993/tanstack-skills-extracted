@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ TanStack Hotkeys gives you two lists to build from:
 - `injectHotkeyRegistrations` returns the hotkeys registered right now. It works with plain `injectHotkey` and `injectHotkeys`, but it only knows about components that exist.
 - `injectAppHotkeyList` returns every [app hotkey](./hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md#source-hotkeys-docs-framework-angular-guides-app-hotkeys-md) you declared, including hotkeys on pages that haven't rendered, with the status of each.
 
-Both return signals. Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md).
+Both return signals. Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `injectFormatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md).
 
 ## Name your hotkeys
 
@@ -58,7 +58,7 @@ declare module '@tanstack/hotkeys' {
 ```ts
 import { Component, computed } from '@angular/core'
 import {
-  formatForDisplay,
+  injectFormatForDisplay,
   injectHotkeyRegistrations,
 } from '@tanstack/angular-hotkeys'
 
@@ -69,14 +69,14 @@ import {
       @for (reg of named(); track reg.id) {
         <div>
           <dt>{{ reg.options.meta?.name }}</dt>
-          <dd><kbd>{{ format(reg.hotkey) }}</kbd></dd>
+          <dd><kbd>{{ formatForDisplay(reg.hotkey) }}</kbd></dd>
         </div>
       }
     </dl>
   `,
 })
 export class ShortcutListComponent {
-  readonly format = formatForDisplay
+  readonly formatForDisplay = injectFormatForDisplay()
   private readonly registrations = injectHotkeyRegistrations()
   readonly named = computed(() =>
     this.registrations().filter(
@@ -102,7 +102,7 @@ Registrations exist only while their components exist, so this list can't show s
 
 ```ts
 import { Component } from '@angular/core'
-import { formatForDisplay, injectAppHotkeyList } from '@tanstack/angular-hotkeys'
+import { injectAppHotkeyList, injectFormatForDisplay } from '@tanstack/angular-hotkeys'
 
 @Component({
   selector: 'app-cheat-sheet',
@@ -111,7 +111,7 @@ import { formatForDisplay, injectAppHotkeyList } from '@tanstack/angular-hotkeys
       @for (item of items(); track item.appHotkey.id) {
         <li [attr.data-status]="item.status">
           {{ item.appHotkey.meta?.name }}:
-          {{ item.appHotkey.hotkey ? format(item.appHotkey.hotkey) : 'Unassigned' }}
+          {{ item.appHotkey.hotkey ? formatForDisplay(item.appHotkey.hotkey) : 'Unassigned' }}
           @if (item.isCustom) { (custom) }
         </li>
       }
@@ -120,7 +120,7 @@ import { formatForDisplay, injectAppHotkeyList } from '@tanstack/angular-hotkeys
 })
 export class CheatSheetComponent {
   readonly items = injectAppHotkeyList()
-  readonly format = formatForDisplay
+  readonly formatForDisplay = injectFormatForDisplay()
 }
 ```
 
@@ -176,7 +176,7 @@ export class CheatSheetComponent {
 }
 ```
 
-To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md).
+To show keycaps, pass `parts: true` to the function from `injectFormatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md).
 
 ## Open the cheat sheet with a hotkey
 
@@ -243,4 +243,4 @@ export class AppComponent {
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/angular/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/angular/kitchen-sink) has a shortcut list built from live registrations.

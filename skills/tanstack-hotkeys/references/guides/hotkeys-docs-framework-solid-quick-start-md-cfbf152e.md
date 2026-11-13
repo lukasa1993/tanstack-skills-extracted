@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -78,11 +78,11 @@ const saveHotkey: HotkeyChord = 'Mod+S'
 
 function SaveButton() {
   createHotkey(saveHotkey, () => save())
-  const format = createFormatForDisplay()
+  const formatForDisplay = createFormatForDisplay()
 
   return (
     <button onClick={save}>
-      Save <kbd>{format(saveHotkey)}</kbd>
+      Save <kbd>{formatForDisplay(saveHotkey)}</kbd>
     </button>
   )
 }

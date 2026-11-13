@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--overview.md) — 1 KiB
 - [At a glance](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--at-a-glance.md) — 2 KiB
 - [`Mod` follows the platform](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--mod-follows-the-platform.md) — 1 KiB
-- [Keys match the character the user types](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--keys-match-the-character-the-user-types.md) — 5 KiB
+- [Keys match the character the user types](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--keys-match-the-character-the-user-types.md) — 7 KiB
 - [Modifiers must match exactly](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--modifiers-must-match-exactly.md) — 3 KiB
 - [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--typing-in-inputs-does-not-trigger-shortcuts.md) — 3 KiB
 - [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--focused-controls-keep-their-own-keys.md) — 3 KiB
@@ -25,8 +25,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-run-after-the-page-s-own-handlers.md) — 2 KiB
 - [Component libraries that handle the same keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--component-libraries-that-handle-the-same-keys.md) — 11 KiB
 - [Sequences allow 1 second between steps](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--sequences-allow-1-second-between-steps.md) — 2 KiB
-- [Duplicate registrations warn](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--duplicate-registrations-warn.md) — 1 KiB
-- [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md) — 2 KiB
+- [Duplicate registrations warn](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--duplicate-registrations-warn.md) — 2 KiB
+- [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md) — 4 KiB
 - [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--held-keys-reset-when-the-window-loses-focus.md) — 2 KiB
 - [Display matches the platform](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--display-matches-the-platform.md) — 1 KiB
 - [Changing the defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--changing-the-defaults.md) — 3 KiB

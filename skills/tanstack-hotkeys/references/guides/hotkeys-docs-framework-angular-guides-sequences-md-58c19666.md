@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -147,7 +147,7 @@ The [hotkey recorder](./hotkeys-docs-framework-angular-guides-custom-hotkey-reco
 
 ## Show sequences in your UI
 
-`formatForDisplay` formats each step and joins them with a space:
+The function from `injectFormatForDisplay` formats each step and joins them with a space:
 
 ```ts
 formatForDisplay(['Mod+K', 'Mod+C'], { platform: 'mac' }) // '⌘ K ⌘ C'
@@ -161,7 +161,7 @@ A sequence's first steps have no visible effect, so show users what they've pres
 ```ts
 import { Component, computed } from '@angular/core'
 import {
-  formatForDisplay,
+  injectFormatForDisplay,
   injectHotkeyRegistrations,
 } from '@tanstack/angular-hotkeys'
 import type { HotkeySequenceRegistrationView } from '@tanstack/angular-hotkeys'
@@ -177,6 +177,7 @@ import type { HotkeySequenceRegistrationView } from '@tanstack/angular-hotkeys'
   `,
 })
 export class PendingKeysComponent {
+  private readonly formatForDisplay = injectFormatForDisplay()
   private readonly registrations = injectHotkeyRegistrations()
   readonly pressed = computed(() => {
     const longest = this.registrations()
@@ -186,7 +187,7 @@ export class PendingKeysComponent {
       )
       .sort((a, b) => b.matchedStepCount - a.matchedStepCount)[0]
     return longest
-      ? formatForDisplay(longest.hotkey.slice(0, longest.matchedStepCount))
+      ? this.formatForDisplay(longest.hotkey.slice(0, longest.matchedStepCount))
       : null
   })
 }

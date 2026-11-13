@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 ## Register a hotkey
 
@@ -63,6 +63,8 @@ useHotkey(
 ```
 
 A plain options object is read once, so `{ enabled: !props.readOnly }` keeps the value from when `setup` ran. A ref also works for a single option, such as `{ enabled: isEditing }`.
+
+Give a ref that holds a hotkey the `Hotkey` type: `const saveHotkey = ref<Hotkey>('Mod+S')`. Without it, the ref is a `Ref<string>`, and `useHotkey` accepts only valid hotkeys.
 
 That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md).
 

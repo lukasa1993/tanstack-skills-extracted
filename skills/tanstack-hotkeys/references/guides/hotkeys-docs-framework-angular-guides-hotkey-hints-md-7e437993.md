@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Some apps show each button's shortcut only while the user holds a modifier, so t
 ```ts
 import { Component } from '@angular/core'
 import {
-  formatForDisplay,
+  injectFormatForDisplay,
   injectHotkey,
   injectHotkeyHint,
 } from '@tanstack/angular-hotkeys'
@@ -26,13 +26,14 @@ const saveHotkey = 'Mod+S'
     <button (click)="save()">
       Save
       @if (showHint()) {
-        <kbd>{{ label }}</kbd>
+        <kbd>{{ formatForDisplay(saveHotkey) }}</kbd>
       }
     </button>
   `,
 })
 export class SaveButtonComponent {
-  readonly label = formatForDisplay(saveHotkey)
+  readonly saveHotkey = saveHotkey
+  readonly formatForDisplay = injectFormatForDisplay()
   readonly showHint = injectHotkeyHint(saveHotkey)
 
   constructor() {
@@ -81,8 +82,8 @@ Pass an [app hotkey](./hotkeys-docs-framework-angular-guides-app-hotkeys-md-8113
 ```ts
 import { Component, computed, input } from '@angular/core'
 import {
-  formatForDisplay,
   injectAppHotkeys,
+  injectFormatForDisplay,
   injectHotkeyHint,
 } from '@tanstack/angular-hotkeys'
 import type { AppHotkeyId } from '@tanstack/angular-hotkeys'
@@ -91,7 +92,7 @@ import type { AppHotkeyId } from '@tanstack/angular-hotkeys'
   selector: 'app-hint',
   template: `
     @if (showHint() && appHotkey().hotkey; as hotkey) {
-      <kbd>{{ format(hotkey) }}</kbd>
+      <kbd>{{ formatForDisplay(hotkey) }}</kbd>
     }
   `,
 })
@@ -100,7 +101,7 @@ export class HintComponent {
   readonly appHotkeys = injectAppHotkeys()
   readonly appHotkey = computed(() => this.appHotkeys()[this.id()])
   readonly showHint = injectHotkeyHint(() => this.appHotkey())
-  readonly format = formatForDisplay
+  readonly formatForDisplay = injectFormatForDisplay()
 }
 ```
 
@@ -145,4 +146,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md#source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md) covers the tracker and the other held-key functions.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/angular/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/angular/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

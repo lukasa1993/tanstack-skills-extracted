@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.27.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ TanStack Hotkeys gives you two lists to build from:
 - `HotkeyRegistrationsController` holds the hotkeys registered right now. It works with plain `@hotkey` and `HotkeyController`, but it only knows about connected elements.
 - `AppHotkeysController` lists every [app hotkey](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md) you declared, including hotkeys on pages that haven't rendered, with the status of each.
 
-Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `formatForDisplay`, covered in [Formatting & Display](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md).
+Start with registrations. Switch to app hotkeys when the cheat sheet should list shortcuts from the whole app, or when users can change them. Label each hotkey with `FormatForDisplayController`, covered in [Formatting & Display](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md).
 
 ## Name your hotkeys
 
@@ -50,13 +50,14 @@ declare module '@tanstack/hotkeys' {
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import {
+  FormatForDisplayController,
   HotkeyRegistrationsController,
-  formatForDisplay,
 } from '@tanstack/lit-hotkeys'
 
 @customElement('shortcut-list')
 class ShortcutList extends LitElement {
   private registrations = new HotkeyRegistrationsController(this)
+  private formatForDisplay = new FormatForDisplayController(this)
 
   render() {
     const named = this.registrations.hotkeys.filter(
@@ -68,7 +69,7 @@ class ShortcutList extends LitElement {
         (reg) => html`
           <div>
             <dt>${reg.options.meta?.name}</dt>
-            <dd><kbd>${formatForDisplay(reg.hotkey)}</kbd></dd>
+            <dd><kbd>${this.formatForDisplay.format(reg.hotkey)}</kbd></dd>
           </div>
         `,
       )}
@@ -94,11 +95,15 @@ Registrations exist only while their elements are connected, so this list can't 
 ```ts
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { AppHotkeysController, formatForDisplay } from '@tanstack/lit-hotkeys'
+import {
+  AppHotkeysController,
+  FormatForDisplayController,
+} from '@tanstack/lit-hotkeys'
 
 @customElement('cheat-sheet')
 class CheatSheet extends LitElement {
   private app = new AppHotkeysController(this)
+  private formatForDisplay = new FormatForDisplayController(this)
 
   render() {
     return html`<ul>
@@ -106,7 +111,7 @@ class CheatSheet extends LitElement {
         ({ appHotkey, status, isCustom }) => html`
           <li data-status=${status}>
             ${appHotkey.meta?.name}:
-            ${appHotkey.hotkey ? formatForDisplay(appHotkey.hotkey) : 'Unassigned'}
+            ${appHotkey.hotkey ? this.formatForDisplay.format(appHotkey.hotkey) : 'Unassigned'}
             ${isCustom ? '(custom)' : ''}
           </li>
         `,
@@ -158,7 +163,7 @@ render() {
 }
 ```
 
-To show keycaps, pass `parts: true` to `formatForDisplay` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md).
+To show keycaps, pass `parts: true` to the controller's `format` and render each part in its own `<kbd>`. See [Render individual keycaps](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md).
 
 ## Open the cheat sheet with a hotkey
 
@@ -237,4 +242,4 @@ class CheatSheetDialog extends LitElement {
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/b0efa6a0b8505e8bc98092ec9da06557ef49b0a4/examples/lit/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/lit/kitchen-sink) has a shortcut list built from live registrations.
