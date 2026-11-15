@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 

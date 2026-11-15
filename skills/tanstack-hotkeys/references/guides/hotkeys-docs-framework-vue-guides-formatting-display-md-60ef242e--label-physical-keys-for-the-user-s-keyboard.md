@@ -1,6 +1,6 @@
 # Formatting Display — Label physical keys for the user's keyboard
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
 
 ## Label physical keys for the user's keyboard
 

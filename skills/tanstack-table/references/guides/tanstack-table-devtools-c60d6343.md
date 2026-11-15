@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-table-devtools"></a>
 
-Published skill · `@tanstack/table-devtools@9.3.1`.
+Published skill · `@tanstack/table-devtools@9.3.2`.
 
 [Topic index](../integrations.md) · [Source provenance](../SOURCES.md)
 

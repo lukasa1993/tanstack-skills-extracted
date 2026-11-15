@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-angular-table-getting-started"></a>
 
-Published skill · `@tanstack/angular-table@9.3.1`.
+Published skill · `@tanstack/angular-table@9.3.2`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

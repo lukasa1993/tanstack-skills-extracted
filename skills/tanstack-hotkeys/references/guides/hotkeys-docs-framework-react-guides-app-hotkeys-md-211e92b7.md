@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -182,6 +182,6 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `useAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/1f0a2c627c4a18f005762600966a81e9b8daef3a/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/a82e0a38a1d38844690882ca45cab83b3cd0a01e/docs/reference/classes/AppHotkeysStore.md) to use it directly.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/1f0a2c627c4a18f005762600966a81e9b8daef3a/examples/react/kitchen-sink) declares app hotkeys, lists them in a cheat sheet, and lets users change them.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a82e0a38a1d38844690882ca45cab83b3cd0a01e/examples/react/kitchen-sink) declares app hotkeys, lists them in a cheat sheet, and lets users change them.

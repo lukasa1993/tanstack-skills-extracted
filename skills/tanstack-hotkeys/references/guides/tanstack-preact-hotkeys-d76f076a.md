@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-preact-hotkeys"></a>
 
-Published skill · `@tanstack/preact-hotkeys@0.23.0`.
+Published skill · `@tanstack/preact-hotkeys@0.23.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

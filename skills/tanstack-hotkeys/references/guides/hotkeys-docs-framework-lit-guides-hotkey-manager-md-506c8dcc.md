@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -187,4 +187,4 @@ it('saves with Mod+S', async () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/1f0a2c627c4a18f005762600966a81e9b8daef3a/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/a82e0a38a1d38844690882ca45cab83b3cd0a01e/docs/reference/classes/HotkeyManager.md) lists every method.

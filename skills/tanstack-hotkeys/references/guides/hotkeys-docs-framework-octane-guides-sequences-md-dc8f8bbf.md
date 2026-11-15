@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.29.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 

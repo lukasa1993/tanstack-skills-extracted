@@ -1,6 +1,6 @@
 # Angular Hotkeys — A dialog that owns the keyboard
 
-[Guide and prerequisites](./tanstack-angular-hotkeys-aae98366.md) · Published skill · `@tanstack/angular-hotkeys@0.24.0`.
+[Guide and prerequisites](./tanstack-angular-hotkeys-aae98366.md) · Published skill · `@tanstack/angular-hotkeys@0.24.1`.
 
 ## A dialog that owns the keyboard
 
