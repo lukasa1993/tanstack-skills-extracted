@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/hotkeys@0.30.0
+Published package: @tanstack/hotkeys@0.31.0
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

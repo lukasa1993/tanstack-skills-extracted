@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-hotkeys"></a>
 
-Published skill · `@tanstack/vue-hotkeys@0.24.1`.
+Published skill · `@tanstack/vue-hotkeys@0.25.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

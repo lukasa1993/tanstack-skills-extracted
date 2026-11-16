@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -23,7 +23,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Chords fire on keydown and repeat while held](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--chords-fire-on-keydown-and-repeat-while-held.md) — 2 KiB
 - [Listeners attach to the document](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--listeners-attach-to-the-document.md) — 1 KiB
 - [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-run-after-the-page-s-own-handlers.md) — 2 KiB
-- [Component libraries that handle the same keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--component-libraries-that-handle-the-same-keys.md) — 11 KiB
+- [Component libraries that handle the same keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--component-libraries-that-handle-the-same-keys.md) — 13 KiB
 - [Sequences allow 1 second between steps](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--sequences-allow-1-second-between-steps.md) — 2 KiB
 - [Duplicate registrations warn](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--duplicate-registrations-warn.md) — 2 KiB
 - [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md) — 4 KiB

@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/angular-hotkeys@0.24.1
+Published package: @tanstack/angular-hotkeys@0.25.0
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

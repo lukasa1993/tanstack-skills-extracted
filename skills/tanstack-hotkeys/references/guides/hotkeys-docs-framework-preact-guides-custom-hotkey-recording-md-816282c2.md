@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 

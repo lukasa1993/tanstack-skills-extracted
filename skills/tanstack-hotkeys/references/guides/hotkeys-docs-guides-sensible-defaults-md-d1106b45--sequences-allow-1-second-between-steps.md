@@ -1,6 +1,6 @@
 # Sensible Defaults — Sequences allow 1 second between steps
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
 
 ## Sequences allow 1 second between steps
 

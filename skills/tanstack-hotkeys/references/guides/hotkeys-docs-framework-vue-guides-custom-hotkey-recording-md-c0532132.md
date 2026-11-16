@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

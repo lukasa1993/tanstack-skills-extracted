@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.30.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
