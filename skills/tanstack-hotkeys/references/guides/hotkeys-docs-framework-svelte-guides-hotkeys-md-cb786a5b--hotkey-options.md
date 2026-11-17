@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Hotkey options
 
@@ -28,7 +28,7 @@ createHotkey('Enter', () => submit(), { ignoreInputs: false })
 | `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
 | `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#describe-hotkeys-with-meta). |
 
-The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`CreateHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/fb6af948672bc43c0c35414df41bb63724a85e97/docs/framework/svelte/reference/type-aliases/CreateHotkeyOptions.md) lists the types.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`CreateHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/framework/svelte/reference/type-aliases/CreateHotkeyOptions.md) lists the types.
 
 To change a default for every hotkey in your app, wrap it in a `HotkeysProvider` with `defaultOptions`. Options passed to a function override the provider's defaults:
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -34,6 +34,7 @@ A hotkey registered with the manager differs from one registered with a primitiv
 - Provider defaults and scopes don't apply. It uses the built-in defaults and belongs to the `'global'` scope, unless you pass `scope`.
 - Its hotkey and options are plain values, not accessors. To change options later, call `handle.setOptions`.
 - During server rendering, `register` returns a handle that does nothing.
+- A `null` target, such as a `querySelector` result that found nothing, also returns a handle that does nothing. The handle doesn't wait for the element, so call `register` again once it exists. Omit `target` to listen on `document`. `register` treats `target: undefined` as omitted, so it listens on `document` too.
 
 For example, code that sets up a chart library outside Solid can register the chart's hotkeys and return a function that removes them:
 
@@ -181,4 +182,4 @@ it('saves with Mod+S', () => {
 
 `platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for every hotkey in a test, pass it in `HotkeysProvider` default options: `defaultOptions={{ hotkey: { platform: 'mac' } }}`.
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/fb6af948672bc43c0c35414df41bb63724a85e97/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/reference/classes/HotkeyManager.md) lists every method.

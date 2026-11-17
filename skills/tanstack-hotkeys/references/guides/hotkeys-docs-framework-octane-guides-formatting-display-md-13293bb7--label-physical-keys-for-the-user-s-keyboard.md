@@ -1,6 +1,6 @@
 # Formatting Display — Label physical keys for the user's keyboard
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Label physical keys for the user's keyboard
 

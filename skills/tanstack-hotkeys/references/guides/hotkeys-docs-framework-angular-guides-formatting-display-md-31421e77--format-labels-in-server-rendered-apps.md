@@ -1,6 +1,6 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Format labels in server-rendered apps
 
@@ -79,7 +79,7 @@ export const appConfig: ApplicationConfig = {
 
 `REQUEST` is also `null` when a route is prerendered. See [Static and prerendered pages](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#static-and-prerendered-pages).
 
-The [Angular SSR example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/angular/injectFormatForDisplay-angular-ssr) shows this setup.
+The [Angular SSR example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/angular/injectFormatForDisplay-angular-ssr) shows this setup.
 
 ### Analog
 
@@ -103,7 +103,7 @@ export const appConfig: ApplicationConfig = {
 }
 ```
 
-The [Analog example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/angular/injectFormatForDisplay-analog) shows this setup.
+The [Analog example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/angular/injectFormatForDisplay-analog) shows this setup.
 
 ### Render a label only in the browser
 

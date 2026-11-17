@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-reactivity-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.107.1`.
+Release-matched documentation · `@tanstack/vue-query@5.107.2`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -160,9 +160,13 @@ export function useUserProjects(userId: MaybeRef<string>) {
 }
 ```
 
-More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/docs/framework/vue/reference/functions/useQuery.md) page.
+More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/docs/framework/vue/reference/functions/useQuery.md) page.
 
 The other query options accept refs as well, and pick up changes to them. Reactive getters, however, are only resolved in `queryKey` and `enabled`, since a function is already a valid value for options such as `select` or `staleTime`.
+
+In `enabled`, only a zero-argument getter is resolved this way. TanStack Query Core's `(query) => boolean` callback is accepted too, and is passed through untracked: a ref read inside it is current when TanStack Query Core calls it, but a change to that ref doesn't call it again by itself.
+
+Vue Query tells the two apart by the number of parameters the function declares, so declare `query` as a required parameter. A callback with only a rest or a default parameter is treated as a getter and called without a query.
 
 ### Immutability
 

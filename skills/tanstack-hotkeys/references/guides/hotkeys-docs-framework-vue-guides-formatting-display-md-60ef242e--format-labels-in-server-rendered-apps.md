@@ -1,6 +1,6 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Format labels in server-rendered apps
 
@@ -72,7 +72,7 @@ const platform = detectPlatform(useRequestHeader('user-agent'))
 
 If your app uses layouts, wrap `<NuxtLayout>` instead of `<NuxtPage />`. For routes that Nuxt prerenders, see [Static and prerendered pages](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#static-and-prerendered-pages).
 
-The [Nuxt example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/vue/useFormatForDisplay-nuxt) shows this setup.
+The [Nuxt example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/vue/useFormatForDisplay-nuxt) shows this setup.
 
 ### Vite SSR
 
@@ -125,7 +125,7 @@ defineProps<{ platform: HotkeyPlatform }>()
 </template>
 ```
 
-The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/vue/useFormatForDisplay-vite-ssr) shows this setup.
+The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/vue/useFormatForDisplay-vite-ssr) shows this setup.
 
 ### Astro
 
@@ -161,7 +161,7 @@ defineProps<{ platform: HotkeyPlatform }>()
 </template>
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/vue/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/vue/useFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 
@@ -241,7 +241,7 @@ Press <Shortcut hotkey="Mod+K" /> to search.
 
 VitePress's `<ClientOnly>` renders nothing on the server, and the label appears once the page hydrates.
 
-The [VitePress example](https://github.com/TanStack/hotkeys/blob/fb6af948672bc43c0c35414df41bb63724a85e97/examples/vue/useFormatForDisplay-vitepress/index.md) shows labels in `<ClientOnly>` on a static site.
+The [VitePress example](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/vue/useFormatForDisplay-vitepress/index.md) shows labels in `<ClientOnly>` on a static site.
 
 ### Development warning
 

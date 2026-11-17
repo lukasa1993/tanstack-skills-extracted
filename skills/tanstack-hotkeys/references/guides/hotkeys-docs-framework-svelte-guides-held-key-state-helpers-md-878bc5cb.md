@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -94,4 +94,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [get-held-keys example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/svelte/get-held-keys) shows held keys and their codes, and the [get-is-key-held example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/svelte/get-is-key-held) shows modifier indicators.
+The [get-held-keys example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/svelte/get-held-keys) shows held keys and their codes, and the [get-is-key-held example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/svelte/get-is-key-held) shows modifier indicators.

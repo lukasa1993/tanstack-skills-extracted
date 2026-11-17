@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-overview-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.107.1`.
+Release-matched documentation · `@tanstack/vue-query@5.107.2`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -12,6 +12,6 @@ Release-matched documentation · `@tanstack/vue-query@5.107.1`.
 
 ## You talked me into it, so what now?
 
-- Learn Vue Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-vue-installation-md-470329c4.md#source-query-docs-framework-vue-installation-md) and [API Reference](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/docs/framework/vue/reference/functions/useQuery.md)
+- Learn Vue Query at your own pace with our amazingly thorough [Walkthrough Guide](./query-docs-framework-vue-installation-md-470329c4.md#source-query-docs-framework-vue-installation-md) and [API Reference](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/docs/framework/vue/reference/functions/useQuery.md)
 
 [//]: # 'Materials'

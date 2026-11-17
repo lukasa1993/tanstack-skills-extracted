@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.107.1`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.107.2`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ Release-matched documentation · `@tanstack/angular-query-experimental@5.107.1`.
 
 [//]: # 'Example'
 
-If you're looking for a fully functioning example, please have a look at our [basic codesandbox example](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/examples/angular/basic/README.md)
+If you're looking for a fully functioning example, please have a look at our [basic codesandbox example](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/examples/angular/basic/README.md)
 
 ### Provide the client to your App
 
@@ -47,15 +47,14 @@ export class AppModule {}
 ### Component with query and mutation
 
 ```angular-ts
-import { Component, Injectable, inject } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { lastValueFrom } from 'rxjs'
-
+import { Component, Injectable, inject } from '@angular/core'
 import {
   injectMutation,
   injectQuery,
   QueryClient,
 } from '@tanstack/angular-query-experimental'
+import { lastValueFrom } from 'rxjs'
 
 @Component({
   template: `

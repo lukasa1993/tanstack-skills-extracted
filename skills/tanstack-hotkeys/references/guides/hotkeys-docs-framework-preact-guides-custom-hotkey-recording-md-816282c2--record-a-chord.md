@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Record a chord
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Record a chord
 

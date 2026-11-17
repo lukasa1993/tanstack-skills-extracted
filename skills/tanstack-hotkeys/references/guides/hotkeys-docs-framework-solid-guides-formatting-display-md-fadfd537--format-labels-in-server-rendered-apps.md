@@ -1,6 +1,6 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Format labels in server-rendered apps
 
@@ -75,7 +75,7 @@ export default function App() {
 }
 ```
 
-The [SolidStart example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/solid/createFormatForDisplay-solid-start) shows this setup.
+The [SolidStart example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/solid/createFormatForDisplay-solid-start) shows this setup.
 
 ### TanStack Start
 
@@ -101,7 +101,7 @@ function RootComponent() {
 }
 ```
 
-The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
+The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
 
 ### Astro
 
@@ -134,7 +134,7 @@ export default function Shortcuts(props: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/solid/createFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/solid/createFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 

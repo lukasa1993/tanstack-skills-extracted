@@ -1,6 +1,6 @@
 # Formatting Display — Label physical keys for the user's keyboard
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Label physical keys for the user's keyboard
 

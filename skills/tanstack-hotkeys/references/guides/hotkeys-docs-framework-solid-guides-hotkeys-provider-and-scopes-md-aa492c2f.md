@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -282,4 +282,4 @@ The hotkeys [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-doc
 
 Your app doesn't need to track scopes itself. If you want to show scope state anyway, read it from the hotkey manager. See [Read scope state](./hotkeys-docs-framework-solid-guides-hotkey-manager-md-d1ae34aa.md#source-hotkeys-docs-framework-solid-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/solid/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/solid/scopes) for nested, enabled, and exclusive scopes together.

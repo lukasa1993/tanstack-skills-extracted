@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-installation-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.38`.
+Release-matched documentation · `@tanstack/lit-query@0.2.39`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -89,8 +89,8 @@ customElements.define('app-query-provider', AppQueryProvider)
 You can register the provider class directly and bind its `client` property from a Lit template. The dot is important: `.client=${queryClient}` is a property binding, not an HTML attribute.
 
 ```ts
-import { LitElement, html } from 'lit'
 import { QueryClient, QueryClientProvider } from '@tanstack/lit-query'
+import { LitElement, html } from 'lit'
 
 const queryClient = new QueryClient()
 
@@ -107,7 +107,7 @@ class AppRoot extends LitElement {
 }
 ```
 
-If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
+If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
 
 ## Render Roots
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -32,7 +32,7 @@ Each framework package re-exports everything from the core `@tanstack/hotkeys` p
 
 # React
 
-Use React 18 or newer. The hooks and `HotkeysProvider` are client components, so a server component such as a Next.js `app/layout.tsx` can render `HotkeysProvider` directly.
+Use React 18 or newer. The hooks and `HotkeysProvider` are client components, so a server component such as a Next.js `app/layout.tsx` can render `HotkeysProvider` directly. To pass `appHotkeys` from a server component, render `AppHotkeysProvider` instead. See [App hotkeys with Server Components](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md).
 
 Start with the [Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md) guide. If you want the integrated devtools panel, also install:
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -140,4 +140,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md#source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md) covers the tracker and the other held-key utilities.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/ember/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/ember/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

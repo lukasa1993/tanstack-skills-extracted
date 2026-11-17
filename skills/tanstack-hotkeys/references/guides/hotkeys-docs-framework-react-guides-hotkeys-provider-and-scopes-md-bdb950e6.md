@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -54,6 +54,8 @@ Pass your [app hotkeys](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211
 ```
 
 Nested providers use the app hotkeys and custom hotkeys of the provider above them, so pass these only once, at the root.
+
+To pass `appHotkeys` from a React Server Component, such as a Next.js `app/layout.tsx`, render `AppHotkeysProvider` instead of `HotkeysProvider`. See [App hotkeys with Server Components](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md).
 
 ## Group hotkeys into scopes
 
@@ -271,4 +273,4 @@ The hotkeys [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-doc
 
 Your app doesn't need to track scopes itself. If you want to show scope state anyway, read it from the hotkey manager. See [Read scope state](./hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md#source-hotkeys-docs-framework-react-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/react/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/react/scopes) for nested, enabled, and exclusive scopes together.

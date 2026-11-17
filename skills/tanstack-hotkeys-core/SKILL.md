@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/hotkeys"
-  tanstack-package-version: "0.31.0"
+  tanstack-package-version: "0.32.0"
   tanstack-purpose: "Framework-neutral rules for TanStack Hotkeys: the work the library already does, how hotkeys turn on and off, and the pitfalls that don't surface as errors."
   tanstack-source-skill: "hotkeys-core"
   tanstack-sources: "[\"src/hotkey-manager.ts\",\"src/match.ts\",\"TanStack/hotkeys:docs/guides/sensible-defaults.md\",\"TanStack/hotkeys:docs/framework/react/guides/hotkeys.md\",\"TanStack/hotkeys:docs/framework/react/guides/sequences.md\",\"TanStack/hotkeys:docs/framework/react/guides/hotkeys-provider-and-scopes.md\",\"TanStack/hotkeys:packages/react-hotkeys/tests/skills/editor-shortcuts/**\"]"
@@ -63,6 +63,7 @@ When nesting scopes, stacking dialogs, or keeping some hotkeys working during an
 - **Single-character shortcuts need an off switch.** For WCAG 2.1.4, `K`, `?`, and `['G', 'H']` need a user setting passed as `enabled`, or an app hotkey users can remap.
 - **react-hotkeys-hook names don't carry over.** `useHotkeys` and `HotkeysProvider` share names, not signatures: there's no dependency array, `preventDefault` is on by default, and sequences are arrays. Remove the old library, so two libraries don't handle the same keys.
 - **Install only the adapter.** A separately installed `@tanstack/hotkeys` at another version is a second copy, and scopes don't apply across copies.
+- **A changed array or element in `meta` doesn't re-render lists on its own.** Registration lists re-render when a new `meta` changes a string, number, or boolean field. Editing a `meta` object already passed doesn't. A new array, object, element, or function replaces the old one without re-rendering them, which is what lets `meta` be written inline. To show a changed icon or keyword list, also change a primitive field.
 - **Server-rendered labels need the user's platform.** A server renders Linux labels without a platform, because it can't see the user's OS. Read the request's `User-Agent` header, pass `detectPlatform(userAgent)` as the platform of the adapter's provider or scope, and format labels with the adapter's formatter, such as `useFormatForDisplay`. Those pages then depend on the user agent, so keep them out of shared caches or add the platform to the cache key.
 
 When writing tests for hotkeys, read [testing](./references/testing.md).

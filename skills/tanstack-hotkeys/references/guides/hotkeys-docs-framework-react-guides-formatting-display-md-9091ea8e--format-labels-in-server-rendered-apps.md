@@ -1,6 +1,6 @@
 # Formatting Display — Format labels in server-rendered apps
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Format labels in server-rendered apps
 
@@ -70,7 +70,7 @@ function RootComponent() {
 }
 ```
 
-The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/react/useFormatForDisplay-tanstack-start) shows this setup.
+The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/react/useFormatForDisplay-tanstack-start) shows this setup.
 
 ### Next.js (App Router)
 
@@ -100,7 +100,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 Reading `headers()` renders the layout on each request. For a page that should stay static, see [Static and prerendered pages](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#static-and-prerendered-pages).
 
-The [Next.js example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/react/useFormatForDisplay-nextjs) shows this setup.
+The [Next.js example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/react/useFormatForDisplay-nextjs) shows this setup.
 
 ### React Router (framework mode)
 
@@ -125,7 +125,7 @@ export default function App({ loaderData }: Route.ComponentProps) {
 }
 ```
 
-The [React Router example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/react/useFormatForDisplay-react-router) shows this setup.
+The [React Router example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/react/useFormatForDisplay-react-router) shows this setup.
 
 ### Astro
 
@@ -158,7 +158,7 @@ export default function Shortcuts({ platform }: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/react/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/react/useFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 

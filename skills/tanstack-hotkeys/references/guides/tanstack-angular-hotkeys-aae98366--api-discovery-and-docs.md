@@ -1,6 +1,6 @@
 # Angular Hotkeys — API discovery and docs
 
-[Guide and prerequisites](./tanstack-angular-hotkeys-aae98366.md) · Published skill · `@tanstack/angular-hotkeys@0.25.0`.
+[Guide and prerequisites](./tanstack-angular-hotkeys-aae98366.md) · Published skill · `@tanstack/angular-hotkeys@0.25.1`.
 
 ## API discovery and docs
 

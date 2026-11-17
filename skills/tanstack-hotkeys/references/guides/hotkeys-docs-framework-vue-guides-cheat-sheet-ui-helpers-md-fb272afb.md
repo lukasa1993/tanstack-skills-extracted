@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -50,6 +50,8 @@ declare module '@tanstack/hotkeys' {
   }
 }
 ```
+
+Lists re-render when a new `meta` changes a string, number, or boolean field. Editing a `meta` object you already passed doesn't re-render them. A new array, object, element, or function in `meta` replaces the old one, so callbacks stay current, but it doesn't re-render lists on its own. That's what lets you write `meta` inline in a component. To show a changed array or element, also change a primitive field, such as `name`.
 
 ## List the hotkeys on screen
 
@@ -225,4 +227,4 @@ useHotkeys(() => [
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/vue/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/vue/kitchen-sink) has a shortcut list built from live registrations.

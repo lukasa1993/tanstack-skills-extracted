@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Recorder options
 
@@ -20,6 +20,6 @@
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-Lit has no provider, so set recorder options on each controller. The [`HotkeyRecorderController` reference](https://github.com/TanStack/hotkeys/blob/fb6af948672bc43c0c35414df41bb63724a85e97/docs/framework/lit/reference/classes/HotkeyRecorderController.md) lists the types.
+Lit has no provider, so set recorder options on each controller. The [`HotkeyRecorderController` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/framework/lit/reference/classes/HotkeyRecorderController.md) lists the types.
 
-The [hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/lit/hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/fb6af948672bc43c0c35414df41bb63724a85e97/examples/lit/hotkey-recorder-sequences) records sequences.
+The [hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/lit/hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/lit/hotkey-recorder-sequences) records sequences.

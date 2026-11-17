@@ -1,6 +1,6 @@
 # Formatting Display — Label physical keys for the user's keyboard
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Label physical keys for the user's keyboard
 

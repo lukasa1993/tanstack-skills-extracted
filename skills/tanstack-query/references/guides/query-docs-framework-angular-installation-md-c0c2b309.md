@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-angular-installation-md"></a>
 
-Release-matched documentation · `@tanstack/angular-query-experimental@5.107.1`.
+Release-matched documentation · `@tanstack/angular-query-experimental@5.107.2`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -34,4 +34,4 @@ bun add @tanstack/angular-query-experimental
 
 Angular Query is compatible with Angular v16+.
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/examples/angular/simple/README.md) or [basic](https://github.com/TanStack/query/blob/3875d1d19642694dfcb14602cfeb582e393103e3/examples/angular/basic/README.md) examples!
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/examples/angular/simple/README.md) or [basic](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/examples/angular/basic/README.md) examples!

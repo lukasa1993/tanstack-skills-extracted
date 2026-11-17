@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -182,4 +182,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `useAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/fb6af948672bc43c0c35414df41bb63724a85e97/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`HotkeysProvider` creates an `AppHotkeysStore` from the core package. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/reference/classes/AppHotkeysStore.md) to use it directly.

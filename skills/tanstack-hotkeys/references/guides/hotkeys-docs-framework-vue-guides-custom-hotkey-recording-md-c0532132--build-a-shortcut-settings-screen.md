@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Build a shortcut settings screen
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Build a shortcut settings screen
 

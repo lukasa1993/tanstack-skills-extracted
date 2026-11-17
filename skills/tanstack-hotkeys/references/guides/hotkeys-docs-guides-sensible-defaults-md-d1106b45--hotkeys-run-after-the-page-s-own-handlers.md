@@ -1,6 +1,6 @@
 # Sensible Defaults — Hotkeys run after the page's own handlers
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Hotkeys run after the page's own handlers
 

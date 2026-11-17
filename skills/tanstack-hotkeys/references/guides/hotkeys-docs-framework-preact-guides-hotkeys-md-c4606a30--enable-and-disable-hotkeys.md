@@ -1,6 +1,6 @@
 # Hotkeys — Enable and disable hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.31.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
 
 ## Enable and disable hotkeys
 

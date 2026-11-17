@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-solid-overview-md"></a>
 
-Release-matched documentation · `@tanstack/solid-query@5.107.1`.
+Release-matched documentation · `@tanstack/solid-query@5.107.2`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -74,12 +74,12 @@ On a more technical note, Solid Query will likely:
 In the example below, you can see Solid Query in its most basic and simple form being used to fetch the GitHub stats for the TanStack Query GitHub project itself:
 
 ```tsx
-import { ErrorBoundary, Suspense } from 'solid-js'
 import {
   useQuery,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/solid-query'
+import { ErrorBoundary, Suspense } from 'solid-js'
 
 function App() {
   const repositoryQuery = useQuery(() => ({

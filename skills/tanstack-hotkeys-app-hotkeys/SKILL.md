@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/hotkeys"
   tanstack-library-version: "0.16.0"
   tanstack-package: "@tanstack/hotkeys"
-  tanstack-package-version: "0.31.0"
+  tanstack-package-version: "0.32.0"
   tanstack-purpose: "Declare every shortcut once with defineAppHotkeys, then build cheat sheets, rebinding, conflict checks, and persistence from those declarations instead of a parallel shortcut registry."
   tanstack-requires: "[\"tanstack-hotkeys-core\"]"
   tanstack-source-skill: "app-hotkeys"
@@ -35,7 +35,7 @@ export const appHotkeys = defineAppHotkeys({
 })
 ```
 
-Augment `Register` in the adapter module you import from, such as `declare module '@tanstack/react-hotkeys' { interface Register { appHotkeys: typeof appHotkeys } }`, to type ids. Lit, Alpine, and Ember have no provider: call `provideAppHotkeys(appHotkeys, options)` once at startup. Pass saved data that loads later to `store.setOptions({ customHotkeys })` on the returned store; providers apply a changed `customHotkeys` prop themselves. `undefined` leaves custom hotkeys unchanged while data loads; `null` clears them, such as on sign-out.
+Augment `Register` in the adapter module you import from, such as `declare module '@tanstack/react-hotkeys' { interface Register { appHotkeys: typeof appHotkeys } }`, to type ids. In React Server Components, such as a Next.js `app/layout.tsx`, a server component passes `appHotkeys` to `AppHotkeysProvider`, not `HotkeysProvider`, which throws there. Lit, Alpine, and Ember have no provider: call `provideAppHotkeys(appHotkeys, options)` once at startup. Pass saved data that loads later to `store.setOptions({ customHotkeys })` on the returned store; providers apply a changed `customHotkeys` prop themselves. `undefined` leaves custom hotkeys unchanged while data loads; `null` clears them, such as on sign-out.
 
 ## Pitfalls
 
