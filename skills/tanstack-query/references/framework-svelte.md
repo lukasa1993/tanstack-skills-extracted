@@ -6,9 +6,9 @@ Choose the guide for the task. Each guide records its source and package version
 
 | Guide | Source status | Package version |
 | --- | --- | --- |
-| [Mutations](./guides/query-docs-framework-svelte-guides-mutations-md-f1b53653.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.2` |
-| [Optimistic Updates](./guides/query-docs-framework-svelte-guides-optimistic-updates-md-72b3b9de.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.2` |
-| [Queries](./guides/query-docs-framework-svelte-guides-queries-md-53696451.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.2` |
-| [Installation](./guides/query-docs-framework-svelte-installation-md-6e75ce07.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.2` |
-| [Overview](./guides/query-docs-framework-svelte-overview-md-c5e116c5.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.2` |
-| [Quick Start](./guides/query-docs-framework-svelte-quick-start-md-55a89661.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.2` |
+| [Mutations](./guides/query-docs-framework-svelte-guides-mutations-md-f1b53653.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.3` |
+| [Optimistic Updates](./guides/query-docs-framework-svelte-guides-optimistic-updates-md-72b3b9de.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.3` |
+| [Queries](./guides/query-docs-framework-svelte-guides-queries-md-53696451.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.3` |
+| [Installation](./guides/query-docs-framework-svelte-installation-md-6e75ce07.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.3` |
+| [Overview](./guides/query-docs-framework-svelte-overview-md-c5e116c5.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.3` |
+| [Quick Start](./guides/query-docs-framework-svelte-quick-start-md-55a89661.md) | Release-matched documentation | `@tanstack/svelte-query@6.4.3` |

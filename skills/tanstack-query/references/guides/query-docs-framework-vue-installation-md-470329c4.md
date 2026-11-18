@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-installation-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.107.2`.
+Release-matched documentation · `@tanstack/vue-query@5.108.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -36,7 +36,7 @@ Vue Query is compatible with Vue v2.6+ and v3.3+.
 
 > If you are using Vue 2.6, make sure to also setup [@vue/composition-api](https://github.com/vuejs/composition-api)
 
-> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/examples/vue/basic/README.md) example!
+> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/examples/vue/basic/README.md) example!
 
 ### Vue Query Initialization
 

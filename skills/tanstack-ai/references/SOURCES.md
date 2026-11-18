@@ -4,18 +4,18 @@ Imported material is tied to the versions and commits below. Outbound links to o
 
 | Source | Kind | Theme | Package or repository | Version or commit | Deduplicated into |
 | --- | --- | --- | --- | --- | --- |
-| `tanstack-ai-core` | atomic | `chat-providers` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-adapter-configuration` | atomic | `chat-providers` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-ag-ui-protocol` | atomic | `chat-providers` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-chat-experience` | atomic | `chat-providers` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-custom-backend-integration` | atomic | `chat-providers` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-debug-logging` | atomic | `chat-providers` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-middleware` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-structured-outputs` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-tool-calling` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-media-generation` | atomic | `media` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-client-persistence` | atomic | `persistence-coordination` | `@tanstack/ai` | `1.4.0` |  |
-| `tanstack-ai-core-locks` | atomic | `persistence-coordination` | `@tanstack/ai` | `1.4.0` |  |
+| `tanstack-ai-core` | atomic | `chat-providers` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-adapter-configuration` | atomic | `chat-providers` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-ag-ui-protocol` | atomic | `chat-providers` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-chat-experience` | atomic | `chat-providers` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-custom-backend-integration` | atomic | `chat-providers` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-debug-logging` | atomic | `chat-providers` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-middleware` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-structured-outputs` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-tool-calling` | atomic | `tools-outputs-middleware` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-media-generation` | atomic | `media` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-client-persistence` | atomic | `persistence-coordination` | `@tanstack/ai` | `1.5.0` |  |
+| `tanstack-ai-core-locks` | atomic | `persistence-coordination` | `@tanstack/ai` | `1.5.0` |  |
 | `tanstack-ai-persistence` | atomic | `persistence-coordination` | `@tanstack/ai-persistence` | `1.0.1` |  |
 | `tanstack-ai-persistence-server` | atomic | `persistence-coordination` | `@tanstack/ai-persistence` | `1.0.1` |  |
 | `tanstack-ai-persistence-stores` | atomic | `persistence-coordination` | `@tanstack/ai-persistence` | `1.0.1` |  |

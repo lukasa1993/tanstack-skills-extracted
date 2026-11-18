@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-installation-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.39`.
+Release-matched documentation · `@tanstack/lit-query@0.2.40`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -107,7 +107,7 @@ class AppRoot extends LitElement {
 }
 ```
 
-If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
+If a connected provider has no `client`, it throws. See the generated [`QueryClientProvider` reference](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/docs/framework/lit/reference/classes/QueryClientProvider.md) for the full contract.
 
 ## Render Roots
 

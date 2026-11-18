@@ -1,6 +1,6 @@
 # Middleware — Hooks Reference
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@1.4.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@1.5.0`.
 
 ## Hooks Reference
 
@@ -21,7 +21,7 @@ Every hook receives a `ChatMiddlewareContext` as its first argument, which provi
 | `onToolPhaseComplete`      | After all tool calls in an iteration                                                                     | `ToolPhaseCompleteInfo`                             |
 | `onUsage`                  | When `RUN_FINISHED` includes usage data                                                                  | `UsageInfo`                                         |
 | `onFinish`                 | Run completed normally                                                                                   | `FinishInfo`                                        |
-| `onAbort`                  | Run was aborted                                                                                          | `AbortInfo`                                         |
+| `onAbort`                  | Run was aborted, including a consumer `break` or `return()`                                              | `AbortInfo`                                         |
 | `onError`                  | Unhandled error occurred                                                                                 | `ErrorInfo`                                         |
 
 Terminal hooks (`onFinish`, `onAbort`, `onError`) are **mutually exclusive** -- exactly

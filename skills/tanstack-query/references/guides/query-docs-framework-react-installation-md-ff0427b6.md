@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-installation-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.107.2`.
+Release-matched documentation · `@tanstack/react-query@5.108.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -44,7 +44,7 @@ deno add @tanstack/react-query
 
 React Query is compatible with React v18+ and works with ReactDOM and React Native.
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/examples/react/simple/README.md) or [basic](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/examples/react/basic/README.md) examples!
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/examples/react/simple/README.md) or [basic](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/examples/react/basic/README.md) examples!
 
 [//]: # 'Compatibility'
 
@@ -83,7 +83,7 @@ Opera >= 77
 
 ### Recommendations
 
-It is recommended to also use our [ESLint Plugin Query](https://github.com/TanStack/query/blob/3f5f87af342b2843e641e1805e9da4d56850240e/docs/eslint/eslint-plugin-query.md) to help you catch bugs and inconsistencies while you code. You can install it via:
+It is recommended to also use our [ESLint Plugin Query](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/docs/eslint/eslint-plugin-query.md) to help you catch bugs and inconsistencies while you code. You can install it via:
 
 ```sh
 npm i -D @tanstack/eslint-plugin-query

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-ai"
   tanstack-library-version: "0.42.0"
   tanstack-package: "@tanstack/ai"
-  tanstack-package-version: "1.4.0"
+  tanstack-package-version: "1.5.0"
   tanstack-source-skill: "ai-core/middleware"
   tanstack-sources: "[\"TanStack/ai:docs/advanced/middleware.md\",\"TanStack/ai:docs/sandbox/observability.md\",\"TanStack/ai:docs/persistence/overview.md\"]"
   tanstack-type: "sub-skill"
@@ -69,7 +69,7 @@ Every hook receives a `ChatMiddlewareContext` as its first argument, which provi
 | `onToolPhaseComplete`      | After all tool calls in an iteration                                                                     | `ToolPhaseCompleteInfo`                             |
 | `onUsage`                  | When `RUN_FINISHED` includes usage data                                                                  | `UsageInfo`                                         |
 | `onFinish`                 | Run completed normally                                                                                   | `FinishInfo`                                        |
-| `onAbort`                  | Run was aborted                                                                                          | `AbortInfo`                                         |
+| `onAbort`                  | Run was aborted, including a consumer `break` or `return()`                                              | `AbortInfo`                                         |
 | `onError`                  | Unhandled error occurred                                                                                 | `ErrorInfo`                                         |
 
 Terminal hooks (`onFinish`, `onAbort`, `onError`) are **mutually exclusive** -- exactly

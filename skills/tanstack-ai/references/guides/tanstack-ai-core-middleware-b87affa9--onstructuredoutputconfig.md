@@ -1,6 +1,6 @@
 # Middleware — onStructuredOutputConfig
 
-[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@1.4.0`.
+[Guide and prerequisites](./tanstack-ai-core-middleware-b87affa9.md) · Published skill · `@tanstack/ai@1.5.0`.
 
 ## onStructuredOutputConfig
 
