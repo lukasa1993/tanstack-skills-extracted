@@ -2,7 +2,7 @@
   "generator": "scripts/build-groups.mjs",
   "name": "tanstack-hotkeys",
   "product": "hotkeys",
-  "sourceCount": 124,
+  "sourceCount": 134,
   "themes": [
     "framework-alpine",
     "framework-ember",
@@ -17,7 +17,7 @@
     "framework-lit",
     "other-guides"
   ],
-  "guideCount": 124,
+  "guideCount": 134,
   "largestGuideEntryBytes": 13160,
-  "inputSha256": "f4505e3e0cd845daf39b06575af006a614b1db2dba1a0bcd83e2bb69bd35d7e3"
+  "inputSha256": "c502c7763f0112fdbba4d2ff35fb575e1c4f6cfbf0903a66afee04e772e0735b"
 }

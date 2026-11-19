@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Register a hotkey
 
@@ -102,6 +102,8 @@ createHotkey('[KeyW]', () => moveUp()) // The W position, whatever the layout ty
 createHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod comes first
 createHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod is already Meta on macOS
 ```
+
+TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-solid-guides-keyboard-layouts-md-9cc5d7a6.md#source-hotkeys-docs-framework-solid-guides-keyboard-layouts-md).
 
 Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
 

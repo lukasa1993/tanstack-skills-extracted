@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Hotkey options
 
@@ -28,7 +28,7 @@ this.hotkeys.createHotkey('Enter', () => submit(), { ignoreInputs: false })
 | `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
 | `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#describe-hotkeys-with-meta). |
 
-The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`AlpineHotkeyCommonOptions` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/framework/alpine/reference/type-aliases/AlpineHotkeyCommonOptions.md) lists the types.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`AlpineHotkeyCommonOptions` reference](https://github.com/TanStack/hotkeys/blob/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/docs/framework/alpine/reference/type-aliases/AlpineHotkeyCommonOptions.md) lists the types.
 
 To change a default for the hotkeys an owner creates, pass default options to `createHotkeysScope`. Options passed to a function override the owner's defaults. Share the defaults object between components that need the same defaults:
 

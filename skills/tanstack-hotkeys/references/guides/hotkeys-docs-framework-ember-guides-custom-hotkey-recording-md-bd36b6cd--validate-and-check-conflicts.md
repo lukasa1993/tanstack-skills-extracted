@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Validate and check conflicts
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Validate and check conflicts
 

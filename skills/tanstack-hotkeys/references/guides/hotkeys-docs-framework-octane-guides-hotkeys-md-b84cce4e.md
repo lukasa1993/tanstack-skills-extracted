@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--register-a-hotkey.md) — 5 KiB
+- [Register a hotkey](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--register-a-hotkey.md) — 6 KiB
 - [Hotkey options](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--enable-and-disable-hotkeys.md) — 3 KiB

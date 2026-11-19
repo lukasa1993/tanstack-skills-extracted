@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Keys the recorder handles
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Keys the recorder handles
 

@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Recorder options
 
@@ -20,6 +20,6 @@
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md#source-hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md). The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/framework/octane/reference/functions/useHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md#source-hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md). The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/docs/framework/octane/reference/functions/useHotkeyRecorder.md) lists the types.
 
-The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/octane/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/octane/useHotkeyRecorder-sequences) records sequences.
+The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/octane/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/octane/useHotkeyRecorder-sequences) records sequences.

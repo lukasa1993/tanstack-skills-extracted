@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--register-a-hotkey.md) — 5 KiB
+- [Register a hotkey](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--register-a-hotkey.md) — 6 KiB
 - [Hotkey options](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--register-multiple-hotkeys.md) — 4 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--enable-and-disable-hotkeys.md) — 3 KiB

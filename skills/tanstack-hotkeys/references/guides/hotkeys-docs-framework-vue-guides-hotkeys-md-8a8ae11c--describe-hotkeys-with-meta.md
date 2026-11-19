@@ -1,6 +1,6 @@
 # Hotkeys — Describe hotkeys with `meta`
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Describe hotkeys with `meta`
 

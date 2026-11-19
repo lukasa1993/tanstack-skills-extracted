@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Recorder options
 
@@ -20,6 +20,6 @@
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md). The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/3f7321a19d32af8a08fc0fec878c18618b9c10ca/docs/framework/svelte/reference/functions/createHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder, pass `hotkeyRecorder` options to `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md). The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/docs/framework/svelte/reference/functions/createHotkeyRecorder.md) lists the types.
 
-The [create-hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/svelte/create-hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/svelte/create-hotkey-recorder-sequences) records sequences.
+The [create-hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/svelte/create-hotkey-recorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/svelte/create-hotkey-recorder-sequences) records sequences.

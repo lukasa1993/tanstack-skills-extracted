@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -12,7 +12,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 
 - [Overview](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--overview.md) — 1 KiB
 - [Chords and sequences](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--chords-and-sequences.md) — 1 KiB
-- [Register a hotkey](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-a-hotkey.md) — 5 KiB
+- [Register a hotkey](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-a-hotkey.md) — 6 KiB
 - [Hotkey options](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--hotkey-options.md) — 5 KiB
 - [Register multiple hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-multiple-hotkeys.md) — 3 KiB
 - [Enable and disable hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--enable-and-disable-hotkeys.md) — 3 KiB

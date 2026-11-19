@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 ## Register a hotkey
 
@@ -109,6 +109,8 @@ Write most chords as strings. Your editor autocompletes them, and Glint rejects 
 {{! Type error: Mod comes first }}
 {{useHotkey 'Shift+Mod+S' this.saveAs}}
 ```
+
+TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-ember-guides-keyboard-layouts-md-6c92481b.md#source-hotkeys-docs-framework-ember-guides-keyboard-layouts-md).
 
 Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier. Build it in the template with the `hash` helper from `@ember/helper`, or in a component property:
 

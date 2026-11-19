@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-vue-start"></a>
 
-Published skill · `@tanstack/vue-start@1.169.5`.
+Published skill · `@tanstack/vue-start@1.169.7`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

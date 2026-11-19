@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.32.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -220,4 +220,4 @@ function CheatSheetDialog({ onClose }: { onClose: () => void }) {
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3f7321a19d32af8a08fc0fec878c18618b9c10ca/examples/preact/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/preact/kitchen-sink) has a shortcut list built from live registrations.
