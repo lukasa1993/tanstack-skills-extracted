@@ -1,6 +1,6 @@
 # Devtools Marketplace — PR Submission Process
 
-[Guide and prerequisites](./tanstack-devtools-marketplace-8bf06759.md) · Published skill · `@tanstack/devtools@0.16.0`.
+[Guide and prerequisites](./tanstack-devtools-marketplace-8bf06759.md) · Published skill · `@tanstack/devtools@0.17.0`.
 
 ## PR Submission Process
 

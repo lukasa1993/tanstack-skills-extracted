@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-mcp"></a>
 
-Published skill · `@tanstack/ai-mcp@1.2.0`.
+Published skill · `@tanstack/ai-mcp@1.3.0`.
 
 [Topic index](../agent-runtimes.md) · [Source provenance](../SOURCES.md)
 

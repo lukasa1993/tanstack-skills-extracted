@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "@tanstack/devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.17.0"
   tanstack-source-skill: "devtools-app-setup"
   tanstack-sources: "[\"docs/quick-start.md\",\"docs/installation.md\",\"docs/configuration.md\",\"docs/overview.md\",\"packages/devtools/src/context/devtools-store.ts\",\"packages/vue-devtools/src/types.ts\",\"packages/react-devtools/src/devtools.tsx\"]"
   tanstack-type: "core"
@@ -95,7 +95,7 @@ npm install -D @tanstack/solid-devtools @tanstack/devtools-vite
 ```
 
 ```tsx
-import { render } from 'solid-js/web'
+import { render } from '@solidjs/web'
 import { TanStackDevtools } from '@tanstack/solid-devtools'
 import { SolidQueryDevtoolsPanel } from '@tanstack/solid-query-devtools'
 import App from './App'

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools"
-  tanstack-package-version: "0.16.0"
+  tanstack-package-version: "0.17.0"
   tanstack-requires: "[\"tanstack-devtools-event-client\"]"
   tanstack-source-skill: "devtools-plugin-panel"
   tanstack-sources: "[\"TanStack/devtools:docs/building-custom-plugins.md\",\"TanStack/devtools:docs/plugin-lifecycle.md\",\"TanStack/devtools:docs/plugin-configuration.md\",\"TanStack/devtools:packages/devtools/src/context/devtools-context.tsx\"]"
@@ -77,7 +77,7 @@ Event names are suffixes only. The `pluginId` is prepended automatically: `'stor
 ### Step 2: Build the Solid.js Panel Component
 
 ```tsx
-/** @jsxImportSource solid-js */
+/** @jsxImportSource @solidjs/web */
 import { createSignal, onCleanup, For } from 'solid-js'
 import {
   MainPanel,

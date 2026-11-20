@@ -1,6 +1,6 @@
 # Build Drizzle Adapter — Before you say it is done
 
-[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@1.0.1`.
+[Guide and prerequisites](./tanstack-ai-persistence-build-drizzle-adapter-5655a048.md) · Published skill · `@tanstack/ai-persistence@1.1.0`.
 
 ## Before you say it is done
 

@@ -7,7 +7,7 @@ metadata:
   tanstack-library: "tanstack-devtools"
   tanstack-library-version: "0.10.12"
   tanstack-package: "@tanstack/devtools-vite"
-  tanstack-package-version: "0.8.6"
+  tanstack-package-version: "0.8.7"
   tanstack-source-skill: "devtools-vite-plugin"
   tanstack-sources: "[\"TanStack/devtools:docs/vite-plugin.md\",\"TanStack/devtools:docs/source-inspector.md\",\"TanStack/devtools:packages/devtools-vite/src/plugin.ts\"]"
   tanstack-type: "core"
@@ -119,7 +119,7 @@ Bidirectional console piping between client and server. Injects runtime code (II
 1. Wraps `console[level]` to batch and POST entries to `<viteServerUrl>/__tsd/console-pipe/server`
 2. These are then broadcast to all SSE clients
 
-**Entry file detection:** looks for `<html` tag, `StartClient`, `hydrateRoot`, `createRoot`, or `solid-js/web` + `render(` in code.
+**Entry file detection:** looks for `<html` tag, `StartClient`, `hydrateRoot`, `createRoot`, or `solid-js/web` / `@solidjs/web` + `render(` in code.
 
 **Source files:** `packages/devtools-vite/src/virtual-console.ts`, `packages/devtools-vite/src/utils.ts` (middleware handlers)
 

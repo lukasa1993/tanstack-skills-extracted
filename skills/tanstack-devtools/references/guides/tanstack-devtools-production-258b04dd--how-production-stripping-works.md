@@ -1,6 +1,6 @@
 # Devtools Production — How Production Stripping Works
 
-[Guide and prerequisites](./tanstack-devtools-production-258b04dd.md) · Published skill · `@tanstack/devtools@0.16.0`.
+[Guide and prerequisites](./tanstack-devtools-production-258b04dd.md) · Published skill · `@tanstack/devtools@0.17.0`.
 
 ## How Production Stripping Works
 

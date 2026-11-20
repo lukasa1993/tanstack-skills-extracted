@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-utils-devtools-framework-adapters"></a>
 
-Published skill · `@tanstack/devtools-utils@0.7.2`.
+Published skill · `@tanstack/devtools-utils@0.8.0`.
 
 [Topic index](../plugins-marketplace.md) · [Source provenance](../SOURCES.md)
 

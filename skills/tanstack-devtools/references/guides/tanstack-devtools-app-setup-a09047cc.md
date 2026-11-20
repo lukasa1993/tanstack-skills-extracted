@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-app-setup"></a>
 
-Published skill · `@tanstack/devtools@0.16.0`.
+Published skill · `@tanstack/devtools@0.17.0`.
 
 [Topic index](../setup-production.md) · [Source provenance](../SOURCES.md)
 
@@ -88,7 +88,7 @@ npm install -D @tanstack/solid-devtools @tanstack/devtools-vite
 ```
 
 ```tsx
-import { render } from 'solid-js/web'
+import { render } from '@solidjs/web'
 import { TanStackDevtools } from '@tanstack/solid-devtools'
 import { SolidQueryDevtoolsPanel } from '@tanstack/solid-query-devtools'
 import App from './App'

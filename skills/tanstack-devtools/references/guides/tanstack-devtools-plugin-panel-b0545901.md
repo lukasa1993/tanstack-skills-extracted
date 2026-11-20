@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-devtools-plugin-panel"></a>
 
-Published skill · `@tanstack/devtools@0.16.0`.
+Published skill · `@tanstack/devtools@0.17.0`.
 
 [Topic index](../plugins-marketplace.md) · [Source provenance](../SOURCES.md)
 
@@ -71,7 +71,7 @@ Event names are suffixes only. The `pluginId` is prepended automatically: `'stor
 ### Step 2: Build the Solid.js Panel Component
 
 ```tsx
-/** @jsxImportSource solid-js */
+/** @jsxImportSource @solidjs/web */
 import { createSignal, onCleanup, For } from 'solid-js'
 import {
   MainPanel,

@@ -1,6 +1,6 @@
 # Devtools Vite Plugin — Subsystem Details
 
-[Guide and prerequisites](./tanstack-devtools-vite-plugin-cfc5c562.md) · Published skill · `@tanstack/devtools-vite@0.8.6`.
+[Guide and prerequisites](./tanstack-devtools-vite-plugin-cfc5c562.md) · Published skill · `@tanstack/devtools-vite@0.8.7`.
 
 ## Subsystem Details
 
@@ -47,7 +47,7 @@ Bidirectional console piping between client and server. Injects runtime code (II
 1. Wraps `console[level]` to batch and POST entries to `<viteServerUrl>/__tsd/console-pipe/server`
 2. These are then broadcast to all SSE clients
 
-**Entry file detection:** looks for `<html` tag, `StartClient`, `hydrateRoot`, `createRoot`, or `solid-js/web` + `render(` in code.
+**Entry file detection:** looks for `<html` tag, `StartClient`, `hydrateRoot`, `createRoot`, or `solid-js/web` / `@solidjs/web` + `render(` in code.
 
 **Source files:** `packages/devtools-vite/src/virtual-console.ts`, `packages/devtools-vite/src/utils.ts` (middleware handlers)
 

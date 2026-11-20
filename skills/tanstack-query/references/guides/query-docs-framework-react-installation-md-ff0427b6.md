@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-react-installation-md"></a>
 
-Release-matched documentation · `@tanstack/react-query@5.108.0`.
+Release-matched documentation · `@tanstack/react-query@5.108.1`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -44,7 +44,7 @@ deno add @tanstack/react-query
 
 React Query is compatible with React v18+ and works with ReactDOM and React Native.
 
-> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/examples/react/simple/README.md) or [basic](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/examples/react/basic/README.md) examples!
+> Wanna give it a spin before you download? Try out the [simple](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/examples/react/simple/README.md) or [basic](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/examples/react/basic/README.md) examples!
 
 [//]: # 'Compatibility'
 
@@ -56,9 +56,9 @@ If you're not using a module bundler or package manager, you can also use this l
 
 ```html
 <script type="module">
-  import React from 'https://esm.sh/react@18.2.0'
-  import ReactDOM from 'https://esm.sh/react-dom@18.2.0'
   import { QueryClient } from 'https://esm.sh/@tanstack/react-query'
+  import ReactDOM from 'https://esm.sh/react-dom@18.2.0'
+  import React from 'https://esm.sh/react@18.2.0'
 </script>
 ```
 
@@ -83,7 +83,7 @@ Opera >= 77
 
 ### Recommendations
 
-It is recommended to also use our [ESLint Plugin Query](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/docs/eslint/eslint-plugin-query.md) to help you catch bugs and inconsistencies while you code. You can install it via:
+It is recommended to also use our [ESLint Plugin Query](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/eslint/eslint-plugin-query.md) to help you catch bugs and inconsistencies while you code. You can install it via:
 
 ```sh
 npm i -D @tanstack/eslint-plugin-query

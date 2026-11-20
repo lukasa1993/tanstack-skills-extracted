@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-reactivity-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.108.0`.
+Release-matched documentation · `@tanstack/vue-query@5.108.1`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -160,7 +160,7 @@ export function useUserProjects(userId: MaybeRef<string>) {
 }
 ```
 
-More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/11312f9e979f783d206955f6eb1433b44f80dada/docs/framework/vue/reference/functions/useQuery.md) page.
+More details on this option can be found on the [useQuery reference](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/vue/reference/functions/useQuery.md) page.
 
 The other query options accept refs as well, and pick up changes to them. Reactive getters, however, are only resolved in `queryKey` and `enabled`, since a function is already a valid value for options such as `select` or `staleTime`.
 

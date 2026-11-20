@@ -1,6 +1,6 @@
 # Production Pipelines — Release Checks
 
-[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@1.2.0`.
+[Guide and prerequisites](./tanstack-markdown-production-pipelines-dc3fb9bc.md) · Published skill · `@tanstack/markdown@1.2.1`.
 
 ## Release Checks
 

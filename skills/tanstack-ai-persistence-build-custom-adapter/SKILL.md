@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   internal: true
   tanstack-package: "@tanstack/ai-persistence"
-  tanstack-package-version: "1.0.1"
+  tanstack-package-version: "1.1.0"
   tanstack-source-skill: "ai-persistence/build-custom-adapter"
 ---
 

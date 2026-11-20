@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-vue-guides-query-keys-md"></a>
 
-Release-matched documentation · `@tanstack/vue-query@5.108.0`.
+Release-matched documentation · `@tanstack/vue-query@5.108.1`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

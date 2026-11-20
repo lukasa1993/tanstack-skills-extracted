@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-client-persistence"></a>
 
-Published skill · `@tanstack/ai@1.5.0`.
+Published skill · `@tanstack/ai@1.7.0`.
 
 [Topic index](../persistence-coordination.md) · [Source provenance](../SOURCES.md)
 

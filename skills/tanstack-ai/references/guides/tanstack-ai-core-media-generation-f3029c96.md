@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ai-core-media-generation"></a>
 
-Published skill · `@tanstack/ai@1.5.0`.
+Published skill · `@tanstack/ai@1.7.0`.
 
 [Topic index](../media.md) · [Source provenance](../SOURCES.md)
 

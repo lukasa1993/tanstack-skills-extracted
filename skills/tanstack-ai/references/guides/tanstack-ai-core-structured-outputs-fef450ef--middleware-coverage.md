@@ -1,6 +1,6 @@
 # Structured Outputs — Middleware coverage
 
-[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.5.0`.
+[Guide and prerequisites](./tanstack-ai-core-structured-outputs-fef450ef.md) · Published skill · `@tanstack/ai@1.7.0`.
 
 ## Middleware coverage
 

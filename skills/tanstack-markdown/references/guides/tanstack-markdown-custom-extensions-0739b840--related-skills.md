@@ -1,6 +1,6 @@
 # Custom Extensions — Related Skills
 
-[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@1.2.0`.
+[Guide and prerequisites](./tanstack-markdown-custom-extensions-0739b840.md) · Published skill · `@tanstack/markdown@1.2.1`.
 
 ## Related Skills
 
