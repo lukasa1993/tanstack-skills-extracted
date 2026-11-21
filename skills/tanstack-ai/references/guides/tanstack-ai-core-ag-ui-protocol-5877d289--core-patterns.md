@@ -1,6 +1,6 @@
 # Ag Ui Protocol — Core Patterns
 
-[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@1.7.0`.
+[Guide and prerequisites](./tanstack-ai-core-ag-ui-protocol-5877d289.md) · Published skill · `@tanstack/ai@1.8.0`.
 
 ## Core Patterns
 

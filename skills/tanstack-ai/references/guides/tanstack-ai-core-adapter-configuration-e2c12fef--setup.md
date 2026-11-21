@@ -1,6 +1,6 @@
 # Adapter Configuration — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.7.0`.
+[Guide and prerequisites](./tanstack-ai-core-adapter-configuration-e2c12fef.md) · Published skill · `@tanstack/ai@1.8.0`.
 
 ## Setup
 

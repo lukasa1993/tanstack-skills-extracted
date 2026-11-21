@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-preact-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.108.1`.
+Release-matched documentation · `@tanstack/preact-query@5.108.2`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -12,6 +12,6 @@ Release-matched documentation · `@tanstack/preact-query@5.108.1`.
 [//]: # 'Example2'
 [//]: # 'OfflineExampleLink'
 
-We also have an extensive [offline example](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/examples/preact/offline-preact-iso/README.md) that covers both queries and mutations.
+We also have an extensive [offline example](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/examples/preact/offline-preact-iso/README.md) that covers both queries and mutations.
 
 [//]: # 'OfflineExampleLink'

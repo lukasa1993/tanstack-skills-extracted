@@ -1,6 +1,6 @@
 # Chat Experience — Overview
 
-[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.7.0`.
+[Guide and prerequisites](./tanstack-ai-core-chat-experience-6cd3502a.md) · Published skill · `@tanstack/ai@1.8.0`.
 
 # Chat Experience
 

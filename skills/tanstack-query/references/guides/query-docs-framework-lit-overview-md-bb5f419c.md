@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-lit-overview-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.41`.
+Release-matched documentation · `@tanstack/lit-query@0.2.42`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -18,12 +18,12 @@ Lit Query exposes those features through [Lit reactive controllers](https://lit.
 
 Most Lit applications use these APIs:
 
-- [`QueryClientProvider`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/classes/QueryClientProvider.md) to provide a `QueryClient` through Lit context
-- [`createQueryController`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/createQueryController.md) for queries
-- [`createQueriesController`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/createQueriesController.md) for dynamic parallel queries
-- [`createMutationController`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/createMutationController.md) for mutations
-- [`createInfiniteQueryController`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/createInfiniteQueryController.md) for infinite queries
-- [`useIsFetching`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/useIsFetching.md), [`useIsMutating`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/useIsMutating.md), and [`useMutationState`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/useMutationState.md) for cache state indicators
+- [`QueryClientProvider`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/classes/QueryClientProvider.md) to provide a `QueryClient` through Lit context
+- [`createQueryController`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/createQueryController.md) for queries
+- [`createQueriesController`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/createQueriesController.md) for dynamic parallel queries
+- [`createMutationController`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/createMutationController.md) for mutations
+- [`createInfiniteQueryController`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/createInfiniteQueryController.md) for infinite queries
+- [`useIsFetching`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/useIsFetching.md), [`useIsMutating`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/useIsMutating.md), and [`useMutationState`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/useMutationState.md) for cache state indicators
 
 The adapter also re-exports TanStack Query Core APIs from `@tanstack/lit-query`, so examples in the Lit docs use `@tanstack/lit-query` as the user-facing import path.
 
@@ -93,4 +93,4 @@ Render the provider above your query consumers:
 
 Lit Devtools are not available yet. Use the cache APIs and the generated API reference while the adapter matures.
 
-Start with [Installation](./query-docs-framework-lit-installation-md-e6a1af16.md#source-query-docs-framework-lit-installation-md), then [Quick Start](./query-docs-framework-lit-quick-start-md-2745312c.md#source-query-docs-framework-lit-quick-start-md), and use the [Reactive Controllers vs Hooks](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/guides/reactive-controllers-vs-hooks.md) guide if you are coming from React Query.
+Start with [Installation](./query-docs-framework-lit-installation-md-e6a1af16.md#source-query-docs-framework-lit-installation-md), then [Quick Start](./query-docs-framework-lit-quick-start-md-2745312c.md#source-query-docs-framework-lit-quick-start-md), and use the [Reactive Controllers vs Hooks](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/guides/reactive-controllers-vs-hooks.md) guide if you are coming from React Query.

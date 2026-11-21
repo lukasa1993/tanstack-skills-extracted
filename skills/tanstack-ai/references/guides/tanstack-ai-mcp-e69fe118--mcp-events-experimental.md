@@ -1,6 +1,6 @@
 # Ai Mcp — MCP Events (experimental)
 
-[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.3.0`.
+[Guide and prerequisites](./tanstack-ai-mcp-e69fe118.md) · Published skill · `@tanstack/ai-mcp@1.3.1`.
 
 ## MCP Events (experimental)
 

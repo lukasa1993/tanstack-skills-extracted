@@ -1,6 +1,6 @@
 # Tool Calling — Setup
 
-[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.7.0`.
+[Guide and prerequisites](./tanstack-ai-core-tool-calling-e2b5ca3c.md) · Published skill · `@tanstack/ai@1.8.0`.
 
 ## Setup
 

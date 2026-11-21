@@ -2,11 +2,11 @@
 
 <a id="source-query-docs-framework-lit-guides-mutations-md"></a>
 
-Release-matched documentation · `@tanstack/lit-query@0.2.41`.
+Release-matched documentation · `@tanstack/lit-query@0.2.42`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-Unlike queries, mutations are used to create, update, delete, or otherwise perform server side effects. In Lit, use [`createMutationController`](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/docs/framework/lit/reference/functions/createMutationController.md).
+Unlike queries, mutations are used to create, update, delete, or otherwise perform server side effects. In Lit, use [`createMutationController`](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/lit/reference/functions/createMutationController.md).
 
 ```ts
 import {
@@ -164,4 +164,4 @@ private readonly favoriteMutation = createMutationController(
 )
 ```
 
-For the exact runnable flow, see the [Pagination example](https://github.com/TanStack/query/blob/f6689e04be493e2e83f9c93d7e478f92c3e5d328/examples/lit/pagination/README.md).
+For the exact runnable flow, see the [Pagination example](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/examples/lit/pagination/README.md).
