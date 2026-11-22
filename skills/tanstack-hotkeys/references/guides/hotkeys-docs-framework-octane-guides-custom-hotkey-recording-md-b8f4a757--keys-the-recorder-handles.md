@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Keys the recorder handles
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 ## Keys the recorder handles
 

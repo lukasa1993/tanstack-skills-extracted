@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -78,6 +78,7 @@ While the user works through a sequence:
 - A key that doesn't continue the sequence starts it over. If that key is the sequence's first step, it begins a new attempt, so `G X G G` completes `['G', 'G']`.
 - Holding a key doesn't count as pressing it again, so holding `G` doesn't complete `['G', 'G']`.
 - Pressing a modifier alone, such as Shift, neither advances the sequence nor starts it over.
+- Lock keys such as CapsLock and NumLock, Fn, and dead keys count only when they match a step. Otherwise they don't start the sequence over, unless they match a step of another sequence. A dead key that matches no step leaves the sequence to the next key, which types its character.
 
 [Sequences allow 1 second between steps](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains the default.
 

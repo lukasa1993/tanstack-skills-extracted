@@ -1,6 +1,6 @@
 # Sensible Defaults — Keys match the character the user types
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 ## Keys match the character the user types
 
@@ -10,7 +10,7 @@ A logical binding such as `Mod+S` or `?` matches `event.key`, the character the 
 
 - **Non-Latin layouts.** On a Russian layout, the S position types `ы`. `Mod+S` still matches there, so shortcuts work without switching layouts.
 - **macOS Option.** Option changes the character, so Option+S types `ß`. `Alt+S` still matches. It follows the letter printed on the key: on a French AZERTY Mac, `Alt+A` fires on the key labeled A, which sits in the US Q position. The matcher reads that letter from `event.keyCode`, and falls back to the key's position when `keyCode` names no letter. Option can also type an ASCII symbol on a letter key, such as `@` for German Option+L, and `Alt+L` still matches.
-- **Dead keys and the digit row.** A dead key reports `Dead`, and AZERTY's digit row types `&` and `é` for `1` and `2`. The key's position resolves the shortcut, so `Mod+1` works on AZERTY.
+- **Dead keys and the digit row.** A dead key reports `Dead`, and AZERTY's digit row types `&` and `é` for `1` and `2`. The key's position resolves the shortcut, so `Mod+1` works on AZERTY. The exception is `-`, `+`, and `=` typed with Control alone, or Command alone on macOS, because those presses zoom the page. AZERTY types `-` on the 6 key, so Ctrl+- zooms out instead of firing `Mod+6`, and Ctrl+Shift+6 still fires `Mod+6`. A few layouts type no digit there with Shift either, such as Thai on the 3 key and Programmer Dvorak on the 6 and 9 keys. To keep that shortcut, also bind the key's position, such as `Mod+[Digit3]`.
 - **Symbols typed with Shift.** Shift+1 types `!` on a US layout, and `Shift+1` still matches.
 
 Otherwise, the character the key reports wins, wherever the key sits:

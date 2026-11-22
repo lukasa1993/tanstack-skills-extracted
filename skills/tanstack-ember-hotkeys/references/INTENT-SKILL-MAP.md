@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/ember-hotkeys@0.14.2
+Published package: @tanstack/ember-hotkeys@0.14.3
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

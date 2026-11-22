@@ -1,6 +1,6 @@
 # Hotkeys — Handle duplicate hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 ## Handle duplicate hotkeys
 

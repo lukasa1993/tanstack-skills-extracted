@@ -1,6 +1,6 @@
 # Formatting Display — Parse, compare, and store hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 ## Parse, compare, and store hotkeys
 

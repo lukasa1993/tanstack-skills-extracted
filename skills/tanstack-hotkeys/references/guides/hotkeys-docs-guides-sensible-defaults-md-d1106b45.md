@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -13,7 +13,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--overview.md) — 1 KiB
 - [At a glance](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--at-a-glance.md) — 2 KiB
 - [`Mod` follows the platform](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--mod-follows-the-platform.md) — 1 KiB
-- [Keys match the character the user types](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--keys-match-the-character-the-user-types.md) — 9 KiB
+- [Keys match the character the user types](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--keys-match-the-character-the-user-types.md) — 10 KiB
 - [Modifiers must match exactly](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--modifiers-must-match-exactly.md) — 3 KiB
 - [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--typing-in-inputs-does-not-trigger-shortcuts.md) — 3 KiB
 - [Focused controls keep their own keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--focused-controls-keep-their-own-keys.md) — 3 KiB

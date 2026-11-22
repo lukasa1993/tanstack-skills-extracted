@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-alpine-hotkeys"></a>
 
-Published skill · `@tanstack/alpine-hotkeys@0.15.2`.
+Published skill · `@tanstack/alpine-hotkeys@0.15.3`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-agent-skills-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

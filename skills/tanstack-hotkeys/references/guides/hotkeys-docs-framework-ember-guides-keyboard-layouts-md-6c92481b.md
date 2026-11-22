@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-keyboard-layouts-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -68,4 +68,4 @@ There are 26 sets, which cover 33 layouts, such as `UkKeys`, `FrenchKeys`, `Swed
 
 ## Example
 
-The [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/ember/keyboard-layouts) registers German keys and shows which hotkeys fire on a German keyboard.
+The [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/ember/keyboard-layouts) registers German keys and shows which hotkeys fire on a German keyboard.

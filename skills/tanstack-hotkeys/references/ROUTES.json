@@ -12,7 +12,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md",
       "sourcePath": "docs/framework/alpine/guides/app-hotkeys.md",
       "bytes": 10558,
@@ -36,7 +36,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md",
       "sourcePath": "docs/framework/alpine/guides/cheat-sheet-ui-helpers.md",
       "bytes": 10458,
@@ -60,7 +60,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md",
       "sourcePath": "docs/framework/alpine/guides/custom-hotkey-recording.md",
       "bytes": 1753,
@@ -114,7 +114,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md",
       "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
       "bytes": 12694,
@@ -138,7 +138,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md",
       "sourcePath": "docs/framework/alpine/guides/held-key-state-helpers.md",
       "bytes": 5237,
@@ -162,7 +162,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-hints-md-91910f46.md",
       "sourcePath": "docs/framework/alpine/guides/hotkey-hints.md",
       "bytes": 5775,
@@ -186,7 +186,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md",
       "sourcePath": "docs/framework/alpine/guides/hotkey-manager.md",
       "bytes": 9141,
@@ -210,7 +210,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md",
       "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
       "bytes": 2002,
@@ -274,7 +274,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-keyboard-layouts-md-7e67b106.md",
       "sourcePath": "docs/framework/alpine/guides/keyboard-layouts.md",
       "bytes": 4938,
@@ -298,16 +298,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
       "sourcePath": "docs/framework/alpine/guides/sequences.md",
-      "bytes": 11910,
+      "bytes": 12193,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
-          "bytes": 11910
+          "bytes": 12193
         }
       ],
       "examples": []
@@ -322,7 +322,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-alpine-quick-start-md-3845b066.md",
       "sourcePath": "docs/framework/alpine/quick-start.md",
       "bytes": 10629,
@@ -346,7 +346,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md",
       "sourcePath": "docs/framework/ember/guides/app-hotkeys.md",
       "bytes": 10647,
@@ -370,7 +370,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md",
       "sourcePath": "docs/framework/ember/guides/cheat-sheet-ui-helpers.md",
       "bytes": 10952,
@@ -394,7 +394,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md",
       "sourcePath": "docs/framework/ember/guides/custom-hotkey-recording.md",
       "bytes": 1661,
@@ -448,7 +448,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md",
       "sourcePath": "docs/framework/ember/guides/formatting-display.md",
       "bytes": 2179,
@@ -512,7 +512,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md",
       "sourcePath": "docs/framework/ember/guides/held-key-state-helpers.md",
       "bytes": 5001,
@@ -536,7 +536,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-hints-md-12a744d3.md",
       "sourcePath": "docs/framework/ember/guides/hotkey-hints.md",
       "bytes": 5955,
@@ -560,7 +560,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md",
       "sourcePath": "docs/framework/ember/guides/hotkey-manager.md",
       "bytes": 9209,
@@ -584,7 +584,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md",
       "sourcePath": "docs/framework/ember/guides/hotkeys.md",
       "bytes": 1956,
@@ -648,7 +648,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-keyboard-layouts-md-6c92481b.md",
       "sourcePath": "docs/framework/ember/guides/keyboard-layouts.md",
       "bytes": 4641,
@@ -672,16 +672,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
       "sourcePath": "docs/framework/ember/guides/sequences.md",
-      "bytes": 12179,
+      "bytes": 12462,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
-          "bytes": 12179
+          "bytes": 12462
         }
       ],
       "examples": []
@@ -696,7 +696,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md",
       "sourcePath": "docs/framework/ember/quick-start.md",
       "bytes": 11143,
@@ -720,7 +720,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-app-hotkeys-md-ade4f49f.md",
       "sourcePath": "docs/framework/octane/guides/app-hotkeys.md",
       "bytes": 10073,
@@ -744,7 +744,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-cheat-sheet-ui-helpers-md-3e802195.md",
       "sourcePath": "docs/framework/octane/guides/cheat-sheet-ui-helpers.md",
       "bytes": 9566,
@@ -768,7 +768,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md",
       "sourcePath": "docs/framework/octane/guides/custom-hotkey-recording.md",
       "bytes": 1670,
@@ -822,7 +822,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md",
       "sourcePath": "docs/framework/octane/guides/formatting-display.md",
       "bytes": 2266,
@@ -886,7 +886,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-held-key-state-helpers-md-8f82c6a9.md",
       "sourcePath": "docs/framework/octane/guides/held-key-state-helpers.md",
       "bytes": 4212,
@@ -910,7 +910,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-hints-md-9965291c.md",
       "sourcePath": "docs/framework/octane/guides/hotkey-hints.md",
       "bytes": 5075,
@@ -934,7 +934,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-manager-md-1ee89e7f.md",
       "sourcePath": "docs/framework/octane/guides/hotkey-manager.md",
       "bytes": 8978,
@@ -958,7 +958,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md",
       "sourcePath": "docs/framework/octane/guides/hotkeys-provider-and-scopes.md",
       "bytes": 12410,
@@ -982,7 +982,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md",
       "sourcePath": "docs/framework/octane/guides/hotkeys.md",
       "bytes": 1993,
@@ -1046,7 +1046,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-keyboard-layouts-md-68141efd.md",
       "sourcePath": "docs/framework/octane/guides/keyboard-layouts.md",
       "bytes": 4396,
@@ -1070,16 +1070,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
       "sourcePath": "docs/framework/octane/guides/sequences.md",
-      "bytes": 11177,
+      "bytes": 11460,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
-          "bytes": 11177
+          "bytes": 11460
         }
       ],
       "examples": []
@@ -1094,7 +1094,7 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md",
       "sourcePath": "docs/framework/octane/quick-start.md",
       "bytes": 10003,
@@ -1116,7 +1116,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/alpine-hotkeys",
-      "version": "0.15.2",
+      "version": "0.15.3",
       "file": "references/guides/tanstack-alpine-hotkeys-b9b64077.md",
       "sourcePath": "alpine-hotkeys",
       "bytes": 11823,
@@ -1143,7 +1143,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/angular-hotkeys",
-      "version": "0.25.2",
+      "version": "0.25.3",
       "file": "references/guides/tanstack-angular-hotkeys-aae98366.md",
       "sourcePath": "angular-hotkeys",
       "bytes": 1027,
@@ -1190,7 +1190,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ember-hotkeys",
-      "version": "0.14.2",
+      "version": "0.14.3",
       "file": "references/guides/tanstack-ember-hotkeys-c89ea140.md",
       "sourcePath": "ember-hotkeys",
       "bytes": 11740,
@@ -1217,7 +1217,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/tanstack-hotkeys-app-hotkeys-62e73124.md",
       "sourcePath": "app-hotkeys",
       "bytes": 3507,
@@ -1244,7 +1244,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/tanstack-hotkeys-core-62518e1a.md",
       "sourcePath": "hotkeys-core",
       "bytes": 10708,
@@ -1266,7 +1266,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/lit-hotkeys",
-      "version": "0.27.2",
+      "version": "0.27.3",
       "file": "references/guides/tanstack-lit-hotkeys-f7e7a513.md",
       "sourcePath": "lit-hotkeys",
       "bytes": 12174,
@@ -1293,7 +1293,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/octane-hotkeys",
-      "version": "0.15.2",
+      "version": "0.15.3",
       "file": "references/guides/tanstack-octane-hotkeys-a0fade91.md",
       "sourcePath": "octane-hotkeys",
       "bytes": 10916,
@@ -1320,7 +1320,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/preact-hotkeys",
-      "version": "0.24.2",
+      "version": "0.24.3",
       "file": "references/guides/tanstack-preact-hotkeys-d76f076a.md",
       "sourcePath": "preact-hotkeys",
       "bytes": 11378,
@@ -1347,7 +1347,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/react-hotkeys",
-      "version": "0.27.1",
+      "version": "0.27.2",
       "file": "references/guides/tanstack-react-hotkeys-32df5886.md",
       "sourcePath": "react-hotkeys",
       "bytes": 11864,
@@ -1374,7 +1374,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-hotkeys",
-      "version": "0.25.2",
+      "version": "0.25.3",
       "file": "references/guides/tanstack-solid-hotkeys-a9ad9600.md",
       "sourcePath": "solid-hotkeys",
       "bytes": 11266,
@@ -1401,7 +1401,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/svelte-hotkeys",
-      "version": "0.25.2",
+      "version": "0.25.3",
       "file": "references/guides/tanstack-svelte-hotkeys-8bce2478.md",
       "sourcePath": "svelte-hotkeys",
       "bytes": 12533,
@@ -1428,7 +1428,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-hotkeys",
-      "version": "0.25.2",
+      "version": "0.25.3",
       "file": "references/guides/tanstack-vue-hotkeys-ef953b39.md",
       "sourcePath": "vue-hotkeys",
       "bytes": 11355,
@@ -1455,7 +1455,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-agent-skills-md-6db6b33b.md",
       "sourcePath": "docs/agent-skills.md",
       "bytes": 8735,
@@ -1477,7 +1477,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
       "sourcePath": "docs/devtools.md",
       "bytes": 10951,
@@ -1499,7 +1499,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
       "sourcePath": "docs/installation.md",
       "bytes": 7315,
@@ -1521,7 +1521,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
       "sourcePath": "docs/overview.md",
       "bytes": 7944,
@@ -1545,7 +1545,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md",
       "sourcePath": "docs/framework/react/guides/app-hotkeys.md",
       "bytes": 11460,
@@ -1569,7 +1569,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md",
       "sourcePath": "docs/framework/react/guides/cheat-sheet-ui-helpers.md",
       "bytes": 9665,
@@ -1593,7 +1593,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md",
       "sourcePath": "docs/framework/react/guides/custom-hotkey-recording.md",
       "bytes": 1661,
@@ -1647,7 +1647,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
       "sourcePath": "docs/framework/react/guides/formatting-display.md",
       "bytes": 2298,
@@ -1711,7 +1711,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md",
       "sourcePath": "docs/framework/react/guides/held-key-state-helpers.md",
       "bytes": 4252,
@@ -1735,7 +1735,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-hints-md-abc64c12.md",
       "sourcePath": "docs/framework/react/guides/hotkey-hints.md",
       "bytes": 5110,
@@ -1759,7 +1759,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md",
       "sourcePath": "docs/framework/react/guides/hotkey-manager.md",
       "bytes": 8863,
@@ -1783,7 +1783,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md",
       "sourcePath": "docs/framework/react/guides/hotkeys-provider-and-scopes.md",
       "bytes": 12963,
@@ -1807,7 +1807,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
       "sourcePath": "docs/framework/react/guides/hotkeys.md",
       "bytes": 1995,
@@ -1871,7 +1871,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-keyboard-layouts-md-3f63f616.md",
       "sourcePath": "docs/framework/react/guides/keyboard-layouts.md",
       "bytes": 4379,
@@ -1895,16 +1895,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
       "sourcePath": "docs/framework/react/guides/sequences.md",
-      "bytes": 11202,
+      "bytes": 11485,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
-          "bytes": 11202
+          "bytes": 11485
         }
       ],
       "examples": []
@@ -1919,7 +1919,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
       "sourcePath": "docs/framework/react/quick-start.md",
       "bytes": 10018,
@@ -1943,7 +1943,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-app-hotkeys-md-426d55b2.md",
       "sourcePath": "docs/framework/preact/guides/app-hotkeys.md",
       "bytes": 10141,
@@ -1967,7 +1967,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md",
       "sourcePath": "docs/framework/preact/guides/cheat-sheet-ui-helpers.md",
       "bytes": 9680,
@@ -1991,7 +1991,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md",
       "sourcePath": "docs/framework/preact/guides/custom-hotkey-recording.md",
       "bytes": 1670,
@@ -2045,7 +2045,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
       "sourcePath": "docs/framework/preact/guides/formatting-display.md",
       "bytes": 2263,
@@ -2109,7 +2109,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-held-key-state-helpers-md-4ba7e38b.md",
       "sourcePath": "docs/framework/preact/guides/held-key-state-helpers.md",
       "bytes": 4262,
@@ -2133,7 +2133,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-hints-md-8045d200.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-hints.md",
       "bytes": 5100,
@@ -2157,7 +2157,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-manager-md-60f997b1.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-manager.md",
       "bytes": 8882,
@@ -2181,7 +2181,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys-provider-and-scopes.md",
       "bytes": 12681,
@@ -2205,7 +2205,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys.md",
       "bytes": 2006,
@@ -2269,7 +2269,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-keyboard-layouts-md-023c2fea.md",
       "sourcePath": "docs/framework/preact/guides/keyboard-layouts.md",
       "bytes": 4384,
@@ -2293,16 +2293,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
       "sourcePath": "docs/framework/preact/guides/sequences.md",
-      "bytes": 11221,
+      "bytes": 11504,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
-          "bytes": 11221
+          "bytes": 11504
         }
       ],
       "examples": []
@@ -2317,7 +2317,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md",
       "sourcePath": "docs/framework/preact/quick-start.md",
       "bytes": 10058,
@@ -2341,7 +2341,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md",
       "sourcePath": "docs/framework/solid/guides/app-hotkeys.md",
       "bytes": 10431,
@@ -2365,7 +2365,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md-db8cc71d.md",
       "sourcePath": "docs/framework/solid/guides/cheat-sheet-ui-helpers.md",
       "bytes": 10066,
@@ -2389,7 +2389,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md",
       "sourcePath": "docs/framework/solid/guides/custom-hotkey-recording.md",
       "bytes": 1661,
@@ -2443,7 +2443,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
       "sourcePath": "docs/framework/solid/guides/formatting-display.md",
       "bytes": 2250,
@@ -2507,7 +2507,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md",
       "sourcePath": "docs/framework/solid/guides/held-key-state-helpers.md",
       "bytes": 4502,
@@ -2531,7 +2531,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-hints-md-49dc3efa.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-hints.md",
       "bytes": 5446,
@@ -2555,7 +2555,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-manager-md-d1ae34aa.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-manager.md",
       "bytes": 9012,
@@ -2579,7 +2579,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys-provider-and-scopes.md",
       "bytes": 12932,
@@ -2603,7 +2603,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys.md",
       "bytes": 2032,
@@ -2667,7 +2667,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-keyboard-layouts-md-9cc5d7a6.md",
       "sourcePath": "docs/framework/solid/guides/keyboard-layouts.md",
       "bytes": 4400,
@@ -2691,16 +2691,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
       "sourcePath": "docs/framework/solid/guides/sequences.md",
-      "bytes": 11365,
+      "bytes": 11648,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
-          "bytes": 11365
+          "bytes": 11648
         }
       ],
       "examples": []
@@ -2715,7 +2715,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md",
       "sourcePath": "docs/framework/solid/quick-start.md",
       "bytes": 10193,
@@ -2739,7 +2739,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md",
       "sourcePath": "docs/framework/svelte/guides/app-hotkeys.md",
       "bytes": 10394,
@@ -2763,7 +2763,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md",
       "sourcePath": "docs/framework/svelte/guides/cheat-sheet-ui-helpers.md",
       "bytes": 9783,
@@ -2787,7 +2787,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md",
       "sourcePath": "docs/framework/svelte/guides/custom-hotkey-recording.md",
       "bytes": 1670,
@@ -2841,7 +2841,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
       "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
       "bytes": 2232,
@@ -2905,7 +2905,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md",
       "sourcePath": "docs/framework/svelte/guides/held-key-state-helpers.md",
       "bytes": 4394,
@@ -2929,7 +2929,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-hints-md-3d366fbe.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-hints.md",
       "bytes": 5444,
@@ -2953,7 +2953,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-manager.md",
       "bytes": 9387,
@@ -2977,7 +2977,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys-provider-and-scopes.md",
       "bytes": 13160,
@@ -3001,7 +3001,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
       "bytes": 1967,
@@ -3065,7 +3065,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-keyboard-layouts-md-a33262ea.md",
       "sourcePath": "docs/framework/svelte/guides/keyboard-layouts.md",
       "bytes": 4615,
@@ -3089,16 +3089,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
       "sourcePath": "docs/framework/svelte/guides/sequences.md",
-      "bytes": 11271,
+      "bytes": 11554,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
-          "bytes": 11271
+          "bytes": 11554
         }
       ],
       "examples": []
@@ -3113,7 +3113,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "bytes": 10292,
@@ -3137,7 +3137,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md",
       "sourcePath": "docs/framework/vue/guides/app-hotkeys.md",
       "bytes": 10455,
@@ -3161,7 +3161,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md",
       "sourcePath": "docs/framework/vue/guides/cheat-sheet-ui-helpers.md",
       "bytes": 9912,
@@ -3185,7 +3185,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md",
       "sourcePath": "docs/framework/vue/guides/custom-hotkey-recording.md",
       "bytes": 1643,
@@ -3239,7 +3239,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
       "sourcePath": "docs/framework/vue/guides/formatting-display.md",
       "bytes": 2217,
@@ -3303,7 +3303,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md",
       "sourcePath": "docs/framework/vue/guides/held-key-state-helpers.md",
       "bytes": 4307,
@@ -3327,7 +3327,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-hints-md-bd147de8.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-hints.md",
       "bytes": 5452,
@@ -3351,7 +3351,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-manager-md-0dad2837.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-manager.md",
       "bytes": 9027,
@@ -3375,7 +3375,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys-provider-and-scopes.md",
       "bytes": 2542,
@@ -3454,7 +3454,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys.md",
       "bytes": 1934,
@@ -3518,7 +3518,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-keyboard-layouts-md-d2fcb108.md",
       "sourcePath": "docs/framework/vue/guides/keyboard-layouts.md",
       "bytes": 4489,
@@ -3542,16 +3542,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
       "sourcePath": "docs/framework/vue/guides/sequences.md",
-      "bytes": 11132,
+      "bytes": 11415,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
-          "bytes": 11132
+          "bytes": 11415
         }
       ],
       "examples": []
@@ -3566,7 +3566,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
       "bytes": 10315,
@@ -3590,7 +3590,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md",
       "sourcePath": "docs/framework/angular/guides/app-hotkeys.md",
       "bytes": 10541,
@@ -3614,7 +3614,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md",
       "sourcePath": "docs/framework/angular/guides/cheat-sheet-ui-helpers.md",
       "bytes": 10560,
@@ -3638,7 +3638,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md",
       "sourcePath": "docs/framework/angular/guides/custom-hotkey-recording.md",
       "bytes": 1679,
@@ -3692,7 +3692,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
       "sourcePath": "docs/framework/angular/guides/formatting-display.md",
       "bytes": 2273,
@@ -3756,7 +3756,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md",
       "sourcePath": "docs/framework/angular/guides/held-key-state-helpers.md",
       "bytes": 4891,
@@ -3780,7 +3780,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-hints.md",
       "bytes": 5912,
@@ -3804,7 +3804,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-manager-md-190fe5ab.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-manager.md",
       "bytes": 9518,
@@ -3828,7 +3828,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
       "sourcePath": "docs/framework/angular/guides/hotkeys.md",
       "bytes": 1978,
@@ -3892,7 +3892,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-keyboard-layouts-md-864b9422.md",
       "sourcePath": "docs/framework/angular/guides/keyboard-layouts.md",
       "bytes": 4487,
@@ -3916,7 +3916,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md",
       "sourcePath": "docs/framework/angular/guides/provide-hotkeys-and-scopes.md",
       "bytes": 2650,
@@ -3995,16 +3995,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
       "sourcePath": "docs/framework/angular/guides/sequences.md",
-      "bytes": 11830,
+      "bytes": 12113,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
-          "bytes": 11830
+          "bytes": 12113
         }
       ],
       "examples": []
@@ -4019,16 +4019,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
-      "bytes": 11381,
+      "bytes": 11548,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Inject a hotkey; Inject several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
-          "bytes": 11381
+          "bytes": 11548
         }
       ],
       "examples": []
@@ -4043,7 +4043,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md",
       "sourcePath": "docs/framework/lit/guides/app-hotkeys.md",
       "bytes": 9950,
@@ -4067,7 +4067,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md",
       "sourcePath": "docs/framework/lit/guides/cheat-sheet-ui-helpers.md",
       "bytes": 10405,
@@ -4091,7 +4091,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md",
       "sourcePath": "docs/framework/lit/guides/custom-hotkey-recording.md",
       "bytes": 1643,
@@ -4145,7 +4145,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
       "sourcePath": "docs/framework/lit/guides/formatting-display.md",
       "bytes": 2031,
@@ -4209,7 +4209,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md",
       "sourcePath": "docs/framework/lit/guides/held-key-state-helpers.md",
       "bytes": 5261,
@@ -4233,7 +4233,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-hints.md",
       "bytes": 6037,
@@ -4257,7 +4257,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-manager.md",
       "bytes": 9055,
@@ -4281,7 +4281,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
       "sourcePath": "docs/framework/lit/guides/hotkeys.md",
       "bytes": 1934,
@@ -4345,7 +4345,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-keyboard-layouts-md-03534b14.md",
       "sourcePath": "docs/framework/lit/guides/keyboard-layouts.md",
       "bytes": 4380,
@@ -4369,16 +4369,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
       "sourcePath": "docs/framework/lit/guides/sequences.md",
-      "bytes": 11473,
+      "bytes": 11756,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
-          "bytes": 11473
+          "bytes": 11756
         }
       ],
       "examples": []
@@ -4393,7 +4393,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
       "bytes": 11323,
@@ -4415,10 +4415,10 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.0",
+      "version": "0.33.1",
       "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45.md",
       "sourcePath": "docs/guides/sensible-defaults.md",
-      "bytes": 4910,
+      "bytes": 4911,
       "prerequisites": [],
       "sections": [
         {
@@ -4439,12 +4439,12 @@
         {
           "title": "Keys match the character the user types",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--keys-match-the-character-the-user-types.md",
-          "bytes": 8848
+          "bytes": 9288
         },
         {
           "title": "Modifiers must match exactly",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--modifiers-must-match-exactly.md",
-          "bytes": 2290
+          "bytes": 2508
         },
         {
           "title": "Typing in inputs does not trigger shortcuts",
@@ -4494,7 +4494,7 @@
         {
           "title": "Sequences allow 1 second between steps",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--sequences-allow-1-second-between-steps.md",
-          "bytes": 1037
+          "bytes": 1352
         },
         {
           "title": "Duplicate registrations warn",

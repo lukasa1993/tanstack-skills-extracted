@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Build a shortcut settings screen
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 ## Build a shortcut settings screen
 

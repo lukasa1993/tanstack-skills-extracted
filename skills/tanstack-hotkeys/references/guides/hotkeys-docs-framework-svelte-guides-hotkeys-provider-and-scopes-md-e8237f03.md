@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -265,4 +265,4 @@ The hotkeys [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-doc
 
 Your app doesn't need to track scopes itself. If you want to show scope state anyway, read it from the hotkey manager. See [Read scope state](./hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md#source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/svelte/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/svelte/scopes) for nested, enabled, and exclusive scopes together.

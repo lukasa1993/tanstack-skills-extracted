@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -97,4 +97,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/vue/useHeldKeys) shows held keys and their codes, and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/vue/useKeyhold) shows modifier indicators.
+The [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/vue/useHeldKeys) shows held keys and their codes, and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/vue/useKeyhold) shows modifier indicators.

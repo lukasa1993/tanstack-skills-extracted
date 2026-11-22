@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -126,4 +126,4 @@ const showHint =
 
 [Held Key State Helpers](./hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md#source-hotkeys-docs-framework-solid-guides-held-key-state-helpers-md) covers the tracker and the other held-key primitives.
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/solid/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/solid/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.

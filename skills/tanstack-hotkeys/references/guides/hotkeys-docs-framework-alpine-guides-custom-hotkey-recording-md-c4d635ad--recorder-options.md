@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 ## Recorder options
 
@@ -20,6 +20,6 @@
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for every recorder on an owner, pass `hotkeyRecorder` options to `createHotkeysScope`, such as `createHotkeysScope({ hotkeyRecorder: { idleTimeoutMs: 2000 } })`. The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/docs/framework/alpine/reference/functions/createHotkeyRecorder.md) lists the types.
+To change the defaults for every recorder on an owner, pass `hotkeyRecorder` options to `createHotkeysScope`, such as `createHotkeysScope({ hotkeyRecorder: { idleTimeoutMs: 2000 } })`. The [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/418247d9f4397edebae80224f5cd88d3de71e337/docs/framework/alpine/reference/functions/createHotkeyRecorder.md) lists the types.
 
-The [createHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/alpine/createHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/5bfc1a03ad9987034dfee6f0f0e6a35fd06466a3/examples/alpine/createHotkeyRecorder-sequences) records sequences.
+The [createHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/alpine/createHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/alpine/createHotkeyRecorder-sequences) records sequences.

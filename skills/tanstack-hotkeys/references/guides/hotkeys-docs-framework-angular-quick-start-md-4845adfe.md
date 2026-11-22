@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -33,7 +33,7 @@ export class EditorComponent {
 
 Call it in an injection context, such as a constructor or a field initializer.
 
-In apps that use zone.js, hotkeys listen outside the Angular zone, so typing doesn't run change detection on every key. When a hotkey fires, its callback runs inside the zone and marks the component for check, like Angular's own event listeners. The view updates in zoneless apps and OnPush components too. An `async` callback marks the component again when its promise settles, so changes after an `await` render as well. A hotkey registered in a service outside any component, such as a root service, has no component to mark, so its callback must write signals to update OnPush or zoneless views.
+In apps that use zone.js, hotkeys listen outside the Angular zone, so typing doesn't run change detection on every key. When a hotkey fires, its callback runs inside the zone and marks the component for check, like Angular's own event listeners. The view updates in zoneless apps and OnPush components too. In zoneless apps, change detection runs in a microtask after the callback, so a change to a signal that feeds `enabled` applies before the browser sends the next key. An `async` callback marks the component again when its promise settles, so changes after an `await` render as well. A hotkey registered in a service outside any component, such as a root service, has no component to mark, so its callback must write signals to update OnPush or zoneless views.
 
 `Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
 

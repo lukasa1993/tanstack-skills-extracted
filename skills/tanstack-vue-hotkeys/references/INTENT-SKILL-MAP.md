@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/vue-hotkeys@0.25.2
+Published package: @tanstack/vue-hotkeys@0.25.3
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |
