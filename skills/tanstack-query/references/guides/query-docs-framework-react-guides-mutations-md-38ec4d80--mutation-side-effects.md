@@ -1,10 +1,10 @@
 # Mutations — Mutation Side Effects
 
-[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.108.2`.
+[Guide and prerequisites](./query-docs-framework-react-guides-mutations-md-38ec4d80.md) · Release-matched documentation · `@tanstack/react-query@5.108.3`.
 
 ## Mutation Side Effects
 
-`useMutation` comes with some helper options that allow quick and easy side-effects at any stage during the mutation lifecycle. These come in handy for both [invalidating and refetching queries after mutations](https://github.com/TanStack/query/blob/8b2e8af0768c12500e914ac7055f007c65d8316a/docs/framework/react/guides/invalidations-from-mutations.md) and even [optimistic updates](./query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md#source-query-docs-framework-react-guides-optimistic-updates-md)
+`useMutation` comes with some helper options that allow quick and easy side-effects at any stage during the mutation lifecycle. These come in handy for both [invalidating and refetching queries after mutations](https://github.com/TanStack/query/blob/f3dda174725bf5173f1ed1bd6f9ebc04204be07a/docs/framework/react/guides/invalidations-from-mutations.md) and even [optimistic updates](./query-docs-framework-react-guides-optimistic-updates-md-f29380ea.md#source-query-docs-framework-react-guides-optimistic-updates-md)
 
 [//]: # 'Example4'
 

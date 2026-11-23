@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-svelte-guides-queries-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-query@6.4.5`.
+Release-matched documentation · `@tanstack/svelte-query@6.4.6`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 

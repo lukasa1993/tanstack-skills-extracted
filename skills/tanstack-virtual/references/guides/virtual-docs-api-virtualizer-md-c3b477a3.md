@@ -2,7 +2,7 @@
 
 <a id="source-virtual-docs-api-virtualizer-md"></a>
 
-Release-matched documentation · `@tanstack/virtual-core@3.19.12`.
+Release-matched documentation · `@tanstack/virtual-core@3.19.13`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -31,6 +31,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Optional Options: `measureElement`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-measureelement.md) — 1 KiB
 - [Optional Options: `scrollMargin`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-scrollmargin.md) — 2 KiB
 - [Optional Options: `gap`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-gap.md) — 1 KiB
+- [Optional Options: `indexAttribute`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-indexattribute.md) — 2 KiB
 - [Optional Options: `lanes`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-lanes.md) — 1 KiB
 - [Optional Options: `laneAssignmentMode`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-laneassignmentmode.md) — 1 KiB
 - [Optional Options: `anchorTo`](./virtual-docs-api-virtualizer-md-c3b477a3--optional-options-anchorto.md) — 1 KiB
@@ -69,6 +70,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="measureelement"></a>
 <a id="scrollmargin"></a>
 <a id="gap"></a>
+<a id="indexattribute"></a>
 <a id="lanes"></a>
 <a id="laneassignmentmode"></a>
 <a id="anchorto"></a>
