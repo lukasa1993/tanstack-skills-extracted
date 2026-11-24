@@ -2,13 +2,13 @@
 
 <a id="source-query-docs-framework-preact-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/preact-query@5.108.3`.
+Release-matched documentation · `@tanstack/preact-query@5.108.4`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
 [//]: # 'Example'
 
-If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/f3dda174725bf5173f1ed1bd6f9ebc04204be07a/examples/preact/simple/README.md)
+If you're looking for a fully functioning example, please have a look at our [simple StackBlitz example](https://github.com/TanStack/query/blob/b76051ab6375cda69c97be5651f04d88c93145ee/examples/preact/simple/README.md)
 
 ```tsx
 import {

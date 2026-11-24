@@ -2,7 +2,7 @@
 
 <a id="source-query-docs-framework-svelte-installation-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-query@6.4.6`.
+Release-matched documentation · `@tanstack/svelte-query@6.4.7`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -34,4 +34,4 @@ bun add @tanstack/svelte-query
 
 Svelte Query is compatible with Svelte v5.25+.
 
-> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/f3dda174725bf5173f1ed1bd6f9ebc04204be07a/examples/svelte/basic-sveltekit/README.md) example!
+> Wanna give it a spin before you download? Try out the [basic](https://github.com/TanStack/query/blob/b76051ab6375cda69c97be5651f04d88c93145ee/examples/svelte/basic-sveltekit/README.md) example!

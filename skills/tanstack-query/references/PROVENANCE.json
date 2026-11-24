@@ -8,14 +8,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/guides/mutations.md",
-      "sha256": "f1f15c9d6139756f6e86a566c937e39b77e8e05bc9e16b3fc3b6fff33bb43100",
+      "sha256": "c139449a0cec679573457aef802e0d6f5b0edd975a3860ce0b06ad9274f76f59",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -23,14 +23,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/guides/optimistic-updates.md",
       "sha256": "0c32fabbe875f00ac62e7e1f70156e95e27eca0a8446b09005ca5faf6ec1ecc7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -38,14 +38,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/guides/queries.md",
-      "sha256": "0e024cfb17aa8228970c0e359863860d1153f466db2ca8632385b648e8284020",
+      "sha256": "8e53480d2b1ded42d01f555b1664f08df61270f6bffd33a81c6839660311a86d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -53,14 +53,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/guides/query-keys.md",
-      "sha256": "03a1219bb6e98bc9110fe9979cd24a8fb483f4bed5b32f191ff2a97a1f92110c",
+      "sha256": "cd517af5b9a072cdc2bed61149302a3209a05a66597c50c30353e3ee89919ec6",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -68,14 +68,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/guides/query-options.md",
-      "sha256": "3e3f6b364e4d27ea10ffb6191f8fd6a393b6edd3034d56d93cd760e1a2155188",
+      "sha256": "924f08ae6542fc9fdc63ed94f3dee27e52e223332ba9a7149fc02fe26988c52c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -83,14 +83,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/installation.md",
-      "sha256": "8ba3d228399a373ae54b6960a61bdf43e4a8ebe580f171792e13af242fffdbdb",
+      "sha256": "12481e7ddcffb5225e8d0a83d3b4a825874db5a1bc7abe83fd21047659eec6cb",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -98,14 +98,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/overview.md",
-      "sha256": "a92a36b0d2d3e76b121ba40862c418ed60f65a448015664763142853502d8964",
+      "sha256": "44621c0d0e7873cbd23034d283cd7e22bc86442e8c1cbb8f8884911fcf69b9c6",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -113,14 +113,14 @@
       "kind": "document",
       "theme": "framework-react",
       "package": "@tanstack/react-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/react/quick-start.md",
-      "sha256": "f36d4577cf204f2443bbef81dd73e8bed5c09ff179f269173c9e4abc9d2c92c7",
+      "sha256": "74787d42b18bef6b5db6d974aa9ebca728b8bf8f643bcc2af497a33ac2fa1846",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -128,14 +128,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/guides/mutations.md",
-      "sha256": "f9a4ef9d58c9329f62ffecd25e9df42e955f30b3c2971e6abf7a6496ecad1675",
+      "sha256": "ba0d4054f106c93c47a078f8d9175a45337d827538e1ff04ac2b7a76c74e1a1e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -143,14 +143,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/guides/optimistic-updates.md",
       "sha256": "333ee83f940988ad6b58f37ac42a5a7f216865db11e4b5996fdb672ef4184cba",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -158,14 +158,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/guides/queries.md",
       "sha256": "fc959c6b8d57cf85676f1efb84762d29d322791888f87340c0d6c29db45a2b02",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ],
       "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
     },
@@ -174,14 +174,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/guides/query-keys.md",
       "sha256": "6b5d895fb2b1bc7d020d9ec416f9082e639bea2058e7e1282617a4e9d9d51d89",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ],
       "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
     },
@@ -190,14 +190,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/guides/query-options.md",
       "sha256": "228a036bdb67f428ca1bea01894cdc7999047a25688068b6dc3cc0c67890a3c3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ],
       "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
     },
@@ -206,14 +206,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/installation.md",
-      "sha256": "c76373e98513d505cd85352118da8272ac84135640c00cdcf042c16736466477",
+      "sha256": "c0d770eb27ed77a97b7f6c642bc74bc7027319e576699035142e16a65e6df456",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -221,14 +221,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/overview.md",
       "sha256": "7c24d379e659c7bfd1312bf3731fc4799a6061c3f944885d6b26b3f60bc32883",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ],
       "duplicateOf": "query:docs/framework/preact/guides/optimistic-updates.md"
     },
@@ -237,14 +237,14 @@
       "kind": "document",
       "theme": "framework-preact",
       "package": "@tanstack/preact-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/preact/quick-start.md",
-      "sha256": "408d6af8f274837c685eb640f12ee7e602b668109e604d3c98004575c8c5f965",
+      "sha256": "03ba57877f98385ac2e8a26d52caf4123e449d0460a587e82c151d76ef323ca2",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -252,14 +252,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/guides/mutations.md",
-      "sha256": "bcd042241f16e6ab07e4e69d00f319ab2d470cbddd2228a5fdf04556aca06c03",
+      "sha256": "ba4daa3a36c5cba036de31d21922db6762214142bfb4143f60c6081349730269",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -267,14 +267,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/guides/optimistic-updates.md",
       "sha256": "9cff71fdc76ad4535425576d5149e02cee083f5303877bd6df318619e5c67783",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -282,14 +282,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/guides/queries.md",
       "sha256": "fe0800a08aa83c85fb04188b9e7c72b50fe816f66bbceaf7ab102274bf5d3932",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -297,14 +297,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/guides/query-keys.md",
       "sha256": "5a412bc3c1fb7d5b36054e370ce3026a1645e2519bdcbebc2fa56c34a394f65e",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -312,14 +312,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/guides/query-options.md",
       "sha256": "a7996c769eec0ea277d3c0a5da0385be1b0736e83a0c5b47856797fcb9bbd461",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ],
       "duplicateOf": "query:docs/framework/vue/guides/optimistic-updates.md"
     },
@@ -328,14 +328,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/installation.md",
-      "sha256": "02e54d06de932bba0c2123a6b38639f4028e7f691271257018efb2030c869b20",
+      "sha256": "825bb56c0090b1344cece109b331fcadc1e4a1a5c2ddee628c6ff69229a4a6fb",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -343,14 +343,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/overview.md",
-      "sha256": "623bee374e2ccc7eb2a1c3e6cc403528b086ca1ad5408f1dcd36421326f2063d",
+      "sha256": "101a2e4b9b17ea47fe830abb4195e23b788ce4fe5a3046e56d4f83d1477d29e3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -358,14 +358,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/quick-start.md",
-      "sha256": "06ae5b3ed4b834fc4474e6ef39e472843a43462b9a85f1f05e031b66122c5187",
+      "sha256": "6789bf82ade82630420e4f354df60c57020644211c4c4ddd11448cd7b8f9e5c1",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -373,14 +373,14 @@
       "kind": "document",
       "theme": "framework-vue",
       "package": "@tanstack/vue-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/vue/reactivity.md",
-      "sha256": "cec1932bfc669119a147bb0d0c6e61b1bacc66e6961f1d39cc37ee2bae4c40f4",
+      "sha256": "106de04091c760c6ed1e10160714930810c784f6a85ae91bfa1e55b86ec5c61c",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -388,14 +388,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/guides/mutations.md",
       "sha256": "2e7a5f8c03b2004f325468babe9bea09cacf773b6c31eba7737c3e58dc9dfc40",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -403,14 +403,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/guides/optimistic-updates.md",
       "sha256": "a04ee03618e7a8c393e9489d28285969b9337d1958ab87f6bb6961606364b1a7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -418,14 +418,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/guides/queries.md",
       "sha256": "8e68f52b5bbda5d5bcd66fb9196d87a62012f1833386ab8b1e6b459ef62f4cd0",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -433,14 +433,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/guides/query-keys.md",
       "sha256": "783d7530cc93518bbbc56965b6f9e02171cac97a25661ed40a442d5e62a324df",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -448,14 +448,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/guides/query-options.md",
       "sha256": "f1cd472a7c8e37b7c9bc4fd63d1c272b7078eb16f316b14eee9729907e9b2013",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -463,14 +463,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/installation.md",
-      "sha256": "6dee32ab28ae08540c6624d4a8ad917c5e5ba6487c80145144b68abe69633edc",
+      "sha256": "ad130e491b4c8d99aa7e8209ecdd53359ad371924fdef5e77032e7c7afb1c0f5",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -478,14 +478,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/overview.md",
       "sha256": "f60d397fb26c928bf820b6a2294d3c2f6699a7e2e53ca1f5982d3bf5bee58ba7",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -493,14 +493,14 @@
       "kind": "document",
       "theme": "framework-solid",
       "package": "@tanstack/solid-query",
-      "version": "5.108.3",
+      "version": "5.108.4",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/solid/quick-start.md",
       "sha256": "9f5345b4fe7f0e3d8754974a227714d86ead47dfc38710e6f70697b6a94985af",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -508,14 +508,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.4.6",
+      "version": "6.4.7",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/svelte/guides/mutations.md",
       "sha256": "0094bab9bd7b9a9b62b4ec4ff776d79f1f6b066e38b89e83eeb5544d44716d72",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -523,14 +523,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.4.6",
+      "version": "6.4.7",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/svelte/guides/optimistic-updates.md",
       "sha256": "97f2a3e243dff9eb4a84257e44ac84644dcb55b075b9a062e5fcff4e2f8f765d",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -538,14 +538,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.4.6",
+      "version": "6.4.7",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/svelte/guides/queries.md",
       "sha256": "ae7a9f0e5be9a5f990ae90e1cd068fbb5bb0dba2d2e17950c5d523e368b5e2e0",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -553,14 +553,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.4.6",
+      "version": "6.4.7",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/svelte/installation.md",
-      "sha256": "1c893632cc85c74d8206c6199f6d8c8a5872b0b57c2daf82d209a052216bd694",
+      "sha256": "c8e2774136648e5ec8780c1e285a8fc44f61dc079ac23aadd1e80067848e1089",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -568,14 +568,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.4.6",
+      "version": "6.4.7",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/svelte/overview.md",
-      "sha256": "cd660f025a02df099d34e5cf277420903c276e83677047f392214124526b8c54",
+      "sha256": "1df4aed3388e315b3beb544cc9d67a49277e192a9d9abd16a4da9905329e3dcd",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -583,14 +583,14 @@
       "kind": "document",
       "theme": "framework-svelte",
       "package": "@tanstack/svelte-query",
-      "version": "6.4.6",
+      "version": "6.4.7",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "sha256": "4c8b184fcca63d12f5478b47b995e395e29f9b79a58cbe59ec41d817e5aa333a",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -718,14 +718,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/lit-query",
-      "version": "0.2.43",
+      "version": "0.2.44",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/lit/guides/mutations.md",
-      "sha256": "2ca41d3e77f48b1c299682bd6fb2b93e214952983f749ed0140fcbfe33c1f6fe",
+      "sha256": "12bbc734744ece3fed0cff20b00636166a5ae1a02626417b415e479d33d7e628",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -733,14 +733,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/lit-query",
-      "version": "0.2.43",
+      "version": "0.2.44",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/lit/guides/queries.md",
-      "sha256": "8f6b7fb636f156c1078c5b8a42f357b17e1696b461edc7690d8e7235f7c54f99",
+      "sha256": "b1540c2b74b57aa1ea1e7e2a6a3656f24e7d8a3b3f360ea02b3a06b9adec6b19",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -748,14 +748,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/lit-query",
-      "version": "0.2.43",
+      "version": "0.2.44",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/lit/guides/query-keys.md",
       "sha256": "330a777dff78ab97671cc519fea40291208d36f561dca5a51747ccddbfa52ac3",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -763,14 +763,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/lit-query",
-      "version": "0.2.43",
+      "version": "0.2.44",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/lit/installation.md",
-      "sha256": "1fc0a004a79c0e501b4af1755d3f1629dc7d18c1b55ff4eefc3da9c7abe528a6",
+      "sha256": "32e579ce22cfc6b0bafccc49d147373c19a3da373e3c019ceae04efd5658c439",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -778,14 +778,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/lit-query",
-      "version": "0.2.43",
+      "version": "0.2.44",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/lit/overview.md",
-      "sha256": "08a1470dd8ae91a64bc029974fe238d0c55577a2f6d5ae9fa05bd538fff59d3b",
+      "sha256": "d667adf40e466ded9377d8ebd0effa99944fca8eb22b115bad5af0ab511d569b",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -793,14 +793,14 @@
       "kind": "document",
       "theme": "framework-lit",
       "package": "@tanstack/lit-query",
-      "version": "0.2.43",
+      "version": "0.2.44",
       "repository": "TanStack/query",
-      "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
+      "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
       "sourcePath": "docs/framework/lit/quick-start.md",
-      "sha256": "017e6cbd2450f8f3f4863da7d3483052118a542fb6fbcc2f1b6e78eabde7d196",
+      "sha256": "ecee98dbcb5e9fe4ef2dcc1395d6c4e730837e6805875898ee500adf0fc8ffe4",
       "sourceKind": "github-release-archive",
       "verifiedCommits": [
-        "f3dda174725bf5173f1ed1bd6f9ebc04204be07a"
+        "b76051ab6375cda69c97be5651f04d88c93145ee"
       ]
     },
     {
@@ -1150,9 +1150,9 @@
         "sha256": "c507903b2f5c26f44184c4dbeb14ec1042a89fdf7ae3c49d089c2359c119a828"
       },
       {
-        "url": "https://codeload.github.com/TanStack/query/tar.gz/f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
-        "commit": "f3dda174725bf5173f1ed1bd6f9ebc04204be07a",
-        "sha256": "56c566e17c3e67bd23bdf0af295c320c3c78bbe0e3c1d513e49a5edd051f12b3"
+        "url": "https://codeload.github.com/TanStack/query/tar.gz/b76051ab6375cda69c97be5651f04d88c93145ee",
+        "commit": "b76051ab6375cda69c97be5651f04d88c93145ee",
+        "sha256": "9a37236ea58107c5f5bb53e0d9a4957c42a33d11d67904a1ffb9518c43604eaa"
       }
     ],
     "linkValidation": {
