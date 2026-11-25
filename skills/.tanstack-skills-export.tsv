@@ -53,7 +53,7 @@ package	version	license	published_skill_files	exported_skills	output_skills
 @tanstack/router-core	1.171.39	MIT	10	10	tanstack-router-core,tanstack-router-core-auth-and-guards,tanstack-router-core-code-splitting,tanstack-router-core-data-loading,tanstack-router-core-navigation,tanstack-router-core-not-found-and-errors,tanstack-router-core-path-params,tanstack-router-core-search-params,tanstack-router-core-ssr,tanstack-router-core-type-safety
 @tanstack/router-plugin	1.169.0	MIT	1	1	tanstack-router-plugin
 @tanstack/solid-db	1.0.0-rc.1.5	MIT	1	1	tanstack-solid-db
-@tanstack/solid-hotkeys	0.25.3	MIT	1	1	tanstack-solid-hotkeys
+@tanstack/solid-hotkeys	0.26.0	MIT	1	1	tanstack-solid-hotkeys
 @tanstack/solid-router	1.170.43	MIT	1	1	tanstack-solid-router
 @tanstack/solid-start	1.169.7	MIT	1	1	tanstack-solid-start
 @tanstack/solid-table	9.3.1	MIT	3	3	tanstack-solid-table-getting-started,tanstack-solid-table-migrate-v8-to-v9,tanstack-solid-table-table-state

@@ -47,7 +47,7 @@ Imported material is tied to the versions and commits below. Outbound links to o
 | `tanstack-octane-hotkeys` | atomic | `foundations` | `@tanstack/octane-hotkeys` | `0.15.3` |  |
 | `tanstack-preact-hotkeys` | atomic | `foundations` | `@tanstack/preact-hotkeys` | `0.24.3` |  |
 | `tanstack-react-hotkeys` | atomic | `foundations` | `@tanstack/react-hotkeys` | `0.27.2` |  |
-| `tanstack-solid-hotkeys` | atomic | `foundations` | `@tanstack/solid-hotkeys` | `0.25.3` |  |
+| `tanstack-solid-hotkeys` | atomic | `foundations` | `@tanstack/solid-hotkeys` | `0.26.0` |  |
 | `tanstack-svelte-hotkeys` | atomic | `foundations` | `@tanstack/svelte-hotkeys` | `0.25.3` |  |
 | `tanstack-vue-hotkeys` | atomic | `foundations` | `@tanstack/vue-hotkeys` | `0.25.3` |  |
 | `hotkeys:docs/agent-skills.md` | document | `foundations` | `@tanstack/hotkeys` | `0.33.1` |  |

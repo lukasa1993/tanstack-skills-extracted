@@ -15,7 +15,7 @@ Choose the guide for the task. Each guide records its source and package version
 | [Octane Hotkeys](./guides/tanstack-octane-hotkeys-a0fade91.md) | Published skill | `@tanstack/octane-hotkeys@0.15.3` |
 | [Preact Hotkeys](./guides/tanstack-preact-hotkeys-d76f076a.md) | Published skill | `@tanstack/preact-hotkeys@0.24.3` |
 | [React Hotkeys](./guides/tanstack-react-hotkeys-32df5886.md) | Published skill | `@tanstack/react-hotkeys@0.27.2` |
-| [Solid Hotkeys](./guides/tanstack-solid-hotkeys-a9ad9600.md) | Published skill | `@tanstack/solid-hotkeys@0.25.3` |
+| [Solid Hotkeys](./guides/tanstack-solid-hotkeys-a9ad9600.md) | Published skill | `@tanstack/solid-hotkeys@0.26.0` |
 | [Svelte Hotkeys](./guides/tanstack-svelte-hotkeys-8bce2478.md) | Published skill | `@tanstack/svelte-hotkeys@0.25.3` |
 | [Vue Hotkeys](./guides/tanstack-vue-hotkeys-ef953b39.md) | Published skill | `@tanstack/vue-hotkeys@0.25.3` |
 | [Agent Skills](./guides/hotkeys-docs-agent-skills-md-6db6b33b.md) | Release-matched documentation | `@tanstack/hotkeys@0.33.1` |

@@ -3,7 +3,7 @@
   "requests": {
     "https://api.github.com/repos/TanStack/query/pulls/10879": {
       "status": 200,
-      "sha256": "ff0289a8a6934307cd7a543dbcb6e2062cd3145fd37516e61d370ec372e1b9ee",
+      "sha256": "d39e2c591cfe21f1fbd27ab3cda1d5bc67e4b7a9888d4f26bf4ca604c4a85d18",
       "bytes": 17127
     },
     "https://codeload.github.com/TanStack/charts/tar.gz/b236dae2d57f1921b9e0296b6ecf023bf012bb5f": {
@@ -553,7 +553,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "f319273f46c1f9342648ffaf7799557f066013a07d4068b10c5ee58a2b6f49d4",
+      "sha256": "a1c1f1922b409f7999849e9750777d2d9831d93d3c0f1e3813529700e44f11c3",
       "bytes": 2901
     },
     "https://registry.npmjs.org/%40tanstack%2Fangular-hotkeys/latest": {
@@ -918,8 +918,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fhotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "5a7d936df8d3a03ac7a01695c9fdd934a26b7053e8632a4bdab264d821b27102",
-      "bytes": 2685
+      "sha256": "aae31f2262b37917172d0541ab7c1325c024fee647e1604c3c49327034693c1d",
+      "bytes": 2714
     },
     "https://registry.npmjs.org/%40tanstack%2Fhotkeys/latest": {
       "status": 200,
@@ -1118,8 +1118,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "34800cba05ce5b0865e90a144a3fc37a60d1228a93204858ff87677622854231",
-      "bytes": 2877
+      "sha256": "ba941485dd9e404db9cff62415d99335b07c763c6a5b1c829eeaf0aae5a2c44e",
+      "bytes": 2876
     },
     "https://registry.npmjs.org/%40tanstack%2Fpreact-hotkeys/latest": {
       "status": 200,
@@ -1288,7 +1288,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "00d92305b79435e60529998a893b4b5bf1c98f4f72f9402c3913e54f1eca0e7a",
+      "sha256": "1f9e35862237339a5c4a9e65a55519b674c6a9e807d52052bb12b713595fd409",
       "bytes": 2965
     },
     "https://registry.npmjs.org/%40tanstack%2Freact-hotkeys/latest": {
@@ -1643,13 +1643,13 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "98e929281646e556d42f3bbe055dc4a38e76aa87553b881085309c11d2d13c24",
-      "bytes": 2841
+      "sha256": "49d2c6482f0d19824fdd9817ecc9f6a1c443d89386a12770f2d364fc5c684994",
+      "bytes": 2886
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-hotkeys/latest": {
       "status": 200,
-      "sha256": "e4b16d4b1cb9b2f43a6ce19c03f251db0e0e78eae6f995bde489ced60fc4238d",
-      "bytes": 2628
+      "sha256": "676afbaee98d5d407131fc833411c4432370399f24e887112f8ab8793bfaceeb",
+      "bytes": 2661
     },
     "https://registry.npmjs.org/%40tanstack%2Fsolid-pacer-devtools/latest": {
       "status": 200,
@@ -1868,7 +1868,7 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "33f01ee3cfd17df455d7b24c1a9e8f491e5424893bd716b915a6c9f1cddf4514",
+      "sha256": "fe2ee701b62c6a5400a4b5d8c4389246dfcfc0d070d6fd1cab2aec22ba5115c9",
       "bytes": 3100
     },
     "https://registry.npmjs.org/%40tanstack%2Fsvelte-hotkeys/latest": {
@@ -1993,8 +1993,8 @@
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-hotkeys-devtools/latest": {
       "status": 200,
-      "sha256": "5677b2eacbeca113f021117ae0aba3058baff37d3f7affa0394d901afaf19d37",
-      "bytes": 2765
+      "sha256": "add9647b4554e219efea87fb15ef8f8a593a20a9c39cc84d68345e7717aeb81e",
+      "bytes": 2766
     },
     "https://registry.npmjs.org/%40tanstack%2Fvue-hotkeys/latest": {
       "status": 200,
@@ -2741,10 +2741,10 @@
       "sha256": "1ab702e9147c3d76f6213979f2b33ee1f4d274715f08160bb767f221728ce49d",
       "bytes": 16329
     },
-    "https://registry.npmjs.org/@tanstack/angular-hotkeys-devtools/-/angular-hotkeys-devtools-0.5.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/angular-hotkeys-devtools/-/angular-hotkeys-devtools-0.5.15.tgz": {
       "status": 200,
-      "sha256": "4e69b4e495a6e5f8877acf8885691afbaa5abebb06feff106cf70a9832f02f57",
-      "bytes": 4551
+      "sha256": "6a136749d26e827e93be04ccac5e9c0c96ac84b094c0a54a48eaf5083885578d",
+      "bytes": 4470
     },
     "https://registry.npmjs.org/@tanstack/angular-hotkeys/-/angular-hotkeys-0.25.3.tgz": {
       "status": 200,
@@ -3106,10 +3106,10 @@
       "sha256": "4976509ecbfa216337dc5b9bcbd05fe0e1c2fd6acbc9b25709495cac7cc1efc4",
       "bytes": 19072
     },
-    "https://registry.npmjs.org/@tanstack/hotkeys-devtools/-/hotkeys-devtools-1.11.4.tgz": {
+    "https://registry.npmjs.org/@tanstack/hotkeys-devtools/-/hotkeys-devtools-1.12.0.tgz": {
       "status": 200,
-      "sha256": "984792810c92f0d83f32adc22e79e0e7a94c344d16da2f4730db17a37ef84e4d",
-      "bytes": 31399
+      "sha256": "761e966f601a01df2a0876d490466d3999ca89251acb327dc5472f7f427f5ac1",
+      "bytes": 30195
     },
     "https://registry.npmjs.org/@tanstack/hotkeys/-/hotkeys-0.33.1.tgz": {
       "status": 200,
@@ -3306,10 +3306,10 @@
       "sha256": "fcbe6d9ab4a5a890e65eaab0669344ef8d9a8540cdbc794227857623493e9729",
       "bytes": 40609
     },
-    "https://registry.npmjs.org/@tanstack/preact-hotkeys-devtools/-/preact-hotkeys-devtools-0.13.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/preact-hotkeys-devtools/-/preact-hotkeys-devtools-0.13.15.tgz": {
       "status": 200,
-      "sha256": "0a5b219a5d78695d791a716b925b2a6894cc235315591447751685bd7b285d27",
-      "bytes": 4528
+      "sha256": "10c8ce2bdb8de36ac99f04d62d92b04660404b35579b0bd67dd16c913e19b7f2",
+      "bytes": 4442
     },
     "https://registry.npmjs.org/@tanstack/preact-hotkeys/-/preact-hotkeys-0.24.3.tgz": {
       "status": 200,
@@ -3476,10 +3476,10 @@
       "sha256": "0203726978897d8d2e9c19e053f4c0b28a5365023f9858ffe1d5900e250fee6f",
       "bytes": 46079
     },
-    "https://registry.npmjs.org/@tanstack/react-hotkeys-devtools/-/react-hotkeys-devtools-0.14.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/react-hotkeys-devtools/-/react-hotkeys-devtools-0.14.15.tgz": {
       "status": 200,
-      "sha256": "76793d6618ffa773eda2a19ddfe44c0e9344a3bd1b5a6a83db8e1c91635143c3",
-      "bytes": 4482
+      "sha256": "2daf91709b8532bc40d171f0be73580ac03107dc7f25956405c2b48a90774227",
+      "bytes": 4399
     },
     "https://registry.npmjs.org/@tanstack/react-hotkeys/-/react-hotkeys-0.27.2.tgz": {
       "status": 200,
@@ -3831,15 +3831,15 @@
       "sha256": "de42d7b812b01302e4dd2588b7145818fed779f317151f91306f8af04ca19ac2",
       "bytes": 40178
     },
-    "https://registry.npmjs.org/@tanstack/solid-hotkeys-devtools/-/solid-hotkeys-devtools-0.13.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-hotkeys-devtools/-/solid-hotkeys-devtools-0.14.0.tgz": {
       "status": 200,
-      "sha256": "5ad6d6b0ce6b6b3022c8d50a1c755ca2012f0552d6b256cc35aed87adfac8b56",
-      "bytes": 4416
+      "sha256": "76b36b9d581eefb2c258f806ff6e48a6316c8475d5fc8a31f61101a9f535f33c",
+      "bytes": 4376
     },
-    "https://registry.npmjs.org/@tanstack/solid-hotkeys/-/solid-hotkeys-0.25.3.tgz": {
+    "https://registry.npmjs.org/@tanstack/solid-hotkeys/-/solid-hotkeys-0.26.0.tgz": {
       "status": 200,
-      "sha256": "32cf15e08d9778ecdae7aa4f349a3d9a91959c619aa220cef3491f200503926a",
-      "bytes": 18126
+      "sha256": "6f31cfa26edfc369f218fef7262d55a43b942ee3482bb23f18a8c946a695bebe",
+      "bytes": 18349
     },
     "https://registry.npmjs.org/@tanstack/solid-pacer-devtools/-/solid-pacer-devtools-0.8.1.tgz": {
       "status": 200,
@@ -4056,10 +4056,10 @@
       "sha256": "f8713a67069cb5fe051f9035361ea7a2aadad800fdacf3eda7308a699aa9e990",
       "bytes": 12305
     },
-    "https://registry.npmjs.org/@tanstack/svelte-hotkeys-devtools/-/svelte-hotkeys-devtools-0.5.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/svelte-hotkeys-devtools/-/svelte-hotkeys-devtools-0.5.15.tgz": {
       "status": 200,
-      "sha256": "939f962de50c7876d956c2f9ab233effd020dd4a1c1084d2e6bb25c0bb4daae6",
-      "bytes": 4526
+      "sha256": "256639ac184f323dfe2934f7e0723074df701622806bc3b9d6a0b02660f5d04c",
+      "bytes": 4444
     },
     "https://registry.npmjs.org/@tanstack/svelte-hotkeys/-/svelte-hotkeys-0.25.3.tgz": {
       "status": 200,
@@ -4176,10 +4176,10 @@
       "sha256": "63b544b01fadc1383fc4fc2cc942e85c290e20216cc9b16704e183203a598939",
       "bytes": 21428
     },
-    "https://registry.npmjs.org/@tanstack/vue-hotkeys-devtools/-/vue-hotkeys-devtools-0.13.14.tgz": {
+    "https://registry.npmjs.org/@tanstack/vue-hotkeys-devtools/-/vue-hotkeys-devtools-0.13.15.tgz": {
       "status": 200,
-      "sha256": "1b40f26ccf6435a6108691ce3a61ff47207e93377fb39a30f3e0d170e3db6ab5",
-      "bytes": 4790
+      "sha256": "4a3a6e0dce03df41cfc0d9f00b1c949c697627f67423fd6a60c7d4cefdb315dc",
+      "bytes": 4709
     },
     "https://registry.npmjs.org/@tanstack/vue-hotkeys/-/vue-hotkeys-0.25.3.tgz": {
       "status": 200,

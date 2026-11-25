@@ -1374,10 +1374,10 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-hotkeys",
-      "version": "0.25.3",
+      "version": "0.26.0",
       "file": "references/guides/tanstack-solid-hotkeys-a9ad9600.md",
       "sourcePath": "solid-hotkeys",
-      "bytes": 11266,
+      "bytes": 11592,
       "prerequisites": [
         {
           "id": "tanstack-hotkeys-core",
@@ -1388,7 +1388,7 @@
         {
           "title": "Overview; API; Pitfalls; API discovery and docs",
           "file": "references/guides/tanstack-solid-hotkeys-a9ad9600.md",
-          "bytes": 11266
+          "bytes": 11592
         }
       ],
       "examples": []
