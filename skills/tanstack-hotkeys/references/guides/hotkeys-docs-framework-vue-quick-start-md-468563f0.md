@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -38,8 +38,8 @@ import { useHotkeys } from '@tanstack/vue-hotkeys'
 
 useHotkeys([
   { hotkey: 'Mod+S', callback: () => save() },
-  { hotkey: 'Mod+Z', callback: () => undo() },
-  { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+  { hotkey: 'Mod+Enter', callback: () => publish() },
+  { hotkey: 'Mod+D', callback: () => duplicate() },
 ])
 </script>
 ```
@@ -68,7 +68,7 @@ useHotkeys([
 
 ## Show the shortcut
 
-Label a button or menu item with `useFormatForDisplay`. Format the same value you register, so the label always matches the binding:
+Label a button or menu item with `useFormatForDisplay`. Format the same value that is registered, so the label always matches the binding:
 
 ```vue
 <script setup lang="ts">
@@ -90,7 +90,7 @@ const formatForDisplay = useFormatForDisplay()
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server, such as with Nuxt, set the provider's `platform` from the request, so the server renders the user's labels without hydration errors, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md).
+In server-rendered apps such as Nuxt, pass the request's platform to `HotkeysProvider` so server HTML matches the browser without hydration errors. See [SSR & Hydration](./hotkeys-docs-framework-vue-guides-ssr-md-5b06541c.md#source-hotkeys-docs-framework-vue-guides-ssr-md).
 
 ## Hotkeys follow your components
 
@@ -163,7 +163,7 @@ The hotkey fires while focus is on the element or inside it. If nothing there ca
 
 ## Add providers and scopes (optional)
 
-So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component is mounted. You don't need a provider for that.
+So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component is mounted. That needs no provider.
 
 Add `HotkeysProvider` at the root to set default options for every hotkey inside it, such as more time between sequence steps:
 
@@ -220,24 +220,30 @@ useHotkeys([
 
 While the dialog is open, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog closes, they work again.
 
-A composable uses the nearest provider above the component that calls it, so put the provider around the dialog component, not inside its template. [HotkeysProvider and Scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md) covers nested scopes, precedence, and turning a scope off without unmounting it.
+A composable uses the nearest provider above the component that calls it, so put the provider around the dialog component, not inside its template. [HotkeysProvider & Scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md) covers nested scopes, precedence, and turning a scope off without unmounting it.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md#source-hotkeys-docs-framework-vue-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md#source-hotkeys-docs-framework-vue-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-vue-guides-hotkey-hints-md-bd147de8.md#source-hotkeys-docs-framework-vue-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [HotkeysProvider & Scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md): inspect registered hotkeys, scopes, and held keys while you develop
 
-As your app grows:
+App Hotkeys & UI:
 
-- [HotkeysProvider and Scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [App Hotkeys](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md#source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Recording](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md#source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-vue-guides-hotkey-hints-md-bd147de8.md#source-hotkeys-docs-framework-vue-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [SSR & Hydration](./hotkeys-docs-framework-vue-guides-ssr-md-5b06541c.md#source-hotkeys-docs-framework-vue-guides-ssr-md): server-render platform labels in Nuxt, Vite SSR, and Astro
+- [Keyboard Layouts](./hotkeys-docs-framework-vue-guides-keyboard-layouts-md-d2fcb108.md#source-hotkeys-docs-framework-vue-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-vue-guides-testing-md-003301b8.md#source-hotkeys-docs-framework-vue-guides-testing-md): reset singleton state and fix the target platform in unit tests
 - [Hotkey Manager](./hotkeys-docs-framework-vue-guides-hotkey-manager-md-0dad2837.md#source-hotkeys-docs-framework-vue-guides-hotkey-manager-md): register and inspect hotkeys outside components

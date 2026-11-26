@@ -1,13 +1,13 @@
 # Sensible Defaults — The browser's action is prevented
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## The browser's action is prevented
 
-`preventDefault` and `stopPropagation` are `true` by default. Most shortcuts exist to replace a browser action: binding `Mod+S` to save a document should not also open the browser's Save Page dialog, and binding `Mod+K` to a command palette should not also focus the address bar. Stopping propagation keeps one key press from running both your shortcut and another listener higher in the page.
+`preventDefault` and `stopPropagation` both default to `true`. Binding `Mod+S` shouldn't open the browser's Save Page dialog, and binding `Mod+K` shouldn't jump to the address bar or fire duplicate listeners higher in the DOM.
 
-Both apply only when a hotkey matches; every other key press is left alone. For a sequence, every step that advances it calls `preventDefault`, so the browser doesn't act on `Mod+K` in `['Mod+K', 'Mod+C']`. Propagation stops only on the last step, so earlier steps still reach other listeners. Set either option to `false` when you want to observe a shortcut without taking it over.
-
-Some browser and operating system shortcuts never reach the page and cannot be overridden. Browsers keep `Mod+T`, `Mod+N`, and `Mod+W` for opening and closing tabs and windows, and the operating system keeps shortcuts such as `Alt+Tab` and `Command+Tab`. Pick other keys for your app.
-
-A `Tab`, `Shift+Tab`, or `F6` hotkey on the document also fires while a button or link has focus, and its `preventDefault` keeps focus from moving. Give it an element `target`, such as an editor or a component that manages focus itself.
+- Unmatched keys are never touched.
+- In a sequence like `['Mod+K', 'Mod+C']`, every matching step calls `preventDefault()`, while `stopPropagation()` runs only on the final step so earlier keys still reach other listeners.
+- To observe a shortcut without blocking it, set either option to `false`.
+- Browsers and operating systems reserve certain shortcuts (`Mod+T`, `Mod+N`, `Mod+W`, `Alt+Tab`, `Command+Tab`) before they ever reach the page. Pick other keys for your app.
+- Binding `Tab`, `Shift+Tab`, or `F6` on `document` prevents focus movement across buttons and links. Give those shortcuts an element `target` instead.

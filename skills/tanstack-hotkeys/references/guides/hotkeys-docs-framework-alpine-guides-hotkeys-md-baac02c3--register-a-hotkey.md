@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register a hotkey
 
@@ -60,7 +60,7 @@ this.hotkeys.createHotkey(
 
 A plain options object is read once, so `{ enabled: !this.readOnly }` keeps the value from when `init()` ran.
 
-That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md#source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md).
+That makes it straightforward to register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md#source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md).
 
 ### Use the `$hotkeys` magic
 
@@ -96,7 +96,7 @@ this.hotkeys.createHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod is al
 
 TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-alpine-guides-keyboard-layouts-md-7e67b106.md#source-hotkeys-docs-framework-alpine-guides-keyboard-layouts-md).
 
-Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
+To build a chord from data, such as a form with a checkbox for each modifier, write it as a `RawHotkeyChord` object:
 
 ```ts
 this.hotkeys.createHotkey({ key: 'S', mod: true, shift: true }, () => saveAs()) // Same as 'Mod+Shift+S'

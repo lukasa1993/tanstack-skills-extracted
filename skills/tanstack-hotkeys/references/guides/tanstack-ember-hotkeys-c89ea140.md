@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-ember-hotkeys"></a>
 
-Published skill · `@tanstack/ember-hotkeys@0.14.3`.
+Published skill · `@tanstack/ember-hotkeys@0.14.5`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -55,8 +55,8 @@ export class EditorComponent {
   constructor() {
     injectHotkeys([
       { hotkey: 'Mod+S', callback: () => this.save() },
-      { hotkey: 'Mod+Z', callback: () => this.undo() },
-      { hotkey: 'Mod+Shift+Z', callback: () => this.redo() },
+      { hotkey: 'Mod+Enter', callback: () => this.publish() },
+      { hotkey: 'Mod+D', callback: () => this.duplicate() },
     ])
   }
 }
@@ -86,7 +86,7 @@ injectHotkeys([
 
 ## Show the shortcut
 
-Label a button or menu item with `injectFormatForDisplay`. Format the same value you register, so the label always matches the binding:
+Label a button or menu item with `injectFormatForDisplay`. Format the same value that is registered, so the label always matches the binding:
 
 ```ts
 import { Component } from '@angular/core'
@@ -115,7 +115,7 @@ export class SaveButtonComponent {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server, such as with Angular SSR or Analog, set the `platform` in `provideHotkeys` from the request, so the server renders the user's labels without hydration errors, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md).
+In server-rendered apps such as Angular SSR or Analog, pass the request's platform to `provideHotkeys` so server HTML matches the browser without hydration errors. See [SSR & Hydration](./hotkeys-docs-framework-angular-guides-ssr-md-05bcc1b5.md#source-hotkeys-docs-framework-angular-guides-ssr-md).
 
 ## Hotkeys follow your components
 
@@ -189,7 +189,7 @@ The hotkey registers once the element renders. The hotkey fires while focus is o
 
 ## Add providers and scopes (optional)
 
-So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component exists. You don't need a provider for that.
+So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component exists. That needs no provider.
 
 Add `provideHotkeys` to your application config to set default options for every hotkey, such as more time between sequence steps:
 
@@ -228,24 +228,30 @@ export class ConfirmDialogComponent {
 
 While the dialog is open, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog closes, they work again.
 
-A component's `providers` apply to the component itself, so the dialog can inject its own hotkeys. [provideHotkeys and Scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md) covers nested scopes, precedence, and turning a scope off without destroying it.
+A component's `providers` apply to the component itself, so the dialog can inject its own hotkeys. [provideHotkeys & Scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md) covers nested scopes, precedence, and turning a scope off without destroying it.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md#source-hotkeys-docs-framework-angular-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md#source-hotkeys-docs-framework-angular-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md#source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md#source-hotkeys-docs-framework-angular-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [provideHotkeys & Scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md): inspect registered hotkeys, scopes, and held keys while you develop
 
-As your app grows:
+App Hotkeys & UI:
 
-- [provideHotkeys and Scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [App Hotkeys](./hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md#source-hotkeys-docs-framework-angular-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md#source-hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md#source-hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Recording](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md#source-hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md#source-hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md#source-hotkeys-docs-framework-angular-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md#source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [SSR & Hydration](./hotkeys-docs-framework-angular-guides-ssr-md-05bcc1b5.md#source-hotkeys-docs-framework-angular-guides-ssr-md): server-render platform labels with Angular SSR and Analog
+- [Keyboard Layouts](./hotkeys-docs-framework-angular-guides-keyboard-layouts-md-864b9422.md#source-hotkeys-docs-framework-angular-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-angular-guides-testing-md-86587138.md#source-hotkeys-docs-framework-angular-guides-testing-md): reset singleton state and fix the target platform in unit tests
 - [Hotkey Manager](./hotkeys-docs-framework-angular-guides-hotkey-manager-md-190fe5ab.md#source-hotkeys-docs-framework-angular-guides-hotkey-manager-md): register and inspect hotkeys outside components

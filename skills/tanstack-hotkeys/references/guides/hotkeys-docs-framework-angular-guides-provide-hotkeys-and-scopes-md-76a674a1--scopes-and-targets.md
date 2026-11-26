@@ -1,6 +1,6 @@
 # Provide Hotkeys And Scopes — Scopes and targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Scopes and targets
 
@@ -27,8 +27,8 @@ export class Editor {
 
 | | Scope | Target |
 | --- | --- | --- |
-| Decides | Whether the hotkey is on | Which key presses the hotkey receives |
-| Based on | Which providers exist and are enabled | Where focus is |
+| Controls | Whether the hotkey is active | Which key presses reach the hotkey |
+| Driven by | Which providers exist and are enabled | Where focus is |
 | Follows | The injector tree, including overlays | The DOM |
 | Set with | `provideHotkeys({ scope })`, or the `scope` option | The `target` option |
 | Use for | Dialogs, panes, and tabs | Focusable elements, such as a list or a code editor |

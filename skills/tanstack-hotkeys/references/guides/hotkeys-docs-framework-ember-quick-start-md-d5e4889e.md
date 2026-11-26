@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -44,8 +44,8 @@ import type { EmberHotkeyDefinition } from '@tanstack/ember-hotkeys'
 export default class Editor extends Component {
   shortcuts: Array<EmberHotkeyDefinition> = [
     { hotkey: 'Mod+S', callback: () => save() },
-    { hotkey: 'Mod+Z', callback: () => undo() },
-    { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+    { hotkey: 'Mod+Enter', callback: () => publish() },
+    { hotkey: 'Mod+D', callback: () => duplicate() },
   ]
 
   <template>
@@ -104,7 +104,7 @@ export default class SaveButton extends Component {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server with FastBoot, pass `useFormatForDisplay` a scope whose `platform` is set from the request, so the server's HTML shows the user's labels, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md).
+If your app renders on the server with FastBoot, pass `useFormatForDisplay` a scope whose `platform` is set from the request, so the server's HTML shows the user's labels, as shown in [SSR & Hydration](./hotkeys-docs-framework-ember-guides-ssr-md-78704d49.md#source-hotkeys-docs-framework-ember-guides-ssr-md).
 
 ## Hotkeys follow your components
 
@@ -238,22 +238,28 @@ export default class ConfirmDialog extends Component<ConfirmDialogSignature> {
 
 While the dialog is rendered, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog is removed, they work again.
 
-`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. Despite its name, `createHotkeysScope` only sets defaults for the helpers it returns. It doesn't create or activate a hotkey scope.
+`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. [Activate a scope](./hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md#source-hotkeys-docs-framework-ember-guides-hotkey-manager-md) covers scopes for UI that Ember doesn't render. Despite its name, `createHotkeysScope` only sets defaults for the helpers it returns. It doesn't create or activate a hotkey scope.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#source-hotkeys-docs-framework-ember-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md#source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-ember-guides-hotkey-hints-md-12a744d3.md#source-hotkeys-docs-framework-ember-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
 
-As your app grows:
+App Hotkeys & UI:
 
 - [App Hotkeys](./hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md#source-hotkeys-docs-framework-ember-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md#source-hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md#source-hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md): record the shortcut a user presses
-- [Hotkey Manager](./hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md#source-hotkeys-docs-framework-ember-guides-hotkey-manager-md): register and inspect hotkeys outside components
+- [Hotkey Recording](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md#source-hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md#source-hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-ember-guides-hotkey-hints-md-12a744d3.md#source-hotkeys-docs-framework-ember-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md#source-hotkeys-docs-framework-ember-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [SSR & Hydration](./hotkeys-docs-framework-ember-guides-ssr-md-78704d49.md#source-hotkeys-docs-framework-ember-guides-ssr-md): server-render platform labels with FastBoot and Prember
+- [Keyboard Layouts](./hotkeys-docs-framework-ember-guides-keyboard-layouts-md-6c92481b.md#source-hotkeys-docs-framework-ember-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-ember-guides-testing-md-db143563.md#source-hotkeys-docs-framework-ember-guides-testing-md): reset singleton state and fix the target platform in unit tests
+- [Hotkey Manager](./hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md#source-hotkeys-docs-framework-ember-guides-hotkey-manager-md): register and inspect hotkeys outside components, and activate scopes

@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Hotkey targets
 
@@ -51,9 +51,9 @@ While focus is inside the element, its hotkeys run before hotkeys on `document`.
 
 ### A target is not a scope
 
-A target and a [scope](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md) both limit when a hotkey works, in different ways:
+Both limit when a hotkey fires, using different signals:
 
-- A target decides which key presses the hotkey receives, based on where focus is.
-- A scope decides whether the hotkey is on, based on which parts of your app are active, such as an open dialog. Focus doesn't matter.
+- **`target`** filters by DOM focus, checking which element received the key event.
+- **`scope`** filters by UI state, checking which mounted [provider scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md) are active regardless of focus.
 
-Use a target for hotkeys that belong to a focusable element, such as a list or a code editor. Use a scope for hotkeys that belong to a part of your app, whether or not it has focus. A hotkey can have both.
+A single hotkey can use both.

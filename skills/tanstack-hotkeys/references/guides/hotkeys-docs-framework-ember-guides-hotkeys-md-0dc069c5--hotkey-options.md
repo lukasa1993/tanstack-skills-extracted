@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Hotkey options
 
@@ -28,7 +28,7 @@ Pass options as named arguments:
 | `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
 | `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#describe-hotkeys-with-meta). |
 
-The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`EmberHotkeyCommonOptions` reference](https://github.com/TanStack/hotkeys/blob/418247d9f4397edebae80224f5cd88d3de71e337/docs/framework/ember/reference/type-aliases/EmberHotkeyCommonOptions.md) lists the types.
+The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`EmberHotkeyCommonOptions` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/framework/ember/reference/type-aliases/EmberHotkeyCommonOptions.md) lists the types.
 
 To change a default for several hotkeys, pass default options to `createHotkeysScope`, and use the helpers and modifiers it returns. Options passed to a helper override the defaults:
 

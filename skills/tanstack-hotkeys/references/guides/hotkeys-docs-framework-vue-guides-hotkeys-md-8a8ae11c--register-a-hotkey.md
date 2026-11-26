@@ -1,10 +1,10 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register a hotkey
 
-Call `useHotkey` in a component's `setup` with a hotkey and a callback:
+Pass a hotkey and callback to `useHotkey` in a component's `setup`:
 
 ```vue
 <script setup lang="ts">
@@ -18,7 +18,7 @@ useHotkey('Mod+S', () => saveDocument())
 </template>
 ```
 
-The callback receives the `KeyboardEvent` and a context object:
+Callbacks receive the `KeyboardEvent` and a context object:
 
 ```ts
 useHotkey('Mod+S', (event, context) => {
@@ -66,17 +66,17 @@ A plain options object is read once, so `{ enabled: !props.readOnly }` keeps the
 
 Give a ref that holds a hotkey the `Hotkey` type: `const saveHotkey = ref<Hotkey>('Mod+S')`. Without it, the ref is a `Ref<string>`, and `useHotkey` accepts only valid hotkeys.
 
-That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md).
+That makes it straightforward to register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md).
 
 ### Optional hotkeys
 
-A hotkey of `undefined`, `null`, or `''` registers nothing, so a component can take an optional shortcut. When the hotkey changes to one of these values, its registration is removed. When it changes back to a hotkey, it registers again. Hints for no hotkey are hidden.
+Passing `undefined`, `null`, or `''` registers nothing, which suits optional shortcut props. Switching to one of these values unregisters the hotkey and hides its hints. Passing a valid hotkey again registers it again.
 
-To keep a hotkey registered, and listed in devtools and cheat sheets, but stop it from firing, set `enabled: false` instead.
+To keep the hotkey registered, visible in devtools and cheat sheets, but paused, leave it defined and pass `enabled: false` instead.
 
 ### Write a chord as a string or an object
 
-Write most chords as strings. Your editor autocompletes them, and TypeScript rejects a string that isn't a valid chord:
+Most chords are written as strings, which gives you editor autocomplete and compile-time validation:
 
 ```ts
 useHotkey('Escape', () => close())
@@ -88,9 +88,9 @@ useHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod comes first
 useHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod is already Meta on macOS
 ```
 
-TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-vue-guides-keyboard-layouts-md-d2fcb108.md#source-hotkeys-docs-framework-vue-guides-keyboard-layouts-md).
+String bindings type-check against US QWERTY keys by default. To bind layout-specific keys such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-vue-guides-keyboard-layouts-md-d2fcb108.md#source-hotkeys-docs-framework-vue-guides-keyboard-layouts-md).
 
-Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
+When building bindings from UI state, such as modifier checkboxes, use a `RawHotkeyChord` object instead:
 
 ```ts
 useHotkey({ key: 'S', mod: true, shift: true }, () => saveAs()) // Same as 'Mod+Shift+S'
@@ -102,7 +102,7 @@ useHotkey(
 )
 ```
 
-Sequence steps can be strings, objects, or a mix:
+Sequence steps can be strings, objects, or a mix of both:
 
 ```ts
 useHotkey(['G', { key: 'H', shift: true }], () => goToHistory())

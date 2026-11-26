@@ -2,36 +2,201 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Format hotkeys for display whenever they appear in buttons, menus, tooltips, cheat sheets, or settings screens. Store the raw hotkey (such as `'Mod+S'`) and format it at render time. Labels are for humans, never for registering or storing.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+`getFormatForDisplay` returns a formatter that adapts to the user's operating system (`⌘ S` on macOS, `Ctrl+S` elsewhere) and keyboard layout. It formats chord strings, physical chords such as `'Mod+[KeyS]'`, chord objects, parsed chords, and sequences:
 
-- [Overview](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--overview.md) — 2 KiB
-- [Format a hotkey](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-a-hotkey.md) — 3 KiB
-- [Render individual keycaps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--render-individual-keycaps.md) — 1 KiB
-- [Format sequences](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-sequences.md) — 1 KiB
-- [Choose symbols and separators](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--choose-symbols-and-separators.md) — 1 KiB
-- [Label physical keys for the user's keyboard](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--label-physical-keys-for-the-user-s-keyboard.md) — 3 KiB
-- [Format labels in server-rendered apps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-labels-in-server-rendered-apps.md) — 8 KiB
-- [Format outside a component](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-outside-a-component.md) — 2 KiB
-- [Parse, compare, and store hotkeys](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--parse-compare-and-store-hotkeys.md) — 3 KiB
+| Where labels render | Extra setup |
+| --- | --- |
+| Browser-only (Vite SPA, client apps) | None |
+| Server-rendered then hydrated | Set `platform` on `HotkeysProvider` from the request ([SSR & Hydration](./hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md#source-hotkeys-docs-framework-svelte-guides-ssr-md)) |
+| Static or prerendered pages | None, or render only in the browser ([Static pages](./hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md#source-hotkeys-docs-framework-svelte-guides-ssr-md)) |
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="format-a-hotkey"></a>
-<a id="render-individual-keycaps"></a>
-<a id="format-sequences"></a>
-<a id="choose-symbols-and-separators"></a>
-<a id="label-physical-keys-for-the-users-keyboard"></a>
-<a id="supply-your-own-layout"></a>
-<a id="format-labels-in-server-rendered-apps"></a>
-<a id="sveltekit"></a>
-<a id="astro"></a>
-<a id="render-a-label-only-in-the-browser"></a>
-<a id="static-and-prerendered-pages"></a>
-<a id="development-warning"></a>
-<a id="format-outside-a-component"></a>
-<a id="parse-compare-and-store-hotkeys"></a>
+## Format a hotkey
+
+Call `getFormatForDisplay` at the top level of a component's `<script>`. It returns the function that formats a hotkey:
+
+```svelte
+<script lang="ts">
+  import { getFormatForDisplay } from '@tanstack/svelte-hotkeys'
+
+  const formatForDisplay = getFormatForDisplay()
+</script>
+
+<button>
+  Save <kbd>{formatForDisplay('Mod+S')}</kbd>
+</button>
+```
+
+The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `getFormatForDisplay` fills in two things for you:
+
+- **Platform.** Reads the nearest `HotkeysProvider`, or detects it from `navigator` when there is none.
+- **Keyboard layout.** For physical codes such as `[KeyW]`, reads the user's keyboard layout in Chromium browsers. See [Label physical keys for the user's keyboard](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#label-physical-keys-for-the-users-keyboard).
+
+Call `getFormatForDisplay` once, then call the function anywhere in the component, including in markup, `{#each}` blocks, and `$derived`. Options go in its second argument. The examples in this guide pass `platform`, so each one has a single result:
+
+```ts
+formatForDisplay('Mod+S', { platform: 'mac' }) // '⌘ S'
+formatForDisplay('Mod+[KeyS]', { platform: 'mac' }) // '⌘ S'
+formatForDisplay({ code: 'KeyS', mod: true }, { platform: 'windows' }) // 'Ctrl+S'
+formatForDisplay('Mod+[Digit2]', { platform: 'windows' }) // 'Ctrl+2'
+```
+
+How chords format:
+
+- **macOS.** Uses symbols joined with spaces in Control, Option, Shift, Command order, so `Mod+Shift+S` displays as `⇧ ⌘ S` while the hotkey itself stays `Mod+Shift+S`.
+- **Windows and Linux.** Uses modifier names joined with `+`, such as `Ctrl+Shift+S`.
+- **Physical codes.** Strips brackets and shortens prefixes (`KeyS` to `S`, `Digit2` to `2`), keeping readable numpad, punctuation, and ISO or JIS keycap legends (`[IntlBackslash]` shows `\`, `[IntlRo]` shows `\`, `[IntlYen]` shows `¥`).
+- **Accepted inputs.** Accepts any chord, sequence, single key such as `'Escape'`, or standalone modifier such as `'Shift'`. For a raw key string from a `KeyboardEvent`, such as a held key outside the strict `Key` union, wrap it as `{ key }`.
+
+A `platform` you pass wins over the provider's. `Mod+S` follows the character S, while `Mod+[KeyS]` follows the key in the S position. See [Match a key's position instead](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). Formatting never changes the stored hotkey or guesses the user's keyboard layout.
+
+## Render individual keycaps
+
+Set `parts: true` to get one label per key instead of a joined string:
+
+```ts
+const saveHotkey = 'Mod+[KeyS]'
+const parts = formatForDisplay(saveHotkey, { platform: 'mac', parts: true })
+// ['⌘', 'S'], one label per <kbd>
+```
+
+With `parts` omitted or false, the result is a string. A runtime boolean returns `string | string[]`. Parts keep literal plus keys and ignore `separatorToken`.
+
+## Format sequences
+
+Pass a sequence to format each step and join the steps with `sequenceSeparator`, a space by default:
+
+```ts
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac' }) // '⌘ K C'
+formatForDisplay(['G', 'G'], { sequenceSeparator: ' → ' }) // 'G → G'
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac', parts: true })
+// [['⌘', 'K'], ['C']], one array of keycaps per step
+```
+
+With `parts: true`, a sequence returns one array per step, so you can render each step as a group of keycaps. To show the steps a user has pressed so far, see [Show sequences in your UI](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md).
+
+## Choose symbols and separators
+
+`useSymbols` accepts a boolean or separate `modifiers` and `keys` settings. Omitted fields default to true. Modifier symbols apply on macOS. Windows and Linux keep modifier names.
+
+```ts
+formatForDisplay('Shift+[ArrowUp]', {
+  platform: 'mac',
+  useSymbols: { modifiers: false, keys: true },
+  parts: true,
+}) // ['Shift', '↑']
+
+formatForDisplay('Mod+[KeyS]', {
+  platform: 'mac', useSymbols: false,
+}) // 'Cmd+S'
+
+formatForDisplay('Control++', {
+  platform: 'windows', separatorToken: ' · ',
+}) // 'Ctrl · +'
+```
+
+An empty separator joins labels directly. `undefined` or `null` uses the platform default. `separatorToken` applies within a chord, and `sequenceSeparator` applies between steps.
+
+## Label physical keys for the user's keyboard
+
+A position, such as `[KeyQ]`, has a fallback label for a US keyboard: `Q`. On a French AZERTY keyboard, that key is labeled A. Labels from `getFormatForDisplay` follow the user's keyboard where the browser reports its layout:
+
+```svelte
+<script lang="ts">
+  import { getFormatForDisplay } from '@tanstack/svelte-hotkeys'
+
+  const formatForDisplay = getFormatForDisplay()
+</script>
+
+<!-- 'W' on QWERTY, 'Z' on AZERTY -->
+<kbd>{formatForDisplay('[KeyW]')}</kbd>
+```
+
+> [!IMPORTANT]
+> **Layout labels work only in Chromium browsers**, such as Chrome and Edge. Firefox and Safari don't report the keyboard layout, so labels there keep the fallback. For `[KeyQ]`, a French AZERTY user sees `A` in Chrome and `Q` in Firefox. In a cross-origin iframe, Chromium browsers also refuse unless the frame has `allow="keyboard-map"`.
+
+- **The layout loads after the first label mounts.** The first render shows the fallback label, and so does server HTML. The label updates when the layout arrives, and later labels have it at once.
+- **Only positions change.** Hotkeys that follow characters, such as `Mod+Q`, already show the right key. Matching and recording never use the layout.
+- **The layout is read again when the window regains focus**, because browsers send no event when the user switches layouts.
+
+`getKeyboardLayout()` returns an object whose reactive `layout` property holds the loaded layout, or `null`, for labels you draw yourself, such as an on-screen keyboard. The layout maps each code to the character the key types without modifiers, such as `KeyQ` to `a`.
+
+The layout comes from `navigator.keyboard.getLayoutMap()`. To never call it, set `keyboardLayout: false` in the provider's `defaultOptions`:
+
+```svelte
+<HotkeysProvider defaultOptions={{ keyboardLayout: false }}>
+  <App />
+</HotkeysProvider>
+```
+
+### Supply your own layout
+
+Pass the same kind of map as `layoutMap`, for a layout your app already knows, such as one the user picked in settings:
+
+```ts
+const layoutMap = new Map([['KeyQ', 'a']])
+
+formatForDisplay('Mod+[KeyQ]', { platform: 'mac', layoutMap }) // '⌘ A'
+formatForDisplay('Mod+Q', { platform: 'mac', layoutMap }) // '⌘ Q'
+```
+
+Any object with `get(code): string | undefined` works. A `layoutMap` you pass wins over the loaded layout.
+
+Use `keyLabels` for your own labels, keyed by physical code or by key name:
+
+```ts
+formatForDisplay('Mod+[KeyQ]', {
+  platform: 'mac', layoutMap, keyLabels: { KeyQ: 'Action' },
+}) // '⌘ Action'
+```
+
+`keyLabels` wins over a layout entry, which wins over the fallback label. Layout entries get normal letter casing and key symbols, and missing or empty entries fall back. All of these options affect display only. `keyLabels` works anywhere, including on the server.
+
+## Server-side rendering
+
+Pass `platform` to `HotkeysProvider` from the incoming request so the server renders the right labels, or render labels only in the browser on static pages. See [SSR & Hydration](./hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md#source-hotkeys-docs-framework-svelte-guides-ssr-md) for SvelteKit, Astro, and static page examples.
+
+## Format outside a component
+
+`getFormatForDisplay` reads the provider from context, so call it while a component initializes. Some code that builds labels isn't a component, such as a SvelteKit `load` function, a test, or a plain module. There, call the plain `formatForDisplay` function and pass the platform yourself:
+
+```ts
+import { formatForDisplay } from '@tanstack/svelte-hotkeys'
+
+formatForDisplay('Mod+S', { platform }) // '⌘ S' when platform is 'mac'
+```
+
+The plain function takes the same options as the function from `getFormatForDisplay`. It doesn't read the provider, and it uses only the `layoutMap` you pass. Without a `platform`, it detects one in the browser and uses `'linux'` on a server. To give it the user's layout, call `loadKeyboardLayout()` in the browser, and read the layout from `getKeyboardLayoutStore()`.
+
+> [!NOTE]
+> `formatForDisplay` is marked `@deprecated` so editor autocomplete nudges component code toward `getFormatForDisplay`. Outside components, calling it directly is expected.
+
+## Parse, compare, and store hotkeys
+
+`parseHotkey` returns each chord's key, as either a logical `key` or a physical `code`, plus its modifiers with `Mod` resolved. Check which one is present before reading it:
+
+```ts
+import { normalizeHotkey, parseHotkey } from '@tanstack/svelte-hotkeys'
+
+const parsed = parseHotkey('Mod+[KeyS]', 'mac')
+if (parsed.code !== undefined) {
+  console.log(parsed.code) // 'KeyS'; parsed.key is undefined
+}
+const stored = normalizeHotkey(parsed, 'mac') // 'Mod+[KeyS]'
+```
+
+- **Normalize before saving.** `parseHotkey` resolves `Mod` for a specific platform (`meta: true` on macOS). Pass that same platform to `normalizeHotkey` to restore `'Mod+...'` before saving bindings intended to use `Mod`. Store registerable hotkey strings, never formatted labels. See [Write a chord as a string or an object](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md) for the forms a hotkey can take. Because normalizing on macOS turns `Meta+S` into `Mod+S`, keep the original registerable binding string if an explicit modifier must stay platform-specific.
+- **Compare bindings.** `areHotkeysEqual(a, b)` checks semantic equality after resolving modifiers, so `'Mod+S'` equals `'Meta+S'` on macOS. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` unwraps a one-step sequence into a chord.
+- **Validate untrusted strings.** Pass hotkeys loaded from storage or user input to `validateHotkey`. It returns `{ valid, errors, warnings }`, where each issue includes:
+  - `reason`, a machine-readable code such as `'unknown-modifier'`
+  - `part`, the offending token
+  - `step`, the zero-based step index for sequences
+
+`validateHotkey` checks syntax only and can't promise that the browser or operating system delivers the shortcut, so map `reason` codes to your own UI strings. To validate as users press keys, see [Validate and check conflicts](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#source-hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md).
+
+Try these options together with the format toggles in the [server-rendered cheat sheet example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/svelte/getFormatForDisplay-sveltekit). For a full list of your app's shortcuts, see [Cheat Sheets](./hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md#source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md).

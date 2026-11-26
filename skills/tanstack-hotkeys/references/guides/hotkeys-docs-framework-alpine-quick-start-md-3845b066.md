@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -67,8 +67,8 @@ When a component has more than one hotkey, register them together with `createHo
 init() {
   this.hotkeys.createHotkeys([
     { hotkey: 'Mod+S', callback: () => save() },
-    { hotkey: 'Mod+Z', callback: () => undo() },
-    { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+    { hotkey: 'Mod+Enter', callback: () => publish() },
+    { hotkey: 'Mod+D', callback: () => duplicate() },
   ])
 },
 ```
@@ -245,22 +245,27 @@ Alpine.data('confirmDialog', () => {
 
 While the dialog exists, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog is destroyed, they work again.
 
-`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. Despite its name, `createHotkeysScope` only creates an owner for registrations. It doesn't create or activate a hotkey scope.
+`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. [Activate a scope](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md) covers scopes for UI that Alpine doesn't render. Despite its name, `createHotkeysScope` only creates an owner for registrations. It doesn't create or activate a hotkey scope.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md#source-hotkeys-docs-framework-alpine-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md#source-hotkeys-docs-framework-alpine-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md#source-hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-alpine-guides-hotkey-hints-md-91910f46.md#source-hotkeys-docs-framework-alpine-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
 
-As your app grows:
+App Hotkeys & UI:
 
 - [App Hotkeys](./hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md#source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md#source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md): record the shortcut a user presses
-- [Hotkey Manager](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md): register and inspect hotkeys outside components
+- [Hotkey Recording](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md#source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-alpine-guides-hotkey-hints-md-91910f46.md#source-hotkeys-docs-framework-alpine-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md#source-hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [Keyboard Layouts](./hotkeys-docs-framework-alpine-guides-keyboard-layouts-md-7e67b106.md#source-hotkeys-docs-framework-alpine-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-alpine-guides-testing-md-5b795433.md#source-hotkeys-docs-framework-alpine-guides-testing-md): reset singleton state and fix the target platform in unit tests
+- [Hotkey Manager](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md): register and inspect hotkeys outside components, and activate scopes

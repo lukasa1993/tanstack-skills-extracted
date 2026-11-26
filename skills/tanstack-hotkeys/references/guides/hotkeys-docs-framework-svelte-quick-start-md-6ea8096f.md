@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -36,8 +36,8 @@ When a component has more than one hotkey, create them together with `createHotk
 
   createHotkeys([
     { hotkey: 'Mod+S', callback: () => save() },
-    { hotkey: 'Mod+Z', callback: () => undo() },
-    { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+    { hotkey: 'Mod+Enter', callback: () => publish() },
+    { hotkey: 'Mod+D', callback: () => duplicate() },
   ])
 </script>
 ```
@@ -66,7 +66,7 @@ createHotkeys([
 
 ## Show the shortcut
 
-Label a button or menu item with `getFormatForDisplay`. Format the same value you register, so the label always matches the binding:
+Label a button or menu item with `getFormatForDisplay`. Format the same value that is registered, so the label always matches the binding:
 
 ```svelte
 <script lang="ts">
@@ -86,7 +86,7 @@ Label a button or menu item with `getFormatForDisplay`. Format the same value yo
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server, such as with SvelteKit, set the provider's `platform` from the request, so the server renders the user's labels without hydration errors, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md).
+In server-rendered apps such as SvelteKit, pass the request's platform to `HotkeysProvider` so server HTML matches the browser without hydration errors. See [SSR & Hydration](./hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md#source-hotkeys-docs-framework-svelte-guides-ssr-md).
 
 ## Hotkeys follow your components
 
@@ -128,7 +128,7 @@ createHotkey('Mod+S', () => save(), () => ({ enabled: hasUnsavedChanges }))
 
 When a group of hotkeys turns on and off together, put them in a scope instead. See [Add providers and scopes](./hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md#add-providers-and-scopes-optional).
 
-For hotkeys shared across components, create them in an `$effect.root` in a `.svelte.ts` module. They unregister when you call the function that `$effect.root` returns:
+For hotkeys shared across components, create them in an `$effect.root` in a `.svelte.ts` module. They unregister when the function that `$effect.root` returns runs:
 
 ```ts
 // shortcuts.svelte.ts
@@ -162,7 +162,7 @@ A hotkey's default `target` is `document`, so it works wherever focus is on the 
 
 ## Add providers and scopes (optional)
 
-So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component is mounted. You don't need a provider for that.
+So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component is mounted. That needs no provider.
 
 Wrap your app in `HotkeysProvider` to set default options for every hotkey inside it, such as more time between sequence steps:
 
@@ -203,24 +203,30 @@ A component can make itself a scope with `setHotkeysContext`. Call it before cre
 
 While the dialog is open, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog closes, they work again.
 
-`setHotkeysContext` reads its options once. When `enabled` or `exclusive` needs to change over time, wrap the component in `<HotkeysProvider scope="..." exclusive>` instead. [HotkeysProvider and Scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) covers nested scopes, precedence, and turning a scope off without destroying it.
+`setHotkeysContext` reads its options once. When `enabled` or `exclusive` needs to change over time, wrap the component in `<HotkeysProvider scope="..." exclusive>` instead. [HotkeysProvider & Scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) covers nested scopes, precedence, and turning a scope off without destroying it.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md#source-hotkeys-docs-framework-svelte-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md#source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-svelte-guides-hotkey-hints-md-3d366fbe.md#source-hotkeys-docs-framework-svelte-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [HotkeysProvider & Scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md): inspect registered hotkeys, scopes, and held keys while you develop
 
-As your app grows:
+App Hotkeys & UI:
 
-- [HotkeysProvider and Scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [App Hotkeys](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md#source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#source-hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Recording](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#source-hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md#source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-svelte-guides-hotkey-hints-md-3d366fbe.md#source-hotkeys-docs-framework-svelte-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md#source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [SSR & Hydration](./hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md#source-hotkeys-docs-framework-svelte-guides-ssr-md): server-render platform labels in SvelteKit and Astro
+- [Keyboard Layouts](./hotkeys-docs-framework-svelte-guides-keyboard-layouts-md-a33262ea.md#source-hotkeys-docs-framework-svelte-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-svelte-guides-testing-md-6ac89090.md#source-hotkeys-docs-framework-svelte-guides-testing-md): reset singleton state and fix the target platform in unit tests
 - [Hotkey Manager](./hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md#source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md): register and inspect hotkeys outside components

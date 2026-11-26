@@ -1,6 +1,6 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register multiple hotkeys
 
@@ -12,11 +12,11 @@ class MyEditor extends LitElement {
   @hotkey('Mod+S')
   save() {}
 
-  @hotkey('Mod+Z')
-  undo() {}
+  @hotkey('Mod+Enter')
+  publish() {}
 
-  @hotkey('Mod+Shift+Z')
-  redo() {}
+  @hotkey('Mod+D')
+  duplicate() {}
 
   @hotkey(['G', 'G'], { timeout: 500 })
   scrollToTop() {}

@@ -12,16 +12,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md",
       "sourcePath": "docs/framework/alpine/guides/app-hotkeys.md",
-      "bytes": 10558,
+      "bytes": 11353,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md",
-          "bytes": 10558
+          "bytes": 11353
         }
       ],
       "examples": []
@@ -36,16 +36,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md",
       "sourcePath": "docs/framework/alpine/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 10458,
+      "bytes": 10471,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md",
-          "bytes": 10458
+          "bytes": 10471
         }
       ],
       "examples": []
@@ -60,16 +60,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md",
       "sourcePath": "docs/framework/alpine/guides/custom-hotkey-recording.md",
-      "bytes": 1753,
+      "bytes": 1955,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--overview.md",
-          "bytes": 1129
+          "bytes": 840
         },
         {
           "title": "Record a chord",
@@ -79,7 +79,7 @@
         {
           "title": "Record a sequence",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--record-a-sequence.md",
-          "bytes": 1630
+          "bytes": 1661
         },
         {
           "title": "Keys the recorder handles",
@@ -89,7 +89,7 @@
         {
           "title": "Validate and check conflicts",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--validate-and-check-conflicts.md",
-          "bytes": 4199
+          "bytes": 4372
         },
         {
           "title": "Build a shortcut settings screen",
@@ -100,6 +100,11 @@
           "title": "Recorder options",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--recorder-options.md",
           "bytes": 2662
+        },
+        {
+          "title": "Migrating from v0.9 and earlier",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--migrating-from-v0-9-and-earlier.md",
+          "bytes": 545
         }
       ],
       "examples": []
@@ -114,16 +119,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md",
       "sourcePath": "docs/framework/alpine/guides/formatting-display.md",
-      "bytes": 12694,
+      "bytes": 12994,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Labels in server templates; Format outside a component; Parse, compare, and store hotkeys",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-formatting-display-md-c1379339.md",
-          "bytes": 12694
+          "bytes": 12994
         }
       ],
       "examples": []
@@ -138,16 +143,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md",
       "sourcePath": "docs/framework/alpine/guides/held-key-state-helpers.md",
-      "bytes": 5237,
+      "bytes": 5240,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-held-key-state-helpers-md-45f4cbc6.md",
-          "bytes": 5237
+          "bytes": 5240
         }
       ],
       "examples": []
@@ -162,16 +167,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-hints-md-91910f46.md",
       "sourcePath": "docs/framework/alpine/guides/hotkey-hints.md",
-      "bytes": 5775,
+      "bytes": 5546,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the helper",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-hints-md-91910f46.md",
-          "bytes": 5775
+          "bytes": 5546
         }
       ],
       "examples": []
@@ -186,16 +191,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md",
       "sourcePath": "docs/framework/alpine/guides/hotkey-manager.md",
-      "bytes": 9141,
+      "bytes": 7997,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md",
-          "bytes": 9141
+          "bytes": 7997
         }
       ],
       "examples": []
@@ -210,7 +215,7 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md",
       "sourcePath": "docs/framework/alpine/guides/hotkeys.md",
       "bytes": 2002,
@@ -229,7 +234,7 @@
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-a-hotkey.md",
-          "bytes": 5317
+          "bytes": 5331
         },
         {
           "title": "Hotkey options",
@@ -239,12 +244,12 @@
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--register-multiple-hotkeys.md",
-          "bytes": 2725
+          "bytes": 2731
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--enable-and-disable-hotkeys.md",
-          "bytes": 2729
+          "bytes": 2741
         },
         {
           "title": "Hotkey targets",
@@ -254,7 +259,7 @@
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3--handle-duplicate-hotkeys.md",
-          "bytes": 1063
+          "bytes": 1131
         },
         {
           "title": "Describe hotkeys with `meta`",
@@ -274,16 +279,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-keyboard-layouts-md-7e67b106.md",
       "sourcePath": "docs/framework/alpine/guides/keyboard-layouts.md",
-      "bytes": 4938,
+      "bytes": 6081,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-keyboard-layouts-md-7e67b106.md",
-          "bytes": 4938
+          "bytes": 6081
         }
       ],
       "examples": []
@@ -298,16 +303,40 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
       "sourcePath": "docs/framework/alpine/guides/sequences.md",
-      "bytes": 12193,
+      "bytes": 13017,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.2 and earlier",
           "file": "references/guides/hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md",
-          "bytes": 12193
+          "bytes": 13017
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/alpine/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-alpine",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "alpine"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-alpine-guides-testing-md-5b795433.md",
+      "sourcePath": "docs/framework/alpine/guides/testing.md",
+      "bytes": 5013,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-alpine-guides-testing-md-5b795433.md",
+          "bytes": 5013
         }
       ],
       "examples": []
@@ -322,16 +351,16 @@
         "alpine"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-alpine-quick-start-md-3845b066.md",
       "sourcePath": "docs/framework/alpine/quick-start.md",
-      "bytes": 10629,
+      "bytes": 11231,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add defaults and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-alpine-quick-start-md-3845b066.md",
-          "bytes": 10629
+          "bytes": 11231
         }
       ],
       "examples": []
@@ -346,16 +375,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md",
       "sourcePath": "docs/framework/ember/guides/app-hotkeys.md",
-      "bytes": 10647,
+      "bytes": 11445,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-app-hotkeys-md-c66d9482.md",
-          "bytes": 10647
+          "bytes": 11445
         }
       ],
       "examples": []
@@ -370,16 +399,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md",
       "sourcePath": "docs/framework/ember/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 10952,
+      "bytes": 10965,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md",
-          "bytes": 10952
+          "bytes": 10965
         }
       ],
       "examples": []
@@ -394,16 +423,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md",
       "sourcePath": "docs/framework/ember/guides/custom-hotkey-recording.md",
-      "bytes": 1661,
+      "bytes": 1862,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--overview.md",
-          "bytes": 1028
+          "bytes": 738
         },
         {
           "title": "Record a chord",
@@ -413,7 +442,7 @@
         {
           "title": "Record a sequence",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--record-a-sequence.md",
-          "bytes": 1601
+          "bytes": 1632
         },
         {
           "title": "Keys the recorder handles",
@@ -423,7 +452,7 @@
         {
           "title": "Validate and check conflicts",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--validate-and-check-conflicts.md",
-          "bytes": 4192
+          "bytes": 4365
         },
         {
           "title": "Build a shortcut settings screen",
@@ -434,6 +463,11 @@
           "title": "Recorder options",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--recorder-options.md",
           "bytes": 2757
+        },
+        {
+          "title": "Migrating from v0.8 and earlier",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd--migrating-from-v0-8-and-earlier.md",
+          "bytes": 545
         }
       ],
       "examples": []
@@ -448,56 +482,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md",
       "sourcePath": "docs/framework/ember/guides/formatting-display.md",
-      "bytes": 2179,
+      "bytes": 13113,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--overview.md",
-          "bytes": 1270
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-a-hotkey.md",
-          "bytes": 2996
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--render-individual-keycaps.md",
-          "bytes": 635
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-sequences.md",
-          "bytes": 923
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--choose-symbols-and-separators.md",
-          "bytes": 952
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 3827
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-labels-in-server-rendered-apps.md",
-          "bytes": 5412
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-outside-a-component.md",
-          "bytes": 1178
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--parse-compare-and-store-hotkeys.md",
-          "bytes": 2391
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md",
+          "bytes": 13113
         }
       ],
       "examples": []
@@ -512,16 +506,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md",
       "sourcePath": "docs/framework/ember/guides/held-key-state-helpers.md",
-      "bytes": 5001,
+      "bytes": 5004,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-held-key-state-helpers-md-100a9cec.md",
-          "bytes": 5001
+          "bytes": 5004
         }
       ],
       "examples": []
@@ -536,16 +530,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-hints-md-12a744d3.md",
       "sourcePath": "docs/framework/ember/guides/hotkey-hints.md",
-      "bytes": 5955,
+      "bytes": 5691,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the utility",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-hints-md-12a744d3.md",
-          "bytes": 5955
+          "bytes": 5691
         }
       ],
       "examples": []
@@ -560,16 +554,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md",
       "sourcePath": "docs/framework/ember/guides/hotkey-manager.md",
-      "bytes": 9209,
+      "bytes": 7824,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkey-manager-md-124cc37b.md",
-          "bytes": 9209
+          "bytes": 7824
         }
       ],
       "examples": []
@@ -584,7 +578,7 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md",
       "sourcePath": "docs/framework/ember/guides/hotkeys.md",
       "bytes": 1956,
@@ -603,7 +597,7 @@
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--register-a-hotkey.md",
-          "bytes": 5595
+          "bytes": 5609
         },
         {
           "title": "Hotkey options",
@@ -613,12 +607,12 @@
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--register-multiple-hotkeys.md",
-          "bytes": 2791
+          "bytes": 2797
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--enable-and-disable-hotkeys.md",
-          "bytes": 2636
+          "bytes": 2648
         },
         {
           "title": "Hotkey targets",
@@ -628,7 +622,7 @@
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5--handle-duplicate-hotkeys.md",
-          "bytes": 1062
+          "bytes": 1130
         },
         {
           "title": "Describe hotkeys with `meta`",
@@ -648,16 +642,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-keyboard-layouts-md-6c92481b.md",
       "sourcePath": "docs/framework/ember/guides/keyboard-layouts.md",
-      "bytes": 4641,
+      "bytes": 5784,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-keyboard-layouts-md-6c92481b.md",
-          "bytes": 4641
+          "bytes": 5784
         }
       ],
       "examples": []
@@ -672,16 +666,64 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
       "sourcePath": "docs/framework/ember/guides/sequences.md",
-      "bytes": 12462,
+      "bytes": 13286,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.2 and earlier",
           "file": "references/guides/hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md",
-          "bytes": 12462
+          "bytes": 13286
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-ember",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-ssr-md-78704d49.md",
+      "sourcePath": "docs/framework/ember/guides/ssr.md",
+      "bytes": 6486,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps; Held keys and hints",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-ssr-md-78704d49.md",
+          "bytes": 6486
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/ember/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-ember",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "ember"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-ember-guides-testing-md-db143563.md",
+      "sourcePath": "docs/framework/ember/guides/testing.md",
+      "bytes": 5060,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-ember-guides-testing-md-db143563.md",
+          "bytes": 5060
         }
       ],
       "examples": []
@@ -696,16 +738,16 @@
         "ember"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md",
       "sourcePath": "docs/framework/ember/quick-start.md",
-      "bytes": 11143,
+      "bytes": 11871,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add defaults and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md",
-          "bytes": 11143
+          "bytes": 11871
         }
       ],
       "examples": []
@@ -720,16 +762,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-app-hotkeys-md-ade4f49f.md",
       "sourcePath": "docs/framework/octane/guides/app-hotkeys.md",
-      "bytes": 10073,
+      "bytes": 9571,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-app-hotkeys-md-ade4f49f.md",
-          "bytes": 10073
+          "bytes": 9571
         }
       ],
       "examples": []
@@ -744,16 +786,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-cheat-sheet-ui-helpers-md-3e802195.md",
       "sourcePath": "docs/framework/octane/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 9566,
+      "bytes": 8884,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-cheat-sheet-ui-helpers-md-3e802195.md",
-          "bytes": 9566
+          "bytes": 8884
         }
       ],
       "examples": []
@@ -768,46 +810,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md",
       "sourcePath": "docs/framework/octane/guides/custom-hotkey-recording.md",
-      "bytes": 1670,
+      "bytes": 11926,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--overview.md",
-          "bytes": 748
-        },
-        {
-          "title": "Record a chord",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--record-a-chord.md",
-          "bytes": 2399
-        },
-        {
-          "title": "Record a sequence",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--record-a-sequence.md",
-          "bytes": 1307
-        },
-        {
-          "title": "Keys the recorder handles",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--keys-the-recorder-handles.md",
-          "bytes": 1677
-        },
-        {
-          "title": "Validate and check conflicts",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--validate-and-check-conflicts.md",
-          "bytes": 4178
-        },
-        {
-          "title": "Build a shortcut settings screen",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--build-a-shortcut-settings-screen.md",
-          "bytes": 2211
-        },
-        {
-          "title": "Recorder options",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757--recorder-options.md",
-          "bytes": 2742
+          "title": "Overview; Record a chord; Record a sequence; Keys the recorder handles; Validate and check conflicts; Build a shortcut settings screen; Recorder options",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-custom-hotkey-recording-md-b8f4a757.md",
+          "bytes": 11926
         }
       ],
       "examples": []
@@ -822,56 +834,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md",
       "sourcePath": "docs/framework/octane/guides/formatting-display.md",
-      "bytes": 2266,
+      "bytes": 10763,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--overview.md",
-          "bytes": 1302
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--format-a-hotkey.md",
-          "bytes": 2675
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--render-individual-keycaps.md",
-          "bytes": 636
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--format-sequences.md",
-          "bytes": 926
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--choose-symbols-and-separators.md",
-          "bytes": 953
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 2944
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--format-labels-in-server-rendered-apps.md",
-          "bytes": 8091
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--format-outside-a-component.md",
-          "bytes": 1103
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7--parse-compare-and-store-hotkeys.md",
-          "bytes": 2621
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-formatting-display-md-13293bb7.md",
+          "bytes": 10763
         }
       ],
       "examples": []
@@ -886,16 +858,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-held-key-state-helpers-md-8f82c6a9.md",
       "sourcePath": "docs/framework/octane/guides/held-key-state-helpers.md",
-      "bytes": 4212,
+      "bytes": 4041,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-held-key-state-helpers-md-8f82c6a9.md",
-          "bytes": 4212
+          "bytes": 4041
         }
       ],
       "examples": []
@@ -910,16 +882,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-hints-md-9965291c.md",
       "sourcePath": "docs/framework/octane/guides/hotkey-hints.md",
-      "bytes": 5075,
+      "bytes": 4816,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the hook",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-hints-md-9965291c.md",
-          "bytes": 5075
+          "bytes": 4816
         }
       ],
       "examples": []
@@ -934,16 +906,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-manager-md-1ee89e7f.md",
       "sourcePath": "docs/framework/octane/guides/hotkey-manager.md",
-      "bytes": 8978,
+      "bytes": 7259,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing; Testing",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkey-manager-md-1ee89e7f.md",
-          "bytes": 8978
+          "bytes": 7259
         }
       ],
       "examples": []
@@ -958,16 +930,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md",
       "sourcePath": "docs/framework/octane/guides/hotkeys-provider-and-scopes.md",
-      "bytes": 12410,
+      "bytes": 11809,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Set default options; Provide app hotkeys; Group hotkeys into scopes; Scopes and targets; Nested scopes win; Turn a scope off with `enabled`; Exclusive scopes; Choose a scope for one hotkey; Scopes and app hotkeys; Scopes outside Octane; Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-provider-and-scopes-md-886d843a.md",
-          "bytes": 12410
+          "bytes": 11809
         }
       ],
       "examples": []
@@ -982,56 +954,56 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md",
       "sourcePath": "docs/framework/octane/guides/hotkeys.md",
-      "bytes": 1993,
+      "bytes": 2032,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--overview.md",
-          "bytes": 553
+          "bytes": 549
         },
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--chords-and-sequences.md",
-          "bytes": 901
+          "bytes": 820
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--register-a-hotkey.md",
-          "bytes": 5398
+          "bytes": 5262
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-options.md",
-          "bytes": 4809
+          "bytes": 4272
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--register-multiple-hotkeys.md",
-          "bytes": 2601
+          "bytes": 2302
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--enable-and-disable-hotkeys.md",
-          "bytes": 2415
+          "bytes": 1717
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--hotkey-targets.md",
-          "bytes": 2812
+          "bytes": 2496
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--handle-duplicate-hotkeys.md",
-          "bytes": 1406
+          "bytes": 1275
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e--describe-hotkeys-with-meta.md",
-          "bytes": 695
+          "bytes": 702
         }
       ],
       "examples": []
@@ -1046,16 +1018,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-keyboard-layouts-md-68141efd.md",
       "sourcePath": "docs/framework/octane/guides/keyboard-layouts.md",
-      "bytes": 4396,
+      "bytes": 5291,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-keyboard-layouts-md-68141efd.md",
-          "bytes": 4396
+          "bytes": 5291
         }
       ],
       "examples": []
@@ -1070,16 +1042,64 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
       "sourcePath": "docs/framework/octane/guides/sequences.md",
-      "bytes": 11460,
+      "bytes": 10960,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.3 and earlier",
           "file": "references/guides/hotkeys-docs-framework-octane-guides-sequences-md-dc8f8bbf.md",
-          "bytes": 11460
+          "bytes": 10960
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-octane",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-ssr-md-afdbc3de.md",
+      "sourcePath": "docs/framework/octane/guides/ssr.md",
+      "bytes": 8752,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-ssr-md-afdbc3de.md",
+          "bytes": 8752
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/octane/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-octane",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "octane"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-octane-guides-testing-md-9e3a4256.md",
+      "sourcePath": "docs/framework/octane/guides/testing.md",
+      "bytes": 4664,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-octane-guides-testing-md-9e3a4256.md",
+          "bytes": 4664
         }
       ],
       "examples": []
@@ -1094,16 +1114,16 @@
         "octane"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md",
       "sourcePath": "docs/framework/octane/quick-start.md",
-      "bytes": 10003,
+      "bytes": 10628,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md",
-          "bytes": 10003
+          "bytes": 10628
         }
       ],
       "examples": []
@@ -1116,7 +1136,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/alpine-hotkeys",
-      "version": "0.15.3",
+      "version": "0.15.5",
       "file": "references/guides/tanstack-alpine-hotkeys-b9b64077.md",
       "sourcePath": "alpine-hotkeys",
       "bytes": 11823,
@@ -1143,7 +1163,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/angular-hotkeys",
-      "version": "0.25.3",
+      "version": "0.25.5",
       "file": "references/guides/tanstack-angular-hotkeys-aae98366.md",
       "sourcePath": "angular-hotkeys",
       "bytes": 1027,
@@ -1190,7 +1210,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/ember-hotkeys",
-      "version": "0.14.3",
+      "version": "0.14.5",
       "file": "references/guides/tanstack-ember-hotkeys-c89ea140.md",
       "sourcePath": "ember-hotkeys",
       "bytes": 11740,
@@ -1217,7 +1237,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/tanstack-hotkeys-app-hotkeys-62e73124.md",
       "sourcePath": "app-hotkeys",
       "bytes": 3507,
@@ -1244,16 +1264,16 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/tanstack-hotkeys-core-62518e1a.md",
       "sourcePath": "hotkeys-core",
-      "bytes": 10708,
+      "bytes": 10988,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Use the library instead of rebuilding it; Turn hotkeys on and off; Pitfalls; API discovery",
           "file": "references/guides/tanstack-hotkeys-core-62518e1a.md",
-          "bytes": 10708
+          "bytes": 10988
         }
       ],
       "examples": []
@@ -1266,7 +1286,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/lit-hotkeys",
-      "version": "0.27.3",
+      "version": "0.27.5",
       "file": "references/guides/tanstack-lit-hotkeys-f7e7a513.md",
       "sourcePath": "lit-hotkeys",
       "bytes": 12174,
@@ -1293,7 +1313,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/octane-hotkeys",
-      "version": "0.15.3",
+      "version": "0.15.5",
       "file": "references/guides/tanstack-octane-hotkeys-a0fade91.md",
       "sourcePath": "octane-hotkeys",
       "bytes": 10916,
@@ -1320,7 +1340,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/preact-hotkeys",
-      "version": "0.24.3",
+      "version": "0.24.5",
       "file": "references/guides/tanstack-preact-hotkeys-d76f076a.md",
       "sourcePath": "preact-hotkeys",
       "bytes": 11378,
@@ -1347,7 +1367,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/react-hotkeys",
-      "version": "0.27.2",
+      "version": "0.27.4",
       "file": "references/guides/tanstack-react-hotkeys-32df5886.md",
       "sourcePath": "react-hotkeys",
       "bytes": 11864,
@@ -1374,7 +1394,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/solid-hotkeys",
-      "version": "0.26.0",
+      "version": "0.26.2",
       "file": "references/guides/tanstack-solid-hotkeys-a9ad9600.md",
       "sourcePath": "solid-hotkeys",
       "bytes": 11592,
@@ -1401,7 +1421,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/svelte-hotkeys",
-      "version": "0.25.3",
+      "version": "0.25.5",
       "file": "references/guides/tanstack-svelte-hotkeys-8bce2478.md",
       "sourcePath": "svelte-hotkeys",
       "bytes": 12533,
@@ -1428,7 +1448,7 @@
       "status": "Published skill",
       "frameworks": [],
       "package": "@tanstack/vue-hotkeys",
-      "version": "0.25.3",
+      "version": "0.25.5",
       "file": "references/guides/tanstack-vue-hotkeys-ef953b39.md",
       "sourcePath": "vue-hotkeys",
       "bytes": 11355,
@@ -1455,16 +1475,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-agent-skills-md-6db6b33b.md",
       "sourcePath": "docs/agent-skills.md",
-      "bytes": 8735,
+      "bytes": 6038,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; What are Agent Skills?; Skills Shipped by TanStack Hotkeys; Step 1: Install TanStack Hotkeys; Step 2: Run `intent install`; Step 3: Review the Generated Guidance; Step 4: Confirm It's Wired Up; Keeping Skills Current; Using Skills Without the CLI; Learn More",
+          "title": "Overview; What are Agent Skills?; Skills shipped by TanStack Hotkeys; Step 1: Install TanStack Hotkeys; Step 2: Run `intent install`; Step 3: Review the generated guidance; Step 4: Verify in a fresh agent session; Keeping skills current; Wiring skills manually; Learn more",
           "file": "references/guides/hotkeys-docs-agent-skills-md-6db6b33b.md",
-          "bytes": 8735
+          "bytes": 6038
         }
       ],
       "examples": []
@@ -1477,16 +1497,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
       "sourcePath": "docs/devtools.md",
-      "bytes": 10951,
+      "bytes": 11017,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Features; Installation; Setup; Standalone panel; Production builds",
           "file": "references/guides/hotkeys-docs-devtools-md-3036b65e.md",
-          "bytes": 10951
+          "bytes": 11017
         }
       ],
       "examples": []
@@ -1499,16 +1519,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
       "sourcePath": "docs/installation.md",
-      "bytes": 7315,
+      "bytes": 7027,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-installation-md-bb05b3dc.md",
-          "bytes": 7315
+          "bytes": 7027
         }
       ],
       "examples": []
@@ -1521,16 +1541,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
       "sourcePath": "docs/overview.md",
-      "bytes": 7944,
+      "bytes": 7129,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Motivation; Features; Where to start",
+          "title": "Overview; Motivation; Where to start; Features",
           "file": "references/guides/hotkeys-docs-overview-md-64fd9600.md",
-          "bytes": 7944
+          "bytes": 7129
         }
       ],
       "examples": []
@@ -1545,16 +1565,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md",
       "sourcePath": "docs/framework/react/guides/app-hotkeys.md",
-      "bytes": 11460,
+      "bytes": 9917,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md",
-          "bytes": 11460
+          "bytes": 9917
         }
       ],
       "examples": []
@@ -1569,16 +1589,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md",
       "sourcePath": "docs/framework/react/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 9665,
+      "bytes": 8953,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md",
-          "bytes": 9665
+          "bytes": 8953
         }
       ],
       "examples": []
@@ -1593,46 +1613,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md",
       "sourcePath": "docs/framework/react/guides/custom-hotkey-recording.md",
-      "bytes": 1661,
+      "bytes": 12062,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--overview.md",
-          "bytes": 745
-        },
-        {
-          "title": "Record a chord",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--record-a-chord.md",
-          "bytes": 2426
-        },
-        {
-          "title": "Record a sequence",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--record-a-sequence.md",
-          "bytes": 1382
-        },
-        {
-          "title": "Keys the recorder handles",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--keys-the-recorder-handles.md",
-          "bytes": 1676
-        },
-        {
-          "title": "Validate and check conflicts",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--validate-and-check-conflicts.md",
-          "bytes": 4171
-        },
-        {
-          "title": "Build a shortcut settings screen",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--build-a-shortcut-settings-screen.md",
-          "bytes": 2254
-        },
-        {
-          "title": "Recorder options",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6--recorder-options.md",
-          "bytes": 2734
+          "title": "Overview; Record a chord; Record a sequence; Keys the recorder handles; Validate and check conflicts; Build a shortcut settings screen; Recorder options",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md",
+          "bytes": 12062
         }
       ],
       "examples": []
@@ -1647,56 +1637,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
       "sourcePath": "docs/framework/react/guides/formatting-display.md",
-      "bytes": 2298,
+      "bytes": 10579,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--overview.md",
-          "bytes": 1299
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--format-a-hotkey.md",
-          "bytes": 2686
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--render-individual-keycaps.md",
-          "bytes": 635
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--format-sequences.md",
-          "bytes": 923
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--choose-symbols-and-separators.md",
-          "bytes": 952
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 2946
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--format-labels-in-server-rendered-apps.md",
-          "bytes": 9139
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--format-outside-a-component.md",
-          "bytes": 1128
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e--parse-compare-and-store-hotkeys.md",
-          "bytes": 2621
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md",
+          "bytes": 10579
         }
       ],
       "examples": []
@@ -1711,16 +1661,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md",
       "sourcePath": "docs/framework/react/guides/held-key-state-helpers.md",
-      "bytes": 4252,
+      "bytes": 3796,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md",
-          "bytes": 4252
+          "bytes": 3796
         }
       ],
       "examples": []
@@ -1735,16 +1685,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-hints-md-abc64c12.md",
       "sourcePath": "docs/framework/react/guides/hotkey-hints.md",
-      "bytes": 5110,
+      "bytes": 4822,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the hook",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-hints-md-abc64c12.md",
-          "bytes": 5110
+          "bytes": 4822
         }
       ],
       "examples": []
@@ -1759,16 +1709,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md",
       "sourcePath": "docs/framework/react/guides/hotkey-manager.md",
-      "bytes": 8863,
+      "bytes": 7094,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md",
-          "bytes": 8863
+          "bytes": 7094
         }
       ],
       "examples": []
@@ -1783,16 +1733,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md",
       "sourcePath": "docs/framework/react/guides/hotkeys-provider-and-scopes.md",
-      "bytes": 12963,
+      "bytes": 12293,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Set default options; Provide app hotkeys; Group hotkeys into scopes; Scopes and targets; Nested scopes win; Turn a scope off with `enabled`; Exclusive scopes; Choose a scope for one hotkey; Scopes and app hotkeys; Scopes outside React; Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md",
-          "bytes": 12963
+          "bytes": 12293
         }
       ],
       "examples": []
@@ -1807,7 +1757,7 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md",
       "sourcePath": "docs/framework/react/guides/hotkeys.md",
       "bytes": 1995,
@@ -1816,47 +1766,47 @@
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--overview.md",
-          "bytes": 549
+          "bytes": 545
         },
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--chords-and-sequences.md",
-          "bytes": 898
+          "bytes": 817
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--register-a-hotkey.md",
-          "bytes": 4042
+          "bytes": 3886
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-options.md",
-          "bytes": 4822
+          "bytes": 4285
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--register-multiple-hotkeys.md",
-          "bytes": 2548
+          "bytes": 2257
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--enable-and-disable-hotkeys.md",
-          "bytes": 2445
+          "bytes": 1718
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--hotkey-targets.md",
-          "bytes": 3281
+          "bytes": 2801
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--handle-duplicate-hotkeys.md",
-          "bytes": 1401
+          "bytes": 1270
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-react-guides-hotkeys-md-88956014--describe-hotkeys-with-meta.md",
-          "bytes": 714
+          "bytes": 699
         }
       ],
       "examples": []
@@ -1871,16 +1821,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-keyboard-layouts-md-3f63f616.md",
       "sourcePath": "docs/framework/react/guides/keyboard-layouts.md",
-      "bytes": 4379,
+      "bytes": 5228,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-react-guides-keyboard-layouts-md-3f63f616.md",
-          "bytes": 4379
+          "bytes": 5228
         }
       ],
       "examples": []
@@ -1895,16 +1845,64 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
       "sourcePath": "docs/framework/react/guides/sequences.md",
-      "bytes": 11485,
+      "bytes": 10988,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.13 and earlier",
           "file": "references/guides/hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md",
-          "bytes": 11485
+          "bytes": 10988
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-ssr-md-35086cce.md",
+      "sourcePath": "docs/framework/react/guides/ssr.md",
+      "bytes": 9855,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps; App hotkeys with Server Components",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-ssr-md-35086cce.md",
+          "bytes": 9855
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/react/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-react",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "react"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-react-guides-testing-md-c07f1983.md",
+      "sourcePath": "docs/framework/react/guides/testing.md",
+      "bytes": 3971,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-react-guides-testing-md-c07f1983.md",
+          "bytes": 3971
         }
       ],
       "examples": []
@@ -1919,16 +1917,16 @@
         "react"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
       "sourcePath": "docs/framework/react/quick-start.md",
-      "bytes": 10018,
+      "bytes": 10137,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-react-quick-start-md-56a91190.md",
-          "bytes": 10018
+          "bytes": 10137
         }
       ],
       "examples": []
@@ -1943,16 +1941,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-app-hotkeys-md-426d55b2.md",
       "sourcePath": "docs/framework/preact/guides/app-hotkeys.md",
-      "bytes": 10141,
+      "bytes": 9639,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-app-hotkeys-md-426d55b2.md",
-          "bytes": 10141
+          "bytes": 9639
         }
       ],
       "examples": []
@@ -1967,16 +1965,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md",
       "sourcePath": "docs/framework/preact/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 9680,
+      "bytes": 8980,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md",
-          "bytes": 9680
+          "bytes": 8980
         }
       ],
       "examples": []
@@ -1991,46 +1989,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md",
       "sourcePath": "docs/framework/preact/guides/custom-hotkey-recording.md",
-      "bytes": 1670,
+      "bytes": 12090,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--overview.md",
-          "bytes": 748
-        },
-        {
-          "title": "Record a chord",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--record-a-chord.md",
-          "bytes": 2428
-        },
-        {
-          "title": "Record a sequence",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--record-a-sequence.md",
-          "bytes": 1385
-        },
-        {
-          "title": "Keys the recorder handles",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--keys-the-recorder-handles.md",
-          "bytes": 1677
-        },
-        {
-          "title": "Validate and check conflicts",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--validate-and-check-conflicts.md",
-          "bytes": 4178
-        },
-        {
-          "title": "Build a shortcut settings screen",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--build-a-shortcut-settings-screen.md",
-          "bytes": 2268
-        },
-        {
-          "title": "Recorder options",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2--recorder-options.md",
-          "bytes": 2742
+          "title": "Overview; Record a chord; Record a sequence; Keys the recorder handles; Validate and check conflicts; Build a shortcut settings screen; Recorder options",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md",
+          "bytes": 12090
         }
       ],
       "examples": []
@@ -2045,56 +2013,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
       "sourcePath": "docs/framework/preact/guides/formatting-display.md",
-      "bytes": 2263,
+      "bytes": 10571,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--overview.md",
-          "bytes": 1290
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-a-hotkey.md",
-          "bytes": 2689
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--render-individual-keycaps.md",
-          "bytes": 636
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-sequences.md",
-          "bytes": 926
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--choose-symbols-and-separators.md",
-          "bytes": 953
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 2948
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-labels-in-server-rendered-apps.md",
-          "bytes": 8452
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-outside-a-component.md",
-          "bytes": 1103
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--parse-compare-and-store-hotkeys.md",
-          "bytes": 2621
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d.md",
+          "bytes": 10571
         }
       ],
       "examples": []
@@ -2109,16 +2037,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-held-key-state-helpers-md-4ba7e38b.md",
       "sourcePath": "docs/framework/preact/guides/held-key-state-helpers.md",
-      "bytes": 4262,
+      "bytes": 3806,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-held-key-state-helpers-md-4ba7e38b.md",
-          "bytes": 4262
+          "bytes": 3806
         }
       ],
       "examples": []
@@ -2133,16 +2061,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-hints-md-8045d200.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-hints.md",
-      "bytes": 5100,
+      "bytes": 4841,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the hook",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-hints-md-8045d200.md",
-          "bytes": 5100
+          "bytes": 4841
         }
       ],
       "examples": []
@@ -2157,16 +2085,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-manager-md-60f997b1.md",
       "sourcePath": "docs/framework/preact/guides/hotkey-manager.md",
-      "bytes": 8882,
+      "bytes": 7356,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing; Testing",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkey-manager-md-60f997b1.md",
-          "bytes": 8882
+          "bytes": 7356
         }
       ],
       "examples": []
@@ -2181,16 +2109,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys-provider-and-scopes.md",
-      "bytes": 12681,
+      "bytes": 12033,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Set default options; Provide app hotkeys; Group hotkeys into scopes; Scopes and targets; Nested scopes win; Turn a scope off with `enabled`; Exclusive scopes; Choose a scope for one hotkey; Scopes and app hotkeys; Scopes outside Preact; Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md",
-          "bytes": 12681
+          "bytes": 12033
         }
       ],
       "examples": []
@@ -2205,7 +2133,7 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md",
       "sourcePath": "docs/framework/preact/guides/hotkeys.md",
       "bytes": 2006,
@@ -2214,47 +2142,47 @@
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--overview.md",
-          "bytes": 553
+          "bytes": 549
         },
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--chords-and-sequences.md",
-          "bytes": 901
+          "bytes": 820
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--register-a-hotkey.md",
-          "bytes": 4091
+          "bytes": 3935
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--hotkey-options.md",
-          "bytes": 4833
+          "bytes": 4296
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--register-multiple-hotkeys.md",
-          "bytes": 2580
+          "bytes": 2281
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--enable-and-disable-hotkeys.md",
-          "bytes": 2448
+          "bytes": 1721
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--hotkey-targets.md",
-          "bytes": 3298
+          "bytes": 2818
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--handle-duplicate-hotkeys.md",
-          "bytes": 1406
+          "bytes": 1275
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30--describe-hotkeys-with-meta.md",
-          "bytes": 717
+          "bytes": 702
         }
       ],
       "examples": []
@@ -2269,16 +2197,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-keyboard-layouts-md-023c2fea.md",
       "sourcePath": "docs/framework/preact/guides/keyboard-layouts.md",
-      "bytes": 4384,
+      "bytes": 5235,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-keyboard-layouts-md-023c2fea.md",
-          "bytes": 4384
+          "bytes": 5235
         }
       ],
       "examples": []
@@ -2293,16 +2221,64 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
       "sourcePath": "docs/framework/preact/guides/sequences.md",
-      "bytes": 11504,
+      "bytes": 11005,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.13 and earlier",
           "file": "references/guides/hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md",
-          "bytes": 11504
+          "bytes": 11005
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-ssr-md-41b38694.md",
+      "sourcePath": "docs/framework/preact/guides/ssr.md",
+      "bytes": 9064,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-ssr-md-41b38694.md",
+          "bytes": 9064
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/preact/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-preact",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "preact"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-preact-guides-testing-md-81c90c35.md",
+      "sourcePath": "docs/framework/preact/guides/testing.md",
+      "bytes": 4310,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-preact-guides-testing-md-81c90c35.md",
+          "bytes": 4310
         }
       ],
       "examples": []
@@ -2317,16 +2293,16 @@
         "preact"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md",
       "sourcePath": "docs/framework/preact/quick-start.md",
-      "bytes": 10058,
+      "bytes": 10183,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md",
-          "bytes": 10058
+          "bytes": 10183
         }
       ],
       "examples": []
@@ -2341,16 +2317,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md",
       "sourcePath": "docs/framework/solid/guides/app-hotkeys.md",
-      "bytes": 10431,
+      "bytes": 10123,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md",
-          "bytes": 10431
+          "bytes": 10123
         }
       ],
       "examples": []
@@ -2365,16 +2341,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md-db8cc71d.md",
       "sourcePath": "docs/framework/solid/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 10066,
+      "bytes": 9958,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md-db8cc71d.md",
-          "bytes": 10066
+          "bytes": 9958
         }
       ],
       "examples": []
@@ -2389,46 +2365,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md",
       "sourcePath": "docs/framework/solid/guides/custom-hotkey-recording.md",
-      "bytes": 1661,
+      "bytes": 12679,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--overview.md",
-          "bytes": 748
-        },
-        {
-          "title": "Record a chord",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--record-a-chord.md",
-          "bytes": 2564
-        },
-        {
-          "title": "Record a sequence",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--record-a-sequence.md",
-          "bytes": 1531
-        },
-        {
-          "title": "Keys the recorder handles",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--keys-the-recorder-handles.md",
-          "bytes": 1676
-        },
-        {
-          "title": "Validate and check conflicts",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--validate-and-check-conflicts.md",
-          "bytes": 4180
-        },
-        {
-          "title": "Build a shortcut settings screen",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--build-a-shortcut-settings-screen.md",
-          "bytes": 2367
-        },
-        {
-          "title": "Recorder options",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--recorder-options.md",
-          "bytes": 2749
+          "title": "Overview; Record a chord; Record a sequence; Keys the recorder handles; Validate and check conflicts; Build a shortcut settings screen; Recorder options",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md",
+          "bytes": 12679
         }
       ],
       "examples": []
@@ -2443,56 +2389,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
       "sourcePath": "docs/framework/solid/guides/formatting-display.md",
-      "bytes": 2250,
+      "bytes": 11208,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--overview.md",
-          "bytes": 1293
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--format-a-hotkey.md",
-          "bytes": 2665
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--render-individual-keycaps.md",
-          "bytes": 635
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--format-sequences.md",
-          "bytes": 923
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--choose-symbols-and-separators.md",
-          "bytes": 952
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 2979
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--format-labels-in-server-rendered-apps.md",
-          "bytes": 8068
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--format-outside-a-component.md",
-          "bytes": 1129
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537--parse-compare-and-store-hotkeys.md",
-          "bytes": 2621
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-formatting-display-md-fadfd537.md",
+          "bytes": 11208
         }
       ],
       "examples": []
@@ -2507,16 +2413,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md",
       "sourcePath": "docs/framework/solid/guides/held-key-state-helpers.md",
-      "bytes": 4502,
+      "bytes": 4420,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md",
-          "bytes": 4502
+          "bytes": 4420
         }
       ],
       "examples": []
@@ -2531,16 +2437,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-hints-md-49dc3efa.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-hints.md",
-      "bytes": 5446,
+      "bytes": 5178,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the primitive",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-hints-md-49dc3efa.md",
-          "bytes": 5446
+          "bytes": 5178
         }
       ],
       "examples": []
@@ -2555,16 +2461,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-manager-md-d1ae34aa.md",
       "sourcePath": "docs/framework/solid/guides/hotkey-manager.md",
-      "bytes": 9012,
+      "bytes": 7647,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing; Testing",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkey-manager-md-d1ae34aa.md",
-          "bytes": 9012
+          "bytes": 7647
         }
       ],
       "examples": []
@@ -2579,16 +2485,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys-provider-and-scopes.md",
-      "bytes": 12932,
+      "bytes": 12315,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Set default options; Provide app hotkeys; Group hotkeys into scopes; Scopes and targets; Nested scopes win; Turn a scope off with `enabled`; Exclusive scopes; Choose a scope for one hotkey; Scopes and app hotkeys; Scopes outside Solid; Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md",
-          "bytes": 12932
+          "bytes": 12315
         }
       ],
       "examples": []
@@ -2603,7 +2509,7 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md",
       "sourcePath": "docs/framework/solid/guides/hotkeys.md",
       "bytes": 2032,
@@ -2617,42 +2523,42 @@
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--chords-and-sequences.md",
-          "bytes": 909
+          "bytes": 834
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-a-hotkey.md",
-          "bytes": 5570
+          "bytes": 5420
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-options.md",
-          "bytes": 4850
+          "bytes": 4317
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--register-multiple-hotkeys.md",
-          "bytes": 2769
+          "bytes": 2467
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--enable-and-disable-hotkeys.md",
-          "bytes": 2499
+          "bytes": 2240
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--hotkey-targets.md",
-          "bytes": 3006
+          "bytes": 2659
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--handle-duplicate-hotkeys.md",
-          "bytes": 1401
+          "bytes": 1270
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55--describe-hotkeys-with-meta.md",
-          "bytes": 717
+          "bytes": 702
         }
       ],
       "examples": []
@@ -2667,16 +2573,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-keyboard-layouts-md-9cc5d7a6.md",
       "sourcePath": "docs/framework/solid/guides/keyboard-layouts.md",
-      "bytes": 4400,
+      "bytes": 5260,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-keyboard-layouts-md-9cc5d7a6.md",
-          "bytes": 4400
+          "bytes": 5260
         }
       ],
       "examples": []
@@ -2691,16 +2597,64 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
       "sourcePath": "docs/framework/solid/guides/sequences.md",
-      "bytes": 11648,
+      "bytes": 11169,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.13 and earlier",
           "file": "references/guides/hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md",
-          "bytes": 11648
+          "bytes": 11169
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-ssr-md-d6a11382.md",
+      "sourcePath": "docs/framework/solid/guides/ssr.md",
+      "bytes": 9346,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-ssr-md-d6a11382.md",
+          "bytes": 9346
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/solid/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-solid",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "solid"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-solid-guides-testing-md-81642277.md",
+      "sourcePath": "docs/framework/solid/guides/testing.md",
+      "bytes": 4355,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-solid-guides-testing-md-81642277.md",
+          "bytes": 4355
         }
       ],
       "examples": []
@@ -2715,16 +2669,16 @@
         "solid"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md",
       "sourcePath": "docs/framework/solid/quick-start.md",
-      "bytes": 10193,
+      "bytes": 10199,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Create a hotkey; Create several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md",
-          "bytes": 10193
+          "bytes": 10199
         }
       ],
       "examples": []
@@ -2739,16 +2693,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md",
       "sourcePath": "docs/framework/svelte/guides/app-hotkeys.md",
-      "bytes": 10394,
+      "bytes": 10482,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md",
-          "bytes": 10394
+          "bytes": 10482
         }
       ],
       "examples": []
@@ -2763,16 +2717,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md",
       "sourcePath": "docs/framework/svelte/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 9783,
+      "bytes": 9122,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md-95cb1921.md",
-          "bytes": 9783
+          "bytes": 9122
         }
       ],
       "examples": []
@@ -2787,46 +2741,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md",
       "sourcePath": "docs/framework/svelte/guides/custom-hotkey-recording.md",
-      "bytes": 1670,
+      "bytes": 13188,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--overview.md",
-          "bytes": 751
-        },
-        {
-          "title": "Record a chord",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--record-a-chord.md",
-          "bytes": 2509
-        },
-        {
-          "title": "Record a sequence",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--record-a-sequence.md",
-          "bytes": 1541
-        },
-        {
-          "title": "Keys the recorder handles",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--keys-the-recorder-handles.md",
-          "bytes": 1677
-        },
-        {
-          "title": "Validate and check conflicts",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--validate-and-check-conflicts.md",
-          "bytes": 4183
-        },
-        {
-          "title": "Build a shortcut settings screen",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--build-a-shortcut-settings-screen.md",
-          "bytes": 2106
-        },
-        {
-          "title": "Recorder options",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427--recorder-options.md",
-          "bytes": 2763
+          "title": "Overview; Record a chord; Record a sequence; Keys the recorder handles; Validate and check conflicts; Build a shortcut settings screen; Recorder options",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md",
+          "bytes": 13188
         }
       ],
       "examples": []
@@ -2841,56 +2765,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
       "sourcePath": "docs/framework/svelte/guides/formatting-display.md",
-      "bytes": 2232,
+      "bytes": 12363,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--overview.md",
-          "bytes": 1326
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-a-hotkey.md",
-          "bytes": 2735
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--render-individual-keycaps.md",
-          "bytes": 636
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-sequences.md",
-          "bytes": 926
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--choose-symbols-and-separators.md",
-          "bytes": 953
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 3018
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-labels-in-server-rendered-apps.md",
-          "bytes": 7304
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--format-outside-a-component.md",
-          "bytes": 1206
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885--parse-compare-and-store-hotkeys.md",
-          "bytes": 2625
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-formatting-display-md-505d4885.md",
+          "bytes": 12363
         }
       ],
       "examples": []
@@ -2905,16 +2789,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md",
       "sourcePath": "docs/framework/svelte/guides/held-key-state-helpers.md",
-      "bytes": 4394,
+      "bytes": 4101,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md",
-          "bytes": 4394
+          "bytes": 4101
         }
       ],
       "examples": []
@@ -2929,16 +2813,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-hints-md-3d366fbe.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-hints.md",
-      "bytes": 5444,
+      "bytes": 5146,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the helper",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-hints-md-3d366fbe.md",
-          "bytes": 5444
+          "bytes": 5146
         }
       ],
       "examples": []
@@ -2953,16 +2837,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md",
       "sourcePath": "docs/framework/svelte/guides/hotkey-manager.md",
-      "bytes": 9387,
+      "bytes": 7943,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md",
-          "bytes": 9387
+          "bytes": 7943
         }
       ],
       "examples": []
@@ -2977,16 +2861,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys-provider-and-scopes.md",
-      "bytes": 13160,
+      "bytes": 13183,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Set default options; Provide app hotkeys; Group hotkeys into scopes; Scopes and targets; Nested scopes win; Turn a scope off with `enabled`; Exclusive scopes; Choose a scope for one hotkey; Scopes and app hotkeys; Scopes outside Svelte; Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md",
-          "bytes": 13160
+          "bytes": 13183
         }
       ],
       "examples": []
@@ -3001,7 +2885,7 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md",
       "sourcePath": "docs/framework/svelte/guides/hotkeys.md",
       "bytes": 1967,
@@ -3015,42 +2899,42 @@
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--chords-and-sequences.md",
-          "bytes": 910
+          "bytes": 829
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--register-a-hotkey.md",
-          "bytes": 4636
+          "bytes": 4567
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--hotkey-options.md",
-          "bytes": 4953
+          "bytes": 4399
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--register-multiple-hotkeys.md",
-          "bytes": 2881
+          "bytes": 2639
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--enable-and-disable-hotkeys.md",
-          "bytes": 2595
+          "bytes": 2041
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--hotkey-targets.md",
-          "bytes": 2024
+          "bytes": 1796
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--handle-duplicate-hotkeys.md",
-          "bytes": 1406
+          "bytes": 1284
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b--describe-hotkeys-with-meta.md",
-          "bytes": 719
+          "bytes": 699
         }
       ],
       "examples": []
@@ -3065,16 +2949,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-keyboard-layouts-md-a33262ea.md",
       "sourcePath": "docs/framework/svelte/guides/keyboard-layouts.md",
-      "bytes": 4615,
+      "bytes": 5589,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-keyboard-layouts-md-a33262ea.md",
-          "bytes": 4615
+          "bytes": 5589
         }
       ],
       "examples": []
@@ -3089,16 +2973,64 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
       "sourcePath": "docs/framework/svelte/guides/sequences.md",
-      "bytes": 11554,
+      "bytes": 12286,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.13 and earlier",
           "file": "references/guides/hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md",
-          "bytes": 11554
+          "bytes": 12286
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md",
+      "sourcePath": "docs/framework/svelte/guides/ssr.md",
+      "bytes": 7936,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md",
+          "bytes": 7936
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/svelte/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-svelte",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "svelte"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-svelte-guides-testing-md-6ac89090.md",
+      "sourcePath": "docs/framework/svelte/guides/testing.md",
+      "bytes": 4661,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-svelte-guides-testing-md-6ac89090.md",
+          "bytes": 4661
         }
       ],
       "examples": []
@@ -3113,16 +3045,16 @@
         "svelte"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
-      "bytes": 10292,
+      "bytes": 10763,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Create a hotkey; Create several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md",
-          "bytes": 10292
+          "bytes": 10763
         }
       ],
       "examples": []
@@ -3137,16 +3069,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md",
       "sourcePath": "docs/framework/vue/guides/app-hotkeys.md",
-      "bytes": 10455,
+      "bytes": 10529,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md",
-          "bytes": 10455
+          "bytes": 10529
         }
       ],
       "examples": []
@@ -3161,16 +3093,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md",
       "sourcePath": "docs/framework/vue/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 9912,
+      "bytes": 9245,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md",
-          "bytes": 9912
+          "bytes": 9245
         }
       ],
       "examples": []
@@ -3185,46 +3117,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md",
       "sourcePath": "docs/framework/vue/guides/custom-hotkey-recording.md",
-      "bytes": 1643,
+      "bytes": 13217,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--overview.md",
-          "bytes": 739
-        },
-        {
-          "title": "Record a chord",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--record-a-chord.md",
-          "bytes": 2571
-        },
-        {
-          "title": "Record a sequence",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--record-a-sequence.md",
-          "bytes": 1586
-        },
-        {
-          "title": "Keys the recorder handles",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--keys-the-recorder-handles.md",
-          "bytes": 1674
-        },
-        {
-          "title": "Validate and check conflicts",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--validate-and-check-conflicts.md",
-          "bytes": 4153
-        },
-        {
-          "title": "Build a shortcut settings screen",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--build-a-shortcut-settings-screen.md",
-          "bytes": 2100
-        },
-        {
-          "title": "Recorder options",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132--recorder-options.md",
-          "bytes": 2718
+          "title": "Overview; Record a chord; Record a sequence; Keys the recorder handles; Validate and check conflicts; Build a shortcut settings screen; Recorder options",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md",
+          "bytes": 13217
         }
       ],
       "examples": []
@@ -3239,56 +3141,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
       "sourcePath": "docs/framework/vue/guides/formatting-display.md",
-      "bytes": 2217,
+      "bytes": 12220,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--overview.md",
-          "bytes": 1324
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--format-a-hotkey.md",
-          "bytes": 2714
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--render-individual-keycaps.md",
-          "bytes": 633
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--format-sequences.md",
-          "bytes": 917
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--choose-symbols-and-separators.md",
-          "bytes": 950
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 3001
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--format-labels-in-server-rendered-apps.md",
-          "bytes": 9544
-        },
-        {
-          "title": "Format outside a component",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--format-outside-a-component.md",
-          "bytes": 1135
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e--parse-compare-and-store-hotkeys.md",
-          "bytes": 2593
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside a component; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-formatting-display-md-60ef242e.md",
+          "bytes": 12220
         }
       ],
       "examples": []
@@ -3303,16 +3165,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md",
       "sourcePath": "docs/framework/vue/guides/held-key-state-helpers.md",
-      "bytes": 4307,
+      "bytes": 4004,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md",
-          "bytes": 4307
+          "bytes": 4004
         }
       ],
       "examples": []
@@ -3327,16 +3189,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-hints-md-bd147de8.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-hints.md",
-      "bytes": 5452,
+      "bytes": 5166,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the composable",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-hints-md-bd147de8.md",
-          "bytes": 5452
+          "bytes": 5166
         }
       ],
       "examples": []
@@ -3351,16 +3213,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-manager-md-0dad2837.md",
       "sourcePath": "docs/framework/vue/guides/hotkey-manager.md",
-      "bytes": 9027,
+      "bytes": 7794,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkey-manager-md-0dad2837.md",
-          "bytes": 9027
+          "bytes": 7794
         }
       ],
       "examples": []
@@ -3375,7 +3237,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys-provider-and-scopes.md",
       "bytes": 2542,
@@ -3384,12 +3246,12 @@
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--overview.md",
-          "bytes": 789
+          "bytes": 776
         },
         {
           "title": "Set default options",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--set-default-options.md",
-          "bytes": 1661
+          "bytes": 1668
         },
         {
           "title": "Provide app hotkeys",
@@ -3404,12 +3266,12 @@
         {
           "title": "Scopes and targets",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--scopes-and-targets.md",
-          "bytes": 1459
+          "bytes": 1462
         },
         {
           "title": "Nested scopes win",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--nested-scopes-win.md",
-          "bytes": 1426
+          "bytes": 1495
         },
         {
           "title": "Turn a scope off with `enabled`",
@@ -3419,7 +3281,7 @@
         {
           "title": "Exclusive scopes",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--exclusive-scopes.md",
-          "bytes": 2217
+          "bytes": 2155
         },
         {
           "title": "Choose a scope for one hotkey",
@@ -3429,7 +3291,7 @@
         {
           "title": "Scopes and app hotkeys",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--scopes-and-app-hotkeys.md",
-          "bytes": 1372
+          "bytes": 1472
         },
         {
           "title": "Scopes outside Vue",
@@ -3439,7 +3301,7 @@
         {
           "title": "Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd--inspect-scopes.md",
-          "bytes": 883
+          "bytes": 794
         }
       ],
       "examples": []
@@ -3454,7 +3316,7 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md",
       "sourcePath": "docs/framework/vue/guides/hotkeys.md",
       "bytes": 1934,
@@ -3468,42 +3330,42 @@
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--chords-and-sequences.md",
-          "bytes": 897
+          "bytes": 814
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--register-a-hotkey.md",
-          "bytes": 4757
+          "bytes": 4688
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--hotkey-options.md",
-          "bytes": 4938
+          "bytes": 4290
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--register-multiple-hotkeys.md",
-          "bytes": 2728
+          "bytes": 2617
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--enable-and-disable-hotkeys.md",
-          "bytes": 2573
+          "bytes": 2019
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--hotkey-targets.md",
-          "bytes": 2882
+          "bytes": 2663
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--handle-duplicate-hotkeys.md",
-          "bytes": 1391
+          "bytes": 1269
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c--describe-hotkeys-with-meta.md",
-          "bytes": 707
+          "bytes": 687
         }
       ],
       "examples": []
@@ -3518,16 +3380,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-keyboard-layouts-md-d2fcb108.md",
       "sourcePath": "docs/framework/vue/guides/keyboard-layouts.md",
-      "bytes": 4489,
+      "bytes": 5460,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-keyboard-layouts-md-d2fcb108.md",
-          "bytes": 4489
+          "bytes": 5460
         }
       ],
       "examples": []
@@ -3542,16 +3404,64 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
       "sourcePath": "docs/framework/vue/guides/sequences.md",
-      "bytes": 11415,
+      "bytes": 12147,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.13 and earlier",
           "file": "references/guides/hotkeys-docs-framework-vue-guides-sequences-md-9eb4426e.md",
-          "bytes": 11415
+          "bytes": 12147
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-ssr-md-5b06541c.md",
+      "sourcePath": "docs/framework/vue/guides/ssr.md",
+      "bytes": 10184,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-ssr-md-5b06541c.md",
+          "bytes": 10184
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/vue/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-vue",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "vue"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-vue-guides-testing-md-003301b8.md",
+      "sourcePath": "docs/framework/vue/guides/testing.md",
+      "bytes": 4502,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-vue-guides-testing-md-003301b8.md",
+          "bytes": 4502
         }
       ],
       "examples": []
@@ -3566,16 +3476,16 @@
         "vue"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
-      "bytes": 10315,
+      "bytes": 10778,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-vue-quick-start-md-468563f0.md",
-          "bytes": 10315
+          "bytes": 10778
         }
       ],
       "examples": []
@@ -3590,16 +3500,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md",
       "sourcePath": "docs/framework/angular/guides/app-hotkeys.md",
-      "bytes": 10541,
+      "bytes": 10802,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-app-hotkeys-md-81139047.md",
-          "bytes": 10541
+          "bytes": 10802
         }
       ],
       "examples": []
@@ -3614,16 +3524,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md",
       "sourcePath": "docs/framework/angular/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 10560,
+      "bytes": 9984,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md",
-          "bytes": 10560
+          "bytes": 9984
         }
       ],
       "examples": []
@@ -3638,7 +3548,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md",
       "sourcePath": "docs/framework/angular/guides/custom-hotkey-recording.md",
       "bytes": 1679,
@@ -3647,37 +3557,37 @@
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--overview.md",
-          "bytes": 754
+          "bytes": 757
         },
         {
           "title": "Record a chord",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--record-a-chord.md",
-          "bytes": 2614
+          "bytes": 2384
         },
         {
           "title": "Record a sequence",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--record-a-sequence.md",
-          "bytes": 1617
+          "bytes": 1733
         },
         {
           "title": "Keys the recorder handles",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--keys-the-recorder-handles.md",
-          "bytes": 1678
+          "bytes": 1458
         },
         {
           "title": "Validate and check conflicts",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--validate-and-check-conflicts.md",
-          "bytes": 4188
+          "bytes": 3778
         },
         {
           "title": "Build a shortcut settings screen",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--build-a-shortcut-settings-screen.md",
-          "bytes": 2440
+          "bytes": 2219
         },
         {
           "title": "Recorder options",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c--recorder-options.md",
-          "bytes": 2762
+          "bytes": 2677
         }
       ],
       "examples": []
@@ -3692,56 +3602,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
       "sourcePath": "docs/framework/angular/guides/formatting-display.md",
-      "bytes": 2273,
+      "bytes": 12630,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--overview.md",
-          "bytes": 1339
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--format-a-hotkey.md",
-          "bytes": 2855
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--render-individual-keycaps.md",
-          "bytes": 637
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--format-sequences.md",
-          "bytes": 929
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--choose-symbols-and-separators.md",
-          "bytes": 954
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 3064
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--format-labels-in-server-rendered-apps.md",
-          "bytes": 6854
-        },
-        {
-          "title": "Format outside an injection context",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--format-outside-an-injection-context.md",
-          "bytes": 1264
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77--parse-compare-and-store-hotkeys.md",
-          "bytes": 2639
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside an injection context; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-formatting-display-md-31421e77.md",
+          "bytes": 12630
         }
       ],
       "examples": []
@@ -3756,16 +3626,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md",
       "sourcePath": "docs/framework/angular/guides/held-key-state-helpers.md",
-      "bytes": 4891,
+      "bytes": 4586,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-held-key-state-helpers-md-6b5f521d.md",
-          "bytes": 4891
+          "bytes": 4586
         }
       ],
       "examples": []
@@ -3780,16 +3650,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-hints.md",
-      "bytes": 5912,
+      "bytes": 5634,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the helper",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md",
-          "bytes": 5912
+          "bytes": 5634
         }
       ],
       "examples": []
@@ -3804,16 +3674,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-manager-md-190fe5ab.md",
       "sourcePath": "docs/framework/angular/guides/hotkey-manager.md",
-      "bytes": 9518,
+      "bytes": 8049,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkey-manager-md-190fe5ab.md",
-          "bytes": 9518
+          "bytes": 8049
         }
       ],
       "examples": []
@@ -3828,7 +3698,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md",
       "sourcePath": "docs/framework/angular/guides/hotkeys.md",
       "bytes": 1978,
@@ -3842,42 +3712,42 @@
         {
           "title": "Chords and sequences",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--chords-and-sequences.md",
-          "bytes": 923
+          "bytes": 842
         },
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--register-a-hotkey.md",
-          "bytes": 5261
+          "bytes": 5192
         },
         {
           "title": "Hotkey options",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--hotkey-options.md",
-          "bytes": 4931
+          "bytes": 4375
         },
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--register-multiple-hotkeys.md",
-          "bytes": 3244
+          "bytes": 3130
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--enable-and-disable-hotkeys.md",
-          "bytes": 2719
+          "bytes": 2164
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--hotkey-targets.md",
-          "bytes": 2525
+          "bytes": 2306
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--handle-duplicate-hotkeys.md",
-          "bytes": 1407
+          "bytes": 1285
         },
         {
           "title": "Describe hotkeys with `meta`",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7--describe-hotkeys-with-meta.md",
-          "bytes": 727
+          "bytes": 707
         }
       ],
       "examples": []
@@ -3892,16 +3762,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-keyboard-layouts-md-864b9422.md",
       "sourcePath": "docs/framework/angular/guides/keyboard-layouts.md",
-      "bytes": 4487,
+      "bytes": 5475,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-keyboard-layouts-md-864b9422.md",
-          "bytes": 4487
+          "bytes": 5475
         }
       ],
       "examples": []
@@ -3916,7 +3786,7 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md",
       "sourcePath": "docs/framework/angular/guides/provide-hotkeys-and-scopes.md",
       "bytes": 2650,
@@ -3925,12 +3795,12 @@
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--overview.md",
-          "bytes": 850
+          "bytes": 778
         },
         {
           "title": "Set default options",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--set-default-options.md",
-          "bytes": 1686
+          "bytes": 1697
         },
         {
           "title": "Provide app hotkeys",
@@ -3945,12 +3815,12 @@
         {
           "title": "Scopes and targets",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--scopes-and-targets.md",
-          "bytes": 1451
+          "bytes": 1454
         },
         {
           "title": "Nested scopes win",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--nested-scopes-win.md",
-          "bytes": 1609
+          "bytes": 1678
         },
         {
           "title": "Turn a scope off with `enabled`",
@@ -3960,7 +3830,7 @@
         {
           "title": "Exclusive scopes",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--exclusive-scopes.md",
-          "bytes": 2192
+          "bytes": 2130
         },
         {
           "title": "Choose a scope for one hotkey",
@@ -3970,7 +3840,7 @@
         {
           "title": "Scopes and app hotkeys",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--scopes-and-app-hotkeys.md",
-          "bytes": 1385
+          "bytes": 1493
         },
         {
           "title": "Scopes outside Angular",
@@ -3980,7 +3850,7 @@
         {
           "title": "Inspect scopes",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--inspect-scopes.md",
-          "bytes": 897
+          "bytes": 808
         }
       ],
       "examples": []
@@ -3995,16 +3865,64 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
       "sourcePath": "docs/framework/angular/guides/sequences.md",
-      "bytes": 12113,
+      "bytes": 12845,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.13 and earlier",
           "file": "references/guides/hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md",
-          "bytes": 12113
+          "bytes": 12845
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-ssr-md-05bcc1b5.md",
+      "sourcePath": "docs/framework/angular/guides/ssr.md",
+      "bytes": 7627,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-ssr-md-05bcc1b5.md",
+          "bytes": 7627
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/angular/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-angular",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "angular"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-angular-guides-testing-md-86587138.md",
+      "sourcePath": "docs/framework/angular/guides/testing.md",
+      "bytes": 4707,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-angular-guides-testing-md-86587138.md",
+          "bytes": 4707
         }
       ],
       "examples": []
@@ -4019,16 +3937,16 @@
         "angular"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
-      "bytes": 11548,
+      "bytes": 12024,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Inject a hotkey; Inject several hotkeys; Sequences; Show the shortcut; Hotkeys follow your components; Element hotkeys; Add providers and scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-angular-quick-start-md-4845adfe.md",
-          "bytes": 11548
+          "bytes": 12024
         }
       ],
       "examples": []
@@ -4043,16 +3961,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md",
       "sourcePath": "docs/framework/lit/guides/app-hotkeys.md",
-      "bytes": 9950,
+      "bytes": 10759,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Declare app hotkeys; Provide app hotkeys; Register app hotkeys; List app hotkeys; Customize and persist hotkeys",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md",
-          "bytes": 9950
+          "bytes": 10759
         }
       ],
       "examples": []
@@ -4067,16 +3985,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md",
       "sourcePath": "docs/framework/lit/guides/cheat-sheet-ui-helpers.md",
-      "bytes": 10405,
+      "bytes": 10418,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Name your hotkeys; List the hotkeys on screen; List every app hotkey; Group the list; Open the cheat sheet with a hotkey",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md",
-          "bytes": 10405
+          "bytes": 10418
         }
       ],
       "examples": []
@@ -4091,7 +4009,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md",
       "sourcePath": "docs/framework/lit/guides/custom-hotkey-recording.md",
       "bytes": 1643,
@@ -4100,7 +4018,7 @@
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce--overview.md",
-          "bytes": 746
+          "bytes": 739
         },
         {
           "title": "Record a chord",
@@ -4110,7 +4028,7 @@
         {
           "title": "Record a sequence",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce--record-a-sequence.md",
-          "bytes": 1687
+          "bytes": 1718
         },
         {
           "title": "Keys the recorder handles",
@@ -4120,7 +4038,7 @@
         {
           "title": "Validate and check conflicts",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce--validate-and-check-conflicts.md",
-          "bytes": 4211
+          "bytes": 4384
         },
         {
           "title": "Build a shortcut settings screen",
@@ -4145,56 +4063,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
       "sourcePath": "docs/framework/lit/guides/formatting-display.md",
-      "bytes": 2031,
+      "bytes": 12610,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--overview.md",
-          "bytes": 952
-        },
-        {
-          "title": "Format a hotkey",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--format-a-hotkey.md",
-          "bytes": 3012
-        },
-        {
-          "title": "Render individual keycaps",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--render-individual-keycaps.md",
-          "bytes": 633
-        },
-        {
-          "title": "Format sequences",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--format-sequences.md",
-          "bytes": 917
-        },
-        {
-          "title": "Choose symbols and separators",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--choose-symbols-and-separators.md",
-          "bytes": 950
-        },
-        {
-          "title": "Label physical keys for the user's keyboard",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--label-physical-keys-for-the-user-s-keyboard.md",
-          "bytes": 3420
-        },
-        {
-          "title": "Format labels in server-rendered apps",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--format-labels-in-server-rendered-apps.md",
-          "bytes": 2915
-        },
-        {
-          "title": "Format outside an element",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--format-outside-an-element.md",
-          "bytes": 1119
-        },
-        {
-          "title": "Parse, compare, and store hotkeys",
-          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5--parse-compare-and-store-hotkeys.md",
-          "bytes": 2375
+          "title": "Overview; Format a hotkey; Render individual keycaps; Format sequences; Choose symbols and separators; Label physical keys for the user's keyboard; Server-side rendering; Format outside an element; Parse, compare, and store hotkeys",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md",
+          "bytes": 12610
         }
       ],
       "examples": []
@@ -4209,16 +4087,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md",
       "sourcePath": "docs/framework/lit/guides/held-key-state-helpers.md",
-      "bytes": 5261,
+      "bytes": 5264,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show which keys are held; Check whether a key is held; Tell left and right modifiers apart; Read held keys in an event handler",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md",
-          "bytes": 5261
+          "bytes": 5264
         }
       ],
       "examples": []
@@ -4233,16 +4111,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-hints.md",
-      "bytes": 6037,
+      "bytes": 5891,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Show a hint next to a button; When a hint shows; Hints for sequences; Hints for app hotkeys; Check held modifiers without the controller",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md",
-          "bytes": 6037
+          "bytes": 5891
         }
       ],
       "examples": []
@@ -4257,16 +4135,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md",
       "sourcePath": "docs/framework/lit/guides/hotkey-manager.md",
-      "bytes": 9055,
+      "bytes": 7768,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Reset the manager in tests",
+          "title": "Overview; Register a hotkey; Read registrations; Activate a scope; Reset sequence progress; Match a sequence on your own; Testing",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md",
-          "bytes": 9055
+          "bytes": 7768
         }
       ],
       "examples": []
@@ -4281,7 +4159,7 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md",
       "sourcePath": "docs/framework/lit/guides/hotkeys.md",
       "bytes": 1934,
@@ -4300,7 +4178,7 @@
         {
           "title": "Register a hotkey",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--register-a-hotkey.md",
-          "bytes": 5425
+          "bytes": 5439
         },
         {
           "title": "Hotkey options",
@@ -4310,22 +4188,22 @@
         {
           "title": "Register multiple hotkeys",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--register-multiple-hotkeys.md",
-          "bytes": 2467
+          "bytes": 2473
         },
         {
           "title": "Enable and disable hotkeys",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--enable-and-disable-hotkeys.md",
-          "bytes": 2721
+          "bytes": 2733
         },
         {
           "title": "Hotkey targets",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--hotkey-targets.md",
-          "bytes": 2978
+          "bytes": 2987
         },
         {
           "title": "Handle duplicate hotkeys",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637--handle-duplicate-hotkeys.md",
-          "bytes": 1060
+          "bytes": 1128
         },
         {
           "title": "Describe hotkeys with `meta`",
@@ -4345,16 +4223,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-keyboard-layouts-md-03534b14.md",
       "sourcePath": "docs/framework/lit/guides/keyboard-layouts.md",
-      "bytes": 4380,
+      "bytes": 5523,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Choose the sets; Example",
+          "title": "Overview; Prefer keys every layout has; Register layouts; What the registration changes; Available key sets; Example",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-keyboard-layouts-md-03534b14.md",
-          "bytes": 4380
+          "bytes": 5523
         }
       ],
       "examples": []
@@ -4369,16 +4247,64 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
       "sourcePath": "docs/framework/lit/guides/sequences.md",
-      "bytes": 11756,
+      "bytes": 12581,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns",
+          "title": "Overview; Register a sequence; Time between steps; Options for sequences; Sequences that share keys; Show sequences in your UI; Letter sequences need an off switch; Common patterns; Migrating from v0.14 and earlier",
           "file": "references/guides/hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md",
-          "bytes": 11756
+          "bytes": 12581
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/ssr.md",
+      "title": "Ssr",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-ssr-md-92c130bb.md",
+      "sourcePath": "docs/framework/lit/guides/ssr.md",
+      "bytes": 4103,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Format labels in server-rendered apps; What runs on the server",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-ssr-md-92c130bb.md",
+          "bytes": 4103
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "hotkeys:docs/framework/lit/guides/testing.md",
+      "title": "Testing",
+      "theme": "framework-lit",
+      "kind": "document",
+      "status": "Release-matched documentation",
+      "frameworks": [
+        "lit"
+      ],
+      "package": "@tanstack/hotkeys",
+      "version": "0.35.0",
+      "file": "references/guides/hotkeys-docs-framework-lit-guides-testing-md-1e7f8a93.md",
+      "sourcePath": "docs/framework/lit/guides/testing.md",
+      "bytes": 5114,
+      "prerequisites": [],
+      "sections": [
+        {
+          "title": "Overview; Reset singletons between tests; Pin the platform; Dispatching keyboard events; Testing sequences and timeouts; Testing element targets and inputs",
+          "file": "references/guides/hotkeys-docs-framework-lit-guides-testing-md-1e7f8a93.md",
+          "bytes": 5114
         }
       ],
       "examples": []
@@ -4393,16 +4319,16 @@
         "lit"
       ],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
-      "bytes": 11323,
+      "bytes": 12032,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Register a hotkey; Register several hotkeys; Sequences; Show the shortcut; Hotkeys follow your elements; Element hotkeys; Add scopes (optional); Next steps",
           "file": "references/guides/hotkeys-docs-framework-lit-quick-start-md-e9425977.md",
-          "bytes": 11323
+          "bytes": 12032
         }
       ],
       "examples": []
@@ -4415,111 +4341,111 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/hotkeys",
-      "version": "0.33.1",
+      "version": "0.35.0",
       "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45.md",
       "sourcePath": "docs/guides/sensible-defaults.md",
-      "bytes": 4911,
+      "bytes": 5092,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--overview.md",
-          "bytes": 584
+          "bytes": 502
         },
         {
           "title": "At a glance",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--at-a-glance.md",
-          "bytes": 1691
+          "bytes": 1638
         },
         {
           "title": "`Mod` follows the platform",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--mod-follows-the-platform.md",
-          "bytes": 1015
+          "bytes": 980
         },
         {
           "title": "Keys match the character the user types",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--keys-match-the-character-the-user-types.md",
-          "bytes": 9288
+          "bytes": 8588
         },
         {
           "title": "Modifiers must match exactly",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--modifiers-must-match-exactly.md",
-          "bytes": 2508
+          "bytes": 2041
         },
         {
           "title": "Typing in inputs does not trigger shortcuts",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--typing-in-inputs-does-not-trigger-shortcuts.md",
-          "bytes": 2091
+          "bytes": 3730
         },
         {
           "title": "Focused controls keep their own keys",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--focused-controls-keep-their-own-keys.md",
-          "bytes": 2971
+          "bytes": 2458
         },
         {
           "title": "The browser's action is prevented",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--the-browser-s-action-is-prevented.md",
-          "bytes": 1546
+          "bytes": 1099
         },
         {
           "title": "Hotkeys that can't fire leave the key alone",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-that-can-t-fire-leave-the-key-alone.md",
-          "bytes": 2087
+          "bytes": 1416
         },
         {
           "title": "Single-key shortcuts need an off switch",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--single-key-shortcuts-need-an-off-switch.md",
-          "bytes": 1183
+          "bytes": 997
         },
         {
           "title": "Chords fire on keydown and repeat while held",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--chords-fire-on-keydown-and-repeat-while-held.md",
-          "bytes": 1557
+          "bytes": 1041
         },
         {
           "title": "Listeners attach to the document",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--listeners-attach-to-the-document.md",
-          "bytes": 1005
+          "bytes": 861
         },
         {
           "title": "Hotkeys run after the page's own handlers",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--hotkeys-run-after-the-page-s-own-handlers.md",
-          "bytes": 1570
+          "bytes": 1070
         },
         {
           "title": "Component libraries that handle the same keys",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--component-libraries-that-handle-the-same-keys.md",
-          "bytes": 13129
+          "bytes": 11456
         },
         {
           "title": "Sequences allow 1 second between steps",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--sequences-allow-1-second-between-steps.md",
-          "bytes": 1352
+          "bytes": 960
         },
         {
           "title": "Duplicate registrations warn",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--duplicate-registrations-warn.md",
-          "bytes": 1363
+          "bytes": 700
         },
         {
           "title": "Recording captures what the user pressed",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md",
-          "bytes": 3342
+          "bytes": 2073
         },
         {
           "title": "Held keys reset when the window loses focus",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--held-keys-reset-when-the-window-loses-focus.md",
-          "bytes": 1777
+          "bytes": 979
         },
         {
           "title": "Display matches the platform",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--display-matches-the-platform.md",
-          "bytes": 577
+          "bytes": 521
         },
         {
           "title": "Changing the defaults",
           "file": "references/guides/hotkeys-docs-guides-sensible-defaults-md-d1106b45--changing-the-defaults.md",
-          "bytes": 2639
+          "bytes": 2603
         }
       ],
       "examples": []

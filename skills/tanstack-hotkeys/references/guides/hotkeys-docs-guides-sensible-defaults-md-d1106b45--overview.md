@@ -1,7 +1,7 @@
 # Sensible Defaults — Overview
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
-Register `Mod+S` with no options and it behaves the way users expect: Command+S on macOS, Control+S elsewhere, the browser's Save dialog stays closed, it still works while the user is typing in a text field, and it works on any keyboard layout. TanStack Hotkeys chooses its defaults so the common case needs no configuration.
+TanStack Hotkeys chooses defaults so common shortcuts need no configuration. Without any options, `Mod+S` maps to Command+S on macOS and Control+S elsewhere, blocks the browser's Save dialog, keeps working inside text fields, and matches across keyboard layouts.
 
-This guide describes each default, why it was chosen, and how to change it.
+This guide explains each default and how to override it.

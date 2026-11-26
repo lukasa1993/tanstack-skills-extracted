@@ -2,11 +2,13 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
-Some apps show each button's shortcut only while the user holds a modifier, so the hints are there when the user reaches for the keyboard, and out of the way otherwise. `useHotkeyHint` returns a computed ref that's `true` while the user holds modifiers that belong to a hotkey that can fire. It's an optional helper, and it doesn't register anything, so use it alongside `useHotkey`.
+Some apps hide shortcut badges until the user holds a modifier key, which keeps buttons clean while still making shortcuts discoverable on demand.
+
+`useHotkeyHint` reports whether the user holds modifiers that belong to a hotkey that can fire. It's an optional display helper and doesn't register a shortcut itself, so pair it with `useHotkey`.
 
 ## Show a hint next to a button
 
@@ -36,14 +38,13 @@ While the user holds Command on macOS, or Control elsewhere, the button reads "S
 
 ## When a hint shows
 
-- Holding any of the hotkey's modifiers shows the hint. For `Alt+Shift+[KeyK]`, holding Alt, Shift, or both shows it.
-- Holding a modifier the hotkey doesn't use hides the hint, so holding Control and Alt shows only the hints for hotkeys that use both.
-- Releasing every modifier, or the window losing focus, hides the hint.
-- Other held keys don't matter. AltGr never shows hints, because it types characters.
-- A hotkey without modifiers, such as `Escape` or `G`, never shows a hint.
-- The hotkey must be able to fire. A hint shows only while a registration of the hotkey is enabled and in an active [scope](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md). A hotkey that nothing registers never shows a hint.
-- Every registration of the hotkey counts, not only the one in your component. If two components register the same hotkey and only one is enabled, both show the hint.
-- A hotkey bound to an element's `target` shows its hint only while focus is inside that element. A hotkey on `document` or `window` shows it wherever focus is.
+- **Any matching modifier shows the hint.** For `Alt+Shift+[KeyK]`, holding `Alt`, `Shift`, or both shows it.
+- **Extra modifiers hide it.** Holding `Control` and `Alt` shows only the hints for hotkeys that use both.
+- **Releases and blur hide it.** Releasing every modifier, or the window losing focus, hides the hint.
+- **Other keys are ignored.** `AltGr` never shows hints, because it types characters.
+- **Modifier-only requirement.** Hotkeys without modifiers, such as `Escape` or `G`, never show a hint.
+- **Only active registrations count.** The hotkey needs at least one enabled registration in an active [scope](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md). Every mounted registration counts, so if two components register `Mod+S` and one is enabled, both hints appear.
+- **Targets follow focus.** An element-targeted hotkey shows its hint only while focus is inside that element. `document` and `window` hotkeys show wherever focus is.
 
 To show a hint only while every modifier is held, pass `exact`:
 
@@ -63,7 +64,7 @@ const showHint = useHotkeyHint(['Mod+K', 'Mod+C']) // true while Mod is held
 
 ## Hints for app hotkeys
 
-Pass an [app hotkey](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md) to show the user's current hotkey, including one they changed. An app hotkey with no hotkey assigned shows no hint. A small component keeps every button's hint the same:
+Pass an [app hotkey](./hotkeys-docs-framework-vue-guides-app-hotkeys-md-a950ea41.md#source-hotkeys-docs-framework-vue-guides-app-hotkeys-md) directly so hints stay in sync when users rebind shortcuts. An app hotkey with no hotkey assigned shows no hint. A small shared component keeps every button's hint consistent:
 
 ```vue
 <!-- Hint.vue -->
@@ -106,7 +107,7 @@ useHotkey(() => appHotkeys.value['doc.save'], save)
 
 ## Check held modifiers without the composable
 
-To check outside a component, such as while drawing on a canvas, pass the held keys to `matchesHeldModifiers`. It takes the same options, but it only looks at held keys. To also check that the hotkey can fire, call `hasActiveRegistration` on the hotkey manager:
+Outside components, such as in a canvas draw loop, combine `matchesHeldModifiers` with `getKeyStateTracker()` and `getHotkeyManager().hasActiveRegistration()`:
 
 ```ts
 import {
@@ -124,6 +125,4 @@ const showHint =
   getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the composable
 ```
 
-[Held Key State Helpers](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md) covers the tracker and the other held-key composables.
-
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/vue/kitchen-sink) shows hints next to its navigation links and buttons while Alt or Option is held.
+See [Held Keys](./hotkeys-docs-framework-vue-guides-held-key-state-helpers-md-c74aa1be.md#source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md) for more on `getKeyStateTracker`, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/vue/kitchen-sink) for hints on live navigation links and buttons.

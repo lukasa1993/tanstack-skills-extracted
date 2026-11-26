@@ -1,10 +1,10 @@
 # Provide Hotkeys And Scopes — Group hotkeys into scopes
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Group hotkeys into scopes
 
-Apps reuse keys. `Escape` should close the dialog, not the panel behind it, and `Mod+S` should post the comment you are typing, not save the whole document. You could pass [`enabled`](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md) to every hotkey, but then each component has to know about every other component that might want the same key.
+Apps constantly reuse keys. `Escape` should close the active dialog rather than the panel behind it, and `Mod+S` in a comment box should post the comment instead of saving the document. Rather than passing [`enabled`](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md) to every hotkey and coordinating across components, group regions of your app into scopes.
 
 Scopes group hotkeys by where they render instead. Add `provideHotkeys` with a `scope` to a component's `providers`, and every hotkey injected in that component and its children belongs to that scope. The scope is active while the component exists and the provider is enabled, and nested scopes take precedence over the scopes around them.
 
@@ -46,7 +46,7 @@ export class LoadingOverlay {
 }
 ```
 
-Scopes are names, not instances. Two components that provide the `editor` scope share one scope, and it stays active until both are destroyed. Give each region its own name when you need to turn them on and off separately.
+Scopes are names, not instances. Two components that provide the `editor` scope share one scope, and it stays active until both are destroyed. Give each region its own name to turn them on and off separately.
 
 ### Scopes for a route's page
 
@@ -75,4 +75,4 @@ export class EditPage {
 }
 ```
 
-If the scope must stay in `Route.providers`, and your app uses Angular 22.2 or later, add [`withAutoCleanupInjectors()`](https://angular.dev/api/router/withAutoCleanupInjectors) to `provideRouter`. The router then destroys a route's injector when its page leaves, and the scope ends with it. This works with the default route reuse strategy. A custom `RouteReuseStrategy` must return `true` from `shouldDestroyInjector`, and must report the pages it stores through `retrieveStoredRouteHandles()`, or the router can destroy a stored page's injector. A stored page keeps its injector, so its scope stays active; turn it off while the page is detached, as in [Pages kept alive by route reuse](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#pages-kept-alive-by-route-reuse).
+If the scope must stay in `Route.providers`, and your app uses Angular 22.2 or later, add [`withAutoCleanupInjectors()`](https://angular.dev/api/router/withAutoCleanupInjectors) to `provideRouter`. The router then destroys a route's injector when its page leaves, and the scope ends with it. This works with the default route reuse strategy. A custom `RouteReuseStrategy` must return `true` from `shouldDestroyInjector`, and must report the pages it stores through `retrieveStoredRouteHandles()`, or the router can destroy a stored page's injector. A stored page keeps its injector, so its scope stays active. Turn it off while the page is detached, as in [Pages kept alive by route reuse](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#pages-kept-alive-by-route-reuse).

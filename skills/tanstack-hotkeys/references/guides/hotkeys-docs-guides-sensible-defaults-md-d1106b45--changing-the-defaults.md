@@ -1,10 +1,10 @@
 # Sensible Defaults — Changing the defaults
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Changing the defaults
 
-Every option above can be set on a single registration. To change a default for many hotkeys at once, set it in your framework adapter's shared defaults.
+Every option above can be set per registration. To change defaults across your app, configure your framework adapter:
 
 <!-- ::start:framework -->
 

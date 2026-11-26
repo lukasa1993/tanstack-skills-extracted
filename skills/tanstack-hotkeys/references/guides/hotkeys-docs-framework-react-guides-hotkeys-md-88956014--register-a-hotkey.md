@@ -1,10 +1,10 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register a hotkey
 
-Call `useHotkey` with a hotkey and a callback:
+Pass a hotkey and callback to `useHotkey`:
 
 ```tsx
 import { useHotkey } from '@tanstack/react-hotkeys'
@@ -16,7 +16,7 @@ function Editor() {
 }
 ```
 
-The callback receives the `KeyboardEvent` and a context object:
+Callbacks receive the `KeyboardEvent` and a context object:
 
 ```tsx
 useHotkey('Mod+S', (event, context) => {
@@ -25,20 +25,20 @@ useHotkey('Mod+S', (event, context) => {
 })
 ```
 
-The hook reads its arguments on every render, so the callback can use current props and state without a dependency array:
+The hook reads its callback and options on every render, so callbacks always see fresh props and state without a dependency array:
 
 ```tsx
 function Counter() {
   const [count, setCount] = useState(0)
 
-  // Logs the current count, not the count from the first render
+  // Always logs the latest count
   useHotkey('Mod+Shift+C', () => console.log(count))
 
   return <button onClick={() => setCount(count + 1)}>Count: {count}</button>
 }
 ```
 
-The hotkey and its options can change between renders too. When only the options change, the hook updates the existing registration. When the hotkey or its `target` changes, the hook replaces the registration:
+Both the hotkey and its options can change between renders. Changing only options updates the existing registration in place. Changing the hotkey or `target` replaces the registration cleanly:
 
 ```tsx
 function Editor({ saveHotkey, readOnly }: EditorProps) {
@@ -46,31 +46,31 @@ function Editor({ saveHotkey, readOnly }: EditorProps) {
 }
 ```
 
-That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md#source-hotkeys-docs-framework-react-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md).
+That makes it straightforward to wire up user-chosen shortcuts from the [hotkey recorder](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md#source-hotkeys-docs-framework-react-guides-custom-hotkey-recording-md) or centralized [App Hotkeys](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md).
 
 ### Optional hotkeys
 
-A hotkey of `undefined`, `null`, or `''` registers nothing, so a component can take an optional shortcut. When the hotkey changes to one of these values, its registration is removed. When it changes back to a hotkey, it registers again. Hints for no hotkey are hidden.
+Passing `undefined`, `null`, or `''` registers nothing, which works well for optional shortcut props. Switching to a falsy value unregisters the hotkey and hides any hints. Passing a valid hotkey again registers it again.
 
-To keep a hotkey registered, and listed in devtools and cheat sheets, but stop it from firing, set `enabled: false` instead.
+To keep the shortcut visible in devtools and cheat sheets while paused, leave the hotkey defined and pass `enabled: false` instead.
 
 ### Write a chord as a string or an object
 
-Write most chords as strings. Your editor autocompletes them, and TypeScript rejects a string that isn't a valid chord:
+Most chords are written as strings, giving you editor autocomplete and compile-time validation:
 
 ```tsx
 useHotkey('Escape', () => close())
 useHotkey('Mod+S', () => save()) // Command+S on macOS, Control+S elsewhere
-useHotkey('Mod+Alt+Shift+K', () => openCommandLog()) // Modifiers in order: Mod or Control, Alt, Shift, Meta
-useHotkey('[KeyW]', () => moveUp()) // The W position, whatever the layout types there
+useHotkey('Mod+Alt+Shift+K', () => openCommandLog()) // Order: Mod or Control, Alt, Shift, Meta
+useHotkey('[KeyW]', () => moveUp()) // Physical W position, regardless of layout
 
-useHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod comes first
-useHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod is already Meta on macOS
+useHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod must come first
+useHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod already maps to Meta on macOS
 ```
 
-TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-react-guides-keyboard-layouts-md-3f63f616.md#source-hotkeys-docs-framework-react-guides-keyboard-layouts-md).
+String bindings type-check against US QWERTY keys by default. To bind layout-specific keys such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-react-guides-keyboard-layouts-md-3f63f616.md#source-hotkeys-docs-framework-react-guides-keyboard-layouts-md).
 
-Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
+When building bindings from UI state, such as modifier checkboxes, use a `RawHotkeyChord` object instead:
 
 ```tsx
 useHotkey({ key: 'S', mod: true, shift: true }, () => saveAs()) // Same as 'Mod+Shift+S'
@@ -82,10 +82,10 @@ useHotkey(
 )
 ```
 
-Sequence steps can be strings, objects, or a mix:
+Sequence steps can be strings, objects, or a mix of both:
 
 ```tsx
 useHotkey(['G', { key: 'H', shift: true }], () => goToHistory())
 ```
 
-The hook registers every chord and sequence step as a string, so `context.hotkey` and devtools show `'Mod+Shift+S'` for the first object above. [Match a key's position instead](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains codes such as `[KeyW]`.
+Internally, TanStack Hotkeys normalizes objects to canonical strings, so `context.hotkey` and devtools report `'Mod+Shift+S'` for `{ key: 'S', mod: true, shift: true }`. See [Match a key's position instead](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for more on physical codes like `[KeyW]`.

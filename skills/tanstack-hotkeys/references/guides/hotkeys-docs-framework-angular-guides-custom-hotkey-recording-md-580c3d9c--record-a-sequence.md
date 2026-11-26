@@ -1,10 +1,10 @@
 # Custom Hotkey Recording — Record a sequence
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Record a sequence
 
-Set `maxSteps: Infinity` to let users record a sequence. Each chord adds a step, and the recording commits when the user presses Enter, or after `idleTimeoutMs` without a new step:
+Set `maxSteps: Infinity` to capture multi-step sequences. Each chord appends a step, and the recording commits when the user presses `Enter` or, when `idleTimeoutMs` is configured, stops typing for that duration:
 
 ```ts
 @Component({
@@ -30,6 +30,6 @@ export class SequenceRecorderComponent {
 }
 ```
 
-A one-step recording commits as a chord, so the result can always go straight to `injectHotkey`. With `maxSteps: Infinity`, `onRecord` and `validate` receive a `Hotkey`, which can be a chord or a sequence. See [Sequences](./hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md#source-hotkeys-docs-framework-angular-guides-sequences-md) for how sequences match.
+If the user commits after a single chord, `injectHotkeyRecorder` simplifies it to a chord string instead of a one-element array, so the result can always go straight to `injectHotkey`. With `maxSteps: Infinity`, `onRecord` and `validate` receive a `Hotkey`, which is a chord or a sequence. See [Sequences](./hotkeys-docs-framework-angular-guides-sequences-md-58c19666.md#source-hotkeys-docs-framework-angular-guides-sequences-md) for how sequences match.
 
 Options can also be a getter, such as `injectHotkeyRecorder(() => ({ maxSteps: Infinity, recordBy: this.mode(), onRecord }))`, so the recorder follows signals.

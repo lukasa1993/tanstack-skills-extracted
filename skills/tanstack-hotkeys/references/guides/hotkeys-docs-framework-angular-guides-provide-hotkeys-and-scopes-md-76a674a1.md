@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

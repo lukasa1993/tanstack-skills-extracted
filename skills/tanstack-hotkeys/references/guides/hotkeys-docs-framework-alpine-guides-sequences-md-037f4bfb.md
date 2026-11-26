@@ -2,16 +2,13 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-sequences-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
-> [!IMPORTANT]
-> `scope.createHotkeySequence`, `scope.createHotkeySequences`, and `scope.createHotkeySequenceRecorder` were removed in `@tanstack/alpine-hotkeys` v0.3.0. Pass a sequence to `scope.createHotkey` or `scope.createHotkeys` instead, and record one with `createHotkeyRecorder` and `maxSteps: Infinity`.
-
 A sequence is a hotkey made of chords pressed one after another, such as `G` then `H` to go home. Vim-style navigation, two-step commands such as VS Code's `Ctrl+K` then `Ctrl+C`, and cheat codes are all sequences.
 
-Sequences are ordinary hotkeys. You register them with `createHotkey` and `createHotkeys` on an owner from `createHotkeysScope`, and options, targets, `enabled`, and `meta` work as they do in [Hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md). This guide covers what is different about sequences.
+Sequences are ordinary hotkeys. Register them with `createHotkey` and `createHotkeys` on an owner from `createHotkeysScope`. Options, targets, `enabled`, and `meta` work as they do in [Hotkeys](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md). This guide covers what is different about sequences.
 
 ## Register a sequence
 
@@ -93,13 +90,20 @@ Sequences take the same options as chords, listed in [Hotkey options](./hotkeys-
 
 - `timeout` applies only to sequences, and `requireReset` only to chords. TypeScript rejects each one on the other kind.
 - Every step that advances a sequence calls `preventDefault`, so in `['Mod+K', 'Mod+C']`, the browser doesn't act on `Mod+K`. `stopPropagation` applies only on the last step, so earlier steps still reach other listeners, such as a focused widget.
-- With the default `ignoreInputs: 'auto'`, the first step decides whether a sequence works while the user types in a text field. `['G', 'G']` doesn't, and `['Mod+K', 'Mod+C']` does.
+- With the default `ignoreInputs: 'auto'`, the first step decides whether a sequence works while the user types in a text field. `['G', 'G']` doesn't, and `['Mod+K', 'Mod+C']` does. A sequence that starts with a function key, such as `['F2', 'R']`, also works in a text field, and its later keys don't type into the field.
 - A sequence with a `target` advances only on key presses inside the target.
 - With `capture: true`, every step is matched in the capture phase.
 
 `enabled`, `scope`, and `meta` work as they do for chords. A disabled sequence ignores its steps.
 
 ## Sequences that share keys
+
+| Pattern | Example | Behavior |
+| --- | --- | --- |
+| Shared prefix | `['D', 'D']` and `['D', 'W']` | Both track progress independently until the next key decides, with no warning |
+| Prefix of a longer sequence | `['G', 'G']` and `['G', 'G', 'G']` | The shorter one runs on step 2, and the longer one runs on step 3 |
+| Chord and sequence on the same key | `'G'` and `['G', 'G']` | The first `G` runs the chord. Once a sequence is underway, the keys that continue it belong to it |
+| Sequence that ends a longer one | `['A', 'B', 'C']` and `['B', 'C']` | Typing A B C runs only the longer one. A key that continues a sequence can't start another |
 
 ### Sequences that start the same way
 
@@ -121,7 +125,7 @@ When one sequence is the start of another, such as `['G', 'G']` and `['G', 'G', 
 
 - The second G runs `['G', 'G']`.
 - The third G runs `['G', 'G', 'G']`. The user gets both actions.
-- A fourth G runs `['G', 'G']` again, because each sequence tracks its own progress.
+- The third G belongs to `['G', 'G', 'G']`, so `['G', 'G']` starts over on the fourth G and runs on the fifth.
 
 TanStack Hotkeys doesn't warn about this. Choose sequences where neither one starts the other, such as `['G', 'G']` and `['G', 'B']`. [App hotkeys](./hotkeys-docs-framework-alpine-guides-app-hotkeys-md-06d36fd9.md#source-hotkeys-docs-framework-alpine-guides-app-hotkeys-md) report these pairs as conflicts, and so does the [hotkey recorder](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md) with `detectConflicts` on.
 
@@ -197,7 +201,7 @@ Alpine.data('pendingKeys', () => {
 </p>
 ```
 
-Progress clears when the sequence completes, when the user presses a key that doesn't continue it, and when the timeout passes, so the message goes away on its own. When several sequences are in progress, the one with the most matched steps shows the most of what the user pressed. [Cheat Sheet UI Helpers](./hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md#source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md) covers listing hotkeys.
+Progress clears when the sequence completes, when the user presses a key that doesn't continue it, and when the timeout passes, so the message goes away on its own. When several sequences are in progress, the one with the most matched steps shows the most of what the user pressed. [Cheat Sheets](./hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md-c2bc3613.md#source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md) covers listing hotkeys.
 
 ## Letter sequences need an off switch
 
@@ -233,4 +237,9 @@ this.hotkeys.createHotkey(
 )
 ```
 
-To record a sequence the user presses, see [Custom Hotkey Recording](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md). To match a sequence without the hotkey manager, see [Match a sequence on your own](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md).
+To record a sequence the user presses, see [Hotkey Recording](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad.md#source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md). To match a sequence without the hotkey manager, see [Match a sequence on your own](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md).
+
+## Migrating from v0.2 and earlier
+
+> [!NOTE]
+> `scope.createHotkeySequence`, `scope.createHotkeySequences`, and `scope.createHotkeySequenceRecorder` were removed in `@tanstack/alpine-hotkeys` v0.3.0. Pass a sequence to `scope.createHotkey` or `scope.createHotkeys` instead, and record one with `createHotkeyRecorder` and `maxSteps: Infinity`.

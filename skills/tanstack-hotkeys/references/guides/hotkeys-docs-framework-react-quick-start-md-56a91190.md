@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -10,7 +10,7 @@ This guide adds keyboard shortcuts to a React app. If you haven't installed TanS
 
 ## Register a hotkey
 
-TanStack Hotkeys needs no special setup. To register a keyboard shortcut, call `useHotkey` in the component that owns the action:
+TanStack Hotkeys needs no setup or provider to start. Call `useHotkey` in the component that owns the action:
 
 ```tsx
 import { useHotkey } from '@tanstack/react-hotkeys'
@@ -22,13 +22,13 @@ function Editor() {
 }
 ```
 
-`Mod` is Command on macOS and Control on Windows and Linux, so `Mod+S` is the save shortcut each user already knows. The browser's Save dialog stays closed, and the shortcut still works while the user types in the textarea. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains these defaults.
+`Mod` resolves to Command on macOS and Control on Windows and Linux. Out of the box, the browser's Save dialog stays closed, and `Mod+S` still fires while typing inside the `<textarea>`. See [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) to learn how every default works.
 
-That's all a hotkey needs. Providers, scopes, and the other features later in this guide are optional, so add them as your app grows.
+Providers, scopes, and the rest of the features below are completely optional. Add them only as your app needs them.
 
 ## Register several hotkeys
 
-When a component has more than one hotkey, register them together with `useHotkeys`:
+When a component needs multiple shortcuts, register them together with `useHotkeys`:
 
 ```tsx
 import { useHotkeys } from '@tanstack/react-hotkeys'
@@ -36,27 +36,25 @@ import { useHotkeys } from '@tanstack/react-hotkeys'
 function Editor() {
   useHotkeys([
     { hotkey: 'Mod+S', callback: () => save() },
-    { hotkey: 'Mod+Z', callback: () => undo() },
-    { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+    { hotkey: 'Mod+Enter', callback: () => publish() },
+    { hotkey: 'Mod+D', callback: () => duplicate() },
   ])
 
   return <textarea />
 }
 ```
 
-`useHotkeys` takes an array, so the list can also come from data, and its length can change between renders.
+Because `useHotkeys` takes an array, the list can come from dynamic data and change length between renders, unlike calling `useHotkey` in a loop.
 
 ## Sequences
 
-Pass an array of chords to register a sequence, pressed one after another:
+Pass an array of chords to register a multi-step sequence, pressed one after another:
 
 ```tsx
 useHotkey(['G', 'G'], () => scrollToTop())
 ```
 
-Each step must follow the previous one within a second.
-
-`useHotkeys` accepts chords and sequences in the same array:
+By default, each step must follow the previous one within 1 second. `useHotkeys` accepts chords and sequences in the same array:
 
 ```tsx
 useHotkeys([
@@ -68,7 +66,7 @@ useHotkeys([
 
 ## Show the shortcut
 
-Label a button or menu item with `useFormatForDisplay`. Format the same value you register, so the label always matches the binding:
+Format a shortcut for buttons, menus, or tooltips with `useFormatForDisplay`. Passing the same binding you register guarantees the label always stays in sync:
 
 ```tsx
 import { useFormatForDisplay, useHotkey } from '@tanstack/react-hotkeys'
@@ -88,13 +86,13 @@ function SaveButton() {
 }
 ```
 
-The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
+This renders `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` type-checks the string so typos fail at compile time. Use `Hotkey` if a value can also be a sequence.
 
-If your app renders on the server, such as with TanStack Start or Next.js, set the provider's `platform` from the request, so the server renders the user's labels without hydration errors, as shown in [Format labels in server-rendered apps](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md).
+In server-rendered apps like TanStack Start or Next.js, pass the request's platform to `HotkeysProvider` so server HTML matches the client without hydration errors. See [SSR & Hydration](./hotkeys-docs-framework-react-guides-ssr-md-35086cce.md#source-hotkeys-docs-framework-react-guides-ssr-md).
 
 ## Hotkeys follow your components
 
-A hotkey is registered when the component that calls the hook mounts, and unregistered when that component unmounts. Put each hotkey in the component it belongs to, so it is active only while that component is mounted:
+Hotkeys register when the calling component mounts and unregister when it unmounts. Put each shortcut in the component it belongs to so it's only active while rendered:
 
 ```tsx
 function App() {
@@ -109,24 +107,24 @@ function App() {
 }
 
 function SettingsDialog({ onClose }: { onClose: () => void }) {
-  // Registered only while the dialog is open
+  // Active only while the dialog is open
   useHotkey('Escape', onClose)
 
   return <div role="dialog">...</div>
 }
 ```
 
-For a condition that doesn't match a component, pass `enabled`:
+For conditions independent of mounting, pass `enabled`:
 
 ```tsx
 useHotkey('Mod+S', () => save(), { enabled: hasUnsavedChanges })
 ```
 
-When a group of hotkeys turns on and off together, put them in a scope instead. See [Add providers and scopes](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#add-providers-and-scopes-optional).
+When a whole group of shortcuts should toggle together, use a scope instead. See [Add providers and scopes](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#add-providers-and-scopes-optional).
 
 ## Element hotkeys
 
-A hotkey's default `target` is `document`, so it works wherever focus is on the page. To limit it to one element, pass a ref as `target`:
+Hotkeys listen on `document` by default. To restrict a shortcut to a single element, pass a ref as `target`:
 
 ```tsx
 import { useRef } from 'react'
@@ -135,7 +133,7 @@ import { useHotkey } from '@tanstack/react-hotkeys'
 function Panel() {
   const panelRef = useRef<HTMLDivElement>(null)
 
-  // Fires only while the panel, or something inside it, has focus
+  // Fires only while the panel (or something inside it) has focus
   useHotkey('Escape', () => closePanel(), { target: panelRef })
 
   return (
@@ -146,9 +144,9 @@ function Panel() {
 }
 ```
 
-The hotkey fires while focus is on the element or inside it. If nothing there can take focus, give the element a `tabIndex`.
+Element hotkeys only fire while the element or a descendant has focus. Add `tabIndex={0}` if the container isn't focusable.
 
-A ref works for an element the component always renders. For an element that mounts later, such as one a child shows from its own state, keep the element in state with a callback ref:
+`useRef` works when the element renders with the component. If the target mounts later, such as inside a conditionally rendered child, store it in `useState` via a callback ref instead:
 
 ```tsx
 import { useState } from 'react'
@@ -162,13 +160,13 @@ function Sidebar() {
 }
 ```
 
-The hotkey registers when the element mounts and unregisters when it unmounts. [Elements that mount later](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md) explains why.
+See [Elements that mount later](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md) for details.
 
 ## Add providers and scopes (optional)
 
-So far, every hotkey uses the built-in defaults and belongs to the global scope, so it is active whenever its component is mounted. You don't need a provider for that.
+Without a provider, hotkeys use the built-in defaults and belong to the `'global'` scope.
 
-Add `HotkeysProvider` at the root to set default options for every hotkey inside it, such as more time between sequence steps:
+To change default options across your app, add `HotkeysProvider` at the root:
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/react-hotkeys'
@@ -182,7 +180,7 @@ function Root() {
 }
 ```
 
-Add more providers deeper in your app to group hotkeys into scopes. Every hotkey inside a provider with a `scope` belongs to that scope. Make the scope `exclusive`, and while it is mounted, only its hotkeys work. Use one for dialogs and popups that should own the keyboard:
+Nest `HotkeysProvider` with a `scope` deeper in your tree to group shortcuts together. Marking a scope `exclusive` suspends every other scope while it's mounted, which works well for modals and confirmation dialogs:
 
 ```tsx
 import { HotkeysProvider, useHotkeys } from '@tanstack/react-hotkeys'
@@ -205,26 +203,35 @@ function ConfirmDialogBody({ onConfirm, onCancel }: ConfirmDialogProps) {
 }
 ```
 
-While the dialog is open, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog closes, they work again.
+While the dialog is open, `Enter` and `Escape` belong exclusively to it, and background shortcuts pause until it closes.
 
-A hook uses the nearest provider above the component that calls it, so register the dialog's hotkeys in a child of its provider. [HotkeysProvider and Scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) covers nested scopes, precedence, and turning a scope off without unmounting it.
+> [!NOTE]
+> Hooks read the nearest provider *above* the component calling them, so render the dialog's hotkeys inside a child of its `HotkeysProvider`.
+
+See [HotkeysProvider & Scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) for nested scope precedence and toggling scopes via `enabled`.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md#source-hotkeys-docs-framework-react-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md#source-hotkeys-docs-framework-react-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-react-guides-hotkey-hints-md-abc64c12.md#source-hotkeys-docs-framework-react-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [HotkeysProvider & Scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md): inspect registered hotkeys, scopes, and held keys while you develop
 
-As your app grows:
+App Hotkeys & UI:
 
-- [HotkeysProvider and Scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md): set default options, and turn groups of hotkeys on and off with dialogs, panes, and tabs
 - [App Hotkeys](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md#source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md#source-hotkeys-docs-framework-react-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Hotkey Recording](./hotkeys-docs-framework-react-guides-custom-hotkey-recording-md-376391c6.md#source-hotkeys-docs-framework-react-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md#source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-react-guides-hotkey-hints-md-abc64c12.md#source-hotkeys-docs-framework-react-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-react-guides-held-key-state-helpers-md-0d45a2d9.md#source-hotkeys-docs-framework-react-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [SSR & Hydration](./hotkeys-docs-framework-react-guides-ssr-md-35086cce.md#source-hotkeys-docs-framework-react-guides-ssr-md): server-render platform labels and pass app hotkeys from Server Components
+- [Keyboard Layouts](./hotkeys-docs-framework-react-guides-keyboard-layouts-md-3f63f616.md#source-hotkeys-docs-framework-react-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-react-guides-testing-md-c07f1983.md#source-hotkeys-docs-framework-react-guides-testing-md): reset singleton state and fix the target platform in unit tests
 - [Hotkey Manager](./hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md#source-hotkeys-docs-framework-react-guides-hotkey-manager-md): register and inspect hotkeys outside components

@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-These controllers report which keys the user is holding right now. They're optional helpers for your UI: show which modifiers are down, or change a button while Shift is held. You don't need them to register hotkeys. To show a button's shortcut while the user holds its modifiers, see [Hotkey Hints](./hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md#source-hotkeys-docs-framework-lit-guides-hotkey-hints-md).
+These controllers report which keys the user is holding right now. They're optional helpers for your UI: show which modifiers are down, or change a button while Shift is held. Registering hotkeys doesn't depend on them. To show a button's shortcut while the user holds its modifiers, see [Hotkey Hints](./hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md#source-hotkeys-docs-framework-lit-guides-hotkey-hints-md).
 
 Each controller adds itself to the element, requests an update when its value changes, and holds the current state in `value`.
 
@@ -113,4 +113,4 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [held-keys example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/lit/held-keys) shows held keys and their codes, and the [key-hold example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/lit/key-hold) shows modifier indicators.
+The [held-keys example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/lit/held-keys) shows held keys and their codes, and the [key-hold example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/lit/key-hold) shows modifier indicators.

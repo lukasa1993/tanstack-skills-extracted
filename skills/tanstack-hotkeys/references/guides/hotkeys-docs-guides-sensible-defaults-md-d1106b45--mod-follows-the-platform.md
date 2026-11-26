@@ -1,11 +1,10 @@
 # Sensible Defaults — `Mod` follows the platform
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## `Mod` follows the platform
 
-`Mod` is the platform's primary shortcut modifier: Command (`Meta`) on macOS and Control on Windows and Linux. Write `Mod+S` once and each user gets the save shortcut their operating system has trained them to use. The platform is detected from `navigator`. During server rendering, where there is no `navigator`, it is `linux`.
+`Mod` resolves to the platform's primary shortcut modifier: Command (`Meta`) on macOS, and Control on Windows and Linux. A single `Mod+S` binding adapts to each user's operating system automatically.
 
-Hotkeys are stored in a canonical form, so equivalent spellings are the same binding. On Windows and Linux, `Control+S` and `ctrl+s` are stored as `Mod+S`. On macOS, `Control+S` remains `Control+S`, because Control is not the primary modifier there. This is why two spellings conflict on one platform and not on another.
-
-Pass `platform: 'mac' | 'windows' | 'linux'` to override detection, for example in tests or to preview another platform's shortcuts.
+- **Platform detection.** Detected from `navigator` in the browser, defaulting to `'linux'` during server rendering where `navigator` doesn't exist. Pass `platform: 'mac' | 'windows' | 'linux'` to override detection in tests or when previewing another OS.
+- **Canonical storage.** Hotkeys normalize to canonical strings. On Windows and Linux, `Control+S` and `ctrl+s` store as `Mod+S`. On macOS, `Control+S` stays `Control+S` because Control isn't the primary modifier. That's why `Mod+S` and `Control+S` collide on Windows and Linux, not on macOS.

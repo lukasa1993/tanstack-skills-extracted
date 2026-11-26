@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register a hotkey
 
@@ -68,7 +68,7 @@ class MyEditor extends LitElement {
 
 Keep the values the functions read in reactive properties, so a change triggers an update. A controller callback receives `HotkeyCallbackContext`, which can belong to either kind of hotkey, so check `context.kind` before reading `context.parsedChord`.
 
-That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md#source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md).
+That makes it straightforward to register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md#source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md).
 
 ### Optional hotkeys
 
@@ -99,7 +99,7 @@ saveAs() {}
 
 TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-lit-guides-keyboard-layouts-md-03534b14.md#source-hotkeys-docs-framework-lit-guides-keyboard-layouts-md).
 
-Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
+To build a chord from data, such as a form with a checkbox for each modifier, write it as a `RawHotkeyChord` object:
 
 ```ts
 @hotkey({ key: 'S', mod: true, shift: true }) // Same as 'Mod+Shift+S'

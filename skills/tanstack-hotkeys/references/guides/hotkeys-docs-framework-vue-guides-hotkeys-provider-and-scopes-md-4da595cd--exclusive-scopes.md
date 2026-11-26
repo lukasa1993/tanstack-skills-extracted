@@ -1,6 +1,6 @@
 # Hotkeys Provider And Scopes — Exclusive scopes
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Exclusive scopes
 
@@ -45,6 +45,4 @@ Pass `{ allow }` to keep some scopes working while an exclusive scope is active:
 
 ### Stacked exclusive scopes
 
-When more than one exclusive scope is active, the one with the highest precedence owns the keyboard, and only its `allow` list applies. A confirmation dialog opened from inside an edit dialog suspends the edit dialog until it closes.
-
-Each exclusive scope needs a unique name. Activating the same exclusive scope twice logs a warning in development, because hotkeys from both providers would fire together.
+When two exclusive scopes are active at once, such as a confirmation dialog opened from inside an edit dialog, the higher-precedence one wins and only its `allow` list applies. Give each exclusive scope a unique name. Activating the same exclusive scope twice logs a development warning, because hotkeys from both providers would fire together.

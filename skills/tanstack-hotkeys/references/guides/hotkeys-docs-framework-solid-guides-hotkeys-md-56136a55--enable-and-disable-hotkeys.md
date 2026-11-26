@@ -1,27 +1,27 @@
 # Hotkeys — Enable and disable hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Enable and disable hotkeys
 
-A hotkey is on while its component is mounted. Most hotkeys need no other on and off logic, so put each one in the component it belongs to:
+When a shortcut belongs to conditional UI like a modal, keep the hotkey inside that component so rendering and disposal handle registration automatically.
 
 ```tsx
 function SettingsDialog(props: { onClose: () => void }) {
-  // Registered only while the dialog is mounted
+  // Registered only while the dialog is rendered
   createHotkey('Escape', () => props.onClose())
 
   return <div role="dialog">...</div>
 }
 ```
 
-For a condition that doesn't match a component, pass `enabled` from an accessor:
+For state conditions while the component stays rendered, pass `enabled` from an accessor:
 
 ```tsx
 createHotkey('Mod+S', () => save(), () => ({ enabled: hasUnsavedChanges() }))
 ```
 
-A disabled hotkey stays registered, so devtools still list it, and changing `enabled` doesn't register it again. While disabled, it ignores key presses, so pressing `Mod+S` opens the browser's Save dialog. To keep the dialog closed, set `preventDefault: 'always'`:
+Toggling `enabled` keeps the hotkey registered and visible in devtools without re-registering listeners. While disabled, it lets the browser handle the key, so `Mod+S` opens the Save Page dialog. To keep blocking the browser action while disabled or suspended, set `preventDefault: 'always'`:
 
 ```tsx
 createHotkey('Mod+S', () => save(), () => ({
@@ -30,10 +30,9 @@ createHotkey('Mod+S', () => save(), () => ({
 }))
 ```
 
-With `'always'`, a hotkey that can't fire, because it's disabled or its scope is inactive or suspended, still prevents the browser's action. It doesn't stop propagation, and when another hotkey handles the key, that hotkey's options apply instead. Sequences treat `'always'` as `true`. To apply it to every hotkey, set it in the default options. We recommend it for most hotkeys, but not for hotkeys you turn off to hand the key back to the browser, such as `Mod+C` or `Tab`. See [Hotkeys that can't fire leave the key alone](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
+See [Hotkeys that can't fire leave the key alone](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for when to avoid `'always'`, such as clipboard chords, single keys behind an accessibility switch, and `Tab`.
 
-`enabled` works the same way for sequences. A disabled sequence ignores its steps.
+When a `<Loading>` boundary shows its fallback again, the content it hid stays mounted, so its hotkeys keep firing. Solid gives the adapter no signal for this. If those hotkeys shouldn't run while the fallback shows, pass `enabled` from the same state that is pending.
 
-Single-key hotkeys, such as `K`, need a setting that lets users turn them off. Pass that setting as `enabled`. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
-
-When a group of hotkeys turns on and off together, use [scopes](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) instead of passing `enabled` to each one. A scope can turn off the hotkeys in a tab panel that stays mounted, or suspend the rest of the page while a dialog is open.
+> [!NOTE]
+> Single-key shortcuts like `K` need a user setting to turn them off or remap them for accessibility. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). To toggle a group of shortcuts together, use [scopes](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) instead of passing `enabled` on every call.

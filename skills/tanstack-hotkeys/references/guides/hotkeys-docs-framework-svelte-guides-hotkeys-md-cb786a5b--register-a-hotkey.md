@@ -1,10 +1,10 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register a hotkey
 
-Call `createHotkey` in a component's script with a hotkey and a callback:
+Pass a hotkey and callback to `createHotkey` in a component's script:
 
 ```svelte
 <script lang="ts">
@@ -16,7 +16,7 @@ Call `createHotkey` in a component's script with a hotkey and a callback:
 <textarea></textarea>
 ```
 
-The callback receives the `KeyboardEvent` and a context object:
+Callbacks receive the `KeyboardEvent` and a context object:
 
 ```ts
 createHotkey('Mod+S', (event, context) => {
@@ -60,17 +60,17 @@ The hotkey and its options can change too. Pass them as getters, and the functio
 
 A plain options object is read once, so `{ enabled: !readOnly }` keeps the value from when the script ran. An object with getters, such as `{ get enabled() { return !readOnly } }`, follows changes like a getter function does.
 
-That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#source-hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md).
+That makes it straightforward to register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md#source-hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-svelte-guides-app-hotkeys-md-bdf9b10d.md#source-hotkeys-docs-framework-svelte-guides-app-hotkeys-md).
 
 ### Optional hotkeys
 
-A hotkey of `undefined`, `null`, or `''` registers nothing, so a component can take an optional shortcut. When the hotkey changes to one of these values, its registration is removed. When it changes back to a hotkey, it registers again. Hints for no hotkey are hidden.
+Passing `undefined`, `null`, or `''` registers nothing, which suits optional shortcut props. Switching to one of these values unregisters the hotkey and hides its hints. Passing a valid hotkey again registers it again.
 
-To keep a hotkey registered, and listed in devtools and cheat sheets, but stop it from firing, set `enabled: false` instead.
+To keep the hotkey registered, visible in devtools and cheat sheets, but paused, leave it defined and pass `enabled: false` instead.
 
 ### Write a chord as a string or an object
 
-Write most chords as strings. Your editor autocompletes them, and TypeScript rejects a string that isn't a valid chord:
+Most chords are written as strings, which gives you editor autocomplete and compile-time validation:
 
 ```ts
 createHotkey('Escape', () => close())
@@ -82,9 +82,9 @@ createHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod comes first
 createHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod is already Meta on macOS
 ```
 
-TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-svelte-guides-keyboard-layouts-md-a33262ea.md#source-hotkeys-docs-framework-svelte-guides-keyboard-layouts-md).
+String bindings type-check against US QWERTY keys by default. To bind layout-specific keys such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-svelte-guides-keyboard-layouts-md-a33262ea.md#source-hotkeys-docs-framework-svelte-guides-keyboard-layouts-md).
 
-Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
+When building bindings from UI state, such as modifier checkboxes, use a `RawHotkeyChord` object instead:
 
 ```ts
 createHotkey({ key: 'S', mod: true, shift: true }, () => saveAs()) // Same as 'Mod+Shift+S'
@@ -96,7 +96,7 @@ createHotkey(
 )
 ```
 
-Sequence steps can be strings, objects, or a mix:
+Sequence steps can be strings, objects, or a mix of both:
 
 ```ts
 createHotkey(['G', { key: 'H', shift: true }], () => goToHistory())

@@ -1,10 +1,10 @@
 # Hotkeys — Hotkey targets
 
-[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Hotkey targets
 
-A hotkey listens on `document` by default, so it works wherever focus is on the page. Set `target` to a ref, an element, `document`, or `window` to listen somewhere else:
+Hotkeys listen on `document` by default. Pass a ref, DOM element, `document`, or `window` as `target` to scope events to a specific area:
 
 ```tsx
 import { useRef } from 'react'
@@ -12,7 +12,7 @@ import { useRef } from 'react'
 function Panel() {
   const panelRef = useRef<HTMLDivElement>(null)
 
-  // Fires only while the panel, or something inside it, has focus
+  // Fires only while the panel (or something inside it) has focus
   useHotkey('Escape', () => closePanel(), { target: panelRef })
 
   return (
@@ -24,17 +24,17 @@ function Panel() {
 ```
 
 > [!NOTE]
-> An element receives key presses only while it, or something inside it, has focus. Give it a `tabIndex` if it isn't focusable already.
+> An element only receives key events while it or a descendant has focus. Add `tabIndex={0}` if the target isn't natively focusable.
 
-A `null` or `undefined` target, or a ref whose `current` is still unset, registers nothing until the element exists. Only an omitted `target` listens on `document`, so a wrapper that forwards an unset `target` waits too. Set `target: document` to choose the document explicitly.
+Passing `null`, `undefined`, or an unset ref registers nothing until an element exists. Only omitting `target`, or passing `target: document` explicitly, listens on `document`.
 
-While focus is inside the element, its hotkeys run before hotkeys on `document`. With the default `stopPropagation: true`, a `document` hotkey for the same key doesn't run at all. A sequence with a target advances only on key presses inside the target.
+When focus is inside a target element, its hotkeys run before `document` hotkeys. With the default `stopPropagation: true`, `document` hotkeys for the same key won't fire. Sequences with a `target` advance only on key presses inside that target.
 
 ### Elements that mount later
 
-The hook reads a ref's `current` after its component renders. Setting a ref doesn't render the component, so a ref misses an element that mounts after the component, such as one a child shows from its own state. The hotkey then registers only at the component's next render, and can stay on a removed element.
+`useHotkey` reads `ref.current` after render. Assigning a ref does not trigger a re-render, so a `useRef` misses elements mounted later by a child component until the parent happens to re-render.
 
-Use a ref for an element the component always renders. For any other element, keep it in state with a callback ref:
+Use `useRef` when the element renders in the same component. For elements mounted later by a child, hold the element in `useState` via a callback ref:
 
 ```tsx
 import { useState } from 'react'
@@ -67,13 +67,13 @@ function CollapsiblePanel({
 }
 ```
 
-Setting the state renders `Sidebar`, so the hotkey registers when the element mounts, moves when the element is replaced, and unregisters when it unmounts.
+Updating state re-renders `Sidebar`, so the hotkey attaches as soon as the panel mounts and detaches when it unmounts.
 
 ### A target is not a scope
 
-A target and a [scope](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) both limit when a hotkey works, in different ways:
+Both limit when a hotkey fires, using different signals:
 
-- A target decides which key presses the hotkey receives, based on where focus is.
-- A scope decides whether the hotkey is on, based on which parts of your app are active, such as an open dialog. Focus doesn't matter.
+- **`target`** filters by DOM focus, checking which element received the key event.
+- **`scope`** filters by UI state, checking which mounted [provider scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) are active regardless of focus.
 
-Use a target for hotkeys that belong to a focusable element, such as a list or a code editor. Use a scope for hotkeys that belong to a part of your app, whether or not it has focus. A hotkey can have both.
+A single hotkey can use both.

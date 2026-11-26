@@ -2,28 +2,254 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+`createHotkeyRecorder` lets users customize a shortcut by pressing the keys directly, as shortcut editors in system settings and IDEs do. It's needed only when users can rebind shortcuts. Pair it with [App Hotkeys](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md#source-hotkeys-docs-framework-solid-guides-app-hotkeys-md) to validate, persist, and list customized bindings app-wide.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+While any recorder is listening, registered hotkeys pause automatically so pressing `Mod+S` to record it doesn't also trigger Save.
 
-- [Overview](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--overview.md) — 1 KiB
-- [Record a chord](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--record-a-chord.md) — 3 KiB
-- [Record a sequence](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--record-a-sequence.md) — 2 KiB
-- [Keys the recorder handles](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--keys-the-recorder-handles.md) — 2 KiB
-- [Validate and check conflicts](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--validate-and-check-conflicts.md) — 5 KiB
-- [Build a shortcut settings screen](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--build-a-shortcut-settings-screen.md) — 3 KiB
-- [Recorder options](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89--recorder-options.md) — 3 KiB
+## Record a chord
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="record-a-chord"></a>
-<a id="record-a-sequence"></a>
-<a id="keys-the-recorder-handles"></a>
-<a id="validate-and-check-conflicts"></a>
-<a id="reject-hotkeys-you-dont-want"></a>
-<a id="check-for-conflicts"></a>
-<a id="build-a-shortcut-settings-screen"></a>
-<a id="recorder-options"></a>
+```tsx
+import { Show } from 'solid-js'
+import { createFormatForDisplay, createHotkeyRecorder } from '@tanstack/solid-hotkeys'
+
+function ShortcutRecorder() {
+  const formatForDisplay = createFormatForDisplay()
+  const recorder = createHotkeyRecorder({
+    onRecord: (hotkey) => console.log('Recorded:', hotkey), // e.g. 'Mod+Shift+S'
+  })
+
+  const label = () => {
+    if (recorder.isRecording()) return 'Press a key combination...'
+    const hotkey = recorder.recordedHotkey()
+    return hotkey ? formatForDisplay(hotkey) : 'Click to record'
+  }
+
+  return (
+    <div>
+      <button onClick={recorder.startRecording}>{label()}</button>
+      <Show when={recorder.isRecording()}>
+        <button onClick={recorder.cancelRecording}>Cancel</button>
+      </Show>
+    </div>
+  )
+}
+```
+
+With the default `recordBy: 'auto'`, the recorder outputs portable strings like those written by hand: `Mod+S` for Command+S on macOS or Control+S on Windows and Linux. It falls back to physical bracketed codes (`Shift+[Slash]`, `Alt+[Digit1]`) for presses whose characters vary across operating systems or layouts. See [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the full rules, or set `recordBy: 'code'` (always physical) or `recordBy: 'key'` (always typed character). Recording by position rejects a press that has no physical code.
+
+Pass the result straight to `createHotkey`, and label it with `createFormatForDisplay`. `createHotkeyRecorder` returns the recorder's state and controls. Each state member is an accessor:
+
+| Member | Description |
+| --- | --- |
+| `isRecording()` | Whether the recorder is currently listening |
+| `steps()` | Chords captured so far during a sequence recording |
+| `recordedHotkey()` | Last committed hotkey, or `null` after cancel or clear |
+| `startRecording()` | Starts listening |
+| `stopRecording()` | Stops listening without triggering `onRecord` or `onCancel` |
+| `cancelRecording()` | Stops listening and calls `onCancel` |
+| `commitRecording()` | Commits the current `steps` immediately |
+
+## Record a sequence
+
+Set `maxSteps: Infinity` to capture multi-step sequences. Each chord appends a step, and the recording commits when the user presses `Enter` or, when `idleTimeoutMs` is configured, stops typing for that duration:
+
+```tsx
+function SequenceRecorder() {
+  const formatForDisplay = createFormatForDisplay()
+  const recorder = createHotkeyRecorder({
+    maxSteps: Infinity,
+    onRecord: (hotkey) => console.log('Recorded:', hotkey), // 'Mod+S' or ['G', 'G']
+  })
+
+  const label = () => {
+    if (recorder.isRecording()) {
+      return formatForDisplay(recorder.steps()) || 'Press chords, then Enter...'
+    }
+    const hotkey = recorder.recordedHotkey()
+    return hotkey ? formatForDisplay(hotkey) : 'Click to record'
+  }
+
+  return <button onClick={recorder.startRecording}>{label()}</button>
+}
+```
+
+If the user commits after a single chord, `createHotkeyRecorder` simplifies it to a chord string rather than a 1-element array. With `maxSteps: Infinity`, `onRecord` and `validate` receive a `Hotkey` (`HotkeyChord | HotkeySequence`). See [Sequences](./hotkeys-docs-framework-solid-guides-sequences-md-ea3dff4a.md#source-hotkeys-docs-framework-solid-guides-sequences-md) for how sequence bindings work.
+
+Options can also be an accessor, such as `createHotkeyRecorder(() => ({ maxSteps: Infinity, recordBy: mode(), onRecord }))`, so the recorder follows signals.
+
+## Keys the recorder handles
+
+| Key | Behavior while recording |
+| --- | --- |
+| Standalone modifier, such as `Shift` or `Control` | Waits for a non-modifier key |
+| Key press (with or without modifiers) | Captures a chord (`Mod+S`, `F1`) |
+| `Enter` | Commits a sequence. With `maxSteps: 1` or `commitKeys: 'none'`, records `Enter` instead. |
+| `Escape` | Cancels recording and calls `onCancel` |
+| `Tab` or `Shift+Tab` (without `Control`, `Alt`, or `Meta`) | Cancels and lets focus move normally. In a text field, `Tab` moves focus without cancelling. Set `recordTab: true` to record `Tab` instead, and show "Press Escape to cancel" for keyboard accessibility. |
+| `Backspace` or `Delete` (no modifiers) | Removes the last sequence step, or stops and calls `onClear` when empty |
+
+Key auto-repeats and IME compositions never add steps. Typing inside other text fields passes through while recording (`Escape` still cancels), unless you pass `ignoreInputs: false` to record inside inputs. Note that `onClear` doesn't delete anything on its own. Decide in your callback whether clearing unbinds the shortcut or resets its default.
+
+## Validate and check conflicts
+
+### Reject hotkeys you don't want
+
+Return `true` from `validate` to accept a recording, or `false` or an error string to reject it:
+
+```tsx
+createHotkeyRecorder({
+  validate: (_hotkey, { parsedChord }) =>
+    parsedChord.modifiers.length > 0 || 'Include a modifier.',
+  onReject: ({ message }) => setError(message ?? 'Try another shortcut.'),
+  onRecord: (hotkey) => saveHotkey(hotkey),
+})
+```
+
+With `maxSteps: Infinity`, check `context.kind` before reading `parsedChord` or `parsedSequence` (both `validate` and `onRecord` receive the same `context`):
+
+```tsx
+createHotkeyRecorder({
+  maxSteps: Infinity,
+  validate: (_hotkey, context) =>
+    context.kind === 'sequence' ||
+    context.parsedChord.modifiers.length > 0 ||
+    'A single chord needs a modifier.',
+  onRecord: (hotkey) => saveHotkey(hotkey),
+})
+```
+
+Rejected recordings keep the recorder active, and rejected sequences keep their captured `steps` so users can edit with `Backspace`.
+
+### Check for conflicts
+
+Pass `detectConflicts: true` to reject bindings already registered on the page:
+
+```tsx
+createHotkeyRecorder({
+  detectConflicts: true,
+  onReject: ({ reason }) => {
+    if (reason === 'conflict') setError('That shortcut is already in use.')
+  },
+  onRecord: (hotkey) => saveHotkey(hotkey),
+})
+```
+
+By default, `detectConflicts` checks every enabled `keydown` registration across all scopes. A recorded chord conflicts with a sequence that starts with it, and a recorded sequence conflicts with a chord equal to its first step (so `['G', 'H']` and `['G', 'S']` do not conflict). It compares underlying keypresses so `Shift+[Slash]` catches `?`. Pass an options object to narrow the check:
+
+```tsx
+detectConflicts: {
+  excludeIds: [registration.id], // Ignore the registration being edited
+  target: panelElement, // Check only overlapping elements (pass scope: 'all' instead to check every target)
+  eventType: 'keyup',
+  includeDisabled: true,
+  exclude: (registration) => registration.options.scope === 'vim', // Skip a hotkey scope
+}
+```
+
+> [!NOTE]
+> Live conflict checks inspect only mounted registrations. If you use [App Hotkeys](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md#source-hotkeys-docs-framework-solid-guides-app-hotkeys-md), use `findConflicts` inside `validate` so shortcuts on unmounted routes are checked too.
+
+`onReject` doesn't generate user-facing copy. Map `reason` (along with optional `hotkey`, `conflicts`, and `message`) to your own UI strings:
+
+| `reason` | When it happens |
+| --- | --- |
+| `'conflict'` | Collides with an active registration (`conflicts` lists the matches) |
+| `'validation'` | Rejected by your `validate` callback (`message` holds your return string) |
+| `'whitespace'` | User pressed a whitespace character that can't be recorded |
+| `'missing-code'` | Key event had no physical `code` when needed |
+| `'alt-graph'` | Unrecordable `AltGr` combination |
+
+`findHotkeyConflicts(hotkey, options)` runs the same conflict check outside a recording and returns `HotkeyConflict` objects (`{ registration }`) wrapping matching [registration views](./hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md-db8cc71d.md#source-hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md).
+
+## Build a shortcut settings screen
+
+For app-wide settings, pair [App Hotkeys](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md#source-hotkeys-docs-framework-solid-guides-app-hotkeys-md) with `setCustomHotkey` so cheat sheets, persistence, and unmounted-route conflict checks stay unified.
+
+For a few hotkeys in one component, signals are enough:
+
+```tsx
+import { For, createSignal } from 'solid-js'
+import {
+  createFormatForDisplay,
+  createHotkeyRecorder,
+  createHotkeys,
+} from '@tanstack/solid-hotkeys'
+import type { Hotkey } from '@tanstack/solid-hotkeys'
+
+const actions = { save, undo, search }
+type Action = keyof typeof actions
+
+function ShortcutSettings() {
+  const formatForDisplay = createFormatForDisplay()
+  const [shortcuts, setShortcuts] = createSignal<Record<Action, Hotkey>>({
+    save: 'Mod+S',
+    undo: 'Mod+Z',
+    search: ['G', 'S'],
+  })
+  const [editing, setEditing] = createSignal<Action | null>(null)
+
+  const recorder = createHotkeyRecorder({
+    maxSteps: Infinity,
+    onRecord: (hotkey) => {
+      const action = editing()
+      if (action) setShortcuts((prev) => ({ ...prev, [action]: hotkey }))
+      setEditing(null)
+    },
+    onCancel: () => setEditing(null),
+  })
+
+  // Register each action with its current hotkey
+  createHotkeys(() =>
+    Object.entries(shortcuts()).map(([action, hotkey]) => ({
+      hotkey,
+      callback: actions[action as Action],
+    })),
+  )
+
+  return (
+    <div>
+      <For each={Object.entries(shortcuts())}>
+        {([action, hotkey]) => (
+          <button
+            onClick={() => {
+              setEditing(action as Action)
+              recorder.startRecording()
+            }}
+          >
+            {action}:{' '}
+            {editing() === action && recorder.isRecording()
+              ? 'Press keys...'
+              : formatForDisplay(hotkey)}
+          </button>
+        )}
+      </For>
+    </div>
+  )
+}
+```
+
+## Recorder options
+
+| Option | Default | Description |
+| --- | --- | --- |
+| `onRecord` | Required | Called with the recorded `hotkey` and `context` when committed |
+| `onCancel` | None | Called on `Escape`, `Tab`, `Shift+Tab`, or `cancelRecording()` |
+| `onClear` | None | Called when `Backspace` or `Delete` is pressed with no recorded steps |
+| `maxSteps` | `1` | `1` for chords, `Infinity` for sequences |
+| `commitKeys` | `'enter'` | With `maxSteps: Infinity`, whether `Enter` commits (`'enter'`) or records (`'none'`) |
+| `idleTimeoutMs` | None | With `maxSteps: Infinity`, auto-commits after idle ms following the first chord |
+| `recordBy` | `'auto'` | `'auto'` (portable names and physical fallbacks), `'code'` (physical), or `'key'` (typed char) |
+| `ignoreInputs` | `true` | Lets typing in text fields pass through while recording |
+| `recordTab` | `false` | Records `Tab` and `Shift+Tab` instead of cancelling and moving focus |
+| `validate` | None | Custom validator returning `true`, `false`, or an error message |
+| `detectConflicts` | `false` | Rejects conflicts with registered hotkeys |
+| `onReject` | None | Called with `{ reason, hotkey?, conflicts?, message? }` when rejected |
+| `platform` | Detected | Override `'mac'`, `'windows'`, or `'linux'` for `Mod` output |
+
+Set defaults for all recorders through `HotkeysProvider` using `hotkeyRecorder` in `defaultOptions`. See [Set default options](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) and [`createHotkeyRecorder`](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/framework/solid/reference/functions/createHotkeyRecorder.md).
+
+Try the [createHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/solid/createHotkeyRecorder) or [sequences recorder example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/solid/createHotkeyRecorder-sequences).

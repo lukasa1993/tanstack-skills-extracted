@@ -1,36 +1,36 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Hotkey options
 
 Pass options as the third argument:
 
 ```tsx
-// Submit with Enter, even while focus is in a text field
+// Submit with Enter even while focused in a text input
 createHotkey('Enter', () => submit(), { ignoreInputs: false })
 ```
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `enabled` | `true` | Whether the hotkey responds to key presses. See [Enable and disable hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#enable-and-disable-hotkeys). |
+| `enabled` | `true` | Whether the hotkey fires. See [Enable and disable hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#enable-and-disable-hotkeys). |
 | `target` | `document` | Where the hotkey listens. See [Hotkey targets](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#hotkey-targets). |
-| `preventDefault` | `true` | Stops the browser's own action, such as the Save dialog for `Mod+S`. `'always'` also stops it while the hotkey can't fire. |
-| `stopPropagation` | `true` | Stops the key press from reaching other listeners |
-| `ignoreInputs` | `'auto'` | Skips key presses that type in a text field or operate a focused control. See [Typing in inputs does not trigger shortcuts](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
-| `ignoreDefaultPrevented` | `false` | Skips a key press that another listener already handled with `preventDefault()`, such as a component library's dialog closing on Escape. See [Component libraries that handle the same keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `preventDefault` | `true` | Prevents the browser's default action. `'always'` keeps blocking even while disabled or suspended. |
+| `stopPropagation` | `true` | Stops the event from reaching outer listeners |
+| `ignoreInputs` | `'auto'` | Skips keys in text fields and interactive controls. See [Typing in inputs](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `ignoreDefaultPrevented` | `false` | Skips events already prevented by another listener, such as a UI library overlay. See [Component libraries](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
 | `eventType` | `'keydown'` | Fires on `'keydown'` or `'keyup'` |
-| `capture` | `false` | Runs before the keyboard handlers of elements inside the target. See [Hotkeys run after the page's own handlers](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
-| `requireReset` | `false` | Chords only. Fires once per press instead of again on each automatic repeat while the key is held. |
+| `capture` | `false` | Runs in the capture phase before widget handlers inside `target`. See [Event phase](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). |
+| `requireReset` | `false` | Chords only. Fires once per press instead of repeating while held. |
 | `timeout` | `1000` | Sequences only. Milliseconds allowed between steps. |
-| `conflictBehavior` | `'warn'` | What happens when the same hotkey is already registered. See [Handle duplicate hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#handle-duplicate-hotkeys). |
-| `scope` | The nearest provider's scope | The [scope](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) the hotkey belongs to |
-| `platform` | Detected | The platform that decides what `Mod` means: `'mac'`, `'windows'`, or `'linux'`. Useful in tests. |
-| `meta` | None | A name, a description, and a group. See [Describe hotkeys with `meta`](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#describe-hotkeys-with-meta). |
+| `conflictBehavior` | `'warn'` | How duplicate registrations are handled. See [Handle duplicate hotkeys](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#handle-duplicate-hotkeys). |
+| `scope` | Nearest provider's scope | The [scope](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) this hotkey belongs to |
+| `platform` | Detected | Override `'mac'`, `'windows'`, or `'linux'` for `Mod` resolution. Useful in tests. |
+| `meta` | None | Display metadata (`name`, `description`, `group`). See [Describe hotkeys with `meta`](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#describe-hotkeys-with-meta). |
 
-The defaults suit most hotkeys. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains why each one was chosen and when to change it. The [`CreateHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/418247d9f4397edebae80224f5cd88d3de71e337/docs/framework/solid/reference/type-aliases/CreateHotkeyOptions.md) lists the types.
+See [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for why each default behaves the way it does, and [`CreateHotkeyOptions`](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/framework/solid/reference/type-aliases/CreateHotkeyOptions.md) for full type definitions.
 
-To change a default for every hotkey in your app, pass `defaultOptions` to a `HotkeysProvider` at the root. Options passed to a primitive override the provider's defaults:
+To change defaults across your app, pass `defaultOptions` to a root `HotkeysProvider`. Options passed to a primitive always override provider defaults:
 
 ```tsx
 import { HotkeysProvider } from '@tanstack/solid-hotkeys'
@@ -46,11 +46,11 @@ function Root() {
 }
 ```
 
-The provider is optional. Without one, every hotkey uses the built-in defaults in the table. See [HotkeysProvider and Scopes](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) for nested defaults and for grouping hotkeys into scopes.
+The provider is optional. See [HotkeysProvider & Scopes](./hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md-aa492c2f.md#source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md) for nested overrides and scope management.
 
 ### Chord and sequence options
 
-Most options apply to both kinds of hotkey. `requireReset` applies only to chords, and `timeout` only to sequences. The option types follow the hotkey you pass, so TypeScript rejects options for the other kind:
+`requireReset` applies only to chords, and `timeout` applies only to sequences. TypeScript enforces this per hotkey:
 
 ```tsx
 createHotkey('Escape', close, { requireReset: true }) // OK
@@ -58,6 +58,4 @@ createHotkey(['G', 'G'], scrollToTop, { timeout: 500 }) // OK
 createHotkey('Escape', close, { timeout: 500 }) // Type error
 ```
 
-Options that apply to many hotkeys at once, such as provider defaults, apply each of these to the matching kind only. In the provider example above, `requireReset` affects chords, and `timeout` affects sequences.
-
-When the kind isn't known until runtime, such as a `Hotkey` loaded from settings, the primitive accepts only the options that both kinds share.
+When setting defaults across many hotkeys via `HotkeysProvider` or `createHotkeys` shared options, `requireReset` applies only to chords and `timeout` applies only to sequences. If a hotkey's kind isn't known until runtime, such as a `Hotkey` loaded from user settings, only options common to both kinds are accepted.

@@ -1,24 +1,20 @@
 # Sensible Defaults — Hotkeys that can't fire leave the key alone
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Hotkeys that can't fire leave the key alone
 
-A hotkey that can't fire, because it's disabled or its scope is inactive or suspended, doesn't call `preventDefault`, so the browser acts on the key. Pressing `Mod+S` while a save hotkey is disabled opens the browser's Save Page dialog.
+If a hotkey is disabled (`enabled: false`) or its scope is inactive or suspended, it doesn't call `preventDefault()`. That means pressing `Mod+S` while saving is disabled opens the browser's Save dialog.
 
-For most hotkeys, keeping the browser's action prevented is better, and we recommend `preventDefault: 'always'`. With it, a chord that can't fire still calls `preventDefault` when its keys are pressed:
+For most shortcuts, setting `preventDefault: 'always'` in your shared defaults is better. With `'always'`, a disabled or suspended chord still prevents the browser's default action:
 
-- It never stops propagation, so other listeners still receive the key.
-- It still skips typing in text fields when `ignoreInputs` does.
-- When another hotkey handles the key, that hotkey's options apply instead.
+- It never stops propagation, so other listeners still see the key.
+- It still respects `ignoreInputs` while typing in fields.
+- If another active hotkey handles the key, that hotkey's options take over.
 - Sequences treat `'always'` as `true`.
 
-To use it for every hotkey, set it in your adapter's shared defaults, as shown in [Changing the defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#changing-the-defaults).
+Don't use `'always'` on hotkeys you turn off specifically to hand keys back to the browser. Set `preventDefault: true` on those instead:
 
-It isn't the default because turning a hotkey off is often how an app hands a key back to the browser. With `'always'`, these hotkeys keep blocking the browser while they're off:
-
-- **Editing and clipboard shortcuts.** A grid that enables `Mod+C`, `Mod+A`, or `Mod+Z` only while cells are selected blocks native copy, select all, and undo the rest of the time. `Mod` chords fire in text fields by default, so this includes undo while typing.
-- **Single keys behind an [off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#single-key-shortcuts-need-an-off-switch).** When a user turns off single-key shortcuts, `Space` and the arrow keys still don't scroll, and `/` still doesn't open Firefox's quick find.
-- **Focus.** A disabled `Tab` hotkey keeps focus from moving off buttons and links.
-
-If you set `'always'` in shared defaults, set `preventDefault: true` on hotkeys like these, so the browser takes over while they're off.
+- **Clipboard and editing chords.** `Mod+C`, `Mod+A`, and `Mod+Z` enabled only while canvas cells are selected would block native copy and undo in text inputs if `'always'` were set.
+- **Single-key shortcuts.** Shortcuts behind an accessibility off switch would keep blocking `Space`, arrow keys, or `/` when turned off.
+- **`Tab` hotkeys.** Disabling them would still trap focus.

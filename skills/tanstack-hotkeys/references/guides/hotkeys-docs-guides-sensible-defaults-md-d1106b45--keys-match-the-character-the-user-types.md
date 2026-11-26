@@ -1,80 +1,64 @@
 # Sensible Defaults — Keys match the character the user types
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Keys match the character the user types
 
-A logical binding such as `Mod+S` or `?` matches `event.key`, the character the key produces on the active keyboard layout. A user on Dvorak, Colemak, or AZERTY presses the key labeled S to trigger `Mod+S`, wherever that key sits on their keyboard. Matching the key's position (`event.code`) instead would make `Mod+Z` fire on the AZERTY key labeled W, and on Dvorak would turn the key labeled X into a different shortcut.
+Logical bindings like `Mod+S` or `?` match `event.key`, which is the character produced on the user's active keyboard layout. Matching is case-insensitive, so `S` and `s` are identical. A user on Dvorak, Colemak, or AZERTY presses the key labeled `S` to trigger `Mod+S`, wherever it sits physically.
 
-`event.key` is not always useful, so the matcher falls back to the key's conventional position when the character cannot identify the shortcut:
+### When matching falls back to physical position
 
-- **Non-Latin layouts.** On a Russian layout, the S position types `ы`. `Mod+S` still matches there, so shortcuts work without switching layouts.
-- **macOS Option.** Option changes the character, so Option+S types `ß`. `Alt+S` still matches. It follows the letter printed on the key: on a French AZERTY Mac, `Alt+A` fires on the key labeled A, which sits in the US Q position. The matcher reads that letter from `event.keyCode`, and falls back to the key's position when `keyCode` names no letter. Option can also type an ASCII symbol on a letter key, such as `@` for German Option+L, and `Alt+L` still matches.
-- **Dead keys and the digit row.** A dead key reports `Dead`, and AZERTY's digit row types `&` and `é` for `1` and `2`. The key's position resolves the shortcut, so `Mod+1` works on AZERTY. The exception is `-`, `+`, and `=` typed with Control alone, or Command alone on macOS, because those presses zoom the page. AZERTY types `-` on the 6 key, so Ctrl+- zooms out instead of firing `Mod+6`, and Ctrl+Shift+6 still fires `Mod+6`. A few layouts type no digit there with Shift either, such as Thai on the 3 key and Programmer Dvorak on the 6 and 9 keys. To keep that shortcut, also bind the key's position, such as `Mod+[Digit3]`.
-- **Symbols typed with Shift.** Shift+1 types `!` on a US layout, and `Shift+1` still matches.
+`event.key` doesn't always tell you which key was pressed, so the matcher falls back to the key's position (`event.code` or keycap identity) in four cases:
 
-Otherwise, the character the key reports wins, wherever the key sits:
+- **Non-Latin layouts.** On a Russian layout, the `S` key types `ы`. `Mod+S` still matches so shortcuts work without switching layouts.
+- **macOS `Option`.** Option changes characters (`Option+S` types `ß`, German `Option+L` types `@`). `Alt+S` and `Alt+L` still match based on the letter printed on the key (`event.keyCode`, falling back to position when `keyCode` isn't a letter). On a French AZERTY Mac, `Alt+A` fires on the key labeled `A` (the US `Q` position).
+- **Dead keys and the digit row.** Dead keys report `'Dead'`, and layouts like AZERTY type `&` and `é` on the unshifted digit row. Position fallback keeps `Mod+1` working.
+  - *Zoom shortcut exception.* When a digit key types `-`, `+`, or `=` (such as `-` on AZERTY's `6` key), pressing `Control` (or `Command` on macOS) with it lets the browser zoom instead of firing `Mod+6`. `Ctrl+Shift+6` still fires `Mod+6`.
+  - *Rare layouts without shifted digits.* Thai (`3` key) and Programmer Dvorak (`6` and `9` keys) don't type digits even with Shift. Add a physical fallback like `Mod+[Digit3]` if you need those keys everywhere.
+- **Symbols typed with Shift on digits.** `Shift+1` types `!` on a US layout, and `Shift+1` still matches.
+- **`Shift` with a US punctuation key.** `Shift+-` means the `_` that US `Shift+-` types, and `Shift+/` means `?`, wherever the layout puts them. On German QWERTZ, `Shift+-` fires on the key that types `_`, and `Shift+ß` (which types `?`) fires `Shift+/`, not `Shift+-`. Other symbols typed with `Shift` on a punctuation key, such as UK `Shift+'` typing `@`, keep the key's position.
+- **Greek and Hebrew Q key.** Greek types `;` and Hebrew types `/` on the Q key. `Mod+Q` still fires there when the browser's legacy `keyCode` names Q: on Windows, and for Hebrew in Chromium and Firefox on Linux. Greek `Ctrl+Q` in Chromium on Linux reports the code of `;`, so it fires `Mod+;` and not `Mod+Q`. To catch it there too, also register `Mod+[KeyQ]` with the same callback. On a US keyboard, the physical binding then fires instead of `Mod+Q`, not with it. On AZERTY, `[KeyQ]` is the key labeled `A`, so add it only where Greek users need it.
 
-- Outside the digit row, ASCII letters never fall back. ASCII symbols fall back only on the digit row, with Shift, or when macOS Option typed them on a letter key. On AZERTY, the key in the US `/` position types `+`, so Cmd++ zooms the page instead of firing `Mod+/`. On Dvorak, the key that types `'` does not fire `Q`.
-- Latin letters such as `ü`, `ö`, and `ø` match only themselves when typed on their own. With Control or Command held on a punctuation key they fall back, so German Cmd+ü still fires `Mod+[` (German types `[` with Option).
-- On Windows, Control+Alt works like AltGr. On a layout with AltGr, browsers report Left Ctrl + Left Alt as AltGr, so a character it types matches only itself. German Ctrl+Alt+E types `€` and fires `€`, not `Control+Alt+E`. Polish Ctrl+Alt+A types `ą` and does not fire `Control+Alt+A`. Avoid `Control+Alt` with letters, digits, and symbols on Windows when users type in other languages.
-- Named keys never fall back. With NumLock off, the numpad's 1 key reports `End`, so it fires `End` and not `1`. Numpad 5 has no navigation key, so with NumLock off it fires no digit, even in Firefox, which reports it as `Unidentified`.
+### When the reported character wins (and layout quirks)
 
-When one key press could match several registrations on the same target, an exact match takes priority over a fallback.
+Outside the fallbacks above, the character the key types wins even if that key sits in a different spot than on US QWERTY:
 
-A symbol that needs Shift on some layouts, such as `/` on German QWERTZ (Shift+7), matches when typed on its own. With Command held, macOS browsers report the unshifted character instead (`7`), so `Mod+/` can't match there. Register the per-layout combination as well, such as `Mod+Shift+7`.
-
-The same report affects US keyboards. Cmd+Shift+/ arrives as `/` with Shift held, not as `?`. Shift is then a modifier of its own, so `Mod+/` does not fire for it, and `Mod+?` cannot match. Write the Shift the user presses: `Mod+Shift+/` for Cmd+?, and `Mod+Shift+=` next to `Mod+=` for zooming in with Cmd++. These bindings also fire on Windows and Linux, where the browser reports `?` and `+`. On a layout that types `/` with Shift, such as German QWERTZ, the same press is both: Ctrl+Shift+7 fires `Mod+Shift+/` when that is registered, and `Mod+/` otherwise. The digit row is the exception: Cmd+Shift+1 still fires `Mod+1`, because a French AZERTY Mac, which types digits with Shift, sends the same event.
-
-Letters match without regard to case: `S` and `s` are the same binding.
-
-Turkish dotless `ı` and dotted `İ` are letters of their own, not other cases of `I` and `i`. A binding for `ı` fires only on the key that types `ı`, and a binding for `İ` only on the key that types `İ`. `I` fires on the key that types `i`, and also on the key that types `ı`, as in native Windows apps, where that key is the I key. An `ı` binding takes priority there. The recorder records `ı` for the key that types it, and labels show `ı`.
+- **Letters and non-digit symbols.** Outside the digit row, ASCII letters never fall back. ASCII symbols fall back only with `Shift` on a punctuation key, or when macOS `Option` typed them on a letter key. On AZERTY, the key in the US `/` position types `+`, so `Cmd++` zooms instead of firing `Mod+/`, and `Shift+,` types `?`, which fires `Shift+/` and not `Shift+M`. On Dvorak, typing `'` doesn't fire `Q`.
+- **Dead keys pressed alone.** A dead key falls back to its position only on a letter key, on the digit row, or where US International puts its accent (`'` and `` ` ``). Swiss German `^` on the US `=` key doesn't fire `=`. With `Control`, `Alt` or `Command` held, a dead key keeps its position.
+- **Accented Latin letters (`ü`, `ö`, `ø`).** Match only themselves when pressed alone, but fall back on punctuation keys when held with `Control` or `Command`. German `Cmd+ü`, for example, still triggers `Mod+[`.
+- **Turkish `ı` and `İ`.** Treated as distinct letters, not case variants of `I` and `i`. `ı` and `İ` match only themselves. `I` matches `i` and `I`, and also falls back on `ı`, with an explicit `ı` binding taking priority.
+- **macOS `Cmd+Shift+symbol`.** With `Command` held, macOS browsers report the unshifted key (`/` instead of `?`), so `Mod+?` can't match there and `Mod+/` won't match because `Shift` is held. Bind the Shift form instead: `Mod+Shift+/` for `Cmd+?`, and `Mod+Shift+=` alongside `Mod+=` for zoom in. On German QWERTZ, symbols typed with `Shift` (such as `/` on `Shift+7`) also report the unshifted character (`7`) with `Command` on macOS, so register `Mod+Shift+7` as well. On Windows and Linux, `Ctrl+Shift+7` on QWERTZ fires `Mod+Shift+/` when registered, and `Mod+/` otherwise. The digit row is exempt so AZERTY Mac `Cmd+Shift+1` still fires `Mod+1`.
+- **Named keys and numpad.** Named keys never fall back. With NumLock off, Numpad `1` reports `End` and triggers `End` rather than `1`, and Numpad `5` fires no digit even in Firefox (`Unidentified`).
+- **Priority.** The active scope decides first: when chords in two scopes on the same target match one press, the nested or most recently activated scope handles it, even if the other scope's binding matches more exactly. Within that scope, when one press could match both an exact character binding and a fallback on the same target, the exact match wins. When a logical and a physical binding on the same target and phase both match exactly, such as `Enter` and `[NumpadEnter]` on Numpad Enter, the physical one wins.
 
 ### Match a key's position instead
 
-When a shortcut should follow a position rather than a character, such as `W`/`A`/`S`/`D` movement in a game, use a physical binding. Physical bindings match `event.code` exactly and ignore the layout:
+When a shortcut should follow physical keyboard geometry instead of characters, such as `W`, `A`, `S`, `D` game movement, use a physical binding. Physical bindings match `event.code` directly and ignore layout:
 
 | Binding | Matches |
 | --- | --- |
-| `Mod+S` or `{ key: 'S', mod: true }` | The character S (`event.key`), with the fallbacks above |
-| `Mod+[KeyS]` or `{ code: 'KeyS', mod: true }` | The key in the S position on a US layout (`event.code`) |
-| `Enter` | Either Enter key, including the numpad's |
-| `[Enter]` or `[NumpadEnter]` | Only that Enter key |
+| `Mod+S` or `{ key: 'S', mod: true }` | The character `S` (`event.key`), with the fallbacks above |
+| `Mod+[KeyS]` or `{ code: 'KeyS', mod: true }` | The physical `S` key on a US layout (`event.code`) |
+| `Enter` | Either Enter key, including the numpad's, unless `[NumpadEnter]` is also registered on the same target |
+| `[Enter]` or `[NumpadEnter]` | Only that specific Enter key |
 
-On a layout where the `KeyQ` position types `a`, `A` follows the character and `[KeyQ]` follows the position.
-
-- In strings, every physical code goes in brackets, including codes that share a name with a logical key, such as `[Enter]` and `[F13]`. Codes are type-checked and autocomplete in your editor.
-- In objects, use the `code` field for a physical binding and `key` for a logical one. A binding has one or the other, never both, and `key` never takes brackets.
-- In a chord's callback, `context.parsedChord.code` is set only for physical bindings. The same goes for each step in a sequence's `context.parsedSequence`. Check `code !== undefined` before reading it.
-- Labels show physical bindings without brackets, so `Mod+[KeyS]` displays as `⌘ S` on macOS. The stored binding keeps its brackets. Your framework's label primitive, such as `useFormatForDisplay`, labels a position with the character it types on the user's keyboard. That works only in Chromium browsers, such as Chrome and Edge, which report the layout. In Firefox and Safari, the label is the key's US character. Your framework's Formatting & Display guide has the details.
-
-The [hotkey recorder](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#recording-captures-what-the-user-pressed) records a physical binding for a press that has no portable name, such as Shift+/. Set `recordBy: 'code'` to record one for every key.
+- **String syntax.** Wrap every physical code in brackets, including keys that share a logical name like `[Enter]` and `[F13]`. Editor autocomplete and type checking apply to all codes.
+- **Object syntax.** Use `code` for physical bindings and `key` for logical ones. Never pass both, and never put brackets inside `key`.
+- **Callback context.** `context.parsedChord.code` (and `step.code` in sequences) is only defined for physical bindings. Check `code !== undefined` before reading it.
+- **Display labels.** Brackets are stripped in UI labels, so `Mod+[KeyS]` displays as `⌘ S` on macOS. In Chromium browsers (Chrome and Edge), your adapter's label formatter swaps physical keys for the character printed on the user's actual layout. Firefox and Safari fall back to the US label.
 
 ### Type keys from other keyboard layouts
 
-Hotkey strings type-check against the keys of a US QWERTY keyboard. An app that targets other layouts can register them, so TypeScript also accepts keys such as `Ö` or `§`. Registering changes types only. Matching works the same with or without it. Most apps don't need it, because A to Z, 0 to 9, and US punctuation also match on other layouts, as described above. The Keyboard Layouts guide for your framework shows how to register layouts and when to.
+By default, hotkey strings type-check against US QWERTY keys. Most apps never need to change this, because A to Z, 0 to 9, and common US punctuation already match across international layouts at runtime.
 
-Each set lists what the layout's keys type without a modifier and with Shift, other than A to Z and 0 to 9. A set includes only characters that Windows, macOS, and Linux all type there, checked against the Windows layouts in Unicode CLDR, the macOS layouts, and the Linux xkb layouts. Dead keys and characters typed with AltGr or Option are left out. Each set's documentation lists the letters its layout types with Shift, which need `Shift+` in the hotkey.
+To type-check layout-specific keys such as `Ö`, `ß`, or `§`, register those layout sets through module augmentation (see your framework's Keyboard Layouts guide). Registering sets changes types only. Matching behavior and bundle size stay identical.
 
-| Set | Layouts |
-| --- | --- |
-| `UsKeys` | US QWERTY, the default |
-| `UkKeys` | UK (British) |
-| `GermanKeys`, `AustrianKeys` | German and Austrian QWERTZ |
-| `SwissGermanKeys`, `SwissFrenchKeys` | Swiss German and Swiss French |
-| `FrenchKeys`, `BelgianKeys` | French and Belgian AZERTY |
-| `CanadianFrenchKeys` | Canadian French |
-| `SpanishKeys`, `LatinAmericanKeys` | Spanish (Spain) and Latin American |
-| `PortugueseKeys`, `BrazilianKeys` | Portuguese (Portugal) and Brazilian ABNT2 |
-| `ItalianKeys` | Italian |
-| `DanishKeys`, `NorwegianKeys` | Danish and Norwegian |
-| `SwedishKeys`, `FinnishKeys` | Swedish and Finnish |
-| `IcelandicKeys` | Icelandic |
-| `CzechKeys`, `SlovakKeys`, `HungarianKeys` | Czech, Slovak, and Hungarian QWERTZ |
-| `CroatianKeys`, `SlovenianKeys`, `SerbianLatinKeys` | Croatian, Slovenian, and Serbian (Latin) |
-| `EstonianKeys`, `LithuanianKeys` | Estonian and Lithuanian |
-| `TurkishKeys` | Turkish Q |
-| `RomanianKeys` | Romanian (standard) |
-| `GreekKeys`, `RussianKeys`, `UkrainianKeys`, `BulgarianKeys`, `HebrewKeys` | Greek, Russian, Ukrainian, Bulgarian (BDS), and Hebrew |
+Each set covers layout-specific keys and punctuation typed unshifted or with `Shift` across Windows, macOS, and Linux, omitting dead keys and `AltGr` or `Option` characters. Letters typed with `Shift` require `Shift+` in the hotkey.
 
-Polish and Latvian layouts type the same keys as US QWERTY without AltGr, and most Dutch users type on US International, so they need no set.
+- **Americas.** `UsKeys`, `BrazilianKeys`, `LatinAmericanKeys`, `CanadianFrenchKeys`
+- **Western Europe.** `UkKeys`, `GermanKeys`, `AustrianKeys`, `SwissGermanKeys`, `SwissFrenchKeys`, `FrenchKeys`, `BelgianKeys`, `SpanishKeys`, `PortugueseKeys`, `ItalianKeys`
+- **Nordic.** `DanishKeys`, `NorwegianKeys`, `SwedishKeys`, `FinnishKeys`, `IcelandicKeys`
+- **Central and Eastern Europe.** `CzechKeys`, `SlovakKeys`, `HungarianKeys`, `CroatianKeys`, `SlovenianKeys`, `SerbianLatinKeys`, `EstonianKeys`, `LithuanianKeys`, `RomanianKeys`, `TurkishKeys`
+- **Non-Latin.** `GreekKeys`, `RussianKeys`, `UkrainianKeys`, `BulgarianKeys`, `HebrewKeys`
+
+Polish and Latvian share US QWERTY base keys without `AltGr`, and most Dutch users use US International, so they don't need a separate set.

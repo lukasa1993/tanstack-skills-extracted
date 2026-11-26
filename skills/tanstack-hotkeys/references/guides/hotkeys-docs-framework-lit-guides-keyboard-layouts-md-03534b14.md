@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-keyboard-layouts-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -63,10 +63,33 @@ search() {}
 - Letters match Shift exactly. A letter that your layout types with Shift, such as Turkish `İ` or Swiss German `È`, needs Shift in the hotkey: `Shift+İ`. Symbols typed with Shift don't: German types `§` with Shift+3, and `§` matches it.
 - The recorder records whatever the user presses, which can be a key outside your registered sets.
 
-## Choose the sets
+## Available key sets
 
-There are 26 sets, which cover 33 layouts, such as `UkKeys`, `FrenchKeys`, `SwedishKeys`, and `RussianKeys`. Layouts that type the same keys share a set under two names, such as `AustrianKeys` and `GermanKeys`. [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) lists every set and how each one is built.
+26 exported sets cover 33 layouts. Identical layouts share aliases, such as `AustrianKeys` and `GermanKeys`. Each set includes characters typed unshifted or with `Shift` across Windows, macOS, and Linux, excluding dead keys and `AltGr` or `Option` characters:
+
+| Set | Layouts |
+| --- | --- |
+| `UsKeys` | US QWERTY (default) |
+| `UkKeys` | UK (British) |
+| `GermanKeys`, `AustrianKeys` | German and Austrian QWERTZ |
+| `SwissGermanKeys`, `SwissFrenchKeys` | Swiss German and Swiss French |
+| `FrenchKeys`, `BelgianKeys` | French and Belgian AZERTY |
+| `CanadianFrenchKeys` | Canadian French |
+| `SpanishKeys`, `LatinAmericanKeys` | Spanish (Spain) and Latin American |
+| `PortugueseKeys`, `BrazilianKeys` | Portuguese (Portugal) and Brazilian ABNT2 |
+| `ItalianKeys` | Italian |
+| `DanishKeys`, `NorwegianKeys` | Danish and Norwegian |
+| `SwedishKeys`, `FinnishKeys` | Swedish and Finnish |
+| `IcelandicKeys` | Icelandic |
+| `CzechKeys`, `SlovakKeys`, `HungarianKeys` | Czech, Slovak, and Hungarian QWERTZ |
+| `CroatianKeys`, `SlovenianKeys`, `SerbianLatinKeys` | Croatian, Slovenian, and Serbian (Latin) |
+| `EstonianKeys`, `LithuanianKeys` | Estonian and Lithuanian |
+| `TurkishKeys` | Turkish Q |
+| `RomanianKeys` | Romanian (standard) |
+| `GreekKeys`, `RussianKeys`, `UkrainianKeys`, `BulgarianKeys`, `HebrewKeys` | Greek, Russian, Ukrainian, Bulgarian (BDS), and Hebrew |
+
+Polish and Latvian share US QWERTY base keys without `AltGr`, and most Dutch users use US International, so they don't need separate sets.
 
 ## Example
 
-The [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/lit/keyboard-layouts) registers German keys and shows which hotkeys fire on a German keyboard.
+The [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/lit/keyboard-layouts) registers German keys and shows which hotkeys fire on a German keyboard.

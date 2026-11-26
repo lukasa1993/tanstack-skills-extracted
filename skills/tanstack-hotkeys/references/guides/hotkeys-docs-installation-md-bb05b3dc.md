@@ -2,13 +2,13 @@
 
 <a id="source-hotkeys-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
 Install the adapter for your framework with your preferred package manager:
 
-<!-- ::start:tabs variant="package-managers" -->
+<!-- ::start:tabs variant="package-manager" -->
 
 alpine: @tanstack/alpine-hotkeys
 angular: @tanstack/angular-hotkeys
@@ -23,78 +23,72 @@ vue: @tanstack/vue-hotkeys
 
 <!-- ::end:tabs -->
 
-Each framework package re-exports everything from the core `@tanstack/hotkeys` package, so you don't need to install the core package separately.
+Every framework adapter re-exports the core `@tanstack/hotkeys` package, so you don't need to install both.
 
 > [!NOTE]
-> If you are not using a framework, you can install the core `@tanstack/hotkeys` package directly for use with vanilla JavaScript.
+> Not using a framework? Install `@tanstack/hotkeys` directly for vanilla JavaScript or TypeScript.
 
 <!-- ::start:framework -->
 
 # React
 
-Use React 18 or newer. The hooks and `HotkeysProvider` are client components, so a server component such as a Next.js `app/layout.tsx` can render `HotkeysProvider` directly. To pass `appHotkeys` from a server component, render `AppHotkeysProvider` instead. See [App hotkeys with Server Components](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md).
+Requires React 18 or newer. `useHotkey` is a client hook and `HotkeysProvider` is a client component, so server components like Next.js `app/layout.tsx` can render `HotkeysProvider` directly. To pass `appHotkeys` from a Server Component, use `AppHotkeysProvider` instead. See [App hotkeys with Server Components](./hotkeys-docs-framework-react-guides-ssr-md-35086cce.md#source-hotkeys-docs-framework-react-guides-ssr-md).
 
-Start with the [Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md) guide. If you want the integrated devtools panel, also install:
+Start with the [React Quick Start](./hotkeys-docs-framework-react-quick-start-md-56a91190.md#source-hotkeys-docs-framework-react-quick-start-md). To add the devtools panel, install:
 
 # Preact
 
-Use Preact 10.5.2 or newer. TypeScript with `"moduleResolution": "bundler"` needs Preact 10.7.2 or newer.
+Requires Preact 10.5.2 or newer (10.7.2 or newer when using TypeScript `"moduleResolution": "bundler"`).
 
-Start with the [Quick Start](./hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md#source-hotkeys-docs-framework-preact-quick-start-md) guide and the Preact-specific [guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+Start with the [Preact Quick Start](./hotkeys-docs-framework-preact-quick-start-md-9cac7afa.md#source-hotkeys-docs-framework-preact-quick-start-md) and [Preact guides](./hotkeys-docs-framework-preact-guides-hotkeys-md-c4606a30.md#source-hotkeys-docs-framework-preact-guides-hotkeys-md). To add the devtools panel, install:
 
 # Solid
 
-Use Solid 1.7 or newer within version 1. The devtools panel needs Solid 1.9.15 or newer.
+Requires Solid 2 (Node 22.12 or newer) for `@tanstack/solid-hotkeys` 0.26 and newer, and `@tanstack/solid-hotkeys-devtools` 0.14 and newer. For Solid 1 (1.7 or newer), install `@tanstack/solid-hotkeys@0.25` and `@tanstack/solid-hotkeys-devtools@0.13` (for Solid 1.9.15 or newer).
 
-Start with the [Quick Start](./hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md#source-hotkeys-docs-framework-solid-quick-start-md) guide and the Solid-specific [guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+Start with the [Solid Quick Start](./hotkeys-docs-framework-solid-quick-start-md-cfbf152e.md#source-hotkeys-docs-framework-solid-quick-start-md) and [Solid guides](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md). To add the devtools panel, install:
 
 # Angular
 
-Use Angular 19 or newer.
+Requires Angular 19 or newer (21 or newer for the integrated devtools panel).
 
-Start with the [Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md) guide and the Angular-specific [guides](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md).
-
-The integrated devtools panel requires Angular 21 or newer. To use it, also install:
+Start with the [Angular Quick Start](./hotkeys-docs-framework-angular-quick-start-md-4845adfe.md#source-hotkeys-docs-framework-angular-quick-start-md) and [Angular guides](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#source-hotkeys-docs-framework-angular-guides-hotkeys-md). To add the devtools panel, install:
 
 # Vue
 
-Use Vue 3.3 or newer.
+Requires Vue 3.3 or newer.
 
-Start with the [Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md) guide and the Vue-specific [guides](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md).
-
-If you want the Vue devtools panel component, also install:
+Start with the [Vue Quick Start](./hotkeys-docs-framework-vue-quick-start-md-468563f0.md#source-hotkeys-docs-framework-vue-quick-start-md) and [Vue guides](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md). To add the devtools panel, install:
 
 # Svelte
 
-Use Svelte 5.40 or newer within version 5.
+Requires Svelte 5.40 or newer within version 5.
 
-Start with the [Quick Start](./hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md#source-hotkeys-docs-framework-svelte-quick-start-md) guide and the Svelte-specific [guides](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md). If you want the integrated devtools panel, also install:
+Start with the [Svelte Quick Start](./hotkeys-docs-framework-svelte-quick-start-md-6ea8096f.md#source-hotkeys-docs-framework-svelte-quick-start-md) and [Svelte guides](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-md). To add the devtools panel, install:
 
 # Lit
 
-Use Lit 3 or newer.
+Requires Lit 3 or newer.
 
-Start with the [Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md) guide and the Lit-specific [guides](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md).
-
-Lit currently ships the hotkeys adapter only, so no dedicated Lit devtools package is required.
+Start with the [Lit Quick Start](./hotkeys-docs-framework-lit-quick-start-md-e9425977.md#source-hotkeys-docs-framework-lit-quick-start-md) and [Lit guides](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md). Lit ships the hotkeys adapter only and has no dedicated devtools package.
 
 # Alpine
 
-Use Alpine 3.13 or newer within version 3. Install `hotkeysPlugin` with `Alpine.plugin(hotkeysPlugin)` before `Alpine.start()`, so the adapter uses your Alpine instance.
+Requires Alpine 3.13 or newer within version 3. Register `hotkeysPlugin` with `Alpine.plugin(hotkeysPlugin)` before calling `Alpine.start()`.
 
-Start with the [Quick Start](./hotkeys-docs-framework-alpine-quick-start-md-3845b066.md#source-hotkeys-docs-framework-alpine-quick-start-md), then follow the [guides](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md). The package includes the hotkeys adapter; a dedicated Alpine devtools adapter is not provided.
+Start with the [Alpine Quick Start](./hotkeys-docs-framework-alpine-quick-start-md-3845b066.md#source-hotkeys-docs-framework-alpine-quick-start-md) and [Alpine guides](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#source-hotkeys-docs-framework-alpine-guides-hotkeys-md). Alpine ships the hotkeys adapter only and has no dedicated devtools package.
 
 # Ember
 
-Use Ember 6.8.3 or newer, except 6.9.0 and 6.10.0. The adapter works in Vite (Embroider) apps and in classic ember-cli apps that use ember-auto-import. Register hotkeys with imported template helpers in strict-mode `.gts` components. Pass the component as owner to state readers and recorders.
+Requires Ember 6.8.3 or newer (excluding 6.9.0 and 6.10.0), and works with Vite (Embroider) or classic `ember-cli` with `ember-auto-import`. Register hotkeys in strict-mode `.gts` components and pass the component as owner to state readers and recorders.
 
-Start with the [Quick Start](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#source-hotkeys-docs-framework-ember-quick-start-md), then follow the [guides](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md). The package includes the hotkeys adapter; a dedicated Ember devtools adapter is not provided.
+Start with the [Ember Quick Start](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#source-hotkeys-docs-framework-ember-quick-start-md) and [Ember guides](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md). Ember ships the hotkeys adapter only and has no dedicated devtools package.
 
 # Octane
 
-Use Octane 0.12 or newer, with compiler-enabled `.tsrx` components. The Octane adapter requires Node.js 22.22.2 or newer when used in Node.js.
+Requires Octane 0.12 or newer with compiler-enabled `.tsrx` components, and Node.js 22.22.2 or newer when running in Node.js.
 
-Start with the [Quick Start](./hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md#source-hotkeys-docs-framework-octane-quick-start-md), then follow the [guides](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#source-hotkeys-docs-framework-octane-guides-hotkeys-md). The package includes the hotkeys adapter; a dedicated Octane devtools adapter is not provided.
+Start with the [Octane Quick Start](./hotkeys-docs-framework-octane-quick-start-md-ecf7a027.md#source-hotkeys-docs-framework-octane-quick-start-md) and [Octane guides](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#source-hotkeys-docs-framework-octane-guides-hotkeys-md). Octane ships the hotkeys adapter only and has no dedicated devtools package.
 
 <!-- ::end:framework -->
 
@@ -118,26 +112,26 @@ svelte: @tanstack/svelte-hotkeys-devtools
 
 # React
 
-See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
+See [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) for setup instructions.
 
 # Preact
 
-See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
+See [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) for setup instructions.
 
 # Solid
 
-See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
+See [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) for setup instructions.
 
 # Angular
 
-See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
+See [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) for setup instructions.
 
 # Vue
 
-See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
+See [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) for setup instructions.
 
 # Svelte
 
-See the [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) documentation for setup details.
+See [Devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) for setup instructions.
 
 <!-- ::end:framework -->

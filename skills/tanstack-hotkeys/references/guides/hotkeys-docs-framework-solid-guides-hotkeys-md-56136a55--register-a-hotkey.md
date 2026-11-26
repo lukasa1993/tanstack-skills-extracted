@@ -1,10 +1,10 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register a hotkey
 
-Call `createHotkey` with a hotkey and a callback:
+Pass a hotkey and callback to `createHotkey`:
 
 ```tsx
 import { createHotkey } from '@tanstack/solid-hotkeys'
@@ -16,7 +16,7 @@ function Editor() {
 }
 ```
 
-The callback receives the `KeyboardEvent` and a context object:
+Callbacks receive the `KeyboardEvent` and a context object:
 
 ```tsx
 createHotkey('Mod+S', (event, context) => {
@@ -56,13 +56,13 @@ function Editor(props: EditorProps) {
 
 A plain options object is read once, so `{ enabled: !props.readOnly }` keeps the value from when the component ran. An object with getters, such as `{ get enabled() { return !props.readOnly } }`, follows changes like an accessor does.
 
-That lets you register a hotkey the user chose, such as one from the [hotkey recorder](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md#source-hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md). To let users change hotkeys across your app and save their choices, see [App Hotkeys](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md#source-hotkeys-docs-framework-solid-guides-app-hotkeys-md).
+This pattern wires up user-chosen shortcuts from the [hotkey recorder](./hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md-bc85dc89.md#source-hotkeys-docs-framework-solid-guides-custom-hotkey-recording-md) or centralized [App Hotkeys](./hotkeys-docs-framework-solid-guides-app-hotkeys-md-acd9069d.md#source-hotkeys-docs-framework-solid-guides-app-hotkeys-md).
 
 ### Optional hotkeys
 
-A hotkey of `undefined`, `null`, or `''` registers nothing, so a component can take an optional shortcut. When the hotkey changes to one of these values, its registration is removed. When it changes back to a hotkey, it registers again. Hints for no hotkey are hidden.
+Passing `undefined`, `null`, or `''` registers nothing, which works well for optional shortcut props. Switching to a falsy value unregisters the hotkey and hides any hints. Passing a valid hotkey again registers it again.
 
-To keep a hotkey registered, and listed in devtools and cheat sheets, but stop it from firing, set `enabled: false` instead.
+To keep the shortcut visible in devtools and cheat sheets while paused, leave the hotkey defined and pass `enabled: false` instead.
 
 ### Register after an `await`
 
@@ -87,25 +87,25 @@ function Editor() {
 }
 ```
 
-If you must create a hotkey later, capture `getOwner()` while the component is created and make the call inside `runWithOwner`. Skip the call if the component was already cleaned up.
+To create a hotkey later, capture `getOwner()` while the component is created and make the call inside `runWithOwner`. Skip the call if the component was already cleaned up.
 
 ### Write a chord as a string or an object
 
-Write most chords as strings. Your editor autocompletes them, and TypeScript rejects a string that isn't a valid chord:
+Most chords are written as strings, giving you editor autocomplete and compile-time validation:
 
 ```tsx
 createHotkey('Escape', () => close())
 createHotkey('Mod+S', () => save()) // Command+S on macOS, Control+S elsewhere
-createHotkey('Mod+Alt+Shift+K', () => openCommandLog()) // Modifiers in order: Mod or Control, Alt, Shift, Meta
-createHotkey('[KeyW]', () => moveUp()) // The W position, whatever the layout types there
+createHotkey('Mod+Alt+Shift+K', () => openCommandLog()) // Order: Mod or Control, Alt, Shift, Meta
+createHotkey('[KeyW]', () => moveUp()) // Physical W position, regardless of layout
 
-createHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod comes first
-createHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod is already Meta on macOS
+createHotkey('Shift+Mod+S', () => saveAs()) // Type error: Mod must come first
+createHotkey('Mod+Meta+S', () => saveAs()) // Type error: Mod already maps to Meta on macOS
 ```
 
-TypeScript accepts the printable keys of a US QWERTY keyboard. To bind a key that other layouts type, such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-solid-guides-keyboard-layouts-md-9cc5d7a6.md#source-hotkeys-docs-framework-solid-guides-keyboard-layouts-md).
+String bindings type-check against US QWERTY keys by default. To bind layout-specific keys such as `Ö` or `§`, register those layouts. See [Keyboard Layouts](./hotkeys-docs-framework-solid-guides-keyboard-layouts-md-9cc5d7a6.md#source-hotkeys-docs-framework-solid-guides-keyboard-layouts-md).
 
-Write a chord as a `RawHotkeyChord` object when you build it from data, such as a form with a checkbox for each modifier:
+When building bindings from UI state, such as modifier checkboxes, use a `RawHotkeyChord` object instead:
 
 ```tsx
 createHotkey({ key: 'S', mod: true, shift: true }, () => saveAs()) // Same as 'Mod+Shift+S'
@@ -117,10 +117,10 @@ createHotkey(
 )
 ```
 
-Sequence steps can be strings, objects, or a mix:
+Sequence steps can be strings, objects, or a mix of both:
 
 ```tsx
 createHotkey(['G', { key: 'H', shift: true }], () => goToHistory())
 ```
 
-The primitive registers every chord and sequence step as a string, so `context.hotkey` and devtools show `'Mod+Shift+S'` for the first object above. [Match a key's position instead](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) explains codes such as `[KeyW]`.
+Internally, TanStack Hotkeys normalizes objects to canonical strings, so `context.hotkey` and devtools report `'Mod+Shift+S'` for `{ key: 'S', mod: true, shift: true }`. See [Match a key's position instead](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for more on physical codes like `[KeyW]`.

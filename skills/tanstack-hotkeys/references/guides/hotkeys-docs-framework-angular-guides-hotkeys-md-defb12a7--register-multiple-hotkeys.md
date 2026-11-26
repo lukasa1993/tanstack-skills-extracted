@@ -1,10 +1,10 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register multiple hotkeys
 
-When a component has more than one hotkey, use `injectHotkeys`. It takes an array of definitions, each with a `hotkey`, a `callback`, and optional `options`:
+Use `injectHotkeys` to register an array of `{ hotkey, callback, options? }` entries in one call:
 
 ```ts
 import { Component } from '@angular/core'
@@ -18,17 +18,15 @@ export class EditorComponent {
   constructor() {
     injectHotkeys([
       { hotkey: 'Mod+S', callback: () => this.save() },
-      { hotkey: 'Mod+Z', callback: () => this.undo() },
-      { hotkey: 'Mod+Shift+Z', callback: () => this.redo() },
+      { hotkey: 'Mod+Enter', callback: () => this.publish() },
+      { hotkey: 'Mod+D', callback: () => this.duplicate() },
       { hotkey: ['G', 'G'], callback: () => this.scrollToTop(), options: { timeout: 500 } },
     ])
   }
 }
 ```
 
-Chords and sequences can share one array. Each definition's `options` are typed by its `hotkey`, as they are for `injectHotkey`.
-
-A callback in the array receives a `context` that can belong to either kind of hotkey. Check `context.kind` before reading `context.parsedChord`:
+Chords and sequences can share the same array, and each item's `options` are typed against its own `hotkey`. Inside the array, `context` can belong to either kind, so check `context.kind` before reading `context.parsedChord`:
 
 ```ts
 injectHotkeys([
@@ -43,7 +41,7 @@ injectHotkeys([
 
 ### Share options
 
-Pass options for every definition as the second argument. A definition's own options override them:
+Pass shared options as the second argument. Individual definitions override them:
 
 ```ts
 import { Component, ElementRef, viewChild } from '@angular/core'
@@ -71,7 +69,7 @@ export class RichTextEditorComponent {
 
 The shared `target` makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#hotkey-targets) explains targets. Passing the array as a function lets `enabled` follow the `canUndo` signal.
 
-Options merge in this order: provided defaults, then the shared options, then each definition's options.
+Options merge in three layers: defaults from the provider first, then the shared options, then per-item options.
 
 ### Build the list from data
 

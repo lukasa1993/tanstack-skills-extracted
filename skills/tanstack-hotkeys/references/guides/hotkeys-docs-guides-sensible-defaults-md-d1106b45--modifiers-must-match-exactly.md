@@ -1,18 +1,13 @@
 # Sensible Defaults — Modifiers must match exactly
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Modifiers must match exactly
 
-`Mod+S` does not fire for `Mod+Shift+S`, and `K` does not fire for `Shift+K`. Exact matching lets `Mod+Z` (undo) and `Mod+Shift+Z` (redo) coexist without one swallowing the other.
+`Mod+S` won't fire on `Mod+Shift+S`, and `K` won't fire on `Shift+K`. Exact matching keeps `Mod+Z` (undo) and `Mod+Shift+Z` (redo) from colliding.
 
-The exception is Shift that is needed to type a symbol. On a US layout, `?` is typed with Shift+/, so `?` matches without listing `Shift`. This applies to printable symbols, not letters, so `K` and `Shift+K` remain different bindings.
-
-The iOS on-screen keyboard can report Return as Shift+Enter while auto-capitalization is on, such as at the start of a sentence. If an `Enter` hotkey must fire there, such as in an editor that registers it with `ignoreInputs: false`, register `Shift+Enter` for the same action too.
-
-Every hotkey needs a key that isn't a modifier. TypeScript rejects modifier-only hotkey strings such as `Shift+Alt+Mod` or `[ShiftLeft]`, and strings with an unknown modifier such as `Ctl+K`. A hotkey that does either anyway, such as one from plain JavaScript, saved data, or a chord object like `{ key: 'Shift' }`, registers nothing and logs a console warning in development. To act while keys are held, use the held-key APIs instead.
-
-Two kinds of key events never match ordinary shortcuts:
-
-- **AltGr.** On Windows and Linux, AltGr types characters such as `@` and `€` on many layouts. A character it types matches a binding for that character, but never a `Control+Alt` shortcut, so typing an email address does not run a command. When AltGr+key types nothing new, such as AltGr+Home, or AltGr+F on a layout with nothing on that key, it does not fire `Home` or `F`. An ASCII letter or digit always counts as nothing new, because the event can't tell it apart from that AltGr+F. So on Lithuanian, which types digits with AltGr, AltGr+1 doesn't fire `1`, and the 1 key on its own does. Windows reports AltGr as Control+Alt, so there it fires `Control+Alt` shortcuts instead: AltGr+Home triggers `Control+Alt+Home`, as in native Windows apps.
-- **IME composition.** While the user composes text with an input method editor, such as for Japanese, Chinese, or Korean, no hotkey fires, because the editor uses those keys: Enter commits the text, Escape cancels it, and the arrow keys pick a candidate. This includes the Enter that Safari sends right after composition ends.
+- **Symbols typed with `Shift`.** Printable symbols like `?`, typed with `Shift+/` on US keyboards, match without listing `Shift+`. Letters always require explicit `Shift+` (`K` versus `Shift+K`).
+- **iOS auto-capitalization.** The iOS on-screen keyboard sometimes reports Return as `Shift+Enter` at the start of a sentence. If an `Enter` shortcut must work inside an editor (`ignoreInputs: false`), register `Shift+Enter` for it too.
+- **Modifier-only hotkeys are rejected.** Every hotkey needs a non-modifier key. TypeScript rejects strings like `Shift+Alt+Mod` or `Ctl+K`. Plain JS or saved strings log a dev warning and register nothing. Use the held-key APIs to react to modifiers alone.
+- **AltGr is treated as character input.** On Windows and Linux, `AltGr` types characters like `@` or `€`. Those match character bindings, never `Control+Alt` shortcuts, so typing an email doesn't trigger commands. On Windows, Left Ctrl + Left Alt acts as `AltGr` on layouts that have it, so avoid `Control+Alt` with letters, digits, and symbols when users type in other languages (German `Ctrl+Alt+E` types `€` and Polish `Ctrl+Alt+A` types `ą` instead of triggering `Control+Alt+E` or `Control+Alt+A`). When `AltGr+key` produces no new character (such as `AltGr+F`), it doesn't fire `F`. Because Windows reports `AltGr` as Control+Alt, `AltGr+Home` triggers `Control+Alt+Home` on Windows, matching native apps.
+- **IME composition pauses hotkeys.** While users compose text with an IME (Japanese, Chinese, Korean), all hotkeys pause. This includes the `Enter` Safari emits right after composition ends, so `Enter`, `Escape`, and arrow keys belong to the IME.

@@ -1,11 +1,11 @@
 # Sensible Defaults — Held keys reset when the window loses focus
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Held keys reset when the window loses focus
 
-Key state tracking marks a key as held on keydown and releases it on keyup. If the window loses focus while a key is down, such as when the user switches apps with Command+Tab, the browser never delivers the keyup. Held keys are therefore cleared when the window loses focus, and when the page is hidden, such as when the user switches tabs. A native context menu also takes the keyup, so opening one, with the ContextMenu key or a right-click, clears every held key except the modifiers the event still reports. A context menu the page shows itself, by calling `preventDefault()` on the `contextmenu` event, keeps focus and clears nothing.
+Key state tracking updates on `keydown` and `keyup`, with automatic safeguards against stuck keys:
 
-On macOS, the system can also swallow the keyup of a key pressed with Command. Releasing Command on macOS clears any other keys still marked as held, so no key is stuck. Other modifiers, and Command on other platforms, keep their keyups, so a key held while Shift, Control, or Alt is tapped stays held.
-
-Some system shortcuts swallow a modifier's own keyup without taking focus from the page, such as Command+Shift+4 for a screenshot on macOS, or the DevTools inspect shortcut. Every keyboard and mouse event reports which modifiers are down, so the next key press, mouse movement, or click releases any modifier it reports as up. Only real user input counts: events that page code dispatches report no modifiers, so the tracker ignores them for this. Until such an event arrives, the modifier stays held, because nothing distinguishes a missed release from a long hold.
+- **Focus loss and context menus.** Switching apps (`Command+Tab`), hiding the tab, or opening a native context menu clears held keys. A custom menu calling `preventDefault()` on `contextmenu` keeps state.
+- **macOS `Command` quirk.** Releasing `Command` on macOS clears other held keys because macOS swallows keyups for keys released while `Command` is held. Other modifiers and platforms keep their keyups.
+- **Swallowed modifier keyups.** Shortcuts like macOS screenshot (`Cmd+Shift+4`) steal the modifier `keyup` without blurring the window. Held modifiers resync on the next real user keyboard or mouse event.

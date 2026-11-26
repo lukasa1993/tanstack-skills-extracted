@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -50,14 +50,14 @@ class MyEditor extends LitElement {
     saveDocument()
   }
 
-  @hotkey('Mod+Z')
-  undo() {
-    undoAction()
+  @hotkey('Mod+Enter')
+  publish() {
+    publishDocument()
   }
 
-  @hotkey('Mod+Shift+Z')
-  redo() {
-    redoAction()
+  @hotkey('Mod+D')
+  duplicate() {
+    duplicateDocument()
   }
 }
 ```
@@ -124,7 +124,7 @@ class SaveButton extends LitElement {
 
 The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. `HotkeyChord` checks the string, so a typo in the binding is a type error. Use `Hotkey` for a value that can also be a sequence.
 
-If your app renders on the server with Lit SSR, set the controller's `platform` from the request, so the server's HTML shows the user's platform. See [Format labels in server-rendered apps](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md).
+If your app renders on the server with Lit SSR, set the controller's `platform` from the request, so the server's HTML shows the user's platform. See [SSR & Hydration](./hotkeys-docs-framework-lit-guides-ssr-md-92c130bb.md#source-hotkeys-docs-framework-lit-guides-ssr-md).
 
 ## Hotkeys follow your elements
 
@@ -262,22 +262,28 @@ class ConfirmDialog extends LitElement {
 
 While the dialog is connected, `Enter` and `Escape` confirm and cancel it, and every hotkey outside the dialog is suspended. When the dialog disconnects, they work again.
 
-`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released.
+`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. [Activate a scope](./hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md#source-hotkeys-docs-framework-lit-guides-hotkey-manager-md) covers scopes for UI that Lit doesn't render.
 
 ## Next steps
 
-Learn more about the basics:
+Core guides:
 
 - [Hotkeys](./hotkeys-docs-framework-lit-guides-hotkeys-md-44cc9637.md#source-hotkeys-docs-framework-lit-guides-hotkeys-md): chords and sequences, options, and element hotkeys
 - [Sequences](./hotkeys-docs-framework-lit-guides-sequences-md-8de222df.md#source-hotkeys-docs-framework-lit-guides-sequences-md): Vim-style multi-key shortcuts
 - [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md): what hotkeys do without options, and keyboard layouts
 - [Formatting & Display](./hotkeys-docs-framework-lit-guides-formatting-display-md-6f8642f5.md#source-hotkeys-docs-framework-lit-guides-formatting-display-md): labels and keycaps for every platform
-- [Held Key State Helpers](./hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md#source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md): show which keys are held
-- [Hotkey Hints](./hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md#source-hotkeys-docs-framework-lit-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
 
-As your app grows:
+App Hotkeys & UI:
 
 - [App Hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md): declare hotkeys in one place and let users change them
-- [Cheat Sheet UI Helpers](./hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md#source-hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
-- [Custom Hotkey Recording](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md#source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md): record the shortcut a user presses
-- [Hotkey Manager](./hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md#source-hotkeys-docs-framework-lit-guides-hotkey-manager-md): register and inspect hotkeys outside components
+- [Hotkey Recording](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md#source-hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md): record the shortcut a user presses
+- [Cheat Sheets](./hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md#source-hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md): list your shortcuts in a help dialog
+- [Hotkey Hints](./hotkeys-docs-framework-lit-guides-hotkey-hints-md-581ca99a.md#source-hotkeys-docs-framework-lit-guides-hotkey-hints-md): show a button's shortcut while the user holds its modifiers
+- [Held Keys](./hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md#source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md): show which keys are held
+
+Advanced & Integration:
+
+- [SSR & Hydration](./hotkeys-docs-framework-lit-guides-ssr-md-92c130bb.md#source-hotkeys-docs-framework-lit-guides-ssr-md): server-render platform labels with Lit SSR
+- [Keyboard Layouts](./hotkeys-docs-framework-lit-guides-keyboard-layouts-md-03534b14.md#source-hotkeys-docs-framework-lit-guides-keyboard-layouts-md): type-check keys from international layouts
+- [Testing](./hotkeys-docs-framework-lit-guides-testing-md-1e7f8a93.md#source-hotkeys-docs-framework-lit-guides-testing-md): reset singleton state and fix the target platform in unit tests
+- [Hotkey Manager](./hotkeys-docs-framework-lit-guides-hotkey-manager-md-506c8dcc.md#source-hotkeys-docs-framework-lit-guides-hotkey-manager-md): register and inspect hotkeys outside components, and activate scopes

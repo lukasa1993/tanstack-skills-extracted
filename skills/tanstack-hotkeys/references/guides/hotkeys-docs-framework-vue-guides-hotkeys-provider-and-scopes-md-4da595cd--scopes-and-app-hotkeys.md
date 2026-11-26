@@ -1,6 +1,6 @@
 # Hotkeys Provider And Scopes — Scopes and app hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Scopes and app hotkeys
 
@@ -14,8 +14,6 @@ export const appHotkeys = defineAppHotkeys({
 })
 ```
 
-App hotkeys without a declared scope use the provider's scope, like any other hotkey.
-
-The declared scope also drives conflict checks. `findConflicts` and `setCustomHotkey` let app hotkeys in different scopes share a hotkey, as `doc.save` and `comment.post` do above. An app hotkey in `'global'`, or with no declared scope, conflicts with every app hotkey that uses the same hotkey. Declare scopes on app hotkeys that are meant to share keys.
-
-`useAppHotkeyList` reports an app hotkey as `'suspended'` when it has enabled registrations but none of them is in an active scope.
+- Declarations without a `scope` use the provider's scope, like any other hotkey.
+- **Conflict detection.** `findConflicts` and `setCustomHotkey` let app hotkeys in different named scopes share a hotkey, as `doc.save` and `comment.post` do above. An app hotkey in `'global'` or with no declared scope conflicts with every app hotkey that uses the same hotkey, so declare `scope` on bindings meant to coexist.
+- [`useAppHotkeyList`](./hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md#source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md) reports an app hotkey as `'suspended'` when it has enabled registrations but none in an active scope.

@@ -2,11 +2,11 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
-This is an advanced guide. When you use TanStack Hotkeys with Svelte, you usually never need to use the hotkey manager yourself. `createHotkey`, `createHotkeys`, and their attachments register hotkeys with it, unregister them when the component or element goes away, apply provider defaults and scopes, and follow your state. Use the manager directly only for code that runs outside components, and in tests.
+This is an advanced guide. In Svelte components, the hotkey manager is rarely needed directly. `createHotkey`, `createHotkeys`, and their attachments register hotkeys with it, unregister them when the component or element goes away, apply provider defaults and scopes, and follow your state. Use the manager directly only for code that runs outside components.
 
 Every hotkey goes to one `HotkeyManager`, shared by the whole page. The manager attaches the keyboard listeners, matches key presses to hotkeys, tracks sequence progress, and decides which scopes are active. Get it with `getHotkeyManager()`:
 
@@ -30,7 +30,7 @@ handle.unregister() // Removes the hotkey
 
 A hotkey registered with the manager differs from one registered with `createHotkey`:
 
-- It stays registered until you call `unregister()`.
+- It stays registered until `unregister()` runs.
 - Provider defaults and scopes don't apply. It uses the built-in defaults and belongs to the `'global'` scope, unless you pass `scope`.
 - Its hotkey and options are plain values, not getters. To change options later, call `handle.setOptions`.
 - Its `target` can be an element, as well as `document` or `window`.
@@ -81,7 +81,7 @@ The store also updates each time a hotkey fires and each time a sequence advance
 
 ## Activate a scope
 
-In components, create scopes with `HotkeysProvider` or `setHotkeysContext`. See [HotkeysProvider and Scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md). For UI that Svelte doesn't render, such as a dialog from another library, activate the scope on the manager, and pass `scope` to the hotkeys that belong to it:
+In components, create scopes with `HotkeysProvider` or `setHotkeysContext`. See [HotkeysProvider & Scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md). For UI that Svelte doesn't render, such as a dialog from another library, activate the scope on the manager, and pass `scope` to the hotkeys that belong to it:
 
 ```ts
 const releaseScope = manager.activateScope('image-viewer', { exclusive: true })
@@ -144,55 +144,10 @@ document.addEventListener('keydown', (event) => {
 })
 ```
 
-The matcher tracks its own progress. `getProgress()` returns the number of steps matched so far, and `reset()` starts over. It doesn't skip text fields, prevent the browser's action, or check scopes, so handle those in your listener if you need them.
+The matcher tracks its own progress. `getProgress()` returns the number of steps matched so far, and `reset()` starts over. It doesn't skip text fields, prevent the browser's action, or check scopes, so handle those in your listener when needed.
 
-## Reset the manager in tests
+## Testing
 
-The manager lasts as long as the page, so a test environment keeps it between tests. Components that unmount unregister their hotkeys, but hotkeys registered with `manager.register` and scopes activated with `activateScope` stay. Reset the manager after each test:
+For resetting `HotkeyManager` and `KeyStateTracker` between tests and pinning the platform, see [Testing](./hotkeys-docs-framework-svelte-guides-testing-md-6ac89090.md#source-hotkeys-docs-framework-svelte-guides-testing-md).
 
-```svelte
-<!-- Editor.svelte -->
-<script lang="ts">
-  import { createHotkey } from '@tanstack/svelte-hotkeys'
-
-  let { onSave }: { onSave: () => void } = $props()
-
-  createHotkey('Mod+S', () => onSave(), { platform: 'mac' })
-</script>
-
-<textarea></textarea>
-```
-
-```ts
-// Editor.test.ts
-import { afterEach, expect, it, vi } from 'vitest'
-import { flushSync, mount, unmount } from 'svelte'
-import { HotkeyManager } from '@tanstack/svelte-hotkeys'
-import Editor from './Editor.svelte'
-
-afterEach(() => {
-  HotkeyManager.resetInstance()
-})
-
-it('saves with Mod+S', () => {
-  const save = vi.fn()
-  const editor = mount(Editor, {
-    target: document.body,
-    props: { onSave: save },
-  })
-
-  flushSync()
-  document.dispatchEvent(
-    new KeyboardEvent('keydown', { key: 's', metaKey: true, bubbles: true }),
-  )
-
-  expect(save).toHaveBeenCalledOnce()
-  unmount(editor)
-})
-```
-
-`resetInstance` removes every listener and registration, and the next `getHotkeyManager()` call creates a new manager. Held keys have their own tracker, so reset it with `KeyStateTracker.resetInstance()` in tests that read held keys.
-
-`platform: 'mac'` makes `Mod` mean Command, so the test passes on every operating system. To set it for every hotkey in a test, pass it in `HotkeysProvider` default options: `defaultOptions={{ hotkey: { platform: 'mac' } }}`.
-
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/418247d9f4397edebae80224f5cd88d3de71e337/docs/reference/classes/HotkeyManager.md) lists every method.
+See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/reference/classes/HotkeyManager.md) for the full method list.

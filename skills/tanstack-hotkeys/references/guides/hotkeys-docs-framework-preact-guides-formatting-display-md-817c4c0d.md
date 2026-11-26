@@ -2,37 +2,199 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
-## Choose a section
+Format hotkeys for display whenever they appear in buttons, menus, tooltips, cheat sheets, or settings screens. Store the raw hotkey string (such as `'Mod+S'`) and format it at render time. Labels are for humans, never for registering or storing.
 
-Read the overview or setup when it is a prerequisite, then the section needed for the task.
+`useFormatForDisplay` returns a formatter that adapts to the user's operating system (`⌘ S` on macOS, `Ctrl+S` elsewhere) and keyboard layout:
 
-- [Overview](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--overview.md) — 2 KiB
-- [Format a hotkey](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-a-hotkey.md) — 3 KiB
-- [Render individual keycaps](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--render-individual-keycaps.md) — 1 KiB
-- [Format sequences](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-sequences.md) — 1 KiB
-- [Choose symbols and separators](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--choose-symbols-and-separators.md) — 1 KiB
-- [Label physical keys for the user's keyboard](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--label-physical-keys-for-the-user-s-keyboard.md) — 3 KiB
-- [Format labels in server-rendered apps](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-labels-in-server-rendered-apps.md) — 9 KiB
-- [Format outside a component](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--format-outside-a-component.md) — 2 KiB
-- [Parse, compare, and store hotkeys](./hotkeys-docs-framework-preact-guides-formatting-display-md-817c4c0d--parse-compare-and-store-hotkeys.md) — 3 KiB
+| Where labels render | Extra setup |
+| --- | --- |
+| Browser-only (Vite SPA, client apps) | None |
+| Server-rendered then hydrated | Set `platform` on `HotkeysProvider` from the request ([SSR & Hydration](./hotkeys-docs-framework-preact-guides-ssr-md-41b38694.md#source-hotkeys-docs-framework-preact-guides-ssr-md)) |
+| Static or prerendered pages | Wrap labels in a client-only component ([Static pages](./hotkeys-docs-framework-preact-guides-ssr-md-41b38694.md#source-hotkeys-docs-framework-preact-guides-ssr-md)) |
 
-<!-- Original source anchors retained for inbound links. -->
-<a id="format-a-hotkey"></a>
-<a id="render-individual-keycaps"></a>
-<a id="format-sequences"></a>
-<a id="choose-symbols-and-separators"></a>
-<a id="label-physical-keys-for-the-users-keyboard"></a>
-<a id="supply-your-own-layout"></a>
-<a id="format-labels-in-server-rendered-apps"></a>
-<a id="fresh"></a>
-<a id="astro"></a>
-<a id="vite-server-rendering"></a>
-<a id="render-a-label-only-in-the-browser"></a>
-<a id="static-and-prerendered-pages"></a>
-<a id="development-warning"></a>
-<a id="format-outside-a-component"></a>
-<a id="parse-compare-and-store-hotkeys"></a>
+## Format a hotkey
+
+Call `useFormatForDisplay()` at the top of your component, then call the returned function wherever you render shortcuts:
+
+```tsx
+import { useFormatForDisplay } from '@tanstack/preact-hotkeys'
+
+function SaveButton() {
+  const formatForDisplay = useFormatForDisplay()
+
+  return (
+    <button>
+      Save <kbd>{formatForDisplay('Mod+S')}</kbd>
+    </button>
+  )
+}
+```
+
+The hook wires up two things automatically:
+
+- **Platform.** Reads the nearest `HotkeysProvider`, or detects from `navigator` if there isn't one.
+- **Keyboard layout.** For physical codes like `[KeyW]`, reads the user's keyboard layout in Chromium browsers.
+
+Call the returned `formatForDisplay` function anywhere in the component, including inside `.map()` loops and conditionals. Pass a second argument to override the platform or formatting for one call:
+
+```ts
+formatForDisplay('Mod+S', { platform: 'mac' }) // '⌘ S'
+formatForDisplay('Mod+[KeyS]', { platform: 'mac' }) // '⌘ S'
+formatForDisplay({ code: 'KeyS', mod: true }, { platform: 'windows' }) // 'Ctrl+S'
+formatForDisplay('Mod+[Digit2]', { platform: 'windows' }) // 'Ctrl+2'
+```
+
+How chords format:
+
+- **macOS.** Uses symbols joined with spaces in Control, Option, Shift, Command order (`Mod+Shift+S` displays as `⇧ ⌘ S`, while the underlying hotkey stays `Mod+Shift+S`).
+- **Windows and Linux.** Uses modifier names joined with `+` (`Ctrl+Shift+S`).
+- **Physical codes.** Strips brackets and shortens prefixes (`KeyS` to `S`, `Digit2` to `2`), keeping readable numpad, punctuation, and ISO or JIS keycap legends (`[IntlBackslash]` shows `\`, `[IntlRo]` shows `\`, `[IntlYen]` shows `¥`).
+- **Accepted inputs.** Accepts any chord, sequence, single key (`'Escape'`), or standalone modifier (`'Shift'`). For a raw key string from a `KeyboardEvent`, such as a held key outside the strict `Key` union, wrap it as `{ key }`.
+
+## Render individual keycaps
+
+Pass `parts: true` to receive an array of key strings instead of a joined label, which works well for styling individual `<kbd>` tags:
+
+```ts
+const saveHotkey = 'Mod+[KeyS]'
+const parts = formatForDisplay(saveHotkey, { platform: 'mac', parts: true })
+// ['⌘', 'S']
+```
+
+`parts: true` keeps literal `+` keys intact and ignores `separatorToken`. Note that passing a dynamic boolean for `parts` widens the return type to `string | string[]`.
+
+## Format sequences
+
+Pass a sequence array to format every step, separated by `sequenceSeparator` (a space by default):
+
+```ts
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac' }) // '⌘ K C'
+formatForDisplay(['G', 'G'], { sequenceSeparator: ' → ' }) // 'G → G'
+formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac', parts: true })
+// [['⌘', 'K'], ['C']], one array of keycaps per step
+```
+
+To display in-progress steps as the user types a sequence, see [Show sequences in your UI](./hotkeys-docs-framework-preact-guides-sequences-md-71b8fd79.md#source-hotkeys-docs-framework-preact-guides-sequences-md).
+
+## Choose symbols and separators
+
+Customize modifier and key symbols (`useSymbols`) and separators (`separatorToken`, `sequenceSeparator`):
+
+```ts
+formatForDisplay('Shift+[ArrowUp]', {
+  platform: 'mac',
+  useSymbols: { modifiers: false, keys: true },
+  parts: true,
+}) // ['Shift', '↑']
+
+formatForDisplay('Mod+[KeyS]', {
+  platform: 'mac',
+  useSymbols: false,
+}) // 'Cmd+S'
+
+formatForDisplay('Control++', {
+  platform: 'windows',
+  separatorToken: ' · ',
+}) // 'Ctrl · +'
+```
+
+`useSymbols` accepts a boolean or `{ modifiers?, keys? }`. Omitted fields default to `true`, and `modifiers` affects macOS only because Windows and Linux always use text modifier names. Pass `''` to join parts directly, or `undefined` or `null` for platform defaults.
+
+## Label physical keys for the user's keyboard
+
+Physical bindings follow key position (`[KeyW]` is always the US W slot), which sits at `Z` on a French AZERTY keyboard. `useFormatForDisplay()` automatically resolves physical codes to the character printed on the user's layout where supported:
+
+```tsx
+import { useFormatForDisplay } from '@tanstack/preact-hotkeys'
+
+function MoveUp() {
+  const formatForDisplay = useFormatForDisplay()
+  return <kbd>{formatForDisplay('[KeyW]')}</kbd> // 'W' on QWERTY, 'Z' on AZERTY
+}
+```
+
+> [!IMPORTANT]
+> **Browser support.** Keyboard layout detection (`navigator.keyboard.getLayoutMap()`) works only in **Chromium browsers** (Chrome and Edge). Firefox and Safari don't expose layout maps and fall back to US QWERTY labels (`W` or `Q`). Inside cross-origin iframes, Chromium also requires `allow="keyboard-map"`.
+
+Good to know:
+
+- The layout loads asynchronously when the first label mounts, so the initial or server render shows the US fallback before updating. Later components get the resolved map immediately.
+- Only physical bindings (`[KeyQ]`) change. Logical bindings (`Mod+Q`) always show their character, and key matching or recording never depend on the layout map.
+- The layout refreshes whenever the window regains focus, since browsers emit no layout-change event.
+
+To draw your own layout-aware UI, such as an on-screen keyboard, call `useKeyboardLayout()`, which returns the loaded map (`code` to character) or `null`. To turn off browser layout detection altogether, pass `keyboardLayout: false` on `HotkeysProvider`:
+
+```tsx
+<HotkeysProvider defaultOptions={{ keyboardLayout: false }}>
+  <App />
+</HotkeysProvider>
+```
+
+### Supply your own layout
+
+If your app already tracks a user's layout preference, pass any `Map`-like `{ get(code): string | undefined }` object as `layoutMap`, which overrides the browser map:
+
+```ts
+const layoutMap = new Map([['KeyQ', 'a']])
+
+formatForDisplay('Mod+[KeyQ]', { platform: 'mac', layoutMap }) // '⌘ A'
+formatForDisplay('Mod+Q', { platform: 'mac', layoutMap }) // '⌘ Q' (logical key unchanged)
+```
+
+Use `keyLabels` to customize display names by physical code or logical key name. It works on the server too, and overrides both `layoutMap` and built-in fallbacks:
+
+```ts
+formatForDisplay('Mod+[KeyQ]', {
+  platform: 'mac',
+  layoutMap,
+  keyLabels: { KeyQ: 'Action' },
+}) // '⌘ Action'
+```
+
+## Server-side rendering
+
+To render platform-accurate labels on the server without hydration mismatches or a Linux-label flash on macOS and Windows, pass `platform` to `HotkeysProvider` from the incoming request, or wrap labels in a client-only guard on static pages. See [SSR & Hydration](./hotkeys-docs-framework-preact-guides-ssr-md-41b38694.md#source-hotkeys-docs-framework-preact-guides-ssr-md) for Fresh, Astro, Vite server rendering, and static page examples.
+
+## Format outside a component
+
+`useFormatForDisplay` is a hook, so it can't run in a test or a plain module. Call `formatForDisplay` directly and pass `platform` yourself:
+
+```ts
+import { formatForDisplay } from '@tanstack/preact-hotkeys'
+
+formatForDisplay('Mod+S', { platform }) // '⌘ S' when platform is 'mac'
+```
+
+`formatForDisplay` doesn't read `HotkeysProvider` and uses only the `layoutMap` you pass. To feed it the browser layout outside Preact, call `loadKeyboardLayout()` and read `getKeyboardLayoutStore()`.
+
+> [!NOTE]
+> `formatForDisplay` is marked `@deprecated` on the Preact package so editor autocomplete nudges component code toward `useFormatForDisplay()`. Outside components, calling it directly is expected.
+
+## Parse, compare, and store hotkeys
+
+Use the core helpers for persistence, comparison, and validation:
+
+```ts
+import { normalizeHotkey, parseHotkey } from '@tanstack/preact-hotkeys'
+
+const parsed = parseHotkey('Mod+[KeyS]', 'mac')
+if (parsed.code !== undefined) {
+  console.log(parsed.code) // 'KeyS' (parsed.key is undefined)
+}
+const stored = normalizeHotkey(parsed, 'mac') // 'Mod+[KeyS]'
+```
+
+- **Normalize before saving.** `parseHotkey` resolves `Mod` for a specific platform (`meta: true` on Mac). Pass that same platform to `normalizeHotkey` to restore `'Mod+...'` before saving bindings intended to use `Mod`. Store registerable hotkey strings, never formatted labels. Because normalizing on macOS turns `Meta+S` into `Mod+S`, keep the original registerable binding string if an explicit modifier must stay platform-specific.
+- **Compare bindings.** `areHotkeysEqual(a, b)` checks semantic equality after resolving modifiers, so `'Mod+S'` equals `'Meta+S'` on macOS. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` unwraps a 1-step sequence into a chord.
+- **Validate untrusted strings.** Pass hotkeys loaded from storage or user input to `validateHotkey`. It returns `{ valid, errors, warnings }`, where each issue includes:
+  - `reason`, a machine-readable code such as `'unknown-modifier'`
+  - `part`, the offending token
+  - `step`, the zero-based step index (for sequences)
+
+`validateHotkey` checks syntax only, so map `reason` codes to your own UI strings. To validate as users press keys, see [Validate and check conflicts](./hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md#source-hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md).
+
+Try these formatting options interactively in the [Astro example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/preact/useFormatForDisplay-astro), or see [Cheat Sheets](./hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md#source-hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md) for rendering full shortcut lists.

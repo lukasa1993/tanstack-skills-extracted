@@ -1,10 +1,10 @@
 # Hotkeys Provider And Scopes — Group hotkeys into scopes
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Group hotkeys into scopes
 
-Apps reuse keys. `Escape` should close the dialog, not the panel behind it, and `Mod+S` should post the comment you are typing, not save the whole document. You could pass [`enabled`](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md) to every hotkey, but then each component has to know about every other component that might want the same key.
+Apps constantly reuse keys. `Escape` should close the active dialog rather than the panel behind it, and `Mod+S` in a comment box should post the comment instead of saving the document. Rather than passing [`enabled`](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#source-hotkeys-docs-framework-vue-guides-hotkeys-md) to every hotkey and coordinating across components, group regions of your app into scopes.
 
 Scopes group hotkeys by where they render instead. Wrap part of your tree in a `HotkeysProvider` with a `scope`, and every hotkey registered inside it belongs to that scope. The scope is active while the provider is mounted and enabled, and nested scopes take precedence over the scopes around them.
 
@@ -56,4 +56,4 @@ provideHotkeysContext({ scope: 'editor', enabled: () => props.active })
 
 Like Vue's `provide`, it applies to the component's children, not to the component itself. A hotkey registered in the same setup as `provideHotkeysContext` uses the scope above it, so register the scope's hotkeys in a child component.
 
-Scopes are names, not instances. Two mounted providers with `scope="editor"` share one scope, and it stays active until both unmount. Give each region its own name when you need to turn them on and off separately.
+Scopes are names, not instances. Two mounted providers with `scope="editor"` share one scope, and it stays active until both unmount. Give each region its own name to turn them on and off separately.

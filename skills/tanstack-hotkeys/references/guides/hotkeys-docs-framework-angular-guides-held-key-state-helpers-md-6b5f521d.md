@@ -2,17 +2,17 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
-These functions report which keys the user is holding right now. They're optional helpers for your UI: show which modifiers are down, or change a button while Shift is held. You don't need them to register hotkeys. To show a button's shortcut while the user holds its modifiers, see [Hotkey Hints](./hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md#source-hotkeys-docs-framework-angular-guides-hotkey-hints-md).
+These functions track which keys the user is currently holding down. They're optional UI helpers for displaying live key indicators or swapping button labels while `Shift` is held. To reveal shortcut hints when a modifier is held, see [Hotkey Hints](./hotkeys-docs-framework-angular-guides-hotkey-hints-md-7e437993.md#source-hotkeys-docs-framework-angular-guides-hotkey-hints-md).
 
 Each function returns a signal. Call them in an injection context, such as a field initializer or a constructor.
 
 ## Show which keys are held
 
-`injectHeldKeys` returns the held keys in the order they were pressed, such as `['Control', 'Shift', 'A']`:
+`injectHeldKeys()` returns currently held keys in press order, such as `['Control', 'Shift', 'A']`:
 
 ```ts
 import { Component } from '@angular/core'
@@ -31,7 +31,7 @@ export class KeyDisplayComponent {
 }
 ```
 
-To label each held key the way hotkeys are labeled, pass it to the function from `injectFormatForDisplay` as `{ key }`: `Shift` becomes `⇧` on macOS and `Escape` becomes `Esc`. Held keys come from the browser and can be outside the key types, which the `{ key }` form accepts.
+To format held keys consistently (`Shift` to `⇧` on macOS, `Escape` to `Esc`), pass `{ key }` to the function from `injectFormatForDisplay`. Wrapping in `{ key }` accepts raw browser key names outside the strict `Key` type.
 
 ## Check whether a key is held
 
@@ -58,7 +58,7 @@ export class FileItemComponent {
 }
 ```
 
-Key names follow the same rule as hotkeys: letters match in any case, so `'a'` and `'A'` are the same key, and other names are case-sensitive. Write `'Shift'` and `'Escape'`, not `'shift'` or `'escape'`.
+Letters match case-insensitively (`'a'` and `'A'` are identical), while named keys are case-sensitive (`'Shift'`, `'Escape'`).
 
 ## Tell left and right modifiers apart
 
@@ -83,7 +83,7 @@ export class ModifierSidesComponent {
 
 ## Read held keys in an event handler
 
-To read the held keys in an event handler without tracking them, use the shared tracker from `getKeyStateTracker`:
+To inspect held keys inside a click or canvas handler without tracking them, read the shared tracker from `getKeyStateTracker()`:
 
 ```ts
 import { Component } from '@angular/core'
@@ -104,10 +104,10 @@ export class CanvasComponent {
 }
 ```
 
-The tracker starts listening the first time you get it, so get it when the component is created, before the user presses the keys you care about. Call its methods inside the handler to read the state at that moment. It also has `getHeldKeys()` and `areAllKeysHeld(keys)`. Don't destroy the tracker when a component is destroyed, because every function shares it.
+- Call `getKeyStateTracker()` when the component is created so it starts listening before the user holds any keys.
+- The tracker also exposes `getHeldKeys()` and `areAllKeysHeld(keys)`. Never destroy the shared tracker when a component unmounts, because every helper shares the same instance.
+- For mouse or wheel handlers, `event.shiftKey`, `altKey`, `metaKey`, and `ctrlKey` already exist on the event. Browsers also set `ctrlKey` during trackpad pinch gestures, so it doesn't always mean Control is held.
 
-For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey` already report the modifiers. Browsers also set `ctrlKey` for a trackpad pinch, so it doesn't always mean Control is held.
+Held keys reset automatically when the window loses focus, so a key released after switching apps never stays stuck. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
-
-The [injectHeldKeys example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/angular/injectHeldKeys) shows held keys and their codes, and the [injectKeyHold example](https://github.com/TanStack/hotkeys/tree/418247d9f4397edebae80224f5cd88d3de71e337/examples/angular/injectKeyHold) shows modifier indicators.
+See the [injectHeldKeys example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/injectHeldKeys) and the [injectKeyHold example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/injectKeyHold).

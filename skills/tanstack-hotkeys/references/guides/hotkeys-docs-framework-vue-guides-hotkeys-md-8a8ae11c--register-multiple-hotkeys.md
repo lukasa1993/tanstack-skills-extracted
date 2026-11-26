@@ -1,10 +1,10 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register multiple hotkeys
 
-When a component has more than one hotkey, use `useHotkeys`. It takes an array of definitions, each with a `hotkey`, a `callback`, and optional `options`:
+Use `useHotkeys` to register an array of `{ hotkey, callback, options? }` entries in one call:
 
 ```vue
 <script setup lang="ts">
@@ -12,16 +12,14 @@ import { useHotkeys } from '@tanstack/vue-hotkeys'
 
 useHotkeys([
   { hotkey: 'Mod+S', callback: () => save() },
-  { hotkey: 'Mod+Z', callback: () => undo() },
-  { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+  { hotkey: 'Mod+Enter', callback: () => publish() },
+  { hotkey: 'Mod+D', callback: () => duplicate() },
   { hotkey: ['G', 'G'], callback: () => scrollToTop(), options: { timeout: 500 } },
 ])
 </script>
 ```
 
-Chords and sequences can share one array. Each definition's `options` are typed by its `hotkey`, as they are for `useHotkey`.
-
-A callback in the array receives a `context` that can belong to either kind of hotkey. Check `context.kind` before reading `context.parsedChord`:
+Chords and sequences can share the same array, and each item's `options` are typed against its own `hotkey`. Inside the array, `context` can belong to either kind, so check `context.kind` before reading `context.parsedChord`:
 
 ```ts
 useHotkeys([
@@ -36,7 +34,7 @@ useHotkeys([
 
 ### Share options
 
-Pass options for every definition as the second argument. A definition's own options override them:
+Pass shared options as the second argument. Individual definitions override them:
 
 ```vue
 <script setup lang="ts">
@@ -62,7 +60,7 @@ useHotkeys(
 
 The shared `target` makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#hotkey-targets) explains targets.
 
-Options merge in this order: provider defaults, then the shared options, then each definition's options.
+Options merge in three layers: defaults from the provider first, then the shared options, then per-item options.
 
 ### Build the list from data
 

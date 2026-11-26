@@ -1,15 +1,15 @@
 # Provide Hotkeys And Scopes — Nested scopes win
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Nested scopes win
 
-When hotkeys in two active scopes match the same key, only one scope handles it:
+When several active scopes register the same chord, or a sequence that completes in more than one of them, only the highest-precedence scope runs:
 
-- A nested scope beats the scopes it is nested in.
-- Otherwise, the scope that activated most recently wins.
+1. A nested scope beats its parent scopes.
+2. Among scopes that are not nested, the most recently activated scope wins.
 
-Every hotkey in the winning scope that matches the key runs. Hotkeys in other scopes do not.
+Every matching hotkey in the winning scope runs, and hotkeys in other scopes do not.
 
 ```ts
 @Component({

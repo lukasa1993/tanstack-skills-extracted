@@ -1,10 +1,10 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.33.1`.
+[Guide and prerequisites](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
 
 ## Register multiple hotkeys
 
-When a component has more than one hotkey, use `createHotkeys`. It takes an array of definitions, each with a `hotkey`, a `callback`, and optional `options`:
+Use `createHotkeys` to register an array of `{ hotkey, callback, options? }` entries in one call:
 
 ```tsx
 import { createHotkeys } from '@tanstack/solid-hotkeys'
@@ -12,8 +12,8 @@ import { createHotkeys } from '@tanstack/solid-hotkeys'
 function Editor() {
   createHotkeys([
     { hotkey: 'Mod+S', callback: () => save() },
-    { hotkey: 'Mod+Z', callback: () => undo() },
-    { hotkey: 'Mod+Shift+Z', callback: () => redo() },
+    { hotkey: 'Mod+Enter', callback: () => publish() },
+    { hotkey: 'Mod+D', callback: () => duplicate() },
     { hotkey: ['G', 'G'], callback: () => scrollToTop(), options: { timeout: 500 } },
   ])
 
@@ -21,9 +21,7 @@ function Editor() {
 }
 ```
 
-Chords and sequences can share one array. Each definition's `options` are typed by its `hotkey`, as they are for `createHotkey`.
-
-A callback in the array receives a `context` that can belong to either kind of hotkey. Check `context.kind` before reading `context.parsedChord`:
+Chords and sequences can share the same array, and each item's `options` are still typed against its specific `hotkey`. Inside `createHotkeys`, `context` can belong to either kind, so check `context.kind` before reading `context.parsedChord`:
 
 ```tsx
 createHotkeys([
@@ -38,7 +36,7 @@ createHotkeys([
 
 ### Share options
 
-Pass options for every definition as the second argument. A definition's own options override them:
+Pass shared options as the second argument. Individual definitions override them:
 
 ```tsx
 import { createSignal } from 'solid-js'
@@ -59,13 +57,11 @@ function RichTextEditor() {
     () => ({ target: editor() }),
   )
 
-  return <div ref={setEditor} contentEditable />
+  return <div ref={setEditor} contenteditable />
 }
 ```
 
-The shared `target` makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#hotkey-targets) explains targets.
-
-Options merge in this order: provider defaults, then the shared options, then each definition's options.
+Options merge in three layers: provider defaults first, then shared `createHotkeys` options, then per-item options.
 
 ### Build the list from data
 
@@ -85,4 +81,4 @@ function MenuShortcuts(props: { items: Array<MenuItem> }) {
 }
 ```
 
-The primitive compares the array each time it changes, by position and hotkey. It registers new hotkeys and unregisters removed ones. Reordering the array registers the moved hotkeys again.
+`createHotkeys` diffs the array by index and hotkey each time it changes. It adds new items, removes deleted ones, and re-registers any items whose position changed.
