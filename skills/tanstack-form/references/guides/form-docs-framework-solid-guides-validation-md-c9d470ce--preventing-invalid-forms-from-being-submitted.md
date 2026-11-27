@@ -1,6 +1,6 @@
 # Validation — Preventing invalid forms from being submitted
 
-[Guide and prerequisites](./form-docs-framework-solid-guides-validation-md-c9d470ce.md) · Release-matched documentation · `@tanstack/solid-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-solid-guides-validation-md-c9d470ce.md) · Release-matched documentation · `@tanstack/solid-form@1.33.6`.
 
 ## Preventing invalid forms from being submitted
 

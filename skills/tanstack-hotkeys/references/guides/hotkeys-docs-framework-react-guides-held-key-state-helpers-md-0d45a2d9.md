@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -93,4 +93,4 @@ function Canvas() {
 
 Held keys reset automatically on window blur, tab switch, or macOS `Command` release so keys never stay stuck. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/useHeldKeys) and [useKeyHold example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/useKeyhold).
+See the [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/useHeldKeys) and [useKeyHold example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/useKeyhold).

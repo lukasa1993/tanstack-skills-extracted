@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-react-guides-ui-libraries-md"></a>
 
-Release-matched documentation · `@tanstack/react-form@1.33.5`.
+Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 [Topic index](../framework-react-advanced.md) · [Source provenance](../SOURCES.md)
 

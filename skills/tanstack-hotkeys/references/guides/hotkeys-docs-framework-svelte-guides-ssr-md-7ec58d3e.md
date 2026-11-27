@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-ssr-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -89,7 +89,7 @@ export const load: LayoutServerLoad = ({ request }) => {
 
 A prerendered page gets no `platform` from this load function. Don't return `detectPlatform()` without a user agent: on the server it returns `'linux'`, and the browser would keep it, for labels and for `Mod`. For prerendered pages, see [Static and prerendered pages](./hotkeys-docs-framework-svelte-guides-ssr-md-7ec58d3e.md#static-and-prerendered-pages).
 
-The [SvelteKit example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/svelte/getFormatForDisplay-sveltekit) shows this setup.
+The [SvelteKit example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/getFormatForDisplay-sveltekit) shows this setup.
 
 ### Astro
 
@@ -123,7 +123,7 @@ const platform = detectPlatform(Astro.request.headers.get('user-agent'))
 </HotkeysProvider>
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/svelte/getFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/getFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 

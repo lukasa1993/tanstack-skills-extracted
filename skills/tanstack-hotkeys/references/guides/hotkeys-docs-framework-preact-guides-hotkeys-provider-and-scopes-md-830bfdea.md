@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -263,4 +263,4 @@ If you integrate non-Preact overlays, such as third-party dialogs, activate thei
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) group registrations by scope and display which scopes are active, suspended, allowed, or exclusive. To read the same state inside components, see [Read scope state](./hotkeys-docs-framework-preact-guides-hotkey-manager-md-60f997b1.md#source-hotkeys-docs-framework-preact-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/preact/scopes) for nested, `enabled`, and `exclusive` scopes working together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/scopes) for nested, `enabled`, and `exclusive` scopes working together.

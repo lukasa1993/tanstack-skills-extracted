@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -182,7 +182,7 @@ export default class ShortcutRow extends Component<{ Args: { id: AppHotkeyId } }
 }
 ```
 
-Pass the recorder's `context` to `findConflicts` and `setCustomHotkey`. It holds the key press that made the recording, so the check also finds an app hotkey that is written differently but fires for the same press. On a US keyboard, a recorded `Shift+[Slash]` and a declared `?` are one key press, and only the key press shows that.
+Pass the recorder's `context` to `findConflicts` and `setCustomHotkey`. It holds the key press that made the recording, so the check also finds an app hotkey that is written differently but fires for the same press. On a US keyboard, `Shift+[Slash]`, recorded by code or saved by an earlier version, and a declared `?` are one key press, and only the key press shows that.
 
 | Member | Description |
 | --- | --- |
@@ -196,4 +196,4 @@ Two app hotkeys conflict when their scopes match or either is in `'global'`, inc
 
 Each app hotkey's `defaultHotkey` holds its declared default, and `isCustom` in `useAppHotkeyList` reports whether the effective hotkey differs from it.
 
-`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/reference/classes/AppHotkeysStore.md) to use it directly.
+`provideAppHotkeys` returns the `AppHotkeysStore` it creates. See the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/AppHotkeysStore.md) to use it directly.

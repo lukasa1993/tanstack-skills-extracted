@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-react-guides-validation-md"></a>
 
-Release-matched documentation · `@tanstack/react-form@1.33.5`.
+Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -17,7 +17,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Displaying Errors](./form-docs-framework-react-guides-validation-md-d751e17c--displaying-errors.md) — 2 KiB
 - [Validation at field-level vs at form-level](./form-docs-framework-react-guides-validation-md-d751e17c--validation-at-field-level-vs-at-form-level.md) — 5 KiB
 - [Asynchronous Functional Validation](./form-docs-framework-react-guides-validation-md-d751e17c--asynchronous-functional-validation.md) — 4 KiB
-- [Validation through Schema Libraries](./form-docs-framework-react-guides-validation-md-d751e17c--validation-through-schema-libraries.md) — 3 KiB
+- [Validation through Schema Libraries](./form-docs-framework-react-guides-validation-md-d751e17c--validation-through-schema-libraries.md) — 4 KiB
 - [Preventing invalid forms from being submitted](./form-docs-framework-react-guides-validation-md-d751e17c--preventing-invalid-forms-from-being-submitted.md) — 2 KiB
 
 <!-- Original source anchors retained for inbound links. -->

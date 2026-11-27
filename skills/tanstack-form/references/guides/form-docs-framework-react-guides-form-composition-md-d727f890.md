@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-react-guides-form-composition-md"></a>
 
-Release-matched documentation · `@tanstack/react-form@1.33.5`.
+Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 [Topic index](../framework-react-advanced.md) · [Source provenance](../SOURCES.md)
 
@@ -11,7 +11,7 @@ Release-matched documentation · `@tanstack/react-form@1.33.5`.
 Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
 - [Overview](./form-docs-framework-react-guides-form-composition-md-d727f890--overview.md) — 1 KiB
-- [Custom Form Hooks](./form-docs-framework-react-guides-form-composition-md-d727f890--custom-form-hooks.md) — 7 KiB
+- [Custom Form Hooks](./form-docs-framework-react-guides-form-composition-md-d727f890--custom-form-hooks.md) — 8 KiB
 - [Breaking big forms into smaller pieces](./form-docs-framework-react-guides-form-composition-md-d727f890--breaking-big-forms-into-smaller-pieces.md) — 5 KiB
 - [Reusing groups of fields in multiple forms](./form-docs-framework-react-guides-form-composition-md-d727f890--reusing-groups-of-fields-in-multiple-forms.md) — 7 KiB
 - [Tree-shaking form and field components](./form-docs-framework-react-guides-form-composition-md-d727f890--tree-shaking-form-and-field-components.md) — 2 KiB

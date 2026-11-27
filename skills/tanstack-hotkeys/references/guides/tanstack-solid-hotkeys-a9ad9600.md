@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-solid-hotkeys"></a>
 
-Published skill · `@tanstack/solid-hotkeys@0.26.2`.
+Published skill · `@tanstack/solid-hotkeys@0.26.3`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 

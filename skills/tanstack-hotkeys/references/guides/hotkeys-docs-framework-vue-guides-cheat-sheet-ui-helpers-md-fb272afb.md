@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -224,4 +224,4 @@ A few details to keep in mind:
 - `useAppHotkeyList` still shows every app hotkey while the dialog is open. Items from the page behind it report `'suspended'`. To let background shortcuts keep working, omit `exclusive`. See [Exclusive scopes](./hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md-4da595cd.md#source-hotkeys-docs-framework-vue-guides-hotkeys-provider-and-scopes-md).
 - When binding `?` to open your cheat sheet, remember that single-key shortcuts need a way to turn them off or remap them for accessibility. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/vue/kitchen-sink) for a complete grouped cheat sheet with live statuses and rebinding.
+See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/vue/kitchen-sink) for a complete grouped cheat sheet with live statuses and rebinding.

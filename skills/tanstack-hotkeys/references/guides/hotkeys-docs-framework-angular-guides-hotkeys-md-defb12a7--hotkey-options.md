@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 ## Hotkey options
 
@@ -28,7 +28,7 @@ injectHotkey('Enter', () => this.submit(), { ignoreInputs: false })
 | `platform` | Detected | Override `'mac'`, `'windows'`, or `'linux'` for `Mod` resolution. Useful in tests. |
 | `meta` | None | Display metadata (`name`, `description`, `group`). See [Describe hotkeys with `meta`](./hotkeys-docs-framework-angular-guides-hotkeys-md-defb12a7.md#describe-hotkeys-with-meta). |
 
-See [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for why each default behaves the way it does, and the [`InjectHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/framework/angular/reference/type-aliases/InjectHotkeyOptions.md) for type definitions.
+See [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for why each default behaves the way it does, and the [`InjectHotkeyOptions` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/framework/angular/reference/type-aliases/InjectHotkeyOptions.md) for type definitions.
 
 To change a default for every hotkey in your app, add `provideHotkeys` with `defaultOptions` to your application config. Options passed to `injectHotkey` override the provided defaults:
 

@@ -1,6 +1,6 @@
 # Validation — Overview
 
-[Guide and prerequisites](./form-docs-framework-lit-guides-validation-md-a6031d73.md) · Release-matched documentation · `@tanstack/lit-form@1.25.5`.
+[Guide and prerequisites](./form-docs-framework-lit-guides-validation-md-a6031d73.md) · Release-matched documentation · `@tanstack/lit-form@1.25.6`.
 
 At the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:
 

@@ -53,6 +53,6 @@ Use these separate product skills when the task crosses their boundary: `tanstac
 
 ## Source status
 
-Official documentation from `TanStack/form`, matched to these verified release inputs: @tanstack/angular-form@1.33.5, @tanstack/form-core@1.33.5, @tanstack/lit-form@1.25.5, @tanstack/preact-form@1.30.5, @tanstack/react-form@1.33.5, @tanstack/solid-form@1.33.5, @tanstack/svelte-form@1.33.5, @tanstack/vue-form@1.33.5.
+Official documentation from `TanStack/form`, matched to these verified release inputs: @tanstack/angular-form@1.33.6, @tanstack/form-core@1.33.6, @tanstack/lit-form@1.25.6, @tanstack/preact-form@1.30.6, @tanstack/react-form@1.33.6, @tanstack/solid-form@1.33.6, @tanstack/svelte-form@1.33.6, @tanstack/vue-form@1.33.6.
 
 See [source provenance](references/SOURCES.md) for exact upstream inputs and deduplication records.

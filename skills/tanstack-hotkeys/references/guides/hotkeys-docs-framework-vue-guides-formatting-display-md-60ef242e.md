@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -203,4 +203,4 @@ const stored = normalizeHotkey(parsed, 'mac') // 'Mod+[KeyS]'
 
 `validateHotkey` checks syntax only and can't promise that the browser or operating system delivers the shortcut, so map `reason` codes to your own UI strings. To validate as users press keys, see [Validate and check conflicts](./hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md-c0532132.md#source-hotkeys-docs-framework-vue-guides-custom-hotkey-recording-md).
 
-Try these options together with the format toggles in the [server-rendered cheat sheet example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/vue/useFormatForDisplay-nuxt). For a full list of your app's shortcuts, see [Cheat Sheets](./hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md#source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md).
+Try these options together with the format toggles in the [server-rendered cheat sheet example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/vue/useFormatForDisplay-nuxt). For a full list of your app's shortcuts, see [Cheat Sheets](./hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md-fb272afb.md#source-hotkeys-docs-framework-vue-guides-cheat-sheet-ui-helpers-md).

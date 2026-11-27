@@ -1,6 +1,6 @@
 # Validation — Displaying Errors
 
-[Guide and prerequisites](./form-docs-framework-preact-guides-validation-md-8713dd87.md) · Release-matched documentation · `@tanstack/preact-form@1.30.5`.
+[Guide and prerequisites](./form-docs-framework-preact-guides-validation-md-8713dd87.md) · Release-matched documentation · `@tanstack/preact-form@1.30.6`.
 
 ## Displaying Errors
 

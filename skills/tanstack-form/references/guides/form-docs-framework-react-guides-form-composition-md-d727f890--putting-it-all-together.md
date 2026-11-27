@@ -1,6 +1,6 @@
 # Form Composition — Putting it all together
 
-[Guide and prerequisites](./form-docs-framework-react-guides-form-composition-md-d727f890.md) · Release-matched documentation · `@tanstack/react-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-react-guides-form-composition-md-d727f890.md) · Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 ## Putting it all together
 

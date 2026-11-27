@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-vue-guides-form-groups-md"></a>
 
-Release-matched documentation · `@tanstack/vue-form@1.33.5`.
+Release-matched documentation · `@tanstack/vue-form@1.33.6`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

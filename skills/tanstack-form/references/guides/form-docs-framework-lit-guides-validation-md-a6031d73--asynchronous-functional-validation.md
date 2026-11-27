@@ -1,6 +1,6 @@
 # Validation — Asynchronous Functional Validation
 
-[Guide and prerequisites](./form-docs-framework-lit-guides-validation-md-a6031d73.md) · Release-matched documentation · `@tanstack/lit-form@1.25.5`.
+[Guide and prerequisites](./form-docs-framework-lit-guides-validation-md-a6031d73.md) · Release-matched documentation · `@tanstack/lit-form@1.25.6`.
 
 ## Asynchronous Functional Validation
 

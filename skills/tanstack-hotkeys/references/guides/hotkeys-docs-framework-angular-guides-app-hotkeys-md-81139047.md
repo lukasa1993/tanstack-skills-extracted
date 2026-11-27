@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -176,7 +176,7 @@ export class ShortcutRowComponent {
 }
 ```
 
-Pass the recorder's `context` into `findConflicts` and `setCustomHotkey` so conflict detection compares the physical key presses too. That catches differently spelled bindings that fire for the same press, such as a recorded `Shift+[Slash]` against a declared `?` on US keyboards.
+Pass the recorder's `context` into `findConflicts` and `setCustomHotkey` so conflict detection compares the physical key presses too. That catches differently spelled bindings that fire for the same press, such as `Shift+[Slash]`, recorded by code, against a declared `?` on US keyboards.
 
 | Member | Description |
 | --- | --- |
@@ -188,6 +188,6 @@ Pass the recorder's `context` into `findConflicts` and `setCustomHotkey` so conf
 
 Two app hotkeys conflict when their scopes overlap (matching scopes, or either is in `'global'` or has no declared scope) and their bindings collide (equal chords, or one sequence starting with the other chord or sequence). Conflict checks scan every declaration, mounted or not.
 
-Each app hotkey exposes `defaultHotkey`, and `injectAppHotkeyList` includes `isCustom` to highlight modified rows. `provideHotkeys` creates an `AppHotkeysStore` from the core package. For imperative use, see the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/reference/classes/AppHotkeysStore.md).
+Each app hotkey exposes `defaultHotkey`, and `injectAppHotkeyList` includes `isCustom` to highlight modified rows. `provideHotkeys` creates an `AppHotkeysStore` from the core package. For imperative use, see the [`AppHotkeysStore` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/AppHotkeysStore.md).
 
-See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/kitchen-sink) for app hotkeys, grouped cheat sheets, and customization wired together.
+See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/kitchen-sink) for app hotkeys, grouped cheat sheets, and customization wired together.

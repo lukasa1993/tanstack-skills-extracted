@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-ssr-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -96,7 +96,7 @@ export const appConfig: ApplicationConfig = {
 
 `REQUEST` is also `null` when a route is prerendered. See [Static and prerendered pages](./hotkeys-docs-framework-angular-guides-ssr-md-05bcc1b5.md#static-and-prerendered-pages).
 
-The [Angular SSR example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/injectFormatForDisplay-angular-ssr) shows this setup.
+The [Angular SSR example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/injectFormatForDisplay-angular-ssr) shows this setup.
 
 ### Analog
 
@@ -120,7 +120,7 @@ export const appConfig: ApplicationConfig = {
 }
 ```
 
-The [Analog example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/injectFormatForDisplay-analog) shows this setup.
+The [Analog example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/injectFormatForDisplay-analog) shows this setup.
 
 ### Render a label only in the browser
 

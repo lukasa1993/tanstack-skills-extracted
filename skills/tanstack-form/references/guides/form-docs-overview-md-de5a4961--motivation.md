@@ -1,6 +1,6 @@
 # Overview — Motivation
 
-[Guide and prerequisites](./form-docs-overview-md-de5a4961.md) · Release-matched documentation · `@tanstack/form-core@1.33.5`.
+[Guide and prerequisites](./form-docs-overview-md-de5a4961.md) · Release-matched documentation · `@tanstack/form-core@1.33.6`.
 
 ## Motivation
 

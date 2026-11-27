@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -123,4 +123,4 @@ const showHint =
   getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as createHotkeyHint
 ```
 
-See [Held Keys](./hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md#source-hotkeys-docs-framework-solid-guides-held-key-state-helpers-md) for the tracker and the other held-key primitives, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/solid/kitchen-sink) for hints on live buttons.
+See [Held Keys](./hotkeys-docs-framework-solid-guides-held-key-state-helpers-md-67746d38.md#source-hotkeys-docs-framework-solid-guides-held-key-state-helpers-md) for the tracker and the other held-key primitives, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/kitchen-sink) for hints on live buttons.

@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-solid-guides-arrays-md"></a>
 
-Release-matched documentation · `@tanstack/solid-form@1.33.5`.
+Release-matched documentation · `@tanstack/solid-form@1.33.6`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 

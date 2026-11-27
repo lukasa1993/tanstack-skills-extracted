@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -259,4 +259,4 @@ For UI that Svelte doesn't render, such as a dialog from another library, activa
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) group registrations by scope and show which scopes are active, suspended, allowed, or exclusive. To read the same state in your own UI, see [Read scope state](./hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md#source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/svelte/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/scopes) for nested, enabled, and exclusive scopes together.

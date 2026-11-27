@@ -1,6 +1,6 @@
 # Validation — Preventing invalid forms from being submitted
 
-[Guide and prerequisites](./form-docs-framework-vue-guides-validation-md-13811ffa.md) · Release-matched documentation · `@tanstack/vue-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-vue-guides-validation-md-13811ffa.md) · Release-matched documentation · `@tanstack/vue-form@1.33.6`.
 
 ## Preventing invalid forms from being submitted
 

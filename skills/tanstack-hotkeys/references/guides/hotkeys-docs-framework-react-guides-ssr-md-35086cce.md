@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-ssr-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -80,7 +80,7 @@ function RootComponent() {
 }
 ```
 
-See the [TanStack Start example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/useFormatForDisplay-tanstack-start).
+See the [TanStack Start example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/useFormatForDisplay-tanstack-start).
 
 ### Next.js (App Router)
 
@@ -108,7 +108,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 Call `useFormatForDisplay()` inside `'use client'` components. For Server Components, call `formatForDisplay` directly (see [Format outside a component](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md)). Because calling `headers()` opts routes into dynamic rendering, see [Static and prerendered pages](./hotkeys-docs-framework-react-guides-ssr-md-35086cce.md#static-and-prerendered-pages) if a route must stay static.
 
-See the [Next.js example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/useFormatForDisplay-nextjs).
+See the [Next.js example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/useFormatForDisplay-nextjs).
 
 ### React Router (framework mode)
 
@@ -133,7 +133,7 @@ export default function App({ loaderData }: Route.ComponentProps) {
 }
 ```
 
-See the [React Router example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/useFormatForDisplay-react-router).
+See the [React Router example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/useFormatForDisplay-react-router).
 
 ### Astro
 
@@ -166,7 +166,7 @@ export default function Shortcuts({ platform }: { platform: HotkeyPlatform }) {
 }
 ```
 
-See the [Astro example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/useFormatForDisplay-astro).
+See the [Astro example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/useFormatForDisplay-astro).
 
 ### Render a label only in the browser
 

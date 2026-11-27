@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -13,8 +13,8 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Overview](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--overview.md) — 1 KiB
 - [Record a chord](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--record-a-chord.md) — 4 KiB
 - [Record a sequence](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--record-a-sequence.md) — 2 KiB
-- [Keys the recorder handles](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--keys-the-recorder-handles.md) — 2 KiB
-- [Validate and check conflicts](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--validate-and-check-conflicts.md) — 5 KiB
+- [Keys the recorder handles](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--keys-the-recorder-handles.md) — 3 KiB
+- [Validate and check conflicts](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--validate-and-check-conflicts.md) — 6 KiB
 - [Build a shortcut settings screen](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--build-a-shortcut-settings-screen.md) — 3 KiB
 - [Recorder options](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--recorder-options.md) — 3 KiB
 - [Migrating from v0.9 and earlier](./hotkeys-docs-framework-alpine-guides-custom-hotkey-recording-md-c4d635ad--migrating-from-v0-9-and-earlier.md) — 1 KiB
@@ -27,6 +27,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="keys-the-recorder-handles"></a>
 <a id="validate-and-check-conflicts"></a>
 <a id="reject-hotkeys-you-dont-want"></a>
+<a id="save-hotkeys-that-work-on-another-platform"></a>
 <a id="check-for-conflicts"></a>
 <a id="build-a-shortcut-settings-screen"></a>
 <a id="recorder-options"></a>

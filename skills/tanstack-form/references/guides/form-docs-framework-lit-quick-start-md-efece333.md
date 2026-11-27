@@ -2,11 +2,11 @@
 
 <a id="source-form-docs-framework-lit-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/lit-form@1.25.5`.
+Release-matched documentation · `@tanstack/lit-form@1.25.6`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
-The bare minimum to get started with TanStack Form is to create a `TanstackFormController` as seen below with the `Employee` interface for our test form:
+The bare minimum to get started with TanStack Form is to create a `TanStackFormController` as seen below with the `Employee` interface for our test form:
 
 ```ts
 interface Employee {
@@ -16,19 +16,19 @@ interface Employee {
   jobTitle: string
 }
 
-#form = new TanStackFormController()<Employee>(this, {
+#form = new TanStackFormController(this, {
   defaultValues: {
     firstName: '',
     lastName: '',
     employed: false,
     jobTitle: '',
-  },
+  } as Employee,
 })
 ```
 
 In this example `this` references the instance of your `LitElement` in which you want to use TanStack Form.
 
-To wire a form element in your template up with TanStack Form, use the `field` method of `TanstackFormController`.
+To wire a form element in your template up with TanStack Form, use the `field` method of `TanStackFormController`.
 
 The first parameter of `field` is `FieldOptions` and the second is callback to render your element.
 
@@ -40,13 +40,13 @@ Our completed test form should look something like below. The form collects firs
 
 ```ts
 export class TestForm extends LitElement {
-  #form = new TanStackFormController<Employee>(this, {
+  #form = new TanStackFormController(this, {
     defaultValues: {
       firstName: '',
       lastName: '',
       employed: false,
       jobTitle: '',
-    },
+    } as Employee,
   })
   render() {
     return html` <p>Please enter your first name</p>
@@ -58,7 +58,7 @@ export class TestForm extends LitElement {
               value.length < 3 ? 'Not long enough' : undefined,
           },
         },
-        (field: FieldApi<Employee, 'firstName'>) => {
+        (field) => {
           return html` <div>
             <label class="first-name-label">First Name</label>
             <input

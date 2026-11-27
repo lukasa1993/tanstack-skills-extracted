@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-keyboard-layouts-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -83,4 +83,4 @@ Polish and Latvian share US QWERTY base keys without `AltGr`, and most Dutch use
 
 ## Example
 
-See the [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/react/keyboard-layouts) to test German layout bindings interactively.
+See the [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/keyboard-layouts) to test German layout bindings interactively.

@@ -1,6 +1,6 @@
 # Form Composition — Custom Form Hooks
 
-[Guide and prerequisites](./form-docs-framework-solid-guides-form-composition-md-27a2e7da.md) · Release-matched documentation · `@tanstack/solid-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-solid-guides-form-composition-md-27a2e7da.md) · Release-matched documentation · `@tanstack/solid-form@1.33.6`.
 
 ## Custom Form Hooks
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -114,4 +114,4 @@ const showHint =
   getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as useHotkeyHint
 ```
 
-See [Held Keys](./hotkeys-docs-framework-preact-guides-held-key-state-helpers-md-4ba7e38b.md#source-hotkeys-docs-framework-preact-guides-held-key-state-helpers-md) for the tracker and the other held-key hooks, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/preact/kitchen-sink) for hints on live buttons.
+See [Held Keys](./hotkeys-docs-framework-preact-guides-held-key-state-helpers-md-4ba7e38b.md#source-hotkeys-docs-framework-preact-guides-held-key-state-helpers-md) for the tracker and the other held-key hooks, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/kitchen-sink) for hints on live buttons.

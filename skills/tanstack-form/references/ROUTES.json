@@ -10,7 +10,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/form-core",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-community-resources-md-a3070668.md",
       "sourcePath": "docs/community-resources.md",
       "bytes": 212,
@@ -32,7 +32,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/form-core",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-comparison-md-0737b564.md",
       "sourcePath": "docs/comparison.md",
       "bytes": 7144,
@@ -54,7 +54,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/form-core",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-installation-md-70b06999.md",
       "sourcePath": "docs/installation.md",
       "bytes": 1962,
@@ -76,7 +76,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/form-core",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-overview-md-de5a4961.md",
       "sourcePath": "docs/overview.md",
       "bytes": 999,
@@ -113,16 +113,16 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/form-core",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-philosophy-md-1a773d34.md",
       "sourcePath": "docs/philosophy.md",
-      "bytes": 3713,
+      "bytes": 3704,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Upgrading unified APIs; Forms need flexibility; Controlled is Cool; Generics are grim; Libraries are liberating",
           "file": "references/guides/form-docs-philosophy-md-1a773d34.md",
-          "bytes": 3713
+          "bytes": 3704
         }
       ],
       "examples": []
@@ -135,7 +135,7 @@
       "status": "Release-matched documentation",
       "frameworks": [],
       "package": "@tanstack/form-core",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-typescript-md-a3ce50fb.md",
       "sourcePath": "docs/typescript.md",
       "bytes": 1028,
@@ -159,7 +159,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-arrays-md-9a219cee.md",
       "sourcePath": "docs/framework/react/guides/arrays.md",
       "bytes": 3065,
@@ -183,7 +183,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-async-initial-values-md-45165e08.md",
       "sourcePath": "docs/framework/react/guides/async-initial-values.md",
       "bytes": 1870,
@@ -207,7 +207,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-basic-concepts-md-f90df1f7.md",
       "sourcePath": "docs/framework/react/guides/basic-concepts.md",
       "bytes": 12267,
@@ -231,7 +231,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-linked-fields-md-37f1a676.md",
       "sourcePath": "docs/framework/react/guides/linked-fields.md",
       "bytes": 2463,
@@ -255,7 +255,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-listeners-md-91abc662.md",
       "sourcePath": "docs/framework/react/guides/listeners.md",
       "bytes": 3531,
@@ -279,16 +279,16 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-reactivity-md-8413e529.md",
       "sourcePath": "docs/framework/react/guides/reactivity.md",
-      "bytes": 2925,
+      "bytes": 4018,
       "prerequisites": [],
       "sections": [
         {
-          "title": "Overview; useSelector; form.Subscribe",
+          "title": "Overview; useSelector; form.Subscribe; Field state",
           "file": "references/guides/form-docs-framework-react-guides-reactivity-md-8413e529.md",
-          "bytes": 2925
+          "bytes": 4018
         }
       ],
       "examples": []
@@ -303,7 +303,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-submission-handling-md-75de4e64.md",
       "sourcePath": "docs/framework/react/guides/submission-handling.md",
       "bytes": 2793,
@@ -327,7 +327,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c.md",
       "sourcePath": "docs/framework/react/guides/validation.md",
       "bytes": 2043,
@@ -361,7 +361,7 @@
         {
           "title": "Validation through Schema Libraries",
           "file": "references/guides/form-docs-framework-react-guides-validation-md-d751e17c--validation-through-schema-libraries.md",
-          "bytes": 2979
+          "bytes": 3477
         },
         {
           "title": "Preventing invalid forms from being submitted",
@@ -390,7 +390,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-quick-start-md-228851e5.md",
       "sourcePath": "docs/framework/react/quick-start.md",
       "bytes": 4459,
@@ -414,7 +414,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-custom-errors-md-7071baae.md",
       "sourcePath": "docs/framework/react/guides/custom-errors.md",
       "bytes": 7014,
@@ -438,7 +438,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-debugging-md-7da5786f.md",
       "sourcePath": "docs/framework/react/guides/debugging.md",
       "bytes": 2314,
@@ -462,7 +462,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-devtools-md-45bf4fd1.md",
       "sourcePath": "docs/framework/react/guides/devtools.md",
       "bytes": 1761,
@@ -486,7 +486,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-dynamic-validation-md-6f17ef38.md",
       "sourcePath": "docs/framework/react/guides/dynamic-validation.md",
       "bytes": 5994,
@@ -510,7 +510,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-focus-management-md-cae2a29a.md",
       "sourcePath": "docs/framework/react/guides/focus-management.md",
       "bytes": 3985,
@@ -534,7 +534,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890.md",
       "sourcePath": "docs/framework/react/guides/form-composition.md",
       "bytes": 1920,
@@ -548,7 +548,7 @@
         {
           "title": "Custom Form Hooks",
           "file": "references/guides/form-docs-framework-react-guides-form-composition-md-d727f890--custom-form-hooks.md",
-          "bytes": 6732
+          "bytes": 7197
         },
         {
           "title": "Breaking big forms into smaller pieces",
@@ -588,7 +588,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-form-groups-md-173e5bfc.md",
       "sourcePath": "docs/framework/react/guides/form-groups.md",
       "bytes": 5406,
@@ -612,7 +612,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-react-native-md-d3ff60f3.md",
       "sourcePath": "docs/framework/react/guides/react-native.md",
       "bytes": 787,
@@ -636,7 +636,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f.md",
       "sourcePath": "docs/framework/react/guides/ssr.md",
       "bytes": 1492,
@@ -650,7 +650,7 @@
         {
           "title": "Using TanStack Form in TanStack Start",
           "file": "references/guides/form-docs-framework-react-guides-ssr-md-285ee96f--using-tanstack-form-in-tanstack-start.md",
-          "bytes": 4785
+          "bytes": 5044
         },
         {
           "title": "Using TanStack Form in a Next.js App Router",
@@ -685,7 +685,7 @@
         "react"
       ],
       "package": "@tanstack/react-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-react-guides-ui-libraries-md-79171c70.md",
       "sourcePath": "docs/framework/react/guides/ui-libraries.md",
       "bytes": 8238,
@@ -709,7 +709,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-arrays-md-c6bfae9f.md",
       "sourcePath": "docs/framework/preact/guides/arrays.md",
       "bytes": 3066,
@@ -733,7 +733,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-async-initial-values-md-c2699126.md",
       "sourcePath": "docs/framework/preact/guides/async-initial-values.md",
       "bytes": 1874,
@@ -757,7 +757,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-basic-concepts-md-df48f281.md",
       "sourcePath": "docs/framework/preact/guides/basic-concepts.md",
       "bytes": 12219,
@@ -781,7 +781,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-linked-fields-md-1fc84bef.md",
       "sourcePath": "docs/framework/preact/guides/linked-fields.md",
       "bytes": 2464,
@@ -805,7 +805,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-listeners-md-384a035d.md",
       "sourcePath": "docs/framework/preact/guides/listeners.md",
       "bytes": 3532,
@@ -829,7 +829,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-reactivity-md-12a0cb94.md",
       "sourcePath": "docs/framework/preact/guides/reactivity.md",
       "bytes": 2337,
@@ -853,7 +853,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-submission-handling-md-d9c8da17.md",
       "sourcePath": "docs/framework/preact/guides/submission-handling.md",
       "bytes": 2799,
@@ -877,7 +877,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-validation-md-8713dd87.md",
       "sourcePath": "docs/framework/preact/guides/validation.md",
       "bytes": 1804,
@@ -931,7 +931,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-quick-start-md-d3550125.md",
       "sourcePath": "docs/framework/preact/quick-start.md",
       "bytes": 4354,
@@ -955,7 +955,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-custom-errors-md-f8eee861.md",
       "sourcePath": "docs/framework/preact/guides/custom-errors.md",
       "bytes": 7017,
@@ -979,7 +979,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-debugging-md-18ef60aa.md",
       "sourcePath": "docs/framework/preact/guides/debugging.md",
       "bytes": 2317,
@@ -1003,7 +1003,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-dynamic-validation-md-6f2c4201.md",
       "sourcePath": "docs/framework/preact/guides/dynamic-validation.md",
       "bytes": 5998,
@@ -1027,7 +1027,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-focus-management-md-1c151518.md",
       "sourcePath": "docs/framework/preact/guides/focus-management.md",
       "bytes": 4003,
@@ -1051,7 +1051,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-form-composition-md-acac1a23.md",
       "sourcePath": "docs/framework/preact/guides/form-composition.md",
       "bytes": 1892,
@@ -1105,7 +1105,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-form-groups-md-6fb2c301.md",
       "sourcePath": "docs/framework/preact/guides/form-groups.md",
       "bytes": 5413,
@@ -1129,7 +1129,7 @@
         "preact"
       ],
       "package": "@tanstack/preact-form",
-      "version": "1.30.5",
+      "version": "1.30.6",
       "file": "references/guides/form-docs-framework-preact-guides-ui-libraries-md-63b67c1a.md",
       "sourcePath": "docs/framework/preact/guides/ui-libraries.md",
       "bytes": 8236,
@@ -1153,7 +1153,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-arrays-md-ba965091.md",
       "sourcePath": "docs/framework/vue/guides/arrays.md",
       "bytes": 3596,
@@ -1177,7 +1177,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-async-initial-values-md-fa0fd5bf.md",
       "sourcePath": "docs/framework/vue/guides/async-initial-values.md",
       "bytes": 2062,
@@ -1201,7 +1201,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-basic-concepts-md-a557ed20.md",
       "sourcePath": "docs/framework/vue/guides/basic-concepts.md",
       "bytes": 12086,
@@ -1225,7 +1225,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-dynamic-validation-md-b4751847.md",
       "sourcePath": "docs/framework/vue/guides/dynamic-validation.md",
       "bytes": 6148,
@@ -1249,7 +1249,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-form-groups-md-18e5cc1d.md",
       "sourcePath": "docs/framework/vue/guides/form-groups.md",
       "bytes": 5684,
@@ -1273,7 +1273,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-linked-fields-md-0fe3391d.md",
       "sourcePath": "docs/framework/vue/guides/linked-fields.md",
       "bytes": 2687,
@@ -1297,7 +1297,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-listeners-md-caeea7fa.md",
       "sourcePath": "docs/framework/vue/guides/listeners.md",
       "bytes": 3582,
@@ -1321,7 +1321,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-submission-handling-md-653bde54.md",
       "sourcePath": "docs/framework/vue/guides/submission-handling.md",
       "bytes": 2843,
@@ -1345,7 +1345,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-guides-validation-md-13811ffa.md",
       "sourcePath": "docs/framework/vue/guides/validation.md",
       "bytes": 1774,
@@ -1399,7 +1399,7 @@
         "vue"
       ],
       "package": "@tanstack/vue-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-vue-quick-start-md-3f6031c8.md",
       "sourcePath": "docs/framework/vue/quick-start.md",
       "bytes": 1267,
@@ -1423,7 +1423,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-arrays-md-0b0d36e6.md",
       "sourcePath": "docs/framework/angular/guides/arrays.md",
       "bytes": 4436,
@@ -1447,7 +1447,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-basic-concepts-md-23e082ea.md",
       "sourcePath": "docs/framework/angular/guides/basic-concepts.md",
       "bytes": 11150,
@@ -1471,7 +1471,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-dynamic-validation-md-86a4132d.md",
       "sourcePath": "docs/framework/angular/guides/dynamic-validation.md",
       "bytes": 8144,
@@ -1495,7 +1495,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-form-composition-md-87447c33.md",
       "sourcePath": "docs/framework/angular/guides/form-composition.md",
       "bytes": 8820,
@@ -1519,7 +1519,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-form-groups-md-4edf82c8.md",
       "sourcePath": "docs/framework/angular/guides/form-groups.md",
       "bytes": 8323,
@@ -1543,7 +1543,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-listeners-md-85d37563.md",
       "sourcePath": "docs/framework/angular/guides/listeners.md",
       "bytes": 1749,
@@ -1567,7 +1567,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-submission-handling-md-100620c8.md",
       "sourcePath": "docs/framework/angular/guides/submission-handling.md",
       "bytes": 3055,
@@ -1591,7 +1591,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-guides-validation-md-50a0451b.md",
       "sourcePath": "docs/framework/angular/guides/validation.md",
       "bytes": 1814,
@@ -1645,7 +1645,7 @@
         "angular"
       ],
       "package": "@tanstack/angular-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-angular-quick-start-md-307223f4.md",
       "sourcePath": "docs/framework/angular/quick-start.md",
       "bytes": 1711,
@@ -1669,7 +1669,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-arrays-md-6b5c3ad0.md",
       "sourcePath": "docs/framework/solid/guides/arrays.md",
       "bytes": 3387,
@@ -1693,7 +1693,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-async-initial-values-md-e742432f.md",
       "sourcePath": "docs/framework/solid/guides/async-initial-values.md",
       "bytes": 1966,
@@ -1717,7 +1717,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-basic-concepts-md-0767458b.md",
       "sourcePath": "docs/framework/solid/guides/basic-concepts.md",
       "bytes": 10150,
@@ -1741,7 +1741,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-devtools-md-58036254.md",
       "sourcePath": "docs/framework/solid/guides/devtools.md",
       "bytes": 1725,
@@ -1765,7 +1765,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-dynamic-validation-md-5c4777cd.md",
       "sourcePath": "docs/framework/solid/guides/dynamic-validation.md",
       "bytes": 6058,
@@ -1789,7 +1789,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-form-composition-md-27a2e7da.md",
       "sourcePath": "docs/framework/solid/guides/form-composition.md",
       "bytes": 1800,
@@ -1843,7 +1843,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-form-groups-md-9ce75a19.md",
       "sourcePath": "docs/framework/solid/guides/form-groups.md",
       "bytes": 5349,
@@ -1867,7 +1867,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-linked-fields-md-1e40c9c5.md",
       "sourcePath": "docs/framework/solid/guides/linked-fields.md",
       "bytes": 2462,
@@ -1891,7 +1891,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-submission-handling-md-4cd820e1.md",
       "sourcePath": "docs/framework/solid/guides/submission-handling.md",
       "bytes": 2911,
@@ -1915,7 +1915,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-guides-validation-md-c9d470ce.md",
       "sourcePath": "docs/framework/solid/guides/validation.md",
       "bytes": 1794,
@@ -1969,7 +1969,7 @@
         "solid"
       ],
       "package": "@tanstack/solid-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-solid-quick-start-md-e99afc94.md",
       "sourcePath": "docs/framework/solid/quick-start.md",
       "bytes": 1408,
@@ -1993,7 +1993,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-guides-arrays-md-6f2d2c2e.md",
       "sourcePath": "docs/framework/lit/guides/arrays.md",
       "bytes": 4373,
@@ -2017,16 +2017,16 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-guides-basic-concepts-md-818c1ff0.md",
       "sourcePath": "docs/framework/lit/guides/basic-concepts.md",
-      "bytes": 4614,
+      "bytes": 4581,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview; Form Options; Form Instance; Field; Field State; Understanding 'isDirty' in Different Libraries",
           "file": "references/guides/form-docs-framework-lit-guides-basic-concepts-md-818c1ff0.md",
-          "bytes": 4614
+          "bytes": 4581
         }
       ],
       "examples": []
@@ -2041,7 +2041,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-guides-dynamic-validation-md-65a7cdfb.md",
       "sourcePath": "docs/framework/lit/guides/dynamic-validation.md",
       "bytes": 7838,
@@ -2065,7 +2065,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-guides-form-composition-md-084681ff.md",
       "sourcePath": "docs/framework/lit/guides/form-composition.md",
       "bytes": 9186,
@@ -2089,7 +2089,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-guides-form-groups-md-3d478226.md",
       "sourcePath": "docs/framework/lit/guides/form-groups.md",
       "bytes": 7395,
@@ -2113,7 +2113,7 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-guides-validation-md-a6031d73.md",
       "sourcePath": "docs/framework/lit/guides/validation.md",
       "bytes": 1774,
@@ -2167,16 +2167,16 @@
         "lit"
       ],
       "package": "@tanstack/lit-form",
-      "version": "1.25.5",
+      "version": "1.25.6",
       "file": "references/guides/form-docs-framework-lit-quick-start-md-efece333.md",
       "sourcePath": "docs/framework/lit/quick-start.md",
-      "bytes": 2418,
+      "bytes": 2387,
       "prerequisites": [],
       "sections": [
         {
           "title": "Overview",
           "file": "references/guides/form-docs-framework-lit-quick-start-md-efece333.md",
-          "bytes": 2418
+          "bytes": 2387
         }
       ],
       "examples": []
@@ -2191,7 +2191,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-arrays-md-94ec3832.md",
       "sourcePath": "docs/framework/svelte/guides/arrays.md",
       "bytes": 2677,
@@ -2215,7 +2215,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-async-initial-values-md-f77018ef.md",
       "sourcePath": "docs/framework/svelte/guides/async-initial-values.md",
       "bytes": 1937,
@@ -2239,7 +2239,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-basic-concepts-md-fb046053.md",
       "sourcePath": "docs/framework/svelte/guides/basic-concepts.md",
       "bytes": 9903,
@@ -2263,7 +2263,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-dynamic-validation-md-16ecb3b4.md",
       "sourcePath": "docs/framework/svelte/guides/dynamic-validation.md",
       "bytes": 6051,
@@ -2287,7 +2287,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-form-composition-md-c121dab5.md",
       "sourcePath": "docs/framework/svelte/guides/form-composition.md",
       "bytes": 1892,
@@ -2346,7 +2346,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-form-groups-md-d7da18da.md",
       "sourcePath": "docs/framework/svelte/guides/form-groups.md",
       "bytes": 5894,
@@ -2370,7 +2370,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-linked-fields-md-e6b1933c.md",
       "sourcePath": "docs/framework/svelte/guides/linked-fields.md",
       "bytes": 2350,
@@ -2394,7 +2394,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-guides-validation-md-337264ae.md",
       "sourcePath": "docs/framework/svelte/guides/validation.md",
       "bytes": 12527,
@@ -2418,7 +2418,7 @@
         "svelte"
       ],
       "package": "@tanstack/svelte-form",
-      "version": "1.33.5",
+      "version": "1.33.6",
       "file": "references/guides/form-docs-framework-svelte-quick-start-md-e8dcf4c6.md",
       "sourcePath": "docs/framework/svelte/quick-start.md",
       "bytes": 1310,

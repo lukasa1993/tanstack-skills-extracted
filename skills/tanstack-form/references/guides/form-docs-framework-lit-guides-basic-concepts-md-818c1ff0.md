@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-lit-guides-basic-concepts-md"></a>
 
-Release-matched documentation · `@tanstack/lit-form@1.25.5`.
+Release-matched documentation · `@tanstack/lit-form@1.25.6`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -63,7 +63,7 @@ For Example:
           value.length < 3 ? "Not long enough" : undefined,
         },
       },
-      (field: FieldApi<Employee, "firstName">) => {
+      (field) => {
         return html` <div>
           <label class="first-name-label">First Name</label>
           <input

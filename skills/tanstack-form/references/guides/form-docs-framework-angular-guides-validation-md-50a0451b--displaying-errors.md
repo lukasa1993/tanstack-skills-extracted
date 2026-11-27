@@ -1,6 +1,6 @@
 # Validation — Displaying Errors
 
-[Guide and prerequisites](./form-docs-framework-angular-guides-validation-md-50a0451b.md) · Release-matched documentation · `@tanstack/angular-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-angular-guides-validation-md-50a0451b.md) · Release-matched documentation · `@tanstack/angular-form@1.33.6`.
 
 ## Displaying Errors
 

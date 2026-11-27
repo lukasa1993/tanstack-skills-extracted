@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Validate and check conflicts
 
-[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-angular-guides-custom-hotkey-recording-md-580c3d9c.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 ## Validate and check conflicts
 
@@ -32,6 +32,24 @@ injectHotkeyRecorder({
 
 Rejected recordings keep the recorder active, and rejected sequences keep their captured `steps` so users can edit them with `Backspace`.
 
+### Save hotkeys that work on another platform
+
+A recorded hotkey's modifiers mean the same keys on every platform when they are `Mod`, `Shift`, and `Alt`. A recorded character such as `@` follows the layout, so it can sit on a different key, while a bracketed code such as `[Slash]` stays on the same physical key. The recorder writes Command on macOS and Control elsewhere as `Mod`. The other two modifiers stay platform-specific: Control+S recorded on a Mac is `Control+S`, which on Windows is the same press as `Mod+S`, and the Windows key recorded on Windows is `Meta`, which on a Mac is Command.
+
+If your app syncs hotkeys between machines, pick one rule:
+
+- Store each hotkey with the platform it was recorded on, and use it only there. `context.platform` names it.
+- Reject the platform-specific modifiers, so every saved hotkey's modifiers work on every platform:
+
+```ts
+injectHotkeyRecorder({
+  validate: (_hotkey, { parsedChord, platform }) =>
+    !(platform === 'mac' ? parsedChord.ctrl : parsedChord.meta) ||
+    'Use Ctrl or Cmd, Shift, and Alt.',
+  onRecord: (hotkey) => saveHotkey(hotkey),
+})
+```
+
 ### Check for conflicts
 
 Pass `detectConflicts: true` to reject bindings already registered on the page:
@@ -46,7 +64,7 @@ injectHotkeyRecorder({
 })
 ```
 
-By default, `detectConflicts` checks every enabled `keydown` registration across all [scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md). It treats chords and sequences that share a prefix as colliding, and compares the underlying key presses, so a recorded `Shift+[Slash]` catches a registered `?`. Pass an options object to narrow the check:
+By default, `detectConflicts` checks every enabled `keydown` registration across all [scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1.md#source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md). It treats chords and sequences that share a prefix as colliding, and compares the underlying key presses, so `Shift+[Slash]`, recorded by code, catches a registered `?`. Pass an options object to narrow the check:
 
 ```ts
 detectConflicts: {
@@ -69,6 +87,6 @@ detectConflicts: {
 | `'validation'` | Rejected by your `validate` callback (`message` holds your return value) |
 | `'whitespace'` | The user pressed a whitespace character, which can't be recorded |
 | `'missing-code'` | The key press had no physical `code` when one was needed |
-| `'alt-graph'` | An `AltGr` combination that can't be recorded |
+| `'alt-graph'` | An `AltGr` combination that typed no character to record, or, with `recordBy: 'code'`, any other `AltGr` combination. On Windows, the recorder treats `AltGr` with a key it doesn't change, such as `Home`, as Control+Alt, so no mode rejects that press: it records `Mod+Alt+Home`, or `Mod+Alt+[Home]` with `recordBy: 'code'` |
 
 `findHotkeyConflicts(hotkey, options)` runs the same conflict check outside a recording and returns `HotkeyConflict` objects (`{ registration }`) wrapping matching [registration views](./hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md-725426f1.md#source-hotkeys-docs-framework-angular-guides-cheat-sheet-ui-helpers-md).

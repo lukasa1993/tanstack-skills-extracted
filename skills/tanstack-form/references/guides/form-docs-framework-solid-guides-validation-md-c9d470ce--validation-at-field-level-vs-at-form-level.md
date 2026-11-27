@@ -1,6 +1,6 @@
 # Validation — Validation at field level vs at form level
 
-[Guide and prerequisites](./form-docs-framework-solid-guides-validation-md-c9d470ce.md) · Release-matched documentation · `@tanstack/solid-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-solid-guides-validation-md-c9d470ce.md) · Release-matched documentation · `@tanstack/solid-form@1.33.6`.
 
 ## Validation at field level vs at form level
 

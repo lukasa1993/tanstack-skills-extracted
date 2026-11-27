@@ -1,6 +1,6 @@
 # Form Composition — Reusing groups of fields in multiple forms
 
-[Guide and prerequisites](./form-docs-framework-react-guides-form-composition-md-d727f890.md) · Release-matched documentation · `@tanstack/react-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-react-guides-form-composition-md-d727f890.md) · Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 ## Reusing groups of fields in multiple forms
 

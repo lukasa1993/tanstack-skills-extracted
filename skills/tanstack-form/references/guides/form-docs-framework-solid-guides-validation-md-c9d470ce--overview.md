@@ -1,6 +1,6 @@
 # Validation — Overview
 
-[Guide and prerequisites](./form-docs-framework-solid-guides-validation-md-c9d470ce.md) · Release-matched documentation · `@tanstack/solid-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-solid-guides-validation-md-c9d470ce.md) · Release-matched documentation · `@tanstack/solid-form@1.33.6`.
 
 At the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:
 

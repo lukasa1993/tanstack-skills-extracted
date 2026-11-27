@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-preact-guides-ui-libraries-md"></a>
 
-Release-matched documentation · `@tanstack/preact-form@1.30.5`.
+Release-matched documentation · `@tanstack/preact-form@1.30.6`.
 
 [Topic index](../framework-preact-advanced.md) · [Source provenance](../SOURCES.md)
 

@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-hotkeys-app-hotkeys"></a>
 
-Published skill · `@tanstack/hotkeys@0.35.0`.
+Published skill · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -35,9 +35,9 @@ Augment `Register` in the adapter module you import from, such as `declare modul
 - **Register the app hotkey, not its value.** Pass `appHotkeys['doc.save']`. Passing `.hotkey` registers the declared default, so the user's rebinding never applies, and the list reports the shortcut as `'inactive'`.
 - **Save what `onCustomHotkeysChange` receives.** It holds only the shortcuts the user changed, so users still get new defaults. Saving every effective hotkey freezes today's defaults into their data.
 - **Ids are a storage contract.** Saved data is keyed by id, and unknown ids are silently dropped, so renaming an id discards users' customizations.
-- **`setCustomHotkey` returns conflicts and changes nothing when there are any.** Check the result before reporting success, or reject the key press earlier by calling `findConflicts` in the recorder's `validate`.
+- **`setCustomHotkey` returns conflicts and changes nothing when there are any.** Check the result before reporting success, or reject the key press earlier by calling `findConflicts` in the recorder's `validate`. It also refuses a value that isn't a valid hotkey, such as `''`, and warns in development. Pass `null` to unbind.
 - **Declare scopes on app hotkeys that share keys.** An app hotkey without a scope, or in `'global'`, conflicts with every other app hotkey on the same keys, so rebinding is rejected.
-- **Conflict checks need the recorder's `context`.** Two hotkeys can be written differently and fire for the same key press, such as a recorded `Shift+[Slash]` and a declared `?`. `findConflicts(id, hotkey, context)` and `setCustomHotkey(id, hotkey, context)` check with the key press when they get the `context` that `validate` and `onRecord` receive. Without it, they only compare how the hotkeys are written.
+- **Conflict checks need the recorder's `context`.** Two hotkeys can be written differently and fire for the same key press, such as `Shift+[Slash]` recorded by code and a declared `?`. `findConflicts(id, hotkey, context)` and `setCustomHotkey(id, hotkey, context)` check with the key press when they get the `context` that `validate` and `onRecord` receive. Without it, they only compare how the hotkeys are written.
 - **A cheat sheet dialog usually gets an exclusive scope.** Register the hotkey that opened it inside the dialog too, so the same keys close it.
 
 When building the "press a new shortcut" control, read [recording](../assets/tanstack-hotkeys-app-hotkeys/references/recording.md).

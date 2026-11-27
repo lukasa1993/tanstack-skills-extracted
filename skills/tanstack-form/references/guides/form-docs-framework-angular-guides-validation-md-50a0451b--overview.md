@@ -1,6 +1,6 @@
 # Validation — Overview
 
-[Guide and prerequisites](./form-docs-framework-angular-guides-validation-md-50a0451b.md) · Release-matched documentation · `@tanstack/angular-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-angular-guides-validation-md-50a0451b.md) · Release-matched documentation · `@tanstack/angular-form@1.33.6`.
 
 At the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:
 

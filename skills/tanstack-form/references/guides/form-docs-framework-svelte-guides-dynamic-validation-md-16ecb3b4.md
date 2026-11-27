@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-svelte-guides-dynamic-validation-md"></a>
 
-Release-matched documentation · `@tanstack/svelte-form@1.33.5`.
+Release-matched documentation · `@tanstack/svelte-form@1.33.6`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 

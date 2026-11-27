@@ -1,6 +1,6 @@
 # Form Composition — Reusing groups of fields in multiple forms
 
-[Guide and prerequisites](./form-docs-framework-svelte-guides-form-composition-md-c121dab5.md) · Release-matched documentation · `@tanstack/svelte-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-svelte-guides-form-composition-md-c121dab5.md) · Release-matched documentation · `@tanstack/svelte-form@1.33.6`.
 
 ## Reusing groups of fields in multiple forms
 

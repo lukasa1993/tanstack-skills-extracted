@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Validate and check conflicts
 
-[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-lit-guides-custom-hotkey-recording-md-7d47b3ce.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 ## Validate and check conflicts
 
@@ -32,6 +32,24 @@ recorder = new HotkeyRecorderController(this, {
 
 A rejected recording keeps listening, so the user can try again. A rejected sequence recording keeps its steps, so the user can edit them with Backspace.
 
+### Save hotkeys that work on another platform
+
+A recorded hotkey's modifiers mean the same keys on every platform when they are `Mod`, `Shift`, and `Alt`. A recorded character such as `@` follows the layout, so it can sit on a different key, while a bracketed code such as `[Slash]` stays on the same physical key. The recorder writes Command on macOS and Control elsewhere as `Mod`. The other two modifiers stay platform-specific: Control+S recorded on a Mac is `Control+S`, which on Windows is the same press as `Mod+S`, and the Windows key recorded on Windows is `Meta`, which on a Mac is Command.
+
+If your app syncs hotkeys between machines, pick one rule:
+
+- Store each hotkey with the platform it was recorded on, and use it only there. `context.platform` names it.
+- Reject the platform-specific modifiers, so every saved hotkey's modifiers work on every platform:
+
+```ts
+recorder = new HotkeyRecorderController(this, {
+  validate: (_hotkey, { parsedChord, platform }) =>
+    !(platform === 'mac' ? parsedChord.ctrl : parsedChord.meta) ||
+    'Use Ctrl or Cmd, Shift, and Alt.',
+  onRecord: (hotkey) => saveHotkey(hotkey),
+})
+```
+
 ### Check for conflicts
 
 Set `detectConflicts: true` to reject a hotkey that's already registered:
@@ -58,7 +76,7 @@ detectConflicts: {
 }
 ```
 
-Two hotkeys can be written differently and still fire for the same key press. On a US keyboard, a recorded `Shift+[Slash]` and a registered `?` are the same press. The check also tests each registered hotkey against the key presses that made the recording, so it finds these.
+Two hotkeys can be written differently and still fire for the same key press. On a US keyboard, `Shift+[Slash]`, recorded by code or saved by an earlier version, and a registered `?` are the same press. The check also tests each registered hotkey against the key presses that made the recording, so it finds these.
 
 A conflict check finds hotkeys that could collide. It can't promise which callback a key press would run, because propagation, typing in fields, other listeners, and pages that haven't rendered all affect that. To check app hotkeys, including ones on pages that haven't rendered, use `findConflicts` from [app hotkeys](./hotkeys-docs-framework-lit-guides-app-hotkeys-md-6d116aa2.md#source-hotkeys-docs-framework-lit-guides-app-hotkeys-md) instead.
 
@@ -70,6 +88,6 @@ A conflict check finds hotkeys that could collide. It can't promise which callba
 | `'validation'` | Rejected by your `validate` callback (`message` holds your return string) |
 | `'whitespace'` | The user pressed a whitespace character that can't be recorded |
 | `'missing-code'` | The key press had no physical `code`, and the recorder can't record it another way |
-| `'alt-graph'` | The user pressed an `AltGr` combination that the recorder can't record |
+| `'alt-graph'` | The user pressed an `AltGr` combination that typed no character to record, or, with `recordBy: 'code'`, any other `AltGr` combination. On Windows, the recorder treats `AltGr` with a key it doesn't change, such as `Home`, as Control+Alt, so no mode rejects that press: it records `Mod+Alt+Home`, or `Mod+Alt+[Home]` with `recordBy: 'code'` |
 
 `findHotkeyConflicts(hotkey, options)` runs the same conflict check outside a recording and returns `HotkeyConflict` objects (`{ registration }`) wrapping matching [registration views](./hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md-a557e5c4.md#source-hotkeys-docs-framework-lit-guides-cheat-sheet-ui-helpers-md).

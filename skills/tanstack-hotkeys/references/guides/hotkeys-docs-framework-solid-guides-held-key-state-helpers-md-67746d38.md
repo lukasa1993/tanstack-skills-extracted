@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -104,4 +104,4 @@ Held keys reset automatically on window blur, tab switch, or macOS `Command` rel
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for the cases the tracker handles.
 
-See the [createHeldKeys example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/solid/createHeldKeys) and [createKeyHold example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/solid/createKeyHold).
+See the [createHeldKeys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/createHeldKeys) and [createKeyHold example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/createKeyHold).

@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Migrating from v0.8 and earlier
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 ## Migrating from v0.8 and earlier
 

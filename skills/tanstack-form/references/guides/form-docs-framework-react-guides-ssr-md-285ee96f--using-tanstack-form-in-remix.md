@@ -1,6 +1,6 @@
 # Ssr — Using TanStack Form in Remix
 
-[Guide and prerequisites](./form-docs-framework-react-guides-ssr-md-285ee96f.md) · Release-matched documentation · `@tanstack/react-form@1.33.5`.
+[Guide and prerequisites](./form-docs-framework-react-guides-ssr-md-285ee96f.md) · Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 ## Using TanStack Form in Remix
 

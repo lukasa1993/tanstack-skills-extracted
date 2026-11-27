@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -148,4 +148,4 @@ For resetting `HotkeyManager` and `KeyStateTracker` between tests and pinning th
 
 For resetting `HotkeyManager` and `KeyStateTracker` between tests and pinning the platform, see [Testing](./hotkeys-docs-framework-preact-guides-testing-md-81c90c35.md#source-hotkeys-docs-framework-preact-guides-testing-md).
 
-See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/reference/classes/HotkeyManager.md) for the full method list.
+See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/HotkeyManager.md) for the full method list.

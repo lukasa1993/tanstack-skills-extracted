@@ -1,6 +1,6 @@
 # Sensible Defaults — At a glance
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 ## At a glance
 
@@ -18,5 +18,5 @@
 | Already-prevented keys | Hotkeys still fire | `ignoreDefaultPrevented` |
 | Sequence step timeout | 1 second (`1000` ms) | `timeout` |
 | Duplicate registrations | Allowed, with a development console warning | `conflictBehavior` |
-| Recording | Portable name or physical fallback. `Escape`, `Tab`, `Shift+Tab` cancel | `recordBy`, `recordTab`, recorder options |
+| Recording | What the press typed, written as by hand, or a physical fallback. `Escape`, `Tab`, `Shift+Tab` cancel | `recordBy`, `recordTab`, recorder options |
 | Display formatting | Symbols on macOS (`⇧ ⌘ S`), text elsewhere (`Ctrl+Shift+S`) | Label formatter options (such as `useFormatForDisplay`) |

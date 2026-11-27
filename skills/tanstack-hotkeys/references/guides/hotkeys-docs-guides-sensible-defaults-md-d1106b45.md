@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-guides-sensible-defaults-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../other-guides.md) · [Source provenance](../SOURCES.md)
 
@@ -26,7 +26,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Component libraries that handle the same keys](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--component-libraries-that-handle-the-same-keys.md) — 12 KiB
 - [Sequences allow 1 second between steps](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--sequences-allow-1-second-between-steps.md) — 1 KiB
 - [Duplicate registrations warn](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--duplicate-registrations-warn.md) — 1 KiB
-- [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md) — 3 KiB
+- [Recording captures what the user pressed](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--recording-captures-what-the-user-pressed.md) — 5 KiB
 - [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--held-keys-reset-when-the-window-loses-focus.md) — 1 KiB
 - [Display matches the platform](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--display-matches-the-platform.md) — 1 KiB
 - [Changing the defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45--changing-the-defaults.md) — 3 KiB

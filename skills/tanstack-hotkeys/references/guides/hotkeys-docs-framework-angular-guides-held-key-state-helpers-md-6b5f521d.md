@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -110,4 +110,4 @@ export class CanvasComponent {
 
 Held keys reset automatically when the window loses focus, so a key released after switching apps never stays stuck. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [injectHeldKeys example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/injectHeldKeys) and the [injectKeyHold example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/angular/injectKeyHold).
+See the [injectHeldKeys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/injectHeldKeys) and the [injectKeyHold example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/injectKeyHold).

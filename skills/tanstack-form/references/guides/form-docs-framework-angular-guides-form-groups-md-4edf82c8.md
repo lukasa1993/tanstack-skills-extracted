@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-angular-guides-form-groups-md"></a>
 
-Release-matched documentation · `@tanstack/angular-form@1.33.5`.
+Release-matched documentation · `@tanstack/angular-form@1.33.6`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 

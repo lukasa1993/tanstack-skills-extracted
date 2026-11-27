@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -197,4 +197,4 @@ const stored = normalizeHotkey(parsed, 'mac') // 'Mod+[KeyS]'
 
 `validateHotkey` checks syntax only, so map `reason` codes to your own UI strings. To validate as users press keys, see [Validate and check conflicts](./hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md#source-hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md).
 
-Try these formatting options interactively in the [Astro example](https://github.com/TanStack/hotkeys/tree/fc48fc09f82cd285da5e0991948d604cec2a3263/examples/preact/useFormatForDisplay-astro), or see [Cheat Sheets](./hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md#source-hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md) for rendering full shortcut lists.
+Try these formatting options interactively in the [Astro example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/useFormatForDisplay-astro), or see [Cheat Sheets](./hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md#source-hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md) for rendering full shortcut lists.

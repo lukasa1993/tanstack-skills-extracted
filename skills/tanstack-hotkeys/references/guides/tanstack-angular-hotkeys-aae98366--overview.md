@@ -1,6 +1,6 @@
 # Angular Hotkeys — Overview
 
-[Guide and prerequisites](./tanstack-angular-hotkeys-aae98366.md) · Published skill · `@tanstack/angular-hotkeys@0.25.5`.
+[Guide and prerequisites](./tanstack-angular-hotkeys-aae98366.md) · Published skill · `@tanstack/angular-hotkeys@0.25.6`.
 
 # TanStack Hotkeys in Angular
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.35.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -150,4 +150,4 @@ The matcher tracks its own progress. `getProgress()` returns the number of steps
 
 To reset `HotkeyManager` and `KeyStateTracker` between tests and pin the platform, see [Testing](./hotkeys-docs-framework-lit-guides-testing-md-1e7f8a93.md#source-hotkeys-docs-framework-lit-guides-testing-md).
 
-The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/fc48fc09f82cd285da5e0991948d604cec2a3263/docs/reference/classes/HotkeyManager.md) lists every method.
+The [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/HotkeyManager.md) lists every method.

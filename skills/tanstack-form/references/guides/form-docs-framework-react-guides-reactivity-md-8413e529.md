@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-react-guides-reactivity-md"></a>
 
-Release-matched documentation · `@tanstack/react-form@1.33.5`.
+Release-matched documentation · `@tanstack/react-form@1.33.6`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -57,3 +57,18 @@ The `form.Subscribe` component is best suited when you need to react to somethin
 > The `form.Subscribe` component doesn't trigger component-level re-renders. Anytime the value subscribed to changes, only the `form.Subscribe` component re-renders.
 
 The choice between whether to use `useSelector` or `form.Subscribe` mainly boils down to your use case. If you're aiming for direct UI updates based on form state, use `form.Subscribe` for its optimization perks. And if you need the reactivity within the logic, then `useSelector` is the better choice.
+
+## Field state
+
+Inside a field, you don't need `useSelector` or `form.Subscribe` to read the field's own state. `form.Field` subscribes to its field for you: its render function runs again whenever the field's value or meta (such as `isTouched`, `isDirty`, `errors` or `isValidating`) changes, so `field.state.value` and `field.state.meta` are up to date there.
+
+> [!NOTE]
+> Array fields (`mode="array"`) are an exception: to avoid re-rendering the whole list on every keystroke, they don't re-render when a value inside one of their items changes. Render those values with their own `form.Field` instead.
+
+Field components that read the field with `useFieldContext`, as shown in [Form Composition](./form-docs-framework-react-guides-form-composition-md-d727f890.md#source-form-docs-framework-react-guides-form-composition-md), live outside that render function. In those components, read field state such as `meta` with `useSelector` and the field's store:
+
+```tsx
+import { useSelector } from '@tanstack/react-form'
+
+const errors = useSelector(field.store, (state) => state.meta.errors)
+```

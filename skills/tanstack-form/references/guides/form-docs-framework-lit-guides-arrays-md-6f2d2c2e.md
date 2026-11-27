@@ -2,7 +2,7 @@
 
 <a id="source-form-docs-framework-lit-guides-arrays-md"></a>
 
-Release-matched documentation · `@tanstack/lit-form@1.25.5`.
+Release-matched documentation · `@tanstack/lit-form@1.25.6`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 

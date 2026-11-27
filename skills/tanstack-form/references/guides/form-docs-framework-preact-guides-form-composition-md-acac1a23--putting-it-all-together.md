@@ -1,6 +1,6 @@
 # Form Composition — Putting it all together
 
-[Guide and prerequisites](./form-docs-framework-preact-guides-form-composition-md-acac1a23.md) · Release-matched documentation · `@tanstack/preact-form@1.30.5`.
+[Guide and prerequisites](./form-docs-framework-preact-guides-form-composition-md-acac1a23.md) · Release-matched documentation · `@tanstack/preact-form@1.30.6`.
 
 ## Putting it all together
 

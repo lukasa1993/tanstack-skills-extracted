@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-octane-hotkeys"></a>
 
-Published skill · `@tanstack/octane-hotkeys@0.15.5`.
+Published skill · `@tanstack/octane-hotkeys@0.15.6`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
