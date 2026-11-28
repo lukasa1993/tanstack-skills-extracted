@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
@@ -86,14 +86,14 @@ function Editor() {
 }
 ```
 
-Keep two scope rules in mind:
+Keep these scope rules in mind:
 
 - **Providers without `scope` inherit.** A nested provider that only sets `defaultOptions` stays in its parent's scope.
 - **Scopes are identified by name.** Two mounted providers with `scope="editor"` share the same `'editor'` scope, which stays active until both unmount. Give independent regions distinct names so they toggle separately.
 
 ## Scopes and targets
 
-A scope and a [`target`](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md) both constrain when a hotkey fires, using two different axes:
+A scope and a [`target`](./hotkeys-docs-framework-react-guides-hotkeys-md-88956014.md#source-hotkeys-docs-framework-react-guides-hotkeys-md) both constrain when a hotkey fires, on different axes:
 
 | | Scope | Target |
 | --- | --- | --- |
@@ -178,7 +178,7 @@ function FolderPane({ name }: { name: string }) {
 }
 ```
 
-`FolderPane` stays unaware of which tab is selected. Note two details:
+`FolderPane` stays unaware of which tab is selected. Note these details:
 
 - **`enabled` cascades downward.** Disabling a provider deactivates every nested scope inside it, even if that provider sets no `scope` of its own. A scopeless provider with `enabled={false}` leaves its own hotkeys active because `'global'` cannot be disabled.
 - **Inactive scopes stay listed.** Their hotkeys remain visible in devtools and report `'suspended'` in [`useAppHotkeyList`](./hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md-5cace2b3.md#source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md).
@@ -261,8 +261,12 @@ export const appHotkeys = defineAppHotkeys({
 
 If you integrate non-React overlays, such as third-party dialogs, activate their scopes imperatively via [Activate a scope](./hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md#source-hotkeys-docs-framework-react-guides-hotkey-manager-md).
 
+## Suspend character key shortcuts
+
+Pass `suspendCharacterKeys` to `HotkeysProvider` to pause document-level character key shortcuts, such as `K` or `['G', 'H']`, across the app while the prop is `true`. Suspended hotkeys report the status `'suspended'`, like hotkeys in an inactive scope, and the prop applies even when `enabled` is `false`. Wire it to a user setting as shown in [Accessibility](./hotkeys-docs-framework-react-guides-accessibility-md-61963ba5.md#source-hotkeys-docs-framework-react-guides-accessibility-md).
+
 ## Inspect scopes
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) group registrations by scope and display which scopes are active, suspended, allowed, or exclusive. To read the same state inside components, see [Read scope state](./hotkeys-docs-framework-react-guides-hotkey-manager-md-8041d892.md#source-hotkeys-docs-framework-react-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/scopes) for nested, `enabled`, and `exclusive` scopes working together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/react/scopes) for nested, `enabled`, and `exclusive` scopes working together.

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -255,8 +255,12 @@ export const appHotkeys = defineAppHotkeys({
 
 For UI that Svelte doesn't render, such as a dialog from another library, activate a scope on the hotkey manager. See [Activate a scope](./hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md#source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md).
 
+## Suspend character key shortcuts
+
+Pass `suspendCharacterKeys` to `HotkeysProvider` to pause document-level character key shortcuts, such as `K` or `['G', 'H']`, across the app while the prop is `true`. Suspended hotkeys report the status `'suspended'`, like hotkeys in an inactive scope, and the prop applies even when `enabled` is `false`. Wire it to a user setting as shown in [Accessibility](./hotkeys-docs-framework-svelte-guides-accessibility-md-5d8cdb45.md#source-hotkeys-docs-framework-svelte-guides-accessibility-md).
+
 ## Inspect scopes
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) group registrations by scope and show which scopes are active, suspended, allowed, or exclusive. To read the same state in your own UI, see [Read scope state](./hotkeys-docs-framework-svelte-guides-hotkey-manager-md-b315025c.md#source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/scopes) for nested, enabled, and exclusive scopes together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/scopes) for nested, enabled, and exclusive scopes together.

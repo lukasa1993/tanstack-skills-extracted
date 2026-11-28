@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-ssr-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -123,7 +123,7 @@ export default function Shortcuts({ platform }: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/preact/useFormatForDisplay-astro) shows this setup.
 
 ### Vite server rendering
 
@@ -165,7 +165,7 @@ hydrate(<App platform={detectPlatform()} />, document.getElementById('app')!)
 
 The server calls `render` with the request's `User-Agent` header: `request.headers.get('user-agent')` for a Fetch API `Request`, or `req.headers['user-agent']` in Express.
 
-The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/useFormatForDisplay-vite-ssr) shows this setup.
+The [Vite SSR example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/preact/useFormatForDisplay-vite-ssr) shows this setup.
 
 ### Render a label only in the browser
 

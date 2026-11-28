@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -110,4 +110,20 @@ export class CanvasComponent {
 
 Held keys reset automatically when the window loses focus, so a key released after switching apps never stays stuck. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [injectHeldKeys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/injectHeldKeys) and the [injectKeyHold example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/angular/injectKeyHold).
+See the [injectHeldKeys example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/angular/injectHeldKeys) and the [injectKeyHold example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/angular/injectKeyHold).
+
+## Lock keys
+
+Caps Lock, Num Lock, and Scroll Lock toggle instead of being held. `injectKeyHold('CapsLock')()` is `true` only while the key is down, not while Caps Lock is on. To read whether a lock is on, use `injectKeyLockState`:
+
+```ts
+import { injectKeyLockState } from '@tanstack/angular-hotkeys'
+
+readonly capsLock = injectKeyLockState('CapsLock') // capsLock(): true, false, or null
+```
+
+```html
+<span role="status">{{ capsLock() ? 'Caps Lock is on' : '' }}</span>
+```
+
+The value is `null` until the browser reports the lock. See [Read lock key state](./hotkeys-docs-framework-angular-guides-key-lock-state-md-8154f4e2.md#source-hotkeys-docs-framework-angular-guides-key-lock-state-md) for when that happens and which browsers report each lock.

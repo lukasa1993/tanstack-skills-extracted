@@ -2,13 +2,13 @@
 
 <a id="source-hotkeys-docs-framework-react-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-react.md) · [Source provenance](../SOURCES.md)
 
 Build your cheat sheet directly from your registered or declared hotkeys so the help dialog never drifts out of sync when bindings change. Format each binding with `useFormatForDisplay` (see [Formatting & Display](./hotkeys-docs-framework-react-guides-formatting-display-md-9091ea8e.md#source-hotkeys-docs-framework-react-guides-formatting-display-md)).
 
-Two hooks cover different cheat sheet setups:
+Each of these hooks covers a different cheat sheet setup:
 
 - `useHotkeyRegistrations()` returns currently mounted registrations from `useHotkey` and `useHotkeys`.
 - `useAppHotkeyList()` returns every [app hotkey](./hotkeys-docs-framework-react-guides-app-hotkeys-md-211e92b7.md#source-hotkeys-docs-framework-react-guides-app-hotkeys-md) you declared, including shortcuts on routes that haven't mounted yet.
@@ -87,8 +87,8 @@ function ShortcutList() {
 
 Filtering by `meta?.name` omits unnamed helper shortcuts, such as a dialog's `Escape`. Checking `status === 'active'` hides paused shortcuts:
 
-- `'active'` means the hotkey is enabled and in an active scope
-- `'suspended'` means it is enabled, but its [scope](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) is inactive or suspended by an exclusive scope
+- `'active'` means the hotkey is enabled and nothing suspends it
+- `'suspended'` means it is enabled, but its [scope](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md) is inactive or suspended by an exclusive scope, or it is a document-level character key shortcut while [character keys are suspended](./hotkeys-docs-framework-react-guides-accessibility-md-61963ba5.md#source-hotkeys-docs-framework-react-guides-accessibility-md)
 - `'disabled'` means `enabled: false` was set
 
 Each entry also includes `id`, `hotkey`, `options`, `target`, and `triggerCount`. Chord entries (`kind === 'chord'`) add `parsedChord`, and sequence entries (`kind === 'sequence'`) add `parsedSequence` and `matchedStepCount` (used in [Show sequences in your UI](./hotkeys-docs-framework-react-guides-sequences-md-00eadae7.md#source-hotkeys-docs-framework-react-guides-sequences-md)). If multiple mounted components register the same shortcut, such as rows in a list, each registration appears as its own entry.
@@ -120,8 +120,8 @@ function CheatSheet() {
 
 | Status | Meaning |
 | --- | --- |
-| `'active'` | At least one enabled registration in an active scope |
-| `'suspended'` | Enabled registrations exist, but none in an active scope |
+| `'active'` | At least one registration reports `'active'` |
+| `'suspended'` | Enabled registrations exist, but none can fire: their scope is inactive, or character keys are suspended |
 | `'disabled'` | Registered, but every registration has `enabled: false` |
 | `'inactive'` | Has a hotkey assigned, but no component has registered it yet |
 | `'unbound'` | No hotkey assigned (`null`) |
@@ -217,4 +217,4 @@ A few details to keep in mind:
 - `useAppHotkeyList` still shows every app hotkey while open. Items from the page behind it report `'suspended'`. To let background shortcuts keep working, omit `exclusive`. See [Exclusive scopes](./hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md-bdb950e6.md#source-hotkeys-docs-framework-react-guides-hotkeys-provider-and-scopes-md).
 - If you bind `?` to open your cheat sheet, remember single-key shortcuts need a way to turn them off or remap them for accessibility. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/react/kitchen-sink) for a complete grouped cheat sheet with live statuses and rebinding.
+See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/react/kitchen-sink) for a complete grouped cheat sheet with live statuses and rebinding.

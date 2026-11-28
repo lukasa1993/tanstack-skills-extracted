@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -86,8 +86,8 @@ Pass `meta` inline without memoizing it. TanStack Hotkeys compares its primitive
 
 Filtering by `meta?.name` omits unnamed helper shortcuts, such as a dialog's `Escape`. Checking `status === 'active'` hides paused shortcuts:
 
-- `'active'` means the hotkey is enabled and in an active scope
-- `'suspended'` means it is enabled, but its [scope](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) is inactive or suspended by an exclusive scope
+- `'active'` means the hotkey is enabled and nothing suspends it
+- `'suspended'` means it is enabled, but its [scope](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) is inactive or suspended by an exclusive scope, or it is a document-level character key shortcut while [character keys are suspended](./hotkeys-docs-framework-svelte-guides-accessibility-md-5d8cdb45.md#source-hotkeys-docs-framework-svelte-guides-accessibility-md)
 - `'disabled'` means `enabled: false` was set
 
 Each entry also includes `id`, `hotkey`, `options`, `target`, and `triggerCount`. Chord entries (`kind === 'chord'`) add `parsedChord`, and sequence entries (`kind === 'sequence'`) add `parsedSequence` and `matchedStepCount` (used in [Show sequences in your UI](./hotkeys-docs-framework-svelte-guides-sequences-md-05bb86f7.md#source-hotkeys-docs-framework-svelte-guides-sequences-md)). If several components register the same shortcut, such as rows in a list, each registration appears as its own entry.
@@ -117,8 +117,8 @@ Each entry also includes `id`, `hotkey`, `options`, `target`, and `triggerCount`
 
 | Status | Meaning |
 | --- | --- |
-| `'active'` | At least one enabled registration in an active scope |
-| `'suspended'` | Enabled registrations exist, but none in an active scope |
+| `'active'` | At least one registration reports `'active'` |
+| `'suspended'` | Enabled registrations exist, but none can fire: their scope is inactive, or character keys are suspended |
 | `'disabled'` | Registered, but every registration has `enabled: false` |
 | `'inactive'` | Has a hotkey assigned, but no component has registered it yet |
 | `'unbound'` | No hotkey assigned (`null`) |
@@ -213,4 +213,4 @@ A few details to keep in mind:
 - `getAppHotkeyList` still shows every app hotkey while the dialog is open. Items from the page behind it report `'suspended'`. To let background shortcuts keep working, omit `exclusive`. See [Exclusive scopes](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md).
 - When binding `?` to open your cheat sheet, remember that single-key shortcuts need a way to turn them off or remap them for accessibility. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/kitchen-sink) for a complete grouped cheat sheet with live statuses and rebinding.
+See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/kitchen-sink) for a complete grouped cheat sheet with live statuses and rebinding.

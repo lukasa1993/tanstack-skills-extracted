@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-preact-guides-custom-hotkey-recording-md-816282c2.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Recorder options
 
@@ -21,6 +21,6 @@
 | `onReject` | None | Called with `{ reason, hotkey?, conflicts?, message? }` when rejected |
 | `platform` | Detected | Override `'mac'`, `'windows'`, or `'linux'` for `Mod` output |
 
-Set defaults for all recorders via `HotkeysProvider` using `hotkeyRecorder` in `defaultOptions`. See [Set default options](./hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md#source-hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md) and [`useHotkeyRecorder`](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/framework/preact/reference/functions/useHotkeyRecorder.md).
+Set defaults for all recorders via `HotkeysProvider` using `hotkeyRecorder` in `defaultOptions`. See [Set default options](./hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md-830bfdea.md#source-hotkeys-docs-framework-preact-guides-hotkeys-provider-and-scopes-md) and [`useHotkeyRecorder`](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/framework/preact/reference/functions/useHotkeyRecorder.md).
 
-Try the [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/useHotkeyRecorder) or [sequences recorder example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/useHotkeyRecorder-sequences).
+Try the [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/preact/useHotkeyRecorder) or [sequences recorder example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/preact/useHotkeyRecorder-sequences).

@@ -2,99 +2,25 @@
 
 <a id="source-tanstack-preact-hotkeys"></a>
 
-Published skill · `@tanstack/preact-hotkeys@0.24.6`.
+Published skill · `@tanstack/preact-hotkeys@0.26.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Hotkeys Core](./tanstack-hotkeys-core-62518e1a.md).
 
-# TanStack Hotkeys in Preact
+## Choose a section
 
-Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack/intent@latest load @tanstack/hotkeys#hotkeys-core`).
+Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-```tsx
-import { useFormatForDisplay, useHotkey } from '@tanstack/preact-hotkeys'
+- [Overview](./tanstack-preact-hotkeys-d76f076a--overview.md) — 1 KiB
+- [API](./tanstack-preact-hotkeys-d76f076a--api.md) — 10 KiB
+- [A dialog that owns the keyboard](./tanstack-preact-hotkeys-d76f076a--a-dialog-that-owns-the-keyboard.md) — 2 KiB
+- [Pitfalls](./tanstack-preact-hotkeys-d76f076a--pitfalls.md) — 2 KiB
+- [API discovery and docs](./tanstack-preact-hotkeys-d76f076a--api-discovery-and-docs.md) — 1 KiB
 
-export function SaveButton({ onSave }: { onSave: () => void }) {
-  useHotkey('Mod+S', () => onSave(), { meta: { name: 'Save' } })
-  const formatForDisplay = useFormatForDisplay()
-
-  return (
-    <button onClick={onSave}>
-      Save <kbd>{formatForDisplay('Mod+S')}</kbd>
-    </button>
-  )
-}
-```
-
-## API
-
-| API                                       | What it's for                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `useHotkey(hotkey, callback, options?)`   | Register one chord, sequence, or app hotkey while the component is mounted.                                                                                                                                                                                                                                                                                           |
-| `useHotkeys(definitions, commonOptions?)` | Register several hotkeys, or a list built from data, in one call.                                                                                                                                                                                                                                                                                                     |
-| `<HotkeysProvider>`                       | Set default options, a scope (`exclusive` for dialogs), `enabled`, and app hotkeys for the components inside it.                                                                                                                                                                                                                                                      |
-| `useHotkeysContext()`                     | Read the nearest provider's merged defaults and enabled state, or `null` outside a provider.                                                                                                                                                                                                                                                                          |
-| `useDefaultHotkeysOptions()`              | Read the default options merged from every provider above.                                                                                                                                                                                                                                                                                                            |
-| `useFormatForDisplay()`                   | Get the function that formats a hotkey as a label, with the provider's `platform` and the user's keyboard layout filled in. Only Chromium browsers report a layout, so physical keys keep their US labels in Firefox and Safari. Use it for every label in a component: `const formatForDisplay = useFormatForDisplay()` at the top, then `formatForDisplay(hotkey)`. |
-| `useAppHotkeys()`                         | Get the declared app hotkeys with the user's custom hotkeys applied, to pass to the register API.                                                                                                                                                                                                                                                                     |
-| `useAppHotkeyList()`                      | List every app hotkey with its status, including ones whose components aren't mounted, for a cheat sheet or settings screen.                                                                                                                                                                                                                                          |
-| `useCustomHotkeys()`                      | Read, change, and reset the user's custom hotkeys, and check a new one for conflicts.                                                                                                                                                                                                                                                                                 |
-| `useHotkeyRecorder(options)`              | Record a chord or sequence the user presses, for a settings screen.                                                                                                                                                                                                                                                                                                   |
-| `useHotkeyRegistrations()`                | List every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope), for a cheat sheet of what's mounted.                                                                                                                                                                                                               |
-| `useHotkeyScopesState()`                  | Get the active scopes and the exclusive scope that owns the keyboard.                                                                                                                                                                                                                                                                                                 |
-| `useHotkeyHint(hotkey, options?)`         | Get whether held modifiers should reveal a shortcut's hint, such as labels that appear while Mod is held. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target.                                                                                                                                  |
-| `useKeyHold(key)`                         | Get whether one key is held, such as Shift for a range-select mode. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                                                                                                                                                                      |
-| `useHeldKeys()`                           | Get every key that's held right now.                                                                                                                                                                                                                                                                                                                                  |
-| `useHeldKeyCodes()`                       | Map each held key to its physical `event.code`.                                                                                                                                                                                                                                                                                                                       |
-
-The package also re-exports `@tanstack/hotkeys`, such as `matchesKeyboardEvent` and `defineAppHotkeys`. Its plain `formatForDisplay` export is deprecated: use `useFormatForDisplay()` in components. Outside a component, call the plain function and pass `platform`.
-
-No provider is required.
-
-## A dialog that owns the keyboard
-
-```tsx no-check
-import { HotkeysProvider, useHotkey } from '@tanstack/preact-hotkeys'
-import { useId } from 'preact/hooks'
-import type { ComponentChildren } from 'preact'
-
-export function Dialog(props: {
-  onClose: () => void
-  children: ComponentChildren
-}) {
-  return (
-    <HotkeysProvider scope={`dialog-${useId()}`} exclusive>
-      <DialogBody {...props} />
-    </HotkeysProvider>
-  )
-}
-
-function DialogBody({
-  onClose,
-  children,
-}: {
-  onClose: () => void
-  children: ComponentChildren
-}) {
-  useHotkey('Escape', onClose)
-  return <div role="dialog">{children}</div>
-}
-```
-
-A hook uses the nearest `HotkeysProvider` above its component. Registering `Escape` in `Dialog` itself would put it in the outer scope, which the exclusive scope suspends, so the dialog couldn't close. `useId` (Preact 10.11 or newer) gives each open dialog its own scope.
-
-## Pitfalls
-
-- **Pass the ref, not `ref.current`.** `target: listRef.current` is `null` on the first render, and a `null` target registers nothing, so the hotkey doesn't work until the component renders again. Pass `target: listRef` for an element the component always renders.
-- **Keep elements that mount later in state.** The hook reads a ref only after its component renders, so it misses an element that mounts later, such as one a child shows from its own state. Use `const [el, setEl] = useState<HTMLElement | null>(null)`, `target: el`, and `ref={setEl}`; the hotkey registers when the element mounts and unregisters when it unmounts.
-- **No dependency arrays or `useCallback`.** The hooks read the hotkey, callback, and options on every render, so inline callbacks always see current state.
-- **Call the hooks directly.** A `useShortcut(keys: string)` wrapper has to cast strings to hotkeys, which turns off type checking and drops sequences, options, app hotkeys, and the typed callback context.
-- **In tests,** set `<HotkeysProvider defaultOptions={{ platform: 'mac' }}>`. It applies to hotkeys, recorders, labels, and app hotkey conflict checks.
-- **Server-rendered labels need the user's platform.** The server can't see the user's OS, so without a platform it renders Linux labels that differ after hydration for Mac and Windows users. Set the provider's `defaultOptions.platform` to `detectPlatform(userAgent)` from the request's `User-Agent` header. `useFormatForDisplay()` reads it.
-
-When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in Preact](../assets/tanstack-preact-hotkeys/references/app-hotkeys.md).
-
-## API discovery and docs
-
-Signatures: `node_modules/@tanstack/preact-hotkeys/dist/*.d.ts`. Guides: `https://tanstack.com/hotkeys/latest/docs/framework/preact/guides/<page>.md`, such as `hotkeys`, `hotkeys-provider-and-scopes`, or `app-hotkeys`. Devtools: `hotkeysDevtoolsPlugin()` from `@tanstack/preact-hotkeys-devtools` in `@tanstack/preact-devtools`.
+<!-- Original source anchors retained for inbound links. -->
+<a id="tanstack-hotkeys-in-preact"></a>
+<a id="api"></a>
+<a id="a-dialog-that-owns-the-keyboard"></a>
+<a id="pitfalls"></a>
+<a id="api-discovery-and-docs"></a>

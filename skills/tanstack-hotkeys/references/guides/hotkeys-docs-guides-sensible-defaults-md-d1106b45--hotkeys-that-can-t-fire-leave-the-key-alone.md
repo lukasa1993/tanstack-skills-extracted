@@ -1,6 +1,6 @@
 # Sensible Defaults — Hotkeys that can't fire leave the key alone
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Hotkeys that can't fire leave the key alone
 
@@ -16,5 +16,5 @@ For most shortcuts, setting `preventDefault: 'always'` in your shared defaults i
 Don't use `'always'` on hotkeys you turn off specifically to hand keys back to the browser. Set `preventDefault: true` on those instead:
 
 - **Clipboard and editing chords.** `Mod+C`, `Mod+A`, and `Mod+Z` enabled only while canvas cells are selected would block native copy and undo in text inputs if `'always'` were set.
-- **Single-key shortcuts.** Shortcuts behind an accessibility off switch would keep blocking `Space`, arrow keys, or `/` when turned off.
+- **Single-key shortcuts.** Shortcuts behind an accessibility off switch, including character key shortcuts suspended with `suspendCharacterKeys`, would keep blocking `Space`, arrow keys, or `/` when turned off.
 - **`Tab` hotkeys.** Disabling them would still trap focus.

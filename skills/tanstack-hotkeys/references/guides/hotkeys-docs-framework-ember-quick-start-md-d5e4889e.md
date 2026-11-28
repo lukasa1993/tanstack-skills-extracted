@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-quick-start-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 

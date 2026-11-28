@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -94,7 +94,7 @@ close.unregister()
 releaseScope()
 ```
 
-`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. `activateScope` takes two options:
+`activateScope` returns a function that releases the scope. A scope stays active until every activation of it is released. `activateScope` takes these options:
 
 - `exclusive` suspends every other scope, including `'global'`, while this scope is active. Pass `{ allow: ['global'] }` to keep the listed scopes working.
 - `parent` names the scope this one is nested in, so this scope takes precedence over it. The default is `'global'`.
@@ -126,6 +126,17 @@ To read it in a component, use `getHotkeyScopesState`. It updates when scopes ac
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) show the same scope state without any code.
 
+## Suspend character key shortcuts
+
+Call `manager.suspendCharacterKeys()` to pause document-level hotkeys made only of keys that type a character, such as `K`, `Shift+/`, or `['G', 'H']`. Hotkeys with `Control`, `Alt`, or `Meta`, non-character keys such as `Escape`, and hotkeys targeted at an element keep working. Suspensions are counted like scope activations, so character key shortcuts stay suspended until every returned resume function runs:
+
+```ts
+const resume = manager.suspendCharacterKeys()
+resume()
+```
+
+Read `manager.scopes.state.characterKeysSuspended` to check whether character keys are suspended. Inside components, pass `suspendCharacterKeys` to `HotkeysProvider` instead. See [Accessibility](./hotkeys-docs-framework-svelte-guides-accessibility-md-5d8cdb45.md#source-hotkeys-docs-framework-svelte-guides-accessibility-md).
+
 ## Reset sequence progress
 
 `manager.resetSequenceProgress()` clears the steps the user has pressed in every sequence. Call it when an action in your app should cancel a sequence the user has started.
@@ -150,4 +161,4 @@ The matcher tracks its own progress. `getProgress()` returns the number of steps
 
 For resetting `HotkeyManager` and `KeyStateTracker` between tests and pinning the platform, see [Testing](./hotkeys-docs-framework-svelte-guides-testing-md-6ac89090.md#source-hotkeys-docs-framework-svelte-guides-testing-md).
 
-See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/HotkeyManager.md) for the full method list.
+See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/reference/classes/HotkeyManager.md) for the full method list.

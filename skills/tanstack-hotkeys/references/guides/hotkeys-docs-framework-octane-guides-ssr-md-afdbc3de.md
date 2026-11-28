@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-octane-guides-ssr-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-octane.md) · [Source provenance](../SOURCES.md)
 
@@ -110,7 +110,7 @@ export function Shortcuts({ platform }: { platform: HotkeyPlatform }) @{
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/octane/useFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/octane/useFormatForDisplay-astro) shows this setup.
 
 ### Your own server
 
@@ -151,7 +151,7 @@ hydrateRoot(document.getElementById('app')!, App, { platform: detectPlatform() }
 
 Put `css` in the page's `<head>` and `html` in the element that gets hydrated. `render` takes a Fetch API `Request`. In Express, pass `req.headers['user-agent']` to `detectPlatform` instead. Octane's [server-side rendering guide](https://github.com/octanejs/octane/blob/main/docs/ssr.md) covers compiling the server build and streaming.
 
-The [server rendering example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/octane/useFormatForDisplay-server) shows this setup.
+The [server rendering example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/octane/useFormatForDisplay-server) shows this setup.
 
 ### Render a label only in the browser
 

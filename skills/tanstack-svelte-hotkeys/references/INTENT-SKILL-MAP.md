@@ -1,6 +1,6 @@
 # TanStack Intent skill ID map
 
-Published package: @tanstack/svelte-hotkeys@0.25.6
+Published package: @tanstack/svelte-hotkeys@0.27.0
 
 | Original Intent ID | Exported Agent Skill |
 | --- | --- |

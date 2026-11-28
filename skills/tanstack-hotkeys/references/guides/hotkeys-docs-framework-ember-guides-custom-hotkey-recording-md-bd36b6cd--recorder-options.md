@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Recorder options
 
@@ -21,6 +21,6 @@
 | `onReject` | None | Called with the reason when a recording is rejected |
 | `platform` | Detected | The platform that decides what `Mod` means |
 
-To change the defaults for several recorders, pass `hotkeyRecorder` options to `createHotkeysScope`, and pass the scope as the third argument: `useHotkeyRecorder(this, options, createHotkeysScope({ hotkeyRecorder: { idleTimeoutMs: 2000 } }))`. Options you pass to `useHotkeyRecorder` take precedence. The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/framework/ember/reference/functions/useHotkeyRecorder.md) lists the types.
+To change the defaults for several recorders, pass `hotkeyRecorder` options to `createHotkeysScope`, and pass the scope as the third argument: `useHotkeyRecorder(this, options, createHotkeysScope({ hotkeyRecorder: { idleTimeoutMs: 2000 } }))`. Options you pass to `useHotkeyRecorder` take precedence. The [`useHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/framework/ember/reference/functions/useHotkeyRecorder.md) lists the types.
 
-The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/ember/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/ember/useHotkeyRecorder-sequences) records sequences.
+The [useHotkeyRecorder example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/ember/useHotkeyRecorder) records chords, and the [sequences example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/ember/useHotkeyRecorder-sequences) records sequences.

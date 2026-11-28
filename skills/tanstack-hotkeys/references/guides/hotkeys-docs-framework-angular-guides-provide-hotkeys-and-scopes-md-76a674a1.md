@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-angular.md) · [Source provenance](../SOURCES.md)
 
@@ -21,6 +21,7 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 - [Choose a scope for one hotkey](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--choose-a-scope-for-one-hotkey.md) — 1 KiB
 - [Scopes and app hotkeys](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--scopes-and-app-hotkeys.md) — 2 KiB
 - [Scopes outside Angular](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--scopes-outside-angular.md) — 1 KiB
+- [Suspend character key shortcuts](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--suspend-character-key-shortcuts.md) — 1 KiB
 - [Inspect scopes](./hotkeys-docs-framework-angular-guides-provide-hotkeys-and-scopes-md-76a674a1--inspect-scopes.md) — 1 KiB
 
 <!-- Original source anchors retained for inbound links. -->
@@ -38,4 +39,5 @@ Read the overview or setup when it is a prerequisite, then the section needed fo
 <a id="choose-a-scope-for-one-hotkey"></a>
 <a id="scopes-and-app-hotkeys"></a>
 <a id="scopes-outside-angular"></a>
+<a id="suspend-character-key-shortcuts"></a>
 <a id="inspect-scopes"></a>

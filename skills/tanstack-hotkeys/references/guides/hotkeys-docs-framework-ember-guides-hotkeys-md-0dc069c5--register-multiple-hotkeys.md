@@ -1,6 +1,6 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Register multiple hotkeys
 
@@ -50,7 +50,7 @@ export default class RichTextEditor extends Component {
 }
 ```
 
-The `onHotkeys` modifier also makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#hotkey-targets) explains the modifiers.
+The `onHotkeys` modifier also makes every hotkey in the list listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#hotkey-targets) explains the modifiers.
 
 Options merge in this order: `createHotkeysScope` defaults, then the shared options, then each definition's options.
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-installation-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -80,7 +80,7 @@ Start with the [Alpine Quick Start](./hotkeys-docs-framework-alpine-quick-start-
 
 # Ember
 
-Requires Ember 6.8.3 or newer (excluding 6.9.0 and 6.10.0), and works with Vite (Embroider) or classic `ember-cli` with `ember-auto-import`. Register hotkeys in strict-mode `.gts` components and pass the component as owner to state readers and recorders.
+Requires Ember 4.12 or newer, and works with Vite (Embroider) or classic `ember-cli` with `ember-auto-import` 2. Register hotkeys in strict-mode `.gts` components and pass the component as owner to state readers and recorders.
 
 Start with the [Ember Quick Start](./hotkeys-docs-framework-ember-quick-start-md-d5e4889e.md#source-hotkeys-docs-framework-ember-quick-start-md) and [Ember guides](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md). Ember ships the hotkeys adapter only and has no dedicated devtools package.
 

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -146,4 +146,4 @@ const showHint =
   getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the controller
 ```
 
-See [Held Keys](./hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md#source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md) for more on `getKeyStateTracker`, and check the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/lit/kitchen-sink) to see hints on live buttons.
+See [Held Keys](./hotkeys-docs-framework-lit-guides-held-key-state-helpers-md-613e44c6.md#source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md) for more on `getKeyStateTracker`, and check the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/lit/kitchen-sink) to see hints on live buttons.

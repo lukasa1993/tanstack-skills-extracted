@@ -2,74 +2,23 @@
 
 <a id="source-tanstack-ember-hotkeys"></a>
 
-Published skill · `@tanstack/ember-hotkeys@0.14.6`.
+Published skill · `@tanstack/ember-hotkeys@0.16.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Hotkeys Core](./tanstack-hotkeys-core-62518e1a.md).
 
-# TanStack Hotkeys in Ember
+## Choose a section
 
-Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack/intent@latest load @tanstack/hotkeys#hotkeys-core`).
+Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-```gts
-import Component from '@glimmer/component'
-import { tracked } from '@glimmer/tracking'
-import { array } from '@ember/helper'
-import { onHotkey, useHotkey } from '@tanstack/ember-hotkeys'
+- [Overview](./tanstack-ember-hotkeys-c89ea140--overview.md) — 1 KiB
+- [API](./tanstack-ember-hotkeys-c89ea140--api.md) — 11 KiB
+- [Pitfalls](./tanstack-ember-hotkeys-c89ea140--pitfalls.md) — 2 KiB
+- [API discovery and docs](./tanstack-ember-hotkeys-c89ea140--api-discovery-and-docs.md) — 1 KiB
 
-export default class Editor extends Component {
-  @tracked dirty = false
-  save = () => saveDocument()
-  close = () => closePanel()
-  scrollToTop = () => window.scrollTo({ top: 0 })
-
-  <template>
-    {{useHotkey "Mod+S" this.save enabled=this.dirty}}
-    {{useHotkey (array "G" "G") this.scrollToTop}}
-    <div tabindex="0" {{onHotkey "Escape" this.close}}>Panel</div>
-  </template>
-}
-```
-
-## API
-
-| API                                                 | What it's for                                                                                                                                                                                                                                                                                                                                                              |
-| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{useHotkey hotkey callback ...options}}`          | Register one chord, sequence, or app hotkey while the template renders the helper.                                                                                                                                                                                                                                                                                         |
-| `{{useHotkeys definitions}}`                        | Register several hotkeys, or a list built from data, in one helper.                                                                                                                                                                                                                                                                                                        |
-| `{{onHotkey hotkey callback ...options}}`           | Attach a hotkey to the element the modifier is on, so it fires while focus is inside that element.                                                                                                                                                                                                                                                                         |
-| `{{onHotkeys definitions}}`                         | Attach several hotkeys to one element.                                                                                                                                                                                                                                                                                                                                     |
-| `createHotkeysScope(defaults?)`                     | Create `useHotkey`, `useHotkeys`, `onHotkey`, and `onHotkeys` that share default options.                                                                                                                                                                                                                                                                                  |
-| `useFormatForDisplay(scope?)`                       | Get the function that formats a hotkey as a label, with the scope's `platform` and the user's keyboard layout filled in. Only Chromium browsers report a layout, so physical keys keep their US labels in Firefox and Safari. Use it for every label in a component: `formatForDisplay = useFormatForDisplay()` as a class field, then `{{this.formatForDisplay hotkey}}`. |
-| `provideAppHotkeys(appHotkeys, options?)`           | Declare app hotkeys and load the user's custom hotkeys before the app boots, since Ember has no provider.                                                                                                                                                                                                                                                                  |
-| `getHotkeyManager().activateScope(scope, options?)` | Turn on a scope, such as an exclusive one for a dialog; it returns the function that turns the scope off.                                                                                                                                                                                                                                                                  |
-| `useAppHotkeys(this)`                               | Get the declared app hotkeys with the user's custom hotkeys applied.                                                                                                                                                                                                                                                                                                       |
-| `useAppHotkeyList(this)`                            | List every app hotkey with its status, for a cheat sheet or settings screen.                                                                                                                                                                                                                                                                                               |
-| `useCustomHotkeys(this)`                            | Read, change, and reset the user's custom hotkeys, and check a new one for conflicts.                                                                                                                                                                                                                                                                                      |
-| `useHotkeyRecorder(this, options, scope?)`          | Record a chord or sequence the user presses, for a settings screen. Pass a `createHotkeysScope` result to apply its `hotkeyRecorder` defaults.                                                                                                                                                                                                                             |
-| `useHotkeyRegistrations(this)`                      | Read `.hotkeys`, every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                                                                                                                                                                                             |
-| `useHotkeyScopesState(this)`                        | Get the active scopes and the exclusive scope that owns the keyboard.                                                                                                                                                                                                                                                                                                      |
-| `useHotkeyHint(this, hotkey, options?)`             | Get whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target.                                                                                                                                                                                     |
-| `useKeyHold(this, key)`                             | Get whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                                                                                                                                                                                                                  |
-| `useHeldKeys(this)`                                 | Get every key that's held right now.                                                                                                                                                                                                                                                                                                                                       |
-| `useHeldKeyCodes(this)`                             | Map each held key to its physical `event.code`.                                                                                                                                                                                                                                                                                                                            |
-
-The package also re-exports `@tanstack/hotkeys`, such as `matchesKeyboardEvent` and `defineAppHotkeys`. Its plain `formatForDisplay` export is deprecated: use `useFormatForDisplay()` in components. Outside a component, call the plain function and pass `platform`.
-
-The helpers are template helpers, not JavaScript functions. State readers take the component as their owner, and their state is read through `.value`, or `.hotkeys` for registrations. Use Ember 6.8.3 or newer, except 6.9.0 and 6.10.0, and strict-mode `.gts` components.
-
-## Pitfalls
-
-- **Use arrow-function fields, or `@action`, for callbacks.** The helpers call a callback without the component as `this`, so a plain method throws when the key is pressed.
-- **Build template sequences with `array`.** `{{useHotkey "G G" ...}}` registers a single key named `G G`, which never matches.
-- **`createHotkeysScope` isn't a hotkey scope.** It only sets defaults for its helpers. For a dialog, call `getHotkeyManager().activateScope(name, { exclusive: true })` in the constructor, pass the result to `registerDestructor(this, release)`, and put `scope=name` on the dialog's hotkeys. Give each open dialog its own name.
-- **Read app hotkeys through getters.** Template paths can't index ids that contain dots.
-- **Scopes have no `useHotkeyRecorder`** since v0.9.0. Call `useHotkeyRecorder(this, options, this.hotkeys)`, so apps that set defaults but don't record don't ship the recorder.
-- **Server-rendered labels need the user's platform.** The server can't see the user's OS, so without a platform it renders Linux labels that differ after hydration for Mac and Windows users. Pass `platform: detectPlatform(userAgent)` to `createHotkeysScope`, with the user agent from FastBoot's request, and pass the scope to the utility: `formatForDisplay = useFormatForDisplay(this.hotkeys)`.
-
-When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in Ember](../assets/tanstack-ember-hotkeys/references/app-hotkeys.md).
-
-## API discovery and docs
-
-Signatures: `node_modules/@tanstack/ember-hotkeys/dist/*.d.ts`, with state shapes in `types.d.ts`. Guides: `https://tanstack.com/hotkeys/latest/docs/framework/ember/guides/<page>.md`, such as `hotkeys` or `app-hotkeys`.
+<!-- Original source anchors retained for inbound links. -->
+<a id="tanstack-hotkeys-in-ember"></a>
+<a id="api"></a>
+<a id="pitfalls"></a>
+<a id="api-discovery-and-docs"></a>

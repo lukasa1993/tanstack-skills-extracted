@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-testing-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 

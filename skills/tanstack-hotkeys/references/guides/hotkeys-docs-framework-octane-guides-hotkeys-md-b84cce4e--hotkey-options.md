@@ -1,6 +1,6 @@
 # Hotkeys — Hotkey options
 
-[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Hotkey options
 
@@ -28,7 +28,7 @@ useHotkey('Enter', () => submit(), { ignoreInputs: false })
 | `platform` | Detected | Override `'mac'`, `'windows'`, or `'linux'` for `Mod` resolution. Useful in tests. |
 | `meta` | None | Display metadata (`name`, `description`, `group`). See [Describe hotkeys with `meta`](./hotkeys-docs-framework-octane-guides-hotkeys-md-b84cce4e.md#describe-hotkeys-with-meta). |
 
-See [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for why each default behaves the way it does, and [`UseHotkeyOptions`](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/framework/octane/reference/type-aliases/UseHotkeyOptions.md) for full type definitions.
+See [Sensible Defaults](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) for why each default behaves the way it does, and [`UseHotkeyOptions`](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/framework/octane/reference/type-aliases/UseHotkeyOptions.md) for full type definitions.
 
 To change defaults across your app, pass `defaultOptions` to a root `HotkeysProvider`. Hook-level options always override provider defaults:
 

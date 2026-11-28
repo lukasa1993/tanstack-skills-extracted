@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Build a shortcut settings screen
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Build a shortcut settings screen
 

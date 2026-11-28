@@ -1,6 +1,6 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Register multiple hotkeys
 
@@ -53,9 +53,9 @@ Pass shared options as the second argument. Individual definitions override them
 <div contenteditable {@attach editorHotkeys}></div>
 ```
 
-The attachment also makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#hotkey-targets) explains attachments.
+The attachment also makes every hotkey in the list listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-svelte-guides-hotkeys-md-cb786a5b.md#hotkey-targets) explains attachments.
 
-Options merge in three layers: defaults from the provider first, then the shared options, then per-item options.
+Options merge in layers: defaults from the provider first, then the shared options, then per-item options.
 
 ### Build the list from data
 

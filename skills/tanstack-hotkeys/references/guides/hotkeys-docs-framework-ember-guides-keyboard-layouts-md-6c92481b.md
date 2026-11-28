@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-keyboard-layouts-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
@@ -64,7 +64,7 @@ Glint applies the registration to templates, so `ember-tsc` reports the `Mod+Ñ`
 
 ## Available key sets
 
-26 exported sets cover 33 layouts. Identical layouts share aliases, such as `AustrianKeys` and `GermanKeys`. Each set includes characters typed unshifted or with `Shift` across Windows, macOS, and Linux, excluding dead keys and `AltGr` or `Option` characters:
+Identical layouts share a set under several aliases, such as `AustrianKeys` and `GermanKeys`. Each set includes characters typed unshifted or with `Shift` across Windows, macOS, and Linux, excluding dead keys and `AltGr` or `Option` characters:
 
 | Set | Layouts |
 | --- | --- |
@@ -91,4 +91,4 @@ Polish and Latvian share US QWERTY base keys without `AltGr`, and most Dutch use
 
 ## Example
 
-The [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/ember/keyboard-layouts) registers German keys and shows which hotkeys fire on a German keyboard.
+The [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/ember/keyboard-layouts) registers German keys and shows which hotkeys fire on a German keyboard.

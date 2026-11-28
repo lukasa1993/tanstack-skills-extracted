@@ -1,10 +1,10 @@
 # Hotkeys — Chords and sequences
 
-[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Chords and sequences
 
-A hotkey is one of two kinds:
+A hotkey is one of these kinds:
 
 - A **chord** is keys pressed together, such as `'Mod+S'`, or a single key, such as `'Escape'`.
 - A **sequence** is chords pressed one after another, such as `['G', 'H']`. Write it as an array of chords. In a template, build the array with the `array` helper from `@ember/helper`.

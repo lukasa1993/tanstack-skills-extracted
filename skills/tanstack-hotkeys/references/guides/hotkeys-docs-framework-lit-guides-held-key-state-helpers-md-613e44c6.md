@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-lit-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-lit.md) · [Source provenance](../SOURCES.md)
 
@@ -113,4 +113,20 @@ For a mouse or wheel event, `event.ctrlKey`, `shiftKey`, `altKey`, and `metaKey`
 
 Held keys clear when the window loses focus, so a key released after switching apps doesn't stay held. [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md) covers the cases the tracker handles.
 
-The [held-keys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/lit/held-keys) shows held keys and their codes, and the [key-hold example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/lit/key-hold) shows modifier indicators.
+The [held-keys example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/lit/held-keys) shows held keys and their codes, and the [key-hold example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/lit/key-hold) shows modifier indicators.
+
+## Lock keys
+
+Caps Lock, Num Lock, and Scroll Lock toggle instead of being held. A `KeyHoldController` value is `true` only while the key is down, not while Caps Lock is on. To read whether a lock is on, use `KeyLockStateController`:
+
+```ts
+import { KeyLockStateController } from '@tanstack/lit-hotkeys'
+
+private capsLock = new KeyLockStateController(this, 'CapsLock') // value: true, false, or null
+
+render() {
+  return html`<span role="status">${this.capsLock.value ? 'Caps Lock is on' : ''}</span>`
+}
+```
+
+The value is `null` until the browser reports the lock. See [Read lock key state](./hotkeys-docs-framework-lit-guides-key-lock-state-md-d52456d3.md#source-hotkeys-docs-framework-lit-guides-key-lock-state-md) for when that happens and which browsers report each lock.

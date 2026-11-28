@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-alpine-guides-cheat-sheet-ui-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-alpine.md) · [Source provenance](../SOURCES.md)
 
@@ -96,7 +96,7 @@ Alpine.data('shortcutList', () => {
 
 Filtering by name leaves out hotkeys you didn't mean to list, such as a dialog's `Escape`. Filtering by `status` leaves only the hotkeys that are on right now.
 
-`status` is `'active'` when the hotkey is enabled and its scope is active, `'suspended'` when its [scope](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md) is inactive or suspended by an exclusive scope, and `'disabled'` when it has `enabled: false`. `createHotkeyRegistrations` updates when scopes change, so the list stays current.
+`status` is `'active'` when the hotkey is enabled and nothing suspends it, `'suspended'` when its [scope](./hotkeys-docs-framework-alpine-guides-hotkey-manager-md-37a873d6.md#source-hotkeys-docs-framework-alpine-guides-hotkey-manager-md) is inactive or suspended by an exclusive scope or it is a document-level character key shortcut while [character keys are suspended](./hotkeys-docs-framework-alpine-guides-accessibility-md-5823d5ab.md#source-hotkeys-docs-framework-alpine-guides-accessibility-md), and `'disabled'` when it has `enabled: false`. `createHotkeyRegistrations` updates when scopes change, so the list stays current.
 
 Each registration view has an `id`, the `hotkey`, a `status`, its `options` (including `meta`, `enabled`, and `scope`), its `target`, and a `triggerCount`. Narrow with `kind`: chord views add `parsedChord`, and sequence views add `parsedSequence` and `matchedStepCount`, the number of steps the user has pressed so far. [Show sequences in your UI](./hotkeys-docs-framework-alpine-guides-sequences-md-037f4bfb.md#source-hotkeys-docs-framework-alpine-guides-sequences-md) uses it to show which keys the user has pressed.
 
@@ -140,8 +140,8 @@ Alpine.data('cheatSheet', () => {
 
 | Status | Meaning |
 | --- | --- |
-| `'active'` | At least one enabled registration |
-| `'suspended'` | Has an enabled registration, but none in an active scope |
+| `'active'` | At least one registration reports `'active'` |
+| `'suspended'` | Has an enabled registration, but none can fire: its scope is inactive, or character keys are suspended |
 | `'disabled'` | Registered, but every registration has `enabled: false` |
 | `'inactive'` | Has a hotkey, but nothing has registered it |
 | `'unbound'` | No hotkey assigned |
@@ -247,4 +247,4 @@ Alpine.data('app', () => ({
 
 `?` is a common key for opening a cheat sheet. It's a single-key shortcut, so users need a way to turn it off or remap it. See [Single-key shortcuts need an off switch](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/alpine/kitchen-sink) has a shortcut list built from live registrations.
+The [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/alpine/kitchen-sink) has a shortcut list built from live registrations.

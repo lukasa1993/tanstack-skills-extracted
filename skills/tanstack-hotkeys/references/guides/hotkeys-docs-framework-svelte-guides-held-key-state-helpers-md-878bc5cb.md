@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -94,4 +94,20 @@ To inspect held keys inside a click or canvas handler without tracking them, rea
 
 Held keys reset automatically when the window loses focus, so a key released after switching apps never stays stuck. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [get-held-keys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/get-held-keys) and the [get-is-key-held example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/get-is-key-held).
+See the [get-held-keys example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/get-held-keys) and the [get-is-key-held example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/get-is-key-held).
+
+## Lock keys
+
+Caps Lock, Num Lock, and Scroll Lock toggle instead of being held. `getIsKeyHeld('CapsLock').held` is `true` only while the key is down, not while Caps Lock is on. To read whether a lock is on, use `getKeyLockState`:
+
+```svelte
+<script lang="ts">
+  import { getKeyLockState } from '@tanstack/svelte-hotkeys'
+
+  const capsLock = getKeyLockState('CapsLock') // value: true, false, or null
+</script>
+
+<span role="status">{capsLock.value ? 'Caps Lock is on' : ''}</span>
+```
+
+The value is `null` until the browser reports the lock. See [Read lock key state](./hotkeys-docs-framework-svelte-guides-key-lock-state-md-5dde03c4.md#source-hotkeys-docs-framework-svelte-guides-key-lock-state-md) for when that happens and which browsers report each lock.

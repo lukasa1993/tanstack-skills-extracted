@@ -1,6 +1,6 @@
 # Custom Hotkey Recording — Recorder options
 
-[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-svelte-guides-custom-hotkey-recording-md-3971f427.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Recorder options
 
@@ -21,6 +21,6 @@
 | `onReject` | None | Called with `{ reason, hotkey?, conflicts?, message? }` when a recording is rejected |
 | `platform` | Detected | Override `'mac'`, `'windows'`, or `'linux'` for `Mod` output |
 
-Set defaults for all recorders with `hotkeyRecorder` in the `defaultOptions` of `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) and the [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/framework/svelte/reference/functions/createHotkeyRecorder.md).
+Set defaults for all recorders with `hotkeyRecorder` in the `defaultOptions` of `HotkeysProvider`. See [Set default options](./hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md-e8237f03.md#source-hotkeys-docs-framework-svelte-guides-hotkeys-provider-and-scopes-md) and the [`createHotkeyRecorder` reference](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/framework/svelte/reference/functions/createHotkeyRecorder.md).
 
-Try the [create-hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/create-hotkey-recorder) or the [sequences recorder example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/create-hotkey-recorder-sequences).
+Try the [create-hotkey-recorder example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/create-hotkey-recorder) or the [sequences recorder example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/create-hotkey-recorder-sequences).

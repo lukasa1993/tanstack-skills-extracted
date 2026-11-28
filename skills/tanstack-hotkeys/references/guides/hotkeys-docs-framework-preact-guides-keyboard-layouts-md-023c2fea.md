@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-keyboard-layouts-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -56,7 +56,7 @@ All hooks (`useHotkeys`, `useHotkeyHint`, `useFormatForDisplay`), app hotkeys, c
 
 ## Available key sets
 
-26 exported sets cover 33 layouts. Identical layouts share aliases, such as `AustrianKeys` and `GermanKeys`. Each set includes characters typed unshifted or with `Shift` across Windows, macOS, and Linux, excluding dead keys and `AltGr` or `Option` characters:
+Identical layouts share a set under several aliases, such as `AustrianKeys` and `GermanKeys`. Each set includes characters typed unshifted or with `Shift` across Windows, macOS, and Linux, excluding dead keys and `AltGr` or `Option` characters:
 
 | Set | Layouts |
 | --- | --- |
@@ -83,4 +83,4 @@ Polish and Latvian share US QWERTY base keys without `AltGr`, and most Dutch use
 
 ## Example
 
-See the [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/preact/keyboard-layouts) to test German layout bindings interactively.
+See the [Keyboard Layouts example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/preact/keyboard-layouts) to test German layout bindings interactively.

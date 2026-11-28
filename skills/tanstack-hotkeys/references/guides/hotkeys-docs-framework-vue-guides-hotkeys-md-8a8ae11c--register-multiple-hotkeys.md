@@ -1,6 +1,6 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Register multiple hotkeys
 
@@ -58,9 +58,9 @@ useHotkeys(
 </template>
 ```
 
-The shared `target` makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#hotkey-targets) explains targets.
+The shared `target` makes every hotkey in the list listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-vue-guides-hotkeys-md-8a8ae11c.md#hotkey-targets) explains targets.
 
-Options merge in three layers: defaults from the provider first, then the shared options, then per-item options.
+Options merge in layers: defaults from the provider first, then the shared options, then per-item options.
 
 ### Build the list from data
 

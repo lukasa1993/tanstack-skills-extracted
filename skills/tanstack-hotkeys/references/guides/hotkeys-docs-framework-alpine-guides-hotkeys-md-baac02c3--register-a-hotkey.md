@@ -1,6 +1,6 @@
 # Hotkeys — Register a hotkey
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Register a hotkey
 
@@ -72,7 +72,7 @@ To register hotkeys from markup, install `hotkeysPlugin` and call the same funct
 </div>
 ```
 
-The plugin destroys `$hotkeys` with its element. The rest of this guide uses an owner from `createHotkeysScope`.
+The plugin destroys `$hotkeys` with its element. For a fixed hotkey with the default options, the `x-hotkey` directive is shorter and follows morphs: `x-hotkey.mod.s="count++"`. See [Use the `x-hotkey` directive](./hotkeys-docs-framework-alpine-quick-start-md-3845b066.md#source-hotkeys-docs-framework-alpine-quick-start-md). The rest of this guide uses an owner from `createHotkeysScope`.
 
 ### Optional hotkeys
 

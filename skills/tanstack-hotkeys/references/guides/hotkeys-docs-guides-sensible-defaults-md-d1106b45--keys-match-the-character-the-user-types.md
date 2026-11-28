@@ -1,6 +1,6 @@
 # Sensible Defaults — Keys match the character the user types
 
-[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Keys match the character the user types
 
@@ -8,7 +8,7 @@ Logical bindings like `Mod+S` or `?` match `event.key`, which is the character p
 
 ### When matching falls back to physical position
 
-`event.key` doesn't always tell you which key was pressed, so the matcher falls back to the key's position (`event.code` or keycap identity) in four cases:
+`event.key` doesn't always tell you which key was pressed, so the matcher falls back to the key's position (`event.code` or keycap identity) in these cases:
 
 - **Non-Latin layouts.** On a Russian layout, the `S` key types `ы`. `Mod+S` still matches so shortcuts work without switching layouts.
 - **macOS `Option`.** Option changes characters (`Option+S` types `ß`, German `Option+L` types `@`). `Alt+S` and `Alt+L` still match based on the letter printed on the key (`event.keyCode`, falling back to position when `keyCode` isn't a letter). On a French AZERTY Mac, `Alt+A` fires on the key labeled `A` (the US `Q` position).

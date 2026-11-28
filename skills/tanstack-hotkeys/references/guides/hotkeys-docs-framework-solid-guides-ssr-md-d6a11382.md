@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-ssr-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -91,7 +91,7 @@ export default function App() {
 }
 ```
 
-The [SolidStart example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/createFormatForDisplay-solid-start) shows this setup.
+The [SolidStart example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/solid/createFormatForDisplay-solid-start) shows this setup.
 
 ### TanStack Start
 
@@ -117,7 +117,7 @@ function RootComponent() {
 }
 ```
 
-The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
+The [TanStack Start example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/solid/createFormatForDisplay-tanstack-start) shows this setup.
 
 ### Astro
 
@@ -153,7 +153,7 @@ export default function Shortcuts(props: { platform: HotkeyPlatform }) {
 }
 ```
 
-The [Astro example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/createFormatForDisplay-astro) shows this setup.
+The [Astro example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/solid/createFormatForDisplay-astro) shows this setup.
 
 ### Render a label only in the browser
 

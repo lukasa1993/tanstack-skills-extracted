@@ -2,207 +2,33 @@
 
 <a id="source-hotkeys-docs-framework-ember-guides-formatting-display-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-ember.md) · [Source provenance](../SOURCES.md)
 
-Format a hotkey as a label whenever it appears in a menu, button, tooltip, cheat sheet, or shortcut settings panel. `useFormatForDisplay` returns a function that formats chord strings, including physical ones such as `'Mod+[KeyS]'`, chord objects, parsed chords, and sequences. Store the hotkey itself, and format it at render time. A label is for reading, not for registering.
+## Choose a section
 
-A label depends on the user's platform: `Mod+S` is `⌘ S` on macOS and `Ctrl+S` elsewhere. In the browser, `useFormatForDisplay` detects the platform. With FastBoot, set a scope's `platform` from the request. See [SSR & Hydration](./hotkeys-docs-framework-ember-guides-ssr-md-78704d49.md#source-hotkeys-docs-framework-ember-guides-ssr-md).
+Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-## Format a hotkey
+- [Overview](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--overview.md) — 1 KiB
+- [Format a hotkey](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-a-hotkey.md) — 3 KiB
+- [Render individual keycaps](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--render-individual-keycaps.md) — 1 KiB
+- [Format sequences](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-sequences.md) — 1 KiB
+- [Choose symbols and separators](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--choose-symbols-and-separators.md) — 1 KiB
+- [Label physical keys for the user's keyboard](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--label-physical-keys-for-the-user-s-keyboard.md) — 4 KiB
+- [Format for `aria-keyshortcuts`](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-for-aria-keyshortcuts.md) — 3 KiB
+- [Server-side rendering](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--server-side-rendering.md) — 1 KiB
+- [Format outside a component](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--format-outside-a-component.md) — 2 KiB
+- [Parse, compare, and store hotkeys](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e--parse-compare-and-store-hotkeys.md) — 3 KiB
 
-Call `useFormatForDisplay` in a class field of a component. It returns the function that formats a hotkey, and the template can call it as a helper:
-
-```gts
-import Component from '@glimmer/component'
-import { useFormatForDisplay } from '@tanstack/ember-hotkeys'
-
-export default class SaveButton extends Component {
-  formatForDisplay = useFormatForDisplay()
-
-  <template>
-    <button type="button">
-      Save <kbd>{{this.formatForDisplay 'Mod+S'}}</kbd>
-    </button>
-  </template>
-}
-```
-
-The label is `⌘ S` on macOS and `Ctrl+S` on Windows and Linux. The utility fills in two things for you:
-
-- **The platform** from the `createHotkeysScope` scope you pass it, or the detected platform without one.
-- **The user's keyboard layout**, for physical keys, in Chromium browsers. See [Label physical keys for the user's keyboard](./hotkeys-docs-framework-ember-guides-formatting-display-md-6723570e.md#label-physical-keys-for-the-users-keyboard).
-
-Call the utility once, then call the function anywhere in the component: in the template, in a getter, or in a method. Options go in its second argument. In a template, build them with the `hash` helper from `@ember/helper`, such as `{{this.formatForDisplay 'Mod+S' (hash platform='mac')}}`. The examples in this guide pass `platform`, so each one has a single result:
-
-```ts
-formatForDisplay('Mod+S', { platform: 'mac' }) // '⌘ S'
-formatForDisplay('Mod+[KeyS]', { platform: 'mac' }) // '⌘ S'
-formatForDisplay({ code: 'KeyS', mod: true }, { platform: 'windows' }) // 'Ctrl+S'
-formatForDisplay('Mod+[Digit2]', { platform: 'windows' }) // 'Ctrl+2'
-```
-
-The same label can stand for different hotkeys. `Mod+S` follows the character S, and `Mod+[KeyS]` follows the key in the S position. See [Match a key's position instead](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md). Labels for positions shorten `KeyS` to `S` and `Digit2` to `2`, keep readable numpad labels, and reuse punctuation and special-key symbols. The extra ISO and JIS keys, which have no US key, use their keycap legends: `[IntlBackslash]` shows `\`, `[IntlRo]` shows `\`, and `[IntlYen]` shows `¥`. Formatting doesn't change the stored hotkey or guess the user's keyboard layout.
-
-A `platform` you pass wins over the scope's. On macOS, the label joins modifier symbols with spaces. Windows and Linux use names joined with `+`. macOS orders modifiers as Control, Option, Shift, Command, so `Mod+Shift+S` displays as `⇧ ⌘ S`, while the hotkey itself stays `Mod+Shift+S`.
-
-The function accepts hotkeys only, including single keys such as `'Escape'` and modifiers on their own such as `'Shift'`. A key from a `KeyboardEvent`, such as a held key, can be outside the key types: pass it as `{ key }`.
-
-## Render individual keycaps
-
-Set `parts: true` to get one label per key instead of a joined string:
-
-```ts
-const saveHotkey = 'Mod+[KeyS]'
-const parts = formatForDisplay(saveHotkey, { platform: 'mac', parts: true })
-// ['⌘', 'S'], one label per <kbd>
-```
-
-With `parts` omitted or false, the result is a string. A runtime boolean returns `string | string[]`. Parts keep literal plus keys and ignore `separatorToken`.
-
-## Format sequences
-
-Pass a sequence to format each step and join the steps with `sequenceSeparator`, a space by default:
-
-```ts
-formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac' }) // '⌘ K C'
-formatForDisplay(['G', 'G'], { sequenceSeparator: ' → ' }) // 'G → G'
-formatForDisplay(['Mod+[KeyK]', 'C'], { platform: 'mac', parts: true })
-// [['⌘', 'K'], ['C']], one array of keycaps per step
-```
-
-With `parts: true`, a sequence returns one array per step, so you can render each step as a group of keycaps. To show the steps a user has pressed so far, see [Show sequences in your UI](./hotkeys-docs-framework-ember-guides-sequences-md-0637d856.md#source-hotkeys-docs-framework-ember-guides-sequences-md).
-
-## Choose symbols and separators
-
-`useSymbols` accepts a boolean or separate `modifiers` and `keys` settings. Omitted fields default to true. Modifier symbols apply on macOS. Windows and Linux keep modifier names.
-
-```ts
-formatForDisplay('Shift+[ArrowUp]', {
-  platform: 'mac',
-  useSymbols: { modifiers: false, keys: true },
-  parts: true,
-}) // ['Shift', '↑']
-
-formatForDisplay('Mod+[KeyS]', {
-  platform: 'mac', useSymbols: false,
-}) // 'Cmd+S'
-
-formatForDisplay('Control++', {
-  platform: 'windows', separatorToken: ' · ',
-}) // 'Ctrl · +'
-```
-
-An empty separator joins labels directly. `undefined` or `null` uses the platform default. `separatorToken` applies within a chord, and `sequenceSeparator` applies between steps.
-
-## Label physical keys for the user's keyboard
-
-A position, such as `[KeyQ]`, has a fallback label for a US keyboard: `Q`. On a French AZERTY keyboard, that key is labeled A. Labels from `useFormatForDisplay` follow the user's keyboard where the browser reports its layout:
-
-```gts
-import Component from '@glimmer/component'
-import { useFormatForDisplay } from '@tanstack/ember-hotkeys'
-
-export default class MoveUp extends Component {
-  formatForDisplay = useFormatForDisplay()
-
-  <template>
-    {{! 'W' on QWERTY, 'Z' on AZERTY }}
-    <kbd>{{this.formatForDisplay "[KeyW]"}}</kbd>
-  </template>
-}
-```
-
-> [!IMPORTANT]
-> **Layout labels work only in Chromium browsers**, such as Chrome and Edge. Firefox and Safari don't report the keyboard layout, so labels there keep the fallback. For `[KeyQ]`, a French AZERTY user sees `A` in Chrome and `Q` in Firefox. In a cross-origin iframe, Chromium browsers also refuse unless the frame has `allow="keyboard-map"`.
-
-- **The layout loads after the first label renders.** The first render shows the fallback label, and so does FastBoot HTML. The label updates when the layout arrives, and later labels have it at once.
-- **Only positions change.** Hotkeys that follow characters, such as `Mod+Q`, already show the right key. Matching and recording never use the layout.
-- **Each function from `useFormatForDisplay` reads the layout once**, after the render in which it first labels a position. The function has no owner, so it doesn't follow the layout after that. A label that renders later reads the layout again, and every label then updates.
-
-`useKeyboardLayout(this)` returns the loaded layout through `value`, or `null`, for labels you draw yourself, such as an on-screen keyboard. It maps each code to the character the key types without modifiers, such as `KeyQ` to `a`. While its owner lives, the layout is also read again when the window regains focus, because browsers send no event when the user switches layouts. To keep every label current, call it in a component that stays rendered, such as the one your application template renders:
-
-```gts
-import Component from '@glimmer/component'
-import { useKeyboardLayout } from '@tanstack/ember-hotkeys'
-
-export default class AppShell extends Component {
-  layout = useKeyboardLayout(this)
-
-  <template>{{yield}}</template>
-}
-```
-
-The layout comes from `navigator.keyboard.getLayoutMap()`. To never call it, set `keyboardLayout: false` in the default options of `createHotkeysScope`, and pass the scope to `useFormatForDisplay` and `useKeyboardLayout`:
-
-```ts
-hotkeys = createHotkeysScope({ keyboardLayout: false })
-formatForDisplay = useFormatForDisplay(this.hotkeys)
-```
-
-### Supply your own layout
-
-Pass the same kind of map as `layoutMap`, for a layout your app already knows, such as one the user picked in settings:
-
-```ts
-const layoutMap = new Map([['KeyQ', 'a']])
-
-formatForDisplay('Mod+[KeyQ]', { platform: 'mac', layoutMap }) // '⌘ A'
-formatForDisplay('Mod+Q', { platform: 'mac', layoutMap }) // '⌘ Q'
-```
-
-Any object with `get(code): string | undefined` works. A `layoutMap` you pass wins over the loaded layout.
-
-Use `keyLabels` for your own labels, keyed by physical code or by key name:
-
-```ts
-formatForDisplay('Mod+[KeyQ]', {
-  platform: 'mac', layoutMap, keyLabels: { KeyQ: 'Action' },
-}) // '⌘ Action'
-```
-
-`keyLabels` wins over a layout entry, which wins over the fallback label. Layout entries get normal letter casing and key symbols, and missing or empty entries fall back. All of these options affect display only. `keyLabels` works anywhere, including in FastBoot.
-
-## Server-side rendering
-
-The server doesn't know the user's platform, so labels rendered in FastBoot use `'linux'` unless a scope sets `platform`. Pass a `createHotkeysScope` scope with `platform: detectPlatform(userAgent)` to `useFormatForDisplay`, or render labels only in the browser. See [SSR & Hydration](./hotkeys-docs-framework-ember-guides-ssr-md-78704d49.md#source-hotkeys-docs-framework-ember-guides-ssr-md) for the FastBoot, Prember, and caching details.
-
-## Format outside a component
-
-`useFormatForDisplay` is made for components: its function reads tracked state, and loads the keyboard layout after a render. Some code that builds labels isn't a component, such as a test or a plain module. There, call the plain `formatForDisplay` function and pass the platform yourself:
-
-```ts
-import { formatForDisplay } from '@tanstack/ember-hotkeys'
-
-formatForDisplay('Mod+S', { platform }) // '⌘ S' when platform is 'mac'
-```
-
-The plain function takes the same options as the function from the utility. It doesn't read a scope, and it uses only the `layoutMap` you pass. Without a `platform`, it detects one in the browser and uses `'linux'` on a server. To give it the user's layout, call `loadKeyboardLayout()` in the browser, and read the layout from `getKeyboardLayoutStore()`.
-
-The export is marked deprecated so that your editor points component code to the utility. Outside a component, it is the function to use.
-
-## Parse, compare, and store hotkeys
-
-`parseHotkey` returns each chord's key, as either a logical `key` or a physical `code`, plus its modifiers with `Mod` resolved. Check which one you have before reading it:
-
-```ts
-import { normalizeHotkey, parseHotkey } from '@tanstack/ember-hotkeys'
-
-const parsed = parseHotkey('Mod+[KeyS]', 'mac')
-if (parsed.code !== undefined) {
-  console.log(parsed.code) // 'KeyS'; parsed.key is undefined
-}
-const stored = normalizeHotkey(parsed, 'mac') // 'Mod+[KeyS]'
-```
-
-- **Normalize before saving.** A parsed chord's modifiers are already resolved for one platform. To store it as a hotkey that works on every platform, normalize it with that same platform, as above. `normalizeHotkey` also accepts chord strings, chord objects, and sequences. Store hotkeys, never display labels. [Write a chord as a string or an object](./hotkeys-docs-framework-ember-guides-hotkeys-md-0dc069c5.md#source-hotkeys-docs-framework-ember-guides-hotkeys-md) covers the forms a hotkey can take. Because normalizing on macOS turns `Meta+S` into `Mod+S`, keep the original registerable binding string if an explicit modifier must stay platform-specific.
-- **Compare bindings.** `areHotkeysEqual(a, b)` compares chords or sequences after resolving modifiers, so `Mod+S` equals `Meta+S` on macOS. Sequences compare step by step. `isHotkeySequence` narrows a `Hotkey` to a sequence, and `simplifyHotkey` turns a one-step sequence into its chord.
-- **Validate untrusted strings.** Pass a hotkey from a settings file or user input to `validateHotkey`. It returns `{ valid, errors, warnings }`, and each issue includes:
-  - `reason`, a machine-readable code such as `'unknown-modifier'`
-  - `part`, the token the issue is about
-  - `step`, the zero-based step index for a sequence
-
-`validateHotkey` checks syntax only. It can't promise that the browser or operating system delivers the shortcut. The library sends no text, so map each `reason` code to your own messages. The devtools describe each problem in the details of a hotkey. To check hotkeys as users record them, see [Validate and check conflicts](./hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md-bd36b6cd.md#source-hotkeys-docs-framework-ember-guides-custom-hotkey-recording-md).
-
-For a full list of your app's shortcuts, see [Cheat Sheets](./hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md-5bcba5e0.md#source-hotkeys-docs-framework-ember-guides-cheat-sheet-ui-helpers-md).
+<!-- Original source anchors retained for inbound links. -->
+<a id="format-a-hotkey"></a>
+<a id="render-individual-keycaps"></a>
+<a id="format-sequences"></a>
+<a id="choose-symbols-and-separators"></a>
+<a id="label-physical-keys-for-the-users-keyboard"></a>
+<a id="supply-your-own-layout"></a>
+<a id="format-for-aria-keyshortcuts"></a>
+<a id="server-side-rendering"></a>
+<a id="format-outside-a-component"></a>
+<a id="parse-compare-and-store-hotkeys"></a>

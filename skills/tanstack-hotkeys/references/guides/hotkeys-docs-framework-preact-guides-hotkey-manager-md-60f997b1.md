@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-preact-guides-hotkey-manager-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-preact.md) · [Source provenance](../SOURCES.md)
 
@@ -90,7 +90,7 @@ close.unregister()
 releaseScope()
 ```
 
-`activateScope` returns a release function, and a scope remains active until every activation of it has been released. It accepts two options:
+`activateScope` returns a release function, and a scope remains active until every activation of it has been released. It accepts these options:
 
 - `exclusive` suspends every other scope (including `'global'`), or pass `{ allow: ['global'] }` to keep specific scopes active.
 - `parent` names an ancestor scope so this scope takes precedence over it (defaults to `'global'`).
@@ -99,12 +99,13 @@ releaseScope()
 
 Call `manager.isScopeActive(scope)` to check whether a scope can currently fire, or inspect each registration's `status` (see [List the hotkeys on screen](./hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md-0544b194.md#source-hotkeys-docs-framework-preact-guides-cheat-sheet-ui-helpers-md)).
 
-`manager.scopes` is a store with four fields:
+`manager.scopes` is a store with these fields:
 
 - `active`: active scopes ordered lowest-to-highest precedence (`'global'` is always active and omitted here)
 - `exclusive`: currently controlling exclusive scope, or `null`
 - `allowed`: active scopes permitted by the exclusive scope
 - `suspended`: active scopes blocked by an exclusive scope (may include `'global'`)
+- `characterKeysSuspended`: whether character key shortcuts are suspended by `suspendCharacterKeys`
 
 Inside Preact components, read the same state reactively with `useHotkeyScopesState`:
 
@@ -119,6 +120,17 @@ function KeyboardOwner() {
 ```
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) display the same live scope state without writing code.
+
+## Suspend character key shortcuts
+
+Call `manager.suspendCharacterKeys()` to pause document-level hotkeys made only of keys that type a character, such as `K`, `Shift+/`, or `['G', 'H']`. Hotkeys with `Control`, `Alt`, or `Meta`, non-character keys such as `Escape`, and hotkeys targeted at an element keep working. Suspensions are counted like scope activations, so character key shortcuts stay suspended until every returned resume function runs:
+
+```ts
+const resume = manager.suspendCharacterKeys()
+resume()
+```
+
+Read `manager.scopes.state.characterKeysSuspended` to check whether character keys are suspended. Inside components, pass `suspendCharacterKeys` to `HotkeysProvider` instead. See [Accessibility](./hotkeys-docs-framework-preact-guides-accessibility-md-48d09c9d.md#source-hotkeys-docs-framework-preact-guides-accessibility-md).
 
 ## Reset sequence progress
 
@@ -148,4 +160,4 @@ For resetting `HotkeyManager` and `KeyStateTracker` between tests and pinning th
 
 For resetting `HotkeyManager` and `KeyStateTracker` between tests and pinning the platform, see [Testing](./hotkeys-docs-framework-preact-guides-testing-md-81c90c35.md#source-hotkeys-docs-framework-preact-guides-testing-md).
 
-See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/HotkeyManager.md) for the full method list.
+See the [`HotkeyManager` reference](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/reference/classes/HotkeyManager.md) for the full method list.

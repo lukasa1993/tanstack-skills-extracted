@@ -2,88 +2,23 @@
 
 <a id="source-tanstack-alpine-hotkeys"></a>
 
-Published skill · `@tanstack/alpine-hotkeys@0.15.6`.
+Published skill · `@tanstack/alpine-hotkeys@0.17.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
 Prerequisite: [Hotkeys Core](./tanstack-hotkeys-core-62518e1a.md).
 
-# TanStack Hotkeys in Alpine
+## Choose a section
 
-Before starting, load the `@tanstack/hotkeys#hotkeys-core` skill (`npx @tanstack/intent@latest load @tanstack/hotkeys#hotkeys-core`).
+Read the overview or setup when it is a prerequisite, then the section needed for the task.
 
-```ts no-check
-import { createHotkeysScope, hotkeysPlugin } from '@tanstack/alpine-hotkeys'
-import Alpine from 'alpinejs'
+- [Overview](./tanstack-alpine-hotkeys-b9b64077--overview.md) — 2 KiB
+- [API](./tanstack-alpine-hotkeys-b9b64077--api.md) — 10 KiB
+- [Pitfalls](./tanstack-alpine-hotkeys-b9b64077--pitfalls.md) — 3 KiB
+- [API discovery and docs](./tanstack-alpine-hotkeys-b9b64077--api-discovery-and-docs.md) — 1 KiB
 
-Alpine.plugin(hotkeysPlugin) // before Alpine.start()
-
-Alpine.data('panel', () => ({
-  dirty: false,
-  hotkeys: createHotkeysScope(),
-  init() {
-    this.hotkeys.createHotkey(
-      'Mod+S',
-      () => save(),
-      () => ({ enabled: this.dirty }),
-    )
-    this.hotkeys.createHotkey(
-      'Escape',
-      () => closePanel(),
-      () => ({ target: this.$refs.panel }),
-    )
-  },
-  destroy() {
-    this.hotkeys.destroy()
-  },
-}))
-```
-
-Install `Alpine.plugin(hotkeysPlugin)` before `Alpine.start()`. It gives the adapter the app's Alpine instance; without it, the adapter falls back to `window.Alpine` and throws when neither exists. The plugin also adds the `$hotkeys` magic for markup-only components, which is destroyed with its element: `x-init="$hotkeys.createHotkey('Mod+S', () => save())"`.
-
-## API
-
-| API                                                 | What it's for                                                                                                                         |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `Alpine.plugin(hotkeysPlugin)`                      | Give the adapter the app's Alpine, and install the `$hotkeys` magic, an owner destroyed with its element.                             |
-| `createHotkeysScope(defaults?)`                     | Create an owner for one `Alpine.data` component, with optional default options.                                                       |
-| `createHotkeyRecorder(owner, options)`              | Record a chord or sequence the user presses, for a settings screen. The owner destroys it and supplies its `hotkeyRecorder` defaults. |
-| `Alpine.plugin(hotkeyRecorderPlugin)`               | Install the `$hotkeyRecorder(options)` magic, which creates recorders destroyed with their element.                                   |
-| `provideAppHotkeys(appHotkeys, options?)`           | Declare app hotkeys and load the user's custom hotkeys once at startup, since Alpine has no provider.                                 |
-| `getHotkeyManager().activateScope(scope, options?)` | Turn on a scope, such as an exclusive one for a dialog; it returns the function that turns the scope off.                             |
-
-Each owner has these methods. Read their state through `.value`, or `.hotkeys` for registrations.
-
-| Method                                       | What it's for                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `createHotkey(hotkey, callback, options?)`   | Register one chord, sequence, or app hotkey until the owner is destroyed; options can be a getter.                                                                                                                                                                                                                                                                                                                    |
-| `createHotkeys(definitions, commonOptions?)` | Register several hotkeys, or a getter of a list built from data, in one call.                                                                                                                                                                                                                                                                                                                                         |
-| `createFormatForDisplay()`                   | Get the function that formats a hotkey as a label, with the owner's default `platform` and the user's keyboard layout filled in. Only Chromium browsers report a layout, so physical keys keep their US labels in Firefox and Safari. Use it for every label in a component: `const formatForDisplay = hotkeys.createFormatForDisplay()` once, then `formatForDisplay(hotkey)` in a getter or an `x-text` expression. |
-| `createAppHotkeys()`                         | Get the declared app hotkeys with the user's custom hotkeys applied.                                                                                                                                                                                                                                                                                                                                                  |
-| `createAppHotkeyList()`                      | List every app hotkey with its status, for a cheat sheet or settings screen.                                                                                                                                                                                                                                                                                                                                          |
-| `createCustomHotkeys()`                      | Read, change, and reset the user's custom hotkeys, and check a new one for conflicts.                                                                                                                                                                                                                                                                                                                                 |
-| `createHotkeyRegistrations()`                | List every registered hotkey with its options, `meta`, and `status` (whether it's enabled and in an active scope).                                                                                                                                                                                                                                                                                                    |
-| `createHotkeyScopesState()`                  | Get the active scopes and the exclusive scope that owns the keyboard.                                                                                                                                                                                                                                                                                                                                                 |
-| `createHotkeyHint(hotkey, options?)`         | Get whether held modifiers should reveal a shortcut's hint. False unless a registration of the hotkey can fire: enabled, in an active scope, and with focus inside its element target.                                                                                                                                                                                                                                |
-| `createKeyHold(key)`                         | Get whether one key is held. Letters match in any case; other names, such as `Shift`, are case-sensitive.                                                                                                                                                                                                                                                                                                             |
-| `createHeldKeys()`                           | Get every key that's held right now.                                                                                                                                                                                                                                                                                                                                                                                  |
-| `createHeldKeyCodes()`                       | Map each held key to its physical `event.code`.                                                                                                                                                                                                                                                                                                                                                                       |
-| `destroy()`                                  | Release every hotkey, subscription, and recorder the owner created.                                                                                                                                                                                                                                                                                                                                                   |
-
-The package also re-exports `@tanstack/hotkeys`, such as `matchesKeyboardEvent` and `defineAppHotkeys`. Its plain `formatForDisplay` export is deprecated: use the owner's `createFormatForDisplay()` in components. Outside a component, call the plain function and pass `platform`.
-
-## Pitfalls
-
-- **Destroy each owner.** Owners aren't tied to Alpine's lifecycle, so without `this.hotkeys.destroy()` in `destroy()`, a removed component's hotkeys keep firing. Create one owner per component instance, inside the `Alpine.data` factory.
-- **`createHotkeysScope` isn't a hotkey scope.** It only owns registrations and sets defaults. For a dialog, activate a real scope in `init()` with `release = getHotkeyManager().activateScope(name, { exclusive: true })`, pass `{ scope: name }` to the dialog's hotkeys, and call `release()` in `destroy()`. Give each open dialog its own name.
-- **Pass options as a getter.** `{ enabled: this.dirty }` is read once. Use `() => ({ enabled: this.dirty })`.
-- **Use either `$hotkeys` or your own owner for a hotkey, not both.** Otherwise it registers twice.
-- **Call `create*` in `x-init` or `init()`, and read `.value` anywhere.** Calling `create*` inside a reactive expression such as `x-text="$hotkeys.createHeldKeys().value"` creates a new subscription on every evaluation.
-- **Owners have no `createHotkeyRecorder` method** since v0.10.0. Call `createHotkeyRecorder(this.hotkeys, options)`, so apps that don't record don't ship the recorder.
-- With server rendering, load the adapter only in the browser.
-
-When declaring app hotkeys, building a cheat sheet, or letting users rebind shortcuts, load `@tanstack/hotkeys#app-hotkeys` and read [app hotkeys in Alpine](../assets/tanstack-alpine-hotkeys/references/app-hotkeys.md).
-
-## API discovery and docs
-
-Signatures: `node_modules/@tanstack/alpine-hotkeys/dist/types.d.ts`. Guides: `https://tanstack.com/hotkeys/latest/docs/framework/alpine/guides/<page>.md`, such as `hotkeys` or `app-hotkeys`.
+<!-- Original source anchors retained for inbound links. -->
+<a id="tanstack-hotkeys-in-alpine"></a>
+<a id="api"></a>
+<a id="pitfalls"></a>
+<a id="api-discovery-and-docs"></a>

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-svelte-guides-hotkey-hints-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-svelte.md) · [Source provenance](../SOURCES.md)
 
@@ -119,4 +119,4 @@ const showHint =
   getHotkeyManager().hasActiveRegistration('Mod+S') // Same check as the helper
 ```
 
-See [Held Keys](./hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md#source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md) for more on `getKeyStateTracker`, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/svelte/kitchen-sink) for hints on live navigation links and buttons.
+See [Held Keys](./hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md-878bc5cb.md#source-hotkeys-docs-framework-svelte-guides-held-key-state-helpers-md) for more on `getKeyStateTracker`, and the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/svelte/kitchen-sink) for hints on live navigation links and buttons.

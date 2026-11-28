@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-hotkeys-provider-and-scopes-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -84,14 +84,14 @@ function Editor() {
 }
 ```
 
-Keep two scope rules in mind:
+Keep these scope rules in mind:
 
 - **Providers without `scope` inherit.** A nested provider that only sets `defaultOptions` stays in its parent's scope.
 - **Scopes are identified by name.** Two mounted providers with `scope="editor"` share the same `'editor'` scope, which stays active until both unmount. Give independent regions distinct names so they toggle separately.
 
 ## Scopes and targets
 
-A scope and a [`target`](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md) both constrain when a hotkey fires, using two different axes:
+A scope and a [`target`](./hotkeys-docs-framework-solid-guides-hotkeys-md-56136a55.md#source-hotkeys-docs-framework-solid-guides-hotkeys-md) both constrain when a hotkey fires, on different axes:
 
 | | Scope | Target |
 | --- | --- | --- |
@@ -182,7 +182,7 @@ function FolderPane(props: { name: string }) {
 }
 ```
 
-`FolderPane` doesn't know which folder is current. Provider props are reactive, so the scope turns on and off as `current` changes. Note two details:
+`FolderPane` doesn't know which folder is current. Provider props are reactive, so the scope turns on and off as `current` changes. Note these details:
 
 - **`enabled` cascades downward.** Disabling a provider deactivates every nested scope inside it, even if that provider sets no `scope` of its own. A scopeless provider with `enabled={false}` leaves its own hotkeys active because `'global'` cannot be disabled.
 - **Inactive scopes stay listed.** Their hotkeys remain visible in devtools and report `'suspended'` in [`createAppHotkeyList`](./hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md-db8cc71d.md#source-hotkeys-docs-framework-solid-guides-cheat-sheet-ui-helpers-md).
@@ -270,8 +270,12 @@ export const appHotkeys = defineAppHotkeys({
 
 If you integrate non-Solid overlays, such as third-party dialogs, activate their scopes imperatively via [Activate a scope](./hotkeys-docs-framework-solid-guides-hotkey-manager-md-d1ae34aa.md#source-hotkeys-docs-framework-solid-guides-hotkey-manager-md).
 
+## Suspend character key shortcuts
+
+Pass `suspendCharacterKeys` to `HotkeysProvider` to pause document-level character key shortcuts, such as `K` or `['G', 'H']`, across the app while the prop is `true`. Suspended hotkeys report the status `'suspended'`, like hotkeys in an inactive scope, and the prop applies even when `enabled` is `false`. Wire it to a user setting as shown in [Accessibility](./hotkeys-docs-framework-solid-guides-accessibility-md-c8945730.md#source-hotkeys-docs-framework-solid-guides-accessibility-md).
+
 ## Inspect scopes
 
 The [devtools](./hotkeys-docs-devtools-md-3036b65e.md#source-hotkeys-docs-devtools-md) group registrations by scope and display which scopes are active, suspended, allowed, or exclusive. To read the same state inside components, see [Read scope state](./hotkeys-docs-framework-solid-guides-hotkey-manager-md-d1ae34aa.md#source-hotkeys-docs-framework-solid-guides-hotkey-manager-md).
 
-See the [Scopes example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/scopes) for nested, `enabled`, and `exclusive` scopes working together.
+See the [Scopes example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/solid/scopes) for nested, `enabled`, and `exclusive` scopes working together.

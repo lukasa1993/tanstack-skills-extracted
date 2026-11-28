@@ -1,6 +1,6 @@
 # Hotkeys — Register multiple hotkeys
 
-[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+[Guide and prerequisites](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md) · Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 ## Register multiple hotkeys
 
@@ -62,7 +62,7 @@ Alpine.data('richTextEditor', () => ({
 </div>
 ```
 
-The shared `target` makes all three hotkeys listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#hotkey-targets) explains targets. Passing the array as a getter lets `enabled` follow `canUndo`.
+The shared `target` makes every hotkey in the list listen on the editor only. [Hotkey targets](./hotkeys-docs-framework-alpine-guides-hotkeys-md-baac02c3.md#hotkey-targets) explains targets. Passing the array as a getter lets `enabled` follow `canUndo`.
 
 Options merge in this order: the owner's defaults, then the shared options, then each definition's options.
 

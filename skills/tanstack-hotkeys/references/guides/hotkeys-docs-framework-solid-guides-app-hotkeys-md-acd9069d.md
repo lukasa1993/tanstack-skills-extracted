@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-solid-guides-app-hotkeys-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-solid.md) · [Source provenance](../SOURCES.md)
 
@@ -194,6 +194,6 @@ Pass the recorder's `context` into `findConflicts` and `setCustomHotkey` so conf
 
 Two app hotkeys conflict when their scopes overlap (matching scopes, or either is in `'global'` or has no declared scope) and their bindings collide (equal chords, or one sequence starting with the other chord or sequence). Conflict checks scan every declaration, rendered or not.
 
-Each app hotkey exposes `defaultHotkey`, and `createAppHotkeyList` includes `isCustom` to highlight modified rows. For imperative usage outside components, see [`AppHotkeysStore`](https://github.com/TanStack/hotkeys/blob/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/docs/reference/classes/AppHotkeysStore.md).
+Each app hotkey exposes `defaultHotkey`, and `createAppHotkeyList` includes `isCustom` to highlight modified rows. For imperative usage outside components, see [`AppHotkeysStore`](https://github.com/TanStack/hotkeys/blob/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/docs/reference/classes/AppHotkeysStore.md).
 
-See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/solid/kitchen-sink) for app hotkeys, grouped cheat sheets, and customization wired together.
+See the [Kitchen Sink example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/solid/kitchen-sink) for app hotkeys, grouped cheat sheets, and customization wired together.

@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-devtools-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
@@ -19,6 +19,7 @@ Use the Hotkeys panel to:
 - Watch multi-step sequence progress live as keys are pressed
 - See declared [app hotkeys](./hotkeys-docs-overview-md-64fd9600.md#source-hotkeys-docs-overview-md) before their components mount, including user-customized bindings
 - Monitor held keys in real time
+- Check whether Caps Lock, Num Lock, and Scroll Lock are on, off, or unknown (`?`) in the **Locks** group of the top bar. Num Lock and Scroll Lock show `n/a` on macOS and iOS, where browsers don't report them
 - Trigger hotkey callbacks from the UI without pressing physical keys
 - Inspect each registration's target, event type, and conflict behavior
 

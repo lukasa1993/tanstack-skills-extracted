@@ -2,7 +2,7 @@
 
 <a id="source-hotkeys-docs-framework-vue-guides-held-key-state-helpers-md"></a>
 
-Release-matched documentation · `@tanstack/hotkeys@0.36.0`.
+Release-matched documentation · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../framework-vue.md) · [Source provenance](../SOURCES.md)
 
@@ -97,4 +97,22 @@ function onClick() {
 
 Held keys reset automatically when the window loses focus, so a key released after switching apps never stays stuck. See [Held keys reset when the window loses focus](./hotkeys-docs-guides-sensible-defaults-md-d1106b45.md#source-hotkeys-docs-guides-sensible-defaults-md).
 
-See the [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/vue/useHeldKeys) and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/3b22c105ab5b629a02e3e9e2d1719a9c2440833c/examples/vue/useKeyhold).
+See the [useHeldKeys example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/vue/useHeldKeys) and the [useKeyHold example](https://github.com/TanStack/hotkeys/tree/a3fc3ae3a058631dfe821a04edf4cf0cce49fb0a/examples/vue/useKeyhold).
+
+## Lock keys
+
+Caps Lock, Num Lock, and Scroll Lock toggle instead of being held. `useKeyHold('CapsLock').value` is `true` only while the key is down, not while Caps Lock is on. To read whether a lock is on, use `useKeyLockState`:
+
+```vue
+<script setup lang="ts">
+import { useKeyLockState } from '@tanstack/vue-hotkeys'
+
+const capsLock = useKeyLockState('CapsLock') // value: true, false, or null
+</script>
+
+<template>
+  <span role="status">{{ capsLock ? 'Caps Lock is on' : '' }}</span>
+</template>
+```
+
+The value is `null` until the browser reports the lock. See [Read lock key state](./hotkeys-docs-framework-vue-guides-key-lock-state-md-85cd38f6.md#source-hotkeys-docs-framework-vue-guides-key-lock-state-md) for when that happens and which browsers report each lock.

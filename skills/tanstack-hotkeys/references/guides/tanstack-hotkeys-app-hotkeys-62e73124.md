@@ -2,7 +2,7 @@
 
 <a id="source-tanstack-hotkeys-app-hotkeys"></a>
 
-Published skill · `@tanstack/hotkeys@0.36.0`.
+Published skill · `@tanstack/hotkeys@0.38.0`.
 
 [Topic index](../foundations.md) · [Source provenance](../SOURCES.md)
 
